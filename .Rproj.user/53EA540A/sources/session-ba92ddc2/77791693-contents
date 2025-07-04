@@ -1,0 +1,62 @@
+project:
+  type: website
+  resources: 
+      - papers/
+      - images/
+website:
+  title: "Andrew Reeves"
+  description: "Professor of Political Science, Director of the Weidenbaum Center, and Senior Advisor to the Chancellor"
+  navbar:
+    background: "#2d3e2f"
+    foreground: "#ffffff"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: news.qmd
+        text: News
+      - href: contact.qmd
+        text: Contact
+      - href: reevescv.pdf
+        text: CV
+    right:
+      - icon: envelope
+        href: mailto:reeves@wustl.edu
+        aria-label: Email
+      - icon: linkedin
+        href: https://www.linkedin.com/in/areeves/
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/ajreeves
+        aria-label: GitHub
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=YourScholarID
+        aria-label: Google Scholar
+      - icon: bluesky
+        href: https://bsky.app/profile/ajreeves.bsky.social
+        aria-label: Bluesky
+
+  page-footer:
+    background: "#1a261c"
+    foreground: "#c8d5ca"
+    left: "© 2025 Andrew Reeves"
+    right: 
+      - text: "License: CC BY NC ND 4.0"
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - styles.scss
+    toc: false
+    page-layout: full
+    grid:
+      sidebar-width: 0px
+      body-width: 1200px
+      margin-width: 200px
+    
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-political-science-association.csl

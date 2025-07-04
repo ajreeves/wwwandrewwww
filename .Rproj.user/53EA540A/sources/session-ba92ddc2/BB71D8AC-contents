@@ -1,0 +1,261 @@
+---
+title: "Teaching"
+format:
+  html:
+    page-layout: full
+---
+
+```{=html}
+<style>
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+  background: linear-gradient(135deg, #2d3e2f 0%, #4a5d4c 100%);
+  color: white;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  opacity: 0.6;
+  border-radius: 0 12px 0 50px;
+}
+
+.course-level {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.course-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  color: white;
+}
+
+.course-subtitle {
+  font-size: 0.95em;
+  opacity: 0.9;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.course-content {
+  padding: 25px;
+}
+
+.course-description {
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.course-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.course-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.syllabus-link {
+  background-color: #007bff;
+  color: white !important;
+}
+
+.syllabus-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.materials-link {
+  background-color: #28a745;
+  color: white !important;
+}
+
+.materials-link:hover {
+  background-color: #1e7e34;
+  transform: translateY(-1px);
+}
+
+.teaching-intro {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border-left: 4px solid #2d3e2f;
+}
+
+.teaching-intro h2 {
+  color: #2d3e2f;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.teaching-intro p {
+  margin-bottom: 0;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.course-topics {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.course-topics h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2d3e2f;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-topics ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.course-topics li {
+  margin-bottom: 5px;
+  color: #495057;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .course-card {
+    margin-bottom: 0;
+  }
+}
+</style>
+
+<div class="teaching-intro">
+<h2>Teaching Philosophy</h2>
+<p>My courses emphasize the practical application of political science theory to understand contemporary American politics. I strive to help students develop critical thinking skills by examining how institutions, incentives, and individual behavior shape political outcomes. Through case studies, data analysis, and discussion of current events, students learn to connect academic research to real-world political phenomena.</p>
+</div>
+
+<div class="course-grid">
+
+<div class="course-card">
+<div class="course-header">
+<img src="../images/intro.jpg" alt="Capitol Rotunda" class="course-image">
+<div class="course-level">Undergraduate</div>
+<div class="course-title">Introduction to American Politics</div>
+<div class="course-subtitle">Understanding the fundamentals of American government and politics</div>
+</div>
+
+<div class="course-content">
+<div class="course-description">
+The Biden presidency concludes amidst international turmoil, the fallout from a global pandemic, and increasing economic dissatisfaction among Americans. American institutions are being tested by a polarized political environment, regular mass protests, and are still adjusting from the former and possibly next president, who challenged many political norms. We will explore how we got here and consider the future of American politics.
+<br><br>
+The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches. In the second part of the class, we'll consider the things that happen just outside the purview of the U.S. Constitution, like public opinion, the media, elections, political parties, and interest groups.
+</div>
+
+<div class="course-topics">
+<h4>Key Topics</h4>
+<ul>
+<li>Constitutional foundations and federalism</li>
+<li>Executive, legislative, and judicial branches</li>
+<li>Political parties and interest groups</li>
+<li>Elections and voting behavior</li>
+<li>Public opinion and media</li>
+<li>Civil rights and civil liberties</li>
+</ul>
+</div>
+
+<div class="course-links">
+<a href="https://docs.google.com/document/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub" class="course-link syllabus-link">Syllabus (Fall 2024)</a>
+</div>
+
+<div style="margin-top: 20px;">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZcPzyOfqNKQ" title="Introduction to American Politics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px;"></iframe>
+</div>
+</div>
+</div>
+
+<div class="course-card">
+<div class="course-header">
+<img src="../images/boe.jpg" alt="Election Analytics" class="course-image">
+<div class="course-level">Undergraduate</div>
+<div class="course-title">Business of Elections</div>
+<div class="course-subtitle">Understanding presidential elections through the prism of business and political science</div>
+</div>
+
+<div class="course-content">
+<div class="course-description">
+This course examines presidential elections as complex enterprises that combine political strategy, data analytics, fundraising, and marketing. Students explore how campaigns are organized, funded, and executed, drawing parallels between campaign management and business operations. We analyze voter targeting, message development, coalition building, and the role of money in modern campaigns.
+<br><br>
+The course bridges political science theory with practical campaign mechanics, helping students understand both the democratic process and the professional skills involved in running competitive elections.
+</div>
+
+<div class="course-topics">
+<h4>Key Topics</h4>
+<ul>
+<li>Campaign strategy and organization</li>
+<li>Political fundraising and finance</li>
+<li>Voter targeting and data analytics</li>
+<li>Media strategy and advertising</li>
+<li>Coalition building and mobilization</li>
+<li>Electoral systems and competition</li>
+</ul>
+</div>
+
+<div class="course-links">
+<a href="#" class="course-link materials-link">Course Materials</a>
+</div>
+</div>
+</div>
+
+</div>
+```

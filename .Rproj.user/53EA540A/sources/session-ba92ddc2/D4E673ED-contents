@@ -1,0 +1,15 @@
+<div class="book-card">
+  <% if (image) { %>
+    <img src="<%= image %>" alt="<%= title %>" class="book-image">
+  <% } %>
+  <div class="book-content">
+    <h3 class="book-title"><a href="<%= url %>"><%= title %></a></h3>
+    <p class="book-description"><%= description %></p>
+    <div class="book-links">
+      <% if (pdf) { %>
+        <a href="<%= pdf %>" class="book-link">📄 PDF</a>
+      <% } %>
+      <a href="<%= url %>" class="book-link">📖 Details</a>
+    </div>
+  </div>
+</div>

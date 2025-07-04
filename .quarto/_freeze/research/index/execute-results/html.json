@@ -1,0 +1,12 @@
+{
+  "hash": "6de6fc50b682b0ea77c92498055c5fda",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Publications\"\nformat:\n  html:\n    theme: cosmo\n    toc: false\n---\n\n<style>\n.listing-cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n  gap: 2rem;\n  margin: 2rem 0;\n}\n.listing-cards .card {\n  border: 1px solid #e2e3e5;\n  border-radius: .5rem;\n  padding: 1rem;\n  transition: box-shadow .2s;\n  overflow: hidden;\n}\n.listing-cards .card:hover {\n  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);\n}\n.listing-cards .card-title {\n  font-size: 1.1rem;\n  font-weight: 600;\n  margin-bottom: .5rem;\n}\n.listing-cards .card-meta {\n  font-size: .9rem;\n  color: #6c757d;\n  margin-bottom: .75rem;\n}\n.listing-cards .card-tags {\n  font-size: .85rem;\n  color: #495057;\n  margin-top: .5rem;\n}\n</style>\n\n```{listing .listing-cards}\n# List each publication folder as a card\ntype: cards\nfiles:\n  - \"research/*/index.md\"\ncard-content:\n  - title\n  - date\n  - description\n  - tags\n```\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

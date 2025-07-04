@@ -1,0 +1,2064 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Ang",
+                    "given": "Zoe"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                },
+                {
+                    "family": "Vishwanath",
+                    "given": "Arjun"
+                }
+            ],
+            "container-title": "American Journal of Political Science",
+            "id": "transition",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "468-484",
+            "title": "Partisanship, economic assessments, and presidential accountability",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ang",
+                    "given": "Zoe"
+                },
+                {
+                    "family": "Noble",
+                    "given": "Benjamin"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Encyclopedia of crisis analysis",
+            "editor": [
+                {
+                    "family": "Stern",
+                    "given": "Eric"
+                }
+            ],
+            "id": "crisis",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Oxford University Press",
+            "title": "Public opinion and public support in crisis management",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ansolabehere",
+                    "given": "Stephen D."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Confirming elections: Creating confidence and integrity through election auditing",
+            "editor": [
+                {
+                    "family": "Hall",
+                    "given": "Thad E."
+                },
+                {
+                    "family": "Atkeson",
+                    "given": "Lonna"
+                },
+                {
+                    "family": "Alvarez",
+                    "given": "R. Michael"
+                }
+            ],
+            "id": "recounts",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Palgrave Macmillan",
+            "publisher-place": "New York",
+            "title": "Using recounts to measure the accuracy of vote tabulations: Evidence from new hampshire elections 1946-2002",
+            "title-short": "Using recounts to measure the accuracy of vote tabulations",
+            "type": "chapter"
+        },
+        {
+            "URL": "https://journals.sagepub.com/doi/abs/10.1177/1532673x10385286",
+            "author": [
+                {
+                    "family": "Chen",
+                    "given": "Lanhee J."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "American Politics Research",
+            "id": "appearances",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "534-556",
+            "title": "Turning out the base or appealing to the periphery? An analysis of county-level candidate appearances in the 2008 presidential campaign",
+            "type": "article-journal",
+            "volume": "39"
+        },
+        {
+            "author": [
+                {
+                    "family": "Christenson",
+                    "given": "Dino"
+                },
+                {
+                    "family": "Kriner",
+                    "given": "Douglas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Legislative Studies Quarterly",
+            "id": "senators",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "269-294",
+            "title": "All the president’s senators: Presidential co-partisans and the allocation of federal grants",
+            "title-short": "All the president’s senators",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "author": [
+                {
+                    "family": "Dynes",
+                    "given": "Adam"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Legislative Studies Quarterly",
+            "id": "caucus",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "207-243",
+            "title": "Who benefits from the party organization? Evidence from republican house members’ attendance at caucus meetings",
+            "type": "article-journal",
+            "volume": "43"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gasper",
+                    "given": "John T."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "American Journal of Political Science",
+            "id": "rain",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "340-355",
+            "title": "Make it rain? Retrospection and the attentive electorate in the context of natural disasters",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                },
+                {
+                    "family": "Lovin",
+                    "given": "Nathan"
+                },
+                {
+                    "family": "Moy",
+                    "given": "Bryant"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Daily Yonder",
+            "id": "yonder",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "Distance and density, not just demographics, affect urban-rural vote",
+            "type": "article-journal",
+            "volume": "February 24"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                },
+                {
+                    "family": "Lovin",
+                    "given": "Nathan"
+                },
+                {
+                    "family": "Moy",
+                    "given": "Bryant"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Political Behavior",
+            "id": "urbanrural",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "1343-1368",
+            "title": "The urban-rural gulf in American political behavior",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Trende",
+                    "given": "Sean"
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "bellwether",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "509-534",
+            "title": "Reconsidering bellwether locations in u.s. Presidential elections",
+            "type": "article-journal",
+            "volume": "52"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Cities",
+            "id": "attachment",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "page": "104720",
+            "title": "The urban-rural divide and residential contentment as antecedents of political ideology",
+            "type": "article-journal",
+            "volume": "146"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Handbook on politics and public opinion",
+            "editor": [
+                {
+                    "family": "Rudolph",
+                    "given": "Thomas J."
+                }
+            ],
+            "id": "political-geography",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "publisher": "Edward Elgar Publishing",
+            "publisher-place": "Cheletenham, UK",
+            "title": "Electoral geography, political behavior and public opinion",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Journal of Health Politics, Policy and Law",
+            "id": "healthcare",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "717-749",
+            "title": "Responsive partisanship: Public support for the clinton and obama health care plans",
+            "title-short": "Responsive partisanship",
+            "type": "article-journal",
+            "volume": "39"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "American Political Science Review",
+            "id": "spending",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "348-366",
+            "title": "The influence of federal spending on presidential elections",
+            "type": "article-journal",
+            "volume": "106"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Boston University Law Review",
+            "id": "electoralcollege",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "741-766",
+            "title": "The electoral college and presidential particularism",
+            "type": "article-journal",
+            "volume": "94"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "prespart",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "679-702",
+            "title": "Presidential particularism in disaster declarations and military base closures",
+            "type": "article-journal",
+            "volume": "45"
+        },
+        {
+            "URL": "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3",
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "id": "partpres",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Cambridge University Press",
+            "publisher-place": "New York",
+            "title": "The particularistic president: Executive branch politics and political inequality",
+            "title-short": "The particularistic president",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas L."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "American Political Science Review",
+            "id": "targeting",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "155-171",
+            "title": "Presidential particularism and divide-the-dollar politics",
+            "type": "article-journal",
+            "volume": "109"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kriner",
+                    "given": "Douglas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Ohio State Law Journal Online",
+            "id": "pasachoff-reply",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "230-246",
+            "title": "Partisanship, trump, and the normative implications of presidential particularism: A response to pasachoff’s executive branch control of federal grants",
+            "title-short": "Partisanship, trump, and the normative implications of presidential particularism",
+            "type": "article-journal",
+            "volume": "83"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mann",
+                    "given": "Christopher B."
+                },
+                {
+                    "family": "Alberda",
+                    "given": "Gayle A."
+                },
+                {
+                    "family": "Birkhead",
+                    "given": "Nathaniel A."
+                },
+                {
+                    "family": "Ouyang",
+                    "given": "Yu"
+                },
+                {
+                    "family": "Singer",
+                    "given": "Chloe"
+                },
+                {
+                    "family": "III",
+                    "given": "Charles Stewart"
+                },
+                {
+                    "family": "Herron",
+                    "given": "Michael C."
+                },
+                {
+                    "family": "Beaulieu",
+                    "given": "Emily"
+                },
+                {
+                    "family": "Boehmke",
+                    "given": "Frederick"
+                },
+                {
+                    "family": "Boston",
+                    "given": "Joshua"
+                },
+                {
+                    "family": "Cantu",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "Cobb",
+                    "given": "Rachael"
+                },
+                {
+                    "family": "Darmofal",
+                    "given": "David"
+                },
+                {
+                    "family": "Ellington",
+                    "given": "Thomas C."
+                },
+                {
+                    "family": "Finocchiaro",
+                    "given": "Charles J."
+                },
+                {
+                    "family": "Gilbert",
+                    "given": "Michael"
+                },
+                {
+                    "family": "Haynes",
+                    "given": "Victor"
+                },
+                {
+                    "family": "Janssen",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Kimball",
+                    "given": "David"
+                },
+                {
+                    "family": "Kromkowski",
+                    "given": "Charles"
+                },
+                {
+                    "family": "Llaudet",
+                    "given": "Elena"
+                },
+                {
+                    "family": "Miles",
+                    "given": "Matthew R."
+                },
+                {
+                    "family": "Miller",
+                    "given": "David"
+                },
+                {
+                    "family": "Nielson",
+                    "given": "Lindsay"
+                },
+                {
+                    "family": "Panagopoulos",
+                    "given": "Costas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Seo",
+                    "given": "Min Hee"
+                },
+                {
+                    "family": "Simmons",
+                    "given": "Haley"
+                },
+                {
+                    "family": "Smidt",
+                    "given": "Corwin"
+                },
+                {
+                    "family": "Stein",
+                    "given": "Robert"
+                },
+                {
+                    "family": "VanSickle-Ward",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Wood",
+                    "given": "Abby K."
+                },
+                {
+                    "family": "Wronski",
+                    "given": "Julie"
+                }
+            ],
+            "container-title": "PS: Political Science & Politics",
+            "id": "polling",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "831-837",
+            "title": "Pedagogical value of polling place observation by students",
+            "type": "article-journal",
+            "volume": "51"
+        },
+        {
+            "author": [
+                {
+                    "family": "Marsh",
+                    "given": "Wayde Z. C."
+                },
+                {
+                    "family": "Olson",
+                    "given": "Michael P."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Wong",
+                    "given": "Jordan Duffin"
+                }
+            ],
+            "container-title": "Political Research Quarterly",
+            "id": "clerks",
+            "issue": "X",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "page": "XXX-XXX",
+            "title": "Elections and representation in american municipal administration: Elite survey evidence from five new england states",
+            "title-short": "Elections and representation in american municipal administration",
+            "type": "article-journal",
+            "volume": "XX"
+        },
+        {
+            "author": [
+                {
+                    "family": "Miller",
+                    "given": "David R."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "commissions",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "495-516",
+            "title": "Attitudes toward delegation to presidential commissions",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "Miller",
+                    "given": "David"
+                },
+                {
+                    "family": "Moy",
+                    "given": "Bryant"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Oxford bibliographies in political science",
+            "editor": [
+                {
+                    "family": "Maisel",
+                    "given": "L. Sandy"
+                }
+            ],
+            "id": "electionsbib",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Oxford University Press",
+            "title": "U.s. Presidential campaigns and their impact",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Miller",
+                    "given": "David R."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "The Washington Post’s The Monkey Cage Blog",
+            "id": "covid-mc",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "If trump took responsibility for coronavirus missteps, it might actually help him",
+            "type": "article-journal",
+            "volume": "March 26"
+        },
+        {
+            "author": [
+                {
+                    "family": "Miller",
+                    "given": "David R."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Journal of Public Policy",
+            "id": "blameclaim",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "63-91",
+            "title": "Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moore",
+                    "given": "Ryan T."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "PS: Political Science and Politics",
+            "id": "jobs",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "385-391",
+            "title": "The job market’s first steps: Using research tools to simplify the process",
+            "title-short": "The job market’s first steps",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moore",
+                    "given": "Ryan T."
+                },
+                {
+                    "family": "Powell",
+                    "given": "Eleanor Neff"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Business and Politics",
+            "id": "autos",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "137-162",
+            "title": "Driving support: Workers, PACs, and congressional support of the auto industry",
+            "title-short": "Driving support",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moore",
+                    "given": "Ryan T."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Analytics, policy and governance",
+            "editor": [
+                {
+                    "family": "Ginsberg",
+                    "given": "Benjamin"
+                },
+                {
+                    "family": "Hill",
+                    "given": "Kathy Wagner"
+                },
+                {
+                    "family": "Bachner",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "geolocation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Yale University Press",
+            "publisher-place": "New Haven, CT",
+            "title": "Learning from place in the era of geolocation",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moore",
+                    "given": "Ryan T."
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Political Science Research and Methods",
+            "id": "context",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "780-794",
+            "title": "Defining racial and ethnic context with geolocation data",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "author": [
+                {
+                    "family": "Moser",
+                    "given": "Scott"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Legislative Studies Quarterly",
+            "id": "leap",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "467-502",
+            "title": "Taking the leap: Voting, rhetoric, and the determinants of electoral reform",
+            "title-short": "Taking the leap",
+            "type": "article-journal",
+            "volume": "49"
+        },
+        {
+            "author": [
+                {
+                    "family": "Noble",
+                    "given": "Benjamin"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Webster",
+                    "given": "Steven W."
+                }
+            ],
+            "container-title": "Public Opinion Quarterly",
+            "id": "crime",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "29-50",
+            "title": "Crime and presidential accountability: A case of racially conditioned issue ownership",
+            "title-short": "Crime and presidential accountability",
+            "type": "article-journal",
+            "volume": "86"
+        },
+        {
+            "author": [
+                {
+                    "family": "Oliver",
+                    "given": "Alexander"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Emerging trends in the behavioral and social science",
+            "editor": [
+                {
+                    "family": "Scott",
+                    "given": "Robert A."
+                },
+                {
+                    "family": "Kosslyn",
+                    "given": "Stephen M."
+                }
+            ],
+            "id": "disasters-review",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "John Wiley & Sons, Inc",
+            "publisher-place": "New York",
+            "title": "The politics of disaster relief",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Park",
+                    "given": "Taeyong"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Political Behavior",
+            "id": "unemployment",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "443-463",
+            "title": "Local unemployment and voting for president: Uncovering causal mechanisms",
+            "title-short": "Local unemployment and voting for president",
+            "type": "article-journal",
+            "volume": "42"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Lanhee J."
+                },
+                {
+                    "family": "Nagano",
+                    "given": "Tiffany"
+                }
+            ],
+            "id": "reassessment-long",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "title": "A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation",
+            "type": "article-journal",
+            "volume": "Typescript"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Lanhee"
+                },
+                {
+                    "family": "Nagano",
+                    "given": "Tiffany"
+                }
+            ],
+            "container-title": "Journal of Politics",
+            "id": "reassessment",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "616-620",
+            "title": "A reassessment of “the methods behind the madness: Presidential electoral college strategies, 1988–1996”",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "URL": "https://www.latimes.com/archives/la-xpm-2004-may-12-oe-reeves12-story.html",
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Los Angeles Times",
+            "id": "disasters-latimes2",
+            "issue": "May 12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "title": "Plucking votes from disasters: The electoral clout of a state can sway presidents on aid",
+            "title-short": "Plucking votes from disasters",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Los Angeles Times",
+            "id": "disasters-latimes1",
+            "issue": "Oct 3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "M5",
+            "title": "Florida Disaster Aid Can Help Bush",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Political Science Quarterly",
+            "id": "disunion-review",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        2
+                    ]
+                ]
+            },
+            "page": "743-744",
+            "title": "Review of <i>the state of disunion: Regional sources of modern american partisanship</i> by nicole mellow",
+            "title-short": "Review of <i>the state of disunion",
+            "type": "article-journal",
+            "volume": "124"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Journal of Politics",
+            "id": "fema",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "1142-1151",
+            "title": "Political disaster: Unilateral powers, electoral incentives, and presidential disaster declarations",
+            "title-short": "Political disaster",
+            "type": "article-journal",
+            "volume": "73"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Reuters",
+            "id": "disasters-reuters",
+            "issue": "Nov 5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "How disasters change elections",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Gimpel",
+                    "given": "James G."
+                }
+            ],
+            "container-title": "Political Behavior",
+            "id": "foreclosures",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "507-534",
+            "title": "Ecologies of unease: Geographic context and national economic evaluations",
+            "title-short": "Ecologies of unease",
+            "type": "article-journal",
+            "volume": "34"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "The Forum",
+            "id": "unheavenly-review",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "63-67",
+            "title": "Review of <i>the unheavenly chorus: Unequal political voice and the broken promise of democracy</i> by kay lehman schlozman, sidney verba, and henry e. brady",
+            "title-short": "Review of <i>the unheavenly chorus",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "container-title": "Journal of Politics",
+            "id": "unilateral",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "137-151",
+            "title": "Unilateral powers, public opinion, and the presidency",
+            "type": "article-journal",
+            "volume": "78"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "prespower",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "742-759",
+            "title": "Public opinion toward presidential power",
+            "type": "article-journal",
+            "volume": "45"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                },
+                {
+                    "family": "Seo",
+                    "given": "Min Hee"
+                },
+                {
+                    "family": "Stone",
+                    "given": "Andrew R."
+                }
+            ],
+            "id": "popularity",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "By all means: How issue popularity emboldens presidential power",
+            "title-short": "By all means",
+            "type": "manuscript"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                },
+                {
+                    "family": "Seo",
+                    "given": "Min Hee"
+                },
+                {
+                    "family": "Stone",
+                    "given": "Andrew R."
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "asking",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "448-470",
+            "title": "The contextual determinants of support for presidential power",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "The Washington Post’s The Monkey Cage Blog",
+            "id": "puertorico-reuters",
+            "issue": "Oct 2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Donald trump’s lukewarm response to puerto rico was pretty predictable. Here’s why",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "container-title": "American Journal of Political Science",
+            "id": "constraints",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "424-440",
+            "title": "The public cost of unilateral action",
+            "type": "article-journal",
+            "volume": "62"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "id": "trump",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "title": "Political regimes and institutional support: How partisanship affects attitudes toward presidential power",
+            "title-short": "Political regimes and institutional support",
+            "type": "manuscript"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "St. Louis Dispatch",
+            "id": "pandemic-stld",
+            "issue": "April 2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "A11",
+            "title": "This pandemic is a test for leaders. Voters do the grading",
+            "type": "article-journal"
+        },
+        {
+            "URL": "https://www.cambridge.org/us/universitypress/subjects/politics-international-relations/american-government-politics-and-policy/particularistic-president-executive-branch-politics-and-political-inequality?format=PB&isbn=9781107616813",
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "id": "noblankcheck",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "publisher": "Cambridge University Press",
+            "publisher-place": "New York, NY",
+            "title": "No blank check: The origins and consequences of public antipathy towards presidential power",
+            "title-short": "No blank check",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "container-title": "Legislative Studies Quarterly",
+            "id": "nothing",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "427-457",
+            "title": "Unilateral inaction: Congressional gridlock, interbranch conflict, and public evaluations of executive power",
+            "title-short": "Unilateral inaction",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/psq.12837",
+            "author": [
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Rogowski",
+                    "given": "Jon C."
+                }
+            ],
+            "container-title": "Presidential Studies Quarterly",
+            "id": "values",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "page": "293-312",
+            "title": "Democratic values and support for executive power",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reny",
+                    "given": "Tyler"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Christenson",
+                    "given": "Dino P."
+                }
+            ],
+            "container-title": "Environmental Politics",
+            "id": "environment",
+            "issue": "X",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "page": "XXX-XXX",
+            "title": "Rising seas, rising concerns: How climate change vulnerability shapes opinions towards policy",
+            "title-short": "Rising seas, rising concerns",
+            "type": "article-journal",
+            "volume": "XX"
+        },
+        {
+            "URL": "https://journals.sagepub.com/doi/abs/10.1177/1065912919832374",
+            "author": [
+                {
+                    "family": "Stein",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Birenbaum",
+                    "given": "Zachary"
+                },
+                {
+                    "family": "Kawsar",
+                    "given": "Farhan"
+                },
+                {
+                    "family": "III",
+                    "given": "Charles Stewart"
+                },
+                {
+                    "family": "Alberda",
+                    "given": "Gayle"
+                },
+                {
+                    "family": "Alvarez",
+                    "given": "R. Michael"
+                },
+                {
+                    "family": "Beaulieu",
+                    "given": "Emily"
+                },
+                {
+                    "family": "Birkhead",
+                    "given": "Nathaniel A."
+                },
+                {
+                    "family": "Boehmke",
+                    "given": "Frederick"
+                },
+                {
+                    "family": "Boston",
+                    "given": "Joshua"
+                },
+                {
+                    "family": "Burden",
+                    "given": "Barry C."
+                },
+                {
+                    "family": "Cantu",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "Cobb",
+                    "given": "Rachael"
+                },
+                {
+                    "family": "Darmofal",
+                    "given": "David"
+                },
+                {
+                    "family": "Ellington",
+                    "given": "Thomas C."
+                },
+                {
+                    "family": "Finocchiaro",
+                    "given": "Charles J."
+                },
+                {
+                    "family": "Gilbert",
+                    "given": "Michael"
+                },
+                {
+                    "family": "Haynes",
+                    "given": "Victor"
+                },
+                {
+                    "family": "Janssen",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Kimball",
+                    "given": "David"
+                },
+                {
+                    "family": "Kromkowski",
+                    "given": "Charles"
+                },
+                {
+                    "family": "Llaudet",
+                    "given": "Elena"
+                },
+                {
+                    "family": "Mann",
+                    "given": "Christopher"
+                },
+                {
+                    "family": "Mayer",
+                    "given": "Ken"
+                },
+                {
+                    "family": "Miles",
+                    "given": "Matthew R."
+                },
+                {
+                    "family": "Miller",
+                    "given": "David"
+                },
+                {
+                    "family": "Nielson",
+                    "given": "Lindsay"
+                },
+                {
+                    "family": "Ouyang",
+                    "given": "Yu"
+                },
+                {
+                    "family": "Panagopoulos",
+                    "given": "Costas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Seo",
+                    "given": "Min Hee"
+                },
+                {
+                    "family": "Smidt",
+                    "given": "Corwin"
+                },
+                {
+                    "family": "VanSickle-Ward",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Wood",
+                    "given": "Abby"
+                },
+                {
+                    "family": "Wronski",
+                    "given": "Julie"
+                }
+            ],
+            "container-title": "Political Research Quarterly",
+            "id": "lines",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "439-453",
+            "title": "Waiting to vote in the 2016 presidential election: Evidence from a multi-campus study",
+            "title-short": "Waiting to vote in the 2016 presidential election",
+            "type": "article-journal",
+            "volume": "73"
+        },
+        {
+            "DOI": "https://doi.org/10.1007/978-3-030-14947-5_6",
+            "author": [
+                {
+                    "family": "Stein",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Mann",
+                    "given": "Christopher"
+                },
+                {
+                    "family": "III",
+                    "given": "Charles Stewart"
+                },
+                {
+                    "dropping-particle": "with",
+                    "family": "Zachary Birenbaum"
+                },
+                {
+                    "family": "Fung",
+                    "given": "Anson"
+                },
+                {
+                    "family": "Greenberg",
+                    "given": "Jeb"
+                },
+                {
+                    "family": "Kawsar",
+                    "given": "Farhan"
+                },
+                {
+                    "family": "Alberda",
+                    "given": "Gayle"
+                },
+                {
+                    "family": "Alvarez",
+                    "given": "R. Michael"
+                },
+                {
+                    "family": "Beaulieu",
+                    "given": "Emily"
+                },
+                {
+                    "family": "Birkhead",
+                    "given": "Nathaniel A."
+                },
+                {
+                    "family": "Boehmke",
+                    "given": "Frederick"
+                },
+                {
+                    "family": "Boston",
+                    "given": "Joshua"
+                },
+                {
+                    "family": "Burden",
+                    "given": "Barry C."
+                },
+                {
+                    "family": "Cantu",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "Cobb",
+                    "given": "Rachael"
+                },
+                {
+                    "family": "Darmofal",
+                    "given": "David"
+                },
+                {
+                    "family": "Ellington",
+                    "given": "Thomas C."
+                },
+                {
+                    "family": "Fine",
+                    "given": "Terri"
+                },
+                {
+                    "family": "Finocchiaro",
+                    "given": "Charles J."
+                },
+                {
+                    "family": "Gilbert",
+                    "given": "Michael"
+                },
+                {
+                    "family": "Haynes",
+                    "given": "Victor"
+                },
+                {
+                    "family": "Janssen",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Kimball",
+                    "given": "David"
+                },
+                {
+                    "family": "Kromkowski",
+                    "given": "Charles"
+                },
+                {
+                    "family": "Llaudet",
+                    "given": "Elena"
+                },
+                {
+                    "family": "Mayer",
+                    "given": "Ken"
+                },
+                {
+                    "family": "Miles",
+                    "given": "Matthew R."
+                },
+                {
+                    "family": "Miller",
+                    "given": "David"
+                },
+                {
+                    "family": "Nielson",
+                    "given": "Lindsay"
+                },
+                {
+                    "family": "Ouyang",
+                    "given": "Yu"
+                },
+                {
+                    "family": "Panagopoulos",
+                    "given": "Costas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Seo",
+                    "given": "Min Hee"
+                },
+                {
+                    "family": "Simmons",
+                    "given": "Haley"
+                },
+                {
+                    "family": "Smidt",
+                    "given": "Corwin"
+                },
+                {
+                    "family": "VanSickle-Ward",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Victor",
+                    "given": "Jennifer Nicoll"
+                },
+                {
+                    "family": "Wood",
+                    "given": "Abby"
+                },
+                {
+                    "family": "Wronski",
+                    "given": "Julie"
+                }
+            ],
+            "container-title": "The future of election administration",
+            "editor": [
+                {
+                    "family": "Brown",
+                    "given": "Mitchell"
+                },
+                {
+                    "family": "Hale",
+                    "given": "Kathleen"
+                },
+                {
+                    "family": "King",
+                    "given": "Bridgett A."
+                }
+            ],
+            "id": "access",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "83-100",
+            "publisher": "Palgrave Macmillan",
+            "title": "Polling place quality and access",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Stein",
+                    "given": "Robert M."
+                },
+                {
+                    "family": "Burden",
+                    "given": "Barry C."
+                },
+                {
+                    "family": "Alberda",
+                    "given": "Gayle"
+                },
+                {
+                    "family": "Atkeson",
+                    "given": "Lonna"
+                },
+                {
+                    "family": "Bryant",
+                    "given": "Lisa"
+                },
+                {
+                    "family": "Cobb",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "Gilbert",
+                    "given": "Michael"
+                },
+                {
+                    "family": "Hostetter",
+                    "given": "Josh"
+                },
+                {
+                    "family": "Kimball",
+                    "given": "David C."
+                },
+                {
+                    "family": "Lamb",
+                    "given": "Matthew"
+                },
+                {
+                    "family": "Mayer",
+                    "given": "Kenneth R."
+                },
+                {
+                    "family": "Panagopoulos",
+                    "given": "Costas"
+                },
+                {
+                    "family": "Reeves",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Smidt",
+                    "given": "Corwin"
+                },
+                {
+                    "family": "Victor",
+                    "given": "Jennifer"
+                }
+            ],
+            "container-title": "Election Law Journal",
+            "id": "guardians",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2025
+                    ]
+                ]
+            },
+            "page": "62-73",
+            "title": "Guardians at the gates: Poll worker retention in a challenging election environment",
+            "title-short": "Guardians at the gates",
+            "type": "article-journal",
+            "volume": "24"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}

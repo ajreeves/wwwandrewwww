@@ -1,0 +1,101 @@
+---
+title: "Research"
+description: "Publications on American political institutions, presidential power, and democratic governance"
+page-layout: full
+toc: false
+listing:
+  - id: books
+    contents: 
+      - "*/index.md"
+    type: grid
+    grid-columns: 2
+    grid-item-border: true
+    fields: [title, date, description, categories]
+    filter-ui: false
+    sort: "date desc"
+    include:
+      publication_type: "book"
+  - id: articles
+    contents:
+      - "*/index.md"
+    type: table
+    table-striped: true
+    table-hover: true
+    fields: [title, date, journal_name, categories]
+    field-display-names:
+      title: "Title"
+      date: "Year"
+      journal_name: "Journal/Publisher"
+      categories: "Research Areas"
+    filter-ui: true
+    sort: "date desc"
+    include:
+      publication_type: "article"
+  - id: all-publications
+    contents:
+      - "*/index.md"
+    type: default
+    fields: [title, date, description, categories, tags, publication_type]
+    filter-ui: true
+    sort: "date desc"
+    page-size: 15
+---
+
+:::{.column-screen-inset}
+
+## Overview
+
+My research examines how American political institutions shape democratic governance, with particular focus on presidential power, electoral accountability, and the geographic dimensions of political behavior. Through empirical analysis combining survey experiments, administrative data, and formal modeling, I investigate when and why democratic institutions succeed or fail to represent citizen interests.
+
+## Books
+
+:::{#books}
+:::
+
+## Journal Articles & Book Chapters
+
+:::{#articles}
+:::
+
+## Research Areas
+
+My work spans several interconnected areas of American politics:
+
+- **Presidential Power & Accountability**: How presidents use unilateral powers and how the public constrains executive action
+- **Electoral Politics & Geography**: The spatial dimensions of campaigns, voting behavior, and political representation  
+- **Disaster Politics**: How natural disasters and crises shape political accountability and government response
+- **Democratic Institutions**: The design and performance of election administration, legislative processes, and bureaucratic governance
+- **Public Opinion & Political Behavior**: How citizens form political judgments and hold leaders accountable
+
+## Methodology
+
+My research employs diverse methodological approaches:
+
+- **Survey Experiments**: Testing causal relationships in public opinion and political behavior
+- **Administrative Data Analysis**: Leveraging government records on spending, disasters, and electoral outcomes
+- **Formal Theory**: Mathematical modeling of strategic interactions between political actors
+- **Geospatial Analysis**: Mapping political phenomena across geographic units
+- **Mixed Methods**: Combining quantitative analysis with qualitative case studies and elite interviews
+
+## All Publications
+
+For a complete searchable list of all publications, use the filters below:
+
+:::{#all-publications}
+:::
+
+:::
+
+---
+
+## Collaboration & Data
+
+Many of these projects involve collaborative research with colleagues across multiple institutions. When possible, replication materials are made available through journal repositories or the [Harvard Dataverse](https://dataverse.harvard.edu/).
+
+For questions about ongoing research or potential collaboration, please feel free to [contact me](mailto:areeves@wustl.edu).
+
+## Recent Updates
+
+This page is automatically updated as new publications are added. Publications are organized by type and can be filtered by research area, methodology, or keyword. PDF versions are available for most publications - please [contact me](mailto:areeves@wustl.edu) if you have trouble accessing any materials.
+
+*Last updated: {{< meta date >}}*

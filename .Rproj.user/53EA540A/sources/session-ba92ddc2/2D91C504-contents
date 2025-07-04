@@ -1,0 +1,57 @@
+---
+title: "Publications"
+format:
+  html:
+    theme: cosmo
+    toc: false
+resource-files:
+  - research/**
+---
+
+<style>
+.listing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.listing-cards .card {
+  border: 1px solid #e2e3e5;
+  border-radius: .5rem;
+  padding: 1rem;
+  transition: box-shadow .2s;
+  overflow: hidden;
+}
+.listing-cards .card:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.listing-cards .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+.listing-cards .card-meta {
+  font-size: .9rem;
+  color: #6c757d;
+  margin-bottom: .75rem;
+}
+.listing-cards .card-tags {
+  font-size: .85rem;
+  color: #495057;
+  margin-top: .5rem;
+}
+</style>
+
+::: {listing .listing-cards}
+
+type: cards
+
+directory: research
+
+card-content:
+  - title
+  - date
+  - description
+  - tags
+
+:::

@@ -1,0 +1,172 @@
+---
+title: "Research"
+description: "Publications on American political institutions, presidential power, and democratic governance"
+page-layout: full
+toc: false
+listing:
+  - id: books
+    contents: 
+      - "*/index.md"
+    type: grid
+    grid-columns: 2
+    grid-item-border: true
+    fields: [image, title, date, description, tags]
+    filter-ui: false
+    sort: "date desc"
+    date-format: "YYYY"
+    include:
+      publication_type: "book"
+  - id: all-publications
+    contents:
+      - "*/index.md"
+    type: default
+    fields: [image, title, date, journal_name, categories, publication_type, description, tags]
+    filter-ui: true
+    sort: "date desc"
+    page-size: 15
+    date-format: "YYYY"
+---
+
+:::{.column-screen-inset}
+
+## Books
+
+:::{#books}
+:::
+
+## All Publications
+
+Browse and search all publications below:
+
+:::{#all-publications}
+:::
+
+:::
+
+<script>
+function filterByTag(tag) {
+  // Update button states
+  document.querySelectorAll('.tag-filter').forEach(btn => {
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-outline-secondary');
+  });
+  
+  document.querySelector(`[data-tag="${tag}"]`).classList.remove('btn-outline-secondary');
+  document.querySelector(`[data-tag="${tag}"]`).classList.add('btn-primary');
+  
+  // Filter publications
+  const publications = document.querySelectorAll('.quarto-listing .quarto-listing-item');
+  
+  publications.forEach(pub => {
+    if (tag === 'all') {
+      pub.style.display = 'block';
+    } else {
+      const pubTags = pub.dataset.tags || '';
+      if (pubTags.toLowerCase().includes(tag.toLowerCase())) {
+        pub.style.display = 'block';
+      } else {
+        pub.style.display = 'none';
+      }
+    }
+  });
+}
+
+// Add tag data attributes to publication items when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const publications = document.querySelectorAll('.quarto-listing .quarto-listing-item');
+  
+  publications.forEach(pub => {
+    const tagElements = pub.querySelectorAll('.listing-tag, .tag');
+    const tags = Array.from(tagElements).map(el => el.textContent.trim()).join(' ');
+    pub.dataset.tags = tags;
+  });
+});
+</script>
+
+<style>
+.tag-filter {
+  transition: all 0.2s ease;
+}
+
+.tag-filter:hover {
+  transform: translateY(-1px);
+}
+
+.research-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.research-tag-cloud .tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.research-tag-cloud .tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.research-tag-cloud .tag.active {
+  background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+/* Style tags in publication listings */
+.listing-tag, .quarto-listing .listing-categories .listing-category {
+  display: inline-block;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1565c0;
+  padding: 0.25rem 0.75rem;
+  margin: 0.1rem 0.3rem 0.1rem 0;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #90caf9;
+  transition: all 0.2s ease;
+}
+
+.listing-tag:hover, .quarto-listing .listing-categories .listing-category:hover {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+}
+
+/* Target tags specifically in listings */
+.quarto-listing .listing-item .listing-tags {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quarto-listing .listing-item .listing-tags .listing-tag {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  color: #6a1b9a;
+  border: 1px solid #ce93d8;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.quarto-listing .listing-item .listing-tags .listing-tag:hover {
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+}
+
+/* Alternative styling for different tag types */
+.tag-presidential { background: linear-gradient(135deg, #ffcdd2 0%, #f8bbd9 100%); color: #c62828; border-color: #ef9a9a; }
+.tag-electoral { background: linear-gradient(135deg, #dcedc8 0%, #c8e6c9 100%); color: #2e7d32; border-color: #a5d6a7; }
+.tag-disaster { background: linear-gradient(135deg, #ffe0b2 0%, #ffcc02 100%); color: #ef6c00; border-color: #ffb74d; }
+.tag-opinion { background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); color: #0277bd; border-color: #4fc3f7; }
+</style>

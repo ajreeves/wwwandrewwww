@@ -1,0 +1,361 @@
+---
+title: "Public Writing & Media"
+description: "Commentary and media coverage on presidential power, disaster politics, and electoral accountability"
+---
+
+```{=html}
+<style>
+.writing-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #2d3e2f;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #6b8e6f;
+}
+
+.writing-list {
+    margin-bottom: 3rem;
+}
+
+.writing-entry {
+    background: white;
+    border: 1px solid #e8ebe9;
+    border-left: 5px solid #6b8e6f;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(45, 62, 47, 0.1);
+    transition: all 0.3s ease;
+}
+
+.writing-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(45, 62, 47, 0.15);
+    border-left-color: #2d3e2f;
+}
+
+.writing-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.writing-title a {
+    color: #2d3e2f;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.writing-title a:hover {
+    color: #6b8e6f;
+}
+
+.writing-details {
+    color: #7a8d7c;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.writing-venue {
+    font-weight: 600;
+    color: #6b8e6f;
+}
+
+.writing-summary {
+    color: #4a5d4c;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.media-section {
+    background: #f5f8f6;
+    border-radius: 8px;
+    padding: 2rem;
+    border: 1px solid #e8ebe9;
+}
+
+.media-title {
+    font-size: 1.5rem;
+    color: #2d3e2f;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.media-intro {
+    color: #4a5d4c;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.media-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.media-item {
+    background: white;
+    border: 1px solid #e8ebe9;
+    border-radius: 6px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.media-item:hover {
+    border-color: #6b8e6f;
+    box-shadow: 0 2px 6px rgba(45, 62, 47, 0.1);
+}
+
+.media-link {
+    color: #2d3e2f;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.media-link:hover {
+    color: #6b8e6f;
+}
+
+.media-source {
+    color: #7a8d7c;
+    font-size: 0.9rem;
+}
+
+.media-publication {
+    font-weight: 600;
+    color: #6b8e6f;
+}
+
+@media (max-width: 768px) {
+    .writing-entry {
+        padding: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .media-section {
+        padding: 1.5rem;
+    }
+}
+</style>
+
+<div class="writing-section">
+    <h2 class="section-title">My Public Writing</h2>
+    
+    <div class="writing-list">
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="https://theconversation.com/trump-treats-laws-as-obstacles-not-limits-and-the-only-real-check-on-his-rule-breaking-can-come-from-political-pressure-255834">Trump treats laws as obstacles, not limits − and the only real check on his rule-breaking can come from political pressure</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/theconversation.com" alt="The Conversation" class="outlet-logo">
+                <span class="writing-venue">The Conversation</span> • May 21, 2025
+            </div>
+            <div class="writing-summary">
+                Legal boundaries are often treated by Trump's administration as optional. The most meaningful check on presidential power will be political—courts rely on the broader political system for enforcement through elected officials, Congress, bureaucrats, and public pressure.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="https://www.latimes.com/opinion/story/2024-06-25/biden-trump-debate-presidential-campaign">Biden and Trump will talk big at the debate, but how much could either really do?</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/latimes.com" alt="Los Angeles Times" class="outlet-logo">
+                <span class="writing-venue">Los Angeles Times</span> • June 25, 2024
+            </div>
+            <div class="writing-summary">
+                Despite campaign promises, presidents face significant constraints on their ability to deliver policy change. The institutional presidency, partisan gridlock, and federalism all limit executive power in ways voters often don't appreciate.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="https://theconversation.com/bidens-supreme-court-commission-probably-wont-sway-public-opinion-159658">Biden's Supreme Court commission probably won't sway public opinion</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/theconversation.com" alt="The Conversation" class="outlet-logo">
+                <span class="writing-venue">The Conversation</span> • June 16, 2021
+            </div>
+            <div class="writing-summary">
+                Presidential commissions rarely change public opinion on contentious issues. The Supreme Court commission faces the challenge that Americans' views on court reform are already deeply entrenched along partisan lines, making persuasion difficult.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="https://www.stltoday.com/opinion/columnists/andrew-reeves-this-pandemic-is-a-test-for-leaders-voters-do-the-grading/article_80a024d0-8128-5d4a-809a-122d594e517a.html">This pandemic is a test for leaders. Voters do the grading</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/stltoday.com" alt="Saint Louis Post-Dispatch" class="outlet-logo">
+                <span class="writing-venue">Saint Louis Post-Dispatch</span> • April 1, 2020
+            </div>
+            <div class="writing-summary">
+                Natural disasters and crises create accountability moments for elected officials. How leaders respond—and how voters perceive that response—can reshape electoral fortunes and political careers.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/">Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/washingtonpost.com" alt="Washington Post" class="outlet-logo">
+                <span class="writing-venue">Washington Post</span> • October 2, 2017
+            </div>
+            <div class="writing-summary">
+                Electoral incentives shape disaster response. When affected populations can't vote for federal officials, we see predictably different patterns in aid allocation and presidential attention.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="#">Florida Disaster Aid Can Help Bush</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/latimes.com" alt="Los Angeles Times" class="outlet-logo">
+                <span class="writing-venue">Los Angeles Times</span> • October 3, 2004
+            </div>
+            <div class="writing-summary">
+                Research shows that electoral importance of a state plays a large role in determining whether a president declares a disaster. A non-battleground state with three electoral votes is almost 50% less likely to receive a disaster declaration than a battleground state with 20 or more electoral votes.
+            </div>
+        </div>
+
+        <div class="writing-entry">
+            <div class="writing-title">
+                <a href="#">Plucking Votes From Disasters</a>
+            </div>
+            <div class="writing-details">
+                <img src="https://logo.clearbit.com/latimes.com" alt="Los Angeles Times" class="outlet-logo">
+                <span class="writing-venue">Los Angeles Times</span> • May 12, 2004
+            </div>
+            <div class="writing-summary">
+                A battleground state with 20 electoral votes receives about 50% more disaster declarations than a state with three electoral votes that is not considered crucial for victory, even after accounting for need. Electoral motivations have dramatic effects on disaster policy.
+            </div>
+        </div>
+    </div>
+
+    <div class="media-section">
+        <div class="media-title">Research in the Media</div>
+        <div class="media-intro">
+            Research on presidential power, disaster politics, and electoral accountability has been featured in major media outlets and policy discussions.
+        </div>
+
+        <div class="media-grid">
+            <div class="media-item">
+                <a href="https://slate.com/news-and-politics/2024/10/us-presidential-election-swing-state-politics-harming-democracy.html" class="media-link">Swing-State Politics Is Rotting Our Brains and Harming Democracy</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/slate.com" alt="Slate" class="media-outlet-logo">
+                    <span class="media-publication">Slate</span> • October 2024
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.reuters.com/world/us/wake-hurricane-trump-seeks-boost-his-presidential-bid-2024-10-01/" class="media-link">Trump seeks to boost presidential bid in Hurricane Helene's wake, analysts say</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/reuters.com" alt="Reuters" class="media-outlet-logo">
+                    <span class="media-publication">Reuters</span> • October 2024
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.npr.org/2022/10/01/1126239235/politics-natural-disasters-desantis-hurricane-ian" class="media-link">How local and national leaders are tested by major natural disasters</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/npr.org" alt="NPR" class="media-outlet-logo">
+                    <span class="media-publication">NPR</span> • October 2022
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.voanews.com/a/biden-to-survey-hurricane-ian-damage-in-florida/6776635.html" class="media-link">Biden Surveys Hurricane Damage in Florida Amid Tension With Governor</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/voanews.com" alt="Voice of America" class="media-outlet-logo">
+                    <span class="media-publication">Voice of America</span> • October 2022
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.thedailybeast.com/devastating-tornadoes-give-biden-one-last-chance-to-bridge-red-blue-rift" class="media-link">Devastating Tornadoes Give Biden One Last Chance to Bridge Red-Blue Rift</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/thedailybeast.com" alt="The Daily Beast" class="media-outlet-logo">
+                    <span class="media-publication">The Daily Beast</span> • December 2021
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://theconversation.com/bidens-supreme-court-commission-probably-wont-sway-public-opinion-159658" class="media-link">Biden's Supreme Court commission probably won't sway public opinion</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/theconversation.com" alt="The Conversation" class="media-outlet-logo">
+                    <span class="media-publication">The Conversation</span> • June 2021
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.theatlantic.com/politics/archive/2021/02/what-texas-energy-crisis-means-democrats/618127/" class="media-link">Texas's Disaster Is Over. The Fallout Is Just Beginning</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/theatlantic.com" alt="The Atlantic" class="media-outlet-logo">
+                    <span class="media-publication">The Atlantic</span> • February 2021
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.washingtonpost.com/politics/2020/03/26/if-trump-took-responsibility-coronavirus-missteps-it-might-actually-help-him/" class="media-link">If Trump took responsibility for coronavirus missteps, it might actually help him</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/washingtonpost.com" alt="Washington Post" class="media-outlet-logo">
+                    <span class="media-publication">Washington Post</span> • March 2020
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.theatlantic.com/ideas/archive/2020/04/most-important-number-trumps-re-election-chances/609376/" class="media-link">The Economy is Collapsing. So Are Trump's Reelection Chances</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/theatlantic.com" alt="The Atlantic" class="media-outlet-logo">
+                    <span class="media-publication">The Atlantic</span> • April 2020
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://www.economist.com/news/united-states/21730430-federal-aid-sent-puerto-rico-fits-longstanding-pattern-counties-voted" class="media-link">Counties that voted for the president get more in disaster relief</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/economist.com" alt="The Economist" class="media-outlet-logo">
+                    <span class="media-publication">The Economist</span> • October 2017
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://fivethirtyeight.com/features/disaster-politics-can-get-in-the-way-of-disaster-preparedness/" class="media-link">Disaster Politics Can Get In The Way Of Disaster Preparedness</a>
+                <div class="media-source">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iNCIgZmlsbD0iI0ZGNjMxOSIvPgo8dGV4dCB4PSIyMCIgeT0iMjciIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj41Mzg8L3RleHQ+Cjwvc3ZnPgo=" alt="FiveThirtyEight" class="media-outlet-logo">
+                    <span class="media-publication">FiveThirtyEight</span> • August 2017
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="http://www.washingtonpost.com/blogs/wonkblog/wp/2013/08/29/do-presidents-really-reward-the-states-that-voted-them-into-office/" class="media-link">Do presidents really reward the states that voted them into office?</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/washingtonpost.com" alt="Washington Post" class="media-outlet-logo">
+                    <span class="media-publication">Washington Post</span> • August 2013
+                </div>
+            </div>
+
+            <div class="media-item">
+                <a href="https://goodauthority.org/news/how-hurricane-sandy-could-matter-on-election-day/" class="media-link">How Hurricane Sandy Could Matter on Election Day</a>
+                <div class="media-source">
+                    <img src="https://logo.clearbit.com/washingtonpost.com" alt="The Monkey Cage" class="media-outlet-logo">
+                    <span class="media-publication">The Monkey Cage</span> • October 2012
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```

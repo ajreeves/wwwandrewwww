@@ -1,0 +1,26 @@
+import os
+from pdf2image import convert_from_path
+from pathlib import Path
+
+def convert_pdfs_to_png(folder_path, dpi=300):
+    folder = Path(folder_path)
+    pdf_files = list(folder.glob("*.pdf"))
+    
+    print(f"Found {len(pdf_files)} PDF files")
+    
+    for pdf_file in pdf_files:
+        print(f"Converting {pdf_file.name}...")
+        
+        # Convert PDF to images
+        images = convert_from_path(pdf_file, dpi=dpi)
+        
+        # Since these are single-page PDFs, there should be only one image
+        if images:
+            png_filename = pdf_file.with_suffix('.png')
+            images[0].save(png_filename, 'PNG')
+            print(f"Saved: {png_filename.name}")
+
+# Run the conversion
+folder_path = input("Enter the folder path containing PDFs: ")
+convert_pdfs_to_png(folder_path)
+print("Conversion complete!")

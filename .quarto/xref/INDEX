@@ -1,0 +1,230 @@
+{
+  "index.qmd": {
+    "index.html": "6de5ad0c"
+  },
+  "about.qmd": {
+    "about.html": "c71838b8"
+  },
+  "publications-auto.qmd": {
+    "publications-auto.html": "e756e670"
+  },
+  "publications.qmd": {
+    "publications.html": "5a0c26fb"
+  },
+  "contact.qmd": {
+    "contact.html": "0f4a2c2b"
+  },
+  "news.qmd": {
+    "news.html": "392a5721"
+  },
+  "research.qmd": {
+    "research.html": "d0078370"
+  },
+  "teaching.qmd": {
+    "teaching.html": "14d58b11"
+  },
+  "research-old.qmd": {
+    "research-old.html": "79cd4480"
+  },
+  "makeresearch.qmd": {
+    "makeresearch.html": "a900191e"
+  },
+  "research/index.qmd": {
+    "index.html": "e05ccd27"
+  },
+  "research/commissions/index.md": {
+    "index.html": "a21f8c78"
+  },
+  "research/foreclosures/index.md": {
+    "index.html": "0c1ad0af"
+  },
+  "research/clerks/index.md": {
+    "index.html": "980af91c"
+  },
+  "research/blameclaim/index.md": {
+    "index.html": "762d45e5"
+  },
+  "research/partpres/index.md": {
+    "index.html": "4be7cea8"
+  },
+  "research/rain/index.md": {
+    "index.html": "cf912fff"
+  },
+  "research/context/index.md": {
+    "index.html": "64559095"
+  },
+  "research/political-geography/index.md": {
+    "index.html": "51240850"
+  },
+  "research/prespower/index.md": {
+    "index.html": "4da99189"
+  },
+  "research/constraints/index.md": {
+    "index.html": "b7615801"
+  },
+  "research/polling/index.md": {
+    "index.html": "44a7858e"
+  },
+  "research/access/index.md": {
+    "index.html": "78be6925"
+  },
+  "research/targeting/index.md": {
+    "index.html": "54e32399"
+  },
+  "research/senators/index.md": {
+    "index.html": "6dc22d88"
+  },
+  "research/disasters-latimes-1/index.md": {
+    "index.html": "2d858dc4"
+  },
+  "research/attachment/index.md": {
+    "index.html": "abcc8269"
+  },
+  "research/healthcare/index.md": {
+    "index.html": "594c90ba"
+  },
+  "research/reassessment-long/index.md": {
+    "index.html": "4c2605ab"
+  },
+  "research/milieu/index.md": {
+    "index.html": "13b87458"
+  },
+  "research/reassessment/index.md": {
+    "index.html": "8b675865"
+  },
+  "research/prespart/index.md": {
+    "index.html": "34f604d9"
+  },
+  "research/values/index.md": {
+    "index.html": "87abaff9"
+  },
+  "research/electionsbib/index.md": {
+    "index.html": "0f81a59f"
+  },
+  "research/disasters-review/index.md": {
+    "index.html": "c5d85cfd"
+  },
+  "research/spending/index.md": {
+    "index.html": "3f1e09ec"
+  },
+  "research/pasachoff-reply/index.md": {
+    "index.html": "759176c6"
+  },
+  "research/crisis/index.md": {
+    "index.html": "d0913bb2"
+  },
+  "research/topower/index.md": {
+    "index.html": "3e069745"
+  },
+  "research/leap/index.md": {
+    "index.html": "e5f688b4"
+  },
+  "research/noblankcheck/index.md": {
+    "index.html": "d1f326b0"
+  },
+  "research/unheavenly-review/index.md": {
+    "index.html": "447c7a5c"
+  },
+  "research/guardians/index.md": {
+    "index.html": "9e16971f"
+  },
+  "research/disunion-review/index.md": {
+    "index.html": "49ca4fa4"
+  },
+  "research/appearances/index.md": {
+    "index.html": "b48e85cb"
+  },
+  "research/geolocation/index.md": {
+    "index.html": "4e81c51e"
+  },
+  "research/autos/index.md": {
+    "index.html": "81ad619a"
+  },
+  "research/nothing/index.md": {
+    "index.html": "732b4491"
+  },
+  "research/electoralcollege/index.md": {
+    "index.html": "30c9ca3f"
+  },
+  "research/asking/index.md": {
+    "index.html": "49b4148d"
+  },
+  "research/environment/index.md": {
+    "index.html": "917549a3"
+  },
+  "research/caucus/index.md": {
+    "index.html": "4bee44ae"
+  },
+  "research/jobs/index.md": {
+    "index.html": "db6b606f"
+  },
+  "research/transitions/index.md": {
+    "index.html": "63b4d457"
+  },
+  "research/crime/index.md": {
+    "index.html": "2b503ee4"
+  },
+  "research/fema/index.md": {
+    "index.html": "30ebfa4e"
+  },
+  "research/urbanrural/index.md": {
+    "index.html": "dda5e14b"
+  },
+  "research/bellwether/index.md": {
+    "index.html": "0ba0a8ce"
+  },
+  "research/lines/index.md": {
+    "index.html": "5f3482d3"
+  },
+  "research/unemployment/index.md": {
+    "index.html": "3c15725e"
+  },
+  "research/unilateral/index.md": {
+    "index.html": "7036c9ad"
+  },
+  "research/popularity/index.md": {
+    "index.html": "f8341c08"
+  },
+  "research/transition/index.md": {
+    "index.html": "20385842"
+  },
+  "research/pandemic-stld/index.md": {
+    "index.html": "270ca53b"
+  },
+  "research/covid-mc/index.md": {
+    "index.html": "f140b5d6"
+  },
+  "research/disasters-latimes2/index.md": {
+    "index.html": "5664c5b3"
+  },
+  "research/recounts/index.md": {
+    "index.html": "cb2326b3"
+  },
+  "research/disasters-reuters/index.md": {
+    "index.html": "a0ac0138"
+  },
+  "research/yonder/index.md": {
+    "index.html": "e790b504"
+  },
+  "research/disasters-latimes1/index.md": {
+    "index.html": "2b237239"
+  },
+  "research/trump/index.md": {
+    "index.html": "da22a091"
+  },
+  "research/puertorico-reuters/index.md": {
+    "index.html": "cbb11634"
+  },
+  "contact/index.qmd": {
+    "index.html": "30d73d87"
+  },
+  "news/index.qmd": {
+    "index.html": "675508d6"
+  },
+  "teaching/index.qmd": {
+    "index.html": "409a807c"
+  },
+  "research/index_claude.qmd": {
+    "index_claude.html": "b415f2d6"
+  }
+}

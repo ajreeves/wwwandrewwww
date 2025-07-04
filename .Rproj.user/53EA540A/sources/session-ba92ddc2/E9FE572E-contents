@@ -1,0 +1,217 @@
+---
+title: ""
+page-layout: full
+title-block-banner: false
+---
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+.simple-layout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.profile-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+}
+
+.profile-text {
+    flex: 2;
+}
+
+.profile-image {
+    flex: 0 0 200px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.simple-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.simple-section:last-child {
+    border-bottom: none;
+}
+
+.simple-section h2 {
+    color: #2d3e2f;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-links {
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: #2d3e2f;
+    text-decoration: none;
+    margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-links i {
+    font-size: 1.1em;
+}
+
+.book-entry {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.book-cover {
+    flex: 0 0 120px;
+}
+
+.book-cover img {
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 0.25rem;
+}
+
+.book-text {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: none;
+        align-self: center;
+    }
+    
+    .book-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .book-cover {
+        flex: none;
+        align-self: center;
+    }
+}
+</style>
+```
+
+:::::::::::::::::::::::::::: simple-layout
+:::::: profile-header
+:::: profile-text
+# Welcome
+
+Andrew Reeves is Professor of [Political Science](https://polisci.wustl.edu/), Senior Advisor to the [Chancellor](https://andrewdmartin.washu.edu/), and Director of the [Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.wustl.edu). He is also a Visiting Fellow at the [Hoover Institution](https://www.hoover.org).
+
+Reeves's research focuses on American political institutions, electoral behavior, and public policy, with particular emphasis on the presidency and executive power. He studies how political accountability and institutional design shape governance, policy outcomes, and voter behavior. His work shows that presidents frequently pursue partisan and electoral goals, that the public holds well-defined views on presidential power, and that local context plays a powerful role in shaping political behavior.
+
+::::
+
+::: profile-image
+![](images/profile.jpg)
+:::
+::::::
+
+:::::::::::::::: simple-section
+## My Research
+
+My research explores the American presidency, the geography of political life, how voters hold leaders accountable, and how public resources are distributed. I study these questions using a range of data—from surveys and election returns to federal spending and disaster aid—to better understand the functioning of American democracy. My recent book, *No Blank Check*, examines how public attitudes shape and constrain presidential power, even in moments of national crisis.
+
+::::::::::::::: research-grid
+::::: research-block
+::: research-icon
+<i class="fas fa-gavel"></i>
+:::
+
+::: research-content
+<h3>Presidential Power and Public Constraint</h3>
+
+<p>I study how presidents lead, especially when they act without Congress. This includes tools like executive orders, emergency declarations, and disaster relief. While presidents often pursue these actions to advance policy or gain political advantage, they are not free to act without consequences. In <em>No Blank Check</em>, I show that the public has clear and often skeptical views about presidential power. Americans may support strong leadership in theory, but in practice they are quick to oppose presidents who act too aggressively or appear self-serving.</p>
+:::
+:::::
+
+::::: research-block
+::: research-icon
+<i class="fas fa-map-marked-alt"></i>
+:::
+
+::: research-content
+<h3>Geography and Political Experience</h3>
+
+<p>Where people live shapes their political views and the kind of government they receive. My work shows that voters in urban, suburban, and rural communities experience democracy differently—from how they vote to how they are served by federal programs. I explore how geography influences partisanship, perceptions of fairness, and trust in institutions. These spatial divides are central to understanding today's political polarization.</p>
+:::
+:::::
+
+::::: research-block
+::: research-icon
+<i class="fas fa-vote-yea"></i>
+:::
+
+::: research-content
+<h3>Voter Behavior and Political Accountability</h3>
+
+<p>Much of my research asks whether voters reward leaders for good governance or punish them for poor performance. The answer often depends on timing, visibility, and proximity. Voters are responsive when federal aid arrives quickly or when local unemployment improves, but they are less likely to notice longer-term or complex policies. This disconnect explains why some presidents prioritize short-term gains over durable policy change.</p>
+:::
+:::::
+
+::::: research-block
+::: research-icon
+<i class="fas fa-coins"></i>
+:::
+
+::: research-content
+<h3>Distributive Politics and Federal Power</h3>
+
+<p>Presidents and other national leaders have broad discretion in how they allocate federal dollars. I examine how political motivations—such as targeting swing states or rewarding co-partisans—influence the flow of resources. From disaster relief to infrastructure spending, my work shows how electoral incentives shape decisions that affect millions of Americans. This has serious implications for equity and public trust in government.</p>
+:::
+:::::
+:::::::::::::::
+::::::::::::::::
+
+::::::::: simple-section
+## Books
+
+::::: book-entry
+::: book-cover
+![](images/no-blank-check-cover.jpg){width="120"}
+:::
+
+::: book-text
+[*No Blank Check: The Origins and Consequences of Public Antipathy toward Presidential Power*](https://www.amazon.com/Blank-Check-Consequences-Antipathy-Presidential/dp/1316626474/) (Cambridge University Press, 2022), with [Jon C. Rogowski](https://voices.uchicago.edu/jrogowski/), investigates how Americans think about executive authority.
+
+Reeves and Rogowski explore how Americans think about presidential authority, finding that many citizens are skeptical of unilateral executive action—even when undertaken by presidents they support. The book combines historical analysis, survey experiments, and public opinion data to show that concerns about constitutional limits and democratic norms shape public evaluations of presidential power. This resistance to expansive executive authority suggests that the public can act as a meaningful check on the presidency, even in a polarized era.
+:::
+:::::
+
+::::: book-entry
+::: book-cover
+![](images/particularistic-president-cover.jpg){width="120"}
+:::
+
+::: book-text
+[*The Particularistic President: Executive Branch Politics and Political Inequality*](https://www.amazon.com/Particularistic-President-Executive-Political-Inequality/dp/1107616816/) (Cambridge University Press), coauthored with [Douglas Kriner](http://blogs.cornell.edu/kriner/), received the 2016 Richard E. Neustadt Award from the American Political Science Association.
+
+Kriner and Reeves challenges the widespread belief that presidents act in the national interest, showing instead that they often favor specific constituencies—especially swing states and partisan allies—when distributing federal resources. Drawing on data from disaster declarations, defense spending, and federal grants, the authors demonstrate that presidents engage in a form of "particularism" similar to the parochial behavior commonly attributed to Congress. The book warns that increasing presidential power may not counteract legislative dysfunction but instead deepen political inequality through executive favoritism.
+:::
+:::::
+:::::::::
+::::::::::::::::::::::::::::

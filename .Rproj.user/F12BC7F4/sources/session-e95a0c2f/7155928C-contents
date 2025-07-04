@@ -1,0 +1,691 @@
+---
+title: "Research"
+format:
+  html:
+    page-layout: full
+---
+
+```{=html}
+<style>
+:root {
+  --primary-green: #6b7c37;
+  --secondary-green: #8b9d4a;
+  --light-green: #c4d084;
+  --dark-green: #4a5c20;
+  --white: #ffffff;
+  --dark-gray: #2d2d2d;
+  --medium-gray: #5a5a5a;
+  --light-gray: #f5f6f3;
+  --red: #c5604b;
+  --blue: #5a7aa0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.publication-controls {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #e5e7eb;
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--secondary-green);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--medium-gray);
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-right: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e7eb;
+  background: var(--white);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--secondary-green);
+  color: var(--secondary-green);
+}
+
+.filter-btn.active {
+  background: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.publication-item {
+  background: var(--white);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.publication-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: var(--medium-gray);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+.author-highlight {
+  font-weight: 700;
+  color: var(--primary-green);
+  background: rgba(107, 124, 55, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.publication-citation {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.publication-links a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.pdf-link {
+  background: var(--red);
+  color: white;
+}
+
+.pdf-link:hover {
+  background: #a04d3b;
+  color: white;
+}
+
+.publisher-link {
+  background: var(--blue);
+  color: white;
+}
+
+.publisher-link:hover {
+  background: #4a6889;
+  color: white;
+}
+
+.external-link {
+  background: var(--primary-green);
+  color: white;
+}
+
+.external-link:hover {
+  background: var(--dark-green);
+  color: white;
+}
+
+.summary-details {
+  margin-top: 1rem;
+}
+
+.summary-details summary {
+  background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: none;
+  outline: none;
+}
+
+.summary-details summary::before {
+  content: '▶';
+  margin-right: 0.5rem;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.summary-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.summary-details summary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+}
+
+.summary-content {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--light-gray) 0%, #eef0eb 100%);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-green);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin: 2.5rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--light-green);
+}
+
+.loading-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--medium-gray);
+}
+
+.error-container {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #dc2626;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-btn {
+    text-align: center;
+  }
+  
+  .publication-item {
+    padding: 1.5rem;
+  }
+  
+  .publication-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+</style>
+
+<div class="publication-controls">
+  <div class="search-container">
+    <input type="text" id="search-publications" class="search-input" placeholder="Search publications...">
+    <span class="search-icon">🔍</span>
+  </div>
+  
+  <div class="filter-group">
+    <span class="filter-label">Filter by type:</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="book">Books</button>
+    <button class="filter-btn" data-filter="article">Articles</button>
+    <button class="filter-btn" data-filter="incollection">Chapters</button>
+    <button class="filter-btn" data-filter="unpublished">Working Papers</button>
+  </div>
+  
+  <div class="filter-group">
+    <span class="filter-label">Filter by year:</span>
+    <button class="filter-btn" data-year="2024-2025">2024-2025</button>
+    <button class="filter-btn" data-year="2020-2023">2020-2023</button>
+    <button class="filter-btn" data-year="2015-2019">2015-2019</button>
+    <button class="filter-btn" data-year="2010-2014">2010-2014</button>
+    <button class="filter-btn" data-year="pre-2010">Pre-2010</button>
+  </div>
+</div>
+
+<div id="publications-container">
+  <div class="loading-container">
+    <p>Loading publications...</p>
+  </div>
+</div>
+
+<script>
+const bibData = `%% Placeholder bibliography data`;
+
+function parseBibTeX(bibString) {
+  const entries = [];
+  const parts = bibString.split('@').filter(part => part.trim());
+  
+  parts.forEach(part => {
+    if (!part.trim()) return;
+    
+    const entryText = '@' + part;
+    const firstLine = entryText.split('\n')[0];
+    const match = firstLine.match(/@(\w+)\s*\{\s*([^,\}\s]+)\s*,?/);
+    
+    if (!match) return;
+    
+    const [, type, key] = match;
+    
+    if (key.includes(':')) return; // Skip old format
+    
+    const entry = { 
+      type: type.toLowerCase(), 
+      key: key.trim(), 
+      fields: {} 
+    };
+    
+    const fieldRegex = /\s*([a-zA-Z][a-zA-Z0-9-]*)\s*=\s*\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}/g;
+    let fieldMatch;
+    
+    while ((fieldMatch = fieldRegex.exec(entryText)) !== null) {
+      const [, fieldName, fieldValue] = fieldMatch;
+      const cleanFieldName = fieldName.toLowerCase();
+      
+      if (!cleanFieldName.includes('date-') && 
+          !cleanFieldName.includes('bdsk-') && 
+          cleanFieldName !== 'read') {
+        entry.fields[cleanFieldName] = fieldValue.trim();
+      }
+    }
+    
+    if (Object.keys(entry.fields).length > 0) {
+      entries.push(entry);
+    }
+  });
+  
+  return entries;
+}
+
+function highlightAuthor(text) {
+  const variations = ['Andrew Reeves', 'Reeves, Andrew'];
+  let result = text;
+  
+  variations.forEach(name => {
+    const regex = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+    result = result.replace(regex, `<span class="author-highlight">${name}</span>`);
+  });
+  
+  return result;
+}
+
+function generateLinks(entry) {
+  const links = [];
+  
+  const pdfFile = `papers/${entry.key}.pdf`;
+  links.push(`<a href="${pdfFile}" class="pdf-link" target="_blank">📄 PDF</a>`);
+  
+  // Check for custom publisher URL first
+  if (typeof publisherUrls !== 'undefined' && publisherUrls[entry.key]) {
+    links.push(`<a href="${publisherUrls[entry.key]}" class="publisher-link" target="_blank">🏛️ Publisher</a>`);
+  } else {
+    // Fallback to automatic publisher detection
+    const journal = entry.fields.journal || entry.fields.publisher || '';
+    const publisherMappings = {
+      'American Journal of Political Science': 'https://onlinelibrary.wiley.com/journal/15405907',
+      'Legislative Studies Quarterly': 'https://onlinelibrary.wiley.com/journal/19399162', 
+      'Cambridge University Press': 'https://www.cambridge.org/core',
+      'Political Behavior': 'https://link.springer.com/journal/11109',
+      'Presidential Studies Quarterly': 'https://onlinelibrary.wiley.com/journal/17415705',
+      'Journal of Politics': 'https://www.journals.uchicago.edu/toc/jop/current',
+      'American Political Science Review': 'https://www.cambridge.org/core/journals/american-political-science-review',
+      'Public Opinion Quarterly': 'https://academic.oup.com/poq',
+      'Political Research Quarterly': 'https://journals.sagepub.com/home/prq'
+    };
+    
+    for (const [name, url] of Object.entries(publisherMappings)) {
+      if (journal.includes(name)) {
+        links.push(`<a href="${url}" class="publisher-link" target="_blank">🏛️ Publisher</a>`);
+        break;
+      }
+    }
+  }
+  
+  const title = entry.fields.title || '';
+  if (title) {
+    const scholarQuery = encodeURIComponent(title.replace(/[{}]/g, ''));
+    links.push(`<a href="https://scholar.google.com/scholar?q=${scholarQuery}" class="external-link" target="_blank">🎓 Scholar</a>`);
+  }
+  
+  return links.join('');
+}
+
+function getSummary(key) {
+  // Use dynamic summaries from BibTeX if available
+  if (typeof summaries !== 'undefined' && summaries[key]) {
+    return summaries[key];
+  }
+  
+  // Fallback to default message
+  return 'Summary available in the full publication. This work contributes to our understanding of American political institutions, electoral behavior, and democratic accountability.';
+}
+
+function formatPublication(entry) {
+  const type = entry.type;
+  const fields = entry.fields;
+  const year = fields.year || 'n.d.';
+  
+  let citation = '';
+  let typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
+  
+  let authors = fields.author || 'Unknown Author';
+  authors = highlightAuthor(authors);
+  
+  const title = (fields.title || 'Untitled').replace(/[{}]/g, '');
+  
+  if (type === 'article') {
+    const journal = fields.journal || '';
+    const volume = fields.volume || '';
+    const number = fields.number || '';
+    const pages = fields.pages || '';
+    
+    citation = `<strong>${authors}.</strong> "${title}"`;
+    if (journal) citation += ` <em>${journal}</em>`;
+    if (volume) citation += ` ${volume}`;
+    if (number) citation += `(${number})`;
+    if (pages) citation += `: ${pages}`;
+    citation += `, ${year}.`;
+    
+  } else if (type === 'book') {
+    const publisher = fields.publisher || '';
+    const address = fields.address || '';
+    
+    citation = `<strong>${authors}.</strong> <em>${title}</em>.`;
+    if (address) citation += ` ${address}:`;
+    if (publisher) citation += ` ${publisher}`;
+    citation += `, ${year}.`;
+    
+    typeLabel = 'Book';
+    
+  } else if (type === 'incollection') {
+    const booktitle = fields.booktitle || '';
+    const editor = fields.editor || '';
+    const publisher = fields.publisher || '';
+    
+    citation = `<strong>${authors}.</strong> "${title}"`;
+    if (booktitle) citation += ` In <em>${booktitle}</em>`;
+    if (editor) citation += `, edited by ${editor}`;
+    if (publisher) citation += `. ${publisher}`;
+    citation += `, ${year}.`;
+    
+    typeLabel = 'Book Chapter';
+    
+  } else if (type === 'unpublished') {
+    citation = `<strong>${authors}.</strong> "${title}," ${year}.`;
+    typeLabel = 'Working Paper';
+  }
+  
+  const links = generateLinks(entry);
+  const summary = getSummary(entry.key);
+  
+  // Only show summary if it exists and is meaningful
+  const summaryHtml = summary && summary.length > 50 ? 
+    `<details class="summary-details">
+      <summary>View Summary</summary>
+      <div class="summary-content">${summary}</div>
+    </details>` : '';
+  
+  return `<div class="publication-item" data-type="${type}" data-year="${year}">
+    <div class="publication-type" data-type="${type}">${typeLabel}</div>
+    <div class="publication-citation">${citation}</div>
+    <div class="publication-links">${links}</div>
+    ${summaryHtml}
+  </div>`;
+}
+
+function loadPublications() {
+  try {
+    if (bibData.length < 100) {
+      showError('No bibliography data found. Please run the update script.');
+      return;
+    }
+    
+    const entries = parseBibTeX(bibData);
+    
+    if (entries.length === 0) {
+      showError('No valid publications found.');
+      return;
+    }
+    
+    entries.sort((a, b) => {
+      const yearA = parseInt(a.fields.year) || 0;
+      const yearB = parseInt(b.fields.year) || 0;
+      return yearB - yearA;
+    });
+    
+    const groupedEntries = {
+      books: entries.filter(e => e.type === 'book'),
+      articles: entries.filter(e => e.type === 'article'),
+      chapters: entries.filter(e => e.type === 'incollection'),
+      working: entries.filter(e => e.type === 'unpublished')
+    };
+    
+    let html = '';
+    
+    if (groupedEntries.books.length > 0) {
+      html += '<h2>📚 Books</h2>';
+      groupedEntries.books.forEach(entry => {
+        html += formatPublication(entry);
+      });
+    }
+    
+    if (groupedEntries.articles.length > 0) {
+      html += '<h2>📄 Journal Articles</h2>';
+      groupedEntries.articles.forEach(entry => {
+        html += formatPublication(entry);
+      });
+    }
+    
+    if (groupedEntries.chapters.length > 0) {
+      html += '<h2>📖 Book Chapters</h2>';
+      groupedEntries.chapters.forEach(entry => {
+        html += formatPublication(entry);
+      });
+    }
+    
+    if (groupedEntries.working.length > 0) {
+      html += '<h2>📝 Working Papers</h2>';
+      groupedEntries.working.forEach(entry => {
+        html += formatPublication(entry);
+      });
+    }
+    
+    document.getElementById('publications-container').innerHTML = html;
+    
+    initializeFilters();
+    initializeSearch();
+    
+  } catch (error) {
+    console.error('Error loading publications:', error);
+    showError(`Error loading publications: ${error.message}`);
+  }
+}
+
+function showError(message) {
+  document.getElementById('publications-container').innerHTML = `
+    <div class="error-container">
+      <h3>⚠️ Error Loading Publications</h3>
+      <p>${message}</p>
+      <p><strong>To fix this:</strong></p>
+      <ul style="text-align: left; margin: 1rem auto; max-width: 400px;">
+        <li>Ensure references.bib exists</li>
+        <li>Run: python3 update-bibliography.py</li>
+        <li>Check the console for errors</li>
+      </ul>
+    </div>
+  `;
+}
+
+function initializeFilters() {
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+      
+      const filter = this.dataset.filter;
+      
+      document.querySelectorAll('.publication-item').forEach(pub => {
+        const isVisible = filter === 'all' || pub.dataset.type === filter;
+        pub.style.display = isVisible ? 'block' : 'none';
+      });
+      
+      document.getElementById('search-publications').value = '';
+    });
+  });
+  
+  document.querySelectorAll('[data-year]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('[data-year]').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-filter="all"]').classList.add('active');
+      
+      const yearRange = this.dataset.year;
+      
+      document.querySelectorAll('.publication-item').forEach(pub => {
+        const year = parseInt(pub.dataset.year);
+        let isVisible = false;
+        
+        switch(yearRange) {
+          case '2024-2025':
+            isVisible = year >= 2024;
+            break;
+          case '2020-2023':
+            isVisible = year >= 2020 && year <= 2023;
+            break;
+          case '2015-2019':
+            isVisible = year >= 2015 && year <= 2019;
+            break;
+          case '2010-2014':
+            isVisible = year >= 2010 && year <= 2014;
+            break;
+          case 'pre-2010':
+            isVisible = year < 2010;
+            break;
+        }
+        
+        pub.style.display = isVisible ? 'block' : 'none';
+      });
+      
+      document.getElementById('search-publications').value = '';
+    });
+  });
+}
+
+function initializeSearch() {
+  const searchInput = document.getElementById('search-publications');
+  if (!searchInput) return;
+  
+  searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    
+    // Only clear filters if there's actually a search query
+    if (query.trim()) {
+      document.querySelectorAll('[data-filter], [data-year]').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector('[data-filter="all"]').classList.add('active');
+    }
+    
+    document.querySelectorAll('.publication-item').forEach(pub => {
+      const text = pub.textContent.toLowerCase();
+      const isVisible = query.trim() === '' || text.includes(query);
+      pub.style.display = isVisible ? 'block' : 'none';
+    });
+  });
+}
+
+function getSummary(key) {
+  // Use dynamic summaries from BibTeX if available
+  if (typeof summaries !== 'undefined' && summaries[key]) {
+    return summaries[key];
+  }
+  
+  // Fallback to default message
+  return 'Summary available in the full publication. This work contributes to our understanding of American political institutions, electoral behavior, and democratic accountability.';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Loading publications...');
+  
+  // Add some debugging
+  if (typeof summaries !== 'undefined') {
+    console.log('Summaries available:', Object.keys(summaries).length);
+  } else {
+    console.log('No summaries object found');
+  }
+  
+  if (typeof publisherUrls !== 'undefined') {
+    console.log('Publisher URLs available:', Object.keys(publisherUrls).length);
+  } else {
+    console.log('No publisherUrls object found');
+  }
+  
+  loadPublications();
+});
+</script>
+```
