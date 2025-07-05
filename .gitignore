@@ -2,3 +2,4 @@
 .netlify
 
 /.quarto/
+.Rproj.user

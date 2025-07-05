@@ -13,6 +13,8 @@ website:
     background: "#BA0C2F"  # WashU Red
     foreground: "#ffffff"
     pinned: true
+    # Remove logo on mobile, keep title text
+    title: "Andrew Reeves"
     logo: "images/washu-logo/WashU-Reverse_web.png"  # WashU full color logo
     logo-alt: "Washington University in St. Louis"
     
@@ -91,6 +93,57 @@ format:
           <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
           <meta name="theme-color" content="#BA0C2F">
           <meta name="keywords" content="political science, public policy, Washington University, WashU, American politics">
+          <!-- StatCounter Analytics -->
+          <script type="text/javascript">
+          var sc_project=12348960; 
+          var sc_invisible=1; 
+          var sc_security="3aa7f28c"; 
+          </script>
+          <script type="text/javascript"
+          src="https://www.statcounter.com/counter/counter.js"
+          async></script>
+          <noscript><div class="statcounter"><a title="real time web
+          analytics" href="https://statcounter.com/"
+          target="_blank"><img class="statcounter"
+          src="https://c.statcounter.com/12348960/0/3aa7f28c/1/"
+          alt="real time web analytics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+          <style>
+            /* Mobile-specific fixes */
+            @media (max-width: 768px) {
+              /* Left-align all text on mobile */
+              .quarto-container {
+                text-align: left !important;
+              }
+              
+              /* Ensure body text is left-aligned */
+              body {
+                text-align: left !important;
+              }
+              
+              /* Left-align specific content areas */
+              .content, .page-body, main {
+                text-align: left !important;
+              }
+              
+              /* Hide logo on mobile to show full title */
+              .navbar-brand img {
+                display: none !important;
+              }
+              
+              /* Ensure navbar title is visible and properly sized */
+              .navbar-brand {
+                font-size: 1.1rem !important;
+                white-space: nowrap !important;
+              }
+              
+              /* Add padding to content for better mobile spacing */
+              .content {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+              }
+            }
+          </style>
     
     # Social media and SEO
     open-graph:
@@ -106,5 +159,3 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/ame
 # Professional academic website settings
 execute:
   freeze: auto
-  
-# Additional WashU branding elements (moved to format section)
