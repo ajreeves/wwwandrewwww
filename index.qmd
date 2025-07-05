@@ -18,6 +18,7 @@ title-block-banner: false
     gap: 2rem;
     margin-bottom: 3rem;
     align-items: flex-start;
+    margin-top: 1rem; /* Add space after Welcome heading */
 }
 
 .profile-text {
@@ -26,6 +27,7 @@ title-block-banner: false
 
 .profile-image {
     flex: 0 0 200px;
+    margin-top: 0; /* Align with first paragraph */
 }
 
 .profile-image img {
@@ -100,6 +102,7 @@ title-block-banner: false
     .profile-image {
         flex: none;
         align-self: center;
+        margin-top: 1rem; /* Add space after heading on mobile */
     }
     
     .book-entry {
@@ -116,20 +119,20 @@ title-block-banner: false
 ```
 
 :::::::::::::::::::::::::::: simple-layout
-:::::: profile-header
-:::: profile-text
 # Welcome
 
+:::::: profile-header
+::: profile-image
+![](images/profile.jpg)
+:::
+
+:::: profile-text
 Andrew Reeves is Professor of [Political Science](https://polisci.wustl.edu/), Senior Advisor to the [Chancellor](https://andrewdmartin.washu.edu/), and Director of the [Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.wustl.edu). He is also a Visiting Fellow at the [Hoover Institution](https://www.hoover.org).
 
 Reeves's research focuses on American political institutions, electoral behavior, and public policy, with particular emphasis on the presidency and executive power. He studies how political accountability and institutional design shape governance, policy outcomes, and voter behavior. His work shows that presidents frequently pursue partisan and electoral goals, that the public holds well-defined views on presidential power, and that local context plays a powerful role in shaping political behavior.
 
 For more information, see his <a href="reevescv.pdf" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>.
 ::::
-
-::: profile-image
-![](images/profile.jpg)
-:::
 ::::::
 
 :::::::::::::::: simple-section
