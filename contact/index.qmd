@@ -10,7 +10,6 @@ page-layout: full
 
 **Harry and Susan Seigle Hall**\
 Washington University in St. Louis\
-One Brookings Drive\
 St. Louis, MO 63130
 
 ### Directions
@@ -27,9 +26,9 @@ Enter the main entrance of Seigle Hall, go to the left and enter the Weidenbaum 
 
 **Andrew Reeves**\
 [Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu)\
+MSC 1027-228-170\
 [Washington University in St. Louis](http://washu.edu)\
-Campus Box 1027\
-One Brookings Drive\
+1 Brookings Drive\
 St. Louis, MO 63130-4899
 :::
 :::::
@@ -51,7 +50,7 @@ St. Louis, MO 63130-4899
 
 [**Twitter**](https://twitter.com/ajreeves) \| [**Google Scholar**](https://scholar.google.com/citations?user=xPSRkX4AAAAJ) \| [**ORCID**](https://orcid.org/0000-0001-7217-6601) \| [**LinkedIn**](https://www.linkedin.com/in/areeves/) \| [**Bluesky**](https://bsky.app/profile/ajreeves.bsky.social)
 
-[Send Email](mailto:reeves@wustl.edu){.btn .btn-primary}
+[Send Email](mailto:reeves@wustl.edu){.btn .btn-outline}
 :::
 ::::
 ::::::::

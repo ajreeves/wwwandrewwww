@@ -281,6 +281,23 @@ a {
   }
 }
 
+/* Fix for button text visibility in content cards */
+.content-card a.btn-primary {
+  color: $white !important;
+  
+  &:hover {
+    color: $white !important;
+  }
+}
+
+.content-card a.btn-secondary {
+  color: $white !important;
+  
+  &:hover {
+    color: $white !important;
+  }
+}
+
 /* Publications with WashU brand styling */
 .author-highlight {
   font-weight: 700;
