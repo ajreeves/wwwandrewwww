@@ -1324,6 +1324,7 @@ a:focus {
   background-position: center;
 }
 
+
 /* Improved Navbar Spacing */
 .navbar {
   background: $washu-red !important;
@@ -1376,12 +1377,53 @@ a:focus {
   
   /* Right side icons - make them more compact */
   .navbar-nav .nav-item:has([class*="bi-"]) .nav-link {
-    padding: 0.6rem 0.6rem !important; /* Tighter padding for icons */
+    padding: 0.6rem 0.3rem !important; /* Much tighter horizontal padding for icons */
     font-size: 1rem !important; /* Consistent icon size */
+    margin: 0 !important; /* Remove margin between icons */
     
     &:hover {
       transform: scale(1.1) !important;
     }
+  }
+  
+  /* Target the right navbar specifically for even tighter spacing */
+  .navbar-nav.ms-auto .nav-item {
+    margin: 0 !important;
+    
+    .nav-link {
+      padding: 0.6rem 0.25rem !important; /* Even tighter for social icons */
+    }
+  }
+  
+  /* Move social icons directly next to search - eliminate the gap */
+  .navbar-nav.ms-auto {
+    gap: 0 !important;
+    margin-left: auto !important; /* Push all the way to the right */
+    margin-right: 0 !important;
+  }
+  
+  /* Eliminate space between search and social icons */
+  .quarto-navbar-tools {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Make the right side elements stick together */
+  .navbar-nav.ms-auto,
+  .quarto-navbar-tools {
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  /* Override any default spacing in the navbar container */
+  .navbar > .container-fluid {
+    justify-content: space-between !important;
+  }
+  
+  /* Ensure the right side nav items are truly flush */
+  .navbar-nav.ms-auto .nav-item:last-child {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
   }
   
   .navbar-toggler {
