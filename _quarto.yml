@@ -8,6 +8,7 @@ project:
 website:
   title: "Andrew Reeves"
   description: "Professor of Political Science, Director of the Weidenbaum Center, and Senior Advisor to the Chancellor | Washington University in St. Louis"
+  favicon: favicon.png
   
   navbar:
     background: "#BA0C2F"  # WashU Red
@@ -126,21 +127,53 @@ format:
                 text-align: left !important;
               }
               
+              /* Left-align paragraphs and headings */
+              p, h1, h2, h3, h4, h5, h6 {
+                text-align: left !important;
+              }
+              
               /* Hide logo on mobile to show full title */
               .navbar-brand img {
                 display: none !important;
               }
               
+              /* Fix navbar layout to prevent overlap */
+              .navbar-nav {
+                margin-right: 0 !important;
+              }
+              
               /* Ensure navbar title is visible and properly sized */
               .navbar-brand {
-                font-size: 1.1rem !important;
+                font-size: 1rem !important;
                 white-space: nowrap !important;
+                margin-right: 10px !important;
+                flex-shrink: 0 !important;
+              }
+              
+              /* Hide search icon on mobile to prevent overlap */
+              .navbar .quarto-navbar-tools {
+                display: none !important;
+              }
+              
+              /* Alternative: if you want to keep search, make navbar wrap */
+              .navbar-collapse {
+                flex-wrap: wrap !important;
               }
               
               /* Add padding to content for better mobile spacing */
               .content {
                 padding-left: 15px !important;
                 padding-right: 15px !important;
+              }
+              
+              /* Ensure main content area is left-aligned */
+              .quarto-layout-panel {
+                text-align: left !important;
+              }
+              
+              /* Fix any remaining centered elements */
+              .column-page, .column-body {
+                text-align: left !important;
               }
             }
           </style>
