@@ -1324,7 +1324,6 @@ a:focus {
   background-position: center;
 }
 
-
 /* Improved Navbar Spacing */
 .navbar {
   background: $washu-red !important;
@@ -1372,12 +1371,7 @@ a:focus {
       color: $white !important;
       background: $washu-green !important;
       font-weight: 700 !important;
-      border-radius: 8px !important; /* More rounded corners */
-      padding: 0.7rem 1rem !important; /* Slightly more padding for better proportions */
-      margin: 0 0.2rem !important; /* Add some margin to separate from other items */
-      box-shadow: 0 2px 6px rgba(33, 87, 50, 0.3) !important; /* Subtle shadow for depth */
-      transform: translateY(-1px) !important; /* Slight lift effect */
-      transition: all 0.3s ease !important;
+      /* Remove all the sizing changes that cause layout shifts */
     }
   }
   
