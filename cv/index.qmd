@@ -74,7 +74,7 @@ format:
 ```
 
 ::: {.cv-header}
-[Download PDF](../reevescv.pdf){.btn .btn-outline target="_blank"}
+[Download PDF](../reevescv.pdf){.btn .btn-primary target="_blank"}
 :::
 
 ::: {.cv-embed}
