@@ -137,27 +137,30 @@ format:
                 display: none !important;
               }
               
-              /* Fix navbar layout to prevent overlap */
-              .navbar-nav {
-                margin-right: 0 !important;
-              }
-              
-              /* Ensure navbar title is visible and properly sized */
-              .navbar-brand {
-                font-size: 1rem !important;
-                white-space: nowrap !important;
-                margin-right: 10px !important;
-                flex-shrink: 0 !important;
-              }
-              
-              /* Hide search icon on mobile to prevent overlap */
-              .navbar .quarto-navbar-tools {
+              /* Fix navbar layout - hide search and other tools */
+              .navbar .quarto-navbar-tools,
+              .navbar-nav .nav-item:has(.quarto-search),
+              .quarto-search-toggle,
+              .aa-DetachedSearchButton {
                 display: none !important;
               }
               
-              /* Alternative: if you want to keep search, make navbar wrap */
-              .navbar-collapse {
-                flex-wrap: wrap !important;
+              /* Ensure navbar brand takes full width */
+              .navbar-brand {
+                font-size: 1rem !important;
+                white-space: nowrap !important;
+                margin-right: auto !important;
+                flex-grow: 1 !important;
+              }
+              
+              /* Fix navbar flex layout */
+              .navbar > .container-fluid {
+                justify-content: flex-start !important;
+              }
+              
+              /* Hide hamburger menu button if present */
+              .navbar-toggler {
+                margin-left: auto !important;
               }
               
               /* Add padding to content for better mobile spacing */
