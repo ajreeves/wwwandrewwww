@@ -4,7 +4,7 @@ page-layout: full
 ---
 
 :::::::: grid
-::::: g-col-8
+::::: g-col-md-8
 ::: content-card
 ## Office Location
 
@@ -26,7 +26,7 @@ Enter the main entrance of Seigle Hall, go to the left and enter the Weidenbaum 
 ## Mailing Address
 
 **Andrew Reeves**\
-Director, [Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu)\
+[Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu)\
 [Washington University in St. Louis](http://washu.edu)\
 Campus Box 1027\
 One Brookings Drive\
@@ -34,13 +34,13 @@ St. Louis, MO 63130-4899
 :::
 :::::
 
-:::: g-col-4
+:::: g-col-md-4
 ::: content-card
 ## Contact Information
 
 ### Email
 
-**Primary:** [reeves\@wustl.edu](mailto:reeves@wustl.edu)
+**Primary:** [reeves@wustl.edu](mailto:reeves@wustl.edu)
 
 ### Phone
 
@@ -49,7 +49,7 @@ St. Louis, MO 63130-4899
 
 ### Connect
 
-[**Twitter**](https://twitter.com/ajreeves) \| [**Google Scholar**](https://scholar.google.com/citations?user=xPSRkX4AAAAJ) \| [**ORCID**](https://orcid.org/0000-0001-7217-6601)
+[**Twitter**](https://twitter.com/ajreeves) \| [**Google Scholar**](https://scholar.google.com/citations?user=xPSRkX4AAAAJ) \| [**ORCID**](https://orcid.org/0000-0001-7217-6601) \| [**LinkedIn**](https://www.linkedin.com/in/areeves/) \| [**Bluesky**](https://bsky.app/profile/ajreeves.bsky.social)
 
 [Send Email](mailto:reeves@wustl.edu){.btn .btn-primary}
 :::
@@ -61,7 +61,6 @@ St. Louis, MO 63130-4899
 :::: content-card
 ::: map-container
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.048724371058!2d-90.30624628466093!3d38.64734347960371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b53c0a6e144b%3A0xc07c870c0d084b6f!2sHarry%20and%20Susan%20Seigle%20Hall!5e0!3m2!1sen!2sus!4v1707505600000" width="600" height="450" style="border:0" allowfullscreen loading="lazy">
-
 </iframe>
 :::
 
@@ -86,77 +85,111 @@ St. Louis, MO 63130-4899
 }
 
 /* Contact page styling */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+.content-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.contact-item {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
+.content-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.content-card h2 {
+  color: #BA0C2F;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.content-card h3 {
+  color: #13322B;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.content-card p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.content-card a {
+  color: #BA0C2F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.content-card a:hover {
+  color: #13322B;
+  text-decoration: underline;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  border: 2px solid transparent;
+  margin-top: 1rem;
 }
 
-.contact-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-green);
-}
-
-.contact-icon {
-  width: 3rem;
-  height: 3rem;
-  background: var(--primary-green);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
+.btn-primary {
+  background-color: #BA0C2F;
   color: white;
-  font-size: 1.5rem;
 }
 
-.contact-item h3 {
-  color: var(--dark-green);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.btn-primary:hover {
+  background-color: #13322B;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
 }
 
-.contact-item p {
-  color: var(--text-medium);
-  margin-bottom: 0.5rem;
+.btn-outline {
+  background-color: transparent;
+  color: #BA0C2F;
+  border-color: #BA0C2F;
 }
 
-.contact-item a {
-  color: var(--primary-green);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.contact-item a:hover {
-  color: var(--dark-green);
-  text-decoration: underline;
+.btn-outline:hover {
+  background-color: #BA0C2F;
+  color: white;
+  transform: translateY(-1px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .contact-item {
+  .content-card {
     padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .map-container iframe {
     height: 250px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Stack grid on mobile */
+  .grid {
+    display: block !important;
+  }
+  
+  .g-col-md-8,
+  .g-col-md-4 {
+    width: 100% !important;
   }
 }
 </style>

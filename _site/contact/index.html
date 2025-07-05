@@ -180,7 +180,7 @@ analytics" href="https://statcounter.com/" target="_blank"><img class="statcount
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/washu-logo/WashU-Reverse_web.png" alt="Washington University in St. Louis" class="navbar-logo">
+    <img src="../images/washu-logo/WashU-SHIELD-White.png" alt="Washington University in St. Louis" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Andrew Reeves</span>
@@ -279,7 +279,7 @@ analytics" href="https://statcounter.com/" target="_blank"><img class="statcount
 
 
 <div class="grid">
-<div class="g-col-8">
+<div class="g-col-md-8">
 <section id="office-location" class="level2 content-card">
 <h2 class="anchored" data-anchor-id="office-location">Office Location</h2>
 <p><strong>Harry and Susan Seigle Hall</strong><br>
@@ -298,14 +298,14 @@ St.&nbsp;Louis, MO 63130</p>
 <section id="mailing-address" class="level2 content-card">
 <h2 class="anchored" data-anchor-id="mailing-address">Mailing Address</h2>
 <p><strong>Andrew Reeves</strong><br>
-Director, <a href="http://wc.washu.edu">Weidenbaum Center on the Economy, Government, and Public Policy</a><br>
+<a href="http://wc.washu.edu">Weidenbaum Center on the Economy, Government, and Public Policy</a><br>
 <a href="http://washu.edu">Washington University in St.&nbsp;Louis</a><br>
 Campus Box 1027<br>
 One Brookings Drive<br>
 St.&nbsp;Louis, MO 63130-4899</p>
 </section>
 </div>
-<div class="g-col-4">
+<div class="g-col-md-4">
 <section id="contact-information" class="level2 content-card">
 <h2 class="anchored" data-anchor-id="contact-information">Contact Information</h2>
 <section id="email" class="level3">
@@ -319,7 +319,7 @@ St.&nbsp;Louis, MO 63130-4899</p>
 </section>
 <section id="connect" class="level3">
 <h3 class="anchored" data-anchor-id="connect">Connect</h3>
-<p><a href="https://twitter.com/ajreeves"><strong>Twitter</strong></a> | <a href="https://scholar.google.com/citations?user=xPSRkX4AAAAJ"><strong>Google Scholar</strong></a> | <a href="https://orcid.org/0000-0001-7217-6601"><strong>ORCID</strong></a></p>
+<p><a href="https://twitter.com/ajreeves"><strong>Twitter</strong></a> | <a href="https://scholar.google.com/citations?user=xPSRkX4AAAAJ"><strong>Google Scholar</strong></a> | <a href="https://orcid.org/0000-0001-7217-6601"><strong>ORCID</strong></a> | <a href="https://www.linkedin.com/in/areeves/"><strong>LinkedIn</strong></a> | <a href="https://bsky.app/profile/ajreeves.bsky.social"><strong>Bluesky</strong></a></p>
 <p><a href="mailto:reeves@wustl.edu" class="btn btn-primary">Send Email</a></p>
 </section>
 </section>
@@ -351,77 +351,111 @@ St.&nbsp;Louis, MO 63130-4899</p>
 }
 
 /* Contact page styling */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+.content-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.contact-item {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
+.content-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.content-card h2 {
+  color: #BA0C2F;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.content-card h3 {
+  color: #13322B;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.content-card p {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.content-card a {
+  color: #BA0C2F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.content-card a:hover {
+  color: #13322B;
+  text-decoration: underline;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  border: 2px solid transparent;
+  margin-top: 1rem;
 }
 
-.contact-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-green);
-}
-
-.contact-icon {
-  width: 3rem;
-  height: 3rem;
-  background: var(--primary-green);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
+.btn-primary {
+  background-color: #BA0C2F;
   color: white;
-  font-size: 1.5rem;
 }
 
-.contact-item h3 {
-  color: var(--dark-green);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.btn-primary:hover {
+  background-color: #13322B;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
 }
 
-.contact-item p {
-  color: var(--text-medium);
-  margin-bottom: 0.5rem;
+.btn-outline {
+  background-color: transparent;
+  color: #BA0C2F;
+  border-color: #BA0C2F;
 }
 
-.contact-item a {
-  color: var(--primary-green);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.contact-item a:hover {
-  color: var(--dark-green);
-  text-decoration: underline;
+.btn-outline:hover {
+  background-color: #BA0C2F;
+  color: white;
+  transform: translateY(-1px);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .contact-item {
+  .content-card {
     padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .map-container iframe {
     height: 250px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Stack grid on mobile */
+  .grid {
+    display: block !important;
+  }
+  
+  .g-col-md-8,
+  .g-col-md-4 {
+    width: 100% !important;
   }
 }
 </style>
