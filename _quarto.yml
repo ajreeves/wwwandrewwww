@@ -16,7 +16,7 @@ website:
     pinned: true
     # Remove logo on mobile, keep title text
     title: "Andrew Reeves"
-    logo: "images/washu-logo/WashU-Reverse_web.png"  # WashU full color logo
+    logo: "images/washu-logo/WashU-SHIELD-White.png"  # WashU full color logo
     logo-alt: "Washington University in St. Louis"
     
     left:
@@ -145,17 +145,28 @@ format:
                 display: none !important;
               }
               
-              /* Ensure navbar brand takes full width */
+              /* Ensure navbar brand takes full width and shows complete title */
               .navbar-brand {
-                font-size: 1rem !important;
+                font-size: 1.1rem !important;
                 white-space: nowrap !important;
                 margin-right: auto !important;
                 flex-grow: 1 !important;
+                overflow: visible !important;
+                text-overflow: unset !important;
+                max-width: none !important;
+                width: auto !important;
               }
               
-              /* Fix navbar flex layout */
+              /* Fix navbar flex layout to prevent truncation */
               .navbar > .container-fluid {
                 justify-content: flex-start !important;
+                flex-wrap: nowrap !important;
+              }
+              
+              /* Ensure navbar itself doesn't constrain width */
+              .navbar {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
               }
               
               /* Hide hamburger menu button if present */
