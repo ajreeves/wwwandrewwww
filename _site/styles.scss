@@ -181,50 +181,106 @@ a {
     }
   }
   
-  /* Hide hamburger menu - we'll use a simple approach */
+  /* Hamburger menu - only show on mobile */
   .navbar-toggler {
     display: none !important;
+    background: none !important;
+    border: 2px solid $white !important;
+    border-radius: 4px !important;
+    padding: 0.4rem 0.6rem !important;
+    cursor: pointer !important;
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+      width: 1.2rem !important;
+      height: 1.2rem !important;
+    }
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
   }
   
-  /* Mobile: Stack vertically, bigger touch targets */
+  /* MOBILE: Compact header with hamburger */
   @media (max-width: 991px) {
-    padding: 1rem 0 1.5rem 0 !important;
+    padding: 0.5rem 0 !important; /* Much more compact */
     
     .container-fluid {
-      flex-direction: column !important;
-      gap: 1.5rem !important;
       padding: 0 1rem !important;
+      justify-content: flex-start !important;
+      gap: 1rem !important;
+    }
+    
+    /* Show hamburger menu on mobile */
+    .navbar-toggler {
+      display: block !important;
+      order: 1 !important;
+      flex-shrink: 0 !important;
     }
     
     .navbar-brand {
-      font-size: 1.5rem !important;
+      order: 2 !important;
+      font-size: 1.3rem !important;
+      margin: 0 !important;
       
       img {
-        height: 30px !important;
+        height: 25px !important;
+        margin-right: 0.5rem !important;
       }
     }
     
+    /* Hide main nav on mobile - show in collapse */
     .navbar-nav {
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      gap: 1.5rem !important;
+      display: none !important;
+    }
+    
+    /* Collapsed menu styling */
+    .navbar-collapse {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      background: $washu-red !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+      z-index: 1000 !important;
       
-      .nav-item .nav-link {
-        font-size: 0.95rem !important;
-        padding: 0.5rem 0 !important;
+      .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 1rem !important;
+        gap: 0 !important;
+        
+        .nav-item {
+          width: 100% !important;
+          
+          .nav-link {
+            padding: 0.75rem 1rem !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 0 !important;
+            font-size: 1rem !important;
+            
+            &:hover {
+              background: rgba(255, 255, 255, 0.1) !important;
+            }
+            
+            &:last-child {
+              border-bottom: none !important;
+            }
+          }
+        }
       }
     }
   }
   
-  /* Very small screens: smaller spacing */
+  /* Extra small screens */
   @media (max-width: 576px) {
-    .navbar-nav {
-      gap: 1rem !important;
-      
-      .nav-item .nav-link {
-        font-size: 0.9rem !important;
-      }
+    .navbar-brand {
+      font-size: 1.2rem !important;
+    }
+    
+    .container-fluid {
+      padding: 0 0.75rem !important;
     }
   }
 }
