@@ -13,7 +13,7 @@ pages: "443--463"
 pdf: "/papers/unemployment.pdf"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Areas
 

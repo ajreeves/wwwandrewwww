@@ -13,7 +13,7 @@ pages: "495--516"
 pdf: "/papers/commissions.pdf"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 

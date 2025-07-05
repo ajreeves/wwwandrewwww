@@ -13,7 +13,7 @@ pages: "742--759"
 pdf: "/papers/prespower.pdf"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 

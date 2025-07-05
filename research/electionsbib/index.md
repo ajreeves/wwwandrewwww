@@ -10,7 +10,7 @@ journal_name: "Oxford University Press"
 pdf: "/papers/electionsbib.pdf"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Areas
 

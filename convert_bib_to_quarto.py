@@ -380,11 +380,11 @@ def create_content_body(entry, output_dir):
     
     content_lines = []
     
-    # Add featured image at the top if it exists
+    # Add featured image at the top if it exists (without "Featured image" text)
     featured_image = find_featured_image(entry['key'], output_dir)
     if featured_image:
         content_lines.extend([
-            f"![Featured image]({featured_image}){{.featured-image}}",
+            f"![]({featured_image}){{.featured-image style=\"max-width: 600px; max-height: 400px; width: auto; height: auto;\"}}",
             ""
         ])
     

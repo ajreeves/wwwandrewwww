@@ -14,7 +14,7 @@ pdf: "/papers/appearances.pdf"
 url: "https://journals.sagepub.com/doi/abs/10.1177/1532673x10385286"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 

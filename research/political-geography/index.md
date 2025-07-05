@@ -10,7 +10,7 @@ journal_name: "Edward Elgar Publishing"
 pdf: "/papers/political-geography.pdf"
 ---
 
-![Featured image](featured.jpg){.featured-image}
+![](featured.jpg){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 

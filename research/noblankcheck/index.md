@@ -11,7 +11,7 @@ pdf: "/papers/noblankcheck.pdf"
 url: "https://www.cambridge.org/us/universitypress/subjects/politics-international-relations/american-government-politics-and-policy/particularistic-president-executive-branch-politics-and-political-inequality?format=PB&isbn=9781107616813"
 ---
 
-![Featured image](featured.jpg){.featured-image}
+![](featured.jpg){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 

@@ -14,7 +14,7 @@ pdf: "/papers/values.pdf"
 url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/psq.12837"
 ---
 
-![Featured image](featured.png){.featured-image}
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 
