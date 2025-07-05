@@ -47,7 +47,7 @@ website:
       - icon: mortarboard-fill
         href: https://scholar.google.com/citations?user=YourScholarID
         aria-label: Google Scholar
-      - icon: chat-square-text
+      - icon: bluesky
         href: https://bsky.app/profile/ajreeves.bsky.social
         aria-label: Bluesky
 
