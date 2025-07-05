@@ -226,5 +226,8 @@
   },
   "research/index_claude.qmd": {
     "index_claude.html": "b415f2d6"
+  },
+  "cv/index.qmd": {
+    "index.html": "f6536240"
   }
 }

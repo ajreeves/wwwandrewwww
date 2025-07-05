@@ -28,13 +28,12 @@ website:
         text: Teaching
       - href: news/
         text: News
+      - href: cv/
+        text: CV
       - href: contact/
         text: Contact
         
     right:
-      - href: reevescv.pdf
-        text: CV
-        icon: file-earmark-pdf
       - icon: envelope
         href: mailto:reeves@wustl.edu
         aria-label: Email
