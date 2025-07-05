@@ -4,11 +4,14 @@ date: 2020-01-01
 description: "Polling places across the United States in the 2016 election generally exhibited high quality. Variation in polling place access, facilities, and practices was largely a function of county and state-level factors, not voter demographics."
 categories: ['Election Administration', 'Field Research', 'Electoral Politics', 'Democratic Accountability', 'Quantitative Methods']
 publication_type: "article"
+image: "featured.png"
 tags: ['Election Administration', 'Field Research', 'Electoral Behavior', 'Democratic Accountability', 'Quantitative Methods']
 journal_name: "Palgrave Macmillan"
 pages: "83--100"
 pdf: "/papers/access.pdf"
 ---
+
+![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
 
 ## Research Question
 
