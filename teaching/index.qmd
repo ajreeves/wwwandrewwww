@@ -182,7 +182,7 @@ format:
 
 <div class="teaching-intro">
 <h2>Teaching Philosophy</h2>
-<p>My courses emphasize the practical application of political science theory to understand contemporary American politics. I strive to help students develop critical thinking skills by examining how institutions, incentives, and individual behavior shape political outcomes. Through case studies, data analysis, and discussion of current events, students learn to connect academic research to real-world political phenomena.</p>
+<p>My courses emphasize the practical application of political science theory to understand contemporary American politics. I strive to help students develop critical thinking skills by examining how institutions, incentives, and individual behavior shape political outcomes. I hope that students learn to connect academic research to real-world political phenomena.</p>
 </div>
 
 <div class="course-grid">
