@@ -108,57 +108,185 @@ a {
   }
 }
 
-/* WashU Red Navigation with Logo */
+/* STREAMLINED SIMPLE NAVBAR - Clean and Minimal */
 .navbar {
   background: $washu-red !important;
   border-bottom: 2px solid $washu-green;
-  padding: 0.5rem 0 !important;
+  padding: 1rem 0 !important;
   box-shadow: 0 2px 4px rgba(186, 12, 47, 0.3);
+  
+  .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
   
   .navbar-brand {
     font-family: $font-family-headline !important;
     font-weight: 700 !important;
-    font-size: 1.6rem !important;
+    font-size: 1.8rem !important;
     color: $white !important;
+    text-decoration: none !important;
     display: flex !important;
     align-items: center !important;
-    padding: 0.5rem 1rem !important;
     
     &:hover {
       color: $warm-gray !important;
+      text-decoration: none !important;
     }
     
     img {
-      height: 40px !important;
+      height: 35px !important;
       width: auto !important;
       margin-right: 0.75rem !important;
-      filter: brightness(0) invert(1) !important; /* Makes logo white on red background */
+      filter: brightness(0) invert(1) !important;
     }
   }
   
-  .navbar-nav .nav-link {
-    color: $white !important;
-    font-weight: 600 !important;
-    padding: 0.8rem 1.2rem !important;
-    border-radius: 6px !important;
-    transition: all 0.3s ease !important;
-    margin: 0 0.2rem !important;
+  /* Simple horizontal navigation - desktop only */
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
     
-    &:hover,
-    &:focus {
-      color: $warm-gray !important;
-      background: rgba(255, 255, 255, 0.1) !important;
-    }
-    
-    &.active {
-      color: $white !important;
-      background: $washu-green !important;
-      font-weight: 700 !important;
+    .nav-item {
+      margin: 0 !important;
+      
+      .nav-link {
+        color: $white !important;
+        font-weight: 500 !important;
+        font-size: 1rem !important;
+        text-decoration: none !important;
+        padding: 0.5rem 0 !important;
+        border-bottom: 2px solid transparent !important;
+        transition: all 0.3s ease !important;
+        
+        &:hover {
+          color: $warm-gray !important;
+          border-bottom-color: $warm-gray !important;
+        }
+        
+        &.active {
+          color: $white !important;
+          border-bottom-color: $white !important;
+        }
+      }
     }
   }
   
+  /* Hide hamburger menu - we'll use a simple approach */
   .navbar-toggler {
-    border-color: $white !important;
+    display: none !important;
+  }
+  
+  /* Mobile: Stack vertically, bigger touch targets */
+  @media (max-width: 991px) {
+    padding: 1rem 0 1.5rem 0 !important;
+    
+    .container-fluid {
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+      padding: 0 1rem !important;
+    }
+    
+    .navbar-brand {
+      font-size: 1.5rem !important;
+      
+      img {
+        height: 30px !important;
+      }
+    }
+    
+    .navbar-nav {
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 1.5rem !important;
+      
+      .nav-item .nav-link {
+        font-size: 0.95rem !important;
+        padding: 0.5rem 0 !important;
+      }
+    }
+  }
+  
+  /* Very small screens: smaller spacing */
+  @media (max-width: 576px) {
+    .navbar-nav {
+      gap: 1rem !important;
+      
+      .nav-item .nav-link {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}
+
+/* Mobile-specific navbar fixes */
+@media (max-width: 991px) {
+  .navbar {
+    /* Ensure navbar has enough space */
+    padding: 0.5rem 0.5rem !important;
+    
+    .container-fluid {
+      padding: 0 0.5rem !important;
+    }
+    
+    .navbar-brand {
+      font-size: 1.3rem !important; /* Slightly smaller on mobile but still readable */
+      padding: 0.3rem 0.5rem !important;
+      margin-right: 0.5rem !important;
+      
+      img {
+        height: 30px !important;
+        margin-right: 0.5rem !important;
+      }
+    }
+    
+    /* Hide navbar-nav on mobile (shown in collapse) */
+    .navbar-nav {
+      display: none !important;
+    }
+    
+    /* Show toggler */
+    .navbar-toggler {
+      display: block !important;
+      padding: 0.4rem 0.6rem !important;
+      font-size: 1rem !important;
+    }
+  }
+}
+
+/* Extra small screens - further optimize */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.3rem 0.3rem !important;
+    
+    .container-fluid {
+      padding: 0 0.3rem !important;
+    }
+    
+    .navbar-brand {
+      font-size: 1.1rem !important;
+      padding: 0.2rem 0.3rem !important;
+      
+      img {
+        height: 25px !important;
+        margin-right: 0.4rem !important;
+      }
+    }
+    
+    .navbar-toggler {
+      padding: 0.3rem 0.5rem !important;
+      font-size: 0.9rem !important;
+    }
   }
 }
 
@@ -745,21 +873,107 @@ footer span {
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
+/* Mobile Collapse Menu Fix */
+@media (max-width: 991px) {
   .navbar-collapse {
-    background: $washu-red;
-    border-radius: 6px;
-    margin-top: 0.5rem;
-    padding: 1rem;
-    border: 1px solid $white;
+    background: $washu-red !important;
+    border-radius: 6px !important;
+    margin-top: 0.5rem !important;
+    padding: 1rem !important;
+    border: 1px solid $white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    
+    /* Key positioning fixes */
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1050 !important;
+    
+    /* Ensure it appears below the navbar */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
-  .research-grid {
-    grid-template-columns: 1fr;
+  /* Fix the navbar to allow proper positioning */
+  .navbar {
+    position: relative !important;
+    
+    /* Ensure the navbar container allows absolute positioning */
+    .container-fluid {
+      position: relative !important;
+    }
+  }
+  
+  /* Style the mobile menu items */
+  .navbar-collapse .navbar-nav {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    
+    .nav-item {
+      width: 100% !important;
+      
+      .nav-link {
+        padding: 0.8rem 1rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+        text-align: left !important;
+        
+        &:last-child {
+          border-bottom: none !important;
+        }
+      }
+    }
+  }
+  
+  /* Style mobile social icons */
+  .navbar-collapse .navbar-nav .nav-item:has(i) {
+    .nav-link {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      
+      i {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+  
+  /* Ensure the hamburger button is properly positioned */
+  .navbar-toggler {
+    position: relative !important;
+    z-index: 1051 !important;
+    border: 2px solid $white !important;
+    padding: 0.5rem 0.7rem !important;
+    
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+  
+  /* Fix hamburger icon color */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  
+  /* Smooth animation for menu open/close */
+  .navbar-collapse {
+    transition: all 0.3s ease !important;
+    
+    &.collapsing {
+      opacity: 0.8 !important;
+      transform: translateY(-10px) !important;
+    }
+    
+    &.show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
   }
 }
 
+/* Responsive Design for Content */
 @media (max-width: 768px) {
   .quarto-container {
     padding: 1rem;
@@ -803,6 +1017,10 @@ footer span {
   
   .g-col-8, .g-col-4 {
     grid-column: span 12;
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1038,33 +1256,6 @@ a:focus {
   }
 }
 
-/* Responsive Logo Handling */
-@media (max-width: 768px) {
-  .navbar-brand {
-    img {
-      height: 30px !important;
-      margin-right: 0.5rem !important;
-    }
-  }
-  
-  .washu-logo {
-    height: 40px;
-    
-    &.logo-small {
-      height: 25px;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar-brand {
-    img {
-      height: 25px !important;
-      margin-right: 0.25rem !important;
-    }
-  }
-}
-
 /* Custom Bluesky icon */
 .bi-bluesky::before {
   content: "";
@@ -1075,102 +1266,4 @@ a:focus {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-/* Mobile Menu Positioning Fix */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background: $washu-red !important;
-    border-radius: 6px !important;
-    margin-top: 0.5rem !important;
-    padding: 1rem !important;
-    border: 1px solid $white !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    
-    /* Key positioning fixes */
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 1050 !important;
-    
-    /* Ensure it appears below the navbar */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  
-  /* Fix the navbar to allow proper positioning */
-  .navbar {
-    position: relative !important;
-    
-    /* Ensure the navbar container allows absolute positioning */
-    .container-fluid {
-      position: relative !important;
-    }
-  }
-  
-  /* Style the mobile menu items */
-  .navbar-collapse .navbar-nav {
-    width: 100% !important;
-    
-    .nav-item {
-      width: 100% !important;
-      
-      .nav-link {
-        padding: 0.8rem 1rem !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-        text-align: left !important;
-        
-        &:last-child {
-          border-bottom: none !important;
-        }
-      }
-    }
-  }
-  
-  /* Style mobile social icons */
-  .navbar-collapse .navbar-nav .nav-item:has(i) {
-    .nav-link {
-      display: flex !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-      
-      i {
-        font-size: 1.2rem !important;
-      }
-    }
-  }
-  
-  /* Ensure the hamburger button is properly positioned */
-  .navbar-toggler {
-    position: relative !important;
-    z-index: 1051 !important;
-    border: 2px solid $white !important;
-    padding: 0.5rem 0.7rem !important;
-    
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
-    }
-  }
-  
-  /* Fix hamburger icon color */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  }
-  
-  /* Smooth animation for menu open/close */
-  .navbar-collapse {
-    transition: all 0.3s ease !important;
-    
-    &.collapsing {
-      opacity: 0.8 !important;
-      transform: translateY(-10px) !important;
-    }
-    
-    &.show {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-  }
 }
