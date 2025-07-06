@@ -1923,3 +1923,52 @@ a {
     display: none;
   }
 }
+
+/* Fix Quarto Search Icon Color */
+#quarto-search,
+.aa-DetachedSearchButton,
+.quarto-search-toggle,
+.navbar .quarto-navbar-tools {
+  .aa-DetachedSearchButtonIcon,
+  .aa-DetachedSearchButtonPlaceholder,
+  svg,
+  path {
+    fill: $white !important;
+    color: $white !important;
+    stroke: $white !important;
+  }
+  
+  /* Target the search icon specifically */
+  &::before,
+  &::after {
+    color: $white !important;
+    background-color: $white !important;
+  }
+  
+  /* For any nested search elements */
+  * {
+    color: $white !important;
+    fill: $white !important;
+  }
+}
+
+/* Alternative approach - target by aria-label if Quarto uses it */
+[aria-label*="Search"],
+[title*="Search"] {
+  svg, path, use {
+    fill: $white !important;
+    color: $white !important;
+    stroke: $white !important;
+  }
+}
+
+/* Force white for all search-related icons on red navbar */
+.navbar[data-bs-theme="dark"] {
+  #quarto-search,
+  .quarto-navbar-tools {
+    svg, path, use, .bi {
+      fill: $white !important;
+      color: $white !important;
+    }
+  }
+}
