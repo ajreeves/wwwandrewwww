@@ -13,7 +13,7 @@ title-block-banner: false
 
 ::: profile-header
 ::: profile-image
-![Andrew Reeves](../images/profile.jpg)
+![Andrew Reeves](images/profile.jpg)
 :::
 
 ::: profile-text
@@ -83,7 +83,7 @@ Presidents wield enormous discretion over how federal resources are distributed 
 
 ::: book-entry
 ::: book-cover
-![No Blank Check book cover](../images/no-blank-check-cover.jpg)
+![No Blank Check book cover](images/no-blank-check-cover.jpg)
 :::
 
 ::: book-text
@@ -97,7 +97,7 @@ Reeves and Rogowski explore how Americans think about presidential authority, fi
 
 ::: book-entry
 ::: book-cover
-![The Particularistic President book cover](../images/particularistic-president-cover.jpg)
+![The Particularistic President book cover](images/particularistic-president-cover.jpg)
 :::
 
 ::: book-text
