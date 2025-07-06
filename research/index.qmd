@@ -13,8 +13,6 @@ listing:
   page-size: 20
   date-format: "YYYY"
   categories: false
-  search: true
-  
 ---
 
 ::: {.simple-layout}
