@@ -53,7 +53,7 @@ website:
     left: |
       © 2025 Andrew Reeves
     right: |
-       <img src="images/washu-logo/WashU-Reverse_web.png" alt="Washington University" style="height: 30px;">
+       <img src="/images/washu-logo/WashU-Reverse_web.png" alt="Washington University" style="height: 30px;">
     center: |
 
 format:
