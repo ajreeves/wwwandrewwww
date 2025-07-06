@@ -129,6 +129,9 @@ a {
   text-decoration: none;
   transition: all 0.2s ease;
   border-bottom: 1px solid transparent;
+  /* FIX: Allows long URLs to wrap correctly without breaking the layout */
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* Legacy fallback */
   
   &:hover {
     color: $dark-red;
@@ -1138,8 +1141,8 @@ a {
     font-size: 1.2rem;
   }
   
-  /* Ensure proper touch targets on mobile */
-  a, button, .btn {
+  /* FIX: Ensure proper touch targets on mobile for button-like elements only */
+  button, .btn, a.btn {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -2241,4 +2244,3 @@ body .page-footer .container-fluid {
   margin: 0 auto !important;
   width: fit-content !important;
 }
-
