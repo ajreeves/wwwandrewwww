@@ -1,42 +1,25 @@
 ---
 title: "Research"
-description: "Publications on American political institutions, presidential power, and democratic governance"
+description: ""
 page-layout: full
 toc: false
 listing:
-  - id: books
-    contents: 
-      - "*/index.md"
-    type: grid
-    grid-columns: 2
-    grid-item-border: false
-    fields: [image, title, date, description]
-    filter-ui: false
-    sort: "date desc"
-    date-format: "YYYY"
-    include:
-      publication_type: "book"
-  - id: all-publications
-    contents:
-      - "*/index.md"
-    type: default
-    fields: [title, date, journal_name, description]
-    filter-ui: true
-    sort: "date desc"
-    page-size: 20
-    date-format: "YYYY"
+  contents:
+    - "*/index.md"
+  type: default
+  fields: [image, title, date, journal_name, description, publication_type, categories]
+  filter-ui: true
+  sort: "date desc"
+  page-size: 20
+  date-format: "YYYY"
+  categories: true
 ---
 
-:::: page-content
+::: {.simple-layout}
 
-## Books
+Research on American political institutions, congressional politics, and democratic governance. My work examines how institutional design shapes political behavior and policy outcomes.
 
-::: {#books .books-section}
+::: {#listing}
 :::
 
-## Publications
-
-::: {#all-publications .publications-section}
 :::
-
-::::

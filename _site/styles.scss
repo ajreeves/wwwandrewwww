@@ -1755,3 +1755,489 @@ body .page-footer .container-fluid {
     color: $white !important;
   }
 }
+
+/* Unified Research List with Images */
+.unified-research-list,
+.quarto-listing-default {
+  .quarto-listing-item {
+    background: $white;
+    border: 1px solid rgba($cool-gray, 0.3);
+    border-radius: 8px;
+    padding: 0; // Remove padding to handle image layout
+    margin-bottom: $space-xl;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    min-height: 140px;
+    
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+      border-color: $washu-red;
+    }
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      min-height: auto;
+      
+      &:hover {
+        transform: none;
+      }
+    }
+    
+    // Special styling for books
+    &[data-publication-type="book"] {
+      border-left: 6px solid $washu-red;
+      background: rgba($washu-red, 0.02);
+      
+      &:hover {
+        border-left-color: $washu-green;
+        background: rgba($washu-green, 0.02);
+      }
+      
+      .listing-title {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        
+        &::before {
+          content: "📚 ";
+          font-size: 0.9em;
+          margin-right: 0.3em;
+        }
+      }
+    }
+    
+    // Special styling for working papers
+    &[data-publication-type="working-paper"] {
+      border-left: 4px solid $teal;
+      
+      .listing-title::after {
+        content: "Working Paper";
+        background: $teal;
+        color: white;
+        font-size: 0.65em;
+        font-weight: 600;
+        font-style: normal;
+        padding: 0.2em 0.5em;
+        border-radius: 3px;
+        margin-left: 0.5em;
+        vertical-align: middle;
+      }
+    }
+  }
+  
+  // Image styling
+  .listing-image {
+    flex: 0 0 180px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    background: $light-gray;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba($washu-red, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 0 120px;
+      height: 120px;
+    }
+  }
+  
+  .quarto-listing-item:hover .listing-image img {
+    transform: scale(1.05);
+  }
+  
+  // Content area styling
+  .listing-content {
+    flex: 1;
+    padding: $space-lg;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    @media (max-width: 768px) {
+      padding: $space-md;
+    }
+  }
+  
+  .listing-title {
+    font-family: $font-family-headline !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    color: $washu-red !important;
+    margin-bottom: $space-sm !important;
+    line-height: 1.4 !important;
+    padding-right: 70px; // Space for date badge
+    
+    a {
+      color: $washu-red !important;
+      text-decoration: none !important;
+      
+      &:hover {
+        color: $dark-red !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1.15rem !important;
+      padding-right: 0;
+    }
+  }
+  
+  .listing-journal {
+    color: $washu-green !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    margin-bottom: $space-sm !important;
+    font-weight: 600;
+  }
+  
+  .listing-description {
+    color: $text-gray !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: $space-md !important;
+    flex-grow: 1;
+    
+    @media (max-width: 768px) {
+      font-size: 0.9rem !important;
+    }
+  }
+  
+  .listing-date {
+    position: absolute;
+    top: $space-lg;
+    right: $space-lg;
+    color: $white !important;
+    background: $washu-green;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba($washu-green, 0.3);
+    z-index: 2;
+    
+    @media (max-width: 768px) {
+      position: static;
+      display: inline-block;
+      margin-bottom: $space-sm;
+      align-self: flex-start;
+    }
+  }
+  
+  // Enhanced categories/tags styling
+  .listing-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    margin-top: auto;
+    
+    .listing-category {
+      background: linear-gradient(135deg, rgba($washu-green, 0.1) 0%, rgba($washu-green, 0.05) 100%);
+      color: $washu-green;
+      padding: 0.35rem 0.8rem;
+      border-radius: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid rgba($washu-green, 0.2);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      position: relative;
+      overflow: hidden;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+      }
+      
+      &:hover {
+        background: $washu-green;
+        color: $white;
+        border-color: $washu-green;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba($washu-green, 0.2);
+        
+        &::before {
+          left: 100%;
+        }
+      }
+      
+      // Special category colors
+      &[data-category="american-politics"] {
+        background: linear-gradient(135deg, rgba($washu-red, 0.1) 0%, rgba($washu-red, 0.05) 100%);
+        color: $washu-red;
+        border-color: rgba($washu-red, 0.2);
+        
+        &:hover {
+          background: $washu-red;
+          border-color: $washu-red;
+        }
+      }
+      
+      &[data-category="methodology"] {
+        background: linear-gradient(135deg, rgba($teal, 0.1) 0%, rgba($teal, 0.05) 100%);
+        color: $teal;
+        border-color: rgba($teal, 0.2);
+        
+        &:hover {
+          background: $teal;
+          border-color: $teal;
+        }
+      }
+      
+      &[data-category="institutions"] {
+        background: linear-gradient(135deg, rgba($dark-green, 0.1) 0%, rgba($dark-green, 0.05) 100%);
+        color: $dark-green;
+        border-color: rgba($dark-green, 0.2);
+        
+        &:hover {
+          background: $dark-green;
+          border-color: $dark-green;
+        }
+      }
+      
+      &[data-category="presidency"] {
+        background: linear-gradient(135deg, rgba($gold, 0.2) 0%, rgba($gold, 0.1) 100%);
+        color: darken($gold, 20%);
+        border-color: rgba($gold, 0.3);
+        
+        &:hover {
+          background: $gold;
+          border-color: $gold;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+/* Fallback for items without images */
+.quarto-listing-item:not(:has(.listing-image)) {
+  .listing-content {
+    padding: $space-xl;
+  }
+  
+  .listing-title {
+    padding-right: 70px;
+  }
+  
+  @media (max-width: 768px) {
+    .listing-content {
+      padding: $space-lg;
+    }
+    
+    .listing-title {
+      padding-right: 0;
+    }
+  }
+}
+
+/* Enhanced Search and Filter */
+.quarto-listing .listing-actions {
+  margin-bottom: $space-xl;
+  padding: $space-lg;
+  background: linear-gradient(135deg, $light-gray 0%, rgba($light-gray, 0.8) 100%);
+  border-radius: 8px;
+  border: 1px solid rgba($cool-gray, 0.3);
+  text-align: center;
+  
+  .input-group {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  
+  input {
+    border: 2px solid rgba($cool-gray, 0.5);
+    border-radius: 8px;
+    padding: $space-md $space-lg $space-md 3rem;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    background: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    
+    &:focus {
+      outline: none;
+      border-color: $washu-red;
+      box-shadow: 0 0 0 3px rgba($washu-red, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    &::placeholder {
+      color: rgba($text-gray, 0.6);
+      font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      padding-left: 2.5rem;
+    }
+  }
+  
+  // Search icon
+  &::before {
+    content: "🔍";
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    z-index: 2;
+    
+    @media (max-width: 768px) {
+      left: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Clean pagination with better visual hierarchy */
+.quarto-listing .listing-pagination {
+  margin-top: $space-xxl;
+  text-align: center;
+  
+  .page-link {
+    color: $washu-red;
+    border: 2px solid rgba($cool-gray, 0.4);
+    background: $white;
+    padding: $space-sm $space-lg;
+    margin: 0 $space-xs;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba($washu-red, 0.1), transparent);
+      transition: left 0.4s ease;
+    }
+    
+    &:hover {
+      background: $washu-red;
+      color: $white;
+      border-color: $washu-red;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba($washu-red, 0.2);
+      
+      &::before {
+        left: 100%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      padding: $space-sm $space-md;
+      margin: 0 2px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .page-item.active .page-link {
+    background: $washu-red;
+    border-color: $washu-red;
+    color: $white;
+    box-shadow: 0 4px 8px rgba($washu-red, 0.2);
+  }
+}
+
+/* Enhanced intro text styling */
+.simple-layout > p:first-of-type {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: $text-gray;
+  margin-bottom: $space-xxl;
+  padding: $space-xl;
+  background: linear-gradient(135deg, rgba($washu-green, 0.03) 0%, rgba($washu-green, 0.01) 100%);
+  border-left: 4px solid $washu-green;
+  border-radius: 6px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, $washu-green 0%, $teal 100%);
+    border-radius: 0 0 0 6px;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    padding: $space-lg;
+    margin-bottom: $space-lg;
+  }
+}
+
+/* CV Page Button Centering Fix - Simple Version */
+
+/* Target the CV page specifically */
+.page-content .cv-header,
+.simple-layout .cv-header {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Target the button directly */
+.cv-header .btn,
+.cv-header a.btn {
+  display: inline-block !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+/* Alternative: If the above doesn't work, try this more aggressive approach */
+.cv-header * {
+  text-align: center !important;
+}
+
+.cv-header a {
+  display: block !important;
+  margin: 0 auto !important;
+  width: fit-content !important;
+}

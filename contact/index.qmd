@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "Office location, contact information, and campus directions"
+description: ""
 page-layout: full
 ---
 

@@ -2,8 +2,6 @@
   {
     "listing": "/research/index.html",
     "items": [
-      "/research/noblankcheck/index.html",
-      "/research/partpres/index.html",
       "/research/clerks/index.html",
       "/research/environment/index.html",
       "/research/guardians/index.html",
@@ -12,6 +10,7 @@
       "/research/bellwether/index.html",
       "/research/blameclaim/index.html",
       "/research/crime/index.html",
+      "/research/noblankcheck/index.html",
       "/research/nothing/index.html",
       "/research/pasachoff-reply/index.html",
       "/research/political-geography/index.html",
@@ -32,6 +31,7 @@
       "/research/senators/index.html",
       "/research/unilateral/index.html",
       "/research/disasters-review/index.html",
+      "/research/partpres/index.html",
       "/research/prespart/index.html",
       "/research/prespower/index.html",
       "/research/targeting/index.html",

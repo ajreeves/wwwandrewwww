@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-description: "Academic CV and professional experience"
+description: ""
 page-layout: full
 ---
 
