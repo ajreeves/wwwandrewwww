@@ -12,14 +12,14 @@ listing:
   sort: "date desc"
   page-size: 20
   date-format: "YYYY"
-  categories: true
+  categories: false
+  search: true
+  
 ---
 
 ::: {.simple-layout}
-
 Research on American political institutions, congressional politics, and democratic governance. My work examines how institutional design shapes political behavior and policy outcomes.
 
 ::: {#listing}
 :::
-
 :::

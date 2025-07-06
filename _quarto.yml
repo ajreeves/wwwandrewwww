@@ -4,6 +4,7 @@ project:
       - papers/
       - images/
       - "*.pdf"
+      - "/research/*/*.png"
       
 website:
   title: "Andrew Reeves"

@@ -1,0 +1,34 @@
+<div class="quarto-listing-item">
+  {{#image}}
+  <div class="listing-image">
+    <img src="{{image}}" class="listing-img">
+  </div>
+  {{/image}}
+  
+  <div class="listing-content">
+    <h3 class="listing-title">
+      {{#badge-image}}
+      <img src="{{badge-image}}" style="width: 32px; height: 32px; margin-right: 8px; vertical-align: middle; display: inline-block;">
+      {{/badge-image}}
+      <a href="{{path}}">{{title}}</a>
+    </h3>
+    
+    {{#journal_name}}
+    <div class="listing-journal">{{journal_name}}</div>
+    {{/journal_name}}
+    
+    {{#description}}
+    <div class="listing-description">{{description}}</div>
+    {{/description}}
+    
+    <div class="listing-date">{{date}}</div>
+    
+    {{#categories}}
+    <div class="listing-categories">
+      {{#categories}}
+      <span class="listing-category">{{.}}</span>
+      {{/categories}}
+    </div>
+    {{/categories}}
+  </div>
+</div>

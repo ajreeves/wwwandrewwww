@@ -253,6 +253,35 @@ def create_categories_from_tags(entry):
     
     return categories
 
+def find_featured_image(publication_key, output_dir):
+    """Find a featured image file in the publication directory."""
+    # Common image extensions to check
+    extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.bmp', '.tiff']
+    
+    # Path to the publication directory
+    pub_dir = Path(output_dir) / publication_key
+    
+    # Check if publication directory exists
+    if not pub_dir.exists():
+        return None
+    
+    # Look for "featured" + any supported extension
+    for ext in extensions:
+        image_path = pub_dir / f"featured{ext}"
+        if image_path.exists():
+            # Return relative path for use in the publication
+            return f"featured{ext}"
+    
+    # Also check for variations with different cases
+    case_variations = ['Featured', 'FEATURED']
+    for variation in case_variations:
+        for ext in extensions:
+            image_path = pub_dir / f"{variation}{ext}"
+            if image_path.exists():
+                return f"{variation}{ext}"
+    
+    return None
+
 def create_yaml_frontmatter(entry, output_dir):
     """Create YAML frontmatter for the publication."""
     fields = entry['fields']
@@ -270,7 +299,7 @@ def create_yaml_frontmatter(entry, output_dir):
     # Extract raw tags for additional metadata
     raw_tags = extract_tags_from_bibtex(entry)
     
-    # Build YAML
+    # Build YAML - keep it clean and simple
     yaml_lines = [
         "---",
         f'title: {escape_yaml_string(title)}',
@@ -321,35 +350,6 @@ def create_yaml_frontmatter(entry, output_dir):
     
     return '\n'.join(yaml_lines)
 
-def find_featured_image(publication_key, output_dir):
-    """Find a featured image file in the publication directory."""
-    # Common image extensions to check
-    extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.bmp', '.tiff']
-    
-    # Path to the publication directory
-    pub_dir = Path(output_dir) / publication_key
-    
-    # Check if publication directory exists
-    if not pub_dir.exists():
-        return None
-    
-    # Look for "featured" + any supported extension
-    for ext in extensions:
-        image_path = pub_dir / f"featured{ext}"
-        if image_path.exists():
-            # Return relative path for use in the publication
-            return f"featured{ext}"
-    
-    # Also check for variations with different cases
-    case_variations = ['Featured', 'FEATURED']
-    for variation in case_variations:
-        for ext in extensions:
-            image_path = pub_dir / f"{variation}{ext}"
-            if image_path.exists():
-                return f"{variation}{ext}"
-    
-    return None
-
 def extract_research_sections(entry):
     """Extract research question, findings, etc. from summary."""
     fields = entry['fields']
@@ -380,7 +380,7 @@ def create_content_body(entry, output_dir):
     
     content_lines = []
     
-    # Add featured image at the top if it exists (without "Featured image" text)
+    # Add featured image at the top if it exists
     featured_image = find_featured_image(entry['key'], output_dir)
     if featured_image:
         content_lines.extend([
@@ -612,6 +612,8 @@ def main():
         print()
         print("Supported image formats: .jpg, .jpeg, .png, .gif, .webp, .svg, .bmp, .tiff")
         print("Image naming: featured.jpg, featured.png, Featured.jpg, etc.")
+    else:
+        print(f"\nWould process {len(entries)} publications")
 
 if __name__ == '__main__':
     main()
