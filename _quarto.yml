@@ -12,8 +12,8 @@ website:
   favicon: favicon.png
   
   navbar:
-    background: "#BA0C2F"  # WashU Red
-    foreground: "#ffffff"
+    background: "#971B2F"  # Light gray
+    foreground: "#2C2C2C"  # Dark text for contrast
     pinned: true
     # Remove logo on mobile, keep title text
     title: "Andrew Reeves"
