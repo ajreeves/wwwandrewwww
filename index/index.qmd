@@ -13,7 +13,7 @@ title-block-banner: false
 
 ::: profile-header
 ::: profile-image
-![Andrew Reeves](images/profile.jpg)
+![Andrew Reeves](../images/profile.jpg)
 :::
 
 ::: profile-text
@@ -21,7 +21,7 @@ Andrew Reeves is Professor of [Political Science](https://polisci.wustl.edu/), S
 
 Reeves is an expert in American political institutions, presidential power, and democratic accountability. His research explores how presidents exercise authority, how geography shapes citizens' political experiences, and how federal resources get distributed across communities.
 
-[<i class="fas fa-file-pdf"></i> View CV](reevescv.pdf){.btn .btn-outline target="_blank"}
+[<i class="fas fa-file-pdf"></i> View CV](../reevescv.pdf){.btn .btn-outline target="_blank"}
 :::
 :::
 
@@ -83,7 +83,7 @@ Presidents wield enormous discretion over how federal resources are distributed 
 
 ::: book-entry
 ::: book-cover
-![No Blank Check book cover](images/no-blank-check-cover.jpg)
+![No Blank Check book cover](../images/no-blank-check-cover.jpg)
 :::
 
 ::: book-text
@@ -97,7 +97,7 @@ Reeves and Rogowski explore how Americans think about presidential authority, fi
 
 ::: book-entry
 ::: book-cover
-![The Particularistic President book cover](images/particularistic-president-cover.jpg)
+![The Particularistic President book cover](../images/particularistic-president-cover.jpg)
 :::
 
 ::: book-text
