@@ -13,1495 +13,1276 @@ $cool-gray: #D9D9D9;
 $warm-gray: #D7D2CB;
 $white: #ffffff;
 $black: #000000;
+$light-gray: #F8F9FA;
+$text-gray: #2C2C2C;
 
-// Typography Variables - WashU uses IvyPresto and IvyStyle Sans, 
-// but we'll use web-safe alternatives that match the brand aesthetic
-$font-family-headline: 'Georgia', 'Times New Roman', serif; // Similar to IvyPresto Headline
-$font-family-body: 'Calibri', 'Arial', sans-serif; // Similar to IvyStyle Sans
-$font-family-accent: 'Trebuchet MS', sans-serif; // For variation
+// Enhanced Typography - Tufte-inspired
+$font-family-headline: 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+$font-family-body: 'Source Sans Pro', 'Calibri', 'Helvetica Neue', sans-serif;
+$font-family-accent: 'ET Book', 'Palatino', serif; // Tufte's preferred typeface
 
-// Override Bootstrap variables to match WashU brand
-$primary: $washu-red;
-$secondary: $washu-green;
-$success: $mint;
-$warning: $gold;
-$danger: $coral;
-$info: $teal;
-$light: $warm-gray;
-$dark: $dark-green;
-
-$body-bg: $white;
-$body-color: $black;
-
-$navbar-dark-bg: $washu-red;
-$navbar-dark-color: $white;
-$navbar-dark-hover-color: $warm-gray;
-$navbar-dark-active-color: $white;
+// Refined spacing scale
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-xxl: 3rem;
 
 /*-- scss:rules --*/
 
-/* WashU Brand-Compliant Academic Website */
+/* Enhanced Base Typography - Tufte Principles */
 body {
   font-family: $font-family-body;
-  line-height: 1.6;
+  font-size: 17px; // Slightly larger for better readability
+  line-height: 1.65; // Optimal reading rhythm
   background: $white;
-  color: $black;
-  font-size: 16px;
+  color: $text-gray;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Typography following WashU brand guidelines */
+/* Tufte-Style Typography Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headline;
-  color: $washu-red;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-top: $space-xxl;
+  margin-bottom: $space-lg;
+  color: $text-gray;
+  
+  /* Ensure all headings align with main content */
+  margin-left: 0;
+  padding-left: 0;
+  max-width: none;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  font-weight: 300; // Lighter weight for elegance
   margin-top: 0;
   color: $washu-red;
+  letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: $washu-green;
   position: relative;
-  padding-bottom: 0.5rem;
+  margin-top: $space-xxl;
+  margin-bottom: $space-xl;
   
+  // Subtle underline instead of thick bar
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -0.5rem;
     left: 0;
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, $washu-red, $washu-green);
+    width: 4rem;
+    height: 1px;
+    background: $washu-green;
+    opacity: 0.6;
   }
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: $dark-red;
+  font-weight: 500;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: $dark-green;
+  font-weight: 500;
 }
 
 p {
-  margin-bottom: 1.2em;
-  color: $black;
+  margin-bottom: $space-lg;
+  color: $text-gray;
+  max-width: 85ch; // Increased from 65ch for wider reading
+  
+  &.lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: $dark-green;
+    margin-bottom: $space-xl;
+    max-width: 90ch; // Slightly wider for lead paragraphs
+  }
 }
 
+/* Override paragraph max-width in specific contexts where full width is needed */
+.profile-text p,
+.content-card p,
+.news-entry p,
+.research-content p,
+.book-text p,
+.course-content p {
+  max-width: none;
+}
+
+/* Refined Links */
 a {
   color: $washu-red;
   text-decoration: none;
   transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
   
   &:hover {
     color: $dark-red;
-    text-decoration: underline;
+    border-bottom-color: $dark-red;
+    text-decoration: none;
   }
 }
 
-/* STREAMLINED SIMPLE NAVBAR - Clean and Minimal */
+/* Elegant Navigation */
 .navbar {
-  background: $washu-red !important;
-  border-bottom: 2px solid $washu-green;
-  padding: 1rem 0 !important;
-  box-shadow: 0 2px 4px rgba(186, 12, 47, 0.3);
-  
-  .container-fluid {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
-  }
+  background: $white !important;
+  border-bottom: 1px solid $cool-gray;
+  padding: $space-lg 0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   
   .navbar-brand {
     font-family: $font-family-headline !important;
-    font-weight: 700 !important;
-    font-size: 1.8rem !important;
-    color: $white !important;
-    text-decoration: none !important;
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+    color: $washu-red !important;
     display: flex !important;
     align-items: center !important;
+    padding: 0.5rem 0 !important;
     
     &:hover {
-      color: $warm-gray !important;
-      text-decoration: none !important;
+      color: $dark-red !important;
     }
     
     img {
-      height: 35px !important;
+      height: 32px !important;
       width: auto !important;
-      margin-right: 0.75rem !important;
-      filter: brightness(0) invert(1) !important;
+      margin-right: $space-md !important;
+      filter: none !important; // Keep original colors
     }
   }
   
-  /* Simple horizontal navigation - desktop only */
-  .navbar-nav {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 2rem !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
+  .navbar-nav .nav-link {
+    color: $text-gray !important;
+    font-weight: 600 !important; // Increased from 500
+    padding: $space-md $space-lg !important;
+    border-radius: 0 !important;
+    transition: all 0.2s ease !important;
+    margin: 0 $space-xs !important;
+    font-size: 1rem !important; // Increased from 0.95rem
+    letter-spacing: 0.02em;
+    
+    &:hover,
+    &:focus {
+      color: $washu-red !important;
+      background: transparent !important;
+    }
+    
+    &.active,
+    &[aria-current="page"] {
+      color: $washu-red !important;
+      background: transparent !important;
+      font-weight: 700 !important; // Increased from 600
+      border-bottom: 2px solid $washu-red !important;
+    }
+  }
+  
+  /* Refined social icons */
+  .navbar-nav .nav-item:has([class*="bi-"]) .nav-link {
+    padding: $space-md $space-sm !important;
+    font-size: 1.1rem !important;
+    
+    &:hover {
+      color: $washu-green !important;
+      transform: translateY(-1px) !important;
+    }
+  }
+  
+  .navbar-nav.ms-auto {
+    gap: 0 !important;
+    margin-left: auto !important;
     
     .nav-item {
       margin: 0 !important;
-      
-      .nav-link {
-        color: $white !important;
-        font-weight: 500 !important;
-        font-size: 1rem !important;
-        text-decoration: none !important;
-        padding: 0.5rem 0 !important;
-        border-bottom: 2px solid transparent !important;
-        transition: all 0.3s ease !important;
-        
-        &:hover {
-          color: $warm-gray !important;
-          border-bottom-color: $warm-gray !important;
-        }
-        
-        &.active {
-          color: $white !important;
-          border-bottom-color: $white !important;
-        }
-      }
     }
   }
   
-  /* Hamburger menu - only show on mobile */
-  .navbar-toggler {
-    display: none !important;
-    background: none !important;
-    border: 2px solid $white !important;
-    border-radius: 4px !important;
-    padding: 0.4rem 0.6rem !important;
-    cursor: pointer !important;
-    
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-      width: 1.2rem !important;
-      height: 1.2rem !important;
-    }
-    
-    &:hover {
-      background: rgba(255, 255, 255, 0.1) !important;
-    }
+  .quarto-navbar-tools {
+    margin-right: 0 !important;
   }
   
-  /* MOBILE: Compact header with hamburger */
-  @media (max-width: 991px) {
-    padding: 0.5rem 0 !important; /* Much more compact */
-    
-    .container-fluid {
-      padding: 0 1rem !important;
-      justify-content: flex-start !important;
-      gap: 1rem !important;
-    }
-    
-    /* Show hamburger menu on mobile */
-    .navbar-toggler {
-      display: block !important;
-      order: 1 !important;
-      flex-shrink: 0 !important;
-    }
-    
-    .navbar-brand {
-      order: 2 !important;
-      font-size: 1.3rem !important;
-      margin: 0 !important;
-      
-      img {
-        height: 25px !important;
-        margin-right: 0.5rem !important;
-      }
-    }
-    
-    /* Hide main nav on mobile - show in collapse */
-    .navbar-nav {
-      display: none !important;
-    }
-    
-    /* Collapsed menu styling */
-    .navbar-collapse {
-      position: absolute !important;
-      top: 100% !important;
-      left: 0 !important;
-      right: 0 !important;
-      background: $washu-red !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
-      z-index: 1000 !important;
-      
-      .navbar-nav {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 1rem !important;
-        gap: 0 !important;
-        
-        .nav-item {
-          width: 100% !important;
-          
-          .nav-link {
-            padding: 0.75rem 1rem !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 0 !important;
-            font-size: 1rem !important;
-            
-            &:hover {
-              background: rgba(255, 255, 255, 0.1) !important;
-            }
-            
-            &:last-child {
-              border-bottom: none !important;
-            }
-          }
-        }
-      }
-    }
+  .navbar > .container-fluid {
+    justify-content: space-between !important;
+    max-width: 1400px; // Increased from 1200px
+    margin: 0 auto;
+  }
+}
+
+/* Additional navbar active state */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+  color: $washu-red !important;
+  border-bottom: 2px solid $washu-red !important;
+  font-weight: 700 !important; // Increased from 600
+}
+
+/* Refined Content Layout - KEY CHANGES HERE */
+.simple-layout,
+.page-content {
+  max-width: 1400px; // Increased from 1100px
+  margin: 0 auto;
+  padding: $space-xxl $space-xl;
+  
+  @media (max-width: 768px) {
+    padding: $space-xl $space-lg;
   }
   
-  /* Extra small screens */
-  @media (max-width: 576px) {
-    .navbar-brand {
-      font-size: 1.2rem !important;
-    }
-    
-    .container-fluid {
-      padding: 0 0.75rem !important;
-    }
+  @media (min-width: 1600px) {
+    max-width: 1600px; // Even wider on large screens
+    padding: $space-xxl calc($space-xl * 2);
   }
 }
 
-/* Mobile-specific navbar fixes */
-@media (max-width: 991px) {
-  .navbar {
-    /* Ensure navbar has enough space */
-    padding: 0.5rem 0.5rem !important;
-    
-    .container-fluid {
-      padding: 0 0.5rem !important;
-    }
-    
-    .navbar-brand {
-      font-size: 1.3rem !important; /* Slightly smaller on mobile but still readable */
-      padding: 0.3rem 0.5rem !important;
-      margin-right: 0.5rem !important;
-      
-      img {
-        height: 30px !important;
-        margin-right: 0.5rem !important;
-      }
-    }
-    
-    /* Hide navbar-nav on mobile (shown in collapse) */
-    .navbar-nav {
-      display: none !important;
-    }
-    
-    /* Show toggler */
-    .navbar-toggler {
-      display: block !important;
-      padding: 0.4rem 0.6rem !important;
-      font-size: 1rem !important;
-    }
+/* Enhanced Page Title Styling */
+.page-title {
+  color: $washu-red !important;
+  font-size: 3rem !important; // Larger welcome title
+  font-weight: 300 !important;
+  margin-bottom: $space-xl !important;
+  letter-spacing: -0.02em;
+}
+
+/* Enhanced Section Title Styling */
+.section-title {
+  color: $washu-green !important;
+  font-size: 2.4rem !important; // Slightly larger
+  font-weight: 500 !important;
+  margin-top: $space-xxl * 1.5 !important;
+  margin-bottom: $space-xl !important;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 5rem; // Longer underline
+    height: 2px; // Thicker underline
+    background: $washu-green;
+    opacity: 0.7;
   }
 }
 
-/* Extra small screens - further optimize */
-@media (max-width: 576px) {
-  .navbar {
-    padding: 0.3rem 0.3rem !important;
-    
-    .container-fluid {
-      padding: 0 0.3rem !important;
-    }
-    
-    .navbar-brand {
-      font-size: 1.1rem !important;
-      padding: 0.2rem 0.3rem !important;
-      
-      img {
-        height: 25px !important;
-        margin-right: 0.4rem !important;
-      }
-    }
-    
-    .navbar-toggler {
-      padding: 0.3rem 0.5rem !important;
-      font-size: 0.9rem !important;
-    }
-  }
-}
-
-/* Content Cards with WashU brand elements */
-.content-card {
-  background: $white;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid $washu-red;
+/* Enhanced Profile Section */
+.profile-header {
+  display: flex;
+  gap: $space-xxl * 1.5; // More gap
+  margin-bottom: $space-xxl * 2; // More space below
+  align-items: flex-start;
+  margin-top: $space-xl;
+  padding: $space-xl; // Add padding
+  background: $light-gray; // Subtle background
+  border-radius: 8px; // Rounded corners
+  border-left: 4px solid $washu-red; // Accent border
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); // Subtle shadow
   transition: all 0.3s ease;
   
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
-    border-left-color: $washu-green;
+    background: $white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
 }
 
-/* Hero Section with WashU brand colors */
-.hero-section {
-  background: linear-gradient(135deg, $white 0%, $warm-gray 100%);
-  padding: 4rem 0;
-  margin: -2rem -1rem 3rem -1rem;
-  border-radius: 0 0 8px 8px;
-  border-bottom: 4px solid $washu-red;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Grid System */
-.grid {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.g-col-8 {
-  grid-column: span 8;
-}
-
-.g-col-4 {
-  grid-column: span 4;
-}
-
-/* Professional Images */
-.img-fluid {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* Contact Information */
-.contact-info {
-  background: $cool-gray;
-  border-radius: 8px;
-  padding: 1.5rem;
-  border-left: 4px solid $washu-green;
-  
-  h4 {
-    color: $washu-red;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
+.profile-text {
+  flex: 2;
   
   p {
-    margin-bottom: 0.5rem;
-    color: $black;
+    font-size: 1.15rem !important; // Slightly larger
+    line-height: 1.75 !important; // Better line height
+    max-width: none;
+    margin-bottom: $space-lg;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
-/* WashU Brand Buttons */
-.btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
+.profile-image {
+  flex: 0 0 240px; // Slightly larger
+  margin-top: 0;
+  
+  img {
+    width: 100%;
+    border-radius: 8px; // More rounded
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); // Enhanced shadow
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+/* Better Button Styling in Profile */
+.profile-text .btn {
+  margin-top: $space-md;
+  padding: $space-md $space-xl;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  font-family: $font-family-body;
-}
-
-.btn-primary {
-  background: $washu-red;
-  color: $white;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba($washu-red, 0.2);
   
   &:hover {
-    background: $dark-red;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
+    box-shadow: 0 6px 20px rgba($washu-red, 0.3);
+    transform: translateY(-1px);
   }
 }
 
-.btn-secondary {
-  background: $washu-green;
-  color: $white;
-  
-  &:hover {
-    background: $dark-green;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(33, 87, 50, 0.3);
-  }
-}
-
-.btn-outline {
-  background: transparent;
-  color: $washu-red;
-  border: 2px solid $washu-red;
-  
-  &:hover {
-    background: $washu-red;
-    color: $white;
-  }
-}
-
-/* Fix for button text visibility in content cards */
-.content-card a.btn-primary {
-  color: $white !important;
-  
-  &:hover {
-    color: $white !important;
-  }
-}
-
-.content-card a.btn-secondary {
-  color: $white !important;
-  
-  &:hover {
-    color: $white !important;
-  }
-}
-
-/* Publications with WashU brand styling */
-.author-highlight {
-  font-weight: 700;
-  color: $washu-red;
-  background: $mint;
-  padding: 3px 8px;
-  border-radius: 4px;
-  border: 1px solid $washu-green;
-}
-
-.publication-filters {
-  background: $white;
-  border: 1px solid $cool-gray;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid $washu-red;
-}
-
-.filter-group {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+/* Clean Section Styling */
+.simple-section {
+  margin-bottom: $space-xxl * 1.5;
+  padding-bottom: $space-xxl;
+  border-bottom: 1px solid rgba($cool-gray, 0.6);
   
   &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.search-box {
-  flex: 1;
-  min-width: 300px;
-  padding: 0.8rem 1rem;
-  border: 2px solid $cool-gray;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: $white;
-  
-  &:focus {
-    outline: none;
-    border-color: $washu-red;
-    box-shadow: 0 0 0 3px rgba(186, 12, 47, 0.1);
-  }
-}
-
-.filter-buttons {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 0.6rem 1rem;
-  border: 2px solid $cool-gray;
-  background: $white;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  color: $black;
-  
-  &:hover {
-    background: $warm-gray;
-    border-color: $washu-red;
+    border-bottom: none;
   }
   
-  &.active {
-    background: $washu-red;
-    color: $white;
-    border-color: $washu-red;
-  }
-}
-
-/* Publication Items */
-.publication-item {
-  background: $white;
-  border: 1px solid $cool-gray;
-  border-left: 4px solid $washu-red;
-  border-radius: 8px;
-  padding: 1.8rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
-  &:hover {
-    border-left-color: $washu-green;
-    background: $warm-gray;
-    transform: translateX(5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  &.featured {
-    border-left-color: $gold;
-    background: linear-gradient(135deg, $white 0%, $mint 100%);
-  }
-  
-  &.hidden {
-    display: none;
-  }
-  
-  &[data-type="book"] {
-    border-left-color: $teal;
+  h2 {
+    color: $washu-green;
+    margin-bottom: $space-xl;
+    font-size: 2.2rem;
     
-    .publication-type {
-      background: $teal;
-      color: $white;
-    }
-  }
-  
-  &[data-type="article"] {
-    border-left-color: $washu-red;
-    
-    .publication-type {
-      background: $washu-red;
-      color: $white;
-    }
-  }
-  
-  &[data-type="incollection"] {
-    border-left-color: $coral;
-    
-    .publication-type {
-      background: $coral;
-      color: $white;
-    }
-  }
-  
-  &[data-type="unpublished"] {
-    border-left-color: $gold;
-    
-    .publication-type {
-      background: $gold;
-      color: $black;
-    }
+    /* Override any inherited margins/padding to align with main content */
+    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 }
 
-.publication-type {
-  font-size: 0.75em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.8rem;
-  font-weight: 700;
-  display: inline-block;
-  background: $cool-gray;
-  color: $black;
-  padding: 4px 12px;
-  border-radius: 12px;
-}
-
-.publication-citation {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: $black;
-  margin-bottom: 0.75rem;
-}
-
-.publication-links {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid $cool-gray;
-  font-size: 0.9rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  flex-wrap: wrap;
-  
-  a {
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: inline-block;
-  }
-}
-
-.pdf-link {
-  background: $coral;
-  color: $white !important;
-  
-  &:hover {
-    background: darken($coral, 10%);
-    transform: translateY(-2px);
-  }
-}
-
-.publisher-link {
-  background: $teal;
-  color: $white !important;
-  
-  &:hover {
-    background: darken($teal, 10%);
-    transform: translateY(-2px);
-  }
-}
-
-.external-link {
-  background: $gold;
-  color: $black !important;
-  
-  &:hover {
-    background: darken($gold, 10%);
-    transform: translateY(-2px);
-  }
-}
-
-/* Summary Details */
-.summary-details {
-  margin-top: 0.75rem;
-}
-
-.summary-details summary {
-  background: $washu-green;
-  color: $white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.summary-details summary::before {
-  content: '▶';
-  margin-right: 0.4rem;
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-}
-
-.summary-details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.summary-details summary:hover {
-  background: $dark-green;
-  transform: translateY(-1px);
-}
-
-.summary-content {
-  margin-top: 0.75rem;
-  padding: 1rem;
-  background: $mint;
-  border-radius: 6px;
-  border-left: 3px solid $washu-green;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: $black;
-}
-
-/* Footer with WashU colors - Force White Text with Maximum Specificity */
-.page-footer,
-.page-footer *,
-.page-footer p,
-.page-footer div,
-.page-footer span,
-footer,
-footer *,
-footer p,
-footer div,
-footer span {
-  background: $dark-green !important;
-  color: $white !important;
-  border: none !important;
-}
-
-.page-footer {
-  padding: 2rem 0 !important;
-  margin-top: 4rem !important;
-  border-top: 4px solid $washu-red !important;
-  
-  /* Override Bootstrap and Quarto defaults */
-  .container,
-  .container-fluid,
-  .row,
-  .col,
-  .text-muted,
-  .text-dark,
-  .text-black {
-    color: $white !important;
-    background: transparent !important;
-  }
-  
-  /* Simple footer layout */
-  .footer-contents {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 1rem !important;
-    
-    @media (max-width: 768px) {
-      flex-direction: column !important;
-      text-align: center !important;
-      gap: 0.5rem !important;
-    }
-  }
-  
-  .footer-left,
-  .footer-right,
-  .footer-center {
-    flex: 1 !important;
-    color: $white !important;
-    background: transparent !important;
-    
-    @media (max-width: 768px) {
-      width: 100% !important;
-    }
-  }
-  
-  .footer-center {
-    text-align: center !important;
-    font-weight: 500 !important;
-    color: $white !important;
-  }
-  
-  .footer-left {
-    text-align: left !important;
-    color: $white !important;
-    
-    @media (max-width: 768px) {
-      text-align: center !important;
-    }
-  }
-  
-  .footer-right {
-    text-align: right !important;
-    color: $white !important;
-    
-    @media (max-width: 768px) {
-      text-align: center !important;
-    }
-  }
-}
-
-/* Research Section */
+/* Enhanced Research Grid with Better Icon Styling */
 .research-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: $space-xl;
+  margin-top: $space-xl;
 }
 
 .research-block {
   display: flex;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background: $white;
-  border-radius: 8px;
-  border-left: 4px solid $washu-red;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid $cool-gray;
+  gap: $space-xl;
+  padding: $space-xl;
+  background: $light-gray;
+  border-radius: 6px; // Slightly more rounded
+  border-left: 4px solid $washu-red; // Slightly thicker accent
   transition: all 0.3s ease;
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); // Subtle shadow
+  
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background: $white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); // Enhanced shadow
     border-left-color: $washu-green;
+    transform: translateY(-2px); // Subtle lift effect
   }
 }
 
 .research-icon {
-  flex: 0 0 60px;
+  flex: 0 0 60px; // Slightly larger
   display: flex;
   align-items: center;
   justify-content: center;
   background: $washu-red;
-  color: $white !important;
+  color: $white; // WHITE ICONS - This is the key fix!
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  font-size: 1.5rem;
-  font-weight: 900;
-  box-shadow: 0 3px 10px rgba(186, 12, 47, 0.3);
+  font-size: 1.4rem; // Slightly larger icons
   transition: all 0.3s ease;
-  border: 2px solid $white;
-  position: relative;
-
-  i, span, .fa, .fas, .far, .fab, .fal, .fad {
-    color: $white !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    display: block;
-    text-align: center;
-  }
-
+  box-shadow: 0 4px 12px rgba($washu-red, 0.3); // Nice shadow
+  
   .research-block:hover & {
-    transform: scale(1.1);
     background: $washu-green;
-    box-shadow: 0 4px 15px rgba(33, 87, 50, 0.4);
+    color: $white; // Keep white on hover too
+    box-shadow: 0 6px 16px rgba($washu-green, 0.4);
+    transform: scale(1.05); // Slight scale on hover
   }
 }
 
 .research-content {
   flex: 1;
-
+  
   h3 {
     color: $washu-red;
-    margin: 0 0 0.75rem 0;
-    font-size: 1.25rem;
-    font-weight: 700;
+    margin: 0 0 $space-md 0;
+    font-size: 1.4rem; // Slightly larger
+    font-weight: 600; // Bolder
+    line-height: 1.3;
+    transition: color 0.3s ease;
+    
+    .research-block:hover & {
+      color: $washu-green; // Change color on hover for consistency
+    }
   }
-
+  
   p {
     margin: 0;
-    line-height: 1.6;
-    color: $black;
+    line-height: 1.7; // Better line height
+    color: $text-gray;
+    font-size: 1.05rem; // Slightly larger text
+    max-width: none;
   }
 }
 
-/* Loading States */
-.loading-container {
-  text-align: center;
-  padding: 3rem 2rem;
-  color: $black;
+/* Enhanced Book Display */
+.book-entry {
+  display: flex;
+  gap: $space-xxl;
+  margin-bottom: $space-xxl * 1.5;
+  padding: $space-xxl;
+  background: $light-gray;
+  border-radius: 8px;
+  border-left: 4px solid $washu-red;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  
+  &:hover {
+    background: $white;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    border-left-color: $washu-green;
+  }
 }
 
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid $cool-gray;
-  border-top: 4px solid $washu-red;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 1rem auto;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Mobile Collapse Menu Fix */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background: $washu-red !important;
-    border-radius: 6px !important;
-    margin-top: 0.5rem !important;
-    padding: 1rem !important;
-    border: 1px solid $white !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    
-    /* Key positioning fixes */
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 1050 !important;
-    
-    /* Ensure it appears below the navbar */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+.book-cover {
+  flex: 0 0 160px; // Slightly larger
   
-  /* Fix the navbar to allow proper positioning */
-  .navbar {
-    position: relative !important;
+  img {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
     
-    /* Ensure the navbar container allows absolute positioning */
-    .container-fluid {
-      position: relative !important;
-    }
-  }
-  
-  /* Style the mobile menu items */
-  .navbar-collapse .navbar-nav {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    
-    .nav-item {
-      width: 100% !important;
-      
-      .nav-link {
-        padding: 0.8rem 1rem !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-        text-align: left !important;
-        
-        &:last-child {
-          border-bottom: none !important;
-        }
-      }
-    }
-  }
-  
-  /* Style mobile social icons */
-  .navbar-collapse .navbar-nav .nav-item:has(i) {
-    .nav-link {
-      display: flex !important;
-      align-items: center !important;
-      gap: 0.5rem !important;
-      
-      i {
-        font-size: 1.2rem !important;
-      }
-    }
-  }
-  
-  /* Ensure the hamburger button is properly positioned */
-  .navbar-toggler {
-    position: relative !important;
-    z-index: 1051 !important;
-    border: 2px solid $white !important;
-    padding: 0.5rem 0.7rem !important;
-    
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
-    }
-  }
-  
-  /* Fix hamburger icon color */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-  }
-  
-  /* Smooth animation for menu open/close */
-  .navbar-collapse {
-    transition: all 0.3s ease !important;
-    
-    &.collapsing {
-      opacity: 0.8 !important;
-      transform: translateY(-10px) !important;
-    }
-    
-    &.show {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
+    &:hover {
+      transform: scale(1.05) rotate(1deg); // Fun rotation effect
     }
   }
 }
 
-/* Responsive Design for Content */
-@media (max-width: 768px) {
-  .quarto-container {
-    padding: 1rem;
+.book-text {
+  flex: 1;
+  
+  h3 {
+    color: $washu-red;
+    margin-bottom: $space-lg;
+    font-size: 1.5rem; // Larger title
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+    
+    .book-entry:hover & {
+      color: $washu-green;
+    }
   }
   
-  .hero-section {
-    padding: 2rem 0;
-    margin: -1rem -1rem 2rem -1rem;
+  p {
+    max-width: none;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   
-  h1 {
-    font-size: 2rem;
+  a {
+    color: $washu-red;
+    font-weight: 600;
+    
+    &:hover {
+      color: $washu-green;
+    }
+  }
+}
+
+/* Refined Content Cards */
+.content-card {
+  background: $light-gray;
+  border: none;
+  border-radius: 4px;
+  padding: $space-xl;
+  margin-bottom: $space-xl;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
   
   h2 {
-    font-size: 1.6rem;
+    color: $washu-red !important;
+    margin-bottom: $space-lg !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    margin-top: 0 !important;
+    
+    &::after {
+      display: none; // Remove underline in cards
+    }
   }
   
-  .publication-filters {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
+  h3 {
+    color: $dark-green !important;
+    margin-bottom: $space-sm !important;
+    margin-top: $space-lg !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    
+    &:first-of-type {
+      margin-top: 0 !important;
+    }
   }
   
-  .search-box {
-    min-width: auto;
+  p {
+    color: $text-gray !important;
+    margin-bottom: $space-md !important;
+    line-height: 1.6 !important;
+    max-width: none;
+  }
+  
+  a {
+    color: $washu-red !important;
+    font-weight: 500 !important;
+    
+    &:hover {
+      color: $dark-red !important;
+      border-bottom-color: $dark-red !important;
+    }
+  }
+}
+
+/* Teaching page content card adjustments */
+.simple-layout .content-card {
+  border-left: 3px solid $washu-red !important;
+  padding: $space-xl !important;
+}
+
+/* Refined Buttons */
+.btn {
+  display: inline-block;
+  padding: $space-md $space-xl;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  font-family: $font-family-body;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    border-bottom-color: transparent;
+  }
+}
+
+.btn-primary {
+  background: $washu-red;
+  color: $white !important;
+  border-color: $washu-red;
+  
+  &:hover {
+    background: $dark-red;
+    border-color: $dark-red;
+    color: $white !important;
+    box-shadow: 0 4px 12px rgba(186, 12, 47, 0.2);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $washu-red !important;
+  border-color: $washu-red;
+  
+  &:hover {
+    background: $washu-red;
+    color: $white !important;
+  }
+}
+
+/* Teaching Page Enhancements */
+.course-with-image {
+  display: flex;
+  gap: $space-xl;
+  align-items: flex-start;
+  margin-top: $space-lg;
+}
+
+.course-image {
+  flex: 0 0 180px;
+  
+  img {
     width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.course-content {
+  flex: 1;
+  
+  .btn {
+    margin-right: $space-md;
+    margin-bottom: $space-md;
+    
+    /* Force button text visibility */
+    &.btn-primary {
+      background: $washu-red !important;
+      color: $white !important;
+      border-color: $washu-red !important;
+      
+      &:hover {
+        background: $dark-red !important;
+        color: $white !important;
+        border-color: $dark-red !important;
+      }
+    }
+    
+    &.btn-outline {
+      background: transparent !important;
+      color: $washu-red !important;
+      border: 1px solid $washu-red !important;
+      
+      &:hover {
+        background: $washu-red !important;
+        color: $white !important;
+        border-color: $washu-red !important;
+      }
+    }
+  }
+}
+
+/* News Page Styling */
+.news-entry {
+  background: $light-gray;
+  border: none;
+  border-left: 3px solid $washu-red;
+  border-radius: 4px;
+  padding: $space-xl;
+  margin-bottom: $space-xl;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left-color: $washu-green;
   }
   
-  .filter-buttons {
-    justify-content: center;
+  h3 {
+    color: $washu-red;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: $space-md;
+    line-height: 1.3;
+  }
+}
+
+/* Media Grid */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); // Increased min width
+  gap: $space-lg;
+  margin-top: $space-xl;
+}
+
+.media-item {
+  background: $light-gray;
+  border: none;
+  border-radius: 4px;
+  padding: $space-lg;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* Contact Page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: $space-xxl;
+  margin-bottom: $space-xl;
+}
+
+/* CV Page */
+.cv-header {
+  text-align: center;
+  margin-bottom: $space-xl;
+  padding: $space-xl;
+  background: $light-gray;
+  border-radius: 4px;
+}
+
+.cv-embed {
+  margin: $space-xl 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+  }
+}
+
+/* Video Embed Styling */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+}
+
+/* Footer - Simple and Direct Approach */
+.page-footer {
+  background-color: $dark-green !important;
+  padding: $space-xxl 0 !important;
+  margin-top: $space-xxl * 2 !important;
+  border-top: 1px solid $cool-gray !important;
+}
+
+/* Target footer text directly and simply */
+.page-footer * {
+  color: white !important;
+}
+
+.page-footer a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.page-footer a:hover {
+  color: #D7D2CB !important;
+  text-decoration: underline !important;
+}
+
+/* Footer layout */
+.page-footer .container,
+.page-footer .container-fluid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  max-width: 1400px !important; // Increased from 1200px
+  margin: 0 auto !important;
+  padding: 0 $space-xl !important;
+}
+
+.page-footer .footer-left {
+  text-align: left !important;
+}
+
+.page-footer .footer-center {
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+.page-footer .footer-right {
+  text-align: right !important;
+}
+
+/* Mobile footer */
+@media (max-width: 768px) {
+  .page-footer .container,
+  .page-footer .container-fluid {
+    flex-direction: column !important;
+    gap: $space-md !important;
   }
   
-  .publication-item {
-    padding: 1.2rem;
+  .page-footer .footer-left,
+  .page-footer .footer-center,
+  .page-footer .footer-right {
+    text-align: center !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
   }
   
-  .content-card {
-    padding: 1.5rem;
+  h1 {
+    font-size: 2.2rem;
   }
   
-  .g-col-8, .g-col-4 {
-    grid-column: span 12;
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .page-title {
+    font-size: 2.4rem !important;
+  }
+  
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .research-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    font-size: 1.2rem;
+  }
+  
+  .research-block {
+    padding: $space-lg;
+    gap: $space-lg;
+  }
+  
+  .profile-header {
+    padding: $space-lg;
+    gap: $space-lg;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-image {
+    align-self: center;
+    max-width: 200px;
+  }
+  
+  .book-entry {
+    padding: $space-lg;
+    gap: $space-lg;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .book-cover {
+    align-self: center;
+    max-width: 160px;
+  }
+  
+  .course-with-image {
+    flex-direction: column;
+    text-align: center;
+    gap: $space-lg;
+  }
+  
+  .course-image {
+    align-self: center;
+    max-width: 200px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
   
   .research-grid {
-    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+  
+  .navbar-brand img {
+    display: none !important;
   }
 }
 
-/* Accessibility */
-html {
-  scroll-behavior: smooth;
-}
-
-button:focus,
-.filter-btn:focus,
-.search-box:focus,
-a:focus {
-  outline: 2px solid $washu-red;
-  outline-offset: 2px;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px); 
+/* Additional responsive breakpoint for ultra-wide screens */
+@media (min-width: 1800px) {
+  .simple-layout,
+  .page-content {
+    max-width: 1800px;
+    padding: $space-xxl calc($space-xl * 3);
   }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
+  
+  .navbar > .container-fluid {
+    max-width: 1800px;
+  }
+  
+  .page-footer .container,
+  .page-footer .container-fluid {
+    max-width: 1800px !important;
   }
 }
 
-.publication-item,
-.content-card {
-  animation: fadeIn 0.6s ease-out;
+/* Research Page Styling */
+.books-section,
+.publications-section {
+  margin-top: $space-xxl;
 }
 
-/* Book grid styling - Fix image display */
-#books .quarto-listing-item {
-  background: $white;
-  border: 1px solid $cool-gray;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Elegant Book Grid */
+.books-section .quarto-listing-item {
+  background: $light-gray;
+  border: none;
+  border-radius: 4px;
+  padding: $space-xl;
   transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
   
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background: $white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
   }
 }
 
-#books .quarto-listing-item img {
+.books-section .listing-item-img-placeholder,
+.books-section .listing-item img {
   width: 100% !important;
-  height: 300px !important;
-  object-fit: contain !important; /* Shows full image without cropping */
+  height: 280px !important;
+  object-fit: contain !important;
   object-position: center !important;
-  border-radius: 6px !important;
+  border-radius: 3px !important;
   background: $white !important;
-  padding: 0.5rem !important;
-  margin-bottom: 1rem !important;
-  border: 1px solid $cool-gray !important;
+  padding: $space-md !important;
+  margin-bottom: $space-lg !important;
+  border: 1px solid rgba($cool-gray, 0.5) !important;
+  transition: transform 0.3s ease;
 }
 
-#books .listing-item-img-placeholder {
-  width: 100%;
-  height: 300px;
-  background: $cool-gray;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $black;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+.books-section .quarto-listing-item:hover img {
+  transform: scale(1.02);
 }
 
-#books .listing-title {
-  font-family: $font-family-headline;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: $washu-red;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
+.books-section .listing-title {
+  font-family: $font-family-headline !important;
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  color: $washu-red !important;
+  margin-bottom: $space-md !important;
+  line-height: 1.3 !important;
+  flex-grow: 0;
 }
 
-#books .listing-description {
-  color: $black;
-  font-size: 0.95rem;
-  line-height: 1.5;
+.books-section .listing-description {
+  color: $text-gray !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
   flex-grow: 1;
-  margin-bottom: 1rem;
+  margin-bottom: $space-lg !important;
 }
 
-#books .listing-date {
-  color: $washu-green;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+.books-section .listing-date {
+  color: $washu-green !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: $space-sm !important;
 }
 
-#books .listing-tags {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid $cool-gray;
-}
-
-#books .listing-tag {
-  background: linear-gradient(135deg, $mint 0%, $cool-gray 100%);
-  color: $washu-green;
-  border: 1px solid $washu-green;
-  padding: 0.25rem 0.75rem;
-  margin: 0.1rem 0.3rem 0.1rem 0;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
-  
-  &:hover {
-    background: $washu-green;
-    color: $white;
-  }
-}
-
-/* Publications listing styling */
-#all-publications .quarto-listing-item {
-  background: $white;
-  border: 1px solid $cool-gray;
-  border-left: 4px solid $washu-red;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Clean Publications List */
+.publications-section .quarto-listing-item {
+  background: $light-gray;
+  border: none;
+  border-left: 3px solid $washu-red;
+  border-radius: 4px;
+  padding: $space-xl;
+  margin-bottom: $space-lg;
   transition: all 0.3s ease;
   
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transform: translateX(5px);
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-left-color: $washu-green;
+    transform: translateX(3px);
   }
 }
 
-#all-publications .listing-title {
-  font-family: $font-family-headline;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: $washu-red;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
+.publications-section .listing-title {
+  font-family: $font-family-headline !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: $washu-red !important;
+  margin-bottom: $space-sm !important;
+  line-height: 1.3 !important;
+  
+  a {
+    color: $washu-red !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    
+    &:hover {
+      color: $dark-red !important;
+      border-bottom: 1px solid $dark-red !important;
+    }
+  }
 }
 
-#all-publications .listing-description {
-  color: $black;
+.publications-section .listing-description {
+  color: $text-gray !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: $space-md !important;
+  max-width: none;
+}
+
+.publications-section .listing-date {
+  color: $washu-green !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: $space-sm !important;
+}
+
+.publications-section .listing-journal {
+  color: $dark-green !important;
+  font-style: italic !important;
+  font-size: 0.95rem !important;
+  margin-bottom: $space-sm !important;
+  font-weight: 500;
+}
+
+/* Search and Filter Styling */
+.quarto-listing .listing-actions {
+  margin-bottom: $space-xl;
+  padding: $space-lg;
+  background: $light-gray;
+  border-radius: 4px;
+  border: 1px solid rgba($cool-gray, 0.5);
+}
+
+.quarto-listing .listing-actions .input-group {
+  max-width: 400px;
+}
+
+.quarto-listing .listing-actions input {
+  border: 1px solid rgba($cool-gray, 0.8);
+  border-radius: 3px;
+  padding: $space-md;
   font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $washu-red;
+    box-shadow: 0 0 0 2px rgba($washu-red, 0.1);
+  }
 }
 
-#all-publications .listing-date {
-  color: $washu-green;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+/* Pagination */
+.quarto-listing .listing-pagination {
+  margin-top: $space-xxl;
+  text-align: center;
 }
 
-#all-publications .listing-journal {
-  color: $dark-green;
+.quarto-listing .listing-pagination .page-link {
+  color: $washu-red;
+  border: 1px solid rgba($cool-gray, 0.8);
+  padding: $space-sm $space-md;
+  margin: 0 2px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: $washu-red;
+    color: $white;
+    border-color: $washu-red;
+  }
+}
+
+.quarto-listing .listing-pagination .page-item.active .page-link {
+  background: $washu-red;
+  border-color: $washu-red;
+  color: $white;
+}
+
+/* No Results Message */
+.quarto-listing .listing-no-matching-items {
+  text-align: center;
+  padding: $space-xxl;
+  color: $text-gray;
   font-style: italic;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
 }
 
-#all-publications .listing-tags {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid $cool-gray;
+/* Category Badges */
+.publications-section .listing-categories {
+  margin-top: $space-md;
 }
 
-#all-publications .listing-tag {
-  background: linear-gradient(135deg, $mint 0%, $cool-gray 100%);
+.publications-section .listing-category {
+  display: inline-block;
+  background: rgba($washu-green, 0.1);
   color: $washu-green;
-  border: 1px solid $washu-green;
-  padding: 0.25rem 0.75rem;
-  margin: 0.1rem 0.3rem 0.1rem 0;
+  padding: 0.25rem 0.6rem;
+  margin-right: $space-sm;
+  margin-bottom: $space-xs;
   border-radius: 12px;
   font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
+  font-weight: 500;
+  border: 1px solid rgba($washu-green, 0.2);
+  transition: all 0.2s ease;
   
   &:hover {
     background: $washu-green;
     color: $white;
+    border-color: $washu-green;
   }
 }
 
-/* Override existing problematic styles */
-.washu-emphasis {
-  color: $washu-red;
-  font-weight: 700;
-}
-
-.washu-highlight {
-  background: linear-gradient(120deg, $mint 0%, $cool-gray 100%);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: $black;
-}
-
-.washu-divider {
-  height: 3px;
-  background: linear-gradient(90deg, $washu-red, $washu-green);
-  border: none;
-  margin: 2rem 0;
-}
-
-/* WashU Logo Integration */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  
-  .washu-logo {
-    height: 60px;
-    width: auto;
+/* Responsive Research Page */
+@media (max-width: 768px) {
+  .books-section .quarto-listing-item {
+    padding: $space-lg;
   }
   
-  .logo-text {
-    font-family: $font-family-headline;
-    color: $washu-red;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin: 0;
+  .books-section .listing-item img {
+    height: 200px !important;
+    padding: $space-sm !important;
+  }
+  
+  .publications-section .quarto-listing-item {
+    padding: $space-lg;
+  }
+  
+  .quarto-listing .listing-actions {
+    padding: $space-md;
+  }
+  
+  .quarto-listing .listing-actions .input-group {
+    max-width: 100%;
   }
 }
 
-/* Custom Bluesky icon */
+/* Remove overly complex publication card styling */
+.publication-card,
+.publication-header,
+.publication-type-badge,
+.type-icon,
+.publication-footer,
+.publication-links {
+  display: none !important;
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .navbar,
+  .cv-header {
+    display: none;
+  }
+}
+
+/* Custom Icons */
 .bi-bluesky::before {
   content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 568 501' fill='%23ffffff'%3E%3Cpath d='M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.592-70.485-2.682-7.981-3.344-15.835-3.691-23.239-.347 7.404-1.009 15.258-3.691 23.239-13.32 39.626-65.732 193.477-185.592 70.485C31.556 388.56 60.778 323.8 175.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.66 0 75.293 0 57.947 0-28.906 76.134-1.611 123.121 33.664Z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 568 501' fill='%232C2C2C'%3E%3Cpath d='M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.209C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.592-70.485-2.682-7.981-3.344-15.835-3.691-23.239-.347 7.404-1.009 15.258-3.691 23.239-13.32 39.626-65.732 193.477-185.592 70.485C31.556 388.56 60.778 323.8 175.653 304.25c-65.72 11.185-139.6-7.295-159.875-79.748C9.945 203.66 0 75.293 0 57.947 0-28.906 76.134-1.611 123.121 33.664Z'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* Improved Navbar Spacing */
-.navbar {
-  background: $washu-red !important;
-  border-bottom: 2px solid $washu-green;
-  padding: 0.75rem 0 !important; /* Increased padding for more height */
-  box-shadow: 0 2px 4px rgba(186, 12, 47, 0.3);
-  
-  .navbar-brand {
-    font-family: $font-family-headline !important;
-    font-weight: 700 !important;
-    font-size: 1.4rem !important; /* Slightly smaller for better fit */
-    color: $white !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 0.5rem 0.75rem !important; /* Reduced horizontal padding */
-    
-    &:hover {
-      color: $warm-gray !important;
-    }
-    
-    img {
-      height: 35px !important; /* Slightly smaller logo */
-      width: auto !important;
-      margin-right: 0.5rem !important; /* Reduced margin */
-      filter: brightness(0) invert(1) !important;
-    }
-  }
-  
-  .navbar-nav .nav-link {
-    color: $white !important;
-    font-weight: 600 !important;
-    padding: 0.6rem 0.8rem !important; /* Reduced padding for tighter spacing */
-    border-radius: 6px !important;
-    transition: all 0.3s ease !important;
-    margin: 0 0.1rem !important; /* Reduced margin between items */
-    font-size: 0.9rem !important; /* Slightly smaller font */
-    
-    &:hover,
-    &:focus {
-      color: $warm-gray !important;
-      background: rgba(255, 255, 255, 0.1) !important;
-    }
-    
-    &.active {
-      color: $white !important;
-      background: $washu-green !important;
-      font-weight: 700 !important;
-      /* Remove all the sizing changes that cause layout shifts */
-    }
-  }
-  
-  /* Right side icons - make them more compact */
-  .navbar-nav .nav-item:has([class*="bi-"]) .nav-link {
-    padding: 0.6rem 0.3rem !important; /* Much tighter horizontal padding for icons */
-    font-size: 1rem !important; /* Consistent icon size */
-    margin: 0 !important; /* Remove margin between icons */
-    
-    &:hover {
-      transform: scale(1.1) !important;
-    }
-  }
-  
-  /* Target the right navbar specifically for even tighter spacing */
-  .navbar-nav.ms-auto .nav-item {
-    margin: 0 !important;
-    
-    .nav-link {
-      padding: 0.6rem 0.25rem !important; /* Even tighter for social icons */
-    }
-  }
-  
-  /* Move social icons directly next to search - eliminate the gap */
-  .navbar-nav.ms-auto {
-    gap: 0 !important;
-    margin-left: auto !important; /* Push all the way to the right */
-    margin-right: 0 !important;
-  }
-  
-  /* Eliminate space between search and social icons */
-  .quarto-navbar-tools {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-  }
-  
-  /* Make the right side elements stick together */
-  .navbar-nav.ms-auto,
-  .quarto-navbar-tools {
-    display: flex !important;
-    align-items: center !important;
-  }
-  
-  /* Override any default spacing in the navbar container */
-  .navbar > .container-fluid {
-    justify-content: space-between !important;
-  }
-  
-  /* Ensure the right side nav items are truly flush */
-  .navbar-nav.ms-auto .nav-item:last-child {
-    margin-right: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  .navbar-toggler {
-    border-color: $white !important;
-    padding: 0.4rem 0.6rem !important; /* Smaller hamburger button */
-  }
+/* FOOTER OVERRIDE - This must be at the end to override Quarto defaults */
+html body .page-footer,
+html body footer,
+body .page-footer,
+body footer {
+  background-color: #13322B !important;
+  padding: 3rem 0 !important;
+  margin-top: 6rem !important;
+  border-top: 1px solid #D9D9D9 !important;
 }
 
-/* Responsive improvements */
-@media (max-width: 1200px) {
-  .navbar-brand {
-    font-size: 1.2rem !important;
-    
-    img {
-      height: 30px !important;
-      margin-right: 0.4rem !important;
-    }
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 0.85rem !important;
-    padding: 0.5rem 0.6rem !important;
-  }
+html body .page-footer *,
+html body footer *,
+body .page-footer *,
+body footer * {
+  color: #ffffff !important;
 }
 
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background: $washu-red !important;
-    border-radius: 6px !important;
-    margin-top: 0.5rem !important;
-    padding: 1rem !important;
-    border: 1px solid $white !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-    
-    /* Positioning fixes from previous solution */
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 1050 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    
-    .navbar-nav .nav-item {
-      width: 100% !important;
-      
-      .nav-link {
-        padding: 0.8rem 1rem !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-        text-align: left !important;
-        font-size: 1rem !important;
-        
-        &:last-child {
-          border-bottom: none !important;
-        }
-      }
-    }
-  }
-  
-  .navbar {
-    position: relative !important;
-    
-    .container-fluid {
-      position: relative !important;
-    }
-  }
+html body .page-footer a,
+html body footer a,
+body .page-footer a,
+body footer a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+html body .page-footer a:hover,
+html body footer a:hover,
+body .page-footer a:hover,
+body footer a:hover {
+  color: #D7D2CB !important;
+  text-decoration: underline !important;
+}
+
+/* Footer layout with high specificity */
+html body .page-footer .container,
+html body .page-footer .container-fluid,
+body .page-footer .container,
+body .page-footer .container-fluid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
 }
 
 @media (max-width: 768px) {
-  /* Hide some icons on very small screens */
-  .navbar-nav .nav-item:has(.bi-github) {
-    display: none !important;
+  html body .page-footer .container,
+  html body .page-footer .container-fluid,
+  body .page-footer .container,
+  body .page-footer .container-fluid {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    text-align: center !important;
   }
   
-  .navbar-brand {
-    img {
-      display: none !important; /* Hide logo on mobile per your original CSS */
-    }
-  }
+/* HIGH SPECIFICITY ICON COLOR FIX - Add this to your styles.scss */
+
+/* Force white icons with maximum specificity */
+.research-icon,
+.research-icon i,
+.research-icon .fas,
+.research-icon .fa,
+.research-block .research-icon,
+.research-block .research-icon i,
+.research-block .research-icon .fas,
+.research-block .research-icon .fa {
+  color: white !important;
+}
+
+/* Ensure hover states also stay white */
+.research-block:hover .research-icon,
+.research-block:hover .research-icon i,
+.research-block:hover .research-icon .fas,
+.research-block:hover .research-icon .fa {
+  color: white !important;
+}
+
+/* Alternative: If the above doesn't work, try this more aggressive approach */
+.research-icon * {
+  color: white !important;
+}
+
+.research-block:hover .research-icon * {
+  color: white !important;
+}
 }

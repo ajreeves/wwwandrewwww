@@ -1,15 +1,22 @@
 ---
 title: "Contact"
+description: "Office location, contact information, and campus directions"
 page-layout: full
 ---
 
-:::::::: grid
-::::: g-col-md-8
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+```
+
+:::: simple-layout
+
+::: contact-grid
+::: contact-main
 ::: content-card
 ## Office Location
 
-**Harry and Susan Seigle Hall**\
-Washington University in St. Louis\
+**Harry and Susan Seigle Hall**  
+Washington University in St. Louis  
 St. Louis, MO 63130
 
 ### Directions
@@ -24,16 +31,16 @@ Enter the main entrance of Seigle Hall, go to the left and enter the Weidenbaum 
 ::: content-card
 ## Mailing Address
 
-**Andrew Reeves**\
-[Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu)\
-MSC 1027-228-170\
-[Washington University in St. Louis](http://washu.edu)\
-1 Brookings Drive\
+**Andrew Reeves**  
+[Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu)  
+MSC 1027-228-170  
+[Washington University in St. Louis](http://washu.edu)  
+1 Brookings Drive  
 St. Louis, MO 63130-4899
 :::
-:::::
+:::
 
-:::: g-col-md-4
+::: contact-sidebar
 ::: content-card
 ## Contact Information
 
@@ -43,153 +50,27 @@ St. Louis, MO 63130-4899
 
 ### Phone
 
-**Office:** [314-935-5636](tel:+13149355636)\
+**Office:** [314-935-5636](tel:+13149355636)  
 **Department:** [314-935-5811](tel:+13149355811)
 
 ### Connect
 
-[**Twitter**](https://twitter.com/ajreeves) \| [**Google Scholar**](https://scholar.google.com/citations?user=xPSRkX4AAAAJ) \| [**ORCID**](https://orcid.org/0000-0001-7217-6601) \| [**LinkedIn**](https://www.linkedin.com/in/areeves/) \| [**Bluesky**](https://bsky.app/profile/ajreeves.bsky.social)
+[<i class="fab fa-twitter"></i> Twitter](https://twitter.com/ajreeves) | [<i class="fas fa-graduation-cap"></i> Google Scholar](https://scholar.google.com/citations?user=xPSRkX4AAAAJ) | [<i class="fab fa-orcid"></i> ORCID](https://orcid.org/0000-0001-7217-6601) | [<i class="fab fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/areeves/) | [<i class="fab fa-bluesky"></i> Bluesky](https://bsky.app/profile/ajreeves.bsky.social)
 
-[Send Email](mailto:reeves@wustl.edu){.btn .btn-outline}
+[<i class="fas fa-envelope"></i> Send Email](mailto:reeves@wustl.edu){.btn .btn-outline}
 :::
-::::
-::::::::
+:::
+:::
 
+::: content-card
 ## Campus Map
 
-:::: content-card
 ::: map-container
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.048724371058!2d-90.30624628466093!3d38.64734347960371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b53c0a6e144b%3A0xc07c870c0d084b6f!2sHarry%20and%20Susan%20Seigle%20Hall!5e0!3m2!1sen!2sus!4v1707505600000" width="600" height="450" style="border:0" allowfullscreen loading="lazy">
 </iframe>
 :::
 
-[**Get Directions**](https://maps.google.com/maps?q=Harry+and+Susan+Seigle+Hall,+Washington+University+in+St.+Louis,+St.+Louis,+MO){.btn .btn-outline}
+[<i class="fas fa-directions"></i> Get Directions](https://maps.google.com/maps?q=Harry+and+Susan+Seigle+Hall,+Washington+University+in+St.+Louis,+St.+Louis,+MO){.btn .btn-outline}
+:::
+
 ::::
-
-```{=html}
-<style>
-/* Map styling */
-.map-container {
-  margin: 1.5rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(45, 62, 47, 0.15);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-  border-radius: 12px;
-}
-
-/* Contact page styling */
-.content-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.content-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.content-card h2 {
-  color: #BA0C2F;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.content-card h3 {
-  color: #13322B;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
-
-.content-card p {
-  color: #4a5568;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-
-.content-card a {
-  color: #BA0C2F;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.content-card a:hover {
-  color: #13322B;
-  text-decoration: underline;
-}
-
-/* Button styling */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  margin-top: 1rem;
-}
-
-.btn-primary {
-  background-color: #BA0C2F;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #13322B;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(186, 12, 47, 0.3);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: #BA0C2F;
-  border-color: #BA0C2F;
-}
-
-.btn-outline:hover {
-  background-color: #BA0C2F;
-  color: white;
-  transform: translateY(-1px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .content-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .map-container iframe {
-    height: 250px;
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 1rem;
-  }
-  
-  /* Stack grid on mobile */
-  .grid {
-    display: block !important;
-  }
-  
-  .g-col-md-8,
-  .g-col-md-4 {
-    width: 100% !important;
-  }
-}
-</style>
-```
