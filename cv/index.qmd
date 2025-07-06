@@ -11,11 +11,11 @@ page-layout: full
 :::: page-content
 
 ::: cv-header
-[<i class="fas fa-download"></i> Download PDF](./reevescv.pdf){.btn .btn-primary target="_blank"}
+[<i class="fas fa-download"></i> Download PDF](/reevescv.pdf){.btn .btn-primary target="_blank"}
 :::
 
 ::: cv-embed
-<iframe src="../reevescv.pdf" width="100%" height="800px" frameborder="0">
+<iframe src="/reevescv.pdf" width="100%" height="800px" frameborder="0">
 <p>Your browser does not support iframes. <a href="./reevescv.pdf">Download the PDF</a> to view.</p>
 </iframe>
 :::
