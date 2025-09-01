@@ -16,7 +16,7 @@ listing:
 ---
 
 ::: {.simple-layout}
-Research on American political institutions, congressional politics, and democratic governance. My work examines how institutional design shapes political behavior and policy outcomes.
+Research on American political institutions and democratic governance. My work examines how institutional design shapes political behavior and policy outcomes.
 
 ::: {#listing}
 :::
