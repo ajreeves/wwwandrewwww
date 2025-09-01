@@ -21,7 +21,7 @@ Andrew Reeves is a political scientist whose work examines the presidency, democ
 
 Reeves’s research explores how presidents exercise authority, how geography shapes citizens’ political experiences, and how federal resources are distributed across communities. His work combines rigorous empirical analysis with a commitment to translating scholarship into practice, influencing how both scholars and policymakers understand the dynamics of democratic governance.
 
-[<i class="fas fa-file-pdf"></i> View CV](../reevescv.pdf){.btn .btn-outline target="_blank"}
+[<i class="fas fa-file-pdf"></i> View CV](../cv){.btn .btn-outline target="_blank"}
 :::
 :::
 
