@@ -47,6 +47,7 @@ website:
       - icon: bluesky
         href: https://bsky.app/profile/ajreeves.bsky.social
         aria-label: Bluesky
+  google-analytics: "G-73ZBNNCNMP"
 
   page-footer:
     background: "#13322B"  # WashU Dark Green
