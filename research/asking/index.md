@@ -1,5 +1,5 @@
 ---
-title: "The Contextual Determinants of Support for Presidential Power"
+title: "The Contextual Determinants of Support for Unilateral Action"
 date: 2017-01-01
 description: "Public attitudes toward unilateral presidential power are surprisingly consistent and largely unaffected by contextual framing–-except in explicitly political contexts. Even with different presidents or justifications, support for unilateral action remains low and stable."
 categories: ['Presidential Power', 'Research Methods', 'Public Opinion', 'Institutional Design', 'Democratic Accountability']
@@ -44,7 +44,7 @@ Presidential Power, Survey Experiments, Public Opinion, Institutional Design, De
 ```bibtex
 @article{asking,
   author = {Reeves, Andrew and Rogowski, Jon C. and Seo, Min Hee and Stone, Andrew R.},
-  title = {The Contextual Determinants of Support for Presidential Power},
+  title = {The Contextual Determinants of Support for Unilateral Action},
   journal = {Presidential Studies Quarterly},
   volume = {47},
   number = {3},
