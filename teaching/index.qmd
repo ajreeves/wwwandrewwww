@@ -12,6 +12,19 @@ Courses on American politics, the presidency, and electoral strategy
 ::: simple-section
 ## Current Courses
 ::: content-card
+### The Practice of Citizenship: Cooperation and Obligations in Democratic Life
+::: course-with-image
+::: course-image
+![The Practice of Citizenship](../images/citizenship.png)
+:::
+::: course-content
+**Undergraduate Course**
+This course examines citizenship as both a practice of democratic life and a solution to cooperation problems. We integrate political theory, American political voices, and empirical political science to ask: What civic capacities sustain democracy, and what obligations do citizens and institutions share in cultivating them? Students will engage with classics from Aristotle to MLK, analyze modern empirical studies on trust, polarization, and civic education, and reflect on their own university’s role in preparing citizens. 
+:::
+:::
+:::
+
+::: content-card
 ### Introduction to American Politics
 ::: course-with-image
 ::: course-image
@@ -22,7 +35,7 @@ Courses on American politics, the presidency, and electoral strategy
 
 The Biden presidency concludes amidst international turmoil, the fallout from a global pandemic, and increasing economic dissatisfaction among Americans. American institutions are being tested by a polarized political environment, regular mass protests, and are still adjusting from the former and possibly next president, who challenged many political norms. We will explore how we got here and consider the future of American politics.
 
-The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches.
+The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches. (Not currently planning to offer.)
 
 **Course Introduction Video:**
 ```{=html}
