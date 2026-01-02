@@ -53,7 +53,7 @@ website:
     background: "#13322B"  # WashU Dark Green
     foreground: "#ffffff"
     left: |
-      © 2025 Andrew Reeves
+      © 2026 Andrew Reeves
     right: |
        <img src="/images/washu-logo/WashU-Reverse_web.png" alt="Washington University" style="height: 30px;">
     center: |
