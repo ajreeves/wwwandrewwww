@@ -1,118 +1,114 @@
 ---
 title: ""
 page-layout: full
-title-block-banner: false
+body-classes: home-page
 ---
 
-```{=html}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-```
-
-:::: page-content
-# Welcome {.page-title}
-
-::: profile-header
-::: profile-image
-![<b>Andrew Reeves</b><br>Professor of [Political Science](http://polisci.wustl.edu)<br>Director of the [Weidenbaum Center](http://wc.washu.edu)<br>Senior Advisor to the [Chancellor](https://andrewdmartin.washu.edu/)<br>Visiting Fellow at the [Hoover Institution](https://www.hoover.org)](images/profile.jpg)
+:::: {.page-content}
+::: {.hero}
+::: {.hero-grid}
+::: {.hero-copy}
+::: {.hero-eyebrow}
+<i class="fa-solid fa-landmark-flag" aria-hidden="true"></i> American Politics and Democratic Governance
 :::
 
-::: profile-text
-**Andrew Reeves** is a political scientist whose research explores how presidents and other political institutions shape the design and delivery of public policy. He focuses on how executive decisions are made, how federal resources reach communities, and how citizens evaluate political leadership in moments when policy meets lived experience. His work links democratic accountability to the concrete pathways through which government acts, showing how geography, administrative capacity, and institutional incentives structure political outcomes.
+<h1 class="hero-title">Andrew Reeves</h1>
 
-He is [Director of the Weidenbaum Center on the Economy, Government, and Public Policy](http://wc.washu.edu) at [Washington University in St. Louis](http://washu.edu), where he leads cross-disciplinary initiatives that connect research, policy, and public engagement. His leadership has expanded the Center’s research support programs, strengthened its survey infrastructure, and deepened partnerships with faculty and civic institutions across the region.
-
-Reeves also serves as [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu/), helping advance the Chancellor's [Ordered Liberty Project](http://orderedliberty.washu.edu), university-wide effort that support academic freedom, open inquiry, and collaboration across schools and disciplines. He is a Visiting Fellow at the [Hoover Institution](http://hoover.org).
-
-His research has been published in leading journals and featured in national media. He is coauthor of [*The Particularistic President*](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3) and [*No Blank Check*](https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007). Across these projects, he combines empirical rigor with an interest in how political institutions shape governance and the everyday experience of democracy.
-
-[<i class="fas fa-file-pdf"></i> View CV](../cv){.btn .btn-outline target="_blank"}
-:::
+::: {.hero-subtitle}
+Political scientist focused on presidential power, policy delivery, and democratic accountability.
 :::
 
-## Research {.section-title}
+Andrew Reeves is a political scientist whose research explores how presidents and other political institutions shape the design and delivery of public policy. He focuses on how executive decisions are made, how federal resources reach communities, and how citizens evaluate political leadership in moments when policy meets lived experience. His work links democratic accountability to the concrete pathways through which government acts, showing how geography, administrative capacity, and institutional incentives structure political outcomes.
 
-American democracy faces unprecedented challenges. Reeves's research provides essential insights into how presidents wield power, why voters struggle to hold leaders accountable, and how federal resources get distributed across communities. His work addresses four key areas that shape democratic governance.
+He is [Director of the Weidenbaum Center on the Economy, Government, and Public Policy](https://wc.washu.edu) at [Washington University in St. Louis](https://washu.edu), where he leads cross-disciplinary initiatives that connect research, policy, and public engagement. His leadership has expanded the Center's research support programs, strengthened its survey infrastructure, and deepened partnerships with faculty and civic institutions across the region.
 
-::: research-grid
-::: research-block
-::: research-icon
-<i class="fas fa-gavel" style="color: white !important;"></i>
-:::
+Reeves also serves as [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu), helping advance the Chancellor's [Ordered Liberty Project](https://orderedliberty.washu.edu), a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is also a [Visiting Fellow at the Hoover Institution](https://www.hoover.org).
 
-::: research-content
-### Presidential Power and Public Constraint
+His research has been published in leading journals and featured in national media. He is coauthor of [*The Particularistic President*](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3) and [*No Blank Check*](https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007). Across these projects, he combines empirical rigor with a sustained interest in how institutions shape governance and the everyday experience of democracy.
 
-Reeves studies how presidents lead, especially when they act without Congress. This includes tools like executive orders, emergency declarations, and disaster relief. While presidents often pursue these actions to advance policy or gain political advantage, they are not free to act without consequences. In *No Blank Check*, Reeves and Rogowski show that the public has clear and often skeptical views about presidential power.
+::: {.hero-actions}
+[Research](research/){.btn .btn-primary}
+[Curriculum Vitae](cv/){.btn .btn-outline}
+[Media & Writing](news/){.btn .btn-outline}
 :::
 :::
 
-::: research-block
-::: research-icon
-<i class="fas fa-map-marked-alt" style="color: white !important;"></i>
+::: {.hero-aside}
+![](images/profile.jpg){.hero-photo}
+
+::: {.role-card}
+- [Professor of Political Science](https://polisci.wustl.edu), Washington University in St. Louis
+- [Director, Weidenbaum Center](https://wc.washu.edu)
+- [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu)
+- [Visiting Fellow, Hoover Institution](https://www.hoover.org)
 :::
-
-::: research-content
-### Geography and Political Experience
-
-Where people live shapes their political views and the kind of government they receive. Reeves's work shows that voters in urban, suburban, and rural communities experience democracy differently. He explores how geography influences partisanship, perceptions of fairness, and attachment to place. These spatial divides are central to understanding today's political polarization.
-:::
-:::
-
-::: research-block
-::: research-icon
-<i class="fas fa-vote-yea" style="color: white !important;"></i>
-:::
-
-::: research-content
-### Voter Behavior and Political Accountability
-
-Much of Reeves's research asks whether voters reward leaders for good governance or punish them for poor performance. The answer often depends on timing, visibility, and proximity. Voters are responsive when federal aid arrives quickly or when local unemployment improves, but they are less likely to notice longer-term or complex policies. This disconnect explains why some presidents prioritize short-term gains over durable policy change.
-:::
-:::
-
-::: research-block
-::: research-icon
-<i class="fas fa-dollar-sign" style="color: white !important;"></i>
-:::
-
-::: research-content
-### Federal Spending and Resource Allocation
-
-Presidents wield enormous discretion over how federal resources are distributed across states and communities. Reeves's research reveals that this spending is far from neutral. Presidents systematically favor swing states, partisan allies, and politically strategic constituencies. This particularistic approach to governing raises important questions about political equality and whether all citizens receive fair treatment from the federal government.
 :::
 :::
 :::
 
+::: {.section}
+## Research Themes {.section-title}
+
+::: {.grid-2 .research-theme-grid}
+::: {.card .research-theme-card}
+::: {.card-content .research-theme-content}
+<span class="tag research-theme-tag">Presidential Power</span>
+<h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span><span class="research-theme-heading">Presidential Power and Public Constraint</span></h3>
+
+How presidents lead, especially when they act without Congress, and how public opinion and institutional checks limit executive discretion.
+:::
+:::
+
+::: {.card .research-theme-card}
+::: {.card-content .research-theme-content}
+<span class="tag research-theme-tag">Geography</span>
+<h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><span class="research-theme-heading">Geography and Political Experience</span></h3>
+
+How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides matter for polarization.
+:::
+:::
+
+::: {.card .research-theme-card}
+::: {.card-content .research-theme-content}
+<span class="tag research-theme-tag">Accountability</span>
+<h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-regular fa-rectangle-list" aria-hidden="true"></i></span><span class="research-theme-heading">Voter Behavior and Political Accountability</span></h3>
+
+When citizens reward or punish leaders, and why visibility, timing, and policy design shape democratic accountability.
+:::
+:::
+
+::: {.card .research-theme-card}
+::: {.card-content .research-theme-content}
+<span class="tag research-theme-tag">Federal Policy</span>
+<h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i></span><span class="research-theme-heading">Federal Spending and Resource Allocation</span></h3>
+
+How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.
+:::
+:::
+:::
+:::
+
+::: {.section}
 ## Books {.section-title}
 
-::: book-entry
-::: book-cover
-![](images/no-blank-check-cover.jpg)
-:::
+:::: {.book-item}
+![](images/no-blank-check-cover.jpg){.book-cover}
 
-::: book-text
 ### No Blank Check: The Origins and Consequences of Public Antipathy toward Presidential Power
 
 [Cambridge University Press, 2022](https://www.amazon.com/Blank-Check-Consequences-Antipathy-Presidential/dp/1316626474/), with [Jon C. Rogowski](https://voices.uchicago.edu/jrogowski/)
 
-Reeves and Rogowski explore how Americans think about presidential authority, finding that many citizens are skeptical of unilateral executive action even when undertaken by presidents they support. The book combines historical analysis, survey experiments, and public opinion data to show that concerns about constitutional limits and democratic norms shape public evaluations of presidential power.
-:::
-:::
+*No Blank Check* shows that public support for presidential power is conditional, not automatic, and that citizens apply meaningful constraints to executive action.
+::::
 
-::: book-entry
-::: book-cover
-![](images/particularistic-president-cover.jpg)
-:::
+:::: {.book-item}
+![](images/particularistic-president-cover.jpg){.book-cover}
 
-::: book-text
 ### The Particularistic President: Executive Branch Politics and Political Inequality
 
-[Cambridge University Press](https://www.amazon.com/Particularistic-President-Executive-Political-Inequality/dp/1107616816/), coauthored with [Douglas Kriner](http://blogs.cornell.edu/kriner/)
+[Cambridge University Press, 2016](https://www.amazon.com/Particularistic-President-Executive-Political-Inequality/dp/1107616816/), with [Douglas Kriner](http://blogs.cornell.edu/kriner/)
 
-**2016 Richard E. Neustadt Award from the American Political Science Association**
-
-Kriner and Reeves challenge the widespread belief that presidents act in the national interest, showing instead that they often favor specific constituencies, especially swing states and partisan allies, when distributing federal resources. The book warns that increasing presidential power may deepen political inequality through executive favoritism.
+This book examines how presidents target distributive benefits to favored constituencies, with implications for representation and democratic equality.
+::::
 :::
-:::
-
 ::::

@@ -1,25 +1,32 @@
 project:
   type: website
-  resources: 
-      - papers/
-      - images/
-      - "*.pdf"
-      - "/research/*/*.png"
-      
+  output-dir: _site
+  render:
+    - index.qmd
+    - research/index.qmd
+    - research/*/index.md
+    - teaching/index.qmd
+    - news/index.qmd
+    - cv/index.qmd
+    - contact/index.qmd
+    - talks/index.qmd
+  resources:
+    - papers/
+    - images/
+    - "*.pdf"
+    - "practice-of-citizenship-syllabus-spring-2026.pdf"
+    - "research/*/*.png"
+    - "research/*/*.jpg"
+    - "research/*/*.jpeg"
+
 website:
   title: "Andrew Reeves"
-  description: "Professor of Political Science, Director of the Weidenbaum Center, and Senior Advisor to the Chancellor | Washington University in St. Louis"
+  description: "Political scientist focused on presidential power, policy delivery, and democratic accountability."
   favicon: favicon.png
-  
+  google-analytics: "G-73ZBNNCNMP"
   navbar:
-    background: "#971B2F"  # Light gray
-    foreground: "#2C2C2C"  # Dark text for contrast
     pinned: true
-    # Remove logo on mobile, keep title text
-    title: "Andrew Reeves"
-    logo: "images/washu-logo/WashU-SHIELD-White.png"  # WashU full color logo
-    logo-alt: "Washington University in St. Louis"
-    
+    search: true
     left:
       - href: /
         text: Home
@@ -28,12 +35,13 @@ website:
       - href: teaching/
         text: Teaching
       - href: news/
-        text: News
+        text: Media & Writing
+      - href: talks/
+        text: Talks
       - href: cv/
         text: CV
       - href: contact/
         text: Contact
-        
     right:
       - icon: envelope
         href: mailto:reeves@wustl.edu
@@ -42,164 +50,37 @@ website:
         href: https://www.linkedin.com/in/areeves/
         aria-label: LinkedIn
       - icon: mortarboard-fill
-        href: https://scholar.google.com/citations?user=YourScholarID
+        href: https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ
         aria-label: Google Scholar
-      - icon: bluesky
-        href: https://bsky.app/profile/ajreeves.bsky.social
-        aria-label: Bluesky
-  google-analytics: "G-73ZBNNCNMP"
-
   page-footer:
-    background: "#13322B"  # WashU Dark Green
-    foreground: "#ffffff"
-    left: |
-      © 2026 Andrew Reeves
-    right: |
-       <img src="/images/washu-logo/WashU-Reverse_web.png" alt="Washington University" style="height: 30px;">
-    center: |
+    left: "© 2026 Andrew Reeves"
+    right: "Washington University in St. Louis"
 
 format:
   html:
-    theme: 
-      - cosmo
-      - styles.scss
+    theme:
+      light:
+        - litera
+        - styles-light.scss
+      dark:
+        - darkly
+        - styles-dark.scss
+    css:
+      - styles-overrides.css
     toc: false
     page-layout: full
-    grid:
-      sidebar-width: 0px
-      body-width: 1200px
-      margin-width: 200px
-    css: 
-      - styles.scss
-    
-    # WashU brand-compliant metadata
-    lang: en
-    title-prefix: "Andrew Reeves | Washington University in St. Louis"
-    
-    # Professional academic styling
-    anchor-sections: true
-    smooth-scroll: true
-    citations-hover: true
-    crossrefs-hover: true
-    
-    # SEO and meta tags
-    description-meta: "Professor of Political Science, Director of the Weidenbaum Center, and Senior Advisor to the Chancellor at Washington University in St. Louis"
-    
-    # WashU brand-compliant fonts
-    include-in-header: 
+    anchor-sections: false
+    smooth-scroll: false
+    link-external-newwindow: true
+    include-in-header:
       - text: |
-          <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-          <meta name="theme-color" content="#BA0C2F">
-          <meta name="keywords" content="political science, public policy, Washington University, WashU, American politics">
-          <!-- StatCounter Analytics -->
-          <script type="text/javascript">
-          var sc_project=12348960; 
-          var sc_invisible=1; 
-          var sc_security="3aa7f28c"; 
-          </script>
-          <script type="text/javascript"
-          src="https://www.statcounter.com/counter/counter.js"
-          async></script>
-          <noscript><div class="statcounter"><a title="real time web
-          analytics" href="https://statcounter.com/"
-          target="_blank"><img class="statcounter"
-          src="https://c.statcounter.com/12348960/0/3aa7f28c/1/"
-          alt="real time web analytics"
-          referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-          <style>
-            /* Mobile-specific fixes */
-            @media (max-width: 768px) {
-              /* Left-align all text on mobile */
-              .quarto-container {
-                text-align: left !important;
-              }
-              
-              /* Ensure body text is left-aligned */
-              body {
-                text-align: left !important;
-              }
-              
-              /* Left-align specific content areas */
-              .content, .page-body, main {
-                text-align: left !important;
-              }
-              
-              /* Left-align paragraphs and headings */
-              p, h1, h2, h3, h4, h5, h6 {
-                text-align: left !important;
-              }
-              
-              /* Hide logo on mobile to show full title */
-              .navbar-brand img {
-                display: none !important;
-              }
-              
-              /* Fix navbar layout - hide search and other tools */
-              .navbar .quarto-navbar-tools,
-              .navbar-nav .nav-item:has(.quarto-search),
-              .quarto-search-toggle,
-              .aa-DetachedSearchButton {
-                display: none !important;
-              }
-              
-              /* Ensure navbar brand takes full width and shows complete title */
-              .navbar-brand {
-                font-size: 1.1rem !important;
-                white-space: nowrap !important;
-                margin-right: auto !important;
-                flex-grow: 1 !important;
-                overflow: visible !important;
-                text-overflow: unset !important;
-                max-width: none !important;
-                width: auto !important;
-              }
-              
-              /* Fix navbar flex layout to prevent truncation */
-              .navbar > .container-fluid {
-                justify-content: flex-start !important;
-                flex-wrap: nowrap !important;
-              }
-              
-              /* Ensure navbar itself doesn't constrain width */
-              .navbar {
-                padding-left: 10px !important;
-                padding-right: 10px !important;
-              }
-              
-              /* Hide hamburger menu button if present */
-              .navbar-toggler {
-                margin-left: auto !important;
-              }
-              
-              /* Add padding to content for better mobile spacing */
-              .content {
-                padding-left: 15px !important;
-                padding-right: 15px !important;
-              }
-              
-              /* Ensure main content area is left-aligned */
-              .quarto-layout-panel {
-                text-align: left !important;
-              }
-              
-              /* Fix any remaining centered elements */
-              .column-page, .column-body {
-                text-align: left !important;
-              }
-            }
-          </style>
-    
-    # Social media and SEO
-    open-graph:
-      image: "images/andrew-reeves-headshot.jpg"
-      locale: en_US
-      site-name: "Andrew Reeves - Washington University in St. Louis"
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Public+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
 bibliography: references.bib
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/american-political-science-association.csl
 
-# WashU-specific metadata (removed author/affiliation to prevent top-of-page display)
-  
-# Professional academic website settings
 execute:
   freeze: auto

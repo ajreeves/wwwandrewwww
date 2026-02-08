@@ -1,0 +1,263 @@
+/* ==========================================================================
+   Deterministic Site Override Layer
+   Purpose:
+   - Keep light/dark behavior identical for layout and controls
+   - Resolve legacy cascade conflicts from duplicate SCSS blocks
+   - Lock homepage research-theme alignment
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1) Visual System Lock
+   -------------------------------------------------------------------------- */
+
+#quarto-document-content > :where(.page-content, .simple-layout) {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.1rem, 2.5vw, 2.3rem);
+  padding-right: clamp(1.1rem, 2.5vw, 2.3rem);
+}
+
+.section {
+  margin-top: clamp(1.7rem, 3.3vw, 2.6rem);
+}
+
+.section-title {
+  margin-bottom: clamp(0.78rem, 1.5vw, 1.08rem);
+}
+
+/* --------------------------------------------------------------------------
+   2) Typography Lock
+   -------------------------------------------------------------------------- */
+
+body {
+  font-size: clamp(15.9px, 0.94rem + 0.08vw, 17.2px);
+  line-height: 1.66;
+}
+
+#title-block-header.quarto-title-block .quarto-title .title {
+  font-size: clamp(1.68rem, 2.15vw, 2.5rem) !important;
+  line-height: 1.08 !important;
+}
+
+h2.page-intro-title,
+.page-intro-title h2 {
+  font-size: clamp(1.2rem, 1.1rem + 0.8vw, 1.58rem) !important;
+  line-height: 1.24 !important;
+}
+
+.page-intro > p,
+.page-intro > :last-child {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.home-page .hero-title {
+  font-size: clamp(2.05rem, 4.2vw, 3.24rem);
+  line-height: 0.98;
+}
+
+/* --------------------------------------------------------------------------
+   3) Research Theme Cards Alignment Lock
+   -------------------------------------------------------------------------- */
+
+.home-page .research-theme-grid {
+  align-items: stretch;
+}
+
+.home-page .research-theme-grid > .research-theme-card {
+  min-height: clamp(20.6rem, 24vw, 23rem);
+  padding: 1.2rem 1.25rem;
+  display: block;
+  transform: none !important;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-content {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(4.95rem, auto) auto;
+  row-gap: 0.58rem;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-tag {
+  margin: 0;
+  width: fit-content;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-title {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1.95rem minmax(0, 1fr);
+  column-gap: 0.62rem;
+  align-items: start;
+  line-height: 1.17;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-heading {
+  display: block;
+  margin-top: 0.03em;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.home-page .research-theme-grid > .research-theme-card .research-theme-icon i {
+  display: block;
+  font-size: 1.12rem;
+  line-height: 1;
+  transform: none;
+}
+
+.home-page .research-theme-grid > .research-theme-card p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home-page .research-theme-grid > .research-theme-card .research-theme-content {
+    grid-template-rows: auto minmax(4.35rem, auto) auto;
+    row-gap: 0.5rem;
+  }
+
+  .home-page .research-theme-grid > .research-theme-card .research-theme-title {
+    grid-template-columns: 1.78rem minmax(0, 1fr);
+    column-gap: 0.56rem;
+  }
+
+  .home-page .research-theme-grid > .research-theme-card .research-theme-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4) Navbar + Tooling Parity Lock
+   -------------------------------------------------------------------------- */
+
+#quarto-header .navbar {
+  padding-top: 0.18rem !important;
+  padding-bottom: 0.18rem !important;
+  min-height: 3.15rem !important;
+}
+
+#quarto-header .navbar > .container-fluid {
+  min-height: 3.15rem !important;
+  align-items: center !important;
+}
+
+#quarto-header .navbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#quarto-header .navbar .navbar-nav .nav-link {
+  line-height: 1.2 !important;
+  padding: 0.44rem 0.72rem !important;
+}
+
+#quarto-header .navbar .navbar-nav,
+#quarto-header .navbar .quarto-navbar-tools {
+  align-items: center !important;
+}
+
+#quarto-header .navbar .quarto-navbar-tools {
+  display: inline-flex;
+  gap: 0.65rem;
+}
+
+#quarto-header .navbar #quarto-search,
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButton,
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem !important;
+  height: 1.3rem !important;
+  min-width: 1.3rem !important;
+  min-height: 1.3rem !important;
+  line-height: 1 !important;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#quarto-header .navbar #quarto-search {
+  margin-left: 0.42rem !important;
+}
+
+#quarto-header .navbar #quarto-search::before {
+  content: none !important;
+}
+
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonPlaceholder {
+  display: none !important;
+}
+
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon,
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon svg,
+#quarto-header .navbar #quarto-search .aa-DetachedSearchButtonIcon path {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle::before,
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle::after {
+  content: none !important;
+}
+
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i.bi {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.05rem !important;
+  height: 1.05rem !important;
+  line-height: 1 !important;
+}
+
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i.bi::before {
+  background-image: none !important;
+  font-family: "bootstrap-icons" !important;
+  content: "\f5d5" !important;
+  font-size: 1.05rem !important;
+  line-height: 1 !important;
+  width: 1.05rem !important;
+  height: 1.05rem !important;
+}
+
+#quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle.alternate i.bi::before {
+  content: "\f5d6" !important;
+}
+
+body.quarto-light #quarto-header .navbar #quarto-search,
+body.quarto-light #quarto-header .navbar #quarto-search * {
+  color: #141921 !important;
+}
+
+body.quarto-light #quarto-header .navbar .nav-item.compact .nav-link,
+body.quarto-light #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle,
+body.quarto-light #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i,
+body.quarto-light #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i::before {
+  color: #141921 !important;
+}
+
+body.quarto-dark #quarto-header .navbar #quarto-search,
+body.quarto-dark #quarto-header .navbar #quarto-search * {
+  color: #f5f1e8 !important;
+}
+
+body.quarto-dark #quarto-header .navbar .nav-item.compact .nav-link,
+body.quarto-dark #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle,
+body.quarto-dark #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i,
+body.quarto-dark #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle i::before {
+  color: #f5f1e8 !important;
+}
