@@ -4,17 +4,16 @@ date: 2020-01-01
 description: "Long lines at polling places reduce voter confidence in the fairness and efficiency of elections. These effects are strongest among voters who experience delays and among historically marginalized groups."
 categories: ['Election Administration', 'Electoral Politics', 'Survey Research', 'Democratic Accountability', 'Field Research']
 publication_type: "article"
-image: "featured.png"
 tags: ['Election Administration', 'Electoral Behavior', 'Survey Research', 'Democratic Accountability', 'Field Research']
 journal_name: "Political Research Quarterly"
 volume: "73"
 issue: "2"
 pages: "439--453"
-pdf: "/papers/lines.pdf"
+pdf: "../../papers/lines.pdf"
 url: "https://journals.sagepub.com/doi/abs/10.1177/1065912919832374"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-Campus Study](featured.png){.featured-image}
 
 ## Research Question
 
@@ -56,6 +55,6 @@ Election Administration, Electoral Behavior, Survey Research, Democratic Account
 
 ## Links
 
-- [📄 PDF](/papers/lines.pdf)
+- [📄 PDF](../../papers/lines.pdf)
 - [🏛️ Publisher](https://journals.sagepub.com/doi/abs/10.1177/1065912919832374)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Waiting%20to%20Vote%20in%20the%202016%20Presidential%20Election%3A%20Evidence%20from%20a%20Multi-Campus%20Study)

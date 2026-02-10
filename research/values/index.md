@@ -4,17 +4,16 @@ date: 2023-01-01
 description: 'Citizens with stronger commitments to democracy consistently express less support for executive power across multiple measures and contexts. While supporters of incumbent presidents favor expanded executive authority, democratic values independently constrain support for executive overreach, suggesting mass publics can serve as a "guardrail" against democratic erosion.'
 categories: ['Presidential Power', 'Democratic Accountability', 'Comparative Politics', 'Survey Research', 'Normative Theory']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Power', 'Democratic Accountability', 'Comparative Politics', 'Survey Research', 'Normative Theory']
 journal_name: "Presidential Studies Quarterly"
 volume: "53"
 issue: "2"
 pages: "293--312"
-pdf: "/papers/values.pdf"
+pdf: "../../papers/values.pdf"
 url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/psq.12837"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Democratic Values and Support for Executive Power](featured.png){.featured-image}
 
 ## Research Question
 
@@ -56,6 +55,6 @@ Presidential Power, Democratic Accountability, Comparative Politics, Survey Rese
 
 ## Links
 
-- [📄 PDF](/papers/values.pdf)
+- [📄 PDF](../../papers/values.pdf)
 - [🏛️ Publisher](https://onlinelibrary.wiley.com/doi/abs/10.1111/psq.12837)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Democratic%20Values%20and%20Support%20for%20Executive%20Power)

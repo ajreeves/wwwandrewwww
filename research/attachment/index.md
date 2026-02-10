@@ -4,15 +4,14 @@ date: 2024-01-01
 description: "Rural residents report higher levels of neighborhood attachment than urban residents. This variation in place attachment contributes significantly to ideological divides, with contentment predicting conservatism and dissatisfaction predicting liberalism."
 categories: ['Political Geography', 'Geographic Context', 'Public Opinion', 'Polarization']
 publication_type: "article"
-image: "featured.png"
 tags: ['Urban-Rural Divide', 'Electoral Geography', 'Geographic Context', 'Public Opinion', 'Polarization']
 journal_name: "Cities"
 volume: "146"
 pages: "104720"
-pdf: "/papers/attachment.pdf"
+pdf: "../../papers/attachment.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Urban-Rural Divide and Residential Contentment as Antecedents of Political Ideology](featured.png){.featured-image}
 
 ## Research Question
 
@@ -53,5 +52,5 @@ Urban-Rural Divide, Electoral Geography, Geographic Context, Public Opinion, Pol
 
 ## Links
 
-- [📄 PDF](/papers/attachment.pdf)
+- [📄 PDF](../../papers/attachment.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Urban-Rural%20Divide%20and%20Residential%20Contentment%20as%20Antecedents%20of%20Political%20Ideology)

@@ -4,16 +4,15 @@ date: 2022-01-01
 description: "Research on American political institutions and democratic governance."
 categories: ['Presidential Accountability', 'Partisanship', 'Economic Voting', 'Electoral Politics', 'Public Opinion', 'Retrospective Voting']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Accountability', 'Partisanship', 'Economic Voting', 'Electoral Behavior', 'Public Opinion', 'Retrospective Voting']
 journal_name: "American Journal of Political Science"
 volume: "66"
 issue: "2"
 pages: "468--484"
-pdf: "/papers/transition.pdf"
+pdf: "../../papers/transition.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Partisanship, Economic Assessments, and Presidential Accountability](featured.png){.featured-image}
 
 ## Research Areas
 
@@ -35,5 +34,5 @@ Presidential Accountability, Partisanship, Economic Voting, Electoral Behavior, 
 
 ## Links
 
-- [📄 PDF](/papers/transition.pdf)
+- [📄 PDF](../../papers/transition.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Partisanship%2C%20Economic%20Assessments%2C%20and%20Presidential%20Accountability)

@@ -4,16 +4,15 @@ date: 2011-01-01
 description: "Presidents gain electoral support in counties that receive disaster declarations and federal assistance, but only when the response is timely and well-publicized. Voters appear to reward presidents for responsiveness, not just for objective conditions."
 categories: ['Disaster Politics', 'Presidential Accountability', 'Retrospective Voting', 'County-Level Analysis', 'Distributive Politics']
 publication_type: "article"
-image: "featured.png"
 tags: ['Disaster Politics', 'Presidential Accountability', 'Retrospective Voting', 'County-Level Analysis', 'Distributive Politics']
 journal_name: "American Journal of Political Science"
 volume: "55"
 issue: "2"
 pages: "340--355"
-pdf: "/papers/rain.pdf"
+pdf: "../../papers/rain.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Make it Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Disaster Politics, Presidential Accountability, Retrospective Voting, County-Lev
 
 ## Links
 
-- [📄 PDF](/papers/rain.pdf)
+- [📄 PDF](../../papers/rain.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Make%20it%20Rain%3F%20Retrospection%20and%20the%20Attentive%20Electorate%20in%20the%20Context%20of%20Natural%20Disasters)

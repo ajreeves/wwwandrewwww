@@ -4,16 +4,15 @@ date: 2022-01-01
 description: 'Local crime rates influence public opinion in complex ways. Higher violent crime correlates with greater support for punitive measures, but people''s personal experience and political predispositions shape how they interpret crime trends.'
 categories: ['Presidential Accountability', 'Public Opinion', 'Geographic Context', 'Survey Research', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Accountability', 'Public Opinion', 'Geographic Context', 'Survey Research', 'Quantitative Methods']
 journal_name: "Public Opinion Quarterly"
 volume: "86"
 issue: "1"
 pages: "29--50"
-pdf: "/papers/crime.pdf"
+pdf: "../../papers/crime.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Accountability, Public Opinion, Geographic Context, Survey Research
 
 ## Links
 
-- [📄 PDF](/papers/crime.pdf)
+- [📄 PDF](../../papers/crime.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Crime%20and%20Presidential%20Accountability%3A%20A%20Case%20of%20Racially%20Conditioned%20Issue%20Ownership)

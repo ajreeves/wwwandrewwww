@@ -4,13 +4,12 @@ date: 2012-01-01
 description: "Optical scanning machines demonstrate superior accuracy compared to hand-counted paper ballots. The tabulation error rate for optically scanned ballots was approximately 0.56%, compared to 0.87% for hand-counted paper ballots (excluding outliers). This represents roughly a 50% improvement in tabulation accuracy with machine counting."
 categories: ['Election Administration', 'Election Integrity', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.jpg"
 tags: ['Election Administration', 'Election Integrity', 'Voting Technology', 'Quantitative Methods']
 journal_name: "Palgrave Macmillan"
-pdf: "/papers/recounts.pdf"
+pdf: "../../papers/recounts.pdf"
 ---
 
-![](featured.jpg){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Using Recounts to Measure the Accuracy of Vote Tabulations: Evidence from New Hampshire Elections 1946-2002](featured.jpg){.featured-image}
 
 ## Research Question
 
@@ -50,5 +49,5 @@ Election Administration, Election Integrity, Voting Technology, Quantitative Met
 
 ## Links
 
-- [📄 PDF](/papers/recounts.pdf)
+- [📄 PDF](../../papers/recounts.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Using%20Recounts%20to%20Measure%20the%20Accuracy%20of%20Vote%20Tabulations%3A%20Evidence%20from%20New%20Hampshire%20Elections%201946-2002)

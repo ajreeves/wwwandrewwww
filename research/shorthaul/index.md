@@ -4,16 +4,14 @@ date: 2025-01-01
 description: "Short-distance residential moves within metro areas modestly but clearly reinforce partisan alignment. Even when choices are geographically constrained, Democrats and Republicans sort into neighborhoods that better match their party, incrementally deepening local geographic polarization."
 categories: ['Political Geography', 'Migration and Mobility', 'Partisan Sorting', 'Local Political Change', 'Electoral Behavior']
 publication_type: "article"
-image: "featured.png"
 tags: ['Political Geography', 'Migration and Mobility', 'Partisan Sorting', 'Local Political Change', 'Electoral Behavior']
 journal_name: "Urban Affairs Review"
-volume: "XX"
-issue: "X"
-pages: "XXX-XXX"
-pdf: "/papers/shorthaul.pdf"
+volume: "Advance online publication"
+pages: "1--44"
+pdf: "../../papers/shorthaul.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics](featured.png){.featured-image}
 
 ## Research Question
 
@@ -47,8 +45,7 @@ Political Geography, Partisan Sorting, Migration and Mobility, Local Political C
   title = {Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics},
   journal = {Urban Affairs Review},
   year = {2025},
-  volume = {XX},
-  number = {X},
+  note = {Advance online publication},
   pages = {1--44},
   doi = {10.1177/10780874251380677}
 }
@@ -57,5 +54,5 @@ Political Geography, Partisan Sorting, Migration and Mobility, Local Political C
 
 ## Links
 
-- [📄 PDF](/papers/shorthaul.pdf)
+- [📄 PDF](../../papers/shorthaul.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Short-Haul%20Moves%20and%20the%20Political%20Geography%20of%20Partisanship%3A%20Intrametropolitan%20Migration%20as%20a%20Force%20for%20Change%20in%20U.S.%20Politics)

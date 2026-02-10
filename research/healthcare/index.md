@@ -4,16 +4,15 @@ date: 2014-01-01
 description: "Governors receive credit or blame for Medicaid expansion decisions. Voters in states that expanded Medicaid were more likely to support incumbent governors, especially when they perceived personal or community benefits."
 categories: ['Public Policy', 'Electoral Accountability', 'State Politics', 'Quantitative Methods', 'Retrospective Voting']
 publication_type: "article"
-image: "featured.png"
 tags: ['Public Policy', 'Electoral Accountability', 'State Politics', 'Quantitative Methods', 'Retrospective Voting']
 journal_name: "Journal of Health Politics, Policy and Law"
 volume: "39"
 issue: "4"
 pages: "717--749"
-pdf: "/papers/healthcare.pdf"
+pdf: "../../papers/healthcare.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Public Policy, Electoral Accountability, State Politics, Quantitative Methods, R
 
 ## Links
 
-- [📄 PDF](/papers/healthcare.pdf)
+- [📄 PDF](../../papers/healthcare.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Responsive%20Partisanship%3A%20Public%20Support%20for%20the%20Clinton%20and%20Obama%20Health%20Care%20Plans)

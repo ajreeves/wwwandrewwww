@@ -4,16 +4,15 @@ date: 2013-01-01
 description: "Legislators are more likely to support particularistic legislation benefiting the auto industry when their districts contain more auto workers, but this effect diminishes on broader or more ideologically contested legislation."
 categories: ['Legislative Politics', 'Interest Groups', 'Quantitative Methods', 'Distributive Politics', 'Electoral Politics']
 publication_type: "article"
-image: "featured.png"
 tags: ['Legislative Behavior', 'Interest Groups', 'Quantitative Methods', 'Distributive Politics', 'Electoral Behavior']
 journal_name: "Business and Politics"
 volume: "15"
 issue: "2"
 pages: "137--162"
-pdf: "/papers/autos.pdf"
+pdf: "../../papers/autos.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Driving Support: Workers, PACs, and Congressional Support of the Auto Industry](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Legislative Behavior, Interest Groups, Quantitative Methods, Distributive Politi
 
 ## Links
 
-- [📄 PDF](/papers/autos.pdf)
+- [📄 PDF](../../papers/autos.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Driving%20Support%3A%20Workers%2C%20PACs%2C%20and%20Congressional%20Support%20of%20the%20Auto%20Industry)

@@ -3,131 +3,103 @@ title: "Teaching"
 description: ""
 page-layout: full
 ---
-```{=html}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-```
+
 ::: {.simple-layout}
-Courses on American politics, the presidency, and electoral strategy
+::: {.page-intro}
+## <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Courses, Mentorship, and Civic Learning {.page-intro-title}
+Course design and teaching in American politics, democratic citizenship, and electoral strategy.
+:::
 
-::: simple-section
-## Current Courses
-::: content-card
+::: {.teaching-spotlight}
+::: {.teaching-spotlight-media}
+![](../images/andrew-teaching.jpg){.teaching-spotlight-photo alt="Andrew Reeves teaching in the classroom"}
+:::
+
+::: {.teaching-spotlight-copy}
+<span class="teaching-spotlight-kicker">Classroom Practice</span>
+
+Reeves’s teaching emphasizes analytical rigor, close reading of evidence, and practical democratic reasoning. Courses are designed to connect institutional analysis with real-world civic judgment.
+:::
+:::
+
+::: {.section}
+## Teaching Awards {.section-title}
+
+Selected teaching honors at Washington University in St. Louis.
+
+::: {.grid-2}
+::: {.card}
+### David Hadas Teaching Award
+
+Recognizes a tenured Arts & Sciences faculty member for exceptional commitment to first-year undergraduate teaching.
+
+[Washington University Arts & Sciences: David Hadas Teaching Award](https://insideartsci.wustl.edu/david-hadas-teaching-award)
+:::
+
+::: {.card}
+### Delores K. Kennedy Award
+
+Recognizes a member of the Washington University community whose commitment to students strengthens the first-year experience.
+
+[Political Science News: Prof. Andrew Reeves wins Delores K. Kennedy Award](https://polisci.wustl.edu/news/prof-andrew-reeves-wins-delores-k-kennedy-award#:~:text=This%20award%20recognizes%20a%20member,in%20Introduction%20to%20American%20Politics.)
+:::
+:::
+:::
+
+::: {.section}
+## Courses {.section-title}
+
+Courses on American politics, the presidency, and electoral strategy.
+
+::: {.grid-2}
+::: {.card}
 ### The Practice of Citizenship: Cooperation and Obligations in Democratic Life
-::: course-with-image
-::: course-image
-![The Practice of Citizenship](../images/citizenship.png)
-:::
-::: course-content
+
+![Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852)](../images/citizenship.jpg){fig-alt="Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852)"}
+
 **Undergraduate Course**
-This course examines citizenship as both a practice of democratic life and a solution to cooperation problems. We integrate political theory, American political voices, and empirical political science to ask: What civic capacities sustain democracy, and what obligations do citizens and institutions share in cultivating them? Students will engage with classics from Aristotle to MLK, analyze modern empirical studies on trust, polarization, and civic education, and reflect on their own university’s role in preparing citizens. 
-:::
-:::
+
+This course treats citizenship as both democratic practice and a solution to cooperation problems. Students engage political theory, American political voices, and empirical research to ask which civic capacities sustain democracy and what obligations citizens and institutions share in developing them. Readings span Aristotle to MLK and contemporary work on trust, polarization, and civic education.
+
+[Syllabus](../practice-of-citizenship-syllabus-spring-2026.pdf){.btn .btn-outline target="_blank" rel="noopener noreferrer"}
 :::
 
-::: content-card
+::: {.card}
 ### Introduction to American Politics
-::: course-with-image
-::: course-image
-![Introduction to American Politics](../images/intro.jpg)
-:::
-::: course-content
+
+![Introduction to American Politics course visual](../images/intro.jpg){fig-alt="Introduction to American Politics course visual"}
+
 **Undergraduate Course**
 
-The Biden presidency concludes amidst international turmoil, the fallout from a global pandemic, and increasing economic dissatisfaction among Americans. American institutions are being tested by a polarized political environment, regular mass protests, and are still adjusting from the former and possibly next president, who challenged many political norms. We will explore how we got here and consider the future of American politics.
+This course examines American politics in a period of polarization, institutional strain, and economic dissatisfaction. Students analyze how current conflicts emerged and what they suggest about the future of U.S. governance.
 
-The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches. (Not currently planning to offer.)
+The first half introduces core political science concepts and institutional foundations. Students then study the operation and evolution of the legislative, judicial, and executive branches. This course is offered intermittently.
 
 **Course Introduction Video:**
+
 ```{=html}
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0;">
-  <iframe src="https://www.youtube.com/embed/ZcPzyOfqNKQ" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-          frameborder="0" 
-          allowfullscreen>
-  </iframe>
+<div class="cv-frame" style="margin-top: 1rem;">
+  <iframe title="Introduction to American Politics course video" src="https://www.youtube.com/embed/ZcPzyOfqNKQ" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen></iframe>
 </div>
 ```
-[Syllabus](https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1){.btn .btn-primary target="_blank"}
-:::
-:::
+
+[Syllabus](https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1){.btn .btn-outline target="_blank" rel="noopener noreferrer"}
 :::
 
-::: content-card
+::: {.card}
 ### Business of Elections
-::: course-with-image
-::: course-image
-![Business of Elections](../images/boe.jpg)
-:::
-::: course-content
+
+![Business of Elections course visual](../images/boe.jpg){fig-alt="Business of Elections course visual"}
+
 **Undergraduate Course**
 
-Understanding presidential elections through the prism of business and political science. This course examines electoral strategy, campaign management, voter targeting, and the intersection of politics and business in modern American campaigns.
+This course analyzes presidential elections through political science and business strategy. Topics include campaign management, voter targeting, messaging, and the organizational logic of modern national campaigns.
 
+**Course Coverage**
+
+- [How a Presidential Election Start-up Could Help Us Rebuild Democracy](https://artsci.washu.edu/ampersand/how-presidential-election-start)
+- [New Course Studies the Business of Politics](https://olin.washu.edu/about/news-and-media/news/2021/03/new-course-studies-the-business-of-politics.php)
 :::
 :::
 :::
 :::
-::::
-
-<!-- ALTERNATIVE OPTION 1: Video above the course description -->
-<!-- Replace the content-card section for Introduction to American Politics with this: -->
-
-<!-- 
-::: content-card
-### Introduction to American Politics
-
-```{=html}
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1.5rem 0; border-radius: 4px;">
-  <iframe src="https://www.youtube.com/embed/ZcPzyOfqNKQ" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 4px;" 
-          frameborder="0" 
-          allowfullscreen>
-  </iframe>
-</div>
-```
-
-::: course-with-image
-::: course-image
-![Introduction to American Politics](../images/intro.jpg)
-:::
-::: course-content
-**Undergraduate Course**
-
-The Biden presidency concludes amidst international turmoil, the fallout from a global pandemic, and increasing economic dissatisfaction among Americans. American institutions are being tested by a polarized political environment, regular mass protests, and are still adjusting from the former and possibly next president, who challenged many political norms. We will explore how we got here and consider the future of American politics.
-
-The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches.
-
-[Learn More](teaching/intro/){.btn .btn-primary} [Syllabus](https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1){.btn .btn-outline target="_blank"}
-:::
-:::
-:::
--->
-
-<!-- ALTERNATIVE OPTION 2: Replace the course image with the video -->
-<!--
-::: content-card
-### Introduction to American Politics
-::: course-with-image
-::: course-image
-```{=html}
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 3px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);">
-  <iframe src="https://www.youtube.com/embed/ZcPzyOfqNKQ" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 3px;" 
-          frameborder="0" 
-          allowfullscreen>
-  </iframe>
-</div>
-```
-:::
-::: course-content
-**Undergraduate Course**
-
-The Biden presidency concludes amidst international turmoil, the fallout from a global pandemic, and increasing economic dissatisfaction among Americans. American institutions are being tested by a polarized political environment, regular mass protests, and are still adjusting from the former and possibly next president, who challenged many political norms. We will explore how we got here and consider the future of American politics.
-
-The first part of the class deals with the institutional building blocks of the American political system. After we discuss the principles of political science, we'll discuss the operation and evolution of the legislative, judicial, and executive branches.
-
-[Syllabus](https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1){.btn .btn-outline target="_blank"}
-:::
-:::
-:::
--->

@@ -4,16 +4,15 @@ date: 2014-01-01
 description: "The Electoral College incentivizes campaigns to focus disproportionately on swing states and overlook safe states, leading to unequal representation and resource allocation. The system magnifies the influence of a small number of voters in competitive areas."
 categories: ['Electoral Politics', 'Swing States', 'Democratic Accountability', 'Institutional Design']
 publication_type: "article"
-image: "featured.png"
 tags: ['Campaign Strategy', 'Swing States', 'Presidential Elections', 'Democratic Accountability', 'Institutional Design']
 journal_name: "Boston University Law Review"
 volume: "94"
 issue: "3"
 pages: "741--766"
-pdf: "/papers/electoralcollege.pdf"
+pdf: "../../papers/electoralcollege.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Electoral College and Presidential Particularism](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Campaign Strategy, Swing States, Presidential Elections, Democratic Accountabili
 
 ## Links
 
-- [📄 PDF](/papers/electoralcollege.pdf)
+- [📄 PDF](../../papers/electoralcollege.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Electoral%20College%20and%20Presidential%20Particularism)

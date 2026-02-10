@@ -4,16 +4,15 @@ date: 2020-01-01
 description: "Research on American political institutions and democratic governance."
 categories: ['Economic Voting', 'Geographic Context', 'Electoral Politics', 'County-Level Analysis', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Economic Voting', 'Geographic Context', 'Presidential Elections', 'County-Level Analysis', 'Quantitative Methods']
 journal_name: "Political Behavior"
 volume: "42"
 issue: "2"
 pages: "443--463"
-pdf: "/papers/unemployment.pdf"
+pdf: "../../papers/unemployment.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Local Unemployment and Voting for President: Uncovering Causal Mechanisms](featured.png){.featured-image}
 
 ## Research Areas
 
@@ -35,5 +34,5 @@ Economic Voting, Geographic Context, Presidential Elections, County-Level Analys
 
 ## Links
 
-- [📄 PDF](/papers/unemployment.pdf)
+- [📄 PDF](../../papers/unemployment.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Local%20Unemployment%20and%20Voting%20for%20President%3A%20Uncovering%20Causal%20Mechanisms)

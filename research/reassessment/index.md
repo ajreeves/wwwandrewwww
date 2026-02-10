@@ -4,16 +4,15 @@ date: 2004-01-01
 description: "Research on American political institutions and democratic governance."
 categories: ['Electoral Politics', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Campaign Strategy', 'Presidential Elections', 'Electoral Behavior', 'Quantitative Methods']
 journal_name: "Journal of Politics"
 volume: "66"
 issue: "2"
 pages: "616--620"
-pdf: "/papers/reassessment.pdf"
+pdf: "../../papers/reassessment.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for A Reassessment of `The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996''](featured.png){.featured-image}
 
 ## Research Areas
 
@@ -35,5 +34,5 @@ Campaign Strategy, Presidential Elections, Electoral Behavior, Quantitative Meth
 
 ## Links
 
-- [📄 PDF](/papers/reassessment.pdf)
+- [📄 PDF](../../papers/reassessment.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=A%20Reassessment%20of%20%60The%20Methods%20behind%20the%20Madness%3A%20Presidential%20Electoral%20College%20Strategies%2C%201988%E2%80%931996%27)

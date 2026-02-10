@@ -10,10 +10,10 @@ journal_name: "Presidential Studies Quarterly"
 volume: "45"
 issue: "4"
 pages: "742--759"
-pdf: "/papers/prespower.pdf"
+pdf: "../../papers/prespower.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Public Opinion toward Presidential Power](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +55,5 @@ Presidential Power, Public Opinion, Institutional Constraints, Democratic Accoun
 
 ## Links
 
-- [📄 PDF](/papers/prespower.pdf)
+- [📄 PDF](../../papers/prespower.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Public%20Opinion%20toward%20Presidential%20Power)

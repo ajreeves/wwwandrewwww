@@ -4,16 +4,15 @@ date: 2022-01-01
 description: "Executives who claim responsibility during a crisis are viewed more favorably than those who deflect blame. Blame claiming boosts perceptions of leadership and honesty, even when the crisis is negative."
 categories: ['Crisis Management', 'Political Communication', 'Research Methods', 'Presidential Accountability', 'Public Opinion']
 publication_type: "article"
-image: "featured.png"
 tags: ['Crisis Management', 'Political Communication', 'Survey Experiments', 'Presidential Accountability', 'Public Opinion']
 journal_name: "Journal of Public Policy"
 volume: "42"
 issue: "1"
 pages: "63--91"
-pdf: "/papers/blameclaim.pdf"
+pdf: "../../papers/blameclaim.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Pass the Buck or the Buck Stops Here? The Public Costs of Claiming and Deflecting Blame in Managing Crises](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Crisis Management, Political Communication, Survey Experiments, Presidential Acc
 
 ## Links
 
-- [📄 PDF](/papers/blameclaim.pdf)
+- [📄 PDF](../../papers/blameclaim.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Pass%20the%20Buck%20or%20the%20Buck%20Stops%20Here%3F%20The%20Public%20Costs%20of%20Claiming%20and%20Deflecting%20Blame%20in%20Managing%20Crises)

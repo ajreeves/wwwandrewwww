@@ -4,16 +4,15 @@ date: 2022-01-01
 description: "Presidents frequently receive little or no electoral benefit from policy successes, especially when those policies are complex or lack visibility. Voters often fail to connect improved outcomes with presidential action."
 categories: ['Presidential Power', 'Legislative Politics', 'Democratic Accountability', 'Institutional Constraints', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Power', 'Legislative Behavior', 'Democratic Accountability', 'Institutional Constraints', 'Quantitative Methods']
 journal_name: "Legislative Studies Quarterly"
 volume: "47"
 issue: "2"
 pages: "427--457"
-pdf: "/papers/nothing.pdf"
+pdf: "../../papers/nothing.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Power, Legislative Behavior, Democratic Accountability, Institution
 
 ## Links
 
-- [📄 PDF](/papers/nothing.pdf)
+- [📄 PDF](../../papers/nothing.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Unilateral%20Inaction%3A%20Congressional%20Gridlock%2C%20Interbranch%20Conflict%2C%20and%20Public%20Evaluations%20of%20Executive%20Power)

@@ -4,16 +4,13 @@ date: 2025-01-01
 description: "Elected municipal clerks are more responsive to constituents and more oriented toward public service than appointed ones. However, selection method has limited impact on ideological or policy preferences."
 categories: ['Local Government', 'Electoral Accountability', 'Institutional Design', 'Democratic Accountability', 'Survey Research']
 publication_type: "article"
-image: "featured.png"
 tags: ['Local Government', 'Electoral Accountability', 'Institutional Design', 'Democratic Accountability', 'Survey Research']
 journal_name: "Political Research Quarterly"
-volume: "XX"
-issue: "X"
-pages: "XXX-XXX"
-pdf: "/papers/clerks.pdf"
+volume: "Advance online publication"
+pdf: "../../papers/clerks.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Elections and Representation in American Municipal Administration: Elite Survey Evidence from Five New England States](featured.png){.featured-image}
 
 ## Research Question
 
@@ -46,14 +43,12 @@ Local Government, Electoral Accountability, Institutional Design, Democratic Acc
   author = {Marsh, Wayde Z. C. and Olson, Michael P. and Reeves, Andrew and Jordan Duffin Wong},
   title = {Elections and Representation in American Municipal Administration: Elite Survey Evidence from Five New England States},
   journal = {Political Research Quarterly},
-  volume = {XX},
-  number = {X},
-  pages = {XXX-XXX},
+  note = {Advance online publication},
   year = {2025},
 }
 ```
 
 ## Links
 
-- [📄 PDF](/papers/clerks.pdf)
+- [📄 PDF](../../papers/clerks.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Elections%20and%20Representation%20in%20American%20Municipal%20Administration%3A%20Elite%20Survey%20Evidence%20from%20Five%20New%20England%20States)

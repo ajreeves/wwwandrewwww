@@ -10,6 +10,18 @@ page-layout: full
 Recent Weidenbaum Center recordings and public talks connecting scholarship to policy and civic debate.
 :::
 
+::: {.teaching-spotlight}
+::: {.teaching-spotlight-media}
+![](../images/andrew-fed.jpg){.teaching-spotlight-photo alt="Andrew Reeves speaking at a Weidenbaum Center Federal Reserve event"}
+:::
+
+::: {.teaching-spotlight-copy}
+<span class="teaching-spotlight-kicker">Featured Event</span>
+
+Andrew Reeves introduces *The Past, Present, and Future of the Federal Reserve*, a Weidenbaum Center event featuring Alberto Musalem, James Bullard, and Thomas Melzer, moderated by Karen Branding (September 29, 2025).
+:::
+:::
+
 ::: {.section}
 ## Weidenbaum Center Events I Host {.section-title}
 
@@ -29,7 +41,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Governing Past Gridlock](https://www.youtube.com/watch?v=-xeyS7nilpU)
 
-**Governing Past Gridlock: Why Fiscal Responsibility Still Matters.** Former U.S. Representative Carolyn Bourdeaux discusses fiscal governance, political trust, and strategies for long-term national stability. Cosponsored by Washington University's Olin Business School.
+**Governing Past Gridlock: Why Fiscal Responsibility Still Matters.** This event examines fiscal governance, political trust, and strategies for long-term national stability. Featured speaker: former U.S. Representative Carolyn Bourdeaux; cosponsored by Washington University’s Olin Business School.
 :::
 
 ::: {.card}
@@ -41,7 +53,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Federal Reserve Conversation](https://www.youtube.com/watch?v=TJEnJcU-PRE)
 
-**The Past Present and Future of the Federal Reserve.** A conversation with Alberto Musalem, James Bullard, and Thomas Melzer on the Federal Reserve's evolving role in the U.S. economy, moderated by Karen Branding.
+**The Past, Present, and Future of the Federal Reserve.** This conversation examines the Federal Reserve’s evolving role in the U.S. economy. Speakers: Alberto Musalem, James Bullard, and Thomas Melzer; moderated by Karen Branding.
 :::
 
 ::: {.card}
@@ -53,7 +65,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Future of Civic Education](https://www.youtube.com/watch?v=1T0Oz9wY6P4)
 
-**The Future of Civic Education and Universities.** A panel with Robert Doar, Benjamin Storey, and Andrew Reeves on how universities can strengthen civic learning, viewpoint diversity, and open inquiry.
+**The Future of Civic Education and Universities.** This panel explores how universities can strengthen civic learning, viewpoint diversity, and open inquiry. Panelists: Robert Doar, Benjamin Storey, and Andrew Reeves.
 :::
 
 ::: {.card}
@@ -65,7 +77,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Labor and Regulation Panel](https://www.youtube.com/watch?v=yUeC-xgeLVM)
 
-**Labor, Regulation, and the Changing Economy Panel.** A cross-ideological panel on labor markets, regulation, tariffs, immigration, and near-term policy shifts, moderated by Pauline Kim.
+**Labor, Regulation, and the Changing Economy Panel.** This cross-ideological panel examines labor markets, regulation, tariffs, immigration, and near-term policy shifts. Moderated by Pauline Kim.
 :::
 
 ::: {.card}
@@ -77,7 +89,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Fireside Chat with James Bullard](https://www.youtube.com/watch?v=jAvZp5nLsFs)
 
-**A Fireside Chat with James Bullard.** Andrew Reeves and James Bullard discuss the economy, elections, and higher education leadership.
+**A Fireside Chat with James Bullard.** This conversation covers the economy, elections, and higher education leadership. Speakers: Andrew Reeves and James Bullard.
 :::
 
 ::: {.card}
@@ -89,7 +101,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: U.S. Economy and Monetary Policy Forum](https://www.youtube.com/watch?v=qpFScg4RRyY)
 
-**April 2024 Forum: The Outlook for the U.S. Economy and Monetary Policy with Adriana D. Kugler.** Federal Reserve Governor Adriana D. Kugler discusses the U.S. outlook and monetary policy, followed by Q&A with Andrew Reeves.
+**April 2024 Forum: The Outlook for the U.S. Economy and Monetary Policy with Adriana D. Kugler.** This forum addresses the U.S. economic outlook and monetary policy. Speaker: Federal Reserve Governor Adriana D. Kugler, followed by Q&A with Andrew Reeves.
 :::
 
 ::: {.card}
@@ -101,7 +113,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Policy Lunch on Executive Power](https://www.youtube.com/watch?v=9uWOQAFgWNc)
 
-**December 2023 Policy Lunch: Andrew Reeves on Concerns over Presidential Executive Power.** Reeves discusses *No Blank Check* and evidence on public skepticism toward presidential executive authority.
+**December 2023 Policy Lunch: Andrew Reeves on Concerns over Presidential Executive Power.** This policy lunch discusses *No Blank Check* and evidence on public skepticism toward presidential executive authority. Featured speaker: Andrew Reeves.
 :::
 
 ::: {.card}
@@ -113,7 +125,7 @@ The Weidenbaum Center convenes scholars, policymakers, students, and public audi
 
 [Watch: Conversation with Lanhee J. Chen](https://www.youtube.com/watch?v=FEn1wxqnSUQ)
 
-**January 2023: Hoover Fellow and Presidential Campaign Advisor: A Conversation with Lanhee J. Chen.** A conversation on partisan dynamics, campaign strategy, and the 2024 election environment.
+**January 2023: Hoover Fellow and Presidential Campaign Advisor: A Conversation with Lanhee J. Chen.** This conversation examines partisan dynamics, campaign strategy, and the 2024 election environment. Featured speaker: Lanhee J. Chen.
 :::
 
 :::

@@ -4,14 +4,13 @@ date: 2015-01-01
 description: "Presidents consistently behave in a particularistic manner, directing federal spending and administrative attention to swing states and core partisan areas. Rather than acting as neutral national leaders, they exploit executive control over the bureaucracy to serve political goals."
 categories: ['Presidential Particularism', 'Distributive Politics', 'Presidential Power', 'Democratic Accountability', 'Quantitative Methods']
 publication_type: "book"
-image: "featured.png"
 tags: ['Presidential Particularism', 'Distributive Politics', 'Presidential Power', 'Democratic Accountability', 'Quantitative Methods']
 journal_name: "Cambridge University Press"
-pdf: "/papers/partpres.pdf"
+pdf: "../../papers/partpres.pdf"
 url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Particularistic President: Executive Branch Politics and Political Inequality](featured.png){.featured-image}
 
 ## Research Question
 
@@ -50,6 +49,6 @@ Presidential Particularism, Distributive Politics, Presidential Power, Democrati
 
 ## Links
 
-- [📄 PDF](/papers/partpres.pdf)
+- [📄 PDF](../../papers/partpres.pdf)
 - [🏛️ Publisher](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Particularistic%20President%3A%20Executive%20Branch%20Politics%20and%20Political%20Inequality)

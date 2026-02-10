@@ -4,13 +4,12 @@ date: 2015-01-01
 description: "Citizens tend to reward incumbents for disaster relief spending and punish them for slow or ineffective responses, regardless of actual preparedness. Disasters also exacerbate inequalities in political attention and resource allocation."
 categories: ['Disaster Politics', 'Electoral Politics', 'Literature Review', 'Democratic Accountability', 'Public Policy']
 publication_type: "article"
-image: "featured.png"
 tags: ['Disaster Politics', 'Electoral Behavior', 'Literature Review', 'Democratic Accountability', 'Public Policy']
 journal_name: 'John Wiley \& Sons, Inc'
-pdf: "/papers/disasters-review.pdf"
+pdf: "../../papers/disasters-review.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Politics of Disaster Relief](featured.png){.featured-image}
 
 ## Research Question
 
@@ -50,5 +49,5 @@ Disaster Politics, Electoral Behavior, Literature Review, Democratic Accountabil
 
 ## Links
 
-- [📄 PDF](/papers/disasters-review.pdf)
+- [📄 PDF](../../papers/disasters-review.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Politics%20of%20Disaster%20Relief)

@@ -1,154 +1,90 @@
 ---
-title: "News"
+title: "Media & Writing"
 description: ""
 page-layout: full
 ---
 
-```{=html}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-```
-
 ::: {.simple-layout}
-Commentary and media coverage on presidential power, disaster politics, and electoral accountability
-
-::: simple-section
-## My Public Writing
-
-::: news-entry
-### Trump treats laws as obstacles, not limits − and the only real check on his rule-breaking can come from political pressure
-
-**[The Conversation](https://theconversation.com/trump-treats-laws-as-obstacles-not-limits-and-the-only-real-check-on-his-rule-breaking-can-come-from-political-pressure-255834)** • May 21, 2025
-
-Legal boundaries are often treated by Trump's administration as optional. The most meaningful check on presidential power will be political—courts rely on the broader political system for enforcement through elected officials, Congress, bureaucrats, and public pressure.
+::: {.page-intro}
+## <i class="fa-solid fa-newspaper" aria-hidden="true"></i> Public Writing and Research Coverage {.page-intro-title}
+Selected commentary and coverage of Andrew Reeves’s work on presidential power, disaster politics, and democratic accountability.
 :::
 
-::: news-entry
-### Biden and Trump will talk big at the debate, but how much could either really do?
-
-**[Los Angeles Times](https://www.latimes.com/opinion/story/2024-06-25/biden-trump-debate-presidential-campaign)** • June 25, 2024
-
-Despite campaign promises, presidents face significant constraints on their ability to deliver policy change. The institutional presidency, partisan gridlock, and federalism all limit executive power in ways voters often don't appreciate.
+::: {.teaching-spotlight}
+::: {.teaching-spotlight-media}
+![](../images/andrew-harvard.JPG){.teaching-spotlight-photo alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"}
 :::
 
-::: news-entry
-### Biden's Supreme Court commission probably won't sway public opinion
+::: {.teaching-spotlight-copy}
+<span class="teaching-spotlight-kicker">Featured Panel</span>
 
-**[The Conversation](https://theconversation.com/bidens-supreme-court-commission-probably-wont-sway-public-opinion-159658)** • June 16, 2021
-
-Presidential commissions rarely change public opinion on contentious issues. The Supreme Court commission faces the challenge that Americans' views on court reform are already deeply entrenched along partisan lines, making persuasion difficult.
-:::
-
-::: news-entry
-### This pandemic is a test for leaders. Voters do the grading
-
-**[Saint Louis Post-Dispatch](https://www.stltoday.com/opinion/columnists/andrew-reeves-this-pandemic-is-a-test-for-leaders-voters-do-the-grading/article_80a024d0-8128-5d4a-809a-122d594e517a.html)** • April 1, 2020
-
-Natural disasters and crises create accountability moments for elected officials. How leaders respond—and how voters perceive that response—can reshape electoral fortunes and political careers.
-:::
-
-::: news-entry
-### Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why
-
-**[Washington Post](https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/)** • October 2, 2017
-
-Electoral incentives shape disaster response. When affected populations can't vote for federal officials, we see predictably different patterns in aid allocation and presidential attention.
-:::
-
-::: news-entry
-### Florida Disaster Aid Can Help Bush
-
-**Los Angeles Times** • October 3, 2004
-
-Research shows that electoral importance of a state plays a large role in determining whether a president declares a disaster. A non-battleground state with three electoral votes is almost 50% less likely to receive a disaster declaration than a battleground state with 20 or more electoral votes.
-:::
-
-::: news-entry
-### Plucking Votes From Disasters
-
-**Los Angeles Times** • May 12, 2004
-
-A battleground state with 20 electoral votes receives about 50% more disaster declarations than a state with three electoral votes that is not considered crucial for victory, even after accounting for need. Electoral motivations have dramatic effects on disaster policy.
+Andrew Reeves moderates the Election Analyst Panel at Political Analytics 2025 at Harvard University, featuring Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley.
 :::
 :::
 
-::: simple-section
-## Research in the Media
+::: {.section}
+## Recent Commentary {.section-title}
 
-Research on presidential power, disaster politics, and electoral accountability has been featured in major media outlets and policy discussions.
+Essays and op-eds on presidential power, disaster politics, and electoral accountability.
 
-::: media-grid
-::: media-item
-**[Swing-State Politics Is Rotting Our Brains and Harming Democracy](https://slate.com/news-and-politics/2024/10/us-presidential-election-swing-state-politics-harming-democracy.html)**
-
-*Slate* • October 2024
-:::
-
-::: media-item
-**[Trump seeks to boost presidential bid in Hurricane Helene's wake, analysts say](https://www.reuters.com/world/us/wake-hurricane-trump-seeks-boost-his-presidential-bid-2024-10-01/)**
-
-*Reuters* • October 2024
-:::
-
-::: media-item
-**[How local and national leaders are tested by major natural disasters](https://www.npr.org/2022/10/01/1126239235/politics-natural-disasters-desantis-hurricane-ian)**
-
-*NPR* • October 2022
-:::
-
-::: media-item
-**[Biden Surveys Hurricane Damage in Florida Amid Tension With Governor](https://www.voanews.com/a/biden-to-survey-hurricane-ian-damage-in-florida/6776635.html)**
-
-*Voice of America* • October 2022
-:::
-
-::: media-item
-**[Devastating Tornadoes Give Biden One Last Chance to Bridge Red-Blue Rift](https://www.thedailybeast.com/devastating-tornadoes-give-biden-one-last-chance-to-bridge-red-blue-rift)**
-
-*The Daily Beast* • December 2021
-:::
-
-::: media-item
-**[Texas's Disaster Is Over. The Fallout Is Just Beginning](https://www.theatlantic.com/politics/archive/2021/02/what-texas-energy-crisis-means-democrats/618127/)**
-
-*The Atlantic* • February 2021
-:::
-
-::: media-item
-**[If Trump took responsibility for coronavirus missteps, it might actually help him](https://www.washingtonpost.com/politics/2020/03/26/if-trump-took-responsibility-coronavirus-missteps-it-might-actually-help-him/)**
-
-*Washington Post* • March 2020
-:::
-
-::: media-item
-**[The Economy is Collapsing. So Are Trump's Reelection Chances](https://www.theatlantic.com/ideas/archive/2020/04/most-important-number-trumps-re-election-chances/609376/)**
-
-*The Atlantic* • April 2020
-:::
-
-::: media-item
-**[Counties that voted for the president get more in disaster relief](https://www.economist.com/news/united-states/21730430-federal-aid-sent-puerto-rico-fits-longstanding-pattern-counties-voted)**
-
-*The Economist* • October 2017
-:::
-
-::: media-item
-**[Disaster Politics Can Get In The Way Of Disaster Preparedness](https://fivethirtyeight.com/features/disaster-politics-can-get-in-the-way-of-disaster-preparedness/)**
-
-*FiveThirtyEight* • August 2017
-:::
-
-::: media-item
-**[Do presidents really reward the states that voted them into office?](http://www.washingtonpost.com/blogs/wonkblog/wp/2013/08/29/do-presidents-really-reward-the-states-that-voted-them-into-office/)**
-
-*Washington Post* • August 2013
-:::
-
-::: media-item
-**[How Hurricane Sandy Could Matter on Election Day](https://goodauthority.org/news/how-hurricane-sandy-could-matter-on-election-day/)**
-
-*The Monkey Cage* • October 2012
-:::
+::: {.news-timeline}
+- **[Trump treats laws as obstacles, not limits − and the only real check on his rule-breaking can come from political pressure](https://theconversation.com/trump-treats-laws-as-obstacles-not-limits-and-the-only-real-check-on-his-rule-breaking-can-come-from-political-pressure-255834)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=theconversation.com&sz=64" alt="The Conversation logo">The Conversation • May 21, 2025</div>
+- **[Biden and Trump will talk big at the debate, but how much could either really do?](https://www.latimes.com/opinion/story/2024-06-25/biden-trump-debate-presidential-campaign)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=latimes.com&sz=64" alt="Los Angeles Times logo">Los Angeles Times • June 25, 2024</div>
+- **[Biden's Supreme Court commission probably won't sway public opinion](https://theconversation.com/bidens-supreme-court-commission-probably-wont-sway-public-opinion-159658)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=theconversation.com&sz=64" alt="The Conversation logo">The Conversation • June 16, 2021</div>
+- **[This pandemic is a test for leaders. Voters do the grading](https://www.stltoday.com/opinion/columnists/andrew-reeves-this-pandemic-is-a-test-for-leaders-voters-do-the-grading/article_80a024d0-8128-5d4a-809a-122d594e517a.html)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=stltoday.com&sz=64" alt="Saint Louis Post-Dispatch logo">Saint Louis Post-Dispatch • April 1, 2020</div>
+- **[If Trump took responsibility for coronavirus missteps, it might actually help him](https://www.washingtonpost.com/politics/2020/03/26/if-trump-took-responsibility-coronavirus-missteps-it-might-actually-help-him/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=64" alt="Washington Post logo">Washington Post • March 2020</div>
+- **[Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why](https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=64" alt="Washington Post logo">Washington Post • October 2, 2017</div>
+- **[Florida Disaster Aid Can Help Bush](../papers/disasters-latimes1.pdf)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=latimes.com&sz=64" alt="Los Angeles Times logo">Los Angeles Times • October 3, 2004</div>
+- **[Plucking Votes From Disasters](../papers/disasters-latimes2.pdf)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=latimes.com&sz=64" alt="Los Angeles Times logo">Los Angeles Times • May 12, 2004</div>
 :::
 :::
 
-::::
+::: {.section}
+## Selected Research in the Media {.section-title}
+
+::: {.news-timeline}
+- **[Swing-State Politics Is Rotting Our Brains and Harming Democracy](https://slate.com/news-and-politics/2024/10/us-presidential-election-swing-state-politics-harming-democracy.html)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=slate.com&sz=64" alt="Slate logo">Slate • October 2024</div>
+- **[Trump seeks to boost presidential bid in Hurricane Helene's wake, analysts say](https://www.reuters.com/world/us/wake-hurricane-trump-seeks-boost-his-presidential-bid-2024-10-01/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=reuters.com&sz=64" alt="Reuters logo">Reuters • October 2024</div>
+- **[Columbia's political-social climate heavily influenced by University of Missouri](https://www.columbiatribune.com/story/news/politics/2024/02/18/columbia-political-social-climate-heavily-influenced-university-of-missouri/72588606007/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=columbiatribune.com&sz=64" alt="Columbia Tribune logo">Columbia Tribune • February 18, 2024</div>
+- **[Checking the American Presidency](https://lawliberty.org/book-review/checking-the-american-presidency/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=lawliberty.org&sz=64" alt="Law & Liberty logo">Law & Liberty • January 24, 2023</div>
+- **[Perception matters: How fear about crime impacts presidential approval](https://source.washu.edu/2022/04/perception-matters-how-fear-about-crime-impacts-presidential-approval/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=source.washu.edu&sz=64" alt="WashU Source logo">WashU Source • April 2022</div>
+- **[How local and national leaders are tested by major natural disasters](https://www.npr.org/2022/10/01/1126239235/politics-natural-disasters-desantis-hurricane-ian)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=npr.org&sz=64" alt="NPR logo">NPR • October 2022</div>
+- **[Biden Surveys Hurricane Damage in Florida Amid Tension With Governor](https://www.voanews.com/a/biden-to-survey-hurricane-ian-damage-in-florida/6776635.html)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=voanews.com&sz=64" alt="Voice of America logo">Voice of America • October 2022</div>
+- **[Devastating Tornadoes Give Biden One Last Chance to Bridge Red-Blue Rift](https://www.thedailybeast.com/devastating-tornadoes-give-biden-one-last-chance-to-bridge-red-blue-rift)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=thedailybeast.com&sz=64" alt="The Daily Beast logo">The Daily Beast • December 2021</div>
+- **[Partisanship, the economy, and presidential accountability](https://source.washu.edu/2021/10/partisanship-the-economy-and-presidential-accountability/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=source.washu.edu&sz=64" alt="WashU Source logo">WashU Source • October 2021</div>
+- **[Texas's Disaster Is Over. The Fallout Is Just Beginning](https://www.theatlantic.com/politics/archive/2021/02/what-texas-energy-crisis-means-democrats/618127/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=theatlantic.com&sz=64" alt="The Atlantic logo">The Atlantic • February 2021</div>
+- **[The Economy is Collapsing. So Are Trump's Reelection Chances](https://www.theatlantic.com/ideas/archive/2020/04/most-important-number-trumps-re-election-chances/609376/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=theatlantic.com&sz=64" alt="The Atlantic logo">The Atlantic • April 2020</div>
+- **[The divide between us: Urban-rural political differences rooted in geography](https://source.washu.edu/2020/02/the-divide-between-us-urban-rural-political-differences-rooted-in-geography/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=source.washu.edu&sz=64" alt="WashU Source logo">WashU Source • February 2020</div>
+- **[Counties that voted for the president get more in disaster relief](https://www.economist.com/news/united-states/21730430-federal-aid-sent-puerto-rico-fits-longstanding-pattern-counties-voted)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=economist.com&sz=64" alt="The Economist logo">The Economist • October 2017</div>
+- **[Disaster Politics Can Get In The Way Of Disaster Preparedness](https://fivethirtyeight.com/features/disaster-politics-can-get-in-the-way-of-disaster-preparedness/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=fivethirtyeight.com&sz=64" alt="FiveThirtyEight logo">FiveThirtyEight • August 2017</div>
+- **[Good to Know: What is sociotropic voting in politics?](https://goodauthority.org/news/good-to-know-what-is-sociotropic-voting-politics/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=goodauthority.org&sz=64" alt="Good Authority logo">Good Authority</div>
+- **[Do presidents really reward the states that voted them into office?](https://www.washingtonpost.com/blogs/wonkblog/wp/2013/08/29/do-presidents-really-reward-the-states-that-voted-them-into-office/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=64" alt="Washington Post logo">Washington Post • August 2013</div>
+- **[How Hurricane Sandy Could Matter on Election Day](https://goodauthority.org/news/how-hurricane-sandy-could-matter-on-election-day/)**
+  <div class="meta"><img class="outlet-logo" src="https://www.google.com/s2/favicons?domain=goodauthority.org&sz=64" alt="The Monkey Cage logo">The Monkey Cage • October 2012</div>
+:::
+:::
+:::

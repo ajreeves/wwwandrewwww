@@ -4,16 +4,15 @@ date: 2014-01-01
 description: "People are more supportive of disaster aid when it is framed as universal and not targeted toward specific groups. This reflects a general preference for broad-based government programs over particularistic ones."
 categories: ['Legislative Politics', 'Electoral Politics', 'Research Methods', 'Public Opinion', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Legislative Behavior', 'Electoral Behavior', 'Survey Experiments', 'Public Opinion', 'Quantitative Methods']
 journal_name: "Legislative Studies Quarterly"
 volume: "49"
 issue: "4"
 pages: "467--502"
-pdf: "/papers/leap.pdf"
+pdf: "../../papers/leap.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Legislative Behavior, Electoral Behavior, Survey Experiments, Public Opinion, Qu
 
 ## Links
 
-- [📄 PDF](/papers/leap.pdf)
+- [📄 PDF](../../papers/leap.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Taking%20the%20Leap%3A%20Voting%2C%20Rhetoric%2C%20and%20the%20Determinants%20of%20Electoral%20Reform)

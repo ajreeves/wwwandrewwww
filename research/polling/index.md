@@ -4,16 +4,15 @@ date: 2018-01-01
 description: "Research on American political institutions and democratic governance."
 categories: ['Election Administration', 'Field Research', 'Pedagogy', 'Civic Engagement', 'Research Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Election Administration', 'Field Research', 'Pedagogy', 'Civic Engagement', 'Research Methods']
 journal_name: 'PS: Political Science \& Politics'
 volume: "51"
 issue: "4"
 pages: "831--837"
-pdf: "/papers/polling.pdf"
+pdf: "../../papers/polling.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Pedagogical Value of Polling Place Observation By Students](featured.png){.featured-image}
 
 ## Research Areas
 
@@ -35,5 +34,5 @@ Election Administration, Field Research, Pedagogy, Civic Engagement, Research Me
 
 ## Links
 
-- [📄 PDF](/papers/polling.pdf)
+- [📄 PDF](../../papers/polling.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Pedagogical%20Value%20of%20Polling%20Place%20Observation%20By%20Students)

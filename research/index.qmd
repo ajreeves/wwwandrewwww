@@ -16,8 +16,160 @@ listing:
 ---
 
 ::: {.simple-layout}
-Research on American political institutions and democratic governance. My work examines how institutional design shapes political behavior and policy outcomes.
+::: {.research-lab}
+::: {.research-hero}
+::: {.research-title}
+## <i class="fa-solid fa-flask" aria-hidden="true"></i> Institutions, Incentives, and Democratic Accountability
+:::
 
+Reeves’s research examines how executive power and public policy are experienced on the ground. Across projects, he links constitutional design to administrative behavior, geographic targeting, and voter evaluations of government performance.
+
+::: {.research-metrics}
+- Presidential power
+- Policy delivery
+- Political geography
+:::
+:::
+
+::: {.research-pillars}
+::: {.research-pillar}
+::: {.pillar-tag}
+Executive Authority
+:::
+### Unilateral Action and Constraint
+
+How emergency powers, institutional checks, and public opinion define the practical limits of presidential action.
+:::
+
+::: {.research-pillar}
+::: {.pillar-tag}
+Geographic Distribution
+:::
+### Place and Unequal Policy Reach
+
+How partisan incentives and administrative capacity shape where federal resources go, and who benefits.
+:::
+
+::: {.research-pillar}
+::: {.pillar-tag}
+Democratic Evaluation
+:::
+### Accountability in Practice
+
+How citizens judge government performance when policy design meets local conditions and lived experience.
+:::
+:::
+
+::: {.research-arc}
+### How the Agenda Connects
+**Institutions** structure executive choices, **delivery systems** shape who benefits, and **citizen response** drives political accountability.
+:::
+
+## Publications {.section-title}
+
+::: {.research-publications-note}
+Browse publications by year, topic, and type.
+:::
+
+::: {.research-topic-strip role="group" aria-label="Quick topic filters"}
+<button type="button" class="research-topic-chip is-active" data-topic="" aria-pressed="true">All Topics</button>
+<button type="button" class="research-topic-chip" data-topic="Presidential Power" aria-pressed="false">Presidential Power</button>
+<button type="button" class="research-topic-chip" data-topic="Political Geography" aria-pressed="false">Political Geography</button>
+<button type="button" class="research-topic-chip" data-topic="Democratic Accountability" aria-pressed="false">Democratic Accountability</button>
+<button type="button" class="research-topic-chip" data-topic="Presidential Accountability" aria-pressed="false">Presidential Accountability</button>
+<button type="button" class="research-topic-chip" data-topic="Distributive Politics" aria-pressed="false">Distributive Politics</button>
+<button type="button" class="research-topic-chip" data-topic="Public Opinion" aria-pressed="false">Public Opinion</button>
+<button type="button" class="research-topic-chip" data-topic="Disaster Politics" aria-pressed="false">Disaster Politics</button>
+:::
+
+<p class="research-topic-state" data-topic-state>Showing all topics.</p>
+
+::: {.research-view-controls role="group" aria-label="Publication view options"}
+<button type="button" class="research-view-btn is-active" data-view="editorial" aria-pressed="true">Editorial</button>
+<button type="button" class="research-view-btn" data-view="compact" aria-pressed="false">Compact</button>
+<button type="button" class="research-view-btn" data-view="grid" aria-pressed="false">Grid</button>
+:::
+
+::: {.research-list-shell}
 ::: {#listing}
 :::
 :::
+:::
+:::
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const listing = document.querySelector("#listing-listing");
+  const buttons = document.querySelectorAll(".research-view-btn");
+  if (!listing || !buttons.length) return;
+
+  const key = "research-list-view";
+  const allowed = new Set(["editorial", "compact", "grid"]);
+
+  function applyView(view) {
+    const chosen = allowed.has(view) ? view : "editorial";
+    listing.classList.remove("view-editorial", "view-compact", "view-grid");
+    listing.classList.add("view-" + chosen);
+
+    buttons.forEach((btn) => {
+      const active = btn.dataset.view === chosen;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    try {
+      localStorage.setItem(key, chosen);
+    } catch (_) {}
+  }
+
+  let initial = "editorial";
+  try {
+    const saved = localStorage.getItem(key);
+    if (allowed.has(saved)) initial = saved;
+  } catch (_) {}
+
+  applyView(initial);
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => applyView(btn.dataset.view));
+  });
+
+  const topicButtons = Array.from(document.querySelectorAll(".research-topic-chip"));
+  const topicState = document.querySelector("[data-topic-state]");
+
+  function readTopicFromHash() {
+    const raw = window.location.hash ? window.location.hash.slice(1) : "";
+    const params = new URLSearchParams(raw);
+    return params.get("category") || "";
+  }
+
+  function syncTopicChips(topic) {
+    topicButtons.forEach((btn) => {
+      const active = (btn.dataset.topic || "") === topic;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    if (topicState) {
+      topicState.textContent = topic ? `Filtering by topic: ${topic}.` : "Showing all topics.";
+    }
+  }
+
+  function applyTopic(topic) {
+    if (typeof window.quartoListingCategory !== "function") return;
+    const encoded = btoa(encodeURIComponent(topic || ""));
+    window.quartoListingCategory(encoded);
+    syncTopicChips(topic || "");
+  }
+
+  topicButtons.forEach((btn) => {
+    btn.addEventListener("click", () => applyTopic(btn.dataset.topic || ""));
+  });
+
+  syncTopicChips(readTopicFromHash());
+  window.addEventListener("hashchange", () => {
+    syncTopicChips(readTopicFromHash());
+  });
+});
+</script>
+```

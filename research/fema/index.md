@@ -4,16 +4,15 @@ date: 2011-01-01
 description: 'Presidents are significantly more likely to issue disaster declarations to competitive states. These actions bring electoral rewards: a single declaration can yield more than a one-point gain in statewide vote share.'
 categories: ['Disaster Politics', 'Presidential Power', 'Swing States', 'Presidential Accountability', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Disaster Politics', 'Presidential Power', 'Swing States', 'Presidential Accountability', 'Quantitative Methods']
 journal_name: "Journal of Politics"
 volume: "73"
 issue: "4"
 pages: "1142--1151"
-pdf: "/papers/fema.pdf"
+pdf: "../../papers/fema.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Disaster Politics, Presidential Power, Swing States, Presidential Accountability
 
 ## Links
 
-- [📄 PDF](/papers/fema.pdf)
+- [📄 PDF](../../papers/fema.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Political%20Disaster%3A%20Unilateral%20Powers%2C%20Electoral%20Incentives%2C%20and%20Presidential%20Disaster%20Declarations)

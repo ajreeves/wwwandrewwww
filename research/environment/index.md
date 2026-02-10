@@ -4,16 +4,13 @@ date: 2025-01-01
 description: "People who live in coastal communities vulnerable to sea-level rise are more likely to support climate mitigation policies, particularly if they are deeply rooted in their communities. The effect is not strongest among those with the most to lose financially, but among those most tied to place."
 categories: ['Public Policy', 'Public Opinion', 'Geographic Context', 'Electoral Politics', 'Survey Research']
 publication_type: "article"
-image: "featured.png"
 tags: ['Public Policy', 'Public Opinion', 'Geographic Context', 'Electoral Behavior', 'Survey Research']
 journal_name: "Environmental Politics"
-volume: "XX"
-issue: "X"
-pages: "XXX--XXX"
-pdf: "/papers/environment.pdf"
+volume: "Advance online publication"
+pdf: "../../papers/environment.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Rising Seas, Rising Concerns: How Climate Change Vulnerability Shapes Opinions Towards Policy](featured.png){.featured-image}
 
 ## Research Question
 
@@ -46,14 +43,12 @@ Public Policy, Public Opinion, Geographic Context, Electoral Behavior, Survey Re
   author = {Reny, Tyler and Reeves, Andrew and Christenson, Dino P.},
   title = {Rising Seas, Rising Concerns: How Climate Change Vulnerability Shapes Opinions Towards Policy},
   journal = {Environmental Politics},
-  volume = {XX},
-  number = {X},
-  pages = {XXX--XXX},
+  note = {Advance online publication},
   year = {2025},
 }
 ```
 
 ## Links
 
-- [📄 PDF](/papers/environment.pdf)
+- [📄 PDF](../../papers/environment.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Rising%20Seas%2C%20Rising%20Concerns%3A%20How%20Climate%20Change%20Vulnerability%20Shapes%20Opinions%20Towards%20Policy)

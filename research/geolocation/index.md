@@ -4,13 +4,12 @@ date: 2017-01-01
 description: 'Incorporating geolocation data allows researchers to connect individual survey responses to detailed information about respondents'' communities. This linkage reveals that local context significantly shapes political attitudes, especially on issues like immigration and economic policy.'
 categories: ['Research Methods', 'Survey Research', 'Geographic Context', 'Political Geography', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Research Methods', 'Survey Research', 'Geographic Context', 'Electoral Geography', 'Quantitative Methods']
 journal_name: "Yale University Press"
-pdf: "/papers/geolocation.pdf"
+pdf: "../../papers/geolocation.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Learning from Place in the Era of Geolocation](featured.png){.featured-image}
 
 ## Research Question
 
@@ -50,5 +49,5 @@ Research Methods, Survey Research, Geographic Context, Electoral Geography, Quan
 
 ## Links
 
-- [📄 PDF](/papers/geolocation.pdf)
+- [📄 PDF](../../papers/geolocation.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Learning%20from%20Place%20in%20the%20Era%20of%20Geolocation)

@@ -4,16 +4,15 @@ date: 2018-01-01
 description: "Legal and political constraints significantly reduce the likelihood that presidents will act unilaterally. Presidents are more likely to issue executive orders when courts and Congress are less likely to oppose them, indicating that constraints are binding, not merely symbolic."
 categories: ['Presidential Power', 'Institutional Constraints', 'Separation Of Powers', 'Formal Theory', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Power', 'Institutional Constraints', 'Separation Of Powers', 'Formal Theory', 'Quantitative Methods']
 journal_name: "American Journal of Political Science"
 volume: "62"
 issue: "2"
 pages: "424--440"
-pdf: "/papers/constraints.pdf"
+pdf: "../../papers/constraints.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Public Cost of Unilateral Action](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Power, Institutional Constraints, Separation Of Powers, Formal Theo
 
 ## Links
 
-- [📄 PDF](/papers/constraints.pdf)
+- [📄 PDF](../../papers/constraints.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Public%20Cost%20of%20Unilateral%20Action)

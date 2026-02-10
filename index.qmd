@@ -15,16 +15,18 @@ body-classes: home-page
 <h1 class="hero-title">Andrew Reeves</h1>
 
 ::: {.hero-subtitle}
-Political scientist focused on presidential power, policy delivery, and democratic accountability.
+Political scientist studying presidential power, policy delivery, and democratic accountability in American governance.
 :::
 
-Andrew Reeves is a political scientist whose research explores how presidents and other political institutions shape the design and delivery of public policy. He focuses on how executive decisions are made, how federal resources reach communities, and how citizens evaluate political leadership in moments when policy meets lived experience. His work links democratic accountability to the concrete pathways through which government acts, showing how geography, administrative capacity, and institutional incentives structure political outcomes.
+Andrew Reeves studies how presidential leadership and institutional design shape public policy outcomes.
 
-He is [Director of the Weidenbaum Center on the Economy, Government, and Public Policy](https://wc.washu.edu) at [Washington University in St. Louis](https://washu.edu), where he leads cross-disciplinary initiatives that connect research, policy, and public engagement. His leadership has expanded the Center's research support programs, strengthened its survey infrastructure, and deepened partnerships with faculty and civic institutions across the region.
+His research examines executive decision-making, federal resource allocation, and the conditions under which citizens hold leaders accountable when policy meets lived experience. Across projects, he links democratic accountability to institutional capacity and administrative action.
 
-Reeves also serves as [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu), helping advance the Chancellor's [Ordered Liberty Project](https://orderedliberty.washu.edu), a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is also a [Visiting Fellow at the Hoover Institution](https://www.hoover.org).
+He is [Director of the Weidenbaum Center on the Economy, Government, and Public Policy](https://wc.washu.edu) at [Washington University in St. Louis](https://washu.edu), where he leads cross-disciplinary initiatives linking research, policy design, and public engagement.
 
-His research has been published in leading journals and featured in national media. He is coauthor of [*The Particularistic President*](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3) and [*No Blank Check*](https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007). Across these projects, he combines empirical rigor with a sustained interest in how institutions shape governance and the everyday experience of democracy.
+Reeves also serves as [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu), helping advance the [Ordered Liberty Project](https://orderedliberty.washu.edu), a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is a [Visiting Fellow at the Hoover Institution](https://www.hoover.org).
+
+His research appears in leading journals and national media. He is coauthor of [*The Particularistic President*](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3) and [*No Blank Check*](https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007). Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.
 
 ::: {.hero-actions}
 [Research](research/){.btn .btn-primary}
@@ -34,16 +36,35 @@ His research has been published in leading journals and featured in national med
 :::
 
 ::: {.hero-aside}
-![](images/profile.jpg){.hero-photo}
+![](images/profile.jpg){.hero-photo alt="Portrait of Andrew Reeves"}
 
 ::: {.role-card}
-- [Professor of Political Science](https://polisci.wustl.edu), Washington University in St. Louis
-- [Director, Weidenbaum Center](https://wc.washu.edu)
-- [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu)
-- [Visiting Fellow, Hoover Institution](https://www.hoover.org)
+::: {.appointment-group}
+<p class="appointment-role">Director, Weidenbaum Center on the Economy, Government, and Public Policy</p>
+<p class="appointment-institution">Washington University in St. Louis</p>
+:::
+
+::: {.appointment-group}
+<p class="appointment-role">Professor of Political Science</p>
+<p class="appointment-institution">Washington University in St. Louis</p>
+:::
+
+::: {.appointment-group}
+<p class="appointment-role">Senior Advisor to the Chancellor</p>
+<p class="appointment-institution">Washington University in St. Louis</p>
+:::
+
+::: {.appointment-group}
+<p class="appointment-role">Visiting Fellow</p>
+<p class="appointment-institution">Hoover Institution</p>
 :::
 :::
 :::
+:::
+:::
+
+::: {.pull-quote}
+> Reeves’s research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
 :::
 
 ::: {.section}
@@ -51,34 +72,34 @@ His research has been published in leading journals and featured in national med
 
 ::: {.grid-2 .research-theme-grid}
 ::: {.card .research-theme-card}
-::: {.card-content .research-theme-content}
+::: {.research-theme-content}
 <span class="tag research-theme-tag">Presidential Power</span>
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span><span class="research-theme-heading">Presidential Power and Public Constraint</span></h3>
 
-How presidents lead, especially when they act without Congress, and how public opinion and institutional checks limit executive discretion.
+How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.
 :::
 :::
 
 ::: {.card .research-theme-card}
-::: {.card-content .research-theme-content}
+::: {.research-theme-content}
 <span class="tag research-theme-tag">Geography</span>
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><span class="research-theme-heading">Geography and Political Experience</span></h3>
 
-How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides matter for polarization.
+How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.
 :::
 :::
 
 ::: {.card .research-theme-card}
-::: {.card-content .research-theme-content}
+::: {.research-theme-content}
 <span class="tag research-theme-tag">Accountability</span>
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-regular fa-rectangle-list" aria-hidden="true"></i></span><span class="research-theme-heading">Voter Behavior and Political Accountability</span></h3>
 
-When citizens reward or punish leaders, and why visibility, timing, and policy design shape democratic accountability.
+When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.
 :::
 :::
 
 ::: {.card .research-theme-card}
-::: {.card-content .research-theme-content}
+::: {.research-theme-content}
 <span class="tag research-theme-tag">Federal Policy</span>
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i></span><span class="research-theme-heading">Federal Spending and Resource Allocation</span></h3>
 
@@ -91,18 +112,20 @@ How presidents allocate resources across states and communities, with attention 
 ::: {.section}
 ## Books {.section-title}
 
+Books examining presidential power, distributive politics, and democratic inequality.
+
 :::: {.book-item}
-![](images/no-blank-check-cover.jpg){.book-cover}
+![](images/no-blank-check-cover.jpg){.book-cover alt="Cover of No Blank Check"}
 
 ### No Blank Check: The Origins and Consequences of Public Antipathy toward Presidential Power
 
 [Cambridge University Press, 2022](https://www.amazon.com/Blank-Check-Consequences-Antipathy-Presidential/dp/1316626474/), with [Jon C. Rogowski](https://voices.uchicago.edu/jrogowski/)
 
-*No Blank Check* shows that public support for presidential power is conditional, not automatic, and that citizens apply meaningful constraints to executive action.
+*No Blank Check* shows that public support for presidential power is conditional rather than automatic, and that citizens impose meaningful constraints on executive action.
 ::::
 
 :::: {.book-item}
-![](images/particularistic-president-cover.jpg){.book-cover}
+![](images/particularistic-president-cover.jpg){.book-cover alt="Cover of The Particularistic President"}
 
 ### The Particularistic President: Executive Branch Politics and Political Inequality
 

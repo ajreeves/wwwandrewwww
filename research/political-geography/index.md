@@ -4,13 +4,12 @@ date: 2022-01-01
 description: "Geographic context systematically influences political attitudes and behaviors, beyond individual traits. Local composition, proximity to others, and community characteristics are central to understanding public opinion and electoral outcomes."
 categories: ['Political Geography', 'Public Opinion', 'Electoral Politics', 'Geographic Context', 'Literature Review']
 publication_type: "article"
-image: "featured.jpg"
 tags: ['Electoral Geography', 'Public Opinion', 'Electoral Behavior', 'Geographic Context', 'Literature Review']
 journal_name: "Edward Elgar Publishing"
-pdf: "/papers/political-geography.pdf"
+pdf: "../../papers/political-geography.pdf"
 ---
 
-![](featured.jpg){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Electoral Geography, Political Behavior and Public Opinion](featured.jpg){.featured-image}
 
 ## Research Question
 
@@ -50,5 +49,5 @@ Electoral Geography, Public Opinion, Electoral Behavior, Geographic Context, Lit
 
 ## Links
 
-- [📄 PDF](/papers/political-geography.pdf)
+- [📄 PDF](../../papers/political-geography.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Electoral%20Geography%2C%20Political%20Behavior%20and%20Public%20Opinion)

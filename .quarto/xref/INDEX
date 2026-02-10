@@ -235,5 +235,20 @@
   },
   "research/shorthaul/index.md": {
     "index.html": "89d37001"
+  },
+  "talks/index.qmd": {
+    "index.html": "c5f2e6d8"
+  },
+  "generated/dataverse-latest.qmd": {
+    "dataverse-latest.html": "09e2fde7"
+  },
+  "dataverse/index.qmd": {
+    "index.html": "e499c852"
+  },
+  "dashboard/index.qmd": {
+    "index.html": "118e9503"
+  },
+  "cv.qmd": {
+    "cv.html": "829bd7e3"
   }
 }

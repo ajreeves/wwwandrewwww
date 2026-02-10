@@ -4,16 +4,15 @@ date: 2012-01-01
 description: 'Yes. Voters are more likely to support incumbent presidents (or their party''s nominee) when federal spending in their counties increases. The effect is strongest in battleground states and among liberal and moderate voters, especially when congressional co-partisanship clarifies partisan responsibility.'
 categories: ['Distributive Politics', 'Electoral Politics', 'County-Level Analysis', 'Swing States', 'Retrospective Voting']
 publication_type: "article"
-image: "featured.png"
 tags: ['Distributive Politics', 'Presidential Elections', 'County-Level Analysis', 'Swing States', 'Retrospective Voting']
 journal_name: "American Political Science Review"
 volume: "106"
 issue: "2"
 pages: "348--366"
-pdf: "/papers/spending.pdf"
+pdf: "../../papers/spending.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Influence of Federal Spending on Presidential Elections](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Distributive Politics, Presidential Elections, County-Level Analysis, Swing Stat
 
 ## Links
 
-- [📄 PDF](/papers/spending.pdf)
+- [📄 PDF](../../papers/spending.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Influence%20of%20Federal%20Spending%20on%20Presidential%20Elections)

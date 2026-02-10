@@ -4,16 +4,15 @@ date: 2022-01-01
 description: "The number of reliable bellwether counties has declined significantly in the era of geographic polarization. Even counties with long records of picking winners have recently lost that predictive power."
 categories: ['Political Geography', 'Polarization', 'County-Level Analysis', 'Electoral Politics', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Electoral Geography', 'Polarization', 'County-Level Analysis', 'Presidential Elections', 'Quantitative Methods']
 journal_name: "Presidential Studies Quarterly"
 volume: "52"
 issue: "3"
 pages: "509--534"
-pdf: "/papers/bellwether.pdf"
+pdf: "../../papers/bellwether.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Reconsidering Bellwether Locations in U.S. Presidential Elections](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Electoral Geography, Polarization, County-Level Analysis, Presidential Elections
 
 ## Links
 
-- [📄 PDF](/papers/bellwether.pdf)
+- [📄 PDF](../../papers/bellwether.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Reconsidering%20Bellwether%20Locations%20in%20U.S.%20Presidential%20Elections)

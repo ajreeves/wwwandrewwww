@@ -4,14 +4,13 @@ date: 2022-01-01
 description: 'The American public does not offer presidents a ''blank check'' to act unilaterally. Instead, support for presidential power is conditional–-shaped by partisanship, trust in government, the policy domain, and the political context. Even partisans often resist expansions of power when used in disfavored ways, suggesting the presence of principled constraints in public opinion.'
 categories: ['Presidential Power', 'Public Opinion', 'Democratic Accountability', 'Research Methods', 'Partisanship']
 publication_type: "book"
-image: "featured.png"
 tags: ['Presidential Power', 'Public Opinion', 'Democratic Accountability', 'Survey Experiments', 'Partisanship']
 journal_name: "Cambridge University Press"
-pdf: "/papers/noblankcheck.pdf"
+pdf: "../../papers/noblankcheck.pdf"
 url: "https://www.cambridge.org/us/universitypress/subjects/politics-international-relations/american-government-politics-and-policy/particularistic-president-executive-branch-politics-and-political-inequality?format=PB&isbn=9781107616813"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for No Blank Check: The Origins and Consequences of Public Antipathy towards Presidential Power](featured.png){.featured-image}
 
 ## Research Question
 
@@ -46,6 +45,6 @@ Presidential Power, Public Opinion, Democratic Accountability, Survey Experiment
 
 ## Links
 
-- [📄 PDF](/papers/noblankcheck.pdf)
+- [📄 PDF](../../papers/noblankcheck.pdf)
 - [🏛️ Publisher](https://www.cambridge.org/us/universitypress/subjects/politics-international-relations/american-government-politics-and-policy/particularistic-president-executive-branch-politics-and-political-inequality?format=PB&isbn=9781107616813)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=No%20Blank%20Check%3A%20The%20Origins%20and%20Consequences%20of%20Public%20Antipathy%20towards%20Presidential%20Power)

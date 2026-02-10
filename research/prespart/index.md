@@ -4,16 +4,15 @@ date: 2015-01-01
 description: "Presidents disproportionately direct federal aid to counties with co-partisan governors, particularly during election years. This pattern holds across both Democratic and Republican administrations, suggesting a systematic partisan logic in executive resource allocation."
 categories: ['Presidential Particularism', 'Disaster Politics', 'Partisanship', 'Intergovernmental Relations', 'County-Level Analysis']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Particularism', 'Disaster Politics', 'Partisanship', 'Intergovernmental Relations', 'County-Level Analysis']
 journal_name: "Presidential Studies Quarterly"
 volume: "45"
 issue: "4"
 pages: "679--702"
-pdf: "/papers/prespart.pdf"
+pdf: "../../papers/prespart.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Presidential Particularism in Disaster Declarations and Military Base Closures](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Particularism, Disaster Politics, Partisanship, Intergovernmental R
 
 ## Links
 
-- [📄 PDF](/papers/prespart.pdf)
+- [📄 PDF](../../papers/prespart.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Presidential%20Particularism%20in%20Disaster%20Declarations%20and%20Military%20Base%20Closures)

@@ -4,16 +4,15 @@ date: 2017-01-01
 description: "There is no significant difference in public approval between direct presidential action and delegation to a commission. The public also sees no difference in the perceived effectiveness of policies formed through these two avenues."
 categories: ['Presidential Power', 'Public Opinion', 'Research Methods', 'Institutional Design', 'Democratic Accountability']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Power', 'Public Opinion', 'Survey Experiments', 'Institutional Design', 'Democratic Accountability']
 journal_name: "Presidential Studies Quarterly"
 volume: "47"
 issue: "3"
 pages: "495--516"
-pdf: "/papers/commissions.pdf"
+pdf: "../../papers/commissions.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Attitudes toward Delegation to Presidential Commissions](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Power, Public Opinion, Survey Experiments, Institutional Design, De
 
 ## Links
 
-- [📄 PDF](/papers/commissions.pdf)
+- [📄 PDF](../../papers/commissions.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Attitudes%20toward%20Delegation%20to%20Presidential%20Commissions)

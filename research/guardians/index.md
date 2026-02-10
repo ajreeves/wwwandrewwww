@@ -4,16 +4,15 @@ date: 2025-01-01
 description: "Local election officials often see themselves as nonpartisan"
 categories: ['Election Administration', 'Elite Interviews', 'Democratic Accountability', 'Institutional Design', 'Local Government']
 publication_type: "article"
-image: "featured.png"
 tags: ['Election Administration', 'Elite Interviews', 'Democratic Accountability', 'Institutional Design', 'Local Government']
 journal_name: "Election Law Journal"
 volume: "24"
 issue: "1"
 pages: "62--73"
-pdf: "/papers/guardians.pdf"
+pdf: "../../papers/guardians.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Election Administration, Elite Interviews, Democratic Accountability, Institutio
 
 ## Links
 
-- [📄 PDF](/papers/guardians.pdf)
+- [📄 PDF](../../papers/guardians.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Guardians%20at%20the%20Gates%3A%20Poll%20Worker%20Retention%20in%20a%20Challenging%20Election%20Environment)

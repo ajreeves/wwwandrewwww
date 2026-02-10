@@ -4,16 +4,15 @@ date: 2017-01-01
 description: "Public attitudes toward unilateral presidential power are surprisingly consistent and largely unaffected by contextual framing–-except in explicitly political contexts. Even with different presidents or justifications, support for unilateral action remains low and stable."
 categories: ['Presidential Power', 'Research Methods', 'Public Opinion', 'Institutional Design', 'Democratic Accountability']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Power', 'Survey Experiments', 'Public Opinion', 'Institutional Design', 'Democratic Accountability']
 journal_name: "Presidential Studies Quarterly"
 volume: "47"
 issue: "3"
 pages: "448--470"
-pdf: "/papers/asking.pdf"
+pdf: "../../papers/asking.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for The Contextual Determinants of Support for Unilateral Action](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Power, Survey Experiments, Public Opinion, Institutional Design, De
 
 ## Links
 
-- [📄 PDF](/papers/asking.pdf)
+- [📄 PDF](../../papers/asking.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=The%20Contextual%20Determinants%20of%20Support%20for%20Presidential%20Power)

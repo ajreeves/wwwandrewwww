@@ -4,13 +4,12 @@ date: 2021-01-01
 description: "Presidents are more likely to act unilaterally during national crises, especially when the public demands swift action and institutional constraints are relaxed. The likelihood of unilateral action increases in response to crises in both foreign and domestic policy domains."
 categories: ['Crisis Management', 'Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability']
 publication_type: "article"
-image: "featured.png"
 tags: ['Crisis Management', 'Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability']
 journal_name: "Oxford University Press"
-pdf: "/papers/crisis.pdf"
+pdf: "../../papers/crisis.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Public Opinion and Public Support in Crisis Management](featured.png){.featured-image}
 
 ## Research Question
 
@@ -50,5 +49,5 @@ Crisis Management, Presidential Power, Public Opinion, Institutional Constraints
 
 ## Links
 
-- [📄 PDF](/papers/crisis.pdf)
+- [📄 PDF](../../papers/crisis.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Public%20Opinion%20and%20Public%20Support%20in%20Crisis%20Management)

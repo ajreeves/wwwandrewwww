@@ -237,38 +237,6 @@
                     "given": "Andrew"
                 }
             ],
-            "container-title": "Daily Yonder",
-            "id": "yonder",
-            "issued": {
-                "date-parts": [
-                    [
-                        2020
-                    ]
-                ]
-            },
-            "title": "Distance and density, not just demographics, affect urban-rural vote",
-            "type": "article-journal",
-            "volume": "February 24"
-        },
-        {
-            "author": [
-                {
-                    "family": "Gimpel",
-                    "given": "James G."
-                },
-                {
-                    "family": "Lovin",
-                    "given": "Nathan"
-                },
-                {
-                    "family": "Moy",
-                    "given": "Bryant"
-                },
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
             "container-title": "Political Behavior",
             "id": "urbanrural",
             "issue": "4",
@@ -809,30 +777,6 @@
                     "given": "Andrew"
                 }
             ],
-            "container-title": "The Washington Post’s The Monkey Cage Blog",
-            "id": "covid-mc",
-            "issued": {
-                "date-parts": [
-                    [
-                        2020
-                    ]
-                ]
-            },
-            "title": "If trump took responsibility for coronavirus missteps, it might actually help him",
-            "type": "article-journal",
-            "volume": "March 26"
-        },
-        {
-            "author": [
-                {
-                    "family": "Miller",
-                    "given": "David R."
-                },
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
             "container-title": "Journal of Public Policy",
             "id": "blameclaim",
             "issue": "1",
@@ -1149,49 +1093,6 @@
             "volume": "66"
         },
         {
-            "URL": "https://www.latimes.com/archives/la-xpm-2004-may-12-oe-reeves12-story.html",
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
-            "container-title": "Los Angeles Times",
-            "id": "disasters-latimes2",
-            "issue": "May 12",
-            "issued": {
-                "date-parts": [
-                    [
-                        2004
-                    ]
-                ]
-            },
-            "title": "Plucking votes from disasters: The electoral clout of a state can sway presidents on aid",
-            "title-short": "Plucking votes from disasters",
-            "type": "article-journal"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
-            "container-title": "Los Angeles Times",
-            "id": "disasters-latimes1",
-            "issue": "Oct 3",
-            "issued": {
-                "date-parts": [
-                    [
-                        2004
-                    ]
-                ]
-            },
-            "page": "M5",
-            "title": "Florida Disaster Aid Can Help Bush",
-            "type": "article-journal"
-        },
-        {
             "author": [
                 {
                     "family": "Reeves",
@@ -1237,26 +1138,6 @@
             "title-short": "Political disaster",
             "type": "article-journal",
             "volume": "73"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
-            "container-title": "Reuters",
-            "id": "disasters-reuters",
-            "issue": "Nov 5",
-            "issued": {
-                "date-parts": [
-                    [
-                        2012
-                    ]
-                ]
-            },
-            "title": "How disasters change elections",
-            "type": "article-journal"
         },
         {
             "author": [
@@ -1379,37 +1260,6 @@
                     "given": "Andrew R."
                 }
             ],
-            "id": "popularity",
-            "issued": {
-                "date-parts": [
-                    [
-                        2020
-                    ]
-                ]
-            },
-            "title": "By all means: How issue popularity emboldens presidential power",
-            "title-short": "By all means",
-            "type": "manuscript"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                },
-                {
-                    "family": "Rogowski",
-                    "given": "Jon C."
-                },
-                {
-                    "family": "Seo",
-                    "given": "Min Hee"
-                },
-                {
-                    "family": "Stone",
-                    "given": "Andrew R."
-                }
-            ],
             "container-title": "Presidential Studies Quarterly",
             "id": "asking",
             "issue": "3",
@@ -1424,26 +1274,6 @@
             "title": "The contextual determinants of support for presidential power",
             "type": "article-journal",
             "volume": "47"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
-            "container-title": "The Washington Post’s The Monkey Cage Blog",
-            "id": "puertorico-reuters",
-            "issue": "Oct 2",
-            "issued": {
-                "date-parts": [
-                    [
-                        2017
-                    ]
-                ]
-            },
-            "title": "Donald trump’s lukewarm response to puerto rico was pretty predictable. Here’s why",
-            "type": "article-journal"
         },
         {
             "author": [
@@ -1470,50 +1300,6 @@
             "title": "The public cost of unilateral action",
             "type": "article-journal",
             "volume": "62"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                },
-                {
-                    "family": "Rogowski",
-                    "given": "Jon C."
-                }
-            ],
-            "id": "trump",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "title": "Political regimes and institutional support: How partisanship affects attitudes toward presidential power",
-            "title-short": "Political regimes and institutional support",
-            "type": "manuscript"
-        },
-        {
-            "author": [
-                {
-                    "family": "Reeves",
-                    "given": "Andrew"
-                }
-            ],
-            "container-title": "St. Louis Dispatch",
-            "id": "pandemic-stld",
-            "issue": "April 2",
-            "issued": {
-                "date-parts": [
-                    [
-                        2020
-                    ]
-                ]
-            },
-            "page": "A11",
-            "title": "This pandemic is a test for leaders. Voters do the grading",
-            "type": "article-journal"
         },
         {
             "URL": "https://www.cambridge.org/us/universitypress/subjects/politics-international-relations/american-government-politics-and-policy/particularistic-president-executive-branch-politics-and-political-inequality?format=PB&isbn=9781107616813",

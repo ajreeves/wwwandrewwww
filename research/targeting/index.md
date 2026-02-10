@@ -4,16 +4,15 @@ date: 2015-01-01
 description: "Presidents act particularistically, directing disproportionate federal resources to counties in swing states and to core partisan constituencies, especially during reelection campaigns. They prioritize electoral advantage over national interest."
 categories: ['Presidential Particularism', 'Distributive Politics', 'Swing States', 'County-Level Analysis', 'Quantitative Methods']
 publication_type: "article"
-image: "featured.png"
 tags: ['Presidential Particularism', 'Distributive Politics', 'Swing States', 'County-Level Analysis', 'Quantitative Methods']
 journal_name: "American Political Science Review"
 volume: "109"
 issue: "1"
 pages: "155--171"
-pdf: "/papers/targeting.pdf"
+pdf: "../../papers/targeting.pdf"
 ---
 
-![](featured.png){.featured-image style="max-width: 600px; max-height: 400px; width: auto; height: auto;"}
+![Featured image for Presidential Particularism and Divide-the-Dollar Politics](featured.png){.featured-image}
 
 ## Research Question
 
@@ -55,5 +54,5 @@ Presidential Particularism, Distributive Politics, Swing States, County-Level An
 
 ## Links
 
-- [📄 PDF](/papers/targeting.pdf)
+- [📄 PDF](../../papers/targeting.pdf)
 - [🎓 Google Scholar](https://scholar.google.com/scholar?q=Presidential%20Particularism%20and%20Divide-the-Dollar%20Politics)
