@@ -320,6 +320,20 @@ gtag('config', 'G-73ZBNNCNMP', { 'anonymize_ip': true});
 <div class="hero">
 <div class="hero-grid">
 <div class="hero-copy">
+<div class="mobile-identity">
+<p><img alt="Portrait of Andrew Reeves" class="mobile-identity-photo img-fluid" src="images/profile.jpg"/></p>
+<div class="mobile-identity-meta">
+<p class="mobile-identity-name">
+Andrew Reeves
+</p>
+<p class="mobile-identity-year">
+© 2026
+</p>
+<p class="mobile-identity-field">
+American Politics &amp; Democratic Governance
+</p>
+</div>
+</div>
 <div class="hero-eyebrow">
 <p><i aria-hidden="true" class="fa-solid fa-landmark-flag"></i> American Politics and Democratic Governance</p>
 </div>
@@ -329,14 +343,30 @@ Andrew Reeves
 <div class="hero-subtitle">
 <p>Political scientist studying presidential power, policy delivery, and democratic accountability in American governance.</p>
 </div>
+<div class="hero-actions">
+<p><a class="btn btn-primary" href="research/">Research</a> <a class="btn btn-outline" href="cv/">Curriculum Vitae</a> <a class="btn btn-outline" href="news/">Media &amp; Writing</a></p>
+</div>
+<div class="hero-bio">
 <p>Andrew Reeves studies how presidential leadership and institutional design shape public policy outcomes.</p>
 <p>His research examines executive decision-making, federal resource allocation, and the conditions under which citizens hold leaders accountable when policy meets lived experience. Across projects, he links democratic accountability to institutional capacity and administrative action.</p>
 <p>He is <a href="https://wc.washu.edu">Director of the Weidenbaum Center on the Economy, Government, and Public Policy</a> at <a href="https://washu.edu">Washington University in St. Louis</a>, where he leads cross-disciplinary initiatives linking research, policy design, and public engagement.</p>
 <p>Reeves also serves as <a href="https://andrewdmartin.washu.edu">Senior Advisor to the Chancellor</a>, helping advance the <a href="https://orderedliberty.washu.edu">Ordered Liberty Project</a>, a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is a <a href="https://www.hoover.org">Visiting Fellow at the Hoover Institution</a>.</p>
 <p>His research appears in leading journals and national media. He is coauthor of <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a> and <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>. Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.</p>
-<div class="hero-actions">
-<p><a class="btn btn-primary" href="research/">Research</a> <a class="btn btn-outline" href="cv/">Curriculum Vitae</a> <a class="btn btn-outline" href="news/">Media &amp; Writing</a></p>
 </div>
+<button aria-expanded="false" class="bio-toggle" type="button">Read More</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var bio = document.querySelector(".home-page .hero-bio");
+  var toggle = document.querySelector(".home-page .bio-toggle");
+  if (!bio || !toggle) return;
+
+  toggle.addEventListener("click", function () {
+    var expanded = bio.classList.toggle("is-expanded");
+    toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+    toggle.textContent = expanded ? "Read Less" : "Read More";
+  });
+});
+</script>
 </div>
 <div class="hero-aside">
 <p><img alt="Portrait of Andrew Reeves" class="hero-photo img-fluid" src="images/profile.jpg"/></p>

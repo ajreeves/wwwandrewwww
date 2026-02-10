@@ -8,6 +8,16 @@ body-classes: home-page
 ::: {.hero}
 ::: {.hero-grid}
 ::: {.hero-copy}
+::: {.mobile-identity}
+![](images/profile.jpg){.mobile-identity-photo alt="Portrait of Andrew Reeves"}
+
+::: {.mobile-identity-meta}
+<p class="mobile-identity-name">Andrew Reeves</p>
+<p class="mobile-identity-year">© 2026</p>
+<p class="mobile-identity-field">American Politics & Democratic Governance</p>
+:::
+:::
+
 ::: {.hero-eyebrow}
 <i class="fa-solid fa-landmark-flag" aria-hidden="true"></i> American Politics and Democratic Governance
 :::
@@ -18,6 +28,13 @@ body-classes: home-page
 Political scientist studying presidential power, policy delivery, and democratic accountability in American governance.
 :::
 
+::: {.hero-actions}
+[Research](research/){.btn .btn-primary}
+[Curriculum Vitae](cv/){.btn .btn-outline}
+[Media & Writing](news/){.btn .btn-outline}
+:::
+
+::: {.hero-bio}
 Andrew Reeves studies how presidential leadership and institutional design shape public policy outcomes.
 
 His research examines executive decision-making, federal resource allocation, and the conditions under which citizens hold leaders accountable when policy meets lived experience. Across projects, he links democratic accountability to institutional capacity and administrative action.
@@ -27,12 +44,27 @@ He is [Director of the Weidenbaum Center on the Economy, Government, and Public 
 Reeves also serves as [Senior Advisor to the Chancellor](https://andrewdmartin.washu.edu), helping advance the [Ordered Liberty Project](https://orderedliberty.washu.edu), a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is a [Visiting Fellow at the Hoover Institution](https://www.hoover.org).
 
 His research appears in leading journals and national media. He is coauthor of [*The Particularistic President*](https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3) and [*No Blank Check*](https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007). Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.
-
-::: {.hero-actions}
-[Research](research/){.btn .btn-primary}
-[Curriculum Vitae](cv/){.btn .btn-outline}
-[Media & Writing](news/){.btn .btn-outline}
 :::
+
+```{=html}
+<button class="bio-toggle" type="button" aria-expanded="false">Read More</button>
+```
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var bio = document.querySelector(".home-page .hero-bio");
+  var toggle = document.querySelector(".home-page .bio-toggle");
+  if (!bio || !toggle) return;
+
+  toggle.addEventListener("click", function () {
+    var expanded = bio.classList.toggle("is-expanded");
+    toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+    toggle.textContent = expanded ? "Read Less" : "Read More";
+  });
+});
+</script>
+```
 :::
 
 ::: {.hero-aside}
