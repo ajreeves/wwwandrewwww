@@ -1825,21 +1825,30 @@ body.home-page.quarto-dark .hero-aside .role-card .appointment-institution {
 }
 
 @media (max-width: 420px) {
-  body.home-page .hero-actions > p {
-    display: flex !important;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  body.home-page .hero-actions > p::-webkit-scrollbar {
-    display: none;
+  body.home-page .hero-actions > p {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    overflow: visible !important;
   }
 
   body.home-page .hero-actions .btn,
   body.home-page .hero-actions a.btn {
-    flex: 0 0 auto;
-    min-width: 46%;
+    min-width: 0 !important;
+    white-space: normal !important;
+    word-break: break-word;
+    line-height: 1.08 !important;
+    font-size: 0.64rem !important;
+    padding: 0.46rem 0.12rem !important;
     border-right: 1px solid var(--studio-line) !important;
+  }
+
+  body.home-page .hero-actions .btn:last-child,
+  body.home-page .hero-actions a.btn:last-child {
+    border-right: 0 !important;
   }
 }
