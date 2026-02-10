@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="icons_lineart #ba0c2f red fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .c {
+        fill: #b90c2f;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="c" d="m60.51,26.35h-11.66v-9.06h-10.02V5.9h-13.81v11.38h-10.02v9.06H3.35v30.27h11.66v1.48h33.84v-1.48h11.66v-30.27ZM27.03,7.9h9.81v9.38h-9.81V7.9Zm-12.02,46.72H5.35v-26.27h9.66v26.27Zm14.67,1.48v-7.03h4.5v7.03h-4.5Zm17.17-14.26v14.26h-10.67v-9.03h-8.5v9.03h-10.67V19.29h8.02s13.81,0,13.81,0h0s8.02,0,8.02,0v22.55Zm11.66,12.78h-9.66v-26.27h9.66v26.27Z"/>
+  <path class="c" d="m30.66,32.02h-8.59v7.73h8.59v-7.73Zm-2,5.73h-4.59v-3.73h4.59v3.73Z"/>
+  <path class="c" d="m41.82,32.03h-8.59v7.73h8.59v-7.73Zm-2,5.73h-4.59v-3.73h4.59v3.73Z"/>
+  <path class="c" d="m30.66,22.02h-8.59v7.73h8.59v-7.73Zm-2,5.73h-4.59v-3.73h4.59v3.73Z"/>
+  <path class="c" d="m41.82,22.03h-8.59v7.73h8.59v-7.73Zm-2,5.73h-4.59v-3.73h4.59v3.73Z"/>
+  <rect class="c" x="51.18" y="32.58" width="5" height="2"/>
+  <rect class="c" x="51.18" y="37.68" width="5" height="2"/>
+  <rect class="c" x="51.18" y="42.77" width="5" height="2"/>
+  <rect class="c" x="51.18" y="47.86" width="5" height="2"/>
+  <rect class="c" x="7.68" y="32.23" width="5" height="2"/>
+  <rect class="c" x="7.68" y="37.73" width="5" height="2"/>
+  <rect class="c" x="7.68" y="43.23" width="5" height="2"/>
+  <rect class="c" x="7.68" y="48.73" width="5" height="2"/>
+  <rect class="c" x="18.99" y="43.23" width="26.08" height="2"/>
+  <polygon class="c" points="34.95 11.61 33.01 11.61 33.01 9.68 31.01 9.68 31.01 11.61 29.08 11.61 29.08 13.61 31.01 13.61 31.01 15.54 33.01 15.54 33.01 13.61 34.95 13.61 34.95 11.61"/>
+</svg>
