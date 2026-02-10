@@ -1830,6 +1830,35 @@ body.home-page.quarto-dark .hero-aside .role-card .appointment-institution {
     overflow-x: hidden;
   }
 
+  body.home-page #quarto-header .navbar .navbar-brand-container {
+    max-width: calc(100% - 10.4rem) !important;
+  }
+
+  body.home-page #quarto-header .navbar .navbar-brand {
+    font-size: clamp(0.96rem, 4vw, 1.14rem) !important;
+  }
+
+  body.home-page .mobile-identity {
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+    gap: 0.56rem !important;
+  }
+
+  body.home-page .mobile-identity-photo {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  body.home-page .mobile-identity-name {
+    font-size: clamp(1.46rem, 7.4vw, 1.92rem) !important;
+    line-height: 1.03 !important;
+  }
+
+  body.home-page .mobile-identity-field {
+    font-size: 0.86rem !important;
+    line-height: 1.26 !important;
+    font-weight: 560 !important;
+  }
+
   body.home-page .hero-actions > p {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
