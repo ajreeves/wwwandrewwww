@@ -47,7 +47,7 @@ His research appears in leading journals and national media. He is coauthor of [
 :::
 
 ```{=html}
-<button class="bio-toggle" type="button" aria-expanded="false">Read More</button>
+<button class="bio-toggle" type="button" aria-expanded="false">More About Me</button>
 ```
 
 ```{=html}
@@ -55,13 +55,27 @@ His research appears in leading journals and national media. He is coauthor of [
 document.addEventListener("DOMContentLoaded", function () {
   var bio = document.querySelector(".home-page .hero-bio");
   var toggle = document.querySelector(".home-page .bio-toggle");
+  var quickbar = document.querySelector(".home-page .mobile-quickbar");
   if (!bio || !toggle) return;
 
   toggle.addEventListener("click", function () {
     var expanded = bio.classList.toggle("is-expanded");
     toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
-    toggle.textContent = expanded ? "Read Less" : "Read More";
+    toggle.textContent = expanded ? "Show Less" : "More About Me";
   });
+
+  var updateQuickbar = function () {
+    if (!quickbar) return;
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      quickbar.classList.remove("is-visible");
+      return;
+    }
+    quickbar.classList.toggle("is-visible", window.scrollY > 360);
+  };
+
+  updateQuickbar();
+  window.addEventListener("scroll", updateQuickbar, { passive: true });
+  window.addEventListener("resize", updateQuickbar);
 });
 </script>
 ```
@@ -95,10 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
 :::
 :::
 
-::: {.pull-quote}
-> Reeves’s research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
-:::
-
 ::: {.section}
 ## Research Themes {.section-title}
 
@@ -109,6 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span><span class="research-theme-heading">Presidential Power and Public Constraint</span></h3>
 
 How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.
+
+```{=html}
+<a class="research-card-hit" href="research/" aria-label="Explore research themes"></a>
+```
 :::
 :::
 
@@ -118,6 +132,10 @@ How presidents lead, especially when acting without Congress, and how public opi
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><span class="research-theme-heading">Geography and Political Experience</span></h3>
 
 How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.
+
+```{=html}
+<a class="research-card-hit" href="research/" aria-label="Explore research themes"></a>
+```
 :::
 :::
 
@@ -127,6 +145,10 @@ How political behavior and government experience differ across urban, suburban, 
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-regular fa-rectangle-list" aria-hidden="true"></i></span><span class="research-theme-heading">Voter Behavior and Political Accountability</span></h3>
 
 When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.
+
+```{=html}
+<a class="research-card-hit" href="research/" aria-label="Explore research themes"></a>
+```
 :::
 :::
 
@@ -136,8 +158,16 @@ When citizens reward or punish leaders, and how visibility, timing, and policy d
 <h3 class="research-theme-title"><span class="research-theme-icon"><i class="fa-solid fa-circle-dollar-to-slot" aria-hidden="true"></i></span><span class="research-theme-heading">Federal Spending and Resource Allocation</span></h3>
 
 How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.
+
+```{=html}
+<a class="research-card-hit" href="research/" aria-label="Explore research themes"></a>
+```
 :::
 :::
+:::
+
+::: {.pull-quote}
+> Reeves’s research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
 :::
 :::
 
@@ -166,4 +196,12 @@ Books examining presidential power, distributive politics, and democratic inequa
 This book examines how presidents target distributive benefits to favored constituencies, with implications for representation and democratic equality.
 ::::
 :::
+
+```{=html}
+<nav class="mobile-quickbar" aria-label="Mobile quick navigation">
+  <a href="research/">Research</a>
+  <a href="cv/">CV</a>
+  <a href="news/">Media</a>
+</nav>
+```
 ::::

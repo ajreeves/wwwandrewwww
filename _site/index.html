@@ -353,18 +353,32 @@ Andrew Reeves
 <p>Reeves also serves as <a href="https://andrewdmartin.washu.edu">Senior Advisor to the Chancellor</a>, helping advance the <a href="https://orderedliberty.washu.edu">Ordered Liberty Project</a>, a university-wide effort supporting academic freedom, open inquiry, and collaboration across schools and disciplines. He is a <a href="https://www.hoover.org">Visiting Fellow at the Hoover Institution</a>.</p>
 <p>His research appears in leading journals and national media. He is coauthor of <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a> and <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>. Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.</p>
 </div>
-<button aria-expanded="false" class="bio-toggle" type="button">Read More</button>
+<button aria-expanded="false" class="bio-toggle" type="button">More About Me</button>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var bio = document.querySelector(".home-page .hero-bio");
   var toggle = document.querySelector(".home-page .bio-toggle");
+  var quickbar = document.querySelector(".home-page .mobile-quickbar");
   if (!bio || !toggle) return;
 
   toggle.addEventListener("click", function () {
     var expanded = bio.classList.toggle("is-expanded");
     toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
-    toggle.textContent = expanded ? "Read Less" : "Read More";
+    toggle.textContent = expanded ? "Show Less" : "More About Me";
   });
+
+  var updateQuickbar = function () {
+    if (!quickbar) return;
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      quickbar.classList.remove("is-visible");
+      return;
+    }
+    quickbar.classList.toggle("is-visible", window.scrollY > 360);
+  };
+
+  updateQuickbar();
+  window.addEventListener("scroll", updateQuickbar, { passive: true });
+  window.addEventListener("resize", updateQuickbar);
 });
 </script>
 </div>
@@ -407,11 +421,6 @@ Hoover Institution
 </div>
 </div>
 </div>
-<div class="pull-quote">
-<blockquote class="blockquote">
-<p>Reeves’s research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.</p>
-</blockquote>
-</div>
 <section class="level2 section-title" id="research-themes">
 <h2 class="section-title" data-anchor-id="research-themes">Research Themes</h2>
 <div class="grid-2 research-theme-grid">
@@ -422,6 +431,7 @@ Hoover Institution
 <span class="research-theme-icon"><i aria-hidden="true" class="fa-solid fa-building-columns"></i></span><span class="research-theme-heading">Presidential Power and Public Constraint</span>
 </h3>
 <p>How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.</p>
+<a aria-label="Explore research themes" class="research-card-hit" href="research/"></a>
 </div>
 </div>
 <div class="card research-theme-card">
@@ -431,6 +441,7 @@ Hoover Institution
 <span class="research-theme-icon"><i aria-hidden="true" class="fa-solid fa-map-location-dot"></i></span><span class="research-theme-heading">Geography and Political Experience</span>
 </h3>
 <p>How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.</p>
+<a aria-label="Explore research themes" class="research-card-hit" href="research/"></a>
 </div>
 </div>
 <div class="card research-theme-card">
@@ -440,6 +451,7 @@ Hoover Institution
 <span class="research-theme-icon"><i aria-hidden="true" class="fa-regular fa-rectangle-list"></i></span><span class="research-theme-heading">Voter Behavior and Political Accountability</span>
 </h3>
 <p>When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.</p>
+<a aria-label="Explore research themes" class="research-card-hit" href="research/"></a>
 </div>
 </div>
 <div class="card research-theme-card">
@@ -449,8 +461,14 @@ Hoover Institution
 <span class="research-theme-icon"><i aria-hidden="true" class="fa-solid fa-circle-dollar-to-slot"></i></span><span class="research-theme-heading">Federal Spending and Resource Allocation</span>
 </h3>
 <p>How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.</p>
+<a aria-label="Explore research themes" class="research-card-hit" href="research/"></a>
 </div>
 </div>
+</div>
+<div class="pull-quote">
+<blockquote class="blockquote">
+<p>Reeves’s research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.</p>
+</blockquote>
 </div>
 </section>
 <section class="level2 section-title" id="books">
@@ -473,6 +491,11 @@ Hoover Institution
 </section>
 </div>
 </section>
+<nav aria-label="Mobile quick navigation" class="mobile-quickbar">
+<a href="research/">Research</a>
+<a href="cv/">CV</a>
+<a href="news/">Media</a>
+</nav>
 </div>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
