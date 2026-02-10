@@ -399,6 +399,19 @@ body.quarto-dark .nav-footer .footer-washu-lockup {
   margin-top: 0.62rem;
 }
 
+.video-frame {
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
 body.quarto-dark .simple-layout .teaching-spotlight-media::before {
   background: rgba(142, 24, 57, 0.2);
   border-color: rgba(142, 24, 57, 0.34);
