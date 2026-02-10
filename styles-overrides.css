@@ -129,6 +129,16 @@ body.quarto-dark .content {
 }
 
 @media (max-width: 768px) {
+  .home-page .research-theme-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.82rem !important;
+  }
+
+  .home-page .research-theme-grid > .research-theme-card {
+    min-height: auto;
+    padding: 1rem 0.92rem;
+  }
+
   .home-page .research-theme-grid > .research-theme-card .research-theme-content {
     grid-template-rows: auto minmax(4.35rem, auto) auto;
     row-gap: 0.5rem;
