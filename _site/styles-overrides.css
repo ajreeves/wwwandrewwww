@@ -1568,10 +1568,8 @@ body.home-page.quarto-dark .hero-aside .role-card .appointment-institution {
     font-weight: 460 !important;
     line-height: 1.4 !important;
     padding: 0.42rem 0.56rem 0.46rem !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
   }
 
   /* Segmented control tabs with bigger hit areas */
