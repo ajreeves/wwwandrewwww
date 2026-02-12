@@ -2684,3 +2684,377 @@ body.home-page.quarto-dark .hero-aside .role-card .appointment-institution {
     grid-template-columns: 64px minmax(0, 1fr) !important;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* 15) Research Mobile Readability Reset                                      */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body.research-page {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  body.research-page .simple-layout {
+    padding-inline: 0.72rem !important;
+  }
+
+  body.research-page .research-hero,
+  body.research-page .research-pillar,
+  body.research-page .research-arc {
+    padding: 0.84rem !important;
+    border-radius: 12px !important;
+  }
+
+  body.research-page .research-title h2 {
+    font-size: clamp(1.16rem, 5vw, 1.34rem) !important;
+    line-height: 1.28 !important;
+  }
+
+  body.research-page .research-hero > p {
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.56rem !important;
+  }
+
+  body.research-page .research-metrics ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.32rem !important;
+  }
+
+  body.research-page .research-metrics li {
+    font-size: 0.64rem !important;
+    padding: 0.2rem 0.48rem !important;
+  }
+
+  body.research-page .research-pillar h3 {
+    font-size: 1.02rem !important;
+    line-height: 1.3 !important;
+  }
+
+  body.research-page .research-pillar p {
+    font-size: 0.9rem !important;
+    line-height: 1.46 !important;
+  }
+
+  body.research-page .research-topic-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    overflow: visible !important;
+    white-space: normal !important;
+  }
+
+  body.research-page #listing-listing .quarto-post,
+  body.research-page #listing-listing.view-grid .quarto-post,
+  body.research-page #listing-listing.view-editorial .quarto-post {
+    grid-template-columns: 74px minmax(0, 1fr) !important;
+    gap: 0.34rem 0.56rem !important;
+    padding: 0.64rem !important;
+    border-radius: 11px !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-title a {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-description p {
+    font-size: 0.86rem !important;
+    line-height: 1.42 !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-date,
+  body.research-page #listing-listing .quarto-post .metadata-value {
+    font-size: 0.58rem !important;
+    padding: 0.16rem 0.34rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.research-page .simple-layout {
+    padding-inline: 0.58rem !important;
+  }
+
+  body.research-page #listing-listing .quarto-post,
+  body.research-page #listing-listing.view-grid .quarto-post,
+  body.research-page #listing-listing.view-editorial .quarto-post {
+    grid-template-columns: 68px minmax(0, 1fr) !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 16) Research Mobile Layout Reset (authoritative)                           */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body.research-page .simple-layout {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: 0.66rem !important;
+  }
+
+  body.research-page .research-lab {
+    display: block !important;
+  }
+
+  body.research-page .research-hero,
+  body.research-page .research-pillar,
+  body.research-page .research-arc {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 0.66rem !important;
+    padding: 0.82rem !important;
+    border-radius: 12px !important;
+  }
+
+  body.research-page .research-title h2 {
+    margin: 0 0 0.44rem !important;
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  body.research-page .research-hero > p,
+  body.research-page .research-pillar p,
+  body.research-page .research-arc p {
+    margin: 0 0 0.5rem !important;
+    font-size: 0.94rem !important;
+    line-height: 1.44 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  body.research-page .research-pillars {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.58rem !important;
+  }
+
+  body.research-page .pillar-tag p {
+    margin: 0 !important;
+  }
+
+  body.research-page .research-topic-strip {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+
+  body.research-page .research-view-controls {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  body.research-page #listing-listing .list.quarto-listing-default {
+    display: block !important;
+  }
+
+  body.research-page #listing-listing .quarto-post,
+  body.research-page #listing-listing.view-editorial .quarto-post,
+  body.research-page #listing-listing.view-grid .quarto-post,
+  body.research-page #listing-listing.view-compact .quarto-post {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 0.56rem !important;
+    padding: 0.74rem !important;
+    border-radius: 12px !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .thumbnail {
+    float: left;
+    width: 74px;
+    margin: 0 0.6rem 0.3rem 0 !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .thumbnail .card-img-top {
+    margin: 0 !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .thumbnail-image {
+    width: 74px !important;
+    max-width: 74px !important;
+    aspect-ratio: 3 / 4 !important;
+    object-fit: cover;
+    border-radius: 8px !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .body,
+  body.research-page #listing-listing .quarto-post .metadata,
+  body.research-page #listing-listing .quarto-post .metadata a {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-title a {
+    font-size: 0.96rem !important;
+    line-height: 1.28 !important;
+    white-space: normal !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-categories {
+    display: none !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-description p {
+    margin: 0.28rem 0 0 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.4 !important;
+    -webkit-line-clamp: unset !important;
+    overflow: visible !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .metadata a {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.16rem !important;
+    margin-top: 0.28rem !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-date,
+  body.research-page #listing-listing .quarto-post .metadata-value {
+    font-size: 0.58rem !important;
+    padding: 0.14rem 0.34rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.research-page .simple-layout {
+    padding-inline: 0.56rem !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .thumbnail {
+    width: 66px;
+    margin-right: 0.5rem !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .thumbnail-image {
+    width: 66px !important;
+    max-width: 66px !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-title a {
+    font-size: 0.92rem !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 17) Research View Modes (authoritative final)                              */
+/* -------------------------------------------------------------------------- */
+/* Editorial */
+body.research-page #listing-listing.view-editorial .list.quarto-listing-default {
+  display: block !important;
+}
+
+body.research-page #listing-listing.view-editorial .quarto-post {
+  display: block !important;
+}
+
+body.research-page #listing-listing.view-editorial .quarto-post .thumbnail {
+  float: left;
+  width: 108px;
+  margin: 0 0.82rem 0.48rem 0 !important;
+}
+
+body.research-page #listing-listing.view-editorial .quarto-post .thumbnail-image {
+  width: 108px !important;
+  max-width: 108px !important;
+  aspect-ratio: 3 / 4 !important;
+  object-fit: cover;
+}
+
+body.research-page #listing-listing.view-editorial .quarto-post .listing-description,
+body.research-page #listing-listing.view-editorial .quarto-post .listing-description p {
+  display: block !important;
+}
+
+/* Compact */
+body.research-page #listing-listing.view-compact .list.quarto-listing-default {
+  display: block !important;
+}
+
+body.research-page #listing-listing.view-compact .quarto-post {
+  display: block !important;
+  padding: 0.56rem 0.7rem !important;
+}
+
+body.research-page #listing-listing.view-compact .quarto-post .thumbnail,
+body.research-page #listing-listing.view-compact .quarto-post .listing-categories,
+body.research-page #listing-listing.view-compact .quarto-post .listing-description {
+  display: none !important;
+}
+
+body.research-page #listing-listing.view-compact .quarto-post .listing-title a {
+  font-size: 0.98rem !important;
+  line-height: 1.3 !important;
+}
+
+/* Grid */
+body.research-page #listing-listing.view-grid .list.quarto-listing-default {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+body.research-page #listing-listing.view-grid .quarto-post {
+  display: block !important;
+  margin: 0 !important;
+}
+
+body.research-page #listing-listing.view-grid .quarto-post .thumbnail {
+  float: none;
+  width: 100%;
+  margin: 0 0 0.46rem 0 !important;
+}
+
+body.research-page #listing-listing.view-grid .quarto-post .thumbnail-image {
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover;
+}
+
+body.research-page #listing-listing.view-grid .quarto-post .listing-categories {
+  display: none !important;
+}
+
+body.research-page #listing-listing.view-grid .quarto-post .listing-description p {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Responsive view distinctions */
+@media (max-width: 980px) {
+  body.research-page #listing-listing.view-grid .list.quarto-listing-default {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.research-page #listing-listing.view-editorial .quarto-post .thumbnail {
+    width: 74px;
+    margin-right: 0.6rem !important;
+  }
+
+  body.research-page #listing-listing.view-editorial .quarto-post .thumbnail-image {
+    width: 74px !important;
+    max-width: 74px !important;
+  }
+
+  body.research-page #listing-listing.view-grid .quarto-post .thumbnail {
+    width: 100%;
+    margin: 0 0 0.4rem 0 !important;
+  }
+
+  body.research-page #listing-listing.view-grid .quarto-post .thumbnail-image {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
