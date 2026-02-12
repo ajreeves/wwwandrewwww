@@ -2556,3 +2556,131 @@ body.home-page.quarto-dark .hero-aside .role-card .appointment-institution {
     line-height: 1.28 !important;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* 14) Research Mobile Overflow Guard (final final)                           */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body.research-page,
+  body.research-page #quarto-content,
+  body.research-page #quarto-document-content,
+  body.research-page .page-columns,
+  body.research-page .simple-layout,
+  body.research-page .research-lab,
+  body.research-page .research-hero,
+  body.research-page .research-pillars,
+  body.research-page .research-pillar,
+  body.research-page .research-arc,
+  body.research-page .research-list-shell,
+  body.research-page #listing-listing,
+  body.research-page #listing-listing .list.quarto-listing-default {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body.research-page,
+  body.research-page #quarto-content {
+    overflow-x: hidden !important;
+  }
+
+  body.research-page .simple-layout {
+    padding-inline: 0.6rem !important;
+  }
+
+  body.research-page .research-title h2 {
+    font-size: 1.16rem !important;
+    line-height: 1.26 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  body.research-page .research-hero > p,
+  body.research-page .research-pillar p {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  body.research-page .research-metrics ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.3rem !important;
+  }
+
+  body.research-page .research-metrics li {
+    font-size: 0.65rem !important;
+  }
+
+  body.research-page .research-topic-strip {
+    display: block !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.research-page .research-topic-chip {
+    display: inline-flex !important;
+    white-space: nowrap !important;
+    margin-right: 0.26rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.research-page #listing-listing .listing-actions-group {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.research-page #listing-listing .quarto-listing-filter {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  body.research-page #listing-listing .quarto-post,
+  body.research-page #listing-listing.view-grid .quarto-post,
+  body.research-page #listing-listing.view-editorial .quarto-post {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    gap: 0.3rem 0.5rem !important;
+    padding: 0.58rem !important;
+    margin: 0 !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-title a {
+    font-size: 0.96rem !important;
+    line-height: 1.28 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  body.research-page #listing-listing .quarto-post .listing-description p {
+    font-size: 0.86rem !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    -webkit-line-clamp: unset !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.research-page .simple-layout {
+    padding-inline: 0.5rem !important;
+  }
+
+  body.research-page #listing-listing .quarto-post,
+  body.research-page #listing-listing.view-grid .quarto-post,
+  body.research-page #listing-listing.view-editorial .quarto-post {
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+  }
+}
