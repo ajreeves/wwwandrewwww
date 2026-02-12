@@ -3,6 +3,7 @@ title: "Research"
 description: ""
 page-layout: full
 toc: false
+body-classes: research-page
 listing:
   contents:
     - "*/index.md"
@@ -124,10 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let initial = "editorial";
-  try {
-    const saved = localStorage.getItem(key);
-    if (allowed.has(saved)) initial = saved;
-  } catch (_) {}
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  if (!isMobile) {
+    try {
+      const saved = localStorage.getItem(key);
+      if (allowed.has(saved)) initial = saved;
+    } catch (_) {}
+  }
 
   applyView(initial);
   buttons.forEach((btn) => {
