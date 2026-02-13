@@ -2952,7 +2952,8 @@ body.research-page #listing-listing.view-editorial .list.quarto-listing-default 
 }
 
 body.research-page #listing-listing.view-editorial .quarto-post {
-  display: block !important;
+  display: flow-root !important;
+  clear: both;
 }
 
 body.research-page #listing-listing.view-editorial .quarto-post .thumbnail {
