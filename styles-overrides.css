@@ -3059,3 +3059,193 @@ body.research-page #listing-listing.view-grid .quarto-post .listing-description 
     max-width: none !important;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/* 18) Homepage Mobile Polish (final)                                         */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  body.home-page .simple-layout {
+    padding-inline: 0.72rem !important;
+  }
+
+  body.home-page #quarto-header .navbar {
+    min-height: 3.58rem !important;
+    padding-top: 0.28rem !important;
+    padding-bottom: 0.28rem !important;
+  }
+
+  body.home-page #quarto-header .navbar .navbar-brand {
+    font-size: clamp(1.04rem, 4.3vw, 1.26rem) !important;
+    font-weight: 560 !important;
+    letter-spacing: 0.006em !important;
+  }
+
+  body.home-page #quarto-header .navbar .navbar-toggler,
+  body.home-page #quarto-header .navbar #quarto-search,
+  body.home-page #quarto-header .navbar #quarto-search .aa-DetachedSearchButton,
+  body.home-page #quarto-header .navbar .quarto-navbar-tools a.quarto-color-scheme-toggle {
+    min-width: 2.44rem !important;
+    min-height: 2.44rem !important;
+  }
+
+  body.home-page .hero {
+    border-radius: 17px !important;
+    padding: 0.92rem 0.82rem 0.9rem !important;
+    box-shadow: 0 14px 30px rgba(6, 10, 16, 0.18) !important;
+  }
+
+  body.home-page .mobile-identity {
+    grid-template-columns: 66px minmax(0, 1fr) !important;
+    gap: 0.58rem !important;
+    margin-bottom: 0.34rem !important;
+  }
+
+  body.home-page .mobile-identity-photo {
+    width: 66px !important;
+    height: 66px !important;
+  }
+
+  body.home-page .mobile-identity-name {
+    font-size: clamp(1.88rem, 8.2vw, 2.3rem) !important;
+    line-height: 0.98 !important;
+    font-weight: 700 !important;
+  }
+
+  body.home-page .mobile-identity-field {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+  }
+
+  body.home-page .hero-subtitle {
+    margin: 0.34rem 0 0.58rem !important;
+    padding: 0.42rem 0.56rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.42 !important;
+    font-weight: 500 !important;
+  }
+
+  body.home-page .hero-actions > p {
+    border-radius: 10px !important;
+    margin-top: 0.08rem !important;
+  }
+
+  body.home-page .hero-actions .btn,
+  body.home-page .hero-actions a.btn {
+    min-height: 2.3rem !important;
+    font-size: 0.74rem !important;
+    line-height: 1.15 !important;
+  }
+
+  body.home-page .hero-bio > p {
+    font-size: 0.98rem !important;
+    line-height: 1.56 !important;
+  }
+
+  body.home-page .bio-toggle {
+    min-height: 2.58rem !important;
+    font-size: 0.79rem !important;
+    margin-top: 0.18rem !important;
+  }
+
+  body.home-page .section {
+    margin-top: 1.12rem !important;
+  }
+
+  body.home-page .section > h2.section-title {
+    margin-bottom: 0.62rem !important;
+    font-size: clamp(1.62rem, 7vw, 2rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid {
+    gap: 0.72rem !important;
+    margin-top: 0.42rem !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card {
+    margin: 0 !important;
+    padding: 0.72rem 0.78rem !important;
+    border-radius: 11px !important;
+    box-shadow: 0 8px 16px rgba(8, 12, 18, 0.1) !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card .research-theme-tag {
+    font-size: 0.58rem !important;
+    padding: 0.14rem 0.44rem !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card .research-theme-title {
+    grid-template-columns: 1.78rem minmax(0, 1fr) !important;
+    column-gap: 0.48rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card .research-theme-icon {
+    width: 1.78rem !important;
+    height: 1.78rem !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card .research-theme-icon i {
+    font-size: 1rem !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card .research-theme-heading {
+    font-size: 1.08rem !important;
+    line-height: 1.2 !important;
+  }
+
+  body.home-page section#research-themes .research-theme-grid > .research-theme-card p {
+    margin-top: 0.14rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.42 !important;
+  }
+
+  body.home-page .book-item {
+    margin: 0 !important;
+    padding: 0.7rem !important;
+    border-radius: 11px !important;
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    gap: 0.52rem !important;
+  }
+
+  body.home-page .book-item .book-cover {
+    max-width: 70px !important;
+  }
+
+  body.home-page .book-item h3 {
+    font-size: 0.96rem !important;
+    line-height: 1.22 !important;
+  }
+
+  body.home-page .book-item p {
+    font-size: 0.9rem !important;
+    line-height: 1.46 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body.home-page .simple-layout {
+    padding-inline: 0.62rem !important;
+  }
+
+  body.home-page #quarto-header .navbar .navbar-brand {
+    font-size: clamp(0.95rem, 4vw, 1.1rem) !important;
+  }
+
+  body.home-page .mobile-identity {
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+    gap: 0.48rem !important;
+  }
+
+  body.home-page .mobile-identity-photo {
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  body.home-page .hero-actions .btn,
+  body.home-page .hero-actions a.btn {
+    font-size: 0.66rem !important;
+    padding: 0.44rem 0.1rem !important;
+  }
+}
