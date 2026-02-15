@@ -1,7 +1,29 @@
 <div class="deck-footer">
   <div class="deck-footer-left">
     <img src="visuals/washu-logo/WashU-RGB_web.png" alt="Washington University in St. Louis">
-    <span>Food Need and Pantry Access in St. Louis</span>
   </div>
   <span class="deck-footer-right">St. Louis Policy Initiative · Weidenbaum Center</span>
 </div>
+<script>
+(function () {
+  // Ensure iframe map paths work both on production (/food-pantries) and local files.
+  var path = window.location.pathname || "/";
+  var isFoodPantries = (path === "/food-pantries") || path.startsWith("/food-pantries/");
+  var iframes = document.querySelectorAll("iframe[data-external='1']");
+  iframes.forEach(function (frame) {
+    var mapFile = frame.getAttribute("data-map");
+    if (mapFile) {
+      frame.setAttribute("src", isFoodPantries ? "/food-pantries/" + mapFile : mapFile);
+      return;
+    }
+    // Fallback for any legacy iframe without data-map
+    var src = frame.getAttribute("src");
+    if (!src || src.startsWith("http") || src.startsWith("data:")) return;
+    if (src.startsWith("/food-pantries/") && !isFoodPantries) {
+      frame.setAttribute("src", src.replace("/food-pantries/", ""));
+    } else if (!src.startsWith("/") && isFoodPantries) {
+      frame.setAttribute("src", "/food-pantries/" + src.replace(/^\.?\//, ""));
+    }
+  });
+})();
+</script>
