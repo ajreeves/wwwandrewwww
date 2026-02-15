@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main.content {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.cell,
+.cell-output,
+.cell-output-display {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.leaflet.html-widget {
+  width: 100vw !important;
+  height: 100vh !important;
+  border: 0 !important;
+}

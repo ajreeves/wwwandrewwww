@@ -15,6 +15,7 @@ project:
   resources:
     - papers/
     - images/
+    - food-pantries/**
     - "*.pdf"
     - "practice-of-citizenship-syllabus-spring-2026.pdf"
     - "research/*/*.png"
