@@ -865,6 +865,10 @@ body {
   text-align: center;
 }
 
+.reveal section.core-question-slide > h2 {
+  text-align: left !important;
+}
+
 .reveal section.core-question-slide .core-question {
   margin-top: 0.56em;
   margin-bottom: 0.44em;
