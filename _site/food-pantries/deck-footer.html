@@ -5,25 +5,57 @@
   <span class="deck-footer-right">St. Louis Policy Initiative · Weidenbaum Center</span>
 </div>
 <script>
-(function () {
-  // Ensure iframe map paths work both on production (/food-pantries) and local files.
-  var path = window.location.pathname || "/";
-  var isFoodPantries = (path === "/food-pantries") || path.startsWith("/food-pantries/");
-  var iframes = document.querySelectorAll("iframe[data-external='1']");
-  iframes.forEach(function (frame) {
-    var mapFile = frame.getAttribute("data-map");
-    if (mapFile) {
-      frame.setAttribute("src", isFoodPantries ? "/food-pantries/" + mapFile : mapFile);
-      return;
+(() => {
+  function hydrateChartImages() {
+    document
+      .querySelectorAll(".reveal section.chart-slide img[data-src]")
+      .forEach((img) => {
+        const src = img.getAttribute("data-src");
+        if (src && !img.getAttribute("src")) {
+          img.setAttribute("src", src);
+        }
+      });
+  }
+
+  function syncFooterCenter() {
+    const footer = document.querySelector(".deck-footer");
+    if (!footer) return;
+
+    const present =
+      document.querySelector(".reveal .slides section.present:not(.stack)") ||
+      document.querySelector(".reveal .slides section.present");
+
+    if (!present) return;
+
+    const rect = present.getBoundingClientRect();
+    if (!rect.width) return;
+
+    footer.style.left = `${rect.left + rect.width / 2}px`;
+
+    const slideNum = document.querySelector(".reveal .slide-number");
+    if (slideNum) {
+      const rightOffset = Math.max(8, window.innerWidth - rect.right + 10);
+      slideNum.style.right = `${rightOffset}px`;
     }
-    // Fallback for any legacy iframe without data-map
-    var src = frame.getAttribute("src");
-    if (!src || src.startsWith("http") || src.startsWith("data:")) return;
-    if (src.startsWith("/food-pantries/") && !isFoodPantries) {
-      frame.setAttribute("src", src.replace("/food-pantries/", ""));
-    } else if (!src.startsWith("/") && isFoodPantries) {
-      frame.setAttribute("src", "/food-pantries/" + src.replace(/^\.?\//, ""));
-    }
-  });
+  }
+
+  function syncLayout() {
+    hydrateChartImages();
+    syncFooterCenter();
+  }
+
+  window.addEventListener("resize", syncLayout);
+  window.addEventListener("load", syncLayout);
+  document.addEventListener("DOMContentLoaded", syncLayout);
+
+  if (window.Reveal && typeof window.Reveal.on === "function") {
+    window.Reveal.on("ready", syncLayout);
+    window.Reveal.on("slidechanged", syncLayout);
+  } else {
+    setTimeout(syncLayout, 250);
+    setTimeout(syncLayout, 900);
+  }
+
+  syncLayout();
 })();
 </script>
