@@ -16,13 +16,40 @@ execute:
 output-file: index.html
 ---
 
+```{r}
+#| include: false
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+  library(scales)
+  library(stringr)
+})
+
+source("../code/build_presentation_leaflet_maps.R")
+maps <- build_presentation_leaflet_maps(
+  tract_path = "../output/stl_food_access_tracts_reporting.gpkg",
+  pantry_path = "../data/pantry_geocoded.rds",
+  insecurity_csv_path = "../food_insecurity.csv",
+  desert_csv_path = "../food_pantry_desert.csv",
+  compare_csv_path = "../output/maps/food_pantry_source_comparison_sites.csv",
+  use_online_tiles = TRUE
+)
+
+alignment_spearman <- cor(
+  maps$scatter_df$prevalence_pct,
+  maps$scatter_df$pantries_within_1mi,
+  method = "spearman",
+  use = "complete.obs"
+)
+```
+
 ## When Federal Policy Shifts, Local Systems Absorb the Shock {.text-slide .shock-simple-slide}
 
 ```{=html}
 <div class="stat-grid-simple">
   <div class="stat-col">
     <div class="stat-value">650,000+</div>
-    <div class="stat-label">Missouri SNAP recipients exposed</div>
+    <div class="stat-label">Missouri SNAP recipients affected by Fall 2025 disbursement disruption</div>
   </div>
   <div class="stat-col">
     <div class="stat-value">54,943</div>
@@ -34,23 +61,22 @@ output-file: index.html
   </div>
 </div>
 <div class="shock-bottom-line">When federal support shifts, strain concentrates locally.</div>
+<div class="slide-footnote">Sources: 650,000+ Missouri SNAP recipients: <a href="https://www.stlpr.org/government-politics-issues/2025-10-21/over-650-000-missourians-will-not-receive-november-snap-benefits-because-of-shutdown" target="_blank" rel="noopener">STLPR, Oct 21, 2025</a>. 54,943 St. Louis recipients and 70→200 pantry demand surge: <a href="https://www.stlpr.org/government-politics-issues/2025-11-07/food-fund" target="_blank" rel="noopener">STLPR, Nov 7, 2025</a>.</div>
 ```
 
-## Core Question {.text-slide .core-question-slide}
+## The Core Problem {.text-slide .core-question-slide}
 
 <div class="core-question">Where are high-need neighborhoods<br>served by relatively thin pantry infrastructure?</div>
 
-This is a planning tool for outreach and referral targeting.
-
-## The Alignment Problem {.text-slide .alignment-slide}
-
 <div class="alignment-main">Nearby pantry presence does not consistently align</div>
-<div class="alignment-sub">with neighborhood food insecurity.</div>
+<div class="alignment-sub">with tract-level food insecurity.</div>
+
+This is a planning tool for outreach and referral targeting.
 
 ## How We Detect Gaps in the Local Support System {.text-slide .measure-slide .measure-model-slide}
 
 ```{=html}
-<div class="measure-claim">We are mapping gaps in the support system, <strong>not poverty</strong>.</div>
+<div class="measure-claim">We are mapping gaps in the support system.</div>
 <div class="measure-subclaim">A geographic stress test of the local food support system.</div>
 
 <div class="measure-flow">
@@ -64,15 +90,15 @@ This is a planning tool for outreach and referral targeting.
 <div class="method-grid">
   <div class="method-card">
     <div class="method-title">Food insecurity</div>
-    <div class="method-text">CDC PLACES 2023 tract estimate<br>Modeled adult prevalence over past 12 months</div>
+    <div class="method-text">CDC PLACES 2023 tract estimate</div>
   </div>
   <div class="method-card">
     <div class="method-title">Pantry access</div>
-    <div class="method-text">1-mile service-area coverage<br>Radius buffers around pantry locations</div>
+    <div class="method-text">1-mile service-area coverage</div>
   </div>
   <div class="method-card">
     <div class="method-title">Combined signal (FPDI)</div>
-    <div class="method-text">Standardized mismatch measure<br>Scaled 0-100 (higher = larger gap)</div>
+    <div class="method-text">Standardized 0-100 gap index</div>
   </div>
 </div>
 ```
@@ -87,122 +113,62 @@ This is a planning tool for outreach and referral targeting.
   </div>
   <div class="guardrail-block">
     <div class="guardrail-title">What it does not do</div>
-    <div class="guardrail-text">Does not measure individual hardship.<br>Does not replace provider judgment.</div>
-  </div>
-</div>
-```
-
-## Data Inputs {.text-slide .data-inputs-slide}
-
-```{=html}
-<div class="data-stack">
-  <div class="data-item">
-    <div class="data-title">CDC PLACES (2023)</div>
-    <div class="data-text">Tract-level food insecurity estimates</div>
-  </div>
-  <div class="data-item">
-    <div class="data-title">St. Louis Area Foodbank</div>
-    <div class="data-text">Pantry locations (geocoded)</div>
-  </div>
-  <div class="data-item">
-    <div class="data-title">Census tract geography</div>
-    <div class="data-text">1-mile proximity measure</div>
+    <div class="guardrail-text">Not a measure of individual hardship.<br>Not a replacement for provider judgment.</div>
   </div>
 </div>
 ```
 
 ## How the Index Is Built {.text-slide .index-build-slide}
 
-1. Measure tract-level food insecurity
-2. Measure 1-mile pantry coverage
-3. Standardize and scale to **0-100**
+Inputs
 
-Higher values indicate higher need relative to nearby coverage.
+- CDC PLACES 2023 adult food insecurity prevalence
+- St. Louis Area Foodbank pantry locations (geocoded)
 
-## How to Read the Maps {.text-slide .read-maps-slide}
+Construction
 
-```{=html}
-<div class="step-stack">
-  <div class="step-item"><span>Step 1</span>Where need is high</div>
-  <div class="step-item"><span>Step 2</span>Where pantries cluster</div>
-  <div class="step-item"><span>Step 3</span>Where the two are misaligned</div>
-</div>
-```
+- Build 1-mile service-area buffers around pantry sites
+- Count pantry buffers covering each tract centroid
+- Min-max scale unmet need to **0-100**
+
+Higher values indicate larger gaps between need and nearby coverage.
 
 ## Food Insecurity Concentrates in North St. Louis {.map-slide}
 
 Persistent vulnerability is geographically clustered.
 
-```{=html}
-<div class="map-embed">
-  <iframe src="/food-pantries/map1_food_insecurity_interactive.html" data-external="1" data-map="map1_food_insecurity_interactive.html" title="Food insecurity map"></iframe>
-</div>
+::: {.map-embed}
+```{r}
+maps$map_food_insecurity
 ```
+:::
 
 ## Pantries Cluster in Central Corridors {.map-slide}
 
-Peripheral areas show thinner overlapping coverage.
+Coverage is densest in central city corridors and thins in outer tracts.
 
-```{=html}
-<div class="map-embed">
-  <iframe src="/food-pantries/map2_pantry_footprint_interactive.html" data-external="1" data-map="map2_pantry_footprint_interactive.html" title="Food pantry footprint map"></iframe>
-</div>
+::: {.map-embed}
+```{r}
+maps$map_pantry_footprint
 ```
+:::
 
 ## Where High Need Meets Thin Coverage {.map-slide}
 
 These tracts are candidates for targeted outreach and referral.
 
-```{=html}
-<div class="map-embed">
-  <iframe src="/food-pantries/map3_food_desert_index_interactive.html" data-external="1" data-map="map3_food_desert_index_interactive.html" title="Food pantry desert index map"></iframe>
-</div>
+::: {.map-embed}
+```{r}
+maps$map_desert_index
 ```
+:::
 
 ## Need and Pantry Presence Are Weakly Aligned {.chart-slide}
 
 ```{r}
-#| fig-width: 10.0
-#| fig-height: 4.7
-#| fig-align: center
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(ggplot2)
-  library(readr)
-  library(scales)
-  library(sf)
-  library(stringr)
-})
-
-normalize_geoid <- function(x) stringr::str_pad(as.character(x), width = 11, side = "left", pad = "0")
-
-fi_raw <- readr::read_csv("../food_insecurity.csv", show_col_types = FALSE)
-fd_raw <- readr::read_csv("../food_pantry_desert.csv", show_col_types = FALSE)
-tract <- sf::st_read("../output/stl_food_access_tracts_reporting.gpkg", quiet = TRUE)
-
-fi <- fi_raw %>%
-  transmute(GEOID = normalize_geoid(GEOID), prevalence_pct = as.numeric(.data[[names(fi_raw)[2]]]))
-
-fd <- fd_raw %>%
-  transmute(GEOID = normalize_geoid(GEOID), desert_raw = as.numeric(.data[[names(fd_raw)[2]]]))
-
-tract_access <- tract %>%
-  mutate(GEOID = normalize_geoid(GEOID)) %>%
-  filter(grepl("St\\. Louis city|St\\. Louis County", NAME)) %>%
-  st_drop_geometry() %>%
-  transmute(GEOID, pantries_within_1mi = as.numeric(n_pantries_nearby))
-
-scatter_df <- fi %>%
-  inner_join(fd, by = "GEOID") %>%
-  left_join(tract_access, by = "GEOID") %>%
-  mutate(
-    fpdi_0_100 = scales::rescale(desert_raw, to = c(0, 100), na.rm = TRUE),
-    pantries_within_1mi = ifelse(is.na(pantries_within_1mi), 0, pantries_within_1mi)
-  ) %>%
-  filter(!is.na(prevalence_pct), !is.na(fpdi_0_100))
-
-ggplot(scatter_df, aes(x = prevalence_pct, y = fpdi_0_100)) +
-  geom_point(color = "#971B2F", alpha = 0.72, size = 2.2) +
+#| include: false
+scatter_plot <- ggplot(maps$scatter_df, aes(x = prevalence_pct, y = pantries_within_1mi)) +
+  geom_jitter(color = "#971B2F", alpha = 0.68, size = 2.0, width = 0, height = 0.12) +
   geom_smooth(
     method = "lm",
     formula = y ~ x,
@@ -217,9 +183,8 @@ ggplot(scatter_df, aes(x = prevalence_pct, y = fpdi_0_100)) +
     expand = expansion(mult = c(0.02, 0.04))
   ) +
   scale_y_continuous(
-    name = "Food Pantry Desert Index (0-100)",
-    limits = c(0, 100),
-    breaks = seq(0, 100, 20),
+    name = "Pantries within 1 mile (tract centroid coverage)",
+    breaks = scales::pretty_breaks(6),
     expand = expansion(mult = c(0.02, 0.04))
   ) +
   theme_minimal(base_family = "Avenir Next") +
@@ -230,13 +195,29 @@ ggplot(scatter_df, aes(x = prevalence_pct, y = fpdi_0_100)) +
     axis.text = element_text(size = 10, color = "#374151"),
     plot.margin = margin(8, 10, 2, 4)
   )
+
+ggsave(
+  filename = "visuals/scatter_need_pantry.png",
+  plot = scatter_plot,
+  width = 10,
+  height = 4.7,
+  dpi = 180,
+  bg = "white"
+)
 ```
+
+```{=html}
+<img src="visuals/scatter_need_pantry.png" class="chart-static" alt="Scatterplot showing food insecurity versus pantries within 1 mile">
+```
+
+Spearman correlation between food insecurity and nearby pantry coverage: **`r sprintf("%.2f", alignment_spearman)`**.
 
 High-need tracts do not reliably have more nearby pantries.
 
 ## Limits to Keep in Mind {.text-slide .limits-slide}
 
 - Proximity does not capture pantry capacity, hours, or eligibility.
+- The 1-mile buffer is a proximity proxy, not a formal catchment boundary.
 - Location data may be incomplete.
 - Use as a planning signal, not a diagnostic tool.
 
@@ -254,14 +235,23 @@ High-need tracts do not reliably have more nearby pantries.
   </div>
   <div class="takeaway-card">
     <div class="takeaway-title"><strong>Coordinate</strong></div>
-    <div class="takeaway-text">Use a shared geographic planning layer.</div>
+    <div class="takeaway-text">Use a common tract-level framework for outreach coordination.</div>
   </div>
 </div>
 ```
 
 ## Next Steps {.text-slide .next-slide}
 
-- Improve supply realism
-- Add time-sensitive access
-- Connect referrals to outcomes
-- Deploy shared dashboard
+- Improve supply realism: add pantry capacity, hours, and eligibility constraints.
+- Add time-sensitive access: incorporate mobile pantry schedules and seasonal shifts.
+- Deploy a shared dashboard for partner-level planning and validation.
+
+## Appendix: Source Comparison {.map-slide}
+
+Pantry location data are broadly consistent across sources, with modest differences in coverage.
+
+::: {.map-embed}
+```{r}
+maps$map_source_compare
+```
+:::
