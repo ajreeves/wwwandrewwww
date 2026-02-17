@@ -718,6 +718,10 @@ body {
   object-position: 50% 22%;
 }
 
+.reveal section.about-slide .about-photo-agabel {
+  object-position: 50% 20%;
+}
+
 .reveal section.about-slide .about-photo-reeves {
   object-position: 50% 24%;
 }
@@ -745,6 +749,12 @@ body {
   color: #4b5563;
   font-size: 0.38em;
   line-height: 1.2;
+}
+
+.reveal section.about-slide .about-affil {
+  color: #64748b;
+  font-size: 0.95em;
+  white-space: nowrap;
 }
 
 .reveal .slide-number {

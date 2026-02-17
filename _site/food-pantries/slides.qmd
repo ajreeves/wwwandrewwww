@@ -48,29 +48,34 @@ alignment_spearman <- cor(
 ```{=html}
 <div class="about-grid">
   <div class="about-card">
+    <img class="about-photo about-photo-agabel" src="profile-photos/a-gabel.jpg" alt="Angela Gabel">
+    <div class="about-name">Angela Gabel</div>
+    <div class="about-title"><span class="about-affil">St. Louis Area Food Pantry Coalition</span></div>
+  </div>
+  <div class="about-card">
     <img class="about-photo about-photo-gabel" src="profile-photos/gabel.png" alt="Matthew Gabel">
     <div class="about-name">Matthew Gabel, PhD</div>
-    <div class="about-title">Professor of Political Science</div>
+    <div class="about-title">Professor of Political Science<br><span class="about-affil">Washington University in St. Louis</span></div>
   </div>
   <div class="about-card">
     <img class="about-photo about-photo-reeves" src="profile-photos/reeves.jpg" alt="Andrew Reeves">
     <div class="about-name">Andrew Reeves, PhD</div>
-    <div class="about-title">Director, Weidenbaum Center<br>Professor of Political Science<br>Senior Advisor to the Chancellor</div>
+    <div class="about-title">Director, Weidenbaum Center<br>Professor of Political Science<br>Senior Advisor to the Chancellor<br><span class="about-affil">Washington University in St. Louis</span></div>
   </div>
   <div class="about-card">
     <img class="about-photo about-photo-alexander" src="profile-photos/alexander.jpg" alt="Lukas Alexander">
     <div class="about-name">Lukas Alexander</div>
-    <div class="about-title">Ph.D. Student in Political Science</div>
+    <div class="about-title">Ph.D. Student in Political Science<br><span class="about-affil">Washington University in St. Louis</span></div>
   </div>
   <div class="about-card">
     <img class="about-photo about-photo-jordan" src="profile-photos/jordan.png" alt="Rose Jordan">
     <div class="about-name">Rose Jordan</div>
-    <div class="about-title">Ph.D. Student in Political Science</div>
+    <div class="about-title">Ph.D. Student in Political Science<br><span class="about-affil">Washington University in St. Louis</span></div>
   </div>
   <div class="about-card">
     <img class="about-photo about-photo-shin" src="profile-photos/shin.png" alt="Hwayong Shin">
     <div class="about-name">Hwayong Shin, PhD</div>
-    <div class="about-title">Postdoctoral Fellow at the Weidenbaum Center</div>
+    <div class="about-title">Postdoctoral Fellow at the Weidenbaum Center<br><span class="about-affil">Washington University in St. Louis</span></div>
   </div>
 </div>
 ```
