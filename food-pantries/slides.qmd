@@ -43,6 +43,38 @@ alignment_spearman <- cor(
 )
 ```
 
+## About Us {.text-slide .about-slide}
+
+```{=html}
+<div class="about-grid">
+  <div class="about-card">
+    <img class="about-photo about-photo-gabel" src="profile-photos/gabel.png" alt="Matthew Gabel">
+    <div class="about-name">Matthew Gabel, PhD</div>
+    <div class="about-title">Professor of Political Science</div>
+  </div>
+  <div class="about-card">
+    <img class="about-photo about-photo-reeves" src="profile-photos/reeves.jpg" alt="Andrew Reeves">
+    <div class="about-name">Andrew Reeves, PhD</div>
+    <div class="about-title">Director, Weidenbaum Center<br>Professor of Political Science<br>Senior Advisor to the Chancellor</div>
+  </div>
+  <div class="about-card">
+    <img class="about-photo about-photo-alexander" src="profile-photos/alexander.jpg" alt="Lukas Alexander">
+    <div class="about-name">Lukas Alexander</div>
+    <div class="about-title">Ph.D. Student in Political Science</div>
+  </div>
+  <div class="about-card">
+    <img class="about-photo about-photo-jordan" src="profile-photos/jordan.png" alt="Rose Jordan">
+    <div class="about-name">Rose Jordan</div>
+    <div class="about-title">Ph.D. Student in Political Science</div>
+  </div>
+  <div class="about-card">
+    <img class="about-photo about-photo-shin" src="profile-photos/shin.png" alt="Hwayong Shin">
+    <div class="about-name">Hwayong Shin, PhD</div>
+    <div class="about-title">Postdoctoral Fellow at the Weidenbaum Center</div>
+  </div>
+</div>
+```
+
 ## When Federal Policy Shifts, Local Systems Absorb the Shock {.text-slide .shock-simple-slide}
 
 ```{=html}
@@ -251,7 +283,9 @@ High-need tracts do not reliably have more nearby pantries.
 Pantry location data are broadly consistent across sources, with modest differences in coverage.
 
 ::: {.map-embed}
-```{r}
-maps$map_source_compare
+```{=html}
+<iframe src="map4_source_compare_interactive.html" data-external="1" title="Pantry source comparison map"></iframe>
 ```
 :::
+
+<span class="slide-footnote">If the embedded map does not load on your device, open the standalone version: <a href="map4_source_compare_interactive.html" target="_blank" rel="noopener">map4_source_compare_interactive.html</a>.</span>
