@@ -288,9 +288,7 @@ High-need tracts do not reliably have more nearby pantries.
 Pantry location data are broadly consistent across sources, with modest differences in coverage.
 
 ::: {.map-embed}
-```{=html}
-<iframe src="map4_source_compare_interactive.html" data-external="1" title="Pantry source comparison map"></iframe>
+```{r}
+maps$map_source_compare
 ```
 :::
-
-<span class="slide-footnote">If the embedded map does not load on your device, open the standalone version: <a href="map4_source_compare_interactive.html" target="_blank" rel="noopener">map4_source_compare_interactive.html</a>.</span>

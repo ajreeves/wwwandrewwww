@@ -5,6 +5,27 @@
 </div>
 <script>
 (() => {
+  function fireSlideEnter() {
+    const event = document.createEvent("Event");
+    event.initEvent("slideenter", true, true);
+    document.dispatchEvent(event);
+  }
+
+  function resizeVisibleLeafletMaps() {
+    const widgets = document.querySelectorAll(
+      ".reveal .slides section.present .leaflet.html-widget[id]"
+    );
+
+    widgets.forEach((el) => {
+      if (!window.HTMLWidgets || typeof window.HTMLWidgets.find !== "function") return;
+      const widget = window.HTMLWidgets.find(`#${el.id}`);
+      if (!widget || typeof widget.getMap !== "function") return;
+      const map = widget.getMap();
+      if (!map || typeof map.invalidateSize !== "function") return;
+      map.invalidateSize(true);
+    });
+  }
+
   function hydrateChartImages() {
     document
       .querySelectorAll(".reveal section.chart-slide img[data-src]")
@@ -39,8 +60,14 @@
   }
 
   function syncLayout() {
+    fireSlideEnter();
     hydrateChartImages();
     syncFooterCenter();
+    resizeVisibleLeafletMaps();
+
+    // Re-run after layout settles so Leaflet can measure visible dimensions.
+    setTimeout(resizeVisibleLeafletMaps, 60);
+    setTimeout(resizeVisibleLeafletMaps, 260);
   }
 
   window.addEventListener("resize", syncLayout);
