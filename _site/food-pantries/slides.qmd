@@ -49,7 +49,7 @@ alignment_spearman <- cor(
 <div class="about-grid">
   <div class="about-card">
     <img class="about-photo about-photo-agabel" src="profile-photos/a-gabel.jpg" alt="Angela Gabel">
-    <div class="about-name">Angela Gabel</div>
+    <div class="about-name">Angela Gabel, JD</div>
     <div class="about-title"><span class="about-affil">St. Louis Area Food Pantry Coalition</span></div>
   </div>
   <div class="about-card">
