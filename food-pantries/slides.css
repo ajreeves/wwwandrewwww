@@ -686,13 +686,14 @@ body {
 
 .reveal section.about-slide .about-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 44px;
 }
 
 .reveal section.about-slide .about-card {
-  padding: 9px 9px 11px;
+  padding: 6px 6px 7px;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.3);
@@ -700,9 +701,9 @@ body {
 }
 
 .reveal section.about-slide .about-card img {
-  width: 100%;
-  margin-bottom: 7px;
-  aspect-ratio: 1 / 1;
+  width: min(100%, 190px);
+  height: 190px;
+  margin: 0 auto 5px;
   object-fit: cover;
   object-position: 50% 25%;
   border: 1px solid rgba(31, 41, 55, 0.14);
@@ -736,13 +737,13 @@ body {
 .reveal section.about-slide .about-name {
   margin-bottom: 2px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.55em;
+  font-size: 0.46em;
   line-height: 1.18;
 }
 
 .reveal section.about-slide .about-title {
   color: #4b5563;
-  font-size: 0.46em;
+  font-size: 0.38em;
   line-height: 1.2;
 }
 
@@ -791,6 +792,10 @@ body {
   width: 162px;
   height: 34px;
   object-fit: contain;
+}
+
+.deck-footer-left img[src*="Foodbank_logo-color.svg"] {
+  width: 120px;
 }
 
 .deck-footer-left span,
