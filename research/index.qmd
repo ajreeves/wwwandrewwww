@@ -108,6 +108,110 @@ document.addEventListener("DOMContentLoaded", function () {
   const key = "research-list-view";
   const allowed = new Set(["editorial", "compact", "grid"]);
 
+  function normalizeListingCards() {
+    const cards = listing.querySelectorAll(".quarto-post");
+    cards.forEach((card) => {
+      let thumbnail = card.querySelector(".thumbnail");
+      if (!thumbnail) {
+        thumbnail = document.createElement("div");
+        thumbnail.className = "thumbnail is-placeholder";
+        const imgTop = document.createElement("p");
+        imgTop.className = "card-img-top";
+        const placeholder = document.createElement("span");
+        placeholder.className = "thumbnail-image is-placeholder";
+        placeholder.setAttribute("aria-hidden", "true");
+        imgTop.appendChild(placeholder);
+        thumbnail.appendChild(imgTop);
+        card.insertBefore(thumbnail, card.firstChild);
+      }
+
+      let body = card.querySelector(".body");
+      if (!body) {
+        body = document.createElement("div");
+        body.className = "body";
+        const metadata = card.querySelector(".metadata");
+        if (metadata) {
+          card.insertBefore(body, metadata);
+        } else {
+          card.appendChild(body);
+        }
+      }
+
+      if (!body.querySelector(".listing-title")) {
+        const title = document.createElement("h3");
+        title.className = "no-anchor listing-title is-placeholder";
+        const placeholder = document.createElement("span");
+        placeholder.setAttribute("aria-hidden", "true");
+        placeholder.textContent = "\u00a0";
+        title.appendChild(placeholder);
+        body.insertBefore(title, body.firstChild);
+      }
+
+      if (!body.querySelector(".listing-categories")) {
+        const categories = document.createElement("div");
+        categories.className = "listing-categories is-placeholder";
+        const description = body.querySelector(".listing-description");
+        if (description) {
+          body.insertBefore(categories, description);
+        } else {
+          body.appendChild(categories);
+        }
+      }
+
+      let description = body.querySelector(".listing-description");
+      if (!description) {
+        description = document.createElement("div");
+        description.className = "delink listing-description is-placeholder";
+        const p = document.createElement("p");
+        p.setAttribute("aria-hidden", "true");
+        p.textContent = "\u00a0";
+        description.appendChild(p);
+        body.appendChild(description);
+      } else if (!description.textContent.trim()) {
+        description.classList.add("is-placeholder");
+      }
+
+      let metadata = card.querySelector(".metadata");
+      if (!metadata) {
+        metadata = document.createElement("div");
+        metadata.className = "metadata is-placeholder";
+        card.appendChild(metadata);
+      }
+
+      let metadataLink = metadata.querySelector("a");
+      if (!metadataLink) {
+        metadata.classList.add("is-placeholder");
+        metadataLink = document.createElement("a");
+        metadataLink.className = "no-external";
+        metadata.appendChild(metadataLink);
+      }
+
+      if (!metadata.querySelector(".listing-date")) {
+        const year = document.createElement("div");
+        year.className = "listing-date";
+        year.setAttribute("aria-hidden", "true");
+        year.textContent = "\u00a0";
+        metadataLink.appendChild(year);
+      }
+
+      if (!metadata.querySelector(".listing-journal_name")) {
+        const journal = document.createElement("div");
+        journal.className = "metadata-value listing-journal_name";
+        journal.setAttribute("aria-hidden", "true");
+        journal.textContent = "\u00a0";
+        metadataLink.appendChild(journal);
+      }
+
+      if (!metadata.querySelector(".listing-publication_type")) {
+        const type = document.createElement("div");
+        type.className = "metadata-value listing-publication_type";
+        type.setAttribute("aria-hidden", "true");
+        type.textContent = "\u00a0";
+        metadataLink.appendChild(type);
+      }
+    });
+  }
+
   function applyView(view) {
     const chosen = allowed.has(view) ? view : "editorial";
     listing.classList.remove("view-editorial", "view-compact", "view-grid");
@@ -133,10 +237,17 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (_) {}
   }
 
+  normalizeListingCards();
   applyView(initial);
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => applyView(btn.dataset.view));
   });
+
+  const listingList = listing.querySelector(".list");
+  if (listingList) {
+    const listingObserver = new MutationObserver(() => normalizeListingCards());
+    listingObserver.observe(listingList, { childList: true });
+  }
 
   const topicButtons = Array.from(document.querySelectorAll(".research-topic-chip"));
   const topicState = document.querySelector("[data-topic-state]");
