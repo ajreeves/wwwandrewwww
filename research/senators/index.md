@@ -1,7 +1,7 @@
 ---
 title: 'All the President''s Senators: Presidential Co-Partisans and the Allocation of Federal Grants'
 date: 2017-01-01
-description: "Research on American political institutions and democratic governance."
+description: "Presidents direct more federal grants to states represented by co-partisan senators, shaping distributive politics."
 categories: ['Distributive Politics', 'Presidential Particularism', 'Partisanship', 'Intergovernmental Relations', 'Quantitative Methods']
 publication_type: "article"
 tags: ['Distributive Politics', 'Presidential Particularism', 'Partisanship', 'Intergovernmental Relations', 'Quantitative Methods']
@@ -13,6 +13,26 @@ pdf: "../../papers/senators.pdf"
 ---
 
 ![Featured image for All the President''s Senators: Presidential Co-Partisans and the Allocation of Federal Grants](featured.png){.featured-image}
+
+## Research Question
+
+Do presidents steer federal grants toward states represented by senators from the president's own party?
+
+## Main Finding
+
+States with more presidential co-partisan senators receive a larger share of federal grant spending. The relationship is strongest where presidents can coordinate most effectively with aligned Senate delegations.
+
+## Research Design
+
+State-year panel analysis of distributive outcomes, estimating how Senate co-partisanship conditions federal grant allocation over time.
+
+## Data Employed
+
+Federal grant spending data linked to state political variables, including Senate delegation partisanship and presidential alignment, across multiple administrations.
+
+## Substantive Importance
+
+The study shows that distributive politics is jointly shaped by executive priorities and legislative partisan alignment. It clarifies one mechanism through which national partisan coalitions translate into unequal geographic policy benefits.
 
 ## Research Areas
 

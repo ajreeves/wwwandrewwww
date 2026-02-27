@@ -1,7 +1,7 @@
 ---
 title: "Pedagogical Value of Polling Place Observation By Students"
 date: 2018-01-01
-description: "Research on American political institutions and democratic governance."
+description: "Polling-place observation as experiential learning improves student knowledge, engagement, and civic efficacy."
 categories: ['Election Administration', 'Field Research', 'Pedagogy', 'Civic Engagement', 'Research Methods']
 publication_type: "article"
 tags: ['Election Administration', 'Field Research', 'Pedagogy', 'Civic Engagement', 'Research Methods']
@@ -13,6 +13,26 @@ pdf: "../../papers/polling.pdf"
 ---
 
 ![Featured image for Pedagogical Value of Polling Place Observation By Students](featured.png){.featured-image}
+
+## Research Question
+
+What are the pedagogical and civic effects of involving students in systematic polling-place observation on Election Day?
+
+## Main Finding
+
+Students who participated in polling-place observation reported meaningful gains in knowledge, interest, and engagement. The project increased confidence in conducting research and strengthened civic efficacy.
+
+## Research Design
+
+Multi-campus experiential-learning project combined with post-election assessment of student learning outcomes.
+
+## Data Employed
+
+Observations from more than 500 students across 23 colleges and universities during the 2016 election, plus post-election student survey responses about learning and engagement.
+
+## Substantive Importance
+
+The study demonstrates a scalable, nonpartisan model for integrating real-world election observation into political science training. It shows how field-based learning can simultaneously improve instruction and contribute useful evidence on election administration.
 
 ## Research Areas
 
