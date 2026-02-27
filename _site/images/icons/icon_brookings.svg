@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="icons_lineart #ba0c2f red fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .c {
+        fill: #b90c2f;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="c" d="m55.04,34V9h-2v2h-2v-2h-6v2h-2v-2h-2v13h-4v3h-2v-2.64l-2.94-3.07-3.06,3.06v2.65h-2v-3h-4v-13h-2v2h-2v-2h-6v2h-2v-2h-2v25H3.96v12h.08v14h23v-7.62c1.06-.99,3.83-1.38,5.44-1.38.9,0,3.53.26,4.56,1.35v7.65h23v-26h-5Zm-2,4v7h-10v-12h10v5Zm-44,7h-3.08v-5h3.08v5Zm2-12h10v12h-10v-12Zm10-2h-10v-13h10v13Zm2,1h18v13h-18v-13Zm30-1h-10v-13h10v13Zm-6-18v-2h2v2h4v3h-10v-3h4Zm-22,11v3h6v-3.82l1.03-1.03.97,1.01v3.83h6v-3h2v6h-18v-6h2Zm-10-11v-2h2v2h4v3h-10v-3h4Zm-9.08,23h3.08v2h-3.08v-2Zm.08,22v-11h3v11h-3Zm15,0h-10v-11h10v11Zm18,0v-6.31l-.17-.25c-1.61-2.37-5.9-2.44-6.39-2.44-.56,0-5.51.07-7.24,2.4l-.2.27v6.33h-2v-11h18v11h-2Zm4,0v-11h10v11h-10Zm15,0h-3v-11h3v11Zm-3-13v-5h3v5h-3Zm0-7v-2h3v2h-3Zm-8-15v-2h2v2h-2Zm-34,0v-2h2v2h-2Zm34,17h2v2h-2v-2Zm-30,2h-2v-2h2v2Zm2-5h-2v-2h2v2Zm28,0h-2v-2h2v2Zm2,12h2v2h-2v-2Zm-36,0h2v2h-2v-2Zm12-6h6v-8h-6v8Zm2-6h2v4h-2v-4Zm6-2v8h6v-8h-6Zm4,6h-2v-4h2v4Z"/>
+</svg>

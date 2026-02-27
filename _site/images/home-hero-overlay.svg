@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Subtle editorial linework overlay">
+  <defs>
+    <style>
+      .ink { stroke: #1f2a33; stroke-opacity: .14; fill: none; stroke-width: 1.1; }
+      .ink-light { stroke: #1f2a33; stroke-opacity: .09; fill: none; stroke-width: .9; }
+      .accent { stroke: #8e1839; stroke-opacity: .20; fill: none; stroke-width: 1.2; }
+      .dot { fill: #1f2a33; fill-opacity: .16; }
+      .dot-accent { fill: #8e1839; fill-opacity: .22; }
+    </style>
+  </defs>
+
+  <path class="ink" d="M 80 170 L 1510 170"/>
+  <path class="ink" d="M 80 470 L 1510 470"/>
+  <path class="ink-light" d="M 140 760 L 1480 760"/>
+
+  <path class="ink" d="M 240 70 L 240 820"/>
+  <path class="ink-light" d="M 760 70 L 760 820"/>
+  <path class="ink" d="M 1280 70 L 1280 820"/>
+
+  <path class="ink-light" d="M 180 700 C 410 540, 590 350, 820 210"/>
+  <path class="ink-light" d="M 920 640 C 1040 520, 1180 420, 1400 280"/>
+  <path class="accent" d="M 320 560 C 520 470, 640 360, 860 240"/>
+
+  <circle class="dot" cx="240" cy="170" r="2.8"/>
+  <circle class="dot" cx="760" cy="170" r="2.8"/>
+  <circle class="dot-accent" cx="1280" cy="170" r="3"/>
+
+  <circle class="dot" cx="240" cy="470" r="2.8"/>
+  <circle class="dot-accent" cx="760" cy="470" r="3"/>
+  <circle class="dot" cx="1280" cy="470" r="2.8"/>
+
+  <circle class="dot" cx="500" cy="420" r="2.4"/>
+  <circle class="dot" cx="980" cy="390" r="2.4"/>
+  <circle class="dot-accent" cx="1120" cy="320" r="2.4"/>
+</svg>

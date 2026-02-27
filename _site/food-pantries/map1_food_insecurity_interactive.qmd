@@ -1,0 +1,27 @@
+---
+title: ""
+format:
+  html:
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<link rel="stylesheet" href="map_fullscreen.css">
+```
+
+```{r}
+source("../code/build_presentation_leaflet_maps.R")
+maps <- build_presentation_leaflet_maps(
+  tract_path = "../output/stl_food_access_tracts_reporting.gpkg",
+  pantry_path = "../data/pantry_geocoded.rds",
+  insecurity_csv_path = "../food_insecurity.csv",
+  desert_csv_path = "../food_pantry_desert.csv",
+  compare_csv_path = "../output/maps/food_pantry_source_comparison_sites.csv",
+  use_online_tiles = TRUE
+)
+maps$map_food_insecurity
+```
