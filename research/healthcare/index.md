@@ -1,10 +1,10 @@
 ---
 title: 'Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans'
 date: 2014-01-01
-description: "Governors receive credit or blame for Medicaid expansion decisions. Voters in states that expanded Medicaid were more likely to support incumbent governors, especially when they perceived personal or community benefits."
-categories: ['Public Policy', 'Electoral Accountability', 'State Politics', 'Quantitative Methods', 'Retrospective Voting']
+description: "Using roughly 120,000 survey responses across the Clinton and Obama reform battles, the study finds that party identification dominates support for reform while demographic effects are comparatively weak."
+categories: ['Health Policy', 'Public Opinion', 'Partisanship', 'Elite Cues', 'Quantitative Methods']
 publication_type: "article"
-tags: ['Public Policy', 'Electoral Accountability', 'State Politics', 'Quantitative Methods', 'Retrospective Voting']
+tags: ['Health Policy', 'Public Opinion', 'Partisanship', 'Elite Cues', 'Quantitative Methods']
 journal_name: "Journal of Health Politics, Policy and Law"
 volume: "39"
 issue: "4"
@@ -16,27 +16,27 @@ pdf: "../../papers/healthcare.pdf"
 
 ## Research Question
 
-How do voters respond to policy changes in Medicaid, particularly in terms of political accountability for governors?
+What explains support for the Clinton and Obama health care plans, and how did opinion change over each legislative debate?
 
 ## Main Finding
 
-Governors receive credit or blame for Medicaid expansion decisions. Voters in states that expanded Medicaid were more likely to support incumbent governors, especially when they perceived personal or community benefits.
+Party identification is the strongest predictor of support for both plans. After controlling for partisanship, demographic predictors are generally weak, with little evidence that Clinton or Obama "lost" seniors, Black voters, or wealthy voters over time; shifts in support track elite partisan rhetoric.
 
 ## Research Design
 
-Difference-in-differences analysis comparing political attitudes and electoral outcomes in Medicaid expansion and non-expansion states before and after policy changes.
+Individual-level analyses of support during the Clinton (1993-1994) and Obama (2009-2010) debates, combining pooled models, poll-specific estimates, and over-time analysis of elite cue environments.
 
 ## Data Employed
 
-Public opinion surveys and gubernatorial election results, matched with state-level Medicaid expansion decisions and health coverage statistics.
+Approximately 120,000 responses from 126 national survey questions fielded during the two reform debates, combined with measures of elite partisan rhetoric in media coverage.
 
 ## Substantive Importance
 
-The paper illustrates how major public policy changes translate into electoral accountability, even for policies that are complex and administered at multiple levels of government.
+The study shows that reform coalitions rise and fall mainly through partisan cue environments, not broad demographic realignment. It highlights the importance of elite consensus within a president's party when pursuing major social policy.
 
 ## Research Areas
 
-Public Policy, Electoral Accountability, State Politics, Quantitative Methods, Retrospective Voting
+Health Policy, Public Opinion, Partisanship, Elite Cues, Quantitative Methods
 
 ## Citation
 

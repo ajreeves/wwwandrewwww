@@ -1,7 +1,7 @@
 ---
 title: "Make it Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters"
 date: 2011-01-01
-description: "Presidents gain electoral support in counties that receive disaster declarations and federal assistance, but only when the response is timely and well-publicized. Voters appear to reward presidents for responsiveness, not just for objective conditions."
+description: "Voters punish presidents and governors for severe weather damage, but they react even more strongly to government actions. Electoral responses track whether officials request, grant, or deny disaster assistance."
 categories: ['Disaster Politics', 'Presidential Accountability', 'Retrospective Voting', 'County-Level Analysis', 'Distributive Politics']
 publication_type: "article"
 tags: ['Disaster Politics', 'Presidential Accountability', 'Retrospective Voting', 'County-Level Analysis', 'Distributive Politics']
@@ -16,23 +16,23 @@ pdf: "../../papers/rain.pdf"
 
 ## Research Question
 
-Do voters reward or punish presidents for natural disasters, and does the distribution of federal disaster aid affect electoral outcomes?
+Do voters punish leaders for natural disasters, and can they distinguish uncontrollable events from the choices presidents and governors make in response?
 
 ## Main Finding
 
-Presidents gain electoral support in counties that receive disaster declarations and federal assistance, but only when the response is timely and well-publicized. Voters appear to reward presidents for responsiveness, not just for objective conditions.
+Electorates punish incumbents for severe weather, but these effects are smaller than voter responses to official behavior. When governors request aid and presidents deny it, presidents are punished while governors are rewarded.
 
 ## Research Design
 
-County-level analysis of presidential elections from 1988 to 2004, using event-study designs to isolate the effects of disaster aid on vote share.
+County-level analysis of gubernatorial and presidential elections from 1970 to 2006, estimating effects of weather damage and disaster-response decisions.
 
 ## Data Employed
 
-FEMA disaster declaration records, county-level presidential vote returns, and timing of federal relief announcements.
+County-level election returns, severe-weather damage data, and records on disaster declaration requests, approvals, and denials.
 
 ## Substantive Importance
 
-This study shows how electoral accountability can function even in the face of uncontrollable events. It also demonstrates how presidents use disasters to enhance their reelection prospects through visible governance.
+The study shows that democratic accountability can be more discerning than simple blind retrospection: voters respond to both outcomes and institutional responsibility for response decisions.
 
 ## Research Areas
 

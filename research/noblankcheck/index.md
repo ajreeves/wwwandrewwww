@@ -28,6 +28,10 @@ The book integrates multiple original survey experiments with observational data
 
 The authors use a rich set of nationally representative surveys and survey experiments fielded between 2017 and 2020. These include measures of support for unilateral action, partisan and ideological identification, trust in government, and contextual cues like crisis or opposition from Congress.
 
+## Substantive Importance
+
+The book reframes debates over executive power by showing that the public evaluates not just policy outcomes but also the legitimacy of the process used to achieve them. It suggests mass attitudes can meaningfully constrain presidential unilateralism and therefore serve as a democratic guardrail.
+
 ## Research Areas
 
 Presidential Power, Public Opinion, Democratic Accountability, Survey Experiments, Partisanship

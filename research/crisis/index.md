@@ -1,10 +1,10 @@
 ---
 title: "Public Opinion and Public Support in Crisis Management"
 date: 2021-01-01
-description: "Presidents are more likely to act unilaterally during national crises, especially when the public demands swift action and institutional constraints are relaxed. The likelihood of unilateral action increases in response to crises in both foreign and domestic policy domains."
-categories: ['Crisis Management', 'Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability']
+description: "In crises, citizens judge leaders not only by outcomes but by visible response. Electoral incentives can push executives toward strategic, targeted crisis responses, especially in the context of natural disasters."
+categories: ['Crisis Management', 'Disaster Politics', 'Public Opinion', 'Democratic Accountability', 'Federalism']
 publication_type: "article"
-tags: ['Crisis Management', 'Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability']
+tags: ['Crisis Management', 'Disaster Politics', 'Public Opinion', 'Democratic Accountability', 'Federalism']
 journal_name: "Oxford University Press"
 pdf: "../../papers/crisis.pdf"
 ---
@@ -13,27 +13,27 @@ pdf: "../../papers/crisis.pdf"
 
 ## Research Question
 
-How do presidents use unilateral executive tools during national crises, and how does crisis influence their likelihood of acting alone?
+How do public opinion, voter accountability, and electoral incentives shape executive crisis management, especially in natural-disaster response?
 
 ## Main Finding
 
-Presidents are more likely to act unilaterally during national crises, especially when the public demands swift action and institutional constraints are relaxed. The likelihood of unilateral action increases in response to crises in both foreign and domestic policy domains.
+Crises heighten attention to executive performance, and voters often respond to both disaster impacts and government action. This creates incentives for leaders to manage blame, claim credit, and target response in electorally valuable settings.
 
 ## Research Design
 
-Theoretical modeling combined with empirical analysis of unilateral presidential actions from 1945 to 2006, including executive orders and other directives.
+Synthetic review chapter that integrates research on crisis management, federal disaster response, voter retrospection, and executive accountability.
 
 ## Data Employed
 
-Historical data on presidential directives and crises, categorized by type and severity, along with institutional control variables.
+Evidence synthesized from prior studies using election returns, survey data, media analysis, and administrative records on disaster response.
 
 ## Substantive Importance
 
-This paper contributes to our understanding of how emergency conditions alter the balance of power in American government. It raises important normative questions about democratic accountability during times of crisis.
+The chapter clarifies how democratic accountability operates under stress, showing that crisis governance is shaped by institutions, political incentives, and public reactions to executive decisions.
 
 ## Research Areas
 
-Crisis Management, Presidential Power, Public Opinion, Institutional Constraints, Democratic Accountability
+Crisis Management, Disaster Politics, Public Opinion, Democratic Accountability, Federalism
 
 ## Citation
 

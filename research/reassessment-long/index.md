@@ -1,10 +1,10 @@
 ---
 title: "A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation"
 date: 2003-01-01
-description: "The authors argue for a broader reassessment of presidential effectiveness that includes institutional leadership, long-term policy change, and normative considerations. They caution against over-reliance on popularity or legislative tallies as measures of presidential success."
-categories: ['Electoral Politics', 'Institutional Design', 'Normative Theory', 'Democratic Accountability']
+description: "This reassessment shows that influential findings about presidential Electoral College strategy do not hold when the original models are correctly estimated."
+categories: ['Campaign Strategy', 'Presidential Elections', 'Replication', 'Quantitative Methods', 'Research Transparency']
 publication_type: "article"
-tags: ['Campaign Strategy', 'Presidential Elections', 'Institutional Design', 'Normative Theory', 'Democratic Accountability']
+tags: ['Campaign Strategy', 'Presidential Elections', 'Replication', 'Quantitative Methods', 'Research Transparency']
 journal_name: "Typescript"
 volume: "Typescript"
 pdf: "../../papers/reassessment-long.pdf"
@@ -14,27 +14,27 @@ pdf: "../../papers/reassessment-long.pdf"
 
 ## Research Question
 
-How should we assess the effectiveness of the American presidency, and what metrics capture success beyond short-term approval or policy wins?
+Do classic claims about how presidential campaigns form Electoral College strategy and allocate resources survive replication with the correct methods?
 
 ## Main Finding
 
-The authors argue for a broader reassessment of presidential effectiveness that includes institutional leadership, long-term policy change, and normative considerations. They caution against over-reliance on popularity or legislative tallies as measures of presidential success.
+When the models are correctly implemented, key substantive conclusions from the original study disappear. Predictors of strategy formation and strategy effects on resource allocation are no longer robust.
 
 ## Research Design
 
-A conceptual and historical reassessment drawing on presidential case studies and existing theories of executive leadership.
+Methodological replication and reanalysis of a widely cited campaign-strategy study, with direct comparison between reported and correctly estimated models.
 
 ## Data Employed
 
-Historical case examples from multiple presidencies, used illustratively to support normative and institutional arguments.
+State-level campaign-strategy and allocation data from presidential elections (1988-1996), re-estimated using the methods claimed in the original article.
 
 ## Substantive Importance
 
-This work encourages scholars and citizens to evaluate presidents in terms of democratic values, institutional stewardship, and enduring impact–-not just short-term wins. It reframes how presidential greatness and failure are understood.
+The paper demonstrates the importance of replication and model transparency in cumulative social science, especially when influential findings shape broader literatures.
 
 ## Research Areas
 
-Campaign Strategy, Presidential Elections, Institutional Design, Normative Theory, Democratic Accountability
+Campaign Strategy, Presidential Elections, Replication, Quantitative Methods, Research Transparency
 
 ## Citation
 

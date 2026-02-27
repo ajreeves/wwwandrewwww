@@ -1,10 +1,10 @@
 ---
 title: 'Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power'
 date: 2022-01-01
-description: "Presidents frequently receive little or no electoral benefit from policy successes, especially when those policies are complex or lack visibility. Voters often fail to connect improved outcomes with presidential action."
-categories: ['Presidential Power', 'Legislative Politics', 'Democratic Accountability', 'Institutional Constraints', 'Quantitative Methods']
+description: "When Congress blocks policy change, unilateral action still carries public costs. Citizens often evaluate presidents more negatively for acting alone than for accepting the status quo."
+categories: ['Presidential Power', 'Public Opinion', 'Unilateral Action', 'Legislative Gridlock', 'Survey Experiments']
 publication_type: "article"
-tags: ['Presidential Power', 'Legislative Behavior', 'Democratic Accountability', 'Institutional Constraints', 'Quantitative Methods']
+tags: ['Presidential Power', 'Public Opinion', 'Unilateral Action', 'Legislative Gridlock', 'Survey Experiments']
 journal_name: "Legislative Studies Quarterly"
 volume: "47"
 issue: "2"
@@ -16,27 +16,27 @@ pdf: "../../papers/nothing.pdf"
 
 ## Research Question
 
-Do presidents receive electoral rewards for successful policy achievements, or does good governance often go unnoticed?
+When Congress blocks a president's agenda, does unilateral action improve or worsen public evaluations relative to policy inaction?
 
 ## Main Finding
 
-Presidents frequently receive little or no electoral benefit from policy successes, especially when those policies are complex or lack visibility. Voters often fail to connect improved outcomes with presidential action.
+Across multiple policy domains, respondents react negatively when presidents use unilateral power instead of leaving policy unchanged. These penalties are largest among policy opponents but are often present even among policy supporters.
 
 ## Research Design
 
-A combination of case studies and empirical analysis examining whether measurable policy achievements lead to changes in presidential approval or vote share.
+National survey experiments that compare evaluations of presidents who face congressional inaction and then either accept the status quo or act unilaterally.
 
 ## Data Employed
 
-Case-specific political data, including public opinion trends and electoral results, linked to major policy actions across multiple administrations.
+Survey data from a national sample with experimental vignettes on health care, immigration, and international sanctions, including respondent policy preferences and rule-of-law commitments.
 
 ## Substantive Importance
 
-This paper challenges assumptions about democratic accountability, suggesting that political incentives may not align with effective governance. It raises important questions about how and whether voters reward competence.
+The study highlights a core dilemma of modern presidency under gridlock: unilateral action may advance policy goals but can impose political costs rooted in public concern over constitutional process.
 
 ## Research Areas
 
-Presidential Power, Legislative Behavior, Democratic Accountability, Institutional Constraints, Quantitative Methods
+Presidential Power, Public Opinion, Unilateral Action, Legislative Gridlock, Survey Experiments
 
 ## Citation
 

@@ -1,10 +1,10 @@
 ---
 title: 'Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment'
 date: 2025-01-01
-description: "Local election officials often see themselves as nonpartisan"
-categories: ['Election Administration', 'Elite Interviews', 'Democratic Accountability', 'Institutional Design', 'Local Government']
+description: "Most poll workers who served in recent elections remain willing to return. Retention is strongest when workers feel valued and supported, and weaker when they observe many voter problems at the polls."
+categories: ['Election Administration', 'Poll Workers', 'Survey Research', 'Democratic Accountability', 'Local Government']
 publication_type: "article"
-tags: ['Election Administration', 'Elite Interviews', 'Democratic Accountability', 'Institutional Design', 'Local Government']
+tags: ['Election Administration', 'Poll Workers', 'Survey Research', 'Democratic Accountability', 'Local Government']
 journal_name: "Election Law Journal"
 volume: "24"
 issue: "1"
@@ -16,27 +16,27 @@ pdf: "../../papers/guardians.pdf"
 
 ## Research Question
 
-How do bureaucratic officials responsible for election administration perceive their role in maintaining electoral integrity and democratic norms?
+What factors influence whether poll workers are willing to serve again after recent high-conflict elections?
 
 ## Main Finding
 
-Local election officials often see themselves as nonpartisan
+Contrary to common expectations, prior poll workers are generally willing to return. Feeling that their work is consequential, valued, respected, and supported predicts retention, while voter and watcher conflict and training experiences have limited direct effects.
 
 ## Research Design
 
-Qualitative analysis based on in-depth interviews with local election officials across multiple states.
+Survey-based analysis of poll workers that evaluates how motivation, support, conflict, and observed voter difficulties shape intentions to work future elections.
 
 ## Data Employed
 
-Dozens of structured interviews with county and municipal election officials, supplemented by content analysis of official communications and training materials.
+Poll-worker survey responses measuring prior experiences, perceptions of recognition and support, exposure to conflict, and willingness to return.
 
 ## Substantive Importance
 
-The paper sheds light on how street-level bureaucrats in the electoral system think about their responsibilities, offering a hopeful counterpoint to concerns about partisan capture of election administration.
+The findings identify practical levers for election administrators seeking to stabilize poll-worker capacity in challenging environments: recognition, support, and reducing voter-facing administrative problems.
 
 ## Research Areas
 
-Election Administration, Elite Interviews, Democratic Accountability, Institutional Design, Local Government
+Election Administration, Poll Workers, Survey Research, Democratic Accountability, Local Government
 
 ## Citation
 

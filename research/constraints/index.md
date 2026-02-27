@@ -1,10 +1,10 @@
 ---
 title: "The Public Cost of Unilateral Action"
 date: 2018-01-01
-description: "Legal and political constraints significantly reduce the likelihood that presidents will act unilaterally. Presidents are more likely to issue executive orders when courts and Congress are less likely to oppose them, indicating that constraints are binding, not merely symbolic."
-categories: ['Presidential Power', 'Institutional Constraints', 'Separation Of Powers', 'Formal Theory', 'Quantitative Methods']
+description: "The public penalizes presidents who use unilateral power instead of legislation. These costs are often largest among people who agree with the policy outcome, suggesting public opinion can constrain unilateral action."
+categories: ['Presidential Power', 'Public Opinion', 'Unilateral Action', 'Democratic Accountability', 'Survey Experiments']
 publication_type: "article"
-tags: ['Presidential Power', 'Institutional Constraints', 'Separation Of Powers', 'Formal Theory', 'Quantitative Methods']
+tags: ['Presidential Power', 'Public Opinion', 'Unilateral Action', 'Democratic Accountability', 'Survey Experiments']
 journal_name: "American Journal of Political Science"
 volume: "62"
 issue: "2"
@@ -16,27 +16,27 @@ pdf: "../../papers/constraints.pdf"
 
 ## Research Question
 
-How do legal and political constraints shape the use of unilateral executive power by U.S. presidents?
+How does the public evaluate policy outcomes achieved through unilateral presidential action versus legislation?
 
 ## Main Finding
 
-Legal and political constraints significantly reduce the likelihood that presidents will act unilaterally. Presidents are more likely to issue executive orders when courts and Congress are less likely to oppose them, indicating that constraints are binding, not merely symbolic.
+Across multiple policy domains, respondents evaluate presidents and policies more negatively when outcomes are achieved unilaterally rather than through Congress. These penalties are often strongest among policy supporters, indicating principled concern over how power is exercised.
 
 ## Research Design
 
-The study employs formal theory and an empirical analysis of unilateral executive orders from 1945 to 2012, evaluating when and why presidents choose to act without Congress.
+The study combines three nationally representative survey experiments with an observational analysis linking general attitudes toward unilateral action to evaluations of historical presidential actions.
 
 ## Data Employed
 
-Archival data on executive orders, legislative gridlock indicators, judicial context, and interbranch conflict.
+Experimental survey data across policy scenarios and observational survey evidence on evaluations of unilateral actions by presidents from Lincoln through Obama.
 
 ## Substantive Importance
 
-The paper challenges the idea that presidents can act unilaterally at will. It shows how institutional design and interbranch relationships limit executive power, deepening our understanding of the presidency and separation of powers.
+The paper shows that democratic accountability concerns apply not only to policy outcomes but also to the process used to produce them. It suggests presidents may face electoral incentives to prefer legislating through Congress over acting alone.
 
 ## Research Areas
 
-Presidential Power, Institutional Constraints, Separation Of Powers, Formal Theory, Quantitative Methods
+Presidential Power, Public Opinion, Unilateral Action, Democratic Accountability, Survey Experiments
 
 ## Citation
 

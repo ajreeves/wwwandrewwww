@@ -1,12 +1,12 @@
 ---
 title: 'Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform'
 date: 2014-01-01
-description: "People are more supportive of disaster aid when it is framed as universal and not targeted toward specific groups. This reflects a general preference for broad-based government programs over particularistic ones."
-categories: ['Legislative Politics', 'Electoral Politics', 'Research Methods', 'Public Opinion', 'Quantitative Methods']
+description: "The study explains why the 1867 Second Reform Act passed under a minority Conservative government after failing under a majority Liberal one, emphasizing how the structure of parliamentary debate changed."
+categories: ['Legislative Politics', 'Electoral Reform', 'Historical Political Economy', 'Text Analysis', 'Quantitative Methods']
 publication_type: "article"
-tags: ['Legislative Behavior', 'Electoral Behavior', 'Survey Experiments', 'Public Opinion', 'Quantitative Methods']
+tags: ['Legislative Politics', 'Electoral Reform', 'Historical Political Economy', 'Text Analysis', 'Quantitative Methods']
 journal_name: "Legislative Studies Quarterly"
-volume: "49"
+volume: "39"
 issue: "4"
 pages: "467--502"
 pdf: "../../papers/leap.pdf"
@@ -16,27 +16,27 @@ pdf: "../../papers/leap.pdf"
 
 ## Research Question
 
-How do public attitudes about government spending on disaster relief change depending on whether the aid is framed as targeted or universal?
+Why did electoral reform fail in 1866 but pass in 1867 in the same Parliament with no intervening election?
 
 ## Main Finding
 
-People are more supportive of disaster aid when it is framed as universal and not targeted toward specific groups. This reflects a general preference for broad-based government programs over particularistic ones.
+Partisanship strongly structured roll-call voting, but passage depended on debate becoming more focused and less multidimensional under Conservative management. Narrowing the agenda helped assemble a winning coalition for reform.
 
 ## Research Design
 
-Survey experiments that vary how disaster relief spending is described and identify how framing affects public support.
+Quantitative historical analysis of parliamentary divisions and speeches on reform in 1866-1867, combining vote analysis with text-based analysis of legislative rhetoric.
 
 ## Data Employed
 
-Original nationally representative survey experiments with randomized framing of disaster aid policy scenarios.
+An original dataset of 60 reform-related parliamentary votes and more than 3,200 reform-related speeches from Commons debates.
 
 ## Substantive Importance
 
-The findings offer insights into how public opinion can constrain or enable government responsiveness to crises, depending on perceptions of fairness and distributional equity.
+The paper clarifies how major institutional reform can hinge on agenda structure and debate dimensionality, not only party seat counts, in weakly institutionalized party systems.
 
 ## Research Areas
 
-Legislative Behavior, Electoral Behavior, Survey Experiments, Public Opinion, Quantitative Methods
+Legislative Politics, Electoral Reform, Historical Political Economy, Text Analysis, Quantitative Methods
 
 ## Citation
 

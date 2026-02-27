@@ -1,10 +1,10 @@
 ---
 title: "The Electoral College and Presidential Particularism"
 date: 2014-01-01
-description: "The Electoral College incentivizes campaigns to focus disproportionately on swing states and overlook safe states, leading to unequal representation and resource allocation. The system magnifies the influence of a small number of voters in competitive areas."
-categories: ['Electoral Politics', 'Swing States', 'Democratic Accountability', 'Institutional Design']
+description: "The Electoral College creates incentives for presidents to pursue particularistic policies that favor electorally pivotal constituencies, especially swing states, rather than national universalism."
+categories: ['Presidential Politics', 'Electoral Institutions', 'Distributive Politics', 'Political Inequality', 'Democratic Accountability']
 publication_type: "article"
-tags: ['Campaign Strategy', 'Swing States', 'Presidential Elections', 'Democratic Accountability', 'Institutional Design']
+tags: ['Presidential Politics', 'Electoral Institutions', 'Distributive Politics', 'Political Inequality', 'Democratic Accountability']
 journal_name: "Boston University Law Review"
 volume: "94"
 issue: "3"
@@ -16,27 +16,27 @@ pdf: "../../papers/electoralcollege.pdf"
 
 ## Research Question
 
-How does the Electoral College shape presidential campaign strategies and voter representation?
+How does the Electoral College shape incentives for presidents to distribute policy benefits and government action across places?
 
 ## Main Finding
 
-The Electoral College incentivizes campaigns to focus disproportionately on swing states and overlook safe states, leading to unequal representation and resource allocation. The system magnifies the influence of a small number of voters in competitive areas.
+The Electoral College's unequal weighting of states incentivizes presidents to target benefits to electorally valuable constituencies. Evidence from grants, tariffs, and disaster declarations illustrates systematic presidential particularism.
 
 ## Research Design
 
-Empirical analysis of campaign appearances, spending, and media coverage during recent presidential elections, combined with simulation models of counterfactual election outcomes.
+Institutional and legal analysis paired with empirical illustrations of executive distributive behavior across policy domains.
 
 ## Data Employed
 
-Data on campaign activity from the 2000 through 2012 elections, including candidate visits and advertising, along with national vote totals.
+Evidence drawn from research on federal grant allocation, trade protection decisions, and presidential disaster declaration patterns, plus public-opinion evidence on reactions to targeted spending.
 
 ## Substantive Importance
 
-The study underscores the democratic deficits of the Electoral College, particularly in terms of unequal influence and participation. It informs ongoing debates about electoral reform and the structure of American presidential elections.
+The article challenges the view that presidents are naturally universal representatives and shows how electoral institutions can generate unequal governance across citizens and places.
 
 ## Research Areas
 
-Campaign Strategy, Swing States, Presidential Elections, Democratic Accountability, Institutional Design
+Presidential Politics, Electoral Institutions, Distributive Politics, Political Inequality, Democratic Accountability
 
 ## Citation
 

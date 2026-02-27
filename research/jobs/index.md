@@ -1,10 +1,10 @@
 ---
 title: 'The Job Market''s First Steps: Using Research Tools to Simplify the Process'
 date: 2011-01-01
-description: "Presidents often try to take credit for new jobs, but their success depends on partisan alignment and media coverage. Co-partisans are more likely to believe presidential claims, while out-partisans are skeptical or unaffected."
-categories: ['Presidential Accountability', 'Economic Voting', 'Partisanship', 'Research Methods', 'Political Communication']
+description: "This article introduces open-source tools that automate early academic job-market tasks, including collecting APSA eJobs listings and producing customized application letters with R and LaTeX."
+categories: ['Research Methods', 'Professional Development', 'Computational Tools', 'Open Source', 'Pedagogy']
 publication_type: "article"
-tags: ['Presidential Accountability', 'Economic Voting', 'Partisanship', 'Survey Experiments', 'Political Communication']
+tags: ['Research Methods', 'Professional Development', 'Computational Tools', 'Open Source', 'Pedagogy']
 journal_name: 'PS: Political Science and Politics'
 volume: "44"
 issue: "2"
@@ -16,27 +16,27 @@ pdf: "../../papers/jobs.pdf"
 
 ## Research Question
 
-How do constituents respond to presidential efforts to claim credit for local economic gains, particularly job creation?
+How can political science job candidates use research tools to reduce repetitive work in collecting listings and preparing application materials?
 
 ## Main Finding
 
-Presidents often try to take credit for new jobs, but their success depends on partisan alignment and media coverage. Co-partisans are more likely to believe presidential claims, while out-partisans are skeptical or unaffected.
+The muRL workflow substantially reduces manual copy-paste work by automating job-listing extraction and letter production. It improves efficiency and reduces common application errors in high-volume searches.
 
 ## Research Design
 
-Survey experiments testing how voters react to job-related presidential credit-claiming messages under varying partisan and economic conditions.
+Methodological tutorial presenting a practical workflow using R for scraping and spreadsheet preparation and LaTeX for mail-merge letter generation.
 
 ## Data Employed
 
-Nationally representative survey experiments embedded in online panels, paired with local economic indicators and presidential messaging cues.
+APSA eJobs listings and structured job-application data entered into reusable spreadsheets and templates.
 
 ## Substantive Importance
 
-The study helps explain the limits of presidential influence on public perceptions of the economy, highlighting how partisanship mediates credit and blame in the political information environment.
+The article shows how computational research tools can be repurposed for professional workflows, allowing candidates to spend more time on substantive application content.
 
 ## Research Areas
 
-Presidential Accountability, Economic Voting, Partisanship, Survey Experiments, Political Communication
+Research Methods, Professional Development, Computational Tools, Open Source, Pedagogy
 
 ## Citation
 

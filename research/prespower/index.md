@@ -1,11 +1,11 @@
 ---
 title: "Public Opinion toward Presidential Power"
 date: 2015-01-01
-description: "Presidents are more likely to act unilaterally when public support is high and when institutional checks–-such as congressional opposition–-are weak or fragmented. The study finds that political conditions, not legal constraints, are the dominant factors in presidential decision-making."
-categories: ['Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability', 'Formal Theory']
+description: "Support for presidential powers rises with presidential approval. Citizens who rate the incumbent president more favorably are significantly more willing to endorse expanded executive authority."
+categories: ['Presidential Power', 'Public Opinion', 'Presidential Approval', 'Democratic Accountability', 'Survey Research']
 publication_type: "article"
 image: "featured.png"
-tags: ['Presidential Power', 'Public Opinion', 'Institutional Constraints', 'Democratic Accountability', 'Formal Theory']
+tags: ['Presidential Power', 'Public Opinion', 'Presidential Approval', 'Democratic Accountability', 'Survey Research']
 journal_name: "Presidential Studies Quarterly"
 volume: "45"
 issue: "4"
@@ -17,27 +17,27 @@ pdf: "../../papers/prespower.pdf"
 
 ## Research Question
 
-What constrains or enables presidential unilateral action, and how do institutions and public opinion influence executive policymaking?
+How does approval of the incumbent president shape mass support for institutional presidential powers?
 
 ## Main Finding
 
-Presidents are more likely to act unilaterally when public support is high and when institutional checks–-such as congressional opposition–-are weak or fragmented. The study finds that political conditions, not legal constraints, are the dominant factors in presidential decision-making.
+Respondents who approve of the president are significantly more supportive of presidential powers. This link suggests that political prestige can expand the range of authority citizens are willing to grant the executive.
 
 ## Research Design
 
-A formal theoretical model of executive action combined with empirical testing using time-series cross-sectional data on unilateral orders.
+Analysis of nationally representative survey data on support for specific presidential powers and evaluations of incumbent performance.
 
 ## Data Employed
 
-Executive orders and proclamations from 1945 to 2006, linked with measures of public approval, congressional composition, and political polarization.
+National survey responses measuring presidential approval and attitudes toward multiple presidential power instruments.
 
 ## Substantive Importance
 
-The paper helps reframe debates over executive power by emphasizing political incentives and constraints. It contributes to broader discussions about democratic accountability and the strategic nature of presidential governance.
+The study shows that support for executive power is not fixed; it varies with who holds office. This dynamic has implications for democratic guardrails when popular presidents seek broader authority.
 
 ## Research Areas
 
-Presidential Power, Public Opinion, Institutional Constraints, Democratic Accountability, Formal Theory
+Presidential Power, Public Opinion, Presidential Approval, Democratic Accountability, Survey Research
 
 ## Citation
 
