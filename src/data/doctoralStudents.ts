@@ -76,8 +76,13 @@ export const doctoralStudents: StudentRecord[] = [
     degree: "PhD, Economics",
     institution: "Washington University in St. Louis",
     research_description: "Doctoral committee work in economics.",
+    profile_url: "https://www.linkedin.com/in/xshin/",
+    image_url: "/images/students/aleph-shin-linkedin.png",
+    image_alt: "Screenshot of Aleph Shin's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/xshin/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
-    notes: "Current public CV lists advising relationship but not dissertation title or placement."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
   },
   {
     name: "Hyunjoo Oh",
@@ -88,8 +93,13 @@ export const doctoralStudents: StudentRecord[] = [
     institution: "Washington University in St. Louis",
     research_description: "Doctoral committee work in business and strategy.",
     current_position: "Head of Strategy, NeuroFusion Inc.",
+    profile_url: "https://www.linkedin.com/in/hyunjoo-oh/",
+    image_url: "/images/students/hyunjoo-oh-linkedin.png",
+    image_alt: "Screenshot of Hyunjoo Oh's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/hyunjoo-oh/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
-    notes: "Current position from Andrew Reeves CV; no unambiguous professional profile embedded."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
   },
   {
     name: "Lucas Boschelli",
@@ -155,9 +165,13 @@ export const doctoralStudents: StudentRecord[] = [
     research_description: "Research on public opinion, executive power, crisis politics, and presidential accountability.",
     current_position: "Data Scientist, Clayco",
     profile_url: "https://www.linkedin.com/in/zoeang/",
+    image_url: "/images/students/zoe-ang-linkedin.png",
+    image_alt: "Screenshot of Zoe Ang's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/zoeang/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
     related_publications: ["partisanship-economic-assessments", "crisis"],
-    notes: "LinkedIn profile supplied by Andrew Reeves; screenshot omitted because unauthenticated capture shows only the LinkedIn join wall."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
   },
   {
     name: "David Miller",
@@ -187,10 +201,14 @@ export const doctoralStudents: StudentRecord[] = [
     institution: "Washington University in St. Louis",
     research_description: "Work connected to public opinion, institutional context, and political behavior.",
     current_position: "Health Data Scientist, U.S. News & World Report",
-    profile_url: "https://www.usnews.com/topics/author/min-hee-seo",
+    profile_url: "https://www.linkedin.com/in/min-hee-seo/",
+    image_url: "/images/students/min-hee-seo-linkedin.png",
+    image_alt: "Screenshot of Min Hee Seo's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/min-hee-seo/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
     related_publications: ["contextual-determinants", "lines", "polling-place-quality", "polling"],
-    notes: "U.S. News author page supplied by Andrew Reeves; screenshot capture blocked by site/network protocol error."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
   },
   {
     name: "Joshua Boston",
@@ -237,8 +255,13 @@ export const doctoralStudents: StudentRecord[] = [
     institution: "Washington University in St. Louis",
     research_description: "Doctoral committee work in political science with applied quantitative connections.",
     current_position: "Statistician/Data Scientist, St. Louis County Assessor's Office",
+    profile_url: "https://www.linkedin.com/in/emily-h-moore-phd-81536710a/",
+    image_url: "/images/students/emily-moore-linkedin.png",
+    image_alt: "Screenshot of Emily Moore's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/emily-h-moore-phd-81536710a/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
-    notes: "Current position from Andrew Reeves CV; no verified professional profile embedded."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
   },
   {
     name: "Taeyong Park",
@@ -250,9 +273,13 @@ export const doctoralStudents: StudentRecord[] = [
     research_description: "Research on local economic context, voting, and quantitative methods.",
     current_position: "Assistant Teaching Professor, Statistics, Carnegie Mellon University Qatar",
     profile_url: "https://scholars.cmu.edu/7506-taeyong-park",
+    image_url: "/images/students/taeyong-park-site.png",
+    image_alt: "Screenshot of Taeyong Park's Carnegie Mellon Scholars profile.",
+    image_source: "https://scholars.cmu.edu/7506-taeyong-park",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
     related_publications: ["local-unemployment"],
-    notes: "CMU Scholars profile supplied by Andrew Reeves; screenshot omitted because automated capture includes a cookie consent modal."
+    notes: "CMU Scholars profile supplied by Andrew Reeves and verified by screenshot capture."
   },
   {
     name: "Patrick Tucker",
@@ -298,8 +325,13 @@ export const doctoralStudents: StudentRecord[] = [
     institution: "Boston University",
     research_description: "Doctoral committee work in political science.",
     current_position: "Director of Research and Training, International Consortium for Law and Development",
+    profile_url: "https://www.linkedin.com/in/lauraclucas/",
+    image_url: "/images/students/laura-lucas-linkedin.png",
+    image_alt: "Screenshot of Laura Lucas's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/lauraclucas/",
+    image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
-    notes: "Current position from Andrew Reeves CV; no verified professional profile embedded."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated profile capture."
   },
   {
     name: "Alex Whalen",
@@ -329,6 +361,11 @@ export const undergraduateHonorsTheses: StudentRecord[] = [
     institution: "Washington University in St. Louis",
     research_description: "Undergraduate honors thesis in Political Science.",
     dissertation_or_thesis_title: "The Role of Partisanship on Citizens' Evaluations of Electoral Institutions",
+    profile_url: "https://www.linkedin.com/in/elizabeth-candell-39728315a/",
+    image_url: "/images/students/elizabeth-obrand-linkedin.png",
+    image_alt: "Screenshot of Elizabeth Obrand's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/elizabeth-candell-39728315a/",
+    image_kind: "site_screenshot",
     awards: ["Winner of Antoinette Dames Prize for Outstanding Senior Honors Thesis in Political Science"]
   },
   {
@@ -341,6 +378,11 @@ export const undergraduateHonorsTheses: StudentRecord[] = [
     research_description: "Undergraduate honors thesis in Political Science.",
     dissertation_or_thesis_title: "The Politics of Capacity: No Child Left Behind",
     homepage_url: "https://sophiakeskey.net/",
+    profile_url: "https://www.linkedin.com/in/sophia-keskey-5939939b/",
+    image_url: "/images/students/sophia-keskey-linkedin.png",
+    image_alt: "Screenshot of Sophia Keskey's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/sophia-keskey-5939939b/",
+    image_kind: "site_screenshot",
     awards: ["Winner of Grossman-Alexander Prize"]
   },
   {
@@ -351,7 +393,12 @@ export const undergraduateHonorsTheses: StudentRecord[] = [
     degree: "BA, Political Science",
     institution: "Washington University in St. Louis",
     research_description: "Undergraduate honors thesis in Political Science.",
-    dissertation_or_thesis_title: "The #MeToo Movement in Politics: Party Rhetoric versus Party Action"
+    dissertation_or_thesis_title: "The #MeToo Movement in Politics: Party Rhetoric versus Party Action",
+    profile_url: "https://www.linkedin.com/in/selena-nandiwada-4143871b2/",
+    image_url: "/images/students/selena-nandiwada-linkedin.png",
+    image_alt: "Screenshot of Selena Nandiwada's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/selena-nandiwada-4143871b2/",
+    image_kind: "site_screenshot"
   },
   {
     name: "Gianni Galasso",
@@ -362,6 +409,11 @@ export const undergraduateHonorsTheses: StudentRecord[] = [
     institution: "Washington University in St. Louis",
     research_description: "Undergraduate honors thesis in Political Science.",
     dissertation_or_thesis_title: "Building Young Citizens: The Relationship Between Civic Education and Civic Engagement",
+    profile_url: "https://www.linkedin.com/in/giannigalasso/",
+    image_url: "/images/students/gianni-galasso-linkedin.png",
+    image_alt: "Screenshot of Gianni Galasso's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/giannigalasso/",
+    image_kind: "site_screenshot",
     awards: ["Winner of Antoinette Dames Prize for Outstanding Senior Honors Thesis in Political Science"]
   },
   {
@@ -372,7 +424,12 @@ export const undergraduateHonorsTheses: StudentRecord[] = [
     degree: "BA, Political Science",
     institution: "Washington University in St. Louis",
     research_description: "Undergraduate honors thesis in Political Science.",
-    dissertation_or_thesis_title: "The Electoral Effects of Natural Disasters and Disaster Response"
+    dissertation_or_thesis_title: "The Electoral Effects of Natural Disasters and Disaster Response",
+    profile_url: "https://www.linkedin.com/in/nolen-bowerman-909544178/",
+    image_url: "/images/students/nolen-bowerman-linkedin.png",
+    image_alt: "Screenshot of Nolen Bowerman's LinkedIn profile.",
+    image_source: "https://www.linkedin.com/in/nolen-bowerman-909544178/",
+    image_kind: "site_screenshot"
   }
 ];
 

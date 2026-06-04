@@ -14,5 +14,8 @@ export default defineConfig({
     })
   ],
   output: "static",
-  trailingSlash: "always"
+  trailingSlash: "always",
+  redirects: {
+    "/collaborators/": "/students/"
+  }
 });

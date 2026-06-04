@@ -162,9 +162,29 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
       undergraduateHonorsTheses.length > 0 ? (
         <div class="student-profile-list">
           {undergraduateHonorsTheses.map((student, index) => (
-            <article class={`flw-feature-card student-profile-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-              <figure class="flw-feature-media student-profile-media">
-                <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
+            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
+              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
+                {
+                  student.image_url ? (
+                    <img
+                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
+                      src={student.image_url}
+                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : student.photo_url ? (
+                    <img
+                      class="student-profile-photo"
+                      src={student.photo_url}
+                      alt={`Professional portrait of ${student.name}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
+                  )
+                }
               </figure>
               <div class="flw-feature-copy student-profile-copy">
                 <p class="kicker">{student.role} · {student.year}</p>
@@ -182,6 +202,13 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
                     <ul>
                       {student.awards.map((award) => <li>{award}</li>)}
                     </ul>
+                  </div>
+                )}
+
+                {renderProfileHref(student) && (
+                  <div class="student-link-row">
+                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
+                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
                   </div>
                 )}
               </div>

@@ -4853,6 +4853,14 @@
     padding-top: clamp(0.5rem, 1vw, 1rem);
   }
 
+  .student-page-frame .page-section-heading h2 {
+    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
   .student-profile-list {
     display: grid;
     gap: clamp(4rem, 7vw, 7rem);
@@ -4874,6 +4882,24 @@
     min-height: auto;
     overflow: visible;
     background: transparent;
+  }
+
+  .student-profile-card:not(.student-profile-card-has-screenshot) .flw-feature-media {
+    align-self: stretch;
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: unset;
+    max-height: none;
+    background: #ECEAE3;
+    background: color-mix(in srgb, var(--limestone) 60%, var(--paper) 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .student-profile-card:not(.student-profile-card-has-screenshot) .student-profile-copy {
+    min-height: 0;
+    padding-block: clamp(1.5rem, 2.5vw, 2.25rem);
   }
 
   .student-profile-card:not(.flw-feature-card-reversed) .student-profile-media-screenshot {
@@ -4914,18 +4940,26 @@
   }
 
   .student-monogram {
-    display: grid;
-    width: clamp(10rem, 16vw, 16rem);
-    aspect-ratio: 1;
-    place-items: center;
-    border: 2px solid var(--clay);
-    background: var(--ivory);
-    color: var(--rust);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     font-family: "Cormorant SC", var(--font-serif);
-    font-size: clamp(3.6rem, 6vw, 6.4rem);
+    font-size: clamp(4rem, 8vw, 7rem);
     font-weight: 600;
     letter-spacing: 0.04em;
+    color: var(--rule);
+    background: transparent;
+    border: none;
+    aspect-ratio: unset;
     line-height: 1;
+  }
+
+  .student-profile-card:not(.student-profile-card-has-screenshot) .student-monogram {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
   }
 
   .student-profile-copy {
@@ -6509,6 +6543,20 @@
       margin-left: 0;
       padding-right: clamp(4rem, 5.3vw, 5.5rem);
       padding-left: clamp(2rem, 4vw, 3.8rem);
+    }
+
+    .student-profile-card:not(.student-profile-card-has-screenshot) {
+      align-items: stretch;
+    }
+
+    .student-profile-card:not(.student-profile-card-has-screenshot) .flw-feature-copy {
+      margin-left: 0;
+      padding-left: clamp(2rem, 4vw, 3.8rem);
+    }
+
+    .student-profile-card:not(.student-profile-card-has-screenshot).flw-feature-card-reversed .flw-feature-copy {
+      margin-right: 0;
+      padding-right: clamp(2rem, 4vw, 3.8rem);
     }
 
     .work-frame {
