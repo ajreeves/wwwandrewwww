@@ -33,14 +33,24 @@ const bookDetails = {
     ],
     reception: [
       {
-        excerpt: "robust and compelling",
-        source: "Matthew Eshbaugh-Soha, Perspectives on Politics",
+        label: "Review in Perspectives on Politics",
+        reviewer: "Matthew Eshbaugh-Soha",
         url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
       },
       {
-        excerpt: "advances an argument that is not conventional",
-        source: "Kenneth Lowande, Political Science Quarterly",
+        label: "Review in Political Science Quarterly",
+        reviewer: "Kenneth Lowande",
         url: "https://academic.oup.com/psq/article/139/1/132/7512574"
+      },
+      {
+        label: "Review in Law & Liberty",
+        reviewer: "Philip A. Wallach",
+        url: "https://lawliberty.org/book-review/checking-the-american-presidency/"
+      },
+      {
+        label: "Review in Congress & the Presidency",
+        reviewer: "Andrew Rudalevige",
+        url: "https://www.tandfonline.com/doi/abs/10.1080/07343469.2024.2307327"
       }
     ],
     endorsements: [
@@ -61,16 +71,6 @@ const bookDetails = {
         scholar: "Samuel Kernell",
         affiliation: "UC San Diego",
         url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
-      }
-    ],
-    recognition: [
-      {
-        label: "Scholarly reviews",
-        text: "Reviewed in Perspectives on Politics and Political Science Quarterly."
-      },
-      {
-        label: "Citation record",
-        text: "Cambridge Core lists 23 Crossref citations for the book."
       }
     ],
     related: [
@@ -129,16 +129,6 @@ const bookDetails = {
         url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
       }
     ],
-    recognition: [
-      {
-        label: "Award",
-        text: "Winner of the 2016 Richard E. Neustadt Award from APSA's Presidents and Executive Politics Section."
-      },
-      {
-        label: "Citation record",
-        text: "Cambridge Core lists 72 Crossref citations; WashU Research Profiles lists 92 Scopus citations."
-      }
-    ],
     related: [
       "presidential-particularism-divide-dollar",
       "spending",
@@ -153,6 +143,7 @@ const bookDetails = {
       { label: "Publication date", value: "5 June 2015 (digital); 12 June 2015 (hardback/paperback)" },
       { label: "Pages", value: "248 pages" },
       { label: "ISBN", value: "9781139839341 (ebook); 9781107038714 (hardback); 9781107616813 (paperback)" },
+      { label: "Award", value: "Winner of the 2016 Richard E. Neustadt Award from APSA's Presidents and Executive Politics Section" },
       { label: "DOI", value: "10.1017/CBO9781139839341", url: "https://doi.org/10.1017/CBO9781139839341" }
     ]
   }
@@ -209,10 +200,20 @@ const relatedPublicationsFor = (slugs: string[]) =>
                       <div class="book-quote-list">
                         {details.reception.map((item) => (
                           <figure>
-                            <blockquote>“{item.excerpt}”</blockquote>
-                            <figcaption>
-                              <a href={item.url}>{item.source}</a>
-                            </figcaption>
+                            {"label" in item ? (
+                              <figcaption>
+                                <a href={item.url}>{item.label}</a>
+                                <br />
+                                {item.reviewer}
+                              </figcaption>
+                            ) : (
+                              <>
+                                <blockquote>“{item.excerpt}”</blockquote>
+                                <figcaption>
+                                  <a href={item.url}>{item.source}</a>
+                                </figcaption>
+                              </>
+                            )}
                           </figure>
                         ))}
                       </div>
@@ -234,18 +235,6 @@ const relatedPublicationsFor = (slugs: string[]) =>
                       ) : (
                         <p class="book-muted-note">No separate advance-praise endorsements were located in the verified sources used for this page.</p>
                       )}
-                    </div>
-
-                    <div class="book-detail-card">
-                      <p class="kicker">Awards and Recognition</p>
-                      <dl class="book-recognition-list">
-                        {details.recognition.map((item) => (
-                          <>
-                            <dt>{item.label}</dt>
-                            <dd>{item.text}</dd>
-                          </>
-                        ))}
-                      </dl>
                     </div>
                   </section>
 
