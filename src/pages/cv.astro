@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+---
+
+<BaseLayout title="CV" active="CV" description="Curriculum vitae summary for Andrew Reeves.">
+  <PageHeader
+    eyebrow="Curriculum Vitae"
+    title="Curriculum Vitae"
+    intro="Curriculum vitae (PDF)."
+    actionHref="/reevescv.pdf"
+    actionLabel="Download Full CV"
+  />
+
+  <section class="container-wide page-section">
+    <div class="cv-frame">
+      <iframe
+        src="/reevescv.pdf#view=FitH&navpanes=0&toolbar=0"
+        title="Andrew Reeves curriculum vitae PDF"
+        class="h-[72vh] min-h-[620px] w-full"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+</BaseLayout>

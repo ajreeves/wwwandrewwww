@@ -1,0 +1,435 @@
+{
+  "title": {
+    "value": "Turning Out the Base or Appealing to the Periphery? An Analysis of County-Level Candidate Appearances in the 2008 Presidential Campaign",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Lanhee J. Chen",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      24
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2011,
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "American Politics Research",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "39",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "3",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "534–556",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1177/1532673X10385286",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "We examine county-level campaign appearances by the Republican and Democratic tickets during the 2008 general election. Our analysis reveals that the McCain-Palin ticket campaigned in a way that was quite different from the Obama-Biden ticket. McCain-Palin pursued a “base” strategy that was focused on counties where Bush-Cheney performed well in 2004. They also stayed away from counties that showed vote swings from 2000 to 2004 or population growth. On the other hand, the performance of the Kerry-Edwards ticket in 2004 was a very weak predictor of where Obama-Biden campaigned in 2008. They pursued a “peripheral” strategy that targeted counties that had experienced significant population growth. Their efforts to target peripheral, rather than base constituencies, have significant implications for our understanding of presidential campaign strategy.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "In the 2008 presidential campaign, McCain-Palin targeted core Republican counties while Obama-Biden focused on counties with significant population growth, reflecting divergent base and peripheral campaign strategies.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      13,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This study finds that in the 2008 U.S. presidential election, the Republican ticket (McCain-Palin) mostly visited counties where Republicans had done well before, while the Democratic ticket (Obama-Biden) visited counties that had grown in population, showing different strategies for winning votes.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      13,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Did the Republican and Democratic presidential campaigns in 2008 pursue a base strategy (targeting core supporters) or a peripheral strategy (targeting new or swing voters) in their county-level candidate appearances within swing states?",
+    "evidence_pages": [
+      3,
+      4,
+      7,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "McCain-Palin pursued a base strategy, targeting counties with strong prior Republican support and avoiding counties with population growth or electoral volatility.",
+      "Obama-Biden pursued a peripheral strategy, targeting counties with significant population growth and not focusing on prior Democratic strongholds.",
+      "There was little evidence that either ticket targeted swing counties; Republicans actively avoided electorally volatile counties.",
+      "Both campaigns focused on populous counties, but within those, their strategies diverged by party."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      13,
+      14,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Quantitative analysis of county-level campaign appearance data for the McCain-Palin and Obama-Biden tickets during the 2008 general election.",
+      "Poisson regression and other statistical models to assess the relationship between candidate visits and county characteristics (e.g., prior vote, population growth, demographic variables)."
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      12,
+      13,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "County-level campaign appearance data from The Washington Post, The New York Times, and NEXIS searches.",
+      "County-level voting data from the 2008 presidential election, compiled by David Leip.",
+      "County-level socioeconomic and demographic data from the U.S. Census Bureau."
+    ],
+    "evidence_pages": [
+      9
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Number of candidate appearances per county (dependent variable)",
+      "County-level partisan support in 2004 (Republican and Democratic vote share)",
+      "County-level population change (2000–2006)",
+      "Electoral swing (change in two-party vote from 2000 to 2004)",
+      "Demographic variables: percent Black, percent Hispanic, percent college educated, percent aged 18–24, percent over 65, median household income",
+      "County population (logged)"
+    ],
+    "evidence_pages": [
+      10,
+      18,
+      29,
+      34
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States, county-level analysis within swing and leaning states in the 2008 presidential election",
+    "evidence_pages": [
+      9,
+      10,
+      13,
+      18
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "September 5, 2008 (end of Republican National Convention) to November 4, 2008 (Election Day)",
+    "evidence_pages": [
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county",
+    "evidence_pages": [
+      9,
+      10,
+      13
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "campaigns",
+      "elections",
+      "presidential candidates",
+      "campaign strategy"
+    ],
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "electoral mobilization",
+      "swing states",
+      "voter targeting",
+      "political strategy"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      7,
+      9,
+      10,
+      13,
+      17,
+      18
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "McCain-Palin pursued a base strategy by targeting core partisan counties where the Bush–Cheney ticket performed well in 2004. Barack Obama and Joseph Biden, in contrast, pursued a peripheral strategy.",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 3,
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Chen, Lanhee J., and Andrew Reeves. 2011. \"Turning Out the Base or Appealing to the Periphery? An Analysis of County-Level Candidate Appearances in the 2008 Presidential Campaign.\" American Politics Research 39(3): 534–556. doi:10.1177/1532673X10385286.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/appearances.pdf",
+      "journal": "http://apr.sagepub.com/content/39/3/534",
+      "replication_data": "http://people.bu.edu/areeves",
+      "code": null
+    },
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          3,
+          4,
+          7,
+          9,
+          10
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          4,
+          13,
+          14,
+          17,
+          18
+        ]
+      },
+      "methods": {
+        "pages": [
+          9,
+          10,
+          12,
+          13,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      }
+    },
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      12,
+      13,
+      14,
+      17,
+      18,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text and tables. No inferences were made beyond the explicit content of the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      12,
+      13,
+      14,
+      17,
+      18,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "elections",
+      "campaign strategy"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      13,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      9,
+      10,
+      13,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative",
+      "observational",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      12,
+      13,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "confidence": "high"
+  }
+}

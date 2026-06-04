@@ -1,0 +1,115 @@
+{
+  "slug": "donald-trumps-lukewarm-response-to-puerto-rico-was-pretty-predictable-heres-why",
+  "title": "Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why.",
+  "authors": [
+    "Andrew Reeves"
+  ],
+  "year": "2017",
+  "publication_type": "news article",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "Andrew Reeves. (2017). \"Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why..\"",
+  "links": {
+    "pdf": "/papers/mc-puerto-rico.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The article argues that President Trump's slow response to Hurricane Maria in Puerto Rico is consistent with a broader pattern of U.S. presidents prioritizing disaster aid based on electoral and partisan considerations, disadvantaging places like Puerto Rico that lack political clout.",
+  "abstract": null,
+  "plain_english_summary": "Presidents, including Trump, often give more disaster aid to places that are important for their own party or future elections, which helps explain why Puerto Rico received less attention after Hurricane Maria since its residents cannot vote for president.",
+  "research_question": "Does the political significance of a place influence the president's response to disasters, as seen in the case of Puerto Rico after Hurricane Maria?",
+  "research_highlights": [
+    "Presidents are more likely to respond to disasters in electorally competitive or politically significant areas.",
+    "Puerto Rico received less attention because its residents do not vote in presidential elections and have little political influence.",
+    "Research shows that both Republican and Democratic presidents are influenced by electoral and partisan considerations when issuing disaster declarations."
+  ],
+  "methods": [
+    "Review and synthesis of previous research studies on presidential disaster declarations and political incentives.",
+    "Reference to studies using data from 1981-2004 and 1984-2013 on disaster declarations and electoral competitiveness."
+  ],
+  "data_sources": [],
+  "key_variables": [],
+  "identification_strategy": null,
+  "geography": "United States, Puerto Rico",
+  "time_period": "1981-2013 (referenced studies); 2017 (Hurricane Maria)",
+  "unit_of_analysis": null,
+  "policy_relevance": null,
+  "pull_quote": "In other words, Trump, like presidents before him, is probably paying less attention to Puerto Rico’s disaster because of the incentives of the office.",
+  "pull_quote_page": 1,
+  "confidence_notes": "Most fields are supported by explicit statements in the article; no formal abstract or citation is present. No direct data sources or identification strategies are described beyond references to prior research.",
+  "tags": [
+    "political science",
+    "disaster response",
+    "executive politics",
+    "synthesis of prior quantitative studies",
+    "presidential particularism",
+    "disaster aid",
+    "Puerto Rico",
+    "Hurricane Maria",
+    "political inequality",
+    "electoral politics",
+    "federal disaster response",
+    "U.S. elections",
+    "partisan politics"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "disaster response",
+      "executive politics"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "synthesis of prior quantitative studies"
+    ],
+    "methods": [
+      "Review and synthesis of previous research studies on presidential disaster declarations and political incentives.",
+      "Reference to studies using data from 1981-2004 and 1984-2013 on disaster declarations and electoral competitiveness."
+    ],
+    "geography": [
+      "United States, Puerto Rico"
+    ],
+    "time_period": [
+      "1981-2013 (referenced studies); 2017 (Hurricane Maria)"
+    ],
+    "keywords": [
+      "presidential particularism",
+      "disaster aid",
+      "Puerto Rico",
+      "Hurricane Maria",
+      "political inequality",
+      "electoral politics"
+    ],
+    "related_topics": [
+      "federal disaster response",
+      "U.S. elections",
+      "partisan politics"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    "methods": {
+      "pages": [
+        2
+      ]
+    }
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "title": {
+    "value": "Unilateral Powers, Public Opinion, and the Presidency",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2016,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "The Journal of Politics",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "78",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "1",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "137-151",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1086/683433",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article explores mass attitudes toward unilateral presidential power. We argue that mass attitudes toward presidential power reflect evaluations of the current president as well as more fundamental conceptions about the nature of the office, which are rooted in beliefs about the rule of law. In four nationally representative surveys, we find low levels of support for unilateral powers, that these attitudes are stable over time, and that they are structured both by presidential approval and beliefs in the rule of law. In a fifth survey, we show that political context conditions support for unilateral power, and in a sixth we show that these attitudes are consequential for policy evaluation. Even during the Obama presidency, when presidential power is highly politicized, voters distinguish the president from the presidency. Our results have important implications for public opinion’s role in constraining the use of presidential power.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Public support for unilateral presidential powers is generally low, stable, and shaped by both approval of the current president and beliefs in the rule of law, with context further conditioning these attitudes.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Americans tend to have low and stable support for presidents acting alone without Congress, and these views depend both on how much they like the current president and how strongly they believe in following the law; support can increase in certain situations, like national security or congressional gridlock.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do Americans view unilateral presidential power, and what factors structure public attitudes toward the president's use of unilateral powers?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Support for unilateral presidential powers is generally low among the public.",
+      "Attitudes toward unilateral powers are stable over time.",
+      "Support is structured by both presidential approval and beliefs in the rule of law.",
+      "Political context, such as national security or congressional inaction, increases support for unilateral power.",
+      "Attitudes toward unilateral power influence evaluations of policies achieved through such means.",
+      "Voters distinguish between the president as an individual and the presidency as an institution."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Four nationally representative surveys (2013–2015) measuring attitudes toward unilateral powers.",
+      "Survey experiment manipulating political context (e.g., national security, congressional inaction).",
+      "Logistic regression models to analyze correlates of support for unilateral powers.",
+      "Analysis of policy evaluation using survey data on specific executive actions."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "2013 Cooperative Congressional Election Study (CCES)",
+      "The American Panel Study (TAPS)",
+      "Survey Sampling International (SSI) survey (September 2014)",
+      "Economist/YouGov survey (February 2015)"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      6,
+      10
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Support for unilateral policy making",
+      "Support for unilateral judicial appointments",
+      "Support for unilateral bureaucratic implementation",
+      "Presidential approval",
+      "Belief in the rule of law",
+      "Political ideology",
+      "Policy context (e.g., national security, congressional inaction)"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2013–2015",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidency",
+      "unilateral powers",
+      "public opinion",
+      "rule of law",
+      "executive power",
+      "presidential approval",
+      "survey research"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "executive orders",
+      "separation of powers",
+      "political institutions",
+      "democratic values",
+      "presidential politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Support for unilateral powers reflects respondents’ evaluations of the president in office and their beliefs in the rule of law.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 2,
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, and Jon C. Rogowski. 2016. \"Unilateral Powers, Public Opinion, and the Presidency.\" The Journal of Politics 78(1): 137-151. https://doi.org/10.1086/683433",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/unilateral.pdf",
+      "journal": "http://www.journals.uchicago.edu/doi/10.1086/683433",
+      "replication_data": "https://dataverse.harvard.edu/dataverse/jop",
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          4,
+          6,
+          8,
+          9,
+          10
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          4,
+          6,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text. No information is inferred beyond the document.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "public opinion",
+      "executive politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey research",
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  }
+}

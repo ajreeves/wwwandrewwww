@@ -1,0 +1,166 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BookFeature from "@components/BookFeature.astro";
+
+const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
+const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+const questions = [
+  {
+    question: "What can presidents actually do?",
+    title: "Presidential Power",
+    text: "How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.",
+    href: "/research/?theme=presidential-power"
+  },
+  {
+    question: "When do citizens assign responsibility?",
+    title: "Democratic Accountability",
+    text: "When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.",
+    href: "/research/?theme=democratic-accountability"
+  },
+  {
+    question: "How does place enter national politics?",
+    title: "Political Geography",
+    text: "How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.",
+    href: "/research/?theme=political-geography"
+  },
+  {
+    question: "Where does federal attention go?",
+    title: "Federal Resource Allocation",
+    text: "How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.",
+    href: "/research/?theme=federal-resource-allocation"
+  }
+] as const;
+
+const featureTiles = [
+  {
+    label: "Research",
+    title: "Where resources land",
+    text: "How public resources and presidential incentives move across communities.",
+    href: "/research/?theme=federal-resource-allocation",
+    image: "/images/federal-resource-allocation-map-1200.jpg",
+    alt: "Map showing federal resource allocation patterns"
+  },
+  {
+    label: "Books",
+    title: "Limits on power",
+    text: "How citizens place limits on unilateral presidential power.",
+    href: "/books/#no-blank-check",
+    image: "/images/andrew-fed-page.jpg",
+    alt: "Andrew Reeves speaking in a public policy setting"
+  },
+  {
+    label: "Teaching",
+    title: "Governing and being governed",
+    text: "Courses on citizenship, elections, institutions, and political accountability.",
+    href: "/teaching/",
+    image: "/images/andrew-teaching-page.jpg",
+    alt: "Classroom teaching scene"
+  }
+] as const;
+---
+
+<BaseLayout active="Home">
+  <section class="home-thesis-hero">
+    <div class="home-thesis-copy">
+      <h1>Power, place, and accountability in American political life.</h1>
+      <p class="home-thesis-lede">
+        Reeves studies how presidents act through institutions, how public resources move across communities, and how citizens judge leaders when policy meets lived experience.
+      </p>
+      <ul class="home-affiliations" aria-label="Appointments and affiliations">
+        <li class="affil-item">
+          <a class="affil-role" href="https://polisci.wustl.edu/">Professor of Political Science</a>
+          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a>
+          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://law.washu.edu/frick-initiative/">Director, Frick Initiatives</a>
+          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a>
+          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
+        </li>
+        <li class="affil-item affil-item--external">
+          <a class="affil-role" href="https://www.hoover.org/">Visiting Fellow</a>
+          <a class="affil-inst" href="https://www.hoover.org/">Hoover Institution</a>
+        </li>
+      </ul>
+      <div class="home-thesis-links" aria-label="Primary homepage links">
+        <a href="/research/">Explore research</a>
+        <a href="/books/">Browse books</a>
+      </div>
+    </div>
+    <figure class="home-thesis-portrait">
+      <img
+        src="/images/andrew-reeves-portrait-editorial.jpg"
+        alt="Portrait of Andrew Reeves"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </figure>
+  </section>
+
+  <section class="home-bio-note" aria-label="Biographical note">
+    <div class="home-bio-body">
+      <p>
+        Andrew Reeves studies how presidential leadership and institutional design shape public policy outcomes. His research examines executive decision-making, federal resource allocation, and the conditions under which citizens hold leaders accountable when policy meets lived experience.
+      </p>
+      <p>
+        He is Director of the <a href="https://wc.washu.edu/">Weidenbaum Center on the Economy, Government, and Public Policy</a> at <a href="https://washu.edu/">Washington University in St. Louis</a>, where he leads cross-disciplinary initiatives linking research, policy design, and public engagement. He also serves as Senior Advisor to the Chancellor and is a Visiting Fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.
+      </p>
+      <p>
+        His research appears in leading journals and national media. He is coauthor of <em>The Particularistic President</em> and <em>No Blank Check</em>. Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.
+      </p>
+    </div>
+  </section>
+
+  <section class="home-feature-band" aria-label="Featured site pathways">
+    {
+      featureTiles.map((item) => (
+        <a class="home-feature-tile" href={item.href}>
+          <img src={item.image} alt={item.alt} loading="lazy" />
+          <span class="feature-label">{item.label}</span>
+          <strong class="feature-title-v2">{item.title}</strong>
+          <span class="feature-text">{item.text}</span>
+        </a>
+      ))
+    }
+  </section>
+
+  <section class="home-question-map" aria-labelledby="questions-heading">
+    <div class="home-question-heading">
+      <p>Questions</p>
+      <h2 id="questions-heading">Four questions run through the work.</h2>
+    </div>
+    <div class="home-question-grid">
+      {
+        questions.map((item) => (
+          <article class="home-question-card">
+            <h3>{item.question}</h3>
+            <p class="home-question-title">{item.title}</p>
+            <p>{item.text}</p>
+            <a class="home-question-link" href={item.href}>Related work</a>
+          </article>
+        ))
+      }
+    </div>
+    <blockquote class="home-research-summary">
+      Reeves's research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
+    </blockquote>
+  </section>
+
+  <section class="home-book-spread" aria-labelledby="major-works-heading">
+    <div class="home-spread-heading">
+      <p>Books</p>
+      <h2 id="major-works-heading">These questions are explored most fully in two books.</h2>
+    </div>
+    <div class="home-book-objects">
+      {books.map((book, index) => <BookFeature book={book} reversed={index % 2 === 1} />)}
+    </div>
+    <a class="home-archive-cta" href="/research/">Explore the full research archive</a>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  caption?: string;
+  actionHref?: string;
+  actionLabel?: string;
+  reversed?: boolean;
+}
+
+const { eyebrow, title, text, image, alt, caption, actionHref, actionLabel, reversed = false } = Astro.props;
+---
+
+<section class="container-wide page-section page-section-feature">
+  <div class={`feature-band ${reversed ? "feature-band-reversed" : ""}`}>
+    <figure class="feature-band-media">
+      <img src={image} alt={alt} loading="eager" />
+      {caption && <figcaption>{caption}</figcaption>}
+    </figure>
+    <div class="feature-band-copy">
+      <p class="kicker">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p>{text}</p>
+      {actionHref && actionLabel && <a class="ghost-button feature-band-action" href={actionHref}>{actionLabel}</a>}
+    </div>
+  </div>
+</section>

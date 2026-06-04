@@ -1,0 +1,137 @@
+{
+  "slug": "a-reassessment-of-the-methods-behind-the-madness-presidential-electoral-college-strategies",
+  "title": "A Reassessment of “The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996”",
+  "authors": [
+    "Andrew Reeves",
+    "Lanhee Chen",
+    "Tiffany Nagano"
+  ],
+  "year": 2004,
+  "publication_type": "journal article",
+  "journal": "The Journal of Politics",
+  "volume": "66",
+  "issue": "2",
+  "pages": "616–620",
+  "doi": null,
+  "citation": "Reeves, Andrew, Lanhee Chen, and Tiffany Nagano. 2004. \"A Reassessment of 'The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996.'\" The Journal of Politics 66(2): 616–620.",
+  "links": {
+    "pdf": "http://www.people.fas.harvard.edu/~reeves/papers/reassessment.pdf",
+    "journal": null,
+    "replication_data": "http://www.people.fas.harvard.edu/~reeves",
+    "code": null
+  },
+  "card_summary": "This article reassesses Shaw (1999) and finds that the original study's substantive conclusions about presidential campaign strategy are unsupported when the correct statistical methods are applied.",
+  "abstract": null,
+  "plain_english_summary": "The authors attempted to replicate and reanalyze a previous study on presidential campaign strategies and found that the original results do not hold up when using the appropriate statistical techniques.",
+  "research_question": "Do the findings of Shaw (1999) regarding the systematic effects of campaign strategy on presidential electoral college strategies hold when the correct statistical methods are applied?",
+  "research_highlights": [
+    "The analyses in Shaw (1999) were actually least-squares regressions, not ordered probit or 2SLS as claimed.",
+    "When the correct ordered probit and 2SLS methods are applied, the substantive findings in Shaw (1999) disappear.",
+    "Electoral college strategy is not shown to be a strong function of competitiveness, electoral votes, or TV Ad Cost using appropriate methods.",
+    "Errors in new data used in Shaw (2003) account for differences in findings."
+  ],
+  "methods": [
+    "Replication of published results using least-squares regression.",
+    "Implementation of ordered probit analysis.",
+    "Attempted implementation of two-stage least squares (2SLS) analysis."
+  ],
+  "data_sources": [
+    "Data from Shaw (1999)",
+    "Data from CQ’s Guide to U.S. Elections 4th Edition, Volume 1 (Moore, Preimesberger, and Tarr 2001)"
+  ],
+  "key_variables": [
+    "Competitiveness",
+    "Electoral votes",
+    "TV Ad Cost",
+    "Electoral college strategy",
+    "Opponent’s resource allocation"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "1988–1996",
+  "unit_of_analysis": "state-year",
+  "policy_relevance": null,
+  "pull_quote": "When we follow the methods as prescribed in Shaw (1999), we find that all substantive conclusions are unsupported by the data and methods.",
+  "pull_quote_page": 5,
+  "confidence_notes": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements.",
+  "tags": [
+    "political science",
+    "elections",
+    "replication study",
+    "statistical reanalysis",
+    "presidential elections",
+    "campaign strategy",
+    "electoral college",
+    "replication",
+    "statistical methods",
+    "political methodology",
+    "election studies",
+    "statistical analysis",
+    "replication studies"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "elections"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "replication study",
+      "statistical reanalysis"
+    ],
+    "methods": [
+      "Replication of published results using least-squares regression.",
+      "Implementation of ordered probit analysis.",
+      "Attempted implementation of two-stage least squares (2SLS) analysis."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "1988–1996"
+    ],
+    "keywords": [
+      "presidential elections",
+      "campaign strategy",
+      "electoral college",
+      "replication",
+      "statistical methods"
+    ],
+    "related_topics": [
+      "political methodology",
+      "election studies",
+      "statistical analysis",
+      "replication studies"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  }
+}

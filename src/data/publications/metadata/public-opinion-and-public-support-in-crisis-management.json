@@ -1,0 +1,313 @@
+{
+  "title": {
+    "value": "Public Opinion and Public Support in Crisis Management",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Zoe Ang",
+      "Benjamin S. Noble",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2021,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": "10.1093/acrefore/9780190228637.013.1544",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "abstract": {
+    "value": "In times of crisis, citizens look to their leaders for aid and assistance. In the democratic context, the focal figure is likely the chief executive accountable to the whole of the nation. With a specific focus on the American president and the incidences of natural hazards, public opinion and governmental response to these crises are analyzed. While one may expect such a universal actor to aid each according to their need, new scholarship finds that voter behavior and electoral institutions incentivize the president to support only a small slice of the electorate. Empowered by federal disaster relief legislation in the 1950s, the president targets electorally valuable voters when disbursing aid or allocating resources in response to disaster damage. Voters in those areas respond myopically and tend to vote for the incumbent for reasons ranging from economic to emotional. Thus, elites anticipate voter reactions and strategically respond to disasters to mitigate blame or punishment for the event and capitalize on an opportunity for electoral gains.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This article examines how public opinion and electoral incentives shape crisis management responses by political leaders, especially U.S. presidents, focusing on natural hazards and finding that aid and support are often targeted for electoral advantage rather than universal need.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "When disasters strike, people expect leaders, especially the U.S. president, to help. However, research shows that presidents often give more help to areas important for their own elections, and voters tend to reward leaders for disaster responses, even if the help is not distributed fairly.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do public opinion and electoral incentives influence crisis management and governmental responses, particularly by the American president, in the context of natural hazards?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents are incentivized to target disaster aid to electorally valuable voters rather than distributing aid universally (page 1, 9, 10).",
+      "Voters tend to reward incumbents for disaster response, especially when federal aid is declared, regardless of whether the disaster was preventable (pages 1, 6, 7, 9, 10).",
+      "Electoral institutions like the Electoral College encourage presidents to focus on swing states and core constituencies in disaster declarations (pages 9, 10).",
+      "Voters often cannot distinguish between random events and leader competency, leading to both rational and emotional voting responses (pages 6, 7, 8).",
+      "Similar patterns of mass and elite response to crises are observed in other democracies and autocracies, though mechanisms may differ (pages 11, 12)."
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (primary focus), with references to other democracies and autocracies",
+    "evidence_pages": [
+      1,
+      2,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "keywords": {
+    "value": [
+      "crisis management",
+      "electoral politics",
+      "federalism",
+      "political accountability",
+      "disaster management",
+      "economic voting",
+      "crisis analysis"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "public opinion",
+      "presidential politics",
+      "natural disasters",
+      "voter behavior",
+      "federal disaster relief",
+      "retrospective voting",
+      "political institutions"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      9,
+      10
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The U.S. electoral system incentivizes the president to narrowly target specific voters during times of crisis, disbursing taxpayer money and boosting electoral support.",
+    "evidence_pages": [
+      10
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 10,
+    "evidence_pages": [
+      10
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Ang, Z., Noble, B. S., & Reeves, A. (2021). Public Opinion and Public Support in Crisis Management. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/crisis.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "methods": {
+        "pages": []
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by explicit statements in the summary, introduction, and main text. No explicit methods, data sources, or unit of analysis are described in the provided pages.",
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Public Administration",
+      "Disaster Management"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal",
+      "state",
+      "local"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  }
+}

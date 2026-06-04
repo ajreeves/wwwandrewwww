@@ -1,0 +1,429 @@
+{
+  "title": {
+    "value": "Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2022,
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Ohio State Law Journal Online",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      6,
+      14
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "83",
+    "evidence_pages": [
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "230-246",
+    "evidence_pages": [
+      1,
+      18
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This article responds to Pasachoff’s analysis of executive branch control over federal grants, discussing the normative and empirical implications of presidential particularism, especially in the context of partisanship and the Trump administration.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "medium"
+  },
+  "plain_english_summary": {
+    "value": "The authors discuss how presidents, including Trump, use their power over federal grants to benefit politically important groups, and debate whether this is good for democracy or if it creates unfair advantages.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "medium"
+  },
+  "research_question": {
+    "value": "What are the normative and empirical implications of presidential particularism in the allocation of federal grants, and how does the Trump administration compare to previous presidents in this regard?",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents systematically target federal grants to electorally valuable constituencies, such as swing states and core partisan states.",
+      "Republican presidents show stronger evidence of particularistic targeting than Democratic presidents.",
+      "Trump’s actions are consistent with a broader pattern of presidential particularism, though his style may be more overt.",
+      "Normative questions remain about whether strong executive control over distributive policy is desirable compared to alternatives."
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Extension of prior empirical analysis of federal grant allocation using the Consolidated Federal Funds Report (CFFR) data from 1984–2010.",
+      "Regression models with fixed effects for counties and years, examining the impact of swing state and core state status and presidential partisanship."
+    ],
+    "evidence_pages": [
+      10,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Consolidated Federal Funds Report (CFFR) 1984–2010"
+    ],
+    "evidence_pages": [
+      6,
+      10,
+      12
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Swing state status",
+      "Core state status",
+      "Presidential partisanship",
+      "Federal grant spending by county",
+      "Congressional representation"
+    ],
+    "evidence_pages": [
+      10,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1984–2010 (empirical analysis); Trump administration (discussion)",
+    "evidence_pages": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county-year",
+    "evidence_pages": [
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential particularism",
+      "federal grants",
+      "partisanship",
+      "Trump administration",
+      "distributive politics",
+      "executive branch",
+      "political inequality"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "executive power",
+      "political polarization",
+      "electoral incentives",
+      "public policy",
+      "democratic legitimacy"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Presidents systematically target disproportionate shares of federal dollars to counties in swing states and core states, and to counties represented by co-partisans in Congress.",
+    "evidence_pages": [
+      12
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 12,
+    "evidence_pages": [
+      12
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Douglas Kriner & Andrew Reeves, Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants, 83 Ohio St. L.J. Online 230 (2022).",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/pasachoff-reply.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2,
+          3,
+          4,
+          14,
+          15
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          3,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      "methods": {
+        "pages": [
+          10,
+          12,
+          13
+        ]
+      }
+    },
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by direct statements or data tables in the text. Abstract is not present. No explicit policy recommendations or identification strategy are described. PDF link is not provided in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "public administration",
+      "American politics"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "regression analysis",
+      "comparative analysis"
+    ],
+    "evidence_pages": [
+      10,
+      12,
+      13
+    ],
+    "confidence": "high"
+  }
+}

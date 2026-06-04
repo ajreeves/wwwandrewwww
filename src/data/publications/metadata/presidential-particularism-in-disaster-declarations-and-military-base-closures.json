@@ -1,0 +1,391 @@
+{
+  "title": {
+    "value": "Presidential Particularism in Disaster Declarations and Military Base Closures",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas L. Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2015,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "45",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "679-702",
+    "evidence_pages": [
+      1,
+      2,
+      24
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This article finds that U.S. presidents, contrary to the universalistic ideal, often allocate disaster declarations and military base closures in ways that favor electorally or partisan-advantageous constituencies, demonstrating presidential particularism in distributive politics.",
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      21
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The study shows that presidents sometimes give more disaster aid or avoid closing military bases in areas that are important for their own election or their political party, rather than treating all areas equally.",
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      21
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do U.S. presidents act universally in distributive politics, or do they engage in particularism by favoring certain constituencies in disaster declarations and military base closures?",
+    "evidence_pages": [
+      1,
+      2,
+      21
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents have strong electoral and partisan incentives to prioritize some constituencies over others in distributive policy decisions.",
+      "In disaster declarations, both swing states and core partisan states were more likely to receive aid, especially in election years.",
+      "During the Obama administration, swing and core states were even more likely to receive disaster declarations in the 2012 election year.",
+      "In the 1990 military base closure round, districts represented by Democrats and those not in swing states were more likely to be targeted for closure, indicating both partisan and electoral particularism.",
+      "Presidential particularism is evident even in policy areas where universalism is normatively expected, such as disaster response and national security."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Quantitative analysis of presidential disaster declarations from 1984 to 2013 using logistic regression models with county-level fixed effects.",
+      "Analysis of military base closures in 1990 using regression models to assess the influence of district partisanship and swing state status."
+    ],
+    "evidence_pages": [
+      10,
+      11,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Federal Emergency Management Agency disaster declaration data",
+      "University of South Carolina’s Spatial Hazard Events and Losses Database for the United States (SHELDUS)",
+      "Scott Adler’s Congressional District Data Base for the 101st Congress"
+    ],
+    "evidence_pages": [
+      10,
+      11,
+      16
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Disaster declaration receipt (county-year)",
+      "Swing state status",
+      "Core state status",
+      "Partisanship of congressional representative",
+      "Disaster damage (logged dollars)",
+      "Number of severe disaster events",
+      "Personal income (logged)",
+      "County population (logged)",
+      "Number of major military installations in district"
+    ],
+    "evidence_pages": [
+      11,
+      16
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      10,
+      11,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1984–2013 (disaster declarations); 1990 (military base closures)",
+    "evidence_pages": [
+      10,
+      11,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county-year (disaster declarations); congressional district (base closures)",
+    "evidence_pages": [
+      11,
+      16
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential particularism",
+      "disaster declarations",
+      "military base closures",
+      "distributive politics",
+      "electoral incentives",
+      "partisan incentives",
+      "United States politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      14,
+      16,
+      21
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "executive branch politics",
+      "political inequality",
+      "federal grant allocation",
+      "national security policy",
+      "electoral college"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      14,
+      16,
+      21
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Even in these spheres, we find that presidents pursued highly unequal allocations of federal resources to serve their electoral interests and partisan political imperatives.",
+    "evidence_pages": [
+      21
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 21,
+    "evidence_pages": [
+      21
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Kriner, Douglas L., and Andrew Reeves. 2015. \"Presidential Particularism in Disaster Declarations and Military Base Closures.\" Presidential Studies Quarterly 45(4): 679-702.",
+    "evidence_pages": [
+      1,
+      2,
+      24
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/prespart.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          21
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "methods": {
+        "pages": [
+          10,
+          11,
+          14,
+          16
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by direct statements or tables in the article. Abstract is not present in the text. No explicit DOI or public PDF link is provided.",
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      11,
+      14,
+      16,
+      21,
+      24
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "executive politics",
+      "public policy"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      14,
+      16,
+      21
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      10,
+      14,
+      16,
+      21
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      10,
+      11,
+      14,
+      16
+    ],
+    "confidence": "high"
+  }
+}

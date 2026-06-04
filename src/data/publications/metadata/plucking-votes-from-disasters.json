@@ -1,0 +1,275 @@
+{
+  "title": {
+    "value": "Plucking Votes From Disasters",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2004,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Los Angeles Times",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "newspaper commentary",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "The article argues that U.S. presidents are more likely to grant federal disaster declarations to politically important states, especially battleground states, based on an analysis of disaster declarations from 1989 to 2003.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Presidents are more likely to approve disaster aid for states that are important in presidential elections, rather than just those with the greatest need.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do presidential electoral considerations influence the granting of federal disaster declarations?",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents are more likely to grant disaster declarations to battleground states with more electoral votes, even after accounting for need.",
+      "More disaster declarations are granted during election years than in off years.",
+      "Need is still the best indicator, but electoral motivations play a dramatic role."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Regression analysis of all disaster declarations from 1989 to 1999, with preliminary analysis through 2003.",
+      "Used insurance company figures, National Climatic Data Center damage declarations, and political significance of each state."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Insurance company figures",
+      "National Climatic Data Center declarations of damage",
+      "Information about the political significance of each state"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Number of disaster declarations",
+      "State electoral importance (battleground status, electoral votes)",
+      "Actual need (damage estimates)",
+      "Election year vs. off year"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (by state)",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1989-2003",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "state-year",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "keywords": {
+    "value": [
+      "disaster declarations",
+      "presidential elections",
+      "electoral politics",
+      "federal aid",
+      "battleground states"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political influence on policy",
+      "federal disaster aid",
+      "election-year effects"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "I found that the electoral motivations of the president -- Bush and his two predecessors -- had a dramatic effect on which states were granted disaster declarations.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew. 2004. \"Plucking Votes From Disasters.\" Los Angeles Times, May 12.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/disasters-latimes2.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1
+        ]
+      },
+      "methods": {
+        "pages": [
+          1
+        ]
+      }
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the text on page 1. No additional publication metadata (e.g., DOI, volume, issue, pages) is present in the document.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "disaster policy"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal",
+      "state"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  }
+}

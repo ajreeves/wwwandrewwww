@@ -1,0 +1,133 @@
+{
+  "slug": "pass-the-buck-or-the-buck-stops-here-the-public-costs-of-claiming-and-deflecting-blame-in-",
+  "title": "Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises",
+  "authors": [
+    "David Miller",
+    "Andrew Reeves"
+  ],
+  "year": 2022,
+  "publication_type": "research article",
+  "journal": "Journal of Public Policy",
+  "volume": "42",
+  "issue": "1",
+  "pages": "63–91",
+  "doi": "10.1017/S0143814X21000039",
+  "citation": "Miller, David, and Andrew Reeves. 2022. \"Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises.\" Journal of Public Policy 42(1): 63–91. doi:10.1017/S0143814X21000039.",
+  "links": {
+    "pdf": "/papers/blameclaim.pdf",
+    "journal": "https://doi.org/10.1017/S0143814X21000039",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Survey experiments show that elected executives who claim blame during crises maintain higher public support than those who deflect blame, primarily by enhancing perceptions of their leadership.",
+  "abstract": "When things go wrong, and the government may be to blame, the public support enjoyed by elected executives is vulnerable. Because attribution of responsibility is often not straightforward, elected executives can influence citizens’ evaluations of their performance through presentational strategies, or explanatory frames which describe their roles in the management of the crisis. We examine the effectiveness of two ubiquitous presentational strategies: blame claiming, where the executive accepts responsibility, and blame deflecting, where the executive shifts blame to others. Using survey experiments incorporating stylised and real-world stimuli, we find that blame claiming is more effective than blame deflecting at managing public support in the aftermath of crises. In investigating the underlying mechanism, we find that blame claiming creates more favourable views of an executive’s leadership valence. While elected executives are better off avoiding crises, we find that when they occur, “stopping the buck” is a superior strategy to deflecting blame.",
+  "plain_english_summary": "When government leaders face a crisis, taking responsibility for mistakes helps them keep public support better than blaming others, because people see them as stronger leaders.",
+  "research_question": "How do elected executives’ presentational strategies—specifically blame claiming versus blame deflecting—affect public support in the aftermath of governmental crises?",
+  "research_highlights": [
+    "Blame claiming by elected executives is more effective than blame deflecting at maintaining public support after crises.",
+    "Blame claiming improves perceptions of an executive’s leadership valence.",
+    "Blame deflecting induces a null or negative effect on public evaluations of executives.",
+    "These results persist even when accounting for crisis severity and partisanship.",
+    "Causal mediation analysis shows that leadership valence mediates the positive effect of blame claiming."
+  ],
+  "methods": [
+    "Survey experiments using stylised and real-world crisis scenarios.",
+    "Random assignment of respondents to blame claim, blame deflect, or control conditions.",
+    "Measurement of approval, likelihood to vote, and perceptions of leadership valence."
+  ],
+  "data_sources": [
+    "The American Panel Survey (TAPS), a nationally representative US panel survey.",
+    "Amazon Mechanical Turk (MTurk) samples for additional experiments."
+  ],
+  "key_variables": [
+    "Presentational strategy (blame claim, blame deflect, control)",
+    "Approval of executive’s crisis handling",
+    "Likelihood to vote for executive",
+    "Perceptions of leadership valence (traits: intelligent, strong leadership, honest, competent, trustworthy)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": null,
+  "unit_of_analysis": "survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Blame claiming is more effective than blame deflecting at managing public support in the aftermath of crises.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the article text. No information about time period, identification strategy, or policy relevance is explicitly stated.",
+  "tags": [
+    "public policy",
+    "political science",
+    "survey experiment",
+    "blame games",
+    "elected executives",
+    "governmental crises",
+    "responsibility attribution",
+    "survey experiments",
+    "public opinion",
+    "political leadership",
+    "crisis management",
+    "accountability"
+  ],
+  "filters": {
+    "substantive_area": [
+      "public policy",
+      "political science"
+    ],
+    "government_level": [
+      "local",
+      "state",
+      "national"
+    ],
+    "research_design": [
+      "survey experiment"
+    ],
+    "methods": [
+      "Survey experiments using stylised and real-world crisis scenarios.",
+      "Random assignment of respondents to blame claim, blame deflect, or control conditions.",
+      "Measurement of approval, likelihood to vote, and perceptions of leadership valence."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [],
+    "keywords": [
+      "blame games",
+      "elected executives",
+      "governmental crises",
+      "responsibility attribution",
+      "survey experiments"
+    ],
+    "related_topics": [
+      "public opinion",
+      "political leadership",
+      "crisis management",
+      "accountability"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        3,
+        8
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        3,
+        8,
+        9
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        3,
+        8,
+        9,
+        10,
+        12
+      ]
+    }
+  }
+}

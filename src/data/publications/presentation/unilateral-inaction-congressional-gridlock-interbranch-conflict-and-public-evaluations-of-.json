@@ -1,0 +1,159 @@
+{
+  "slug": "unilateral-inaction-congressional-gridlock-interbranch-conflict-and-public-evaluations-of-",
+  "title": "Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power",
+  "authors": [
+    "Andrew Reeves",
+    "Jon C. Rogowski"
+  ],
+  "year": 2022,
+  "publication_type": "journal article",
+  "journal": "Legislative Studies Quarterly",
+  "volume": "47",
+  "issue": "2",
+  "pages": "427-457",
+  "doi": "10.1111/lsq.12353",
+  "citation": "Reeves, Andrew, and Jon C. Rogowski. 2022. \"Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power.\" Legislative Studies Quarterly 47(2): 427-457. doi:10.1111/lsq.12353.",
+  "links": {
+    "pdf": "/papers/nothing.pdf",
+    "journal": null,
+    "replication_data": "https://doi.org/10.7910/DVN/N7JN5X",
+    "code": null
+  },
+  "card_summary": "Survey experiments show that Americans generally respond negatively when presidents use unilateral power to enact policy during congressional gridlock, even when they agree with the president’s policy goals.",
+  "abstract": "Presidents routinely overpromise and underdeliver, especially amid partisan polarization, narrow congressional majorities, and persistent gridlock. As Congress routinely stymies their legislative agendas, presidents consider alternative courses of action. We study public reactions to unilateral power in the context of congressional inaction. While some research suggests that presidents cannot afford to pass up opportunities to act, more recent scholarship indicates that the public holds negative views of unilateral power and disapproves of its use. Survey experiments conducted with a national sample of Americans provide evidence of the costs of unilateral power. Across three policy areas and between- and within-respondent analyses, the public responds negatively when presidents exercise unilateral power rather than accept the status quo, even among individuals who share the president’s policy views. Our results suggest that while legislative gridlock may increase the appeal of unilateral power, its use may come at a public cost.",
+  "plain_english_summary": "When Congress is gridlocked and the president acts alone to change policy, most Americans react negatively—even if they agree with the president’s goals—suggesting that using unilateral executive power comes with public approval costs.",
+  "research_question": "How does the public evaluate presidents who use unilateral power to enact policy in the context of congressional gridlock and inaction, especially compared to presidents who accept the status quo?",
+  "research_highlights": [
+    "The public responds negatively when presidents use unilateral power to enact policy rather than accept the status quo, even when the public agrees with the president’s policy views.",
+    "Negative effects of unilateral action are largest among individuals who oppose the president’s policy views, but are also generally negative among supporters.",
+    "Commitment to the rule of law increases negative reactions to unilateral presidential action.",
+    "Presidents incur aggregate reductions in public evaluations for using unilateral action rather than retaining the status quo."
+  ],
+  "methods": [
+    "Survey experiments with a nationally representative sample of approximately 4000 Americans.",
+    "Embedded experimental vignettes covering three policy areas: health care, international sanctions, and immigration.",
+    "Random assignment to conditions where the president either acts unilaterally or accepts the status quo after congressional inaction.",
+    "Between- and within-respondent analyses of treatment effects."
+  ],
+  "data_sources": [
+    "YouGov survey administered in March 2018 with approximately 4000 respondents representative of the US population."
+  ],
+  "key_variables": [
+    "Presidential action (unilateral action vs. inaction)",
+    "Respondent approval of president’s handling of issue",
+    "Respondent approval of president’s job performance",
+    "Policy agreement (respondent’s support for president’s policy goal)",
+    "Support for rule of law"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "March 2018 (survey fielding)",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Across three policy areas and between- and within-respondent analyses, the public responds negatively when presidents exercise unilateral power rather than accept the status quo, even among individuals who share the president’s policy views.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the cited pages. No information is inferred beyond the document text. Policy relevance and identification strategy are not explicitly discussed and are thus null.",
+  "tags": [
+    "American politics",
+    "executive power",
+    "public opinion",
+    "survey experiment",
+    "presidential power",
+    "unilateral action",
+    "congressional gridlock",
+    "rule of law",
+    "executive-legislative relations",
+    "democratic accountability",
+    "partisan polarization",
+    "policy implementation"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "executive power",
+      "public opinion"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "survey experiment"
+    ],
+    "methods": [
+      "Survey experiments with a nationally representative sample of approximately 4000 Americans.",
+      "Embedded experimental vignettes covering three policy areas: health care, international sanctions, and immigration.",
+      "Random assignment to conditions where the president either acts unilaterally or accepts the status quo after congressional inaction.",
+      "Between- and within-respondent analyses of treatment effects."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "March 2018 (survey fielding)"
+    ],
+    "keywords": [
+      "presidential power",
+      "unilateral action",
+      "public opinion",
+      "congressional gridlock",
+      "executive power",
+      "survey experiment",
+      "rule of law"
+    ],
+    "related_topics": [
+      "executive-legislative relations",
+      "democratic accountability",
+      "partisan polarization",
+      "policy implementation"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2,
+        3,
+        6,
+        7
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        3,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    "methods": {
+      "pages": [
+        8,
+        9,
+        10,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  }
+}

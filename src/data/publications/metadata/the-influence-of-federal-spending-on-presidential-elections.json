@@ -1,0 +1,369 @@
+{
+  "title": {
+    "value": "The Influence of Federal Spending on Presidential Elections",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas L. Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2012,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "American Political Science Review",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "106",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "348-366",
+    "evidence_pages": [
+      1,
+      17
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/S0003055412000159",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Previous research on the electoral consequences of federal spending has focused almost exclusively on Congress, mostly with null results. However, in a county- and individual-level study of presidential elections from 1988 to 2008, we present evidence that voters reward incumbent presidents (or their party’s nominee) for increased federal spending in their communities. This relationship is stronger in battleground states. Furthermore, we show that federal grants are an electoral currency whose value depends on both the clarity of partisan responsibility for its provision and the characteristics of the recipients. Presidents enjoy increased support from spending in counties represented by co-partisan members of Congress. At the individual level, we also find that ideology conditions the response of constituents to spending; liberal and moderate voters reward presidents for federal spending at higher levels than conservatives. Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Voters reward incumbent presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear, with liberals and moderates more responsive than conservatives.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This study finds that when presidents increase federal spending in local communities, they are more likely to gain votes in presidential elections, particularly in competitive states and when voters can clearly attribute the spending to the president and his party. Liberal and moderate voters are more likely than conservatives to reward presidents for such spending.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do voters reward presidents for increased federal spending in their local constituencies, and what factors condition this relationship?",
+    "evidence_pages": [
+      1,
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Voters reward incumbent presidents or their party’s nominee for increased federal spending in their communities.",
+      "The relationship is stronger in battleground states.",
+      "Presidents enjoy increased support from spending in counties represented by co-partisan members of Congress.",
+      "Ideology conditions the response: liberal and moderate voters reward presidents for federal spending at higher levels than conservatives.",
+      "The electoral effect of federal spending is significant and can influence close presidential elections."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "County-level analysis of presidential elections from 1988 to 2008 using election and federal spending data.",
+      "Individual-level analysis using survey data from the 2008 election.",
+      "Least squares models with fixed effects for counties and years.",
+      "Probit models for individual-level vote choice."
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      5,
+      15,
+      16
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Consolidated Federal Funds Reports (CFFR) for federal grant spending data.",
+      "County-level presidential election returns, 1988–2008.",
+      "Gallup-USA Today poll, October 31–November 2, 2008."
+    ],
+    "evidence_pages": [
+      4,
+      15
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Change in federal grant spending at the county level.",
+      "Change in two-party presidential vote share at the county level.",
+      "Individual vote intention for presidential candidate.",
+      "County partisanship and ideology measures."
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      15
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (county-level and individual-level data)",
+    "evidence_pages": [
+      1,
+      4,
+      5,
+      15
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1988–2008 (presidential elections)",
+    "evidence_pages": [
+      1,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "County and individual voter",
+    "evidence_pages": [
+      1,
+      4,
+      5,
+      15
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "federal spending",
+      "presidential elections",
+      "voting behavior",
+      "partisanship",
+      "ideology",
+      "battleground states",
+      "electoral accountability"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political economy",
+      "electoral politics",
+      "public finance",
+      "American politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Kriner, Douglas L., and Andrew Reeves. 2012. \"The Influence of Federal Spending on Presidential Elections.\" American Political Science Review 106(2): 348-366. doi:10.1017/S0003055412000159.",
+    "evidence_pages": [
+      1,
+      17
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/spending.pdf",
+      "journal": null,
+      "replication_data": "http://people.bu.edu/areeves",
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          4,
+          12,
+          16
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          4,
+          5,
+          15,
+          16
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      12,
+      15,
+      16
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      12,
+      15,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "political economy",
+      "elections"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      12,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "regression analysis",
+      "survey analysis"
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      15,
+      16
+    ],
+    "confidence": "high"
+  }
+}

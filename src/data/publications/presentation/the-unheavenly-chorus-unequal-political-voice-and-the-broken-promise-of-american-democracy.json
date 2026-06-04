@@ -1,0 +1,136 @@
+{
+  "slug": "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
+  "title": "The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy",
+  "authors": [
+    "Kay Lehman Schlozman",
+    "Sidney Verba",
+    "Henry E. Brady"
+  ],
+  "year": 2012,
+  "publication_type": "book review",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "Schlozman, Kay Lehman, Sidney Verba, and Henry E. Brady. 2012. The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy. Princeton: Princeton University Press.",
+  "links": {
+    "pdf": "/papers/unheavenly-review.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The Unheavenly Chorus documents persistent and severe inequalities in American political voice, showing that both individual and organized interest participation are strongly skewed toward the privileged, with little change over time.",
+  "abstract": null,
+  "plain_english_summary": "This book review explains that The Unheavenly Chorus finds political participation in America is dominated by wealthier and more privileged groups and individuals, and that this inequality has remained stable over decades, affecting both individual and group political voices.",
+  "research_question": "Who has political voice in America today, and how is this voice distributed among individuals and organized interests?",
+  "research_highlights": [
+    "Socioeconomic status (SES) is positively related to nearly every form of political participation.",
+    "The relationship between SES and political participation is stable over time and persists at both local and national levels.",
+    "Technological changes, such as the Internet, have not reduced SES-based inequalities in political participation.",
+    "The majority of organized interests represent privileged groups, with very few representing the less-privileged.",
+    "The number of organized interest groups has increased dramatically, but the distribution remains skewed toward privileged interests.",
+    "There is severe inequality in both individual and collective political voice in America."
+  ],
+  "methods": [
+    "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
+    "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
+  ],
+  "data_sources": [
+    "Citizen Participation Study of 1990",
+    "American National Election Studies (1952–2008)",
+    "Roper surveys (1970–2003)",
+    "Washington Directory (for organized interest groups)"
+  ],
+  "key_variables": [
+    "Socioeconomic status (SES)",
+    "Political participation (individual and online)",
+    "Type and number of organized interest groups"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "1952–2008 (individual participation); 1981–2006 (organized interests)",
+  "unit_of_analysis": "Individuals and organized interest groups",
+  "policy_relevance": null,
+  "pull_quote": "The flaw in the pluralist heaven is that the heavenly chorus sings with a strong upper-class accent.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted information is directly supported by the review text; no unsupported fields are filled.",
+  "tags": [
+    "political science",
+    "American politics",
+    "political inequality",
+    "descriptive analysis",
+    "survey analysis",
+    "historical trend analysis",
+    "political participation",
+    "socioeconomic status",
+    "organized interests",
+    "pluralism",
+    "United States",
+    "democracy",
+    "lobbying",
+    "policy outcomes",
+    "political behavior"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "American politics",
+      "political inequality"
+    ],
+    "government_level": [
+      "national",
+      "state",
+      "local"
+    ],
+    "research_design": [
+      "descriptive analysis",
+      "survey analysis",
+      "historical trend analysis"
+    ],
+    "methods": [
+      "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
+      "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "1952–2008 (individual participation); 1981–2006 (organized interests)"
+    ],
+    "keywords": [
+      "political participation",
+      "socioeconomic status",
+      "political inequality",
+      "organized interests",
+      "pluralism",
+      "United States"
+    ],
+    "related_topics": [
+      "democracy",
+      "lobbying",
+      "policy outcomes",
+      "political behavior"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        2,
+        3,
+        4
+      ]
+    },
+    "methods": {
+      "pages": [
+        2,
+        3
+      ]
+    }
+  }
+}

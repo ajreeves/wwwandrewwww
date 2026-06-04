@@ -1,0 +1,274 @@
+{
+  "title": {
+    "value": "Florida Disaster Aid Can Help Bush",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2004,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Los Angeles Times",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "Commentary",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "The article argues that presidents are more likely to declare disasters and allocate federal aid to electorally important states, as shown by recent hurricane aid to Florida during the 2004 election.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Presidents tend to give more disaster aid to states that are important for winning elections, as seen in the case of Florida during the 2004 presidential campaign.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Does the electoral importance of a state influence presidential disaster declarations and the allocation of federal disaster aid?",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Electoral importance of a state increases the likelihood of receiving a presidential disaster declaration.",
+      "A non-battleground state with few electoral votes is almost 50% less likely to receive a disaster declaration than a battleground state with many electoral votes, even after accounting for actual need.",
+      "Presidents of both parties allow electoral considerations to influence disaster-declaration policy."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Study of all presidential disaster declarations from 1989 through 1999, controlling for actual need using private insurance claims.",
+      "Preliminary analysis of more recent disaster declarations."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": [
+      "Electoral importance of state",
+      "Number of electoral votes",
+      "Disaster declarations",
+      "Private insurance claims"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (with examples from Florida and Connecticut)",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1989-1999 (main study); 2003-2004 (examples)",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "State-level disaster declarations",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "disaster aid",
+      "presidential disaster declarations",
+      "electoral politics",
+      "battleground states",
+      "federal aid",
+      "hurricanes",
+      "Florida"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political science",
+      "public policy",
+      "elections",
+      "natural disasters"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The research suggests that the electoral importance of a state plays a large role in determining whether a president declares a disaster, an act that clears the way for large sums of federal money to be sent to devastated areas.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew. 2004. \"Florida Disaster Aid Can Help Bush.\" Los Angeles Times, October 3, 2004.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/disasters-latimes1.pdf",
+      "journal": "http://articles.latimes.com/print/2004/oct/03/opinion/oe-reeves3",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1
+        ]
+      },
+      "methods": {
+        "pages": [
+          1
+        ]
+      }
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the text on page 1. No additional publication metadata (e.g., volume, issue, DOI) is present in the document.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Disaster Policy",
+      "Elections"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "Federal"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "Observational study",
+      "Comparative analysis"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  }
+}

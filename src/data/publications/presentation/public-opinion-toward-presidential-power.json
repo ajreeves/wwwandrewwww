@@ -1,0 +1,135 @@
+{
+  "slug": "public-opinion-toward-presidential-power",
+  "title": "Public Opinion Toward Presidential Power",
+  "authors": [
+    "Andrew Reeves",
+    "Jon C. Rogowski"
+  ],
+  "year": 2015,
+  "publication_type": "journal article",
+  "journal": "Presidential Studies Quarterly",
+  "volume": "45",
+  "issue": "4",
+  "pages": "742-759",
+  "doi": null,
+  "citation": "Reeves, Andrew, and Jon C. Rogowski. 2015. \"Public Opinion Toward Presidential Power.\" Presidential Studies Quarterly 45(4): 742-759.",
+  "links": {
+    "pdf": "/papers/prespower.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Public support for presidential powers is shaped by approval of the president, with popular presidents able to leverage their prestige to expand executive authority.",
+  "abstract": "This article examines public attitudes toward the levers of presidential power using data from a nationally representative survey. The authors find that respondents who provide higher approval ratings of the president are significantly more supportive of presidential powers. The findings suggest that views toward executive power are shaped by presidential approval and that popular presidents can use their prestige to expand the scope of powers available to the presidency.",
+  "plain_english_summary": "People who like the president are more likely to support giving the president more power, meaning that popular presidents can use their popularity to increase what they are allowed to do.",
+  "research_question": "How does public approval of the president relate to support for the powers of the presidency?",
+  "research_highlights": [
+    "Respondents with higher approval of the president are significantly more supportive of presidential powers.",
+    "Support for specific presidential powers varies widely among the public.",
+    "Partisan differences in support for presidential powers are smaller than differences in presidential approval.",
+    "Public attitudes toward presidential power are distinct from attitudes toward the president as an individual."
+  ],
+  "methods": [
+    "Original nationally representative survey of U.S. adults (2013 Cooperative Congressional Election Study)",
+    "Logistic regression analysis of survey responses"
+  ],
+  "data_sources": [
+    "2013 Cooperative Congressional Election Study (CCES)"
+  ],
+  "key_variables": [
+    "Presidential approval",
+    "Support for presidential powers (unilateral military action, executive privilege, veto powers, appointing judges without Senate confirmation, directing agency implementation, unilateral policy enactment)",
+    "Partisanship",
+    "Education",
+    "Ideology"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "November 2013",
+  "unit_of_analysis": "individual (survey respondent)",
+  "policy_relevance": null,
+  "pull_quote": "These findings provide striking evidence that views toward executive power are shaped by presidential approval and suggest that popular presidents can use their prestige to expand the scope of powers available to the presidency.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the text on the cited pages. No information about DOI, policy relevance, or external links is present in the document.",
+  "tags": [
+    "American politics",
+    "public opinion",
+    "executive power",
+    "survey research",
+    "quantitative analysis",
+    "presidential power",
+    "presidential approval",
+    "executive authority",
+    "partisanship",
+    "separation of powers",
+    "executive branch",
+    "political institutions",
+    "democratic accountability"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "public opinion",
+      "executive power"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "survey research",
+      "quantitative analysis"
+    ],
+    "methods": [
+      "Original nationally representative survey of U.S. adults (2013 Cooperative Congressional Election Study)",
+      "Logistic regression analysis of survey responses"
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "November 2013"
+    ],
+    "keywords": [
+      "presidential power",
+      "public opinion",
+      "presidential approval",
+      "executive authority",
+      "partisanship"
+    ],
+    "related_topics": [
+      "separation of powers",
+      "executive branch",
+      "political institutions",
+      "democratic accountability"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        7
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14
+      ]
+    },
+    "methods": {
+      "pages": [
+        7,
+        8,
+        11,
+        12
+      ]
+    }
+  }
+}

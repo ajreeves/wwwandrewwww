@@ -1,0 +1,123 @@
+{
+  "slug": "public-opinion-and-public-support-in-crisis-management",
+  "title": "Public Opinion and Public Support in Crisis Management",
+  "authors": [
+    "Zoe Ang",
+    "Benjamin S. Noble",
+    "Andrew Reeves"
+  ],
+  "year": 2021,
+  "publication_type": null,
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": "10.1093/acrefore/9780190228637.013.1544",
+  "citation": "Ang, Z., Noble, B. S., & Reeves, A. (2021). Public Opinion and Public Support in Crisis Management. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
+  "links": {
+    "pdf": "/papers/crisis.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This article examines how public opinion and electoral incentives shape crisis management responses by political leaders, especially U.S. presidents, focusing on natural hazards and finding that aid and support are often targeted for electoral advantage rather than universal need.",
+  "abstract": "In times of crisis, citizens look to their leaders for aid and assistance. In the democratic context, the focal figure is likely the chief executive accountable to the whole of the nation. With a specific focus on the American president and the incidences of natural hazards, public opinion and governmental response to these crises are analyzed. While one may expect such a universal actor to aid each according to their need, new scholarship finds that voter behavior and electoral institutions incentivize the president to support only a small slice of the electorate. Empowered by federal disaster relief legislation in the 1950s, the president targets electorally valuable voters when disbursing aid or allocating resources in response to disaster damage. Voters in those areas respond myopically and tend to vote for the incumbent for reasons ranging from economic to emotional. Thus, elites anticipate voter reactions and strategically respond to disasters to mitigate blame or punishment for the event and capitalize on an opportunity for electoral gains.",
+  "plain_english_summary": "When disasters strike, people expect leaders, especially the U.S. president, to help. However, research shows that presidents often give more help to areas important for their own elections, and voters tend to reward leaders for disaster responses, even if the help is not distributed fairly.",
+  "research_question": "How do public opinion and electoral incentives influence crisis management and governmental responses, particularly by the American president, in the context of natural hazards?",
+  "research_highlights": [
+    "Presidents are incentivized to target disaster aid to electorally valuable voters rather than distributing aid universally (page 1, 9, 10).",
+    "Voters tend to reward incumbents for disaster response, especially when federal aid is declared, regardless of whether the disaster was preventable (pages 1, 6, 7, 9, 10).",
+    "Electoral institutions like the Electoral College encourage presidents to focus on swing states and core constituencies in disaster declarations (pages 9, 10).",
+    "Voters often cannot distinguish between random events and leader competency, leading to both rational and emotional voting responses (pages 6, 7, 8).",
+    "Similar patterns of mass and elite response to crises are observed in other democracies and autocracies, though mechanisms may differ (pages 11, 12)."
+  ],
+  "methods": [],
+  "data_sources": [],
+  "key_variables": [],
+  "identification_strategy": null,
+  "geography": "United States (primary focus), with references to other democracies and autocracies",
+  "time_period": null,
+  "unit_of_analysis": null,
+  "policy_relevance": null,
+  "pull_quote": "The U.S. electoral system incentivizes the president to narrowly target specific voters during times of crisis, disbursing taxpayer money and boosting electoral support.",
+  "pull_quote_page": 10,
+  "confidence_notes": "Most fields are supported by explicit statements in the summary, introduction, and main text. No explicit methods, data sources, or unit of analysis are described in the provided pages.",
+  "tags": [
+    "Political Science",
+    "Public Administration",
+    "Disaster Management",
+    "crisis management",
+    "electoral politics",
+    "federalism",
+    "political accountability",
+    "disaster management",
+    "economic voting",
+    "crisis analysis",
+    "public opinion",
+    "presidential politics",
+    "natural disasters",
+    "voter behavior",
+    "federal disaster relief",
+    "retrospective voting",
+    "political institutions"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Public Administration",
+      "Disaster Management"
+    ],
+    "government_level": [
+      "federal",
+      "state",
+      "local"
+    ],
+    "research_design": [],
+    "methods": [],
+    "geography": [
+      "United States (primary focus), with references to other democracies and autocracies"
+    ],
+    "time_period": [],
+    "keywords": [
+      "crisis management",
+      "electoral politics",
+      "federalism",
+      "political accountability",
+      "disaster management",
+      "economic voting",
+      "crisis analysis"
+    ],
+    "related_topics": [
+      "public opinion",
+      "presidential politics",
+      "natural disasters",
+      "voter behavior",
+      "federal disaster relief",
+      "retrospective voting",
+      "political institutions"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "methods": {
+      "pages": []
+    }
+  }
+}

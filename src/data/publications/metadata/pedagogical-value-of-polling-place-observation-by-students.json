@@ -1,0 +1,366 @@
+{
+  "title": {
+    "value": "Pedagogical Value of Polling-Place Observation by Students",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Christopher B. Mann",
+      "Gayle A. Alberda",
+      "Nathaniel A. Birkhead",
+      "Yu Ouyang",
+      "Chloe Singer",
+      "Charles Stewart III",
+      "Michael C. Herron",
+      "Emily Beaulieu",
+      "Frederick Boehmke",
+      "Joshua Boston",
+      "Francisco Cantu",
+      "Rachael Cobb",
+      "David Darmofal",
+      "Thomas C. Ellington",
+      "Charles J. Finocchiaro",
+      "Michael Gilbert",
+      "Victor Haynes",
+      "Brian Janssen",
+      "David Kimball",
+      "Charles Kromkowski",
+      "Elena Llaudet",
+      "Matthew R. Miles",
+      "David Miller",
+      "Lindsay Nielson",
+      "Costas Panagopoulos",
+      "Andrew Reeves",
+      "Min Hee Seo",
+      "Haley Simmons",
+      "Corwin Smidt",
+      "Robert Stein",
+      "Rachel VanSickle-Ward",
+      "Abby K. Wood",
+      "Julie Wronski"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2018,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "PS: Political Science & Politics",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "51",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "831-837",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/S1049096518000550",
+    "evidence_pages": [
+      1,
+      7
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "We report on an evaluation of the pedagogical value of a research project involving 23 colleges and universities across the country. Faculty trained and supervised students who observed polling places in the 2016 General Election. Our findings indicate that this was a valuable learning experience in both the short and long terms. Students found their experiences to be valuable and reported learning generally and specifically related to course material. Postelection, they also felt more knowledgeable about election science topics, voting behavior, and research methods. Students reported interest in participating in similar research in the future, would recommend other students to do so, and expressed interest in more learning and research about the topics central to their experience. Our results suggest that participants appreciated the importance of elections and their study. Collectively, the participating students are engaged and efficacious—essential qualities of citizens in a democracy.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Observing polling places as part of a multi-campus research project provided students with valuable experiential learning, increasing their knowledge and engagement with election science and democratic processes.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Students who observed polling places during the 2016 election as part of a research project reported learning more about elections, research methods, and civic engagement, and showed increased interest in future research and participation in democracy.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Does observing polling locations on Election Day as part of a data-collection process produce pedagogical value for students?",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Students reported that observing polling places was a valuable learning experience.",
+      "Participants felt more knowledgeable about election science, voting behavior, and research methods after the experience.",
+      "Students expressed interest in participating in similar research in the future and would recommend the experience to others.",
+      "The project fostered engagement and efficacy, important qualities for democratic citizenship."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Post-election survey of student participants across 23 colleges and universities.",
+      "Survey measured self-assessed learning, perceived value, and interest in future research.",
+      "Word cloud analysis of open-ended survey responses."
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Post-election survey responses from 479 students who participated in polling place observation."
+    ],
+    "evidence_pages": [
+      4
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Self-assessed learning",
+      "Perceived value of experience",
+      "Interest in future research",
+      "Knowledge of election science topics"
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (23 colleges and universities across the country)",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "November 2016 (2016 General Election)",
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Student participant",
+    "evidence_pages": [
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "experiential learning",
+      "election science",
+      "polling place observation",
+      "pedagogy",
+      "student engagement"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "civic engagement",
+      "active learning",
+      "research methods",
+      "voting behavior"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "I was really excited to gather data because it made me feel like a real part of the democratic process.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 2,
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Mann, Christopher B., Gayle A. Alberda, Nathaniel A. Birkhead, Yu Ouyang, et al. 2018. \"Pedagogical Value of Polling-Place Observation by Students.\" PS: Political Science & Politics 51(4): 831-837. doi:10.1017/S1049096518000550.",
+    "evidence_pages": [
+      1,
+      7
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/polling.pdf",
+      "journal": "https://doi.org/10.1017/S1049096518000550",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      7
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          3
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          4,
+          5,
+          6
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and page references. No inferences were made beyond the provided evidence.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "education"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "research_design": {
+    "value": [
+      "survey research",
+      "experiential learning assessment"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  }
+}

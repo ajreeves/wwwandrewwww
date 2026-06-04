@@ -1,0 +1,328 @@
+{
+  "title": {
+    "value": "The Politics of Disaster Relief",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Alexander J. Oliver",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2015,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Emerging Trends in the Social and Behavioral Sciences",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "1-8",
+    "evidence_pages": [
+      1,
+      2,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "review essay",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This essay provides an overview of the research on the politics of disaster relief in the United States, focusing on the response of voters and politicians in the aftermath of severe weather events. It reviews foundational research, discusses recent advances, and addresses important issues for future research on this topic.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This essay reviews research on how voters and politicians in the United States respond to severe weather events, highlighting key findings and future research directions in the politics of disaster relief.",
+    "evidence_pages": [
+      1,
+      2,
+      5
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The article summarizes what is known about how American voters and politicians react to natural disasters, especially severe weather, and discusses what questions remain for future study.",
+    "evidence_pages": [
+      1,
+      2,
+      5
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do voters and politicians in the United States respond to severe weather events, and what are the key dynamics and unresolved issues in the politics of disaster relief?",
+    "evidence_pages": [
+      1,
+      2,
+      5
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Voters sometimes hold politicians accountable for natural disasters, but are more likely to reward politicians for disaster relief than for prevention.",
+      "Politicians' responses to disasters can influence electoral outcomes, and political factors can affect the allocation of disaster relief.",
+      "Recent research uses improved data and methods to better understand voter and politician behavior after disasters.",
+      "There remain unresolved questions about the rationality of voter responses and the incentives created for politicians."
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Literature review of foundational and recent studies on disaster relief politics."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "keywords": {
+    "value": [
+      "disaster relief",
+      "politics",
+      "voters",
+      "politicians",
+      "severe weather",
+      "accountability",
+      "United States"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "democratic accountability",
+      "retrospective voting",
+      "public administration",
+      "federal disaster relief",
+      "climate change attitudes"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Severe weather provides unexpected challenges in the daily lives of voters and the short- and long-term plans of politicians.",
+    "evidence_pages": [
+      6
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 6,
+    "evidence_pages": [
+      6
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Oliver, A. J., & Reeves, A. (2015). The Politics of Disaster Relief. In R. Scott & S. Kosslyn (Eds.), Emerging Trends in the Social and Behavioral Sciences. John Wiley & Sons, Inc.",
+    "evidence_pages": [
+      1,
+      2,
+      8
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/disasters-review.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          5
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by explicit statements in the text. No direct DOI, volume, or issue information is provided. Data sources and key variables are not specified as this is a review essay.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Disaster Studies"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal",
+      "state",
+      "local"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "review essay"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  }
+}

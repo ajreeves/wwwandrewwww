@@ -1,0 +1,339 @@
+{
+  "title": {
+    "value": "A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Lanhee Chen",
+      "Tiffany Nagano"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2003,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "abstract": {
+    "value": "This paper reassesses Daron Shaw's (1999) claims regarding the formation of presidential campaign strategies and their effect on candidate resource allocation. The authors demonstrate that Shaw's analyses, which were claimed to use ordered probit and two-stage least squares (2SLS) regressions, actually used ordinary least squares (LS) regressions. When the correct methods are implemented, the key substantive conclusions of Shaw (1999) do not hold: the factors attributed to the formation of electoral college strategy are insignificant, and the independent effect of these strategies on campaign resource allocation cannot be ascertained from the methods and data used.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This paper finds that, contrary to Shaw (1999), the factors thought to predict presidential campaign strategy and its effect on resource allocation are not significant when appropriate statistical methods are used.",
+    "evidence_pages": [
+      2,
+      15
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The authors show that previous research claiming to explain how presidential campaigns decide where to focus their efforts is flawed; when using the correct statistical methods, the supposed predictors of campaign strategy and their impact on resource allocation are not supported by the data.",
+    "evidence_pages": [
+      2,
+      15
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do the factors identified by Shaw (1999) predict presidential campaign strategy formation and independently affect candidate resource allocation when analyzed with the appropriate statistical methods?",
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Shaw's (1999) analyses used ordinary least squares (LS) rather than the claimed ordered probit and 2SLS methods.",
+      "When the correct ordered probit and 2SLS methods are applied, the factors (competitiveness, electoral votes, TV ad cost) do not significantly predict campaign strategy.",
+      "There is no evidence that campaign strategy, as measured, independently affects candidate resource allocation using the methods and data described.",
+      "The results from the correct methods are characterized by a high degree of uncertainty."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      9,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Replication of Shaw (1999)'s analyses using LS, ordered probit, and 2SLS regressions.",
+      "Comparison of published results to results from correct statistical methods.",
+      "Simulation and graphical analysis (ternary plots) to illustrate findings."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      7,
+      9,
+      11
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Data provided by Daron Shaw (1999), including campaign and journalistic sources on state-level campaign strategy, candidate appearances, and television advertisement buys."
+    ],
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Electoral college strategy (state classification: base, marginal, battleground)",
+      "Competitiveness",
+      "Electoral votes",
+      "TV ad cost",
+      "Candidate appearances",
+      "Television advertisement buys",
+      "Opponent's resource allocation"
+    ],
+    "evidence_pages": [
+      3,
+      5,
+      10
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (presidential elections)",
+    "evidence_pages": [
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1988-1996",
+    "evidence_pages": [
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "State-level (U.S. states in presidential elections)",
+    "evidence_pages": [
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential campaigns",
+      "campaign strategy",
+      "resource allocation",
+      "electoral college",
+      "ordered probit",
+      "2SLS",
+      "replication"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      10
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political methodology",
+      "election studies",
+      "campaign finance",
+      "statistical replication"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      10
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "no evidence exists in Shaw’s data, using the methods he claimed to use, for the proposition that candidate strategy is a predictable function of competitiveness, tv ad costs, and electoral vote share.",
+    "evidence_pages": [
+      15
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 15,
+    "evidence_pages": [
+      15
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "links": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          4,
+          9,
+          14,
+          15
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          4,
+          5,
+          7,
+          9,
+          11
+        ]
+      }
+    },
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      11,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the document text. No journal, DOI, or citation information is present in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      10,
+      11,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Elections"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      10
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national"
+    ],
+    "evidence_pages": [
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "Replication study",
+      "Quantitative analysis"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      7,
+      9,
+      11
+    ],
+    "confidence": "high"
+  }
+}

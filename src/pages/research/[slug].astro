@@ -1,0 +1,517 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import metadataIndex from "../../data/publications/presentation/index.json";
+import publicationFigures from "../../data/publication-figures.json";
+
+type PublicationLink = {
+  label: string;
+  url: string;
+};
+
+type Publication = {
+  slug: string;
+  data: {
+    title: string;
+    summary: string;
+    year: number | string;
+    type: "Book" | "Article" | "Chapter" | "Working Paper" | "Review";
+    venue: string;
+    authors: string[];
+    citation?: string;
+    themes: string[];
+    links: PublicationLink[];
+  };
+};
+
+type MetadataLinkSet = {
+  pdf?: string | null;
+  journal?: string | null;
+  replication_data?: string | null;
+  code?: string | null;
+  publisher?: string | null;
+};
+
+type PublicationMetadata = {
+  slug?: string;
+  title: string;
+  authors?: string[];
+  year?: number | string;
+  publication_type?: string | null;
+  journal?: string | null;
+  volume?: string | null;
+  issue?: string | null;
+  pages?: string | null;
+  doi?: string | null;
+  citation?: string | null;
+  links?: MetadataLinkSet | null;
+  card_summary?: string | null;
+  abstract?: string | null;
+  plain_english_summary?: string | null;
+  research_question?: string | null;
+  research_highlights?: string[] | null;
+  methods?: string[] | null;
+  data_sources?: string[] | null;
+  identification_strategy?: string | null;
+  geography?: string | null;
+  time_period?: string | null;
+  unit_of_analysis?: string | null;
+  sample_size?: string | null;
+  policy_relevance?: string | null;
+  tags?: string[] | null;
+  filters?: string[] | null;
+};
+
+type PublicationFigure = {
+  src: string;
+  alt: string;
+  caption: string;
+  fallback?: boolean;
+};
+
+export async function getStaticPaths() {
+  const publications = await getCollection("publications");
+  return publications.map((publication) => ({
+    params: { slug: publication.slug },
+    props: { publication }
+  }));
+}
+
+const { publication } = Astro.props as { publication: Publication };
+const allPublications = (await getCollection("publications")) as Publication[];
+const metadataItems = metadataIndex as unknown as PublicationMetadata[];
+const figureManifest = publicationFigures as Record<string, PublicationFigure>;
+
+const cleanText = (value?: string | number | null) =>
+  String(value ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const normalizeTitle = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const basename = (value: string) => value.split(/[/?#]/)[0]?.split("/").pop()?.replace(/\.pdf$/i, "") ?? "";
+
+const metadataAliases: Record<string, string> = {
+  "all-presidents-senators": "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+  "disunion-review": "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
+  "municipal-administration": "elections-and-representation-in-american-municipal-administration",
+  "political-disaster": "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar",
+  "presidential-particularism-divide-dollar": "presidential-particularism-and-divide-the-dollar-politics",
+  "public-cost-unilateral-action": "the-public-cost-of-unilateral-action",
+  spending: "the-influence-of-federal-spending-on-presidential-elections"
+};
+
+const pdfBasenames = (entry: Publication) =>
+  entry.data.links
+    .map((link) => link.url)
+    .filter((url) => /\.pdf(?:$|[?#])/i.test(url))
+    .map(basename)
+    .filter(Boolean);
+
+const metadataForPublication = (entry: Publication) => {
+  const alias = metadataAliases[entry.slug];
+  if (alias) {
+    const aliasMatch = metadataItems.find((item) => item.slug === alias);
+    if (aliasMatch) return aliasMatch;
+  }
+
+  const slugMatch = metadataItems.find((item) => item.slug === entry.slug);
+  if (slugMatch) return slugMatch;
+
+  const normalized = normalizeTitle(entry.data.title);
+  const titleMatch = metadataItems.find((item) => normalizeTitle(item.title) === normalized);
+  if (titleMatch) return titleMatch;
+
+  const basenames = pdfBasenames(entry);
+  const pdfMatch = metadataItems.find((item) => {
+    const pdf = item.links?.pdf ? basename(item.links.pdf) : "";
+    return pdf && basenames.includes(pdf);
+  });
+  if (pdfMatch) return pdfMatch;
+
+  return metadataItems.find((item) => {
+    const metadataTitle = normalizeTitle(item.title);
+    return (
+      normalized.length > 42 &&
+      metadataTitle.length > 42 &&
+      (normalized.startsWith(metadataTitle) || metadataTitle.startsWith(normalized))
+    );
+  });
+};
+
+const metadata = metadataForPublication(publication);
+const rawFigure = figureManifest[publication.slug];
+const publicationFigure = rawFigure && !rawFigure.fallback ? rawFigure : undefined;
+
+const profileOverrides: Record<string, { why?: string[]; findings?: string[] }> = {
+  "no-blank-check": {
+    why: [
+      "This book asks how citizens think about presidential power when presidents act without Congress.",
+      "Its contribution is to show that public antipathy toward unilateral power can create political limits on executive authority, linking public opinion to debates about institutional constraint.",
+      "The argument matters because democratic accountability depends not only on formal checks, but also on the public's willingness to judge how power is used."
+    ],
+    findings: [
+      "Citizens do not treat presidential unilateral action as a blank check, even when policy goals are attractive.",
+      "Public attitudes toward executive power create political limits on how presidents can act outside Congress.",
+      "The book connects public opinion about the presidency to democratic accountability and institutional constraint."
+    ]
+  },
+  "particularistic-president": {
+    why: [
+      "This book asks how presidential incentives shape the distribution of federal attention and benefits.",
+      "Its contribution is to show how executive branch politics can produce unequal geographic patterns in public resources, connecting presidential power to political inequality.",
+      "The argument matters because federal governance is experienced locally: where benefits flow, which communities receive attention, and how citizens understand the reach of national authority."
+    ],
+    findings: [
+      "Presidents can use executive branch discretion to direct attention and benefits toward politically valuable constituencies.",
+      "Executive branch politics helps explain unequal geographic patterns in federal benefits.",
+      "The book links presidential incentives to political inequality and distributive politics."
+    ]
+  }
+};
+
+const firstSentence = (text: string) => cleanText(text).match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? cleanText(text);
+
+const sentenceLimit = (text?: string | null, limit = 2) => {
+  const value = cleanText(text);
+  if (!value) return "";
+  const sentences = value.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((sentence) => sentence.trim()) ?? [value];
+  return cleanText(sentences.slice(0, limit).join(" "));
+};
+
+const asList = (value?: string[] | null) => (Array.isArray(value) ? value.map(cleanText).filter(Boolean) : []);
+
+const meaningfulValue = (value?: string | number | null) => {
+  const text = cleanText(value);
+  if (!text || text === "0" || text === "00") return "";
+  return text;
+};
+
+const formatAuthors = (authors: string[]) => {
+  if (authors.length <= 2) return authors.join(" and ");
+  return `${authors.slice(0, -1).join(", ")}, and ${authors.at(-1)}`;
+};
+
+const venue = cleanText(metadata?.journal) || publication.data.venue;
+const contribution =
+  firstSentence(metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+const abstract = cleanText(metadata?.abstract);
+const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
+const authors = metadata?.authors?.length ? metadata.authors : publication.data.authors;
+
+const addLink = (links: Map<string, PublicationLink>, label: string, url?: string | null) => {
+  const cleanUrl = cleanText(url);
+  if (!cleanUrl) return;
+  const normalizedLabel = label === "Data" ? "Replication Data" : label;
+  if (!links.has(normalizedLabel)) links.set(normalizedLabel, { label: normalizedLabel, url: cleanUrl });
+};
+
+const linkMap = new Map<string, PublicationLink>();
+publication.data.links.forEach((link) => addLink(linkMap, link.label, link.url));
+addLink(linkMap, "PDF", metadata?.links?.pdf);
+addLink(linkMap, "DOI", metadata?.doi ? `https://doi.org/${metadata.doi.replace(/^https?:\/\/doi\.org\//, "")}` : undefined);
+addLink(linkMap, "Journal", metadata?.links?.journal);
+addLink(linkMap, "Publisher", metadata?.links?.publisher);
+addLink(linkMap, "Replication Data", metadata?.links?.replication_data);
+addLink(linkMap, "Code", metadata?.links?.code);
+
+const linkOrder = ["PDF", "DOI", "Journal", "Publisher", "Replication Data", "Data", "Code", "Research Profile"];
+const primaryLinks = Array.from(linkMap.values()).sort((a, b) => {
+  const aIndex = linkOrder.indexOf(a.label);
+  const bIndex = linkOrder.indexOf(b.label);
+  return (aIndex === -1 ? 99 : aIndex) - (bIndex === -1 ? 99 : bIndex) || a.label.localeCompare(b.label);
+});
+
+const themeTerms = new Map([
+  ["presidential power", "presidential-power"],
+  ["executive power", "presidential-power"],
+  ["unilateral action", "presidential-power"],
+  ["presidential accountability", "democratic-accountability"],
+  ["democratic accountability", "democratic-accountability"],
+  ["public opinion", "democratic-accountability"],
+  ["political geography", "political-geography"],
+  ["geographic context", "political-geography"],
+  ["urban-rural politics", "political-geography"],
+  ["electoral geography", "political-geography"],
+  ["federal resource allocation", "federal-resource-allocation"],
+  ["distributive politics", "federal-resource-allocation"],
+  ["disaster politics", "federal-resource-allocation"],
+  ["federal spending", "federal-resource-allocation"]
+]);
+
+const themeHref = (theme: string) => {
+  const themeKey = normalizeTitle(theme);
+  const majorTheme = themeTerms.get(themeKey);
+  return majorTheme ? `/research/?theme=${majorTheme}` : `/research/?q=${encodeURIComponent(theme)}`;
+};
+
+const topicSource = [
+  ...publication.data.themes,
+  ...asList(metadata?.tags),
+  ...asList(metadata?.filters)
+];
+const visibleThemes = Array.from(new Set(topicSource)).slice(0, 8);
+
+const lowerContribution = contribution.charAt(0).toLowerCase() + contribution.slice(1);
+const themePhrase = publication.data.themes.slice(0, 3).join(", ").toLowerCase();
+const fallbackOpening =
+  publication.data.type === "Book"
+    ? `${publication.data.title} examines ${lowerContribution.replace(/^examines\s+/i, "").replace(/[.!?]$/, "")}.`
+    : `This publication situates ${publication.data.title} within work on ${themePhrase || "American politics"}.`;
+
+const whyItMatters = profileOverrides[publication.slug]?.why ??
+  [
+    metadata?.research_question ? `The publication begins with a motivating question: ${sentenceLimit(metadata.research_question, 2)}` : fallbackOpening,
+    `Its central contribution is to show that ${lowerContribution.replace(/[.!?]$/, "")}.`,
+    metadata?.policy_relevance
+      ? sentenceLimit(metadata.policy_relevance, 2)
+      : `It matters because the findings connect institutional choices to the way authority, public responsibility, and political behavior are experienced in practice.`
+  ].filter(Boolean);
+
+const keyFindings = (profileOverrides[publication.slug]?.findings ??
+  (asList(metadata?.research_highlights).length
+  ? asList(metadata?.research_highlights)
+  : sentenceLimit(metadata?.plain_english_summary ?? publication.data.summary, 4)
+      .split(/(?<=[.!?])\s+/)
+      .filter(Boolean)
+)).slice(0, 5);
+
+const designRows = [
+  { label: "Design", value: meaningfulValue(metadata?.identification_strategy) || (publication.data.type === "Book" ? "Book-length scholarly monograph" : meaningfulValue(publication.data.type)) },
+  { label: "Data", value: asList(metadata?.data_sources).join("; ") },
+  { label: "Geography", value: meaningfulValue(metadata?.geography) },
+  { label: "Time Period", value: meaningfulValue(metadata?.time_period) },
+  { label: "Unit of Analysis", value: meaningfulValue(metadata?.unit_of_analysis) },
+  { label: "Sample Size", value: meaningfulValue(metadata?.sample_size) },
+  { label: "Methods", value: asList(metadata?.methods).join("; ") }
+].filter((row) => row.value);
+
+const citationRows = [
+  { label: "Venue", value: venue },
+  { label: "Volume", value: meaningfulValue(metadata?.volume) },
+  { label: "Issue", value: meaningfulValue(metadata?.issue) },
+  { label: "Pages", value: meaningfulValue(metadata?.pages) },
+  { label: "DOI", value: meaningfulValue(metadata?.doi) }
+].filter((row) => row.value);
+
+const summaryForPublication = (entry: Publication) => {
+  const entryMetadata = metadataForPublication(entry);
+  return firstSentence(entryMetadata?.card_summary ?? entryMetadata?.plain_english_summary ?? entry.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+};
+
+const relatedPublications = allPublications
+  .filter((entry) => entry.slug !== publication.slug)
+  .map((entry) => {
+    const sharedThemes = entry.data.themes.filter((theme) => publication.data.themes.includes(theme)).length;
+    return { entry, sharedThemes };
+  })
+  .filter(({ sharedThemes }) => sharedThemes > 0)
+  .sort((a, b) => b.sharedThemes - a.sharedThemes || Number(b.entry.data.year) - Number(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
+  .slice(0, 5);
+
+const sortedPublications = [...allPublications].sort((a, b) => Number(b.data.year) - Number(a.data.year) || a.data.title.localeCompare(b.data.title));
+const currentIndex = sortedPublications.findIndex((entry) => entry.slug === publication.slug);
+const previousPublication = currentIndex > 0 ? sortedPublications[currentIndex - 1] : undefined;
+const nextPublication = currentIndex >= 0 && currentIndex < sortedPublications.length - 1 ? sortedPublications[currentIndex + 1] : undefined;
+---
+
+<BaseLayout
+  title={`${publication.data.title} | Research`}
+  active="Research"
+  description={contribution}
+>
+  <article class="publication-profile container-wide">
+    <header class="publication-profile-hero">
+      <div class="publication-profile-meta">
+        <p>{publication.data.type} · {publication.data.year}</p>
+        <p>{venue}</p>
+      </div>
+      <div class="publication-profile-main">
+        <h1>{publication.data.title}</h1>
+        <p class="publication-contribution">{contribution}</p>
+        <p class="publication-profile-authors">{formatAuthors(authors)}</p>
+        {primaryLinks.length > 0 && (
+          <nav class="publication-primary-links" aria-label="Publication links">
+            {primaryLinks.map((link) => (
+              <a href={link.url}>{link.label}</a>
+            ))}
+          </nav>
+        )}
+      </div>
+    </header>
+
+    {visibleThemes.length > 0 && (
+      <nav class="publication-theme-ribbon" aria-label="Related research themes">
+        {visibleThemes.map((theme) => (
+          <a href={themeHref(theme)}>{theme}</a>
+        ))}
+      </nav>
+    )}
+
+    <section class="publication-profile-section">
+      <div class="publication-profile-section-label">
+        <h2>Why It Matters</h2>
+      </div>
+      <div class="publication-profile-section-body publication-essay">
+        {whyItMatters.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+    </section>
+
+    {keyFindings.length > 0 && (
+      <section class="publication-profile-section">
+        <div class="publication-profile-section-label">
+          <h2>Key Findings</h2>
+        </div>
+        <div class="publication-profile-section-body">
+          <ul class="publication-finding-list">
+            {keyFindings.map((finding) => (
+              <li>{finding}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    {designRows.length > 0 && (
+      <section class="publication-profile-section">
+        <div class="publication-profile-section-label">
+          <h2>Research Design</h2>
+        </div>
+        <div class="publication-profile-section-body">
+          <dl class="publication-design-grid">
+            {designRows.map((row) => (
+              <div>
+                <dt>{row.label}</dt>
+                <dd>{row.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+    )}
+
+    {publicationFigure && (
+      <figure class="publication-profile-figure">
+        <img src={publicationFigure.src} alt={publicationFigure.alt} loading="lazy" decoding="async" />
+        <figcaption>{publicationFigure.caption}</figcaption>
+      </figure>
+    )}
+
+    {abstract && (
+      <details class="publication-profile-abstract">
+        <summary>Full Abstract</summary>
+        <p>{abstract}</p>
+      </details>
+    )}
+
+    {(fullCitation || citationRows.length > 0) && (
+      <section class="publication-profile-section publication-citation-section">
+        <div class="publication-profile-section-label">
+          <h2>Citation</h2>
+        </div>
+        <div class="publication-profile-section-body">
+          {fullCitation && (
+            <div class="publication-citation-copy">
+              <p>{fullCitation}</p>
+              <button type="button" data-copy-citation data-citation={fullCitation}>Copy citation</button>
+            </div>
+          )}
+          {citationRows.length > 0 && (
+            <dl class="publication-citation-grid">
+              {citationRows.map((row) => (
+                <div>
+                  <dt>{row.label}</dt>
+                  <dd>{row.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+        </div>
+      </section>
+    )}
+
+    {relatedPublications.length > 0 && (
+      <section class="publication-profile-section publication-related-section">
+        <div class="publication-profile-section-label">
+          <h2>Related Research</h2>
+        </div>
+        <div class="publication-profile-section-body">
+          <div class="publication-related-list">
+            {relatedPublications.map(({ entry }) => (
+              <article class="publication-related-item">
+                <p>{entry.data.year} · {entry.data.venue}</p>
+                <h3><a href={`/research/${entry.slug}/`}>{entry.data.title}</a></h3>
+                <p>{summaryForPublication(entry)}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <nav class="publication-neighbors publication-neighbors-quiet" aria-label="Publication navigation">
+      {previousPublication ? (
+        <a href={`/research/${previousPublication.slug}/`}>
+          <span>Newer</span>
+          {previousPublication.data.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {nextPublication ? (
+        <a href={`/research/${nextPublication.slug}/`}>
+          <span>Older</span>
+          {nextPublication.data.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </article>
+
+  <script>
+    const copyCitationText = async (citation: string) => {
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(citation);
+          return true;
+        } catch {
+          // Fall back to the older copy path below.
+        }
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = citation;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      document.body.append(textarea);
+      textarea.select();
+      const legacyCopy = (document as Document & { execCommand?: (commandId: string) => boolean }).execCommand;
+      const copied = legacyCopy?.call(document, "copy") ?? false;
+      textarea.remove();
+      return copied;
+    };
+
+    document.querySelectorAll<HTMLButtonElement>("[data-copy-citation]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const citation = button.dataset.citation ?? "";
+        if (!citation) return;
+
+        const originalText = button.textContent ?? "Copy citation";
+        const copied = await copyCitationText(citation);
+        button.textContent = copied ? "Copied" : "Copy unavailable";
+        window.setTimeout(() => {
+          button.textContent = originalText;
+        }, 1800);
+      });
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,346 @@
+{
+  "title": {
+    "value": "Reconsidering Bellwether Locations in U.S. Presidential Elections",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "James G. Gimpel",
+      "Andrew Reeves",
+      "Sean Trende"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2022,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "52",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "3",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "509–534",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/psq.12793",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "We examine the notion of a “bellwether” location in the electoral political context. Bellwethers are thought to have predictive power because they supposedly signal how the entire electorate will move on election day. We consider how the number of bellwether counties—defined in several ways—has fluctuated since the 1930s. We also explore the extent to which bellwethers successfully predict future elections. With the proliferation of geographic polarization, few counties can successively and successfully pick the winner of presidential elections. Other bellwether measures fare slightly better or worse, but as Tufte and Sun (1975) found nearly half a century ago, bellwethers today continue to be poor predictors of future performance.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This article finds that U.S. presidential election bellwether counties, however defined, are poor predictors of future election outcomes, especially in the context of increasing geographic polarization.",
+    "evidence_pages": [
+      1,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The study shows that counties often called 'bellwethers'—places thought to predict the outcome of U.S. presidential elections—are not reliable indicators of future winners, and their predictive power has declined as voting has become more polarized by geography.",
+    "evidence_pages": [
+      1,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How regularly do bellwether counties emerge, how long do they persist, and does past performance as a bellwether predict future electoral outcomes in U.S. presidential elections?",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Few counties can consistently pick the winner of presidential elections as geographic polarization increases.",
+      "All-or-nothing and swingometric bellwethers are not reliable predictors of future election outcomes.",
+      "Barometric bellwethers are somewhat better predictors but still limited, especially in close elections.",
+      "Bellwether counties tend to be less diverse, less well educated, and have higher turnout than non-bellwethers.",
+      "The predictive power of bellwether counties has declined over time, and relying on them for forecasts is not justified."
+    ],
+    "evidence_pages": [
+      1,
+      14,
+      15,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Analysis of county-level presidential election results from 1932 to 2020.",
+      "Definition and operationalization of three types of bellwether counties: all-or-nothing, barometric, and swingometric.",
+      "Logistic regression models to test whether past bellwether status predicts future status.",
+      "Comparison of demographic and socioeconomic characteristics of bellwether and non-bellwether counties."
+    ],
+    "evidence_pages": [
+      4,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "County-level presidential election results from Algara (2021) and Leip (2022)"
+    ],
+    "evidence_pages": [
+      4
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Bellwether status (all-or-nothing, barometric, swingometric)",
+      "County-level vote margins",
+      "Demographic and socioeconomic characteristics (race, education, income, turnout)"
+    ],
+    "evidence_pages": [
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (county-level analysis)",
+    "evidence_pages": [
+      1,
+      4
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1932–2020",
+    "evidence_pages": [
+      4,
+      18
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county",
+    "evidence_pages": [
+      4,
+      14
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "bellwether counties",
+      "presidential elections",
+      "predictive power",
+      "geographic polarization",
+      "voting behavior"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      14
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "swing voters",
+      "election forecasting",
+      "political geography",
+      "demographic analysis"
+    ],
+    "evidence_pages": [
+      12,
+      13,
+      14
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "All-or-nothing and swingometric bellwethers are not reliable predictors of the future. Drawing upon a handful of bellwether locations to make this prediction is as much an error today as it was in the early 1970s.",
+    "evidence_pages": [
+      21
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 21,
+    "evidence_pages": [
+      21
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Gimpel, James G., Andrew Reeves, and Sean Trende. 2022. \"Reconsidering Bellwether Locations in U.S. Presidential Elections.\" Presidential Studies Quarterly 52(3): 509–534. https://doi.org/10.1111/psq.12793",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/bellwether.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          14,
+          15,
+          21,
+          22
+        ]
+      },
+      "methods": {
+        "pages": [
+          4,
+          15,
+          16,
+          17,
+          18
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the cited pages. No policy recommendations or identification strategies are explicitly stated in the text.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      14,
+      15,
+      16,
+      17,
+      18,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "elections",
+      "political behavior"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      14
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national",
+      "county"
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      14
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "historical analysis",
+      "regression modeling"
+    ],
+    "evidence_pages": [
+      4,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  }
+}

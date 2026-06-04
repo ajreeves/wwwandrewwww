@@ -1,0 +1,134 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+
+const collections = await Promise.all([
+  getCollection("publications"),
+  getCollection("books"),
+  getCollection("writing")
+]);
+
+const [publications, books, writing] = collections;
+const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
+const searchIndex = [
+  ...publications.filter((entry) => entry.data.type !== "Book").map((entry) => ({
+    title: entry.data.title,
+    summary: entry.data.summary,
+    type: entry.data.type,
+    year: entry.data.year,
+    themes: entry.data.themes,
+    url: `/research/${entry.slug}/`
+  })),
+  ...books.map((entry) => ({
+    title: entry.data.title,
+    summary: entry.data.summary,
+    type: "Book",
+    year: entry.data.year,
+    themes: entry.data.themes,
+    url: "/books/"
+  })),
+  ...writing.map((entry) => ({
+    title: entry.data.title,
+    summary: entry.data.summary,
+    type: "Writing",
+    year: entry.data.year,
+    themes: entry.data.themes,
+    url: entry.data.url ?? "/news/"
+  }))
+].sort((a, b) => yearRank(b.year) - yearRank(a.year));
+---
+
+<BaseLayout title="Search" active="Search" description="Search Andrew Reeves's publications, books, and public writing.">
+  <PageHeader
+    eyebrow="Search"
+    title="Search the Work"
+    intro="Full-text search across publications, books, and public writing. Results stay local to the static site."
+  />
+  <section class="container-narrow page-section" data-search-page>
+    <label class="small-caps mb-3 block" for="site-search">Search terms</label>
+    <input
+      id="site-search"
+      type="search"
+      class="w-full border border-rule bg-ivory px-5 py-4 font-serif text-xl text-ink outline-none transition focus:border-olive-dark"
+      placeholder="Try presidential power, geography, disaster, accountability..."
+      autocomplete="off"
+      data-search-input
+    />
+    <p class="mt-4 text-base text-muted" aria-live="polite" data-search-count>Showing all entries.</p>
+    <div class="mt-8 grid gap-4" data-search-results></div>
+  </section>
+  <script is:inline type="application/json" id="search-data" set:html={JSON.stringify(searchIndex)} />
+  <script is:inline>
+    const dataEl = document.getElementById("search-data");
+    const items = dataEl ? JSON.parse(dataEl.textContent || "[]") : [];
+    const input = document.querySelector("[data-search-input]");
+    const results = document.querySelector("[data-search-results]");
+    const count = document.querySelector("[data-search-count]");
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function score(item, query) {
+      const haystack = `${item.title} ${item.summary} ${item.type} ${item.year} ${(item.themes || []).join(" ")}`.toLowerCase();
+      return query.every((term) => haystack.includes(term));
+    }
+
+    function queryTerms() {
+      return String(input?.value || "")
+        .trim()
+        .toLowerCase()
+        .split(/\s+/)
+        .filter(Boolean);
+    }
+
+    function updateUrl() {
+      if (!input) return;
+      const params = new URLSearchParams(window.location.search);
+      const q = input.value.trim();
+      if (q) params.set("q", q);
+      else params.delete("q");
+      const query = params.toString();
+      window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`);
+    }
+
+    function render(shouldUpdateUrl = true) {
+      if (!results) return;
+      const terms = queryTerms();
+      const matches = terms.length === 0 ? items : items.filter((item) => score(item, terms));
+      results.innerHTML = matches
+        .map(
+          (item) => `
+            <article class="border-b border-rule py-5" data-search-result>
+              <p class="small-caps mb-2">${escapeHtml(item.type)} · ${escapeHtml(item.year)}</p>
+              <h2 class="list-title"><a class="text-ink no-underline hover:text-olive-dark" href="${escapeHtml(item.url)}">${escapeHtml(item.title)}</a></h2>
+              <p class="mt-3 text-lg leading-[1.55] text-muted">${escapeHtml(item.summary)}</p>
+            </article>
+          `
+        )
+        .join("");
+      if (count) count.textContent = terms.length === 0 ? "Showing all entries." : `${matches.length} result${matches.length === 1 ? "" : "s"}.`;
+      if (shouldUpdateUrl) updateUrl();
+    }
+
+    if (input) {
+      const params = new URLSearchParams(window.location.search);
+      input.value = params.get("q") || "";
+    }
+
+    input?.addEventListener("input", () => render());
+    window.addEventListener("popstate", () => {
+      if (!input) return;
+      const params = new URLSearchParams(window.location.search);
+      input.value = params.get("q") || "";
+      render(false);
+    });
+    render(false);
+  </script>
+</BaseLayout>

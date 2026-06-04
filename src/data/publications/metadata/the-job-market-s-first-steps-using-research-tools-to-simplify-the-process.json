@@ -1,0 +1,358 @@
+{
+  "title": {
+    "value": "The Job Market’s First Steps: Using Research Tools to Simplify the Process",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Ryan T. Moore",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2011,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "PS: Political Science & Politics",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "44",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "385-391",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/S1049096511000230",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article introduces free and open-source tools to automate the collection of job information and the generation of application materials for the political science job market. The authors describe how to use R and LaTeX to minimize manual data entry, extract job data from APSA’s eJobs, and produce customized letters and mailing labels, thereby streamlining the application process for job seekers.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "The article presents open-source tools using R and LaTeX to automate and simplify the process of collecting job information and preparing application materials for the political science job market.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The authors describe how political science job seekers can save time by using free software tools to automatically gather job postings and create application letters, reducing repetitive tasks and minimizing errors in the application process.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How can free and open-source research tools be used to automate and simplify the process of collecting job information and preparing application materials for the political science job market?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "The muRL package, using R and LaTeX, automates the extraction of job data from APSA’s eJobs and the creation of customized application letters and mailing labels.",
+      "Automating these tasks reduces manual data entry, saves time, and helps prevent errors in job applications.",
+      "The tools are flexible and can be adapted for other mail-merge tasks, such as letters of recommendation."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Development and demonstration of open-source software tools (muRL) in R and LaTeX.",
+      "Step-by-step procedural description for automating data collection and letter generation."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "APSA eJobs listings"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Job posting information (institution, job type, deadline, contact, department, position title, mailing information)"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": "job postings",
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "job market",
+      "political science",
+      "automation",
+      "R",
+      "LaTeX",
+      "APSA eJobs",
+      "application letters",
+      "open-source tools"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "academic job search",
+      "mail merge",
+      "data processing",
+      "application materials"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "pull_quote": {
+    "value": "Our system minimizes manual data entry by extracting and creating a spreadsheet from APSA’s eJobs information.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Moore, Ryan T., and Andrew Reeves. 2011. \"The Job Market’s First Steps: Using Research Tools to Simplify the Process.\" PS: Political Science & Politics 44(2): 385-391. doi:10.1017/S1049096511000230.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/jobs.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the article text, figures, and footnotes. No inferences were made beyond the explicit content of the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "academic job market",
+      "research tools"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "software demonstration",
+      "procedural guide"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  }
+}

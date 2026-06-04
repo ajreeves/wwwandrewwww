@@ -1,0 +1,526 @@
+{
+  "title": {
+    "value": "The Electoral College and Presidential Particularism",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": "2014",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Boston University Law Review",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "94",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "741-766",
+    "evidence_pages": [
+      1,
+      2,
+      26
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "Law review article",
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This article argues that the structure of the Electoral College incentivizes U.S. Presidents to pursue particularistic policies that disproportionately benefit swing states, challenging the notion that increased presidential power necessarily serves the national interest.",
+    "evidence_pages": [
+      1,
+      6,
+      26
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The article explains that because of the way the Electoral College works, Presidents often focus on helping voters in swing states rather than making decisions that benefit the whole country, which may not solve the problems caused by Congress's local focus.",
+    "evidence_pages": [
+      1,
+      6,
+      26
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Does the structure of the Electoral College incentivize U.S. Presidents to engage in particularistic policies that disproportionately benefit politically important constituencies, rather than the national interest?",
+    "evidence_pages": [
+      1,
+      6,
+      26
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents routinely pursue policies that disproportionately benefit voters in swing states due to the incentives created by the Electoral College.",
+      "Empirical evidence shows that targeted federal spending, protectionist tariffs, and disaster declarations are more likely to benefit electorally important states.",
+      "The incentives for presidential particularism have increased as presidential elections have become more competitive in recent decades.",
+      "Delegating more authority to the President may not yield more nationally optimal policy outcomes, but rather shift particularism from Congress to the executive."
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      26,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Review of existing literature and empirical studies on federal grant allocation, disaster declarations, and tariffs.",
+      "Survey experiment on public support for targeted federal spending.",
+      "Analysis of county-level and state-level data on federal spending and electoral outcomes."
+    ],
+    "evidence_pages": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      24
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Survey data from Mechanical Turk respondents.",
+      "County-level data on federal grant spending and presidential vote share.",
+      "State-level data on disaster declarations and electoral competitiveness."
+    ],
+    "evidence_pages": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      24
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Federal grant spending by county",
+      "Change in presidential vote share",
+      "Location of federal spending (home state, home city, other state)",
+      "Disaster declaration status",
+      "State electoral competitiveness"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      11,
+      12,
+      24
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "Primarily 1988-2012, with references to earlier and later periods for context",
+    "evidence_pages": [
+      12,
+      24,
+      26
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "County and state",
+    "evidence_pages": [
+      11,
+      12,
+      24
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "Electoral College",
+      "Presidential particularism",
+      "Swing states",
+      "Federal spending",
+      "Disaster declarations",
+      "Tariffs",
+      "Presidential elections"
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "Congressional polarization",
+      "Presidential power",
+      "Federal resource allocation",
+      "Electoral incentives"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Presidents, like Members of Congress, routinely pursue policies that disproportionately benefit Americans in constituencies likely to be most important in the next election.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Douglas Kriner & Andrew Reeves, The Electoral College and Presidential Particularism, 94 Boston University Law Review 741-766 (2014).",
+    "evidence_pages": [
+      1,
+      2,
+      26
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/electoralcollege.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          6,
+          26
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          6,
+          26,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      "methods": {
+        "pages": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          24
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      24,
+      26
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by explicit statements or data in the text. Abstract and policy relevance are not directly stated. No DOI or public PDF link is provided in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      24,
+      26
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "American Politics",
+      "Public Policy"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "Federal"
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "Empirical analysis",
+      "Survey experiment",
+      "Case studies"
+    ],
+    "evidence_pages": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "confidence": "high"
+  }
+}

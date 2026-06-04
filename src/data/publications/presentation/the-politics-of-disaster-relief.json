@@ -1,0 +1,125 @@
+{
+  "slug": "the-politics-of-disaster-relief",
+  "title": "The Politics of Disaster Relief",
+  "authors": [
+    "Alexander J. Oliver",
+    "Andrew Reeves"
+  ],
+  "year": 2015,
+  "publication_type": "review essay",
+  "journal": "Emerging Trends in the Social and Behavioral Sciences",
+  "volume": null,
+  "issue": null,
+  "pages": "1-8",
+  "doi": null,
+  "citation": "Oliver, A. J., & Reeves, A. (2015). The Politics of Disaster Relief. In R. Scott & S. Kosslyn (Eds.), Emerging Trends in the Social and Behavioral Sciences. John Wiley & Sons, Inc.",
+  "links": {
+    "pdf": "/papers/disasters-review.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This essay reviews research on how voters and politicians in the United States respond to severe weather events, highlighting key findings and future research directions in the politics of disaster relief.",
+  "abstract": "This essay provides an overview of the research on the politics of disaster relief in the United States, focusing on the response of voters and politicians in the aftermath of severe weather events. It reviews foundational research, discusses recent advances, and addresses important issues for future research on this topic.",
+  "plain_english_summary": "The article summarizes what is known about how American voters and politicians react to natural disasters, especially severe weather, and discusses what questions remain for future study.",
+  "research_question": "How do voters and politicians in the United States respond to severe weather events, and what are the key dynamics and unresolved issues in the politics of disaster relief?",
+  "research_highlights": [
+    "Voters sometimes hold politicians accountable for natural disasters, but are more likely to reward politicians for disaster relief than for prevention.",
+    "Politicians' responses to disasters can influence electoral outcomes, and political factors can affect the allocation of disaster relief.",
+    "Recent research uses improved data and methods to better understand voter and politician behavior after disasters.",
+    "There remain unresolved questions about the rationality of voter responses and the incentives created for politicians."
+  ],
+  "methods": [
+    "Literature review of foundational and recent studies on disaster relief politics."
+  ],
+  "data_sources": [],
+  "key_variables": [],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": null,
+  "unit_of_analysis": null,
+  "policy_relevance": null,
+  "pull_quote": "Severe weather provides unexpected challenges in the daily lives of voters and the short- and long-term plans of politicians.",
+  "pull_quote_page": 6,
+  "confidence_notes": "Most fields are supported by explicit statements in the text. No direct DOI, volume, or issue information is provided. Data sources and key variables are not specified as this is a review essay.",
+  "tags": [
+    "Political Science",
+    "Disaster Studies",
+    "review essay",
+    "disaster relief",
+    "politics",
+    "voters",
+    "politicians",
+    "severe weather",
+    "accountability",
+    "United States",
+    "democratic accountability",
+    "retrospective voting",
+    "public administration",
+    "federal disaster relief",
+    "climate change attitudes"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Disaster Studies"
+    ],
+    "government_level": [
+      "federal",
+      "state",
+      "local"
+    ],
+    "research_design": [
+      "review essay"
+    ],
+    "methods": [
+      "Literature review of foundational and recent studies on disaster relief politics."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [],
+    "keywords": [
+      "disaster relief",
+      "politics",
+      "voters",
+      "politicians",
+      "severe weather",
+      "accountability",
+      "United States"
+    ],
+    "related_topics": [
+      "democratic accountability",
+      "retrospective voting",
+      "public administration",
+      "federal disaster relief",
+      "climate change attitudes"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        5
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  }
+}

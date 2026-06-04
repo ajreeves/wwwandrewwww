@@ -1,0 +1,132 @@
+{
+  "slug": "defining-racial-and-ethnic-context-with-geolocation-data",
+  "title": "Defining racial and ethnic context with geolocation data",
+  "authors": [
+    "Ryan T. Moore",
+    "Andrew Reeves"
+  ],
+  "year": 2020,
+  "publication_type": "research note",
+  "journal": "Political Science Research and Methods",
+  "volume": "8",
+  "issue": null,
+  "pages": "780–794",
+  "doi": "10.1017/psrm.2020.10",
+  "citation": "Moore, Ryan T., and Andrew Reeves. 2020. \"Defining racial and ethnic context with geolocation data.\" Political Science Research and Methods 8: 780–794. doi:10.1017/psrm.2020.10",
+  "links": {
+    "pdf": "/papers/context.pdf",
+    "journal": "https://doi.org/10.1017/psrm.2020.10",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This study shows that static geographic measures overstate the extremity of individuals’ racial and ethnic contexts compared to dynamic measures using GPS data from over 400 individuals.",
+  "abstract": "Across disciplines, scholars strive to better understand individuals’ milieus—the people, places, and institutions individuals encounter in their daily lives. In particular, political scientists argue that racial and ethnic context shapes attitudes about candidates, policies, and fellow citizens. Yet, the current standard of measuring milieus is to place survey respondents in a geographic container and then to ascribe all that container’s characteristics to the individual’s milieu. Using a new dataset of over 2.6 million GPS records from over 400 individuals, we compare conventional static measures of racial and ethnic context to dynamic, precise measures of milieus. We demonstrate how low-level static measures tend to overstate how extreme individuals’ racial and ethnic contexts are and offer suggestions for future researchers.",
+  "plain_english_summary": "The authors use GPS data from hundreds of people to show that traditional methods of measuring the racial and ethnic makeup of people's environments often exaggerate how extreme those environments are, and that tracking where people actually go gives a more accurate picture.",
+  "research_question": "How do static geographic measures of racial and ethnic context compare to dynamic, individualized measures based on geolocation data?",
+  "research_highlights": [
+    "Static measures of racial and ethnic context, even at low geographic levels, often misrepresent individuals’ actual experiences.",
+    "Dynamic, GPS-based measures reveal that individuals’ racial and ethnic milieus are typically more moderate than static measures suggest.",
+    "There is substantial individual variation in contextual experiences, even within the same county or metropolitan area.",
+    "Low-level static measures can sometimes estimate dynamic experiences, but not uniformly across racial and ethnic groups."
+  ],
+  "methods": [
+    "Collection of over 2.6 million GPS records from 446 users of the OpenPaths smartphone application.",
+    "Assignment of GPS coordinates to census blocks using FIPS codes.",
+    "Comparison of dynamic, individualized measures of racial and ethnic context to static measures at various geographic levels (block, tract, county, state)."
+  ],
+  "data_sources": [
+    "OpenPaths smartphone application GPS data",
+    "2010 US Census block data",
+    "American Community Survey (2008–2012)"
+  ],
+  "key_variables": [
+    "GPS coordinates (latitude, longitude)",
+    "Census block racial and ethnic composition",
+    "Geographic containers (block, tract, county, state)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (all 50 states and the District of Columbia)",
+  "time_period": null,
+  "unit_of_analysis": "individual",
+  "policy_relevance": null,
+  "pull_quote": "Static measures of lived experience, usually defined by residence at a single level of geography, fail to capture the variety of experiences that individuals are often posited to have.",
+  "pull_quote_page": 10,
+  "confidence_notes": "All extracted fields are directly supported by the document text and page references. No information is inferred beyond what is stated.",
+  "tags": [
+    "political science",
+    "measurement",
+    "spatial analysis",
+    "descriptive analysis",
+    "measurement comparison",
+    "context",
+    "data collection",
+    "spatial methods",
+    "racial context",
+    "ethnic context",
+    "geolocation",
+    "measurement error",
+    "political behavior"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "measurement",
+      "spatial analysis"
+    ],
+    "government_level": [],
+    "research_design": [
+      "descriptive analysis",
+      "measurement comparison"
+    ],
+    "methods": [
+      "Collection of over 2.6 million GPS records from 446 users of the OpenPaths smartphone application.",
+      "Assignment of GPS coordinates to census blocks using FIPS codes.",
+      "Comparison of dynamic, individualized measures of racial and ethnic context to static measures at various geographic levels (block, tract, county, state)."
+    ],
+    "geography": [
+      "United States (all 50 states and the District of Columbia)"
+    ],
+    "time_period": [],
+    "keywords": [
+      "context",
+      "data collection",
+      "measurement",
+      "spatial methods"
+    ],
+    "related_topics": [
+      "racial context",
+      "ethnic context",
+      "geolocation",
+      "measurement error",
+      "political behavior"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        6,
+        7,
+        8
+      ]
+    }
+  }
+}

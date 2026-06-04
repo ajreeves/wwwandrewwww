@@ -1,8 +1,9 @@
-# Local Netlify folder
-.netlify
-
-/.quarto/
-.Rproj.user
-.Rproj.user/53EA540A/sources/prop/INDEX
-.Rproj.user/53EA540A/sources/prop/INDEX
-.Rproj.user/shared/notebooks/paths
+node_modules/
+dist/
+.astro/
+.DS_Store
+npm-debug.log*
+.env
+.env.*
+!.env.example
+test-results/

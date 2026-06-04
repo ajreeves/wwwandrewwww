@@ -1,0 +1,54 @@
+---
+interface Book {
+  data: {
+    title: string;
+    subtitle?: string;
+    summary: string;
+    publisher: string;
+    year: number | string;
+    cover: string;
+    coverCredit?: string;
+    coauthors: string[];
+    url?: string;
+    amazonUrl?: string;
+  };
+  slug: string;
+}
+
+interface Props {
+  book: Book;
+  reversed?: boolean;
+}
+
+const { book, reversed = false } = Astro.props;
+const authorLine = book.slug === "particularistic-president"
+  ? [...book.data.coauthors, "Andrew Reeves"].join(" and ")
+  : ["Andrew Reeves", ...book.data.coauthors].join(" and ");
+const bookPage = `/books/#${book.slug}`;
+---
+
+<article class={`flw-feature-card book-feature-card ${reversed ? "flw-feature-card-reversed" : ""}`}>
+  <figure class="flw-feature-media book-cover-panel">
+    <a href={bookPage} class="book-single-link no-underline" aria-label={`${book.data.title} book page`}>
+      <img
+        src={book.data.cover}
+        alt={`Cover of ${book.data.title}`}
+        loading="lazy"
+      />
+    </a>
+  </figure>
+  <div class="flw-feature-copy">
+    <p class="kicker mb-4">Book · {book.data.year}</p>
+    <h3 class="book-title">
+      <a href={bookPage} class="no-underline">{book.data.title}</a>
+    </h3>
+    {book.data.subtitle && <p class="book-subtitle">{book.data.subtitle}</p>}
+    <p class="book-authors">{authorLine}</p>
+    <p class="book-publisher">{book.data.publisher}, {book.data.year}</p>
+    <p class="book-description">{book.data.summary}</p>
+    <div class="book-action-row">
+      <a class="editorial-button" href={bookPage}>Book Page</a>
+      {book.data.url && <a class="ghost-button" href={book.data.url}>Publisher</a>}
+    </div>
+  </div>
+</article>

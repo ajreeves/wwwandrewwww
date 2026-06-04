@@ -1,0 +1,528 @@
+{
+  "title": {
+    "value": "Driving support: workers, PACs, and congressional support of the auto industry",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Ryan T. Moore",
+      "Eleanor Neff Powell",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2013,
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Business and Politics",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "15",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "137–162",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1515/bap-2013-0005",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "In 2008 and 2009, the House of Representatives directed billions of dollars to the auto industry by passing a bailout and the “cash for clunkers” program. Moving beyond corporate influence via campaign contributions, we demonstrate that the presence of auto workers in a district strongly predicts legislative support for both bills. In addition to this critical legislation, we also analyze over 250 bills on which the auto industry either lobbied or took a public position. We find no patterns relating a district’s workers or corporate campaign contributions to these votes on broader legislation where other groups, such as environmental advocates or labor unions, are at the table. Instead, the auto industry garners consistent support only on quasi-private, particularistic legislation. Thus, we contend that on particularistic legislation the presence of workers (not just campaign contributions) drives legislative support; however, when legislators expand the scope of conflict, the influence of a single industry is attentuated by other interests.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "The presence of auto workers in a congressional district, not just PAC contributions, strongly predicts legislative support for auto industry bailouts and targeted aid, but this influence does not extend to broader legislation.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      14,
+      15,
+      16,
+      20,
+      21
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Congressional representatives are more likely to support auto industry bailouts and targeted aid if their districts have many auto workers, but this effect is not seen for broader bills; campaign contributions also matter, but workers' presence is a key factor for industry-specific legislation.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      14,
+      15,
+      16,
+      20,
+      21
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How and when does the auto industry garner political support in Congress, and what roles do the presence of auto workers and PAC contributions play in influencing legislative votes on industry-related bills?",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "The presence of auto workers in a congressional district is strongly associated with support for the 2008 auto bailout and the 2009 cash for clunkers program, even after controlling for ideology and PAC contributions.",
+      "PAC contributions from the Big Three automakers and the AFL-CIO are also associated with support for these bills, but the effect of worker presence is independent and robust.",
+      "For over 250 other bills on which the auto industry lobbied or took a public position, there is no systematic relationship between worker presence or PAC contributions and legislative support.",
+      "Industry influence is strongest on particularistic, industry-specific legislation and is attenuated on broader bills where other interests are involved."
+    ],
+    "evidence_pages": [
+      1,
+      3,
+      12,
+      14,
+      15,
+      16,
+      20,
+      21,
+      27,
+      28
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Quantitative analysis of House roll call votes on the 2008 auto bailout and 2009 cash for clunkers program.",
+      "Logistic regression models controlling for party, ideology, district partisanship, and PAC contributions.",
+      "Analysis of over 250 bills on which the auto industry lobbied or took a public position, using regression models to test associations with worker presence and PAC contributions."
+    ],
+    "evidence_pages": [
+      3,
+      12,
+      14,
+      15,
+      16,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "US Census data on auto industry employment by county and congressional district",
+      "Center for Responsive Politics data on PAC contributions",
+      "MapLight data on industry public positions on legislation",
+      "Lobbying reports from the Center for Responsive Politics"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      11,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Presence of auto workers in a congressional district (industry district)",
+      "PAC contributions from Ford, Daimler-Chrysler, GM, and AFL-CIO",
+      "Party affiliation",
+      "DW-NOMINATE ideology score",
+      "District partisanship (Democratic share of presidential vote)",
+      "Roll call votes on industry-related bills"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (U.S. House of Representatives districts)",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2008–2009 (main analysis); 110th and 111th Congresses",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "U.S. House member/district roll call vote",
+    "evidence_pages": [
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "auto industry",
+      "congress",
+      "legislative voting",
+      "PAC contributions",
+      "workers",
+      "bailout",
+      "cash for clunkers",
+      "industry influence",
+      "roll call votes"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "corporate influence",
+      "interest groups",
+      "labor unions",
+      "campaign finance",
+      "economic geography",
+      "particularistic legislation"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "It is not merely the capital of the corporate PACs but also the presence of the auto workers themselves that animate Democratic and Republican support for the auto industry.",
+    "evidence_pages": [
+      14
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 14,
+    "evidence_pages": [
+      14
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Moore, Ryan T., Eleanor Neff Powell, and Andrew Reeves. 2013. \"Driving support: workers, PACs, and congressional support of the auto industry.\" Business and Politics 15(2): 137–162. doi:10.1515/bap-2013-0005.",
+    "evidence_pages": [
+      1,
+      27
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/autos.pdf",
+      "journal": null,
+      "replication_data": "http://hdl.handle.net/1902.1/21320",
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          3,
+          12,
+          14,
+          15,
+          16,
+          20,
+          21,
+          27,
+          28
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          12,
+          14,
+          15,
+          16,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and tables. No causal identification strategy is explicitly described. Policy relevance is not directly discussed.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Public Policy",
+      "Legislative Studies",
+      "Interest Groups"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      27,
+      28
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "quantitative analysis",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      3,
+      12,
+      14,
+      15,
+      16,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  }
+}

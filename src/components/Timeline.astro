@@ -1,0 +1,46 @@
+---
+interface Entry {
+  data: {
+    title: string;
+    year: number;
+    category: string;
+    description: string;
+    themes: string[];
+  };
+}
+
+interface Props {
+  entries: Entry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<section class="container-wide page-section">
+  <div class="page-section-heading">
+    <div>
+      <p class="kicker">Timeline</p>
+      <h2>Work in Public</h2>
+    </div>
+  </div>
+  <div class="relative border-l border-rule pl-6 sm:pl-10">
+    {
+      entries.map((entry) => (
+        <article class="relative grid gap-4 border-b border-rule py-7 md:grid-cols-[140px_1fr]">
+          <div class="absolute -left-[31px] top-9 h-3 w-3 rounded-full border border-olive-dark bg-paper sm:-left-[47px]"></div>
+          <div>
+            <p class="year-mark mb-1">{entry.data.year}</p>
+            <p class="mb-0 small-caps">{entry.data.category}</p>
+          </div>
+          <div>
+            <h3 class="list-title">{entry.data.title}</h3>
+            <p class="measure mt-3 text-lg leading-[1.6] text-ink/90">{entry.data.description}</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {entry.data.themes.map((theme) => <span class="tag">{theme}</span>)}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

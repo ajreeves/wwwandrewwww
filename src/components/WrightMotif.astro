@@ -1,0 +1,71 @@
+---
+type MotifName = "window" | "textile" | "horizon" | "corner";
+
+interface Props {
+  name?: MotifName;
+  class?: string;
+}
+
+const { name = "window", class: className = "" } = Astro.props;
+const common = {
+  class: `wright-motif ${className}`,
+  viewBox: "0 0 160 80",
+  fill: "none",
+  "aria-hidden": true,
+  focusable: "false"
+} as const;
+---
+
+{
+  name === "window" && (
+    <svg {...common}>
+      <path d="M4 40h152" />
+      <path d="M18 18h124v44H18z" />
+      <path d="M40 18v44M80 18v44M120 18v44" />
+      <path d="M18 40h124" />
+      <path d="M55 28h50v24H55z" class="motif-copper" />
+      <path d="M68 18 80 40 92 18" />
+      <path d="M68 62 80 40 92 62" />
+    </svg>
+  )
+}
+
+{
+  name === "textile" && (
+    <svg {...common}>
+      <path d="M8 8h144v64H8z" />
+      <path d="M24 8v64M56 8v64M104 8v64M136 8v64" />
+      <path d="M8 24h144M8 56h144" />
+      <path d="M56 24 80 8l24 16-24 16-24-16Z" class="motif-copper" />
+      <path d="M56 56 80 40l24 16-24 16-24-16Z" />
+      <path d="M24 24h32v32H24zM104 24h32v32h-32z" />
+    </svg>
+  )
+}
+
+{
+  name === "horizon" && (
+    <svg {...common}>
+      <path d="M0 40h160" />
+      <path d="M16 28h128" />
+      <path d="M32 52h96" />
+      <path d="M48 16h64v48H48z" />
+      <path d="M64 16v48M96 16v48" />
+      <path d="M48 40h64" class="motif-copper" />
+    </svg>
+  )
+}
+
+{
+  name === "corner" && (
+    <svg {...common}>
+      <path d="M12 68h136" />
+      <path d="M12 68V12" />
+      <path d="M28 52h104" />
+      <path d="M28 52V20" />
+      <path d="M44 36h72" class="motif-copper" />
+      <path d="M44 36V28" />
+      <path d="M72 28h44" />
+    </svg>
+  )
+}

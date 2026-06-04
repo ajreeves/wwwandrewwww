@@ -1,0 +1,357 @@
+{
+  "title": {
+    "value": "The Contextual Determinants of Support for Unilateral Action",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski",
+      "Min Hee Seo",
+      "Andrew R. Stone"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2017,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "47",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "3",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "448–470",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/psq.12391",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article reports a series of survey experiments (N > 7,500) examining whether public support for presidential unilateral action is sensitive to contextual factors such as the president's identity, the unilateral tool used, justifications for action, and the policy pursued. The authors find little evidence that context affects attitudes toward unilateral powers except in circumstances that invoke explicitly political factors. The findings suggest that public attitudes toward unilateral power are generally stable and have implications for understanding how public opinion constrains presidential power.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Survey experiments show that public support for presidential unilateral action is generally stable and not strongly affected by contextual factors, except when explicitly political considerations are invoked.",
+    "evidence_pages": [
+      1,
+      2,
+      17,
+      20
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The study finds that most people’s opinions about presidents acting alone to make policy don’t change much based on who the president is, what tool they use, or how the action is described—except when the situation is highly political.",
+    "evidence_pages": [
+      1,
+      2,
+      17,
+      20
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "To what extent are public attitudes toward presidential unilateral action sensitive to contextual factors such as the president's identity, the unilateral tool used, justifications for action, and the policy pursued?",
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Public support for unilateral presidential action is generally low and stable across most contextual variations.",
+      "Contextual factors such as the president's identity, the specific unilateral tool, or legal/historical justifications have little effect on support, except when political or partisan factors are made salient.",
+      "Support for unilateral action increases when the president's policy is supported by a large majority of the public or aligns with the respondent's own views.",
+      "Partisan and policy context can condition support, but these effects are generally small or infrequent."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      7,
+      17,
+      20,
+      27
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Series of survey experiments with over 7,500 respondents recruited via Amazon Mechanical Turk (MTurk).",
+      "Random assignment to baseline or contextual variation conditions in survey questions about support for unilateral presidential action.",
+      "Analysis of treatment effects comparing support across different contextual framings."
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      6,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Survey data collected from Amazon Mechanical Turk (MTurk) participants in July and August 2016."
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      24
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Support for unilateral presidential action (measured by agreement with statements about presidents making policy without congressional approval)",
+      "Contextual factors: president's identity, type of unilateral tool, historical/legal justifications, political context, policy domain"
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      25,
+      26
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      4,
+      5,
+      24
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "July–August 2016",
+    "evidence_pages": [
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential power",
+      "public opinion",
+      "contextual effect",
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "executive unilateralism",
+      "political institutions",
+      "framing effects",
+      "partisanship"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Our results provide little evidence that attitudes toward unilateral power are responsive to contextual influences or framing effects.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 2,
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, Jon C. Rogowski, Min Hee Seo, and Andrew R. Stone. 2017. \"The Contextual Determinants of Support for Unilateral Action.\" Presidential Studies Quarterly 47(3): 448–470. doi:10.1111/psq.12391.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/asking.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          4,
+          7,
+          17,
+          20,
+          27
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          4,
+          5,
+          6,
+          25,
+          26
+        ]
+      }
+    },
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      17,
+      20,
+      25,
+      26,
+      27
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text or tables. No inferences were made beyond the document content.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      17,
+      20,
+      24,
+      25,
+      26,
+      27
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "public opinion",
+      "executive power"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  }
+}
