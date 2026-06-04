@@ -1,0 +1,144 @@
+{
+  "slug": "the-influence-of-federal-spending-on-presidential-elections",
+  "title": "The Influence of Federal Spending on Presidential Elections",
+  "authors": [
+    "Douglas L. Kriner",
+    "Andrew Reeves"
+  ],
+  "year": 2012,
+  "publication_type": "journal article",
+  "journal": "American Political Science Review",
+  "volume": "106",
+  "issue": "2",
+  "pages": "348-366",
+  "doi": "10.1017/S0003055412000159",
+  "citation": "Kriner, Douglas L., and Andrew Reeves. 2012. \"The Influence of Federal Spending on Presidential Elections.\" American Political Science Review 106(2): 348-366. doi:10.1017/S0003055412000159.",
+  "links": {
+    "pdf": "/papers/spending.pdf",
+    "journal": null,
+    "replication_data": "http://people.bu.edu/areeves",
+    "code": null
+  },
+  "card_summary": "Voters reward incumbent presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear, with liberals and moderates more responsive than conservatives.",
+  "abstract": "Previous research on the electoral consequences of federal spending has focused almost exclusively on Congress, mostly with null results. However, in a county- and individual-level study of presidential elections from 1988 to 2008, we present evidence that voters reward incumbent presidents (or their party’s nominee) for increased federal spending in their communities. This relationship is stronger in battleground states. Furthermore, we show that federal grants are an electoral currency whose value depends on both the clarity of partisan responsibility for its provision and the characteristics of the recipients. Presidents enjoy increased support from spending in counties represented by co-partisan members of Congress. At the individual level, we also find that ideology conditions the response of constituents to spending; liberal and moderate voters reward presidents for federal spending at higher levels than conservatives. Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
+  "plain_english_summary": "This study finds that when presidents increase federal spending in local communities, they are more likely to gain votes in presidential elections, particularly in competitive states and when voters can clearly attribute the spending to the president and his party. Liberal and moderate voters are more likely than conservatives to reward presidents for such spending.",
+  "research_question": "Do voters reward presidents for increased federal spending in their local constituencies, and what factors condition this relationship?",
+  "research_highlights": [
+    "Voters reward incumbent presidents or their party’s nominee for increased federal spending in their communities.",
+    "The relationship is stronger in battleground states.",
+    "Presidents enjoy increased support from spending in counties represented by co-partisan members of Congress.",
+    "Ideology conditions the response: liberal and moderate voters reward presidents for federal spending at higher levels than conservatives.",
+    "The electoral effect of federal spending is significant and can influence close presidential elections."
+  ],
+  "methods": [
+    "County-level analysis of presidential elections from 1988 to 2008 using election and federal spending data.",
+    "Individual-level analysis using survey data from the 2008 election.",
+    "Least squares models with fixed effects for counties and years.",
+    "Probit models for individual-level vote choice."
+  ],
+  "data_sources": [
+    "Consolidated Federal Funds Reports (CFFR) for federal grant spending data.",
+    "County-level presidential election returns, 1988–2008.",
+    "Gallup-USA Today poll, October 31–November 2, 2008."
+  ],
+  "key_variables": [
+    "Change in federal grant spending at the county level.",
+    "Change in two-party presidential vote share at the county level.",
+    "Individual vote intention for presidential candidate.",
+    "County partisanship and ideology measures."
+  ],
+  "identification_strategy": null,
+  "geography": "United States (county-level and individual-level data)",
+  "time_period": "1988–2008 (presidential elections)",
+  "unit_of_analysis": "County and individual voter",
+  "policy_relevance": null,
+  "pull_quote": "Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed.",
+  "tags": [
+    "American politics",
+    "political economy",
+    "elections",
+    "observational study",
+    "regression analysis",
+    "survey analysis",
+    "federal spending",
+    "presidential elections",
+    "voting behavior",
+    "partisanship",
+    "ideology",
+    "battleground states",
+    "electoral accountability",
+    "electoral politics",
+    "public finance"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "political economy",
+      "elections"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "observational study",
+      "regression analysis",
+      "survey analysis"
+    ],
+    "methods": [
+      "County-level analysis of presidential elections from 1988 to 2008 using election and federal spending data.",
+      "Individual-level analysis using survey data from the 2008 election.",
+      "Least squares models with fixed effects for counties and years.",
+      "Probit models for individual-level vote choice."
+    ],
+    "geography": [
+      "United States (county-level and individual-level data)"
+    ],
+    "time_period": [
+      "1988–2008 (presidential elections)"
+    ],
+    "keywords": [
+      "federal spending",
+      "presidential elections",
+      "voting behavior",
+      "partisanship",
+      "ideology",
+      "battleground states",
+      "electoral accountability"
+    ],
+    "related_topics": [
+      "political economy",
+      "electoral politics",
+      "public finance",
+      "American politics"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        4
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        4,
+        12,
+        16
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        5,
+        15,
+        16
+      ]
+    }
+  }
+}

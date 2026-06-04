@@ -1,0 +1,287 @@
+{
+  "title": {
+    "value": "The State of Disunion: Regional Sources of Modern American Partisanship",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Nicole Mellow"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": "2008",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Political Science Quarterly",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "743-744",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "book review",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This review discusses Nicole Mellow's argument that regional interests are central to understanding modern American partisanship, highlighting both the strengths and limitations of her evidence and conceptualization of regions.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Nicole Mellow's book argues that regional differences play a key role in shaping American political parties, but the reviewer notes that the evidence is limited and the definition of regions could be clearer.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Are regions important in understanding American politics, particularly in shaping modern American partisanship?",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Regions are largely responsible for the state of party politics today by directing politicians' motives and determining issues.",
+      "Regional interests influence party cohesion on issues like free trade, welfare reform, and abortion.",
+      "The evidence for the independent effect of region is limited and sometimes equivocal, with small sample sizes and somewhat arbitrary regional definitions."
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
+      "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": [
+      "Region",
+      "Party cohesion",
+      "Issue salience (free trade, welfare reform, abortion)"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1950s to present (as of 2008)",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Region (as defined by the author, e.g., North, South, etc.) and legislative behavior",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "regionalism",
+      "partisanship",
+      "American politics",
+      "party system",
+      "free trade",
+      "welfare reform",
+      "abortion"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "legislative behavior",
+      "coalition building",
+      "political parties",
+      "issue salience"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The key to building a successful and stable party coalition is to unite regions that are most easily linked, either because of similar histories or because of similarities in demography, economy, and ideology.",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 2,
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Mellow, Nicole. The State of Disunion: Regional Sources of Modern American Partisanship. Baltimore, MD: Johns Hopkins University Press, 2008. Reviewed in Political Science Quarterly, pp. 743-744.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is based strictly on the content of the review. No volume or issue number is provided in the text. The reviewer's summary and critique are used for findings and methods.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "political parties",
+      "regionalism"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "comparative analysis",
+      "regression analysis (limited sample)"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  }
+}

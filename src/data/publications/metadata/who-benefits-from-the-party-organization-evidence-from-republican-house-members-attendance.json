@@ -1,0 +1,365 @@
+{
+  "title": {
+    "value": "Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings",
+    "evidence_pages": [
+      1,
+      38
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Adam M. Dynes",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      38
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2018,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Legislative Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "43",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "207-243",
+    "evidence_pages": [
+      1,
+      243
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/lsq.12193",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "As the role of US congressional parties in the legislative process has increased, so has the importance of understanding the institutions within these organizations. In this article, we examine the weekly caucus meetings held by Republican House leaders with their rank-and-file. We consider how members’ characteristics relate to their decision to attend based on the collective and private benefits that caucus participation affords. Using interviews of members and staffers as well as members’ attendance records at these meetings from 2007 to 2013, we find, among other things, that members who vote less with their party or who have more seniority are less likely to attend while those in leadership positions or who are electorally vulnerable are more likely to do so. Together, these findings provide additional insights on the relationship between party leaders and their members and which members benefit from this central party-building activity.",
+    "evidence_pages": [
+      1,
+      38
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Republican House members who are party leaders or electorally vulnerable are more likely to attend caucus meetings, while those with more seniority or who vote less with their party are less likely to attend, highlighting how caucus participation reflects both private and collective benefits within party organization.",
+    "evidence_pages": [
+      1,
+      38,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This study finds that Republican House members who are party leaders or face tough elections are more likely to attend private party caucus meetings, while those with more experience or who often vote against their party are less likely to attend, suggesting that caucus meetings mainly benefit members who are closely aligned with party leadership or need party support.",
+    "evidence_pages": [
+      1,
+      38,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do Republican House members’ characteristics relate to their attendance at party caucus meetings, and what does this reveal about who benefits from party-building activities?",
+    "evidence_pages": [
+      1,
+      38,
+      235
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Members who vote less with their party or have more seniority are less likely to attend caucus meetings.",
+      "Party leaders and electorally vulnerable members are more likely to attend caucus meetings.",
+      "Attendance is also lower for members whose districts are farther from Washington, DC.",
+      "Caucus meetings provide both private and collective benefits, but these are not equally valued by all members."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      38,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Qualitative interviews with Republican House members, chiefs of staff, and party staffers (2013–2016).",
+      "Quantitative analysis of confidential attendance records at Republican caucus meetings from 2007 to 2013.",
+      "Multivariate regression models to assess the relationship between member characteristics and attendance."
+    ],
+    "evidence_pages": [
+      2,
+      38,
+      40,
+      235
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Interviews with five Republican House members, three chiefs of staff, and multiple party staffers.",
+      "Confidential attendance records from the House Republican Conference (2007–2013)."
+    ],
+    "evidence_pages": [
+      2,
+      38,
+      40,
+      41
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Caucus meeting attendance rate",
+      "Party-unity score (proportion of party-line votes)",
+      "DW-NOMINATE score (ideology)",
+      "Leadership position",
+      "Seniority",
+      "Electoral vulnerability",
+      "Distance from district to Washington, DC"
+    ],
+    "evidence_pages": [
+      2,
+      20,
+      21,
+      22,
+      40,
+      41
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States, U.S. House of Representatives (Republican members)",
+    "evidence_pages": [
+      1,
+      2,
+      38
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2007–2013",
+    "evidence_pages": [
+      2,
+      38,
+      40
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individual Republican House member per Congress",
+    "evidence_pages": [
+      20,
+      21,
+      22,
+      38,
+      41
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "party organization",
+      "caucus meetings",
+      "Congress",
+      "Republican Party",
+      "legislative behavior",
+      "attendance",
+      "party leadership"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      38,
+      235
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "legislative parties",
+      "party discipline",
+      "congressional behavior",
+      "political polarization"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Members who vote less with their party or who have more seniority are less likely to attend while those in leadership positions or who are electorally vulnerable are more likely to do so.",
+    "evidence_pages": [
+      1,
+      38
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Dynes, Adam M., and Andrew Reeves. 2018. \"Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings.\" Legislative Studies Quarterly 43(2): 207-243. doi:10.1111/lsq.12193.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/caucus.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          38,
+          235
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          38,
+          235,
+          236
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          38,
+          40,
+          235
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      38,
+      40,
+      41,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and tables. No external inference or unstated information included.",
+    "evidence_pages": [
+      1,
+      2,
+      38,
+      40,
+      41,
+      235,
+      236
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "legislative studies",
+      "party politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      38,
+      235
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      38
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "mixed methods",
+      "regression analysis",
+      "qualitative interviews"
+    ],
+    "evidence_pages": [
+      2,
+      38,
+      40,
+      235
+    ],
+    "confidence": "high"
+  }
+}

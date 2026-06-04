@@ -1,0 +1,84 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string;
+}
+
+const {
+  title = "Andrew Reeves",
+  description = "Research on power, place, and accountability in American political life.",
+  active = ""
+} = Astro.props;
+
+const pageTitle = title === "Andrew Reeves" ? title : `${title} - Andrew Reeves`;
+const navItems = [
+  ["Home", "/"],
+  ["Research", "/research/"],
+  ["Books", "/books/"],
+  ["Students", "/collaborators/"],
+  ["Teaching", "/teaching/"],
+  ["Talks", "/talks/"],
+  ["News", "/news/"],
+  ["CV", "/cv/"],
+  ["Contact", "/contact/"]
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/andrew-reeves-portrait-editorial.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <a class="skip-link" href="#main">Skip to content</a>
+      <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-home" href="/" aria-label="Andrew Reeves home">
+            <span class="site-title">Andrew Reeves</span>
+          </a>
+          <div class="nav-list">
+            {
+              navItems.map(([label, href]) => (
+                <a class="nav-link" href={href} aria-current={active === label ? "page" : undefined}>
+                  {label}
+                </a>
+              ))
+            }
+          </div>
+        </nav>
+      </header>
+      <main id="main">
+        <slot />
+      </main>
+      <footer class="site-footer-wrap">
+        <div class="site-footer">
+          <div class="footer-links">
+            <a href="mailto:reeves@wustl.edu">Email</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>
+            <a href="https://polisci.wustl.edu/people/andrew-reeves/">Department Profile</a>
+            <a href="/cv/">CV</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,377 @@
+{
+  "title": {
+    "value": "US Presidential Campaigns and Their Impact",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "David Miller",
+      "Bryant Moy"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2018,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Oxford Bibliographies in Political Science",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": "10.1093/OBO/9780199756223-0156",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "bibliography",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This annotated bibliography surveys the scholarly literature on the effects, strategies, and consequences of US presidential campaigns, including their impact on voter behavior, participation, policymaking, and campaign strategy.",
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This bibliography reviews research on how US presidential campaigns influence voters, turnout, policy, and campaign tactics, summarizing key findings and debates in the field.",
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "What are the major themes, findings, and debates in the scholarly literature on US presidential campaigns and their impact?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Early studies found minimal persuasive effects of campaigns on vote choice, but more recent research documents campaign effects on voter mobilization and turnout.",
+      "Field experiments and voter file data show that campaign efforts, especially get-out-the-vote activities, can increase turnout.",
+      "Campaigns influence policy outcomes by incentivizing presidents to favor electorally important states and constituencies.",
+      "Presidential elections have consequences for down-ballot races (coattails), individual attitudes, and policymaking.",
+      "Campaign strategies are shaped by the Electoral College, resource constraints, and available voter information."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      8,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Annotated bibliography summarizing published books and articles.",
+      "Synthesis of empirical studies, field experiments, and formal models as described in cited works."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      8,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "American National Election Studies",
+      "Cooperative Congressional Election Study",
+      "National Annenberg Election Surveys",
+      "Dave Leip’s Atlas of US Presidential Elections",
+      "Federal Election Commission",
+      "Center for Responsive Politics (OpenSecrets.org)",
+      "Wesleyan Media Project",
+      "Wisconsin Advertising Project",
+      "The American Presidency Project"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "keywords": {
+    "value": [
+      "presidential campaigns",
+      "vote choice",
+      "turnout",
+      "mobilization",
+      "campaign strategy",
+      "policy outcomes",
+      "coattails",
+      "particularism",
+      "messaging",
+      "vice-presidential selection"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "elections",
+      "political participation",
+      "voter behavior",
+      "campaign effects",
+      "Electoral College",
+      "presidential policymaking"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Through the use of field experiments and with advances in data and modeling techniques, studies have increasingly identified consistent evidence that through advertisement and other mobilization efforts campaigns may successfully bring voters to the polls.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, David Miller, and Bryant Moy. \"US Presidential Campaigns and Their Impact.\" Oxford Bibliographies in Political Science. Last modified 24 July 2018. doi:10.1093/OBO/9780199756223-0156.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/electionsbib.pdf",
+      "journal": "http://www.oxfordbibliographies.com/view/document/obo-9780199756223-0156",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          5,
+          8,
+          10,
+          11,
+          13,
+          16,
+          18,
+          21
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          5,
+          8,
+          10,
+          11,
+          13,
+          16,
+          18,
+          21
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      8,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "High confidence for most fields due to direct statements and summaries in the bibliography introduction and section overviews. No abstract or explicit policy relevance stated.",
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      13,
+      16,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Elections",
+      "Campaigns"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "bibliographic synthesis",
+      "literature review"
+    ],
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  }
+}

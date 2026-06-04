@@ -1,0 +1,149 @@
+{
+  "slug": "taking-the-leap-voting-rhetoric-and-the-determinants-of-electoral-reform",
+  "title": "Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform",
+  "authors": [
+    "Scott Moser",
+    "Andrew Reeves"
+  ],
+  "year": 2014,
+  "publication_type": "journal article",
+  "journal": "Legislative Studies Quarterly",
+  "volume": "39",
+  "issue": "4",
+  "pages": "467-502",
+  "doi": "10.1111/lsq.12055",
+  "citation": "Moser, Scott, and Andrew Reeves. 2014. \"Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform.\" Legislative Studies Quarterly 39(4): 467-502. doi:10.1111/lsq.12055.",
+  "links": {
+    "pdf": "/papers/leap.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The article finds that the successful passage of the Second Reform Act in 1867 was due to the Conservative government's ability to narrow and focus parliamentary debate, rather than changes in party or constituency factors.",
+  "abstract": "This article analyzes why the Second Reform Act of 1867, which dramatically expanded the voting franchise in the United Kingdom, passed under a minority Conservative government after failing under a majority Liberal government. Using quantitative analysis of parliamentary debates and legislative votes, the authors argue that while partisanship was the most influential factor in parliamentary voting, it does not fully explain the passage of reform. Instead, they find that the narrowed scope and reduced dimensionality of debate under the Conservatives was crucial in enabling the passage of reform. The study provides new insights into party development and legislative behavior in nineteenth-century Britain.",
+  "plain_english_summary": "The study shows that the 1867 law expanding voting rights in Britain passed because the Conservative government kept parliamentary debates more focused, making it easier to reach agreement, while previous broader debates under the Liberals led to failure.",
+  "research_question": "Why did the Second Reform Act pass under a minority Conservative government in 1867 after failing under a majority Liberal government, and what factors determined the passage of electoral reform in the United Kingdom?",
+  "research_highlights": [
+    "Partisanship was the strongest predictor of parliamentary voting on reform, but did not explain the ultimate passage of the Second Reform Act.",
+    "The scope and dimensionality of parliamentary debate was broader under the Liberals and more focused under the Conservatives.",
+    "The reduction in the number of debated aspects under the Conservative government facilitated the passage of reform.",
+    "Constituency-level factors had little influence on MPs' votes on reform."
+  ],
+  "methods": [
+    "Quantitative analysis of 60 reform-related legislative votes (divisions) in the House of Commons.",
+    "Quantitative text analysis (topic modeling) of over 3,200 parliamentary speeches related to reform.",
+    "Multivariate logistic regression to assess the influence of party and constituency factors on voting."
+  ],
+  "data_sources": [
+    "Original dataset of 60 reform-related legislative votes in the UK House of Commons.",
+    "Digitized parliamentary debates (Hansard) from 1866 and 1867."
+  ],
+  "key_variables": [
+    "MP party affiliation",
+    "Constituency malapportionment",
+    "Constituency population change",
+    "Ministerial status",
+    "Speech topics (from topic modeling)"
+  ],
+  "identification_strategy": null,
+  "geography": "United Kingdom (House of Commons)",
+  "time_period": "1866-1867",
+  "unit_of_analysis": "Member of Parliament (MP) and parliamentary speech",
+  "policy_relevance": null,
+  "pull_quote": "We argue that the narrowed scope of debate under the Conservatives was crucial in passing reform.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the cited pages. No inferences were made beyond the document text.",
+  "tags": [
+    "Political Science",
+    "Comparative Politics",
+    "Legislative Studies",
+    "British History",
+    "quantitative analysis",
+    "text analysis",
+    "observational study",
+    "Second Reform Act",
+    "parliamentary reform",
+    "United Kingdom",
+    "party politics",
+    "legislative behavior",
+    "topic modeling",
+    "voting behavior",
+    "nineteenth century",
+    "British political history",
+    "electoral reform",
+    "party development",
+    "parliamentary debate"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Comparative Politics",
+      "Legislative Studies",
+      "British History"
+    ],
+    "government_level": [
+      "national"
+    ],
+    "research_design": [
+      "quantitative analysis",
+      "text analysis",
+      "observational study"
+    ],
+    "methods": [
+      "Quantitative analysis of 60 reform-related legislative votes (divisions) in the House of Commons.",
+      "Quantitative text analysis (topic modeling) of over 3,200 parliamentary speeches related to reform.",
+      "Multivariate logistic regression to assess the influence of party and constituency factors on voting."
+    ],
+    "geography": [
+      "United Kingdom (House of Commons)"
+    ],
+    "time_period": [
+      "1866-1867"
+    ],
+    "keywords": [
+      "Second Reform Act",
+      "parliamentary reform",
+      "United Kingdom",
+      "party politics",
+      "legislative behavior",
+      "topic modeling",
+      "voting behavior",
+      "nineteenth century"
+    ],
+    "related_topics": [
+      "British political history",
+      "electoral reform",
+      "party development",
+      "parliamentary debate",
+      "text analysis"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        4,
+        493
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        493,
+        494
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        15,
+        16,
+        18,
+        493
+      ]
+    }
+  }
+}

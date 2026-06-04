@@ -1,0 +1,359 @@
+{
+  "title": {
+    "value": "Local Unemployment and Voting for President: Uncovering Causal Mechanisms",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Taeyong Park",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2020,
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Political Behavior",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "42",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "443-463",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1007/s11109-018-9502-4",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "ORIGINAL PAPER",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "How does local unemployment influence presidential elections? Some argue that, for voters, the state of the local economy is an afterthought to that of the national economy. On the other hand, those who argue that local unemployment matters fall into two camps. Recent research finds that local unemployment is a reputation issue that benefits Democratic candidates because voters believe they are the party best equipped to deal with the issue. Alternatively, others have posited that the local economy provides voters with information for evaluating the governing party’s job performance. This view holds that the incumbent party, Democrat or Republican, will be punished when local unemployment is high. In this article, we investigate these distinct mechanisms jointly. In an individual-level mediation analysis of the 2008, 2012, and 2016 presidential elections, we present evidence that both mechanisms are at work. Rising local unemployment bolsters support for Democratic presidential candidates, but, through its influence on views of the national economy, drives down support for the incumbent, Democrat or Republican.",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This study finds that both mediated economic voting and issue-ownership voting mechanisms link local unemployment to presidential voting, with rising local unemployment increasing support for Democratic candidates but decreasing support for incumbents through perceptions of the national economy.",
+    "evidence_pages": [
+      3,
+      7,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The paper shows that when local unemployment rises, people are more likely to support Democratic presidential candidates, but they are also less likely to support the incumbent president, regardless of party, because they view the national economy more negatively.",
+    "evidence_pages": [
+      3,
+      7,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How does local unemployment influence presidential voting, and through what causal mechanisms does this effect operate?",
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Both mediated local economic voting and local issue-ownership voting mechanisms are at work in presidential elections.",
+      "Rising local unemployment increases support for Democratic presidential candidates (issue-ownership effect).",
+      "Rising local unemployment decreases support for the incumbent president, Democrat or Republican, through its effect on perceptions of the national economy (mediated effect).",
+      "These two mechanisms can counterbalance each other, explaining frequent null findings for the total effect of local unemployment on presidential voting."
+    ],
+    "evidence_pages": [
+      3,
+      7,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Individual-level mediation analysis using causal mediation analysis within a potential outcomes framework.",
+      "Analysis of the 2008, 2012, and 2016 U.S. presidential elections using survey data."
+    ],
+    "evidence_pages": [
+      3,
+      8,
+      10,
+      12,
+      14
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Cooperative Congressional Election Study (CCES) surveys from 2008, 2012, and 2016",
+      "County-level unemployment statistics from the Bureau of Labor Statistics (LAUS)"
+    ],
+    "evidence_pages": [
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Vote choice for president (incumbent or challenger)",
+      "County-level annual change in unemployment rate",
+      "Subjective evaluations of the national economy"
+    ],
+    "evidence_pages": [
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": "Causal mediation analysis using a potential outcomes framework to decompose total effects into direct and indirect (mediated) effects, controlling for pretreatment covariates.",
+    "evidence_pages": [
+      8,
+      12,
+      14
+    ],
+    "confidence": "high"
+  },
+  "geography": {
+    "value": "United States (county-level analysis)",
+    "evidence_pages": [
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2008, 2012, and 2016 U.S. presidential elections",
+    "evidence_pages": [
+      3,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individual survey respondent (linked to county-level data)",
+    "evidence_pages": [
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "Local unemployment",
+      "Presidential elections",
+      "Retrospective economic voting",
+      "Issue-ownership voting",
+      "Causal mediation analysis"
+    ],
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "Economic voting",
+      "Political behavior",
+      "Elections",
+      "Public opinion",
+      "Party reputation"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Rising local unemployment bolsters support for Democratic presidential candidates, but, through its influence on views of the national economy, drives down support for the incumbent, Democrat or Republican.",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 3,
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Park, Taeyong & Reeves, Andrew. (2020). Local Unemployment and Voting for President: Uncovering Causal Mechanisms. Political Behavior, 42(2), 443-463. https://doi.org/10.1007/s11109-018-9502-4",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/unemployment.pdf",
+      "journal": "https://doi.org/10.1007/s11109-018-9502-4",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      3,
+      21
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          3,
+          4,
+          5,
+          7,
+          8
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          3,
+          7,
+          14,
+          16
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          8,
+          10,
+          12,
+          14
+        ]
+      }
+    },
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      7,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and page references. No policy recommendations or external links to replication data or code are stated in the document.",
+    "evidence_pages": [
+      1,
+      3,
+      10,
+      11,
+      21
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Elections",
+      "Political Behavior"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "Federal"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      10
+    ],
+    "confidence": "medium"
+  },
+  "research_design": {
+    "value": [
+      "Observational study",
+      "Causal mediation analysis"
+    ],
+    "evidence_pages": [
+      3,
+      8,
+      10,
+      12,
+      14
+    ],
+    "confidence": "high"
+  }
+}

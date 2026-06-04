@@ -1,0 +1,159 @@
+{
+  "slug": "democratic-values-and-support-for-executive-power",
+  "title": "Democratic values and support for executive power",
+  "authors": [
+    "Andrew Reeves",
+    "Jon C. Rogowski"
+  ],
+  "year": 2023,
+  "publication_type": "original article",
+  "journal": "Presidential Studies Quarterly",
+  "volume": "53",
+  "issue": "2",
+  "pages": "293–312",
+  "doi": "10.1111/psq.12837",
+  "citation": "Reeves, Andrew, and Jon C. Rogowski. 2023. “Democratic Values and Support for Executive Power.” Presidential Studies Quarterly 53: 293–312. https://doi.org/10.1111/psq.12837",
+  "links": {
+    "pdf": "/papers/values.pdf",
+    "journal": "https://onlinelibrary.wiley.com/doi/10.1111/psq.12837",
+    "replication_data": "https://dataverse.harvard.edu/dataverse/areeves",
+    "code": null
+  },
+  "card_summary": "Individuals with stronger democratic values are less supportive of expanded executive power, as shown by cross-national survey data from the Americas and Africa.",
+  "abstract": "Attempts by elected executives to consolidate power have generated alarm and raised concern about democratic backsliding. We study mass attitudes toward the institutional power of the office of the presidency and argue that individuals' democratic values shape views of executive power. Using data from 26 countries in the Americas and 37 countries in Africa, we find support for our perspective. While supporters of the incumbent president express more favorable views toward executive power, we also show that individuals who express stronger commitments to democracy are less supportive of institutional arrangements that favor the executive. Our results demonstrate that attitudes toward the institutions of government are not shaped only by partisanship and other ephemeral political factors, but also by citizens' core commitments to values over governance.",
+  "plain_english_summary": "People who value democracy are less likely to support giving more power to presidents, according to surveys from many countries in the Americas and Africa.",
+  "research_question": "How do individuals' democratic values shape their attitudes toward executive power across countries in the Americas and Africa?",
+  "research_highlights": [
+    "Supporters of incumbent presidents are more favorable toward executive power.",
+    "Individuals with stronger commitments to democracy are less supportive of institutional arrangements that favor the executive.",
+    "Attitudes toward executive power are shaped by both partisanship and core democratic values, not just political alignment.",
+    "These patterns are consistent across countries in the Americas and Africa."
+  ],
+  "methods": [
+    "Cross-national survey analysis using AmericasBarometer and Afrobarometer data",
+    "Linear and logistic regression models with country-wave fixed effects",
+    "Analysis of individual and aggregate-level attitudes toward executive power and democracy"
+  ],
+  "data_sources": [
+    "AmericasBarometer surveys (26 countries in the Americas, 2010–2019)",
+    "Afrobarometer surveys (37 countries in Africa, 2000–2019)"
+  ],
+  "key_variables": [
+    "Support for executive power (various survey items)",
+    "Support for democracy",
+    "Executive approval",
+    "Demographic controls (age, gender, education, income, marital status, poverty, rural/urban)"
+  ],
+  "identification_strategy": null,
+  "geography": "26 countries in the Americas and 37 countries in Africa",
+  "time_period": "Americas: 2010–2019; Africa: 2000–2019",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Our results demonstrate that attitudes toward the institutions of government are not shaped only by partisanship and other ephemeral political factors, but also by citizens' core commitments to values over governance.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and tables. No causal identification strategy or explicit policy relevance is described. PDF link is not stated in the document.",
+  "tags": [
+    "comparative politics",
+    "public opinion",
+    "executive power",
+    "democratic values",
+    "cross-national survey analysis",
+    "observational study",
+    "presidentialism",
+    "democracy",
+    "Afrobarometer",
+    "AmericasBarometer",
+    "democratic backsliding",
+    "rule of law",
+    "partisanship",
+    "political institutions",
+    "presidential approval"
+  ],
+  "filters": {
+    "substantive_area": [
+      "comparative politics",
+      "public opinion",
+      "executive power",
+      "democratic values"
+    ],
+    "government_level": [
+      "national"
+    ],
+    "research_design": [
+      "cross-national survey analysis",
+      "observational study"
+    ],
+    "methods": [
+      "Cross-national survey analysis using AmericasBarometer and Afrobarometer data",
+      "Linear and logistic regression models with country-wave fixed effects",
+      "Analysis of individual and aggregate-level attitudes toward executive power and democracy"
+    ],
+    "geography": [
+      "26 countries in the Americas and 37 countries in Africa"
+    ],
+    "time_period": [
+      "Americas: 2010–2019; Africa: 2000–2019"
+    ],
+    "keywords": [
+      "democratic values",
+      "executive power",
+      "public opinion",
+      "comparative politics",
+      "presidentialism",
+      "democracy",
+      "Afrobarometer",
+      "AmericasBarometer"
+    ],
+    "related_topics": [
+      "democratic backsliding",
+      "rule of law",
+      "partisanship",
+      "political institutions",
+      "presidential approval"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2,
+        4,
+        5,
+        8
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        8,
+        9,
+        17,
+        20
+      ]
+    },
+    "methods": {
+      "pages": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    }
+  }
+}

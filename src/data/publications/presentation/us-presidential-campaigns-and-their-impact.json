@@ -1,0 +1,159 @@
+{
+  "slug": "us-presidential-campaigns-and-their-impact",
+  "title": "US Presidential Campaigns and Their Impact",
+  "authors": [
+    "Andrew Reeves",
+    "David Miller",
+    "Bryant Moy"
+  ],
+  "year": 2018,
+  "publication_type": "bibliography",
+  "journal": "Oxford Bibliographies in Political Science",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": "10.1093/OBO/9780199756223-0156",
+  "citation": "Reeves, Andrew, David Miller, and Bryant Moy. \"US Presidential Campaigns and Their Impact.\" Oxford Bibliographies in Political Science. Last modified 24 July 2018. doi:10.1093/OBO/9780199756223-0156.",
+  "links": {
+    "pdf": "/papers/electionsbib.pdf",
+    "journal": "http://www.oxfordbibliographies.com/view/document/obo-9780199756223-0156",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This annotated bibliography surveys the scholarly literature on the effects, strategies, and consequences of US presidential campaigns, including their impact on voter behavior, participation, policymaking, and campaign strategy.",
+  "abstract": null,
+  "plain_english_summary": "This bibliography reviews research on how US presidential campaigns influence voters, turnout, policy, and campaign tactics, summarizing key findings and debates in the field.",
+  "research_question": "What are the major themes, findings, and debates in the scholarly literature on US presidential campaigns and their impact?",
+  "research_highlights": [
+    "Early studies found minimal persuasive effects of campaigns on vote choice, but more recent research documents campaign effects on voter mobilization and turnout.",
+    "Field experiments and voter file data show that campaign efforts, especially get-out-the-vote activities, can increase turnout.",
+    "Campaigns influence policy outcomes by incentivizing presidents to favor electorally important states and constituencies.",
+    "Presidential elections have consequences for down-ballot races (coattails), individual attitudes, and policymaking.",
+    "Campaign strategies are shaped by the Electoral College, resource constraints, and available voter information."
+  ],
+  "methods": [
+    "Annotated bibliography summarizing published books and articles.",
+    "Synthesis of empirical studies, field experiments, and formal models as described in cited works."
+  ],
+  "data_sources": [
+    "American National Election Studies",
+    "Cooperative Congressional Election Study",
+    "National Annenberg Election Surveys",
+    "Dave Leip’s Atlas of US Presidential Elections",
+    "Federal Election Commission",
+    "Center for Responsive Politics (OpenSecrets.org)",
+    "Wesleyan Media Project",
+    "Wisconsin Advertising Project",
+    "The American Presidency Project"
+  ],
+  "key_variables": [],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": null,
+  "unit_of_analysis": null,
+  "policy_relevance": null,
+  "pull_quote": "Through the use of field experiments and with advances in data and modeling techniques, studies have increasingly identified consistent evidence that through advertisement and other mobilization efforts campaigns may successfully bring voters to the polls.",
+  "pull_quote_page": 1,
+  "confidence_notes": "High confidence for most fields due to direct statements and summaries in the bibliography introduction and section overviews. No abstract or explicit policy relevance stated.",
+  "tags": [
+    "Political Science",
+    "Elections",
+    "Campaigns",
+    "bibliographic synthesis",
+    "literature review",
+    "presidential campaigns",
+    "vote choice",
+    "turnout",
+    "mobilization",
+    "campaign strategy",
+    "policy outcomes",
+    "coattails",
+    "particularism",
+    "messaging",
+    "vice-presidential selection",
+    "elections",
+    "political participation",
+    "voter behavior",
+    "campaign effects",
+    "Electoral College",
+    "presidential policymaking"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Elections",
+      "Campaigns"
+    ],
+    "government_level": [
+      "national"
+    ],
+    "research_design": [
+      "bibliographic synthesis",
+      "literature review"
+    ],
+    "methods": [
+      "Annotated bibliography summarizing published books and articles.",
+      "Synthesis of empirical studies, field experiments, and formal models as described in cited works."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [],
+    "keywords": [
+      "presidential campaigns",
+      "vote choice",
+      "turnout",
+      "mobilization",
+      "campaign strategy",
+      "policy outcomes",
+      "coattails",
+      "particularism",
+      "messaging",
+      "vice-presidential selection"
+    ],
+    "related_topics": [
+      "elections",
+      "political participation",
+      "voter behavior",
+      "campaign effects",
+      "Electoral College",
+      "presidential policymaking"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        5,
+        8,
+        10,
+        11,
+        13,
+        16,
+        18,
+        21
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2,
+        5,
+        8,
+        10,
+        11,
+        13,
+        16,
+        18,
+        21
+      ]
+    }
+  }
+}

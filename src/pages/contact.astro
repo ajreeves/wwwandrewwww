@@ -1,0 +1,53 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+---
+
+<BaseLayout title="Contact" active="Contact" description="Contact information and office location for Andrew Reeves.">
+  <PageHeader
+    eyebrow="Contact"
+    title="Contact"
+    intro="Correspondence, office location, and scholarly links."
+  />
+
+  <section class="container-wide page-section">
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="editorial-card">
+        <p class="kicker mb-4">Correspondence</p>
+        <h2 class="card-title">Email</h2>
+        <p class="mt-5 text-xl leading-[1.6] text-muted">
+          <a class="list-title no-underline" href="mailto:reeves@wustl.edu">reeves@wustl.edu</a>
+        </p>
+      </article>
+
+      <article class="editorial-card">
+        <p class="kicker mb-4">Office</p>
+        <h2 class="card-title">Harry and Susan Seigle Hall</h2>
+        <p class="mt-5 text-xl leading-[1.6] text-muted">
+          Washington University in St. Louis<br />
+          St. Louis, MO 63130
+        </p>
+        <div class="mt-7 border-t border-rule pt-5">
+          <p class="small-caps mb-3">Phone</p>
+          <p class="mb-0 text-lg leading-[1.6] text-muted">Office: <a href="tel:+13149355636">314-935-5636</a></p>
+        </div>
+        <div class="mt-7 border-t border-rule pt-5">
+          <p class="small-caps mb-3">Office Hours</p>
+          <p class="mb-0 text-lg leading-[1.6] text-muted">Academic year: By appointment.</p>
+        </div>
+        <a class="ghost-button mt-5" href="https://maps.google.com/maps?q=Harry+and+Susan+Seigle+Hall,+Washington+University+in+St.+Louis,+St.+Louis,+MO">Get directions</a>
+      </article>
+
+      <article class="editorial-card lg:col-span-2">
+        <p class="kicker mb-4">Mailing Address</p>
+        <h2 class="card-title"><a class="no-underline" href="https://wc.washu.edu">Weidenbaum Center on the Economy, Government, and Public Policy</a></h2>
+        <p class="mt-5 text-xl leading-[1.6] text-muted">
+          MSC 1027-228-170<br />
+          <a href="https://washu.edu">Washington University in St. Louis</a><br />
+          1 Brookings Drive<br />
+          St. Louis, MO 63130-4899
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

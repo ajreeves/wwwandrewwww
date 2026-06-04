@@ -1,0 +1,27 @@
+{
+  "name": "andrew-reeves-academic-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "publications:extract": "node scripts/publications/extract.mjs",
+    "publications:validate": "node scripts/publications/validate.mjs",
+    "publications:present": "node scripts/publications/presentation.mjs",
+    "publications:embeddings": "node scripts/publications/embeddings.mjs",
+    "publications:generate": "npm run publications:validate && npm run publications:present"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^5.1.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.1.0"
+  }
+}

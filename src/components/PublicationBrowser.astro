@@ -1,0 +1,563 @@
+---
+import metadataIndex from "../data/publications/presentation/index.json";
+import publicationFigures from "../data/publication-figures.json";
+
+interface Publication {
+  slug: string;
+  body?: string;
+  data: {
+    title: string;
+    summary: string;
+    year: number | string;
+    type: string;
+    venue: string;
+    authors: string[];
+    citation?: string;
+    themes: string[];
+    links: { label: string; url: string }[];
+  };
+}
+
+interface PublicationMetadata {
+  slug?: string;
+  title: string;
+  authors?: string[];
+  year?: number | string;
+  publication_type?: string | null;
+  journal?: string | null;
+  citation?: string | null;
+  abstract?: string | null;
+  plain_english_summary?: string | null;
+  card_summary?: string | null;
+  research_question?: string | null;
+  research_highlights?: string[] | null;
+  methods?: string[] | null;
+  data_sources?: string[] | null;
+  tags?: string[] | null;
+  filters?: string[] | null;
+  citation_count?: number | null;
+  cited_by?: number | null;
+}
+
+interface PublicationFigure {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+interface Props {
+  publications: Publication[];
+  heading?: string;
+  intro?: string;
+}
+
+const { publications, heading = "Archive" } = Astro.props;
+
+const pluralizeType = (type: string) => {
+  if (type === "Book") return "Books";
+  if (type === "Article") return "Articles";
+  if (type === "Chapter") return "Chapters";
+  if (type === "Working Paper") return "Working Papers";
+  if (type === "Review") return "Reviews";
+  return `${type}s`;
+};
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const normalizeTitle = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const metadataItems = metadataIndex as unknown as PublicationMetadata[];
+const figureIndex = publicationFigures as Record<string, PublicationFigure>;
+const metadataFor = (publication: Publication) => {
+  const normalized = normalizeTitle(publication.data.title);
+  const slugMatch = metadataItems.find((entry) => entry.slug === publication.slug);
+  if (slugMatch) return slugMatch;
+
+  const exactTitleMatch = metadataItems.find((entry) => normalizeTitle(entry.title) === normalized);
+  if (exactTitleMatch) return exactTitleMatch;
+
+  return metadataItems.find((entry) => {
+    const metadataTitle = normalizeTitle(entry.title);
+    return (
+      normalized.length > 42 &&
+      metadataTitle.length > 42 &&
+      (normalized.startsWith(metadataTitle) || metadataTitle.startsWith(normalized))
+    );
+  });
+};
+const figureFor = (publication: Publication) => figureIndex[publication.slug];
+
+const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
+const firstSentence = (text: string) => text.match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? text;
+const summaryOverrides: Record<string, string> = {
+  "bellwether-locations": "Bellwether counties reveal how geographic polarization reshaped the places that once mirrored national electoral outcomes.",
+  "contextual-determinants": "Support for unilateral presidential action depends on the political and institutional context in which executive power is used.",
+  "democratic-values-executive-power": "Americans’ commitments to democratic values shape when they accept or resist expanded executive authority.",
+  "electoral-college-particularism": "The Electoral College creates incentives for presidents to favor electorally pivotal places over a purely national constituency.",
+  "electoral-geography": "Electoral geography shows how local context and spatial patterns structure political behavior and public opinion.",
+  "municipal-administration": "Local selection rules shape how municipal administrators understand representation and accountability.",
+  "no-blank-check": "Citizens place meaningful political limits on unilateral presidential power, even when they support the president’s policy goals.",
+  "particularistic-president": "Executive branch politics can direct federal benefits toward politically valuable communities and produce unequal patterns of public attention.",
+  "pass-the-buck": "Citizens evaluate leaders differently when officials claim responsibility, deflect blame, or govern through crisis.",
+  "political-disaster": "Presidents use disaster declarations in electorally strategic ways, linking emergency authority to political incentives.",
+  "poll-worker-retention": "Poll worker retention depends on the administrative pressures and civic demands of difficult election environments.",
+  "presidential-particularism-divide-dollar": "Presidents target federal grant spending toward politically important constituencies, including swing states and core partisan counties.",
+  "public-cost-unilateral-action": "Citizens penalize presidents who bypass Congress, even when they support the policy outcome.",
+  "spending": "Voters reward presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear.",
+  "unilateral-inaction": "Public evaluations of executive power are shaped not only by presidential action, but also by inaction under congressional gridlock.",
+  "urban-rural-gulf": "Urban-rural differences help explain enduring divides in American political behavior and public opinion."
+};
+const conciseSummary = (publication: Publication, metadata?: PublicationMetadata) => {
+  if (summaryOverrides[publication.slug]) return summaryOverrides[publication.slug];
+  const summary = metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary;
+  return firstSentence(summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+};
+const yearRank = (year: number | string) => {
+  const numeric = typeof year === "number" ? year : Number.parseInt(String(year), 10);
+  return Number.isFinite(numeric) ? numeric : 0;
+};
+const asText = (value: unknown) => {
+  if (Array.isArray(value)) return value.filter(Boolean).map(String).join(" ");
+  if (typeof value === "string" || typeof value === "number") return String(value);
+  return "";
+};
+
+const typeOrder = ["Book", "Article", "Chapter", "Working Paper", "Review"];
+const typeCounts = new Map<string, number>();
+publications.forEach((publication) => {
+  typeCounts.set(publication.data.type, (typeCounts.get(publication.data.type) ?? 0) + 1);
+});
+
+const orderedTypes = [
+  ...typeOrder.filter((type) => typeCounts.has(type)),
+  ...Array.from(typeCounts.keys()).filter((type) => !typeOrder.includes(type)).sort()
+];
+
+const typeOptions = [
+  { value: "all", label: "All", count: publications.length, type: "All" },
+  ...orderedTypes.map((type) => ({
+    value: slugify(type),
+    label: pluralizeType(type),
+    count: typeCounts.get(type) ?? 0,
+    type
+  }))
+];
+
+const majorThemeDefinitions = [
+  {
+    value: "presidential-power",
+    label: "Presidential Power",
+    description: "Work on executive authority, unilateral action, presidential incentives, and the institutional limits citizens and Congress place on presidents.",
+    terms: ["presidential power", "executive power", "unilateral action", "presidential politics", "presidential particularism", "presidency"]
+  },
+  {
+    value: "democratic-accountability",
+    label: "Democratic Accountability",
+    description: "Work on how citizens evaluate leaders, assign responsibility, and connect governing choices to democratic judgment.",
+    terms: ["democratic accountability", "presidential accountability", "electoral accountability", "retrospective voting", "public opinion", "public support"]
+  },
+  {
+    value: "political-geography",
+    label: "Political Geography",
+    description: "Work on how local context, spatial inequality, urban-rural divides, and place-based experience shape political behavior.",
+    terms: ["political geography", "geographic context", "county-level", "urban-rural", "migration", "place", "electoral geography", "bellwether"]
+  },
+  {
+    value: "federal-resource-allocation",
+    label: "Federal Resource Allocation",
+    description: "Work on how federal attention, grants, disaster declarations, and public resources move across communities.",
+    terms: ["federal resource allocation", "distributive politics", "disaster politics", "federal grants", "federal spending", "federalism", "intergovernmental"]
+  }
+];
+
+const searchableFields = (publication: Publication, metadata?: PublicationMetadata) =>
+  [
+    publication.data.title,
+    publication.data.summary,
+    publication.data.venue,
+    publication.data.citation,
+    publication.data.authors.join(" "),
+    publication.data.themes.join(" "),
+    publication.body,
+    metadata?.title,
+    metadata?.journal,
+    metadata?.citation,
+    metadata?.abstract,
+    metadata?.plain_english_summary,
+    metadata?.card_summary,
+    metadata?.research_question,
+    asText(metadata?.research_highlights),
+    asText(metadata?.methods),
+    asText(metadata?.data_sources),
+    asText(metadata?.tags),
+    asText(metadata?.filters)
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+const themeSource = (publication: Publication, metadata?: PublicationMetadata) =>
+  [
+    publication.data.themes.join(" "),
+    asText(metadata?.tags),
+    asText(metadata?.filters),
+    metadata?.abstract,
+    metadata?.research_question
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+const archiveItems = publications.map((publication) => {
+  const metadata = metadataFor(publication);
+  const figure = figureFor(publication);
+  const source = themeSource(publication, metadata);
+  const majorThemes = majorThemeDefinitions
+    .filter((theme) => theme.terms.some((term) => source.includes(term)))
+    .map((theme) => theme.value);
+  const abstract = metadata?.abstract ?? "";
+  const displaySummary = conciseSummary(publication, metadata);
+  const venue = metadata?.journal ?? publication.data.venue;
+  const normalizedVenue = normalizeTitle(venue);
+  const landmark =
+    publication.data.type === "Book" ||
+    normalizedVenue.includes("american political science review") ||
+    normalizedVenue.includes("american journal of political science") ||
+    normalizedVenue.includes("journal of politics");
+
+  return {
+    publication,
+    metadata,
+    abstract,
+    displaySummary,
+    majorThemes,
+    venue,
+    figure,
+    landmark,
+    searchText: searchableFields(publication, metadata),
+    citationCount: metadata?.citation_count ?? metadata?.cited_by ?? 0,
+    yearSort: yearRank(publication.data.year)
+  };
+});
+
+const themeOptions = majorThemeDefinitions
+  .map((theme) => ({
+    ...theme,
+    count: archiveItems.filter((item) => item.majorThemes.includes(theme.value)).length
+  }))
+  .filter((theme) => theme.count > 0);
+
+---
+
+<section class="container-wide archive-workbench" data-publication-browser>
+  <div class="archive-search-panel">
+    <div class="archive-search-heading">
+      <div>
+        <h2>{heading}</h2>
+      </div>
+    </div>
+
+    <div class="archive-search-row">
+      <label for="publication-search">Search title, author, journal, topic, or abstract</label>
+      <div class="archive-search-control">
+        <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal, or topic…" />
+        <button type="button" data-archive-reset>Reset</button>
+      </div>
+      <p class="archive-result-count" aria-live="polite" data-publication-count></p>
+    </div>
+  </div>
+
+  <div class="archive-control-panel" aria-label="Publication filters">
+    <div class="archive-control-group">
+      <p>Publication Type</p>
+      <div class="archive-segmented-control" role="group" aria-label="Filter publications by type">
+        {typeOptions.map((option) => (
+          <button
+            type="button"
+            class="archive-filter-button"
+            data-filter-type={option.value}
+            data-type-value={option.type}
+            aria-pressed={option.value === "all" ? "true" : "false"}
+          >
+            <span>{option.label}</span>
+            <strong>{option.count}</strong>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="archive-control-group archive-theme-panel">
+      <p>Research Pathways</p>
+      <div class="archive-theme-filters" role="group" aria-label="Filter publications by research theme">
+        <button type="button" class="archive-theme-button" data-filter-theme="all" aria-pressed="true">
+          <span>All</span>
+          <strong>{publications.length}</strong>
+        </button>
+        {themeOptions.map((theme) => (
+          <button type="button" class="archive-theme-button" data-filter-theme={theme.value} aria-pressed="false">
+            <span>{theme.label}</span>
+            <strong>{theme.count}</strong>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="archive-control-group archive-sort-group">
+      <label for="archive-sort">Sort</label>
+      <select id="archive-sort" data-archive-sort>
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="cited">Most cited</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="archive-list-panel">
+    <div class="archive-record-list" data-publication-list>
+      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, figure, landmark, searchText, citationCount, yearSort }) => (
+        <article
+          class={`archive-record ${landmark ? "archive-record-landmark" : ""}`}
+          data-publication-record
+          data-type={publication.data.type}
+          data-type-key={slugify(publication.data.type)}
+          data-themes={majorThemes.join(" ")}
+          data-year={yearSort}
+          data-citations={citationCount}
+          data-search={searchText}
+          data-landmark={landmark ? "true" : "false"}
+        >
+          <div class="archive-record-year">
+            <span>{publication.data.year}</span>
+            <small>{publication.data.type}</small>
+          </div>
+          <div class="archive-record-main">
+            {landmark && (
+              <p class="archive-record-flags">
+                <span>{publication.data.type === "Book" ? "Book" : venue}</span>
+              </p>
+            )}
+            <h3><a href={`/research/${publication.slug}/`}>{publication.data.title}</a></h3>
+            <p class="archive-record-venue">{venue} · {publication.data.year}</p>
+            <p class="archive-record-authors">{compactAuthors(publication.data.authors)}</p>
+            <p class="archive-record-summary">{displaySummary}</p>
+            {majorThemes.length > 0 && (
+              <div class="archive-record-themes" aria-label="Related themes">
+                <span>Related themes</span>
+                {majorThemes.map((themeValue) => {
+                  const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
+                  return theme && (
+                    <>
+                      <a href={`/research/?theme=${theme.value}`}>{theme.label}</a>
+                    </>
+                  );
+                })}
+              </div>
+            )}
+            {abstract && (
+              <details class="archive-record-details">
+                <summary>View abstract +</summary>
+                <div>
+                  <p>{abstract}</p>
+                </div>
+              </details>
+            )}
+          </div>
+          {figure && (
+            <figure class="archive-record-figure">
+              <img src={figure.src} alt={figure.alt} loading="lazy" />
+            </figure>
+          )}
+        </article>
+      ))}
+    </div>
+
+    <p class="archive-empty-message" hidden data-empty-publications>No publications match the current search and filters.</p>
+  </div>
+</section>
+
+<script>
+  type ArchiveState = {
+    q: string;
+    type: string;
+    theme: string;
+    sort: string;
+  };
+
+  const archiveRoots = document.querySelectorAll<HTMLElement>("[data-publication-browser]");
+
+  const normalize = (value: string) => value.trim().toLowerCase();
+  const tokenize = (value: string) => normalize(value).split(/\s+/).filter(Boolean);
+
+  archiveRoots.forEach((root) => {
+    const searchInput = root.querySelector<HTMLInputElement>("[data-archive-search]");
+    const resetButton = root.querySelector<HTMLButtonElement>("[data-archive-reset]");
+    const sortSelect = root.querySelector<HTMLSelectElement>("[data-archive-sort]");
+    const typeButtons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-filter-type]"));
+    const themeButtons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-filter-theme]"));
+    const records = Array.from(root.querySelectorAll<HTMLElement>("[data-publication-record]"));
+    const list = root.querySelector<HTMLElement>("[data-publication-list]");
+    const count = root.querySelector<HTMLElement>("[data-publication-count]");
+    const empty = root.querySelector<HTMLElement>("[data-empty-publications]");
+    const summary = root.querySelector<HTMLElement>("[data-archive-state-summary]");
+
+    if (!searchInput || !sortSelect || !list) return;
+
+    const initialState = (): ArchiveState => {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        q: params.get("q") ?? "",
+        type: params.get("type") ?? "all",
+        theme: params.get("theme") ?? "all",
+        sort: params.get("sort") ?? "newest"
+      };
+    };
+
+    let state = initialState();
+
+    const setPressed = (buttons: HTMLButtonElement[], attribute: string, value: string) => {
+      buttons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.getAttribute(attribute) === value));
+      });
+    };
+
+    const updateUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      if (state.q) params.set("q", state.q);
+      else params.delete("q");
+      if (state.type !== "all") params.set("type", state.type);
+      else params.delete("type");
+      if (state.theme !== "all") params.set("theme", state.theme);
+      else params.delete("theme");
+      if (state.sort !== "newest") params.set("sort", state.sort);
+      else params.delete("sort");
+      const query = params.toString();
+      const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+      window.history.replaceState({}, "", nextUrl);
+    };
+
+    const sortRecords = (visibleRecords: HTMLElement[]) => {
+      const sorted = [...visibleRecords].sort((a, b) => {
+        const yearA = Number(a.dataset.year ?? 0);
+        const yearB = Number(b.dataset.year ?? 0);
+        const citedA = Number(a.dataset.citations ?? 0);
+        const citedB = Number(b.dataset.citations ?? 0);
+        const titleA = normalize(a.querySelector("h3")?.textContent ?? "");
+        const titleB = normalize(b.querySelector("h3")?.textContent ?? "");
+
+        if (state.sort === "oldest") return yearA - yearB || titleA.localeCompare(titleB);
+        if (state.sort === "cited") return citedB - citedA || yearB - yearA || titleA.localeCompare(titleB);
+        return yearB - yearA || titleA.localeCompare(titleB);
+      });
+      root.querySelectorAll("[data-year-heading]").forEach((heading) => heading.remove());
+
+      let currentYear = "";
+      sorted.forEach((record) => {
+        const year = record.dataset.year ?? "";
+        if (year && year !== currentYear) {
+          currentYear = year;
+          const heading = document.createElement("div");
+          heading.className = "archive-year-heading";
+          heading.dataset.yearHeading = year;
+          heading.textContent = year;
+          list.append(heading);
+        }
+        list.append(record);
+      });
+    };
+
+    const matchesSearch = (record: HTMLElement, terms: string[]) => {
+      if (terms.length === 0) return true;
+      const haystack = record.dataset.search ?? "";
+      return terms.every((term) => haystack.includes(term));
+    };
+
+    const apply = (shouldUpdateUrl = true) => {
+      state.q = searchInput.value.trim();
+      state.sort = sortSelect.value;
+
+      setPressed(typeButtons, "data-filter-type", state.type);
+      setPressed(themeButtons, "data-filter-theme", state.theme);
+
+      const terms = tokenize(state.q);
+      const visibleRecords: HTMLElement[] = [];
+
+      records.forEach((record) => {
+        const typeMatches = state.type === "all" || record.dataset.typeKey === state.type;
+        const themeMatches = state.theme === "all" || (record.dataset.themes ?? "").split(/\s+/).includes(state.theme);
+        const searchMatches = matchesSearch(record, terms);
+        const visible = typeMatches && themeMatches && searchMatches;
+        record.hidden = !visible;
+        if (visible) visibleRecords.push(record);
+      });
+
+      sortRecords(visibleRecords);
+
+      if (count) {
+        const resultNoun = visibleRecords.length === 1 ? "result" : "results";
+        const totalNoun = records.length === 1 ? "publication" : "publications";
+        count.textContent =
+          visibleRecords.length === records.length
+            ? `${records.length} ${totalNoun}`
+            : `${visibleRecords.length} ${resultNoun} · ${records.length} total ${totalNoun}`;
+      }
+
+      if (summary) {
+        const typeLabel = typeButtons.find((button) => button.getAttribute("data-filter-type") === state.type)?.querySelector("span")?.textContent ?? "All";
+        const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All themes";
+        summary.textContent = `${typeLabel}; ${themeLabel}; ${sortSelect.options[sortSelect.selectedIndex]?.text ?? "Newest first"}.`;
+      }
+
+      if (empty) empty.hidden = visibleRecords.length > 0;
+      if (shouldUpdateUrl) updateUrl();
+    };
+
+    const reset = () => {
+      state = { q: "", type: "all", theme: "all", sort: "newest" };
+      searchInput.value = "";
+      sortSelect.value = "newest";
+      apply();
+    };
+
+    searchInput.value = state.q;
+    sortSelect.value = ["newest", "oldest", "cited"].includes(state.sort) ? state.sort : "newest";
+    if (!typeButtons.some((button) => button.getAttribute("data-filter-type") === state.type)) state.type = "all";
+    if (!themeButtons.some((button) => button.getAttribute("data-filter-theme") === state.theme)) state.theme = "all";
+
+    searchInput.addEventListener("input", () => apply());
+    sortSelect.addEventListener("change", () => apply());
+    resetButton?.addEventListener("click", reset);
+
+    typeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state.type = button.getAttribute("data-filter-type") ?? "all";
+        apply();
+      });
+    });
+
+    themeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state.theme = button.getAttribute("data-filter-theme") ?? "all";
+        apply();
+      });
+    });
+
+    window.addEventListener("popstate", () => {
+      state = initialState();
+      searchInput.value = state.q;
+      sortSelect.value = ["newest", "oldest", "cited"].includes(state.sort) ? state.sort : "newest";
+      apply(false);
+    });
+
+    apply(false);
+  });
+</script>

@@ -1,0 +1,138 @@
+{
+  "slug": "attitudes-toward-delegation-to-presidential-commissions",
+  "title": "Attitudes Toward Delegation to Presidential Commissions",
+  "authors": [
+    "David R. Miller",
+    "Andrew Reeves"
+  ],
+  "year": 2017,
+  "publication_type": "journal article",
+  "journal": "Presidential Studies Quarterly",
+  "volume": "47",
+  "issue": "3",
+  "pages": "495–516",
+  "doi": "10.1111/psq.12393",
+  "citation": "Miller, David R., and Andrew Reeves. 2017. \"Attitudes Toward Delegation to Presidential Commissions.\" Presidential Studies Quarterly 47(3): 495–516. https://doi.org/10.1111/psq.12393",
+  "links": {
+    "pdf": "/papers/commissions.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Survey experiments show that delegating to presidential commissions does not increase public approval or perceived policy effectiveness compared to direct presidential action.",
+  "abstract": "This article examines attitudes of the public toward delegation to presidential commissions. Using four survey experiments across a range of contexts, the authors compare public response to the creation of a commission versus direct presidential action. The findings indicate no significant difference in approval for taking action alone or delegating to a commission, at either the policy formulation or implementation stage. Additionally, policies formed by commissions are not seen as more effective than those formed by the president alone.",
+  "plain_english_summary": "People do not view presidential commissions as more effective or credible than direct presidential action; creating a commission does not increase public approval or belief in policy effectiveness compared to the president acting alone.",
+  "research_question": "Do presidential commissions increase public approval or perceived effectiveness of policies compared to direct presidential action?",
+  "research_highlights": [
+    "There is no significant difference in public approval between direct presidential action and delegation to a presidential commission.",
+    "Policies formed by commissions are not seen as more effective than those formed by the president alone.",
+    "Presidential commissions can satisfy public demand for action as effectively as direct action, but do not confer additional credibility or perceived efficacy."
+  ],
+  "methods": [
+    "Four survey experiments using vignettes based on real-world policy issues addressed by President Obama.",
+    "Random assignment of respondents to conditions describing direct presidential action, commission delegation, or control.",
+    "Measurement of approval and perceived policy effectiveness using Likert scales."
+  ],
+  "data_sources": [
+    "Survey experiments conducted on Amazon Mechanical Turk (MTurk)"
+  ],
+  "key_variables": [
+    "Approval of president's handling of issue",
+    "Perceived effectiveness of policy",
+    "Policy mechanism (direct action vs. commission delegation)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "2016–2017 (survey fielding period)",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "We find that there is no significant difference in the approval garnered for taking action alone or delegating the decision to a presidential commission.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the article text, tables, or appendices. No inference or external information was used.",
+  "tags": [
+    "American politics",
+    "executive branch",
+    "public opinion",
+    "survey experiment",
+    "presidential commissions",
+    "delegation",
+    "policy process",
+    "presidential power",
+    "public approval",
+    "policy implementation",
+    "survey experiments"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "executive branch",
+      "public opinion"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "survey experiment"
+    ],
+    "methods": [
+      "Four survey experiments using vignettes based on real-world policy issues addressed by President Obama.",
+      "Random assignment of respondents to conditions describing direct presidential action, commission delegation, or control.",
+      "Measurement of approval and perceived policy effectiveness using Likert scales."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "2016–2017 (survey fielding period)"
+    ],
+    "keywords": [
+      "presidential commissions",
+      "delegation",
+      "policy process",
+      "public opinion"
+    ],
+    "related_topics": [
+      "presidential power",
+      "public approval",
+      "policy implementation",
+      "survey experiments"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        12,
+        13,
+        14,
+        18
+      ]
+    },
+    "methods": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    }
+  }
+}

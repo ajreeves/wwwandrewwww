@@ -1,0 +1,114 @@
+{
+  "slug": "partisanship-economic-assessments-and-presidential-accountability",
+  "title": "Partisanship, Economic Assessments, and Presidential Accountability",
+  "authors": [
+    "Zoe Ang",
+    "Andrew Reeves",
+    "Jon C. Rogowski",
+    "Arjun Vishwanath"
+  ],
+  "year": 2022,
+  "publication_type": "journal article",
+  "journal": "American Journal of Political Science",
+  "volume": "66",
+  "issue": "2",
+  "pages": "468–484",
+  "doi": "10.1111/ajps.12659",
+  "citation": "Ang, Zoe, Andrew Reeves, Jon C. Rogowski, and Arjun Vishwanath. 2022. \"Partisanship, Economic Assessments, and Presidential Accountability.\" American Journal of Political Science 66(2): 468–484. https://doi.org/10.1111/ajps.12659",
+  "links": {
+    "pdf": "/papers/transition.pdf",
+    "journal": null,
+    "replication_data": "https://doi.org/10.7910/DVN/EZNXW1",
+    "code": null
+  },
+  "card_summary": "This study finds that while partisanship influences Americans' economic assessments following a change in presidential party, the effects are statistically significant but modest, suggesting partisanship does not seriously undermine presidential accountability.",
+  "abstract": "Few issues are more salient for voters or more important in political decision making than economic conditions, and no American public official is more closely associated with the economy than the president. Existing scholarship disagrees, however, about how partisan loyalties affect economic evaluations. We study how partisan control of the presidency affects economic perceptions using eight waves of panel data collected around the 2016 presidential election from a national probability sample. We find that although individual-level perceptions are largely stable across time, the change in partisan control of the White House was associated with more positive evaluations among Republicans and more negative evaluations among Democrats. These effects are statistically significant yet substantively modest in magnitude. Our results indicate that partisanship is less strongly associated with economic assessments than some previous scholarship has claimed and suggest more sanguine conclusions about the prospects for presidential accountability even in a partisan era.",
+  "plain_english_summary": "The study shows that when the presidency changes from one party to another, Republicans and Democrats adjust their views of the economy in predictable ways, but these changes are small, meaning that partisanship does not greatly distort how Americans judge the economy or hold presidents accountable.",
+  "research_question": "How does partisan control of the presidency affect Americans' perceptions of economic conditions?",
+  "research_highlights": [
+    "Individual-level economic perceptions are largely stable across time.",
+    "The change in partisan control of the White House after the 2016 election led to more positive economic evaluations among Republicans and more negative evaluations among Democrats.",
+    "These partisan effects are statistically significant but substantively modest in magnitude.",
+    "Partisanship is less strongly associated with economic assessments than some previous scholarship has claimed.",
+    "Partisanship does not seriously undermine presidential accountability through blind reactions to election outcomes."
+  ],
+  "methods": [
+    "Eight waves of panel survey data from a national probability sample (The American Panel Survey, TAPS) around the 2016 presidential election.",
+    "Linear regression models with respondent fixed effects.",
+    "Analysis of changes in economic perceptions before and after the 2016 election and inauguration."
+  ],
+  "data_sources": [
+    "The American Panel Survey (TAPS), a monthly panel survey with a national probability sample."
+  ],
+  "key_variables": [
+    "Economic perceptions (household and national)",
+    "Partisanship (measured pre-election)",
+    "Objective economic indicators (national unemployment rate, Dow Jones Composite Average)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "September 2016 to January 2018",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Our results indicate that partisanship is less strongly associated with economic assessments than some previous scholarship has claimed and suggest more sanguine conclusions about the prospects for presidential accountability even in a partisan era.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information is inferred beyond the provided evidence.",
+  "tags": [
+    "Political Science",
+    "Public Opinion",
+    "Presidential Accountability",
+    "panel survey",
+    "quantitative analysis"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Public Opinion",
+      "Presidential Accountability"
+    ],
+    "government_level": [
+      "national"
+    ],
+    "research_design": [
+      "panel survey",
+      "quantitative analysis"
+    ],
+    "methods": [
+      "Eight waves of panel survey data from a national probability sample (The American Panel Survey, TAPS) around the 2016 presidential election.",
+      "Linear regression models with respondent fixed effects.",
+      "Analysis of changes in economic perceptions before and after the 2016 election and inauguration."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "September 2016 to January 2018"
+    ],
+    "keywords": [],
+    "related_topics": []
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        4
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        15
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        5,
+        6
+      ]
+    }
+  }
+}

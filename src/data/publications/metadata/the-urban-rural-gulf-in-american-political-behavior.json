@@ -1,0 +1,389 @@
+{
+  "title": {
+    "value": "The Urban–Rural Gulf in American Political Behavior",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "James G. Gimpel",
+      "Nathan Lovin",
+      "Bryant Moy",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2020,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Political Behavior",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "42",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "1343–1368",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1007/s11109-020-09601-w",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "original paper",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Urban–rural differences in partisan political loyalty are as familiar in the United States as they are in other countries. In this paper, we examine Gallup survey data from the early-2000s through 2018 to understand the urban–rural fissure that has been so noticeable in recent elections. We consider the potential mechanisms of an urban–rural political divide. We suggest that urban and rural dwellers oppose each other because they reside in far apart locations without much interaction and support different political parties because population size structures opinion quite differently in small towns compared with large cities. In particular, we consider the extent to which the compositional characteristics (i.e., race, income, education, etc.) of the individuals living in these locales drives the divide. We find that sizable urban–rural differences persist even after accounting for an array of individual-level characteristics that typically distinguish them.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Urban–rural differences in American political party identification persist even after accounting for individual-level characteristics, with both geographic distance from cities and population density independently associated with partisan divides.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      17,
+      19,
+      21,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People living in cities and rural areas in the United States tend to support different political parties, and this divide remains even when considering factors like race, income, and education; both how far someone lives from a city and how densely populated their area is are linked to whether they are more likely to be Democrat or Republican.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      17,
+      19,
+      21,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "To what extent can the urban–rural gap in American political party support be explained by the compositional characteristics of populations in these areas, and do geographic factors like distance from cities and population density independently contribute to this divide?",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      17
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Sizable urban–rural differences in party identification persist even after accounting for individual-level characteristics such as race, income, education, religion, and age.",
+      "Both greater distance from major cities and lower population density are independently associated with a higher likelihood of Republican identification.",
+      "The urban–rural partisan gap is present across demographic subgroups, including within racial, income, education, and age groups.",
+      "The magnitude of the urban–rural gap in party identification is as high as 8–11% for distance and 10–16% for population density, net of compositional controls."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      17,
+      19,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Analysis of nearly 125,000 Gallup Poll Social Series survey respondents from 2003–2018, including about 25,000 from small town and rural areas.",
+      "Geocoding of respondents by ZIP Code to measure distance from cities and local population density.",
+      "Ordered logistic regression models of party identification, controlling for individual-level covariates (race, income, education, age, religion, marital status, gender), with state and year fixed effects and standard errors clustered by ZIP Code.",
+      "Visualization of urban–rural partisan gaps across demographic subgroups."
+    ],
+    "evidence_pages": [
+      3,
+      8,
+      9,
+      17,
+      18,
+      29,
+      30,
+      34
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Gallup Poll Social Series (GPSS) surveys, 2003–2018"
+    ],
+    "evidence_pages": [
+      3,
+      8
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Party identification (five-point scale)",
+      "Distance from nearest city of 100,000+ population",
+      "Population density within 10-mile radius of ZIP Code centroid",
+      "Demographic controls: race, income, education, age, religion, religious attendance, marital status, gender"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      29,
+      30,
+      34
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (all 50 states and the District of Columbia)",
+    "evidence_pages": [
+      3,
+      9
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2003–2018",
+    "evidence_pages": [
+      3,
+      8
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      3,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "Political geography",
+      "Urban/rural divide",
+      "Public opinion",
+      "Partisanship"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "Political polarization",
+      "Geographic sorting",
+      "Social context and political behavior"
+    ],
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      22
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "We find that sizable urban–rural differences persist even after accounting for an array of individual-level characteristics that typically distinguish them.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Gimpel, J. G., Lovin, N., Moy, B., & Reeves, A. (2020). The Urban–Rural Gulf in American Political Behavior. Political Behavior, 42(4), 1343–1368. https://doi.org/10.1007/s11109-020-09601-w",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/urbanrural.pdf",
+      "journal": "https://doi.org/10.1007/s11109-020-09601-w",
+      "replication_data": "https://doi.org/10.7910/DVN/IYBIUP",
+      "code": null
+    },
+    "evidence_pages": [
+      1,
+      24
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          9,
+          17
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          9,
+          17,
+          19,
+          21,
+          22
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          8,
+          9,
+          17,
+          18,
+          29,
+          30,
+          34
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24,
+      29,
+      30,
+      34
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and tables. No causal identification strategy or explicit policy relevance is stated. Replication data link is provided in the article.",
+    "evidence_pages": [
+      1,
+      24
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political science",
+      "Political behavior",
+      "Geography"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      29,
+      30,
+      34
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "research_design": {
+    "value": [
+      "Observational study",
+      "Cross-sectional survey analysis",
+      "Multivariate regression"
+    ],
+    "evidence_pages": [
+      3,
+      8,
+      9,
+      17,
+      18,
+      29,
+      30,
+      34
+    ],
+    "confidence": "high"
+  }
+}

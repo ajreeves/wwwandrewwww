@@ -1,0 +1,154 @@
+{
+  "slug": "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
+  "title": "Ecologies of Unease: Geographic Context and National Economic Evaluations",
+  "authors": [
+    "Andrew Reeves",
+    "James G. Gimpel"
+  ],
+  "year": 2012,
+  "publication_type": "journal article",
+  "journal": "Political Behavior",
+  "volume": "34",
+  "issue": "3",
+  "pages": "507-534",
+  "doi": "10.1007/s11109-011-9167-8",
+  "citation": "Reeves, Andrew, and James G. Gimpel. 2012. \"Ecologies of Unease: Geographic Context and National Economic Evaluations.\" Political Behavior 34(3): 507-534. doi:10.1007/s11109-011-9167-8.",
+  "links": {
+    "pdf": "/papers/foreclosures.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The study finds that local economic conditions, including unemployment, fuel prices, and foreclosures, significantly shape national economic evaluations, especially among political independents, during the 2008 U.S. presidential election.",
+  "abstract": "Assessment of the nation’s economic performance has been repeatedly linked to voters’ decision-making in U.S. presidential elections. Here we inquire as to where those economic evaluations originate. One possibility in the politicized environment of a major campaign is that they are partisan determinations and do not reflect actual economic circumstances. Another possibility is that these judgments arise from close attention to news media, which is presumably highlighting national economic conditions as a facet of campaign coverage. Still a third explanation is that voters derive their national economic evaluations from living out their lives in particular localities which may or may not be experiencing the conditions that affect the nation as a whole. Drawing upon data from the 2008 presidential election, we find that varying local conditions do shape the economic evaluations of political independents. Moreover, unemployment is not the only salient factor, as fuel prices and foreclosures also figured prominently. Local economic factors, what we call geotropic considerations, shape national economic evaluations especially for those who aren’t making these judgments on simple partisan grounds.",
+  "plain_english_summary": "This article shows that people’s views of the national economy are influenced by the economic conditions in their local area, such as job losses, rising gas prices, and home foreclosures, especially for those who are not strongly partisan, using data from the 2008 U.S. presidential election.",
+  "research_question": "To what extent do local economic conditions influence individuals’ evaluations of the national economy, and how does this vary by partisanship and other individual characteristics?",
+  "research_highlights": [
+    "Local economic conditions, including unemployment, fuel prices, and foreclosures, significantly influence national economic evaluations.",
+    "The effect of local economic conditions is strongest among political independents and recent movers.",
+    "Foreclosure rates had a particularly strong impact on negative economic evaluations in hard-hit states and media markets.",
+    "News consumption heightens sensitivity to local unemployment in shaping national economic assessments.",
+    "Partisan identification remains a strong predictor, but local context matters especially for less partisan individuals."
+  ],
+  "methods": [
+    "Multilevel modeling (hierarchical linear models) of survey data nested within various definitions of local context (state, media market, political, economic, and ethnocultural regions).",
+    "Analysis of the 2008 Cooperative Congressional Election Study (CCES) survey data.",
+    "Inclusion of both individual-level and contextual (regional) economic variables."
+  ],
+  "data_sources": [
+    "2008 Cooperative Congressional Election Study (CCES) survey",
+    "RealtyTrac (home mortgage foreclosure data)",
+    "GasBuddy.com (monthly gasoline price data)",
+    "U.S. Department of Labor, Bureau of Labor Statistics (monthly unemployment rate)"
+  ],
+  "key_variables": [
+    "National economic evaluations (dependent variable)",
+    "Local unemployment rate",
+    "Local foreclosure rate",
+    "Local gasoline prices",
+    "Partisanship",
+    "News interest",
+    "Recent residential mobility"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (various definitions of local context: state, media market, county-based regions)",
+  "time_period": "2008 (U.S. presidential election year)",
+  "unit_of_analysis": "Individual survey respondent nested within local regions",
+  "policy_relevance": null,
+  "pull_quote": "Local economic factors, what we call geotropic considerations, shape national economic evaluations especially for those who aren’t making these judgments on simple partisan grounds.",
+  "pull_quote_page": 3,
+  "confidence_notes": "All extracted fields are directly supported by the document text and tables. No inferences were made beyond the explicit content of the article.",
+  "tags": [
+    "Political Science",
+    "Political Behavior",
+    "Public Opinion",
+    "multilevel modeling",
+    "cross-sectional survey analysis",
+    "economic voting",
+    "presidential elections",
+    "economic evaluations",
+    "political geography",
+    "local context",
+    "foreclosures",
+    "unemployment",
+    "fuel prices",
+    "political behavior",
+    "public opinion",
+    "media effects",
+    "partisanship",
+    "local economic conditions"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Political Behavior",
+      "Public Opinion"
+    ],
+    "government_level": [
+      "national",
+      "state",
+      "local"
+    ],
+    "research_design": [
+      "multilevel modeling",
+      "cross-sectional survey analysis"
+    ],
+    "methods": [
+      "Multilevel modeling (hierarchical linear models) of survey data nested within various definitions of local context (state, media market, political, economic, and ethnocultural regions).",
+      "Analysis of the 2008 Cooperative Congressional Election Study (CCES) survey data.",
+      "Inclusion of both individual-level and contextual (regional) economic variables."
+    ],
+    "geography": [
+      "United States (various definitions of local context: state, media market, county-based regions)"
+    ],
+    "time_period": [
+      "2008 (U.S. presidential election year)"
+    ],
+    "keywords": [
+      "economic voting",
+      "presidential elections",
+      "economic evaluations",
+      "political geography",
+      "local context",
+      "foreclosures",
+      "unemployment",
+      "fuel prices"
+    ],
+    "related_topics": [
+      "political behavior",
+      "public opinion",
+      "media effects",
+      "partisanship",
+      "local economic conditions"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        3,
+        4,
+        13
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        3,
+        13,
+        19,
+        26,
+        27
+      ]
+    },
+    "methods": {
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PublicationBrowser from "@components/PublicationBrowser.astro";
+import PageHeader from "@components/PageHeader.astro";
+
+const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
+const publications = (await getCollection("publications")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
+---
+
+<BaseLayout title="Research" active="Research" description="Research by Andrew Reeves on presidential power, democratic accountability, political geography, and federal resource allocation.">
+  <PageHeader
+    eyebrow="Research"
+    title="Publications"
+    intro="Published research spanning presidential power, democratic accountability, political geography, and the distribution of federal resources."
+  />
+
+  <PublicationBrowser
+    publications={publications}
+    heading="Search the archive"
+  />
+</BaseLayout>

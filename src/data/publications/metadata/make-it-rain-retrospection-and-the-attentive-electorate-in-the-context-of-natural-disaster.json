@@ -1,0 +1,366 @@
+{
+  "title": {
+    "value": "Make It Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "John T. Gasper",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2011,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "American Journal of Political Science",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "55",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "340–355",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/j.1540-5907.2010.00503.x",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Are election outcomes driven by events beyond the control of politicians? Democratic accountability requires that voters make reasonable evaluations of incumbents. Although natural disasters are beyond human control, the response to these events is the responsibility of elected officials. In a county-level analysis of gubernatorial and presidential elections from 1970 to 2006, we examine the effects of weather events and governmental responses. We find that electorates punish presidents and governors for severe weather damage. However, we find that these effects are dwarfed by the response of attentive electorates to the actions of their officials. When the president rejects a request by the governor for federal assistance, the president is punished and the governor is rewarded at the polls. The electorate is able to separate random events from governmental responses and attribute actions based on the defined roles of these two politicians.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Voters punish presidents and governors for severe weather damage, but reward or punish them more strongly based on their actions in response to disasters, demonstrating that electorates can distinguish between random events and government responsibility.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This study finds that while voters do blame politicians for natural disasters, they pay even more attention to how those politicians respond. If a governor requests federal disaster aid and the president denies it, voters punish the president and reward the governor. Voters can tell the difference between bad luck and government action.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do voters distinguish between random events (like natural disasters) and the actions of politicians in response to those events when evaluating incumbents in elections?",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Voters punish both presidents and governors for severe weather damage.",
+      "Voters reward both presidents and governors for disaster declarations (government response).",
+      "When a governor requests federal disaster aid and the president denies it, the president is punished and the governor is rewarded at the polls.",
+      "The effect of government response outweighs the effect of the disaster itself on electoral outcomes.",
+      "Electorates are able to attribute responsibility based on the defined roles of governors and presidents."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "County-level quantitative analysis of gubernatorial and presidential election results from 1970 to 2006.",
+      "Regression models with county and year fixed effects.",
+      "Use of disaster damage data (SHELDUS), disaster declaration data (PERI, FEMA), and controls for income and previous vote share."
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Spatial Hazards Events and Losses Database for the United States (SHELDUS)",
+      "Public Entity Risk Institute (PERI)",
+      "FEMA disaster declaration data",
+      "U.S. Census Bureau"
+    ],
+    "evidence_pages": [
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Incumbent vote share (president/governor)",
+      "Severe weather damage (logged dollars per 10,000 citizens)",
+      "Disaster declarations (county-level)",
+      "Disaster declaration turn downs (state-level)",
+      "Median income",
+      "Previous election vote share"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (county-level analysis)",
+    "evidence_pages": [
+      1,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1970 to 2006",
+    "evidence_pages": [
+      1,
+      7
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county-year",
+    "evidence_pages": [
+      1,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "retrospective voting",
+      "natural disasters",
+      "elections",
+      "accountability",
+      "federalism",
+      "disaster declarations"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political accountability",
+      "voter behavior",
+      "federal disaster policy",
+      "governor and president roles"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The electorate is able to separate random events from governmental responses and attribute actions based on the defined roles of these two politicians.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Gasper, John T., and Andrew Reeves. 2011. \"Make It Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters.\" American Journal of Political Science 55(2): 340–355. doi:10.1111/j.1540-5907.2010.00503.x",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/rain.pdf",
+      "journal": null,
+      "replication_data": "http://people.bu.edu/areeves",
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          4,
+          5
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          12,
+          13
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article.",
+    "evidence_pages": [
+      1,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "elections",
+      "public policy"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal",
+      "state"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "regression analysis",
+      "fixed effects models"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      9
+    ],
+    "confidence": "high"
+  }
+}

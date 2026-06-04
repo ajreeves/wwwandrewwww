@@ -1,0 +1,147 @@
+{
+  "slug": "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar",
+  "title": "Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations",
+  "authors": [
+    "Andrew Reeves"
+  ],
+  "year": 2011,
+  "publication_type": "journal article",
+  "journal": "The Journal of Politics",
+  "volume": "73",
+  "issue": "4",
+  "pages": "1142–1151",
+  "doi": "10.1017/S0022381611000843",
+  "citation": "Reeves, Andrew. 2011. \"Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations.\" The Journal of Politics 73(4): 1142–1151. doi:10.1017/S0022381611000843.",
+  "links": {
+    "pdf": "/papers/fema.pdf",
+    "journal": null,
+    "replication_data": "http://people.bu.edu/areeves",
+    "code": "http://people.bu.edu/areeves"
+  },
+  "card_summary": "Presidents are more likely to issue disaster declarations to electorally competitive states, especially after the 1988 Stafford Act, and are rewarded electorally for doing so.",
+  "abstract": "This article argues that presidents use unilateral powers for particularistic aims to gain electoral support, focusing on presidential disaster declarations. An analysis from 1981 to 2004 finds that a state’s electoral competitiveness influences the likelihood of receiving a disaster declaration, especially after the 1988 Stafford Act expanded presidential powers. Competitive states can expect more disaster declarations, and these decisions yield electoral benefits for presidents, who are rewarded at the ballot box for issuing such declarations.",
+  "plain_english_summary": "The study finds that U.S. presidents are more likely to declare disasters in states that are important for winning elections, particularly after 1988, and that these declarations help presidents gain votes in those states.",
+  "research_question": "Do presidents use their unilateral power to issue disaster declarations for electoral advantage, and does this strategy yield electoral rewards?",
+  "research_highlights": [
+    "A state’s electoral competitiveness significantly increases its likelihood of receiving a presidential disaster declaration after the 1988 Stafford Act.",
+    "Competitive states can expect about twice as many disaster declarations as uncompetitive states.",
+    "Presidents receive measurable electoral rewards (over a one-point increase in statewide vote share) for issuing disaster declarations.",
+    "There is no significant relationship between competitiveness and disaster declarations before 1988."
+  ],
+  "methods": [
+    "Quantitative analysis of nearly 1,000 presidential disaster declarations from 1981 to 2004.",
+    "Poisson regression and related statistical models to estimate the effect of state competitiveness and other variables on disaster declarations.",
+    "Analysis of presidential election outcomes to estimate the electoral impact of disaster declarations."
+  ],
+  "data_sources": [
+    "FEMA disaster declaration records (1981–2004)",
+    "Insurance Services Office (ISO) Property Claims Service data on disaster damage",
+    "State-level electoral data (vote shares, competitiveness)",
+    "Economic data (personal income)",
+    "Partisan composition of state governments"
+  ],
+  "key_variables": [
+    "Number of presidential disaster declarations per state per year",
+    "State electoral competitiveness (loser's share of two-party vote)",
+    "Actual disaster events and insurance damage estimates",
+    "State economic capacity (per capita income)",
+    "Partisanship of governor and congressional delegation"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (all 50 states)",
+  "time_period": "1981–2004",
+  "unit_of_analysis": "state-year",
+  "policy_relevance": null,
+  "pull_quote": "A highly competitive state can expect to receive twice as many presidential disaster declarations as an uncompetitive state.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the cited pages. No policy recommendations or identification strategies are explicitly described in the text.",
+  "tags": [
+    "American politics",
+    "executive politics",
+    "disaster policy",
+    "quantitative",
+    "observational",
+    "panel data analysis",
+    "presidency",
+    "unilateral powers",
+    "disaster declarations",
+    "electoral incentives",
+    "Stafford Act",
+    "political geography",
+    "federal aid",
+    "executive power",
+    "federal disaster policy",
+    "electoral politics",
+    "political institutions"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "executive politics",
+      "disaster policy"
+    ],
+    "government_level": [
+      "federal",
+      "state"
+    ],
+    "research_design": [
+      "quantitative",
+      "observational",
+      "panel data analysis"
+    ],
+    "methods": [
+      "Quantitative analysis of nearly 1,000 presidential disaster declarations from 1981 to 2004.",
+      "Poisson regression and related statistical models to estimate the effect of state competitiveness and other variables on disaster declarations.",
+      "Analysis of presidential election outcomes to estimate the electoral impact of disaster declarations."
+    ],
+    "geography": [
+      "United States (all 50 states)"
+    ],
+    "time_period": [
+      "1981–2004"
+    ],
+    "keywords": [
+      "presidency",
+      "unilateral powers",
+      "disaster declarations",
+      "electoral incentives",
+      "Stafford Act",
+      "political geography",
+      "federal aid"
+    ],
+    "related_topics": [
+      "executive power",
+      "federal disaster policy",
+      "electoral politics",
+      "political institutions"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        3
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        3,
+        6,
+        7,
+        9
+      ]
+    },
+    "methods": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  }
+}

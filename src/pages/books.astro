@@ -1,0 +1,308 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BookFeature from "@components/BookFeature.astro";
+import PageHeader from "@components/PageHeader.astro";
+
+const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
+const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+const publications = await getCollection("publications");
+const publicationsBySlug = new Map(publications.map((publication) => [publication.slug, publication]));
+
+const themeLinks = {
+  presidentialPower: "/research/?theme=presidential-power",
+  democraticAccountability: "/research/?theme=democratic-accountability",
+  federalResourceAllocation: "/research/?theme=federal-resource-allocation",
+  politicalGeography: "/research/?theme=political-geography"
+};
+
+const bookDetails = {
+  "no-blank-check": {
+    argument: [
+      "No Blank Check begins from a puzzle in debates about the modern presidency: presidents increasingly seek policy change through unilateral action, yet democratic theory and institutional scholarship often describe the constraints on such action mainly in terms of Congress, courts, and administrative capacity. Reeves and Rogowski ask whether citizens themselves place meaningful limits on presidential power.",
+      "The book's central contribution is to bring public opinion into theories of executive power. It argues that people evaluate not only the policy goals presidents pursue, but also the means by which presidents pursue them. Even when citizens favor a policy outcome, they may react negatively when presidents bypass Congress or appear to violate democratic norms.",
+      "Drawing on surveys, experiments, historical polling, and comparative evidence, the book shows that skepticism toward unilateral action is not simply an elite concern. Citizens can punish presidents who rely on unilateral power, and those reactions shape the political incentives presidents face.",
+      "The book matters because it complicates accounts of an unconstrained presidency. It suggests that democratic accountability can operate through public judgments about process, legality, and institutional restraint, not only through approval or disapproval of policy outcomes."
+    ],
+    themes: [
+      { label: "Presidential Power", href: themeLinks.presidentialPower },
+      { label: "Democratic Accountability", href: themeLinks.democraticAccountability },
+      { label: "Executive Authority", href: themeLinks.presidentialPower },
+      { label: "Public Opinion", href: themeLinks.democraticAccountability },
+      { label: "Constitutional Politics", href: themeLinks.presidentialPower }
+    ],
+    reception: [
+      {
+        excerpt: "robust and compelling",
+        source: "Matthew Eshbaugh-Soha, Perspectives on Politics",
+        url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
+      },
+      {
+        excerpt: "advances an argument that is not conventional",
+        source: "Kenneth Lowande, Political Science Quarterly",
+        url: "https://academic.oup.com/psq/article/139/1/132/7512574"
+      }
+    ],
+    endorsements: [
+      {
+        excerpt: "Political scientists have forever, assumed that ordinary people have no meaningful views about the presidency and presidential power. No longer can that assumption stand. In a masterful work, Andrew Reeves and Jon C. Rogowski have shown that not only do people hold views, expectations, and judgments of the presidency but that their opinions are highly consequential for politics. Hats off to a path-breaking piece of research!",
+        scholar: "James L. Gibson",
+        affiliation: "Washington University in St. Louis",
+        url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
+      },
+      {
+        excerpt: "Executive orders, signing statements, budget impoundment, brinksmanship - has the system of checks and balances failed? Has the United States entered the era of the imperial President? Andrew Reeves and Jon C. Rogowski, two of the nation's leading scholars of American institutions, offer a careful and thorough assessment of the ability of its President to act unilaterally. The public - through its commitment to ideas embodied in the Constitution - has time and again constrained what Presidents do. The public itself, more than Congress, has preserved the American system of checks-and-balances. No Blank Check is required reading for any serious scholar or student of American politics.",
+        scholar: "Stephen Ansolabehere",
+        affiliation: "Harvard University",
+        url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
+      },
+      {
+        excerpt: "A president is by far the most public politician in America. How successfully they exploit public strategies remains an unsettled question, even after several decades of active research. Into this research field, Andrew Reeves and Jon C. Rogowski offer a fresh consideration: the American public's expectations about how presidents should and should not pursue their goals. For this, No Blank Check commands our attention.",
+        scholar: "Samuel Kernell",
+        affiliation: "UC San Diego",
+        url: "https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"
+      }
+    ],
+    recognition: [
+      {
+        label: "Scholarly reviews",
+        text: "Reviewed in Perspectives on Politics and Political Science Quarterly."
+      },
+      {
+        label: "Citation record",
+        text: "Cambridge Core lists 23 Crossref citations for the book."
+      }
+    ],
+    related: [
+      "public-cost-unilateral-action",
+      "democratic-values-executive-power",
+      "unilateral-powers-public-opinion",
+      "contextual-determinants",
+      "unilateral-inaction"
+    ],
+    publicationInfo: [
+      { label: "Publisher", value: "Cambridge University Press" },
+      { label: "Publication date", value: "15 September 2022 (digital); 22 September 2022 (hardback/paperback)" },
+      { label: "Pages", value: "338 pages" },
+      { label: "ISBN", value: "9781316795811 (ebook); 9781107174306 (hardback); 9781316626474 (paperback)" },
+      { label: "DOI", value: "10.1017/9781316795811", url: "https://doi.org/10.1017/9781316795811" }
+    ]
+  },
+  "particularistic-president": {
+    argument: [
+      "The Particularistic President takes up a foundational assumption in scholarship on American institutions: because presidents are elected nationally, they are often expected to counterbalance the parochialism of Congress. Kriner and Reeves ask whether that image of the president as a universalistic national representative survives empirical scrutiny.",
+      "The book's theoretical contribution is to show that presidents have their own particularistic incentives. The Electoral College, party coalitions, and administrative discretion can encourage presidents to direct resources and attention toward politically valuable places and constituencies.",
+      "Across evidence on disaster declarations, military base closings, transportation grants, federal spending, and electoral returns, the book finds that presidents routinely behave as strategic distributive politicians. Federal benefits can flow in ways that privilege swing states, co-partisans, and communities with special electoral value.",
+      "The book matters because it links executive power to political inequality. If presidents are not reliably universalistic, then shifting authority toward the executive branch does not necessarily solve the problem of unequal representation; it may relocate that problem inside presidential governance."
+    ],
+    themes: [
+      { label: "Federal Spending", href: themeLinks.federalResourceAllocation },
+      { label: "Distributive Politics", href: themeLinks.federalResourceAllocation },
+      { label: "Political Inequality", href: themeLinks.democraticAccountability },
+      { label: "Executive Branch Politics", href: themeLinks.presidentialPower },
+      { label: "Electoral Incentives", href: themeLinks.politicalGeography }
+    ],
+    reception: [
+      {
+        excerpt: "Political scientists, historians, students of communication studies and political rhetoric, and journalists write many books on the American presidency every year. Although these studies add incrementally to our understanding of executive branch politics, very few new books fundamentally reshape scholarly thinking about the presidency ... Douglas Kriner and Andrew Reeves have written a book that meets this threshold, providing a systematic and empirical analysis of presidential efforts to target key constituencies in the electorate with public policy and federal resources ... [they] have produced a well-written study that has the potential to reach a broad audience in political science. Scholars of the American presidency and public policy specialists will find The Particularistic President to be an important book that expands their knowledge about the strategic nature of presidential decision making and the implementation of federal policies.",
+        source: "Adam L. Warber, Congress and the Presidency",
+        url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
+      }
+    ],
+    endorsements: [
+      {
+        excerpt: "In this well-informed and rigorous work, the authors challenge the view of presidential universalism with their finding that presidents routinely allocate federal resources to benefit their partisan and electoral constituencies. The fact that chief executives skew policy to the demands of the electoral college encourages us to reconsider our views of the presidency and the manner in which we elect its occupants.",
+        scholar: "George Edwards",
+        affiliation: "Texas A&M",
+        url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
+      },
+      {
+        excerpt: "Doug Kriner and Andrew Reeves have written a terrific book that is destined to shake up the presidency subfield. I, myself, will be arguing with it for a long time. Marshaling an eclectic array of data, Kriner and Reeves contend that presidents are not quite the national statesmen that they are made out to be. Rather, in their basic orientation toward distributive politics and disaster relief aid, presidents can be just as narrow-minded and shortsighted as legislators. Whether presidents and legislators are of a piece, well, that remains to be seen. But with this stimulating book, a gauntlet has been dropped.",
+        scholar: "William Howell",
+        affiliation: "Sydney Stein Professor in American Politics, University of Chicago",
+        url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
+      },
+      {
+        excerpt: "In a book that is beautifully crafted and filled with careful empirical analysis, Kriner and Reeves offer a forceful challenge to mainstream thinking on the presidency, arguing that presidents are just as particularistic in their approach to politics as members of Congress are and cannot be relied upon to counterbalance the latter's parochialism. This volume is destined to be controversial and to stimulate new thinking and research on the presidency.",
+        scholar: "Terry Moe",
+        affiliation: "William Bennett Munro Professor of Political Science, Stanford University, California",
+        url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
+      }
+    ],
+    recognition: [
+      {
+        label: "Award",
+        text: "Winner of the 2016 Richard E. Neustadt Award from APSA's Presidents and Executive Politics Section."
+      },
+      {
+        label: "Citation record",
+        text: "Cambridge Core lists 72 Crossref citations; WashU Research Profiles lists 92 Scopus citations."
+      }
+    ],
+    related: [
+      "presidential-particularism-divide-dollar",
+      "spending",
+      "prespart",
+      "political-disaster",
+      "all-presidents-senators",
+      "electoral-college-particularism",
+      "pasachoff-reply"
+    ],
+    publicationInfo: [
+      { label: "Publisher", value: "Cambridge University Press" },
+      { label: "Publication date", value: "5 June 2015 (digital); 12 June 2015 (hardback/paperback)" },
+      { label: "Pages", value: "248 pages" },
+      { label: "ISBN", value: "9781139839341 (ebook); 9781107038714 (hardback); 9781107616813 (paperback)" },
+      { label: "DOI", value: "10.1017/CBO9781139839341", url: "https://doi.org/10.1017/CBO9781139839341" }
+    ]
+  }
+};
+
+const detailsFor = (slug: string) => bookDetails[slug as keyof typeof bookDetails];
+const relatedPublicationsFor = (slugs: string[]) =>
+  slugs.flatMap((slug) => {
+    const publication = publicationsBySlug.get(slug);
+    return publication ? [publication] : [];
+  });
+---
+
+<BaseLayout title="Books" active="Books" description="Books by Andrew Reeves on presidential power, public opinion, distributive politics, and democratic accountability.">
+  <PageHeader
+    eyebrow="Books"
+    title="Books"
+    intro="Two books examine how political institutions shape the exercise of power, the distribution of public resources, and the constraints imposed by democratic accountability."
+  />
+
+  <section class="container-wide book-gallery page-section">
+    {
+      books.map((book, index) => {
+        const details = detailsFor(book.slug);
+        const relatedPublications = details ? relatedPublicationsFor(details.related) : [];
+
+        return (
+          <>
+            <article id={book.slug} class="book-destination">
+              <BookFeature book={book} reversed={index % 2 === 1} />
+
+              {details && (
+                <div class="book-expanded-panel">
+                  <section class="book-argument-block" aria-labelledby={`${book.slug}-argument`}>
+                    <p class="kicker">The Argument</p>
+                    <h2 id={`${book.slug}-argument`}>What the book explains</h2>
+                    <div class="book-prose">
+                      {details.argument.map((paragraph) => <p>{paragraph}</p>)}
+                    </div>
+                  </section>
+
+                  <section class="book-detail-grid" aria-label={`${book.data.title} details`}>
+                    <div class="book-detail-card book-detail-card-themes">
+                      <p class="kicker">Key Themes</p>
+                      <div class="book-theme-list">
+                        {details.themes.map((theme) => (
+                          <a href={theme.href}>{theme.label}</a>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="book-detail-card">
+                      <p class="kicker">Reception</p>
+                      <div class="book-quote-list">
+                        {details.reception.map((item) => (
+                          <figure>
+                            <blockquote>“{item.excerpt}”</blockquote>
+                            <figcaption>
+                              <a href={item.url}>{item.source}</a>
+                            </figcaption>
+                          </figure>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="book-detail-card">
+                      <p class="kicker">Endorsements</p>
+                      {details.endorsements.length > 0 ? (
+                        <div class="book-quote-list">
+                          {details.endorsements.map((item) => (
+                            <figure>
+                              <blockquote>“{item.excerpt}”</blockquote>
+                              <figcaption>
+                                <a href={item.url}>{item.scholar}</a>, {item.affiliation}
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      ) : (
+                        <p class="book-muted-note">No separate advance-praise endorsements were located in the verified sources used for this page.</p>
+                      )}
+                    </div>
+
+                    <div class="book-detail-card">
+                      <p class="kicker">Awards and Recognition</p>
+                      <dl class="book-recognition-list">
+                        {details.recognition.map((item) => (
+                          <>
+                            <dt>{item.label}</dt>
+                            <dd>{item.text}</dd>
+                          </>
+                        ))}
+                      </dl>
+                    </div>
+                  </section>
+
+                  <section class="book-related-section" aria-labelledby={`${book.slug}-related`}>
+                    <div>
+                      <p class="kicker">Related Research</p>
+                      <h2 id={`${book.slug}-related`}>Related Articles</h2>
+                    </div>
+                    <div class="book-related-list">
+                      {relatedPublications.map((publication) => (
+                        <a href={`/research/${publication.slug}/`} class="book-related-item">
+                          <span>{publication.data.title}</span>
+                          <small>{publication.data.venue} · {publication.data.year}</small>
+                        </a>
+                      ))}
+                    </div>
+                  </section>
+
+                  <section class="book-publication-info" aria-label={`${book.data.title} publication information`}>
+                    <p class="kicker">Publication Information</p>
+                    <dl>
+                      {details.publicationInfo.map((item) => (
+                        <>
+                          <dt>{item.label}</dt>
+                          <dd>{item.url ? <a href={item.url}>{item.value}</a> : item.value}</dd>
+                        </>
+                      ))}
+                    </dl>
+                  </section>
+                </div>
+              )}
+            </article>
+
+            {index === 0 && (
+              <section class="book-relationship-section" aria-labelledby="book-relationship-heading">
+                <div class="page-section-heading">
+                  <div>
+                    <p class="kicker">Research Agenda</p>
+                    <h2 id="book-relationship-heading">How the Books Relate</h2>
+                    <p>
+                      The two books examine different dimensions of a shared problem: how democratic institutions structure presidential power, and how that power can be constrained, rewarded, or redirected.
+                    </p>
+                  </div>
+                </div>
+                <div class="book-relationship-prose">
+                  <p>
+                    <em>The Particularistic President</em> looks outward from the executive branch to the distribution of government resources. It shows how electoral incentives and administrative discretion can lead presidents to favor politically valuable places, challenging the idea that presidents reliably represent a national constituency.
+                  </p>
+                  <p>
+                    <em>No Blank Check</em> turns to the public's role in judging presidential power. It asks when citizens accept or resist unilateral action and shows that people can care about democratic process as well as policy outcomes. Together, the books connect the allocation of public benefits, the exercise of executive authority, and the possibility of democratic accountability.
+                  </p>
+                </div>
+              </section>
+            )}
+          </>
+        );
+      })
+    }
+  </section>
+</BaseLayout>

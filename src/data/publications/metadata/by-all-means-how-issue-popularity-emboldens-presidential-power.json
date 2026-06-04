@@ -1,0 +1,424 @@
+{
+  "title": {
+    "value": "By All Means: How Issue Popularity Emboldens Presidential Power",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski",
+      "Min Hee Seo",
+      "Andrew R. Stone"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2016,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "working paper",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "abstract": {
+    "value": "When Congress and the president disagree, when does the public empower the president to act singularly on its behalf? We argue that individual-level attitudes toward presidential powers in the presence of institutional conflict depend on aggregate levels of support for the president’s policy positions. Evidence from six survey experiments confirms our argument. As policy congruence between the public and the president increases, individuals express substantially greater support for the exercise of veto and unilateral powers. Additionally, an analysis of public opinion polls spanning three presidential administrations shows that changes to a president’s approval ratings following the use of power are conditioned by the share of the public who support the president’s position. Together, our results demonstrate that individual views towards the separation of powers are highly sensitive to political context and that presidents may be able to increase their standing with the public by exercising power to advance public opinion.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Public support for presidential use of power increases when the president’s policy position is popular, as shown by survey experiments and polling data.",
+    "evidence_pages": [
+      1,
+      2,
+      14,
+      20,
+      25,
+      27
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People are more likely to support the president acting alone—using vetoes or executive actions—when the president’s policy matches what most people want, and this can even boost the president’s approval ratings.",
+    "evidence_pages": [
+      1,
+      2,
+      14,
+      20,
+      25,
+      27
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "When Congress and the president disagree, under what conditions does the public support the president acting unilaterally, and how does issue popularity affect support for presidential power?",
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Support for presidential use of veto and unilateral powers increases as public support for the president’s policy position increases.",
+      "Survey experiments show that individuals are more likely to approve of presidential power when the president’s position is popular.",
+      "Analysis of public opinion polls indicates that changes in presidential approval after using power depend on public support for the president’s position.",
+      "Attitudes toward presidential power are not strongly conditioned by partisanship, ideology, or political sophistication."
+    ],
+    "evidence_pages": [
+      1,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Six survey experiments manipulating levels of public support for policy and measuring support for presidential action (veto or unilateral action).",
+      "Analysis of public opinion polling data from the Clinton, Bush, and Obama presidencies, examining approval ratings before and after presidential actions."
+    ],
+    "evidence_pages": [
+      1,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      21,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Six survey experiments (MTurk samples, 2016)",
+      "Roper Center’s iPOLL polling database",
+      "Gallup presidential approval ratings"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      20,
+      21,
+      22,
+      43,
+      44
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Level of aggregate public support for policy",
+      "Individual approval of presidential use of power (veto/unilateral action)",
+      "Presidential approval ratings before and after action"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      12,
+      13,
+      20,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      20,
+      43,
+      44
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "Survey experiments: 2016; Polling data: Clinton, Bush, and Obama presidencies (1990s–2015)",
+    "evidence_pages": [
+      1,
+      9,
+      20,
+      21,
+      43,
+      44
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individual survey respondent",
+    "evidence_pages": [
+      9,
+      10,
+      12,
+      13,
+      14,
+      20
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential power",
+      "public opinion",
+      "veto",
+      "unilateral action",
+      "issue popularity",
+      "separation of powers",
+      "survey experiment",
+      "presidential approval"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      14,
+      20,
+      25
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "executive-legislative relations",
+      "democratic responsiveness",
+      "political institutions",
+      "majoritarianism"
+    ],
+    "evidence_pages": [
+      2,
+      8,
+      18,
+      25,
+      27
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Our results show that Americans’ acceptance of the exercise of presidential power is affected by their support for the policies presidents achieve through its use.",
+    "evidence_pages": [
+      25
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 25,
+    "evidence_pages": [
+      25
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, Jon C. Rogowski, Min Hee Seo, and Andrew R. Stone. 2016. \"By All Means: How Issue Popularity Emboldens Presidential Power.\" Working paper, October 8, 2016.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/popularity.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          7,
+          8
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          27
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      43,
+      44
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by direct statements in the abstract, methods, results, and conclusion sections. Journal, DOI, and policy relevance are not stated in the document.",
+    "evidence_pages": [
+      1,
+      9,
+      10,
+      14,
+      20,
+      25,
+      27
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "executive power",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      14,
+      20,
+      25
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      14,
+      20,
+      25
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment",
+      "observational analysis of polling data"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      20,
+      21,
+      22,
+      23
+    ],
+    "confidence": "high"
+  }
+}

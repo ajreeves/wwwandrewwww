@@ -1,0 +1,162 @@
+{
+  "slug": "electoral-geography-political-behavior-and-public-opinion",
+  "title": "Electoral Geography, Political Behavior and Public Opinion",
+  "authors": [
+    "James G. Gimpel",
+    "Andrew Reeves"
+  ],
+  "year": 2022,
+  "publication_type": "book chapter",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "Gimpel, James G., and Andrew Reeves. 2022. \"Electoral Geography, Political Behavior and Public Opinion.\" In Thomas J. Rudolph (ed.), Handbook on Politics and Public Opinion. Northampton, MA: Edward Elgar Publishing, Inc.",
+  "links": {
+    "pdf": "/papers/political-geography.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This chapter reviews how political identities and opinions are unevenly distributed across space, explores the roles of individual and contextual factors in electoral geography, and discusses the challenges of inferring causal effects in a multi-level world.",
+  "abstract": "Politically relevant identities and opinions about politics and government are neither randomly nor evenly distributed across space. The task of social scientists studying electoral geography is to understand why. Explanations go to individual characteristics, the characteristics of the settings where they live out their lives, or interesting interactions of the two. Moreover, social influence apparently has a physical and geographic component in the sense that proximity matters. Although people can form more contacts over longer distances than in the past, that does not seem to have diminished the greater weight placed on contacts close-by, pointing to the sustained coincidence of social and geographic space. Size and density of settlement also matter over and above compositional effects, continuing to account for many negative social outcomes. The chapter closes with the consideration of challenges to social scientific inference posed by the effort to account for the experience of a living in a multi-level world.",
+  "plain_english_summary": "The chapter explains that where people live affects their political opinions and behaviors, not just because of who they are but also because of the social and geographic context, and it discusses the difficulties researchers face in figuring out exactly how place influences politics.",
+  "research_question": "Are geographic concentrations of individual actors, as displayed in maps of voters’ political support for political parties, policy positions, or behaviors, anything more than the composition of individual characteristics that describe them? Does social influence have a geographically constrained component?",
+  "research_highlights": [
+    "Political identities and opinions are unevenly distributed across space, reflecting both individual characteristics and contextual effects.",
+    "Social influence has a geographic component; proximity and local context matter for political behavior and opinion formation.",
+    "Population size and density affect social outcomes beyond individual composition, influencing trust, social pressure, and traditionalism.",
+    "Isolation, whether by distance or barriers, can reinforce distinct political identities and sometimes protect communities from outside influences.",
+    "Causal inference in political geography is challenging due to issues like selection effects, measurement limitations, and the inability to randomly assign environments, but new data and experimental designs are improving research.",
+    "Contextual effects may be small or disappear when controlling for individual-level variables, but improved data collection has strengthened the case for their importance."
+  ],
+  "methods": [
+    "Review of literature across political science, sociology, psychology, economics, and related fields.",
+    "Discussion of observational and experimental research designs, including field experiments and quasi-experiments.",
+    "Synthesis of findings from studies using survey data, spatial analysis, and network analysis."
+  ],
+  "data_sources": [],
+  "key_variables": [
+    "Geographic proximity",
+    "Population density",
+    "Isolation (distance, barriers)",
+    "Individual characteristics (e.g., race, income, education)",
+    "Political behavior (voting, party identification, opinion)",
+    "Contextual effects"
+  ],
+  "identification_strategy": null,
+  "geography": "Global, with examples from the United States, Canada, India, Switzerland, and other countries.",
+  "time_period": null,
+  "unit_of_analysis": "Individuals and geographic units (e.g., precincts, counties, regions, states)",
+  "policy_relevance": null,
+  "pull_quote": "People can form more contacts over longer distances than in the past, but that does not seem to have diminished the weight placed on contacts close-by, pointing to the continuing relevance of geographic space for human interaction, communication, and persuasion.",
+  "pull_quote_page": 8,
+  "confidence_notes": "Most fields are supported by explicit statements or summaries in the text. Journal, volume, issue, pages, DOI, data sources, identification strategy, time period, and policy relevance are not directly stated and are thus null or low confidence.",
+  "tags": [
+    "Political Science",
+    "Sociology",
+    "Geography",
+    "Psychology",
+    "Literature review",
+    "Observational studies",
+    "Experimental studies",
+    "electoral geography",
+    "public opinion",
+    "political behavior",
+    "social influence",
+    "social context",
+    "proximity",
+    "density",
+    "contextual effects",
+    "spatial analysis",
+    "social networks",
+    "political participation",
+    "urban-rural differences",
+    "isolation",
+    "selection effects"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Sociology",
+      "Geography",
+      "Psychology"
+    ],
+    "government_level": [],
+    "research_design": [
+      "Literature review",
+      "Observational studies",
+      "Experimental studies"
+    ],
+    "methods": [
+      "Review of literature across political science, sociology, psychology, economics, and related fields.",
+      "Discussion of observational and experimental research designs, including field experiments and quasi-experiments.",
+      "Synthesis of findings from studies using survey data, spatial analysis, and network analysis."
+    ],
+    "geography": [
+      "Global, with examples from the United States, Canada, India, Switzerland, and other countries."
+    ],
+    "time_period": [],
+    "keywords": [
+      "electoral geography",
+      "public opinion",
+      "political behavior",
+      "social influence",
+      "social context",
+      "proximity",
+      "density"
+    ],
+    "related_topics": [
+      "contextual effects",
+      "spatial analysis",
+      "social networks",
+      "political participation",
+      "urban-rural differences",
+      "isolation",
+      "selection effects"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  }
+}

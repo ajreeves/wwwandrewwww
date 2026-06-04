@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  loading?: "eager" | "lazy";
+  fetchpriority?: "high" | "low" | "auto";
+}
+
+const { src, alt, loading = "lazy", fetchpriority } = Astro.props;
+---
+
+<figure class="portrait-frame">
+  <img
+    src={src}
+    alt={alt}
+    loading={loading}
+    fetchpriority={fetchpriority}
+  />
+</figure>

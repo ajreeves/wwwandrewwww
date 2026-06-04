@@ -1,0 +1,336 @@
+{
+  "title": {
+    "value": "Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "David Miller",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2022,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Journal of Public Policy",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "42",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "1",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "63–91",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/S0143814X21000039",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "research article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "When things go wrong, and the government may be to blame, the public support enjoyed by elected executives is vulnerable. Because attribution of responsibility is often not straightforward, elected executives can influence citizens’ evaluations of their performance through presentational strategies, or explanatory frames which describe their roles in the management of the crisis. We examine the effectiveness of two ubiquitous presentational strategies: blame claiming, where the executive accepts responsibility, and blame deflecting, where the executive shifts blame to others. Using survey experiments incorporating stylised and real-world stimuli, we find that blame claiming is more effective than blame deflecting at managing public support in the aftermath of crises. In investigating the underlying mechanism, we find that blame claiming creates more favourable views of an executive’s leadership valence. While elected executives are better off avoiding crises, we find that when they occur, “stopping the buck” is a superior strategy to deflecting blame.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Survey experiments show that elected executives who claim blame during crises maintain higher public support than those who deflect blame, primarily by enhancing perceptions of their leadership.",
+    "evidence_pages": [
+      1,
+      3,
+      8
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "When government leaders face a crisis, taking responsibility for mistakes helps them keep public support better than blaming others, because people see them as stronger leaders.",
+    "evidence_pages": [
+      1,
+      3,
+      8
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do elected executives’ presentational strategies—specifically blame claiming versus blame deflecting—affect public support in the aftermath of governmental crises?",
+    "evidence_pages": [
+      1,
+      3,
+      8
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Blame claiming by elected executives is more effective than blame deflecting at maintaining public support after crises.",
+      "Blame claiming improves perceptions of an executive’s leadership valence.",
+      "Blame deflecting induces a null or negative effect on public evaluations of executives.",
+      "These results persist even when accounting for crisis severity and partisanship.",
+      "Causal mediation analysis shows that leadership valence mediates the positive effect of blame claiming."
+    ],
+    "evidence_pages": [
+      1,
+      3,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Survey experiments using stylised and real-world crisis scenarios.",
+      "Random assignment of respondents to blame claim, blame deflect, or control conditions.",
+      "Measurement of approval, likelihood to vote, and perceptions of leadership valence."
+    ],
+    "evidence_pages": [
+      1,
+      3,
+      8,
+      9,
+      10,
+      12
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "The American Panel Survey (TAPS), a nationally representative US panel survey.",
+      "Amazon Mechanical Turk (MTurk) samples for additional experiments."
+    ],
+    "evidence_pages": [
+      9
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Presentational strategy (blame claim, blame deflect, control)",
+      "Approval of executive’s crisis handling",
+      "Likelihood to vote for executive",
+      "Perceptions of leadership valence (traits: intelligent, strong leadership, honest, competent, trustworthy)"
+    ],
+    "evidence_pages": [
+      12
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      9
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": "survey respondent",
+    "evidence_pages": [
+      9,
+      12
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "blame games",
+      "elected executives",
+      "governmental crises",
+      "responsibility attribution",
+      "survey experiments"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "public opinion",
+      "political leadership",
+      "crisis management",
+      "accountability"
+    ],
+    "evidence_pages": [
+      1,
+      3,
+      4,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Blame claiming is more effective than blame deflecting at managing public support in the aftermath of crises.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Miller, David, and Andrew Reeves. 2022. \"Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises.\" Journal of Public Policy 42(1): 63–91. doi:10.1017/S0143814X21000039.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/blameclaim.pdf",
+      "journal": "https://doi.org/10.1017/S0143814X21000039",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          3,
+          8
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          3,
+          8,
+          9
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          3,
+          8,
+          9,
+          10,
+          12
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      3,
+      8,
+      9,
+      10,
+      12
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text. No information about time period, identification strategy, or policy relevance is explicitly stated.",
+    "evidence_pages": [
+      1,
+      3,
+      8,
+      9,
+      10,
+      12
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "public policy",
+      "political science"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "local",
+      "state",
+      "national"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      9
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      1,
+      3,
+      8,
+      9,
+      10,
+      12
+    ],
+    "confidence": "high"
+  }
+}

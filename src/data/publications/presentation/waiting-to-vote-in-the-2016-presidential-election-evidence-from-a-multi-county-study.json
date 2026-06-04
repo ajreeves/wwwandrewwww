@@ -1,0 +1,191 @@
+{
+  "slug": "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
+  "title": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study",
+  "authors": [
+    "Robert M. Stein",
+    "Christopher Mann",
+    "Charles Stewart III",
+    "Zachary Birenbaum",
+    "Anson Fung",
+    "Jed Greenberg",
+    "Farhan Kawsar",
+    "Gayle Alberda",
+    "R. Michael Alvarez",
+    "Lonna Atkeson",
+    "Emily Beaulieu",
+    "Nathaniel A. Birkhead",
+    "Frederick J. Boehmke",
+    "Joshua Boston",
+    "Barry C. Burden",
+    "Francisco Cantu",
+    "Rachael Cobb",
+    "David Darmofal",
+    "Thomas C. Ellington",
+    "Terri Susan Fine",
+    "Charles J. Finocchiaro",
+    "Michael D. Gilbert",
+    "Victor Haynes",
+    "Brian Janssen",
+    "David Kimball",
+    "Charles Kromkowski",
+    "Elena Llaudet",
+    "Kenneth R. Mayer",
+    "Matthew R. Miles",
+    "David Miller",
+    "Lindsay Nielson",
+    "Yu Ouyang",
+    "Costas Panagopoulos",
+    "Andrew Reeves",
+    "Min Hee Seo",
+    "Haley Simmons",
+    "Corwin Smidt",
+    "Farrah M. Stone",
+    "Rachel VanSickle-Ward",
+    "Jennifer Nicoll Victor",
+    "Abby Wood",
+    "Julie Wronski"
+  ],
+  "year": 2019,
+  "publication_type": "research-article",
+  "journal": "Political Research Quarterly",
+  "volume": null,
+  "issue": null,
+  "pages": "1–15",
+  "doi": "10.1177/1065912919832374",
+  "citation": "Stein, R. M., Mann, C., Stewart III, C., Birenbaum, Z., Fung, A., Greenberg, J., Kawsar, F., Alberda, G., Alvarez, R. M., Atkeson, L., Beaulieu, E., Birkhead, N. A., Boehmke, F. J., Boston, J., Burden, B. C., Cantu, F., Cobb, R., Darmofal, D., Ellington, T. C., Fine, T. S., Finocchiaro, C. J., Gilbert, M. D., Haynes, V., Janssen, B., Kimball, D., Kromkowski, C., Llaudet, E., Mayer, K. R., Miles, M. R., Miller, D., Nielson, L., Ouyang, Y., Panagopoulos, C., Reeves, A., Seo, M. H., Simmons, H., Smidt, C., Stone, F. M., VanSickle-Ward, R., Victor, J. N., Wood, A., & Wronski, J. (2019). Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study. Political Research Quarterly, 1–15. https://doi.org/10.1177/1065912919832374",
+  "links": {
+    "pdf": "/papers/lines.pdf",
+    "journal": "https://journals.sagepub.com/home/prq",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "A nationwide observational study of polling places during the 2016 U.S. presidential election found that wait times and voting processes varied by time of day and that strict voter ID requirements had different effects on check-in times in majority-white versus majority-nonwhite polling places.",
+  "abstract": "This paper is the result of a nationwide study of polling place dynamics in the 2016 presidential election. Research teams, recruited from local colleges and universities and located in twenty-eight election jurisdictions across the United States, observed and timed voters as they entered the queue at their respective polling places and then voted. We report results about four specific polling place operations and practices: the length of the check-in line, the number of voters leaving the check-in line once they have joined it, the time for a voter to check in to vote (i.e., verify voter’s identification and obtain a ballot), and the time to complete a ballot. Long lines, waiting times, and times to vote are closely related to time of day (mornings are busiest for polling places). We found the recent adoption of photographic voter identification (ID) requirements to have a disparate effect on the time to check in among white and nonwhite polling places. In majority-white polling places, scanning a voter’s driver’s license speeds up the check-in process. In majority nonwhite polling locations, the effect of strict voter ID requirements increases time to check in, albeit modestly.",
+  "plain_english_summary": "Researchers observed polling places across the U.S. during the 2016 presidential election and found that mornings were busiest, more poll workers reduced wait times, and strict voter ID laws sped up check-in in majority-white areas but slowed it in majority-nonwhite areas.",
+  "research_question": "What are the dynamics of polling place operations and wait times during the 2016 presidential election, and how do factors such as time of day, poll worker staffing, and voter ID requirements affect voter experiences?",
+  "research_highlights": [
+    "Long lines, waiting times, and times to vote are closely related to time of day, with mornings being the busiest.",
+    "More poll workers per voter in line significantly reduce average line length and check-in time.",
+    "Strict photo ID requirements speed up check-in in majority-white polling places but increase check-in time in majority-nonwhite polling places.",
+    "Same-day registration increases check-in times.",
+    "Ballot length and straight-ticket voting options affect time to vote, but electronic voting machines did not significantly affect voting time in this study.",
+    "Reneging (leaving the line) is more likely as lines grow, but less likely in the morning."
+  ],
+  "methods": [
+    "Direct observation and timing of voters at polling places in 28 counties across 19 states during the 2016 U.S. presidential election.",
+    "Random sampling of polling places within counties, with some deviations due to local conditions.",
+    "Data collected included line length, arrivals, check-in time, time to vote, and number of people leaving the line.",
+    "Statistical analysis including OLS regression, fixed effects models, and negative binomial regression."
+  ],
+  "data_sources": [
+    "Observational data collected by research teams at polling places in 28 counties across 19 states on Election Day 2016.",
+    "Supplemental demographic data from Catalist (2016)."
+  ],
+  "key_variables": [
+    "Line length",
+    "Number of arrivals",
+    "Check-in time",
+    "Time to vote",
+    "Number of poll workers",
+    "Voter ID requirements",
+    "Same-day registration",
+    "Ballot length",
+    "Straight-ticket voting option",
+    "Polling place racial composition"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (28 counties in 19 states)",
+  "time_period": "November 8, 2016 (U.S. presidential election day)",
+  "unit_of_analysis": "Polling place and individual voter observations",
+  "policy_relevance": null,
+  "pull_quote": "Long lines, waiting times, and times to vote are closely related to time of day (mornings are busiest for polling places).",
+  "pull_quote_page": 1,
+  "confidence_notes": "Most fields are supported by explicit statements in the abstract, methods, results, and conclusion sections. Volume and issue are not stated in the document. Policy relevance is not directly discussed.",
+  "tags": [
+    "American politics",
+    "election administration",
+    "voting behavior",
+    "observational study",
+    "multi-site field study",
+    "polling place operations",
+    "voter turnout",
+    "queuing theory",
+    "voter identification laws",
+    "poll worker staffing",
+    "ballot design"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "election administration",
+      "voting behavior"
+    ],
+    "government_level": [
+      "local",
+      "county",
+      "state"
+    ],
+    "research_design": [
+      "observational study",
+      "multi-site field study"
+    ],
+    "methods": [
+      "Direct observation and timing of voters at polling places in 28 counties across 19 states during the 2016 U.S. presidential election.",
+      "Random sampling of polling places within counties, with some deviations due to local conditions.",
+      "Data collected included line length, arrivals, check-in time, time to vote, and number of people leaving the line.",
+      "Statistical analysis including OLS regression, fixed effects models, and negative binomial regression."
+    ],
+    "geography": [
+      "United States (28 counties in 19 states)"
+    ],
+    "time_period": [
+      "November 8, 2016 (U.S. presidential election day)"
+    ],
+    "keywords": [
+      "election administration",
+      "voting behavior",
+      "polling place operations"
+    ],
+    "related_topics": [
+      "voter turnout",
+      "queuing theory",
+      "voter identification laws",
+      "poll worker staffing",
+      "ballot design"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        4,
+        12
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  }
+}

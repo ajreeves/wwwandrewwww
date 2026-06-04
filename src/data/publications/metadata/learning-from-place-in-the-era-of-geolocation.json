@@ -1,0 +1,384 @@
+{
+  "title": {
+    "value": "Learning from Place in the Era of Geolocation",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Ryan T. Moore",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": "2017",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "book chapter",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "In this chapter, we give an overview of the ways that scholars and policymakers are currently using individual geolocation data. We also describe some new analytic and service-provision possibilities that geolocation data enables. We discuss several challenges inherent in obtaining geolocation data and making that data useful for social, political, and policy research and practice. We highlight the unique concerns over privacy that arise in this rich data environment, and note some promising approaches for addressing them.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This chapter reviews current uses, opportunities, challenges, and privacy concerns related to individual geolocation data in social science and policy research.",
+    "evidence_pages": [
+      1,
+      2,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The chapter explains how geolocation data from smartphones and other devices are being used by researchers and governments to better understand people's environments, improve public services, and address privacy challenges.",
+    "evidence_pages": [
+      1,
+      2,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How are scholars and policymakers currently using individual geolocation data, what new analytic and service-provision possibilities does it enable, and what challenges and privacy concerns arise in its use?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Geolocation data allow for richer, more dynamic measurement of individuals' social and physical contexts than traditional geographic proxies.",
+      "Such data enable improved public service delivery and new insights for urban planning, public health, and social science research.",
+      "There are significant challenges in collecting, linking, and analyzing geolocation data, including technical, ethical, and privacy concerns.",
+      "Privacy risks are heightened due to the uniqueness and identifiability of geolocation traces, requiring careful data handling and transparency with users."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Overview and synthesis of existing literature and applications in geolocation data use.",
+      "Discussion of methodological challenges such as the modifiable areal unit problem (MAUP) and the uncertain geographic context problem (UGCoP).",
+      "Examples of data collection methods including smartphone apps, GPS loggers, and survey integration."
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      10,
+      11,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (with examples from Maryland and various cities)",
+    "evidence_pages": [
+      4,
+      6,
+      7
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": "individuals",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "geolocation",
+      "privacy",
+      "public goods",
+      "contextual analysis",
+      "smartphones",
+      "social science",
+      "policy research"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      13,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "urban planning",
+      "public health",
+      "data privacy",
+      "survey research",
+      "mobile technology"
+    ],
+    "evidence_pages": [
+      3,
+      8,
+      9,
+      13,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "We can better reflect the modern realities of human mobility by measuring social and political contexts in dynamic ways; we are no longer tied to 'county of residence' to describe people’s experiences.",
+    "evidence_pages": [
+      17
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 17,
+    "evidence_pages": [
+      17
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/geolocation.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          3,
+          4,
+          10,
+          11,
+          12,
+          13
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by explicit statements in the text. No direct citation, DOI, or public PDF link is provided in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "social science",
+      "public policy",
+      "data privacy"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      13,
+      14,
+      16,
+      17
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "local",
+      "federal"
+    ],
+    "evidence_pages": [
+      6,
+      11,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "literature review",
+      "conceptual synthesis",
+      "methodological discussion"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17
+    ],
+    "confidence": "high"
+  }
+}

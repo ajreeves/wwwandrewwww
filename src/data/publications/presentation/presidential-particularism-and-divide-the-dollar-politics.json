@@ -1,0 +1,147 @@
+{
+  "slug": "presidential-particularism-and-divide-the-dollar-politics",
+  "title": "Presidential Particularism and Divide-the-Dollar Politics",
+  "authors": [
+    "Douglas L. Kriner",
+    "Andrew Reeves"
+  ],
+  "year": 2015,
+  "publication_type": "journal article",
+  "journal": "American Political Science Review",
+  "volume": "109",
+  "issue": "1",
+  "pages": "155-171",
+  "doi": "10.1017/S0003055414000598",
+  "citation": "Kriner, Douglas L., and Andrew Reeves. 2015. \"Presidential Particularism and Divide-the-Dollar Politics.\" American Political Science Review 109(1): 155-171. doi:10.1017/S0003055414000598.",
+  "links": {
+    "pdf": "/papers/targeting.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Presidents systematically target federal grant spending to politically important constituencies, especially swing states and core partisan counties, rather than distributing funds universally or based solely on policy efficiency.",
+  "abstract": "In a county-level analysis of federal spending from 1984 to 2008, we find that presidents are not universalistic, but particularistic—that is, they reliably direct dollars to specific constituents to further their political goals. Presidents target both counties within swing states and counties in core states that strongly supported the president in recent elections. Swing state particularism is especially salient during presidential reelection years, and core partisan counties within swing states are most heavily rewarded. Our results suggest that presidents systematically prioritize the needs of politically important constituents rather than strictly pursuing visions of good public policy or pandering to the national median voter.",
+  "plain_english_summary": "The study finds that U.S. presidents direct more federal grant money to areas that are politically important for their reelection or their party, such as swing states and counties that strongly support them, rather than distributing funds evenly or just based on need.",
+  "research_question": "Do presidents allocate federal dollars across the country in a universalistic manner, or do they systematically target politically influential constituencies to further their political goals?",
+  "research_highlights": [
+    "Presidents are particularistic in allocating federal grants, targeting swing states and core partisan counties.",
+    "Swing state targeting is especially pronounced during presidential reelection years.",
+    "Core partisan counties within swing states receive the largest increases in federal grant spending.",
+    "Presidential particularism produces greater geographic inequality in federal spending than congressional particularism."
+  ],
+  "methods": [
+    "County-level quantitative analysis of federal grant spending from 1984 to 2008.",
+    "Least-squares regression models with county and year fixed effects.",
+    "Use of the Consolidated Federal Funds Report (CFFR) data."
+  ],
+  "data_sources": [
+    "Consolidated Federal Funds Report (CFFR) 1984–2008"
+  ],
+  "key_variables": [
+    "Federal grant spending by county",
+    "Swing state status",
+    "Core state status",
+    "Presidential party affiliation of congressional representative",
+    "Majority party status of congressional representative",
+    "County population",
+    "Poverty rate",
+    "Per capita income"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (county-level analysis)",
+  "time_period": "1984–2008",
+  "unit_of_analysis": "county-year",
+  "policy_relevance": null,
+  "pull_quote": "Presidents systematically prioritize the needs of politically important constituents.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text. No external inference or unstated information included.",
+  "tags": [
+    "American politics",
+    "executive politics",
+    "public finance",
+    "quantitative analysis",
+    "observational study",
+    "fixed effects regression",
+    "presidency",
+    "federal spending",
+    "particularism",
+    "swing states",
+    "partisan politics",
+    "budget allocation",
+    "political geography",
+    "distributive politics",
+    "electoral incentives",
+    "partisan targeting",
+    "congressional politics",
+    "executive branch",
+    "public policy"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "executive politics",
+      "public finance"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "quantitative analysis",
+      "observational study",
+      "fixed effects regression"
+    ],
+    "methods": [
+      "County-level quantitative analysis of federal grant spending from 1984 to 2008.",
+      "Least-squares regression models with county and year fixed effects.",
+      "Use of the Consolidated Federal Funds Report (CFFR) data."
+    ],
+    "geography": [
+      "United States (county-level analysis)"
+    ],
+    "time_period": [
+      "1984–2008"
+    ],
+    "keywords": [
+      "presidency",
+      "federal spending",
+      "particularism",
+      "swing states",
+      "partisan politics",
+      "budget allocation",
+      "political geography"
+    ],
+    "related_topics": [
+      "distributive politics",
+      "electoral incentives",
+      "partisan targeting",
+      "congressional politics",
+      "executive branch",
+      "public policy"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        4
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        7,
+        9,
+        10,
+        14
+      ]
+    },
+    "methods": {
+      "pages": [
+        8,
+        9,
+        18,
+        21
+      ]
+    }
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "title": {
+    "value": "Attitudes Toward Delegation to Presidential Commissions",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "David R. Miller",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2017,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "47",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "3",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "495–516",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/psq.12393",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article examines attitudes of the public toward delegation to presidential commissions. Using four survey experiments across a range of contexts, the authors compare public response to the creation of a commission versus direct presidential action. The findings indicate no significant difference in approval for taking action alone or delegating to a commission, at either the policy formulation or implementation stage. Additionally, policies formed by commissions are not seen as more effective than those formed by the president alone.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Survey experiments show that delegating to presidential commissions does not increase public approval or perceived policy effectiveness compared to direct presidential action.",
+    "evidence_pages": [
+      1,
+      2,
+      12,
+      13,
+      14,
+      18
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People do not view presidential commissions as more effective or credible than direct presidential action; creating a commission does not increase public approval or belief in policy effectiveness compared to the president acting alone.",
+    "evidence_pages": [
+      1,
+      2,
+      12,
+      13,
+      14,
+      18
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do presidential commissions increase public approval or perceived effectiveness of policies compared to direct presidential action?",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "There is no significant difference in public approval between direct presidential action and delegation to a presidential commission.",
+      "Policies formed by commissions are not seen as more effective than those formed by the president alone.",
+      "Presidential commissions can satisfy public demand for action as effectively as direct action, but do not confer additional credibility or perceived efficacy."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      12,
+      13,
+      14,
+      18
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Four survey experiments using vignettes based on real-world policy issues addressed by President Obama.",
+      "Random assignment of respondents to conditions describing direct presidential action, commission delegation, or control.",
+      "Measurement of approval and perceived policy effectiveness using Likert scales."
+    ],
+    "evidence_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Survey experiments conducted on Amazon Mechanical Turk (MTurk)"
+    ],
+    "evidence_pages": [
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Approval of president's handling of issue",
+      "Perceived effectiveness of policy",
+      "Policy mechanism (direct action vs. commission delegation)"
+    ],
+    "evidence_pages": [
+      10,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      23,
+      25,
+      27,
+      29
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2016–2017 (survey fielding period)",
+    "evidence_pages": [
+      10,
+      42,
+      44,
+      45,
+      48
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential commissions",
+      "delegation",
+      "policy process",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "presidential power",
+      "public approval",
+      "policy implementation",
+      "survey experiments"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "pull_quote": {
+    "value": "We find that there is no significant difference in the approval garnered for taking action alone or delegating the decision to a presidential commission.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Miller, David R., and Andrew Reeves. 2017. \"Attitudes Toward Delegation to Presidential Commissions.\" Presidential Studies Quarterly 47(3): 495–516. https://doi.org/10.1111/psq.12393",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/commissions.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3,
+          6
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          12,
+          13,
+          14,
+          18
+        ]
+      },
+      "methods": {
+        "pages": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      18,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the article text, tables, or appendices. No inference or external information was used.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      18,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "executive branch",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "confidence": "high"
+  }
+}

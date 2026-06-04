@@ -1,0 +1,198 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import {
+  doctoralStudents,
+  undergraduateHonorsNote,
+  undergraduateHonorsTheses,
+  type StudentRecord
+} from "@data/doctoralStudents";
+
+const publications = await getCollection("publications");
+const publicationBySlug = new Map(publications.map((publication) => [publication.slug, publication]));
+
+const getPublication = (slug: string) => {
+  const publication = publicationBySlug.get(slug);
+  if (!publication) {
+    throw new Error(`Missing publication for Students page: ${slug}`);
+  }
+  return publication;
+};
+
+const initialsFor = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("");
+
+const sortedDoctoralStudents = [...doctoralStudents].sort((a, b) => {
+  const yearA = typeof a.year === "number" ? a.year : 9999;
+  const yearB = typeof b.year === "number" ? b.year : 9999;
+  return yearB - yearA || a.name.localeCompare(b.name);
+});
+
+const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? student.profile_url;
+---
+
+<BaseLayout
+  title="Students"
+  active="Students"
+  description="Mentorship, advising, and student research."
+>
+  <PageHeader
+    eyebrow="Students"
+    title="Students"
+    intro="Mentorship is one of the most rewarding parts of academic life. Over the years I have worked with undergraduate and doctoral students on projects spanning presidential politics, democratic accountability, political geography, election administration, and public policy."
+  />
+
+  <section class="container-wide student-page-frame" aria-labelledby="doctoral-students-heading">
+    <div class="page-section-heading">
+      <p class="kicker">Doctoral Students</p>
+      <h2 id="doctoral-students-heading">Doctoral Students</h2>
+    </div>
+
+    <div class="student-profile-list">
+      {
+        sortedDoctoralStudents.map((student, index) => {
+          const profileHref = renderProfileHref(student);
+          const relatedPublications = (student.related_publications ?? []).map(getPublication);
+
+          return (
+            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
+              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
+                {
+                  student.image_url ? (
+                    <img
+                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
+                      src={student.image_url}
+                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
+                      loading="eager"
+                      decoding="async"
+                    />
+                  ) : student.photo_url ? (
+                    <img
+                      class="student-profile-photo"
+                      src={student.photo_url}
+                      alt={`Professional portrait of ${student.name}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
+                  )
+                }
+              </figure>
+
+              <div class="flw-feature-copy student-profile-copy">
+                <p class="kicker">{student.role} · {student.year}</p>
+                <h3>{student.name}</h3>
+                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
+
+                {student.dissertation_or_thesis_title && (
+                  <div class="student-detail">
+                    <span>Dissertation</span>
+                    <p>{student.dissertation_or_thesis_title}</p>
+                  </div>
+                )}
+
+                <dl class="student-meta-list">
+                  <div>
+                    <dt>Degree</dt>
+                    <dd>{student.degree}</dd>
+                  </div>
+                  <div>
+                    <dt>Institution</dt>
+                    <dd>{student.institution}</dd>
+                  </div>
+                  {student.current_position && (
+                    <div>
+                      <dt>Current position</dt>
+                      <dd>{student.current_position}</dd>
+                    </div>
+                  )}
+                </dl>
+
+                {student.awards && student.awards.length > 0 && (
+                  <div class="student-detail">
+                    <span>Recognition</span>
+                    <ul>
+                      {student.awards.map((award) => <li>{award}</li>)}
+                    </ul>
+                  </div>
+                )}
+
+                {relatedPublications.length > 0 && (
+                  <div class="student-related-work">
+                    <span>Selected collaborative work</span>
+                    <ul>
+                      {relatedPublications.map((publication) => (
+                        <li>
+                          <a href={`/research/${publication.slug}/`}>{publication.data.title}</a>
+                          <em>{publication.data.year} · {publication.data.venue}</em>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {profileHref && (
+                  <div class="student-link-row">
+                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
+                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <section class="container-wide student-page-frame student-undergraduate-frame" aria-labelledby="undergraduate-theses-heading">
+    <div class="page-section-heading">
+      <p class="kicker">Undergraduate Honors Theses</p>
+      <h2 id="undergraduate-theses-heading">Undergraduate Honors Theses</h2>
+    </div>
+
+    {
+      undergraduateHonorsTheses.length > 0 ? (
+        <div class="student-profile-list">
+          {undergraduateHonorsTheses.map((student, index) => (
+            <article class={`flw-feature-card student-profile-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
+              <figure class="flw-feature-media student-profile-media">
+                <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
+              </figure>
+              <div class="flw-feature-copy student-profile-copy">
+                <p class="kicker">{student.role} · {student.year}</p>
+                <h3>{student.name}</h3>
+                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
+                {student.dissertation_or_thesis_title && (
+                  <div class="student-detail">
+                    <span>Thesis</span>
+                    <p>{student.dissertation_or_thesis_title}</p>
+                  </div>
+                )}
+                {student.awards && student.awards.length > 0 && (
+                  <div class="student-detail">
+                    <span>Recognition</span>
+                    <ul>
+                      {student.awards.map((award) => <li>{award}</li>)}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="student-empty-note">
+          <p>{undergraduateHonorsNote}</p>
+        </div>
+      )
+    }
+  </section>
+</BaseLayout>

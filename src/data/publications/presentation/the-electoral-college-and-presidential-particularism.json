@@ -1,0 +1,157 @@
+{
+  "slug": "the-electoral-college-and-presidential-particularism",
+  "title": "The Electoral College and Presidential Particularism",
+  "authors": [
+    "Douglas Kriner",
+    "Andrew Reeves"
+  ],
+  "year": "2014",
+  "publication_type": "Law review article",
+  "journal": "Boston University Law Review",
+  "volume": "94",
+  "issue": null,
+  "pages": "741-766",
+  "doi": null,
+  "citation": "Douglas Kriner & Andrew Reeves, The Electoral College and Presidential Particularism, 94 Boston University Law Review 741-766 (2014).",
+  "links": {
+    "pdf": "/papers/electoralcollege.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This article argues that the structure of the Electoral College incentivizes U.S. Presidents to pursue particularistic policies that disproportionately benefit swing states, challenging the notion that increased presidential power necessarily serves the national interest.",
+  "abstract": null,
+  "plain_english_summary": "The article explains that because of the way the Electoral College works, Presidents often focus on helping voters in swing states rather than making decisions that benefit the whole country, which may not solve the problems caused by Congress's local focus.",
+  "research_question": "Does the structure of the Electoral College incentivize U.S. Presidents to engage in particularistic policies that disproportionately benefit politically important constituencies, rather than the national interest?",
+  "research_highlights": [
+    "Presidents routinely pursue policies that disproportionately benefit voters in swing states due to the incentives created by the Electoral College.",
+    "Empirical evidence shows that targeted federal spending, protectionist tariffs, and disaster declarations are more likely to benefit electorally important states.",
+    "The incentives for presidential particularism have increased as presidential elections have become more competitive in recent decades.",
+    "Delegating more authority to the President may not yield more nationally optimal policy outcomes, but rather shift particularism from Congress to the executive."
+  ],
+  "methods": [
+    "Review of existing literature and empirical studies on federal grant allocation, disaster declarations, and tariffs.",
+    "Survey experiment on public support for targeted federal spending.",
+    "Analysis of county-level and state-level data on federal spending and electoral outcomes."
+  ],
+  "data_sources": [
+    "Survey data from Mechanical Turk respondents.",
+    "County-level data on federal grant spending and presidential vote share.",
+    "State-level data on disaster declarations and electoral competitiveness."
+  ],
+  "key_variables": [
+    "Federal grant spending by county",
+    "Change in presidential vote share",
+    "Location of federal spending (home state, home city, other state)",
+    "Disaster declaration status",
+    "State electoral competitiveness"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "Primarily 1988-2012, with references to earlier and later periods for context",
+  "unit_of_analysis": "County and state",
+  "policy_relevance": null,
+  "pull_quote": "Presidents, like Members of Congress, routinely pursue policies that disproportionately benefit Americans in constituencies likely to be most important in the next election.",
+  "pull_quote_page": 1,
+  "confidence_notes": "Most fields are supported by explicit statements or data in the text. Abstract and policy relevance are not directly stated. No DOI or public PDF link is provided in the document.",
+  "tags": [
+    "Political Science",
+    "American Politics",
+    "Public Policy",
+    "Empirical analysis",
+    "Survey experiment",
+    "Case studies",
+    "Electoral College",
+    "Presidential particularism",
+    "Swing states",
+    "Federal spending",
+    "Disaster declarations",
+    "Tariffs",
+    "Presidential elections",
+    "Congressional polarization",
+    "Presidential power",
+    "Federal resource allocation",
+    "Electoral incentives"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "American Politics",
+      "Public Policy"
+    ],
+    "government_level": [
+      "Federal"
+    ],
+    "research_design": [
+      "Empirical analysis",
+      "Survey experiment",
+      "Case studies"
+    ],
+    "methods": [
+      "Review of existing literature and empirical studies on federal grant allocation, disaster declarations, and tariffs.",
+      "Survey experiment on public support for targeted federal spending.",
+      "Analysis of county-level and state-level data on federal spending and electoral outcomes."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "Primarily 1988-2012, with references to earlier and later periods for context"
+    ],
+    "keywords": [
+      "Electoral College",
+      "Presidential particularism",
+      "Swing states",
+      "Federal spending",
+      "Disaster declarations",
+      "Tariffs",
+      "Presidential elections"
+    ],
+    "related_topics": [
+      "Congressional polarization",
+      "Presidential power",
+      "Federal resource allocation",
+      "Electoral incentives"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        6,
+        26
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        6,
+        26,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "methods": {
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        24
+      ]
+    }
+  }
+}

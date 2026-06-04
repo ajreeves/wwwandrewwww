@@ -1,0 +1,324 @@
+{
+  "title": {
+    "value": "The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy",
+    "evidence_pages": [
+      1,
+      5
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Kay Lehman Schlozman",
+      "Sidney Verba",
+      "Henry E. Brady"
+    ],
+    "evidence_pages": [
+      1,
+      5
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2012,
+    "evidence_pages": [
+      1,
+      5
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "book review",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "The Unheavenly Chorus documents persistent and severe inequalities in American political voice, showing that both individual and organized interest participation are strongly skewed toward the privileged, with little change over time.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This book review explains that The Unheavenly Chorus finds political participation in America is dominated by wealthier and more privileged groups and individuals, and that this inequality has remained stable over decades, affecting both individual and group political voices.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Who has political voice in America today, and how is this voice distributed among individuals and organized interests?",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Socioeconomic status (SES) is positively related to nearly every form of political participation.",
+      "The relationship between SES and political participation is stable over time and persists at both local and national levels.",
+      "Technological changes, such as the Internet, have not reduced SES-based inequalities in political participation.",
+      "The majority of organized interests represent privileged groups, with very few representing the less-privileged.",
+      "The number of organized interest groups has increased dramatically, but the distribution remains skewed toward privileged interests.",
+      "There is severe inequality in both individual and collective political voice in America."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
+      "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Citizen Participation Study of 1990",
+      "American National Election Studies (1952–2008)",
+      "Roper surveys (1970–2003)",
+      "Washington Directory (for organized interest groups)"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Socioeconomic status (SES)",
+      "Political participation (individual and online)",
+      "Type and number of organized interest groups"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1952–2008 (individual participation); 1981–2006 (organized interests)",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individuals and organized interest groups",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "political participation",
+      "socioeconomic status",
+      "political inequality",
+      "organized interests",
+      "pluralism",
+      "United States"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "democracy",
+      "lobbying",
+      "policy outcomes",
+      "political behavior"
+    ],
+    "evidence_pages": [
+      1,
+      4
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The flaw in the pluralist heaven is that the heavenly chorus sings with a strong upper-class accent.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Schlozman, Kay Lehman, Sidney Verba, and Henry E. Brady. 2012. The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy. Princeton: Princeton University Press.",
+    "evidence_pages": [
+      5
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/unheavenly-review.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the review text; no unsupported fields are filled.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "American politics",
+      "political inequality"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national",
+      "state",
+      "local"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "descriptive analysis",
+      "survey analysis",
+      "historical trend analysis"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  }
+}

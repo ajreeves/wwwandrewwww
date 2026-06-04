@@ -1,0 +1,482 @@
+{
+  "title": {
+    "value": "Democratic values and support for executive power",
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski"
+    ],
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2023,
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "53",
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "293–312",
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/psq.12837",
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "original article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Attempts by elected executives to consolidate power have generated alarm and raised concern about democratic backsliding. We study mass attitudes toward the institutional power of the office of the presidency and argue that individuals' democratic values shape views of executive power. Using data from 26 countries in the Americas and 37 countries in Africa, we find support for our perspective. While supporters of the incumbent president express more favorable views toward executive power, we also show that individuals who express stronger commitments to democracy are less supportive of institutional arrangements that favor the executive. Our results demonstrate that attitudes toward the institutions of government are not shaped only by partisanship and other ephemeral political factors, but also by citizens' core commitments to values over governance.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Individuals with stronger democratic values are less supportive of expanded executive power, as shown by cross-national survey data from the Americas and Africa.",
+    "evidence_pages": [
+      1,
+      2,
+      8,
+      9,
+      17,
+      20
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People who value democracy are less likely to support giving more power to presidents, according to surveys from many countries in the Americas and Africa.",
+    "evidence_pages": [
+      1,
+      2,
+      8,
+      9,
+      17,
+      20
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do individuals' democratic values shape their attitudes toward executive power across countries in the Americas and Africa?",
+    "evidence_pages": [
+      2,
+      4,
+      5,
+      8
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Supporters of incumbent presidents are more favorable toward executive power.",
+      "Individuals with stronger commitments to democracy are less supportive of institutional arrangements that favor the executive.",
+      "Attitudes toward executive power are shaped by both partisanship and core democratic values, not just political alignment.",
+      "These patterns are consistent across countries in the Americas and Africa."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      8,
+      9,
+      17,
+      20
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Cross-national survey analysis using AmericasBarometer and Afrobarometer data",
+      "Linear and logistic regression models with country-wave fixed effects",
+      "Analysis of individual and aggregate-level attitudes toward executive power and democracy"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "AmericasBarometer surveys (26 countries in the Americas, 2010–2019)",
+      "Afrobarometer surveys (37 countries in Africa, 2000–2019)"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Support for executive power (various survey items)",
+      "Support for democracy",
+      "Executive approval",
+      "Demographic controls (age, gender, education, income, marital status, poverty, rural/urban)"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "geography": {
+    "value": "26 countries in the Americas and 37 countries in Africa",
+    "evidence_pages": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "Americas: 2010–2019; Africa: 2000–2019",
+    "evidence_pages": [
+      5,
+      6
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "democratic values",
+      "executive power",
+      "public opinion",
+      "comparative politics",
+      "presidentialism",
+      "democracy",
+      "Afrobarometer",
+      "AmericasBarometer"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      22,
+      23
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "democratic backsliding",
+      "rule of law",
+      "partisanship",
+      "political institutions",
+      "presidential approval"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "high"
+  },
+  "pull_quote": {
+    "value": "Our results demonstrate that attitudes toward the institutions of government are not shaped only by partisanship and other ephemeral political factors, but also by citizens' core commitments to values over governance.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, and Jon C. Rogowski. 2023. “Democratic Values and Support for Executive Power.” Presidential Studies Quarterly 53: 293–312. https://doi.org/10.1111/psq.12837",
+    "evidence_pages": [
+      20
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/values.pdf",
+      "journal": "https://onlinelibrary.wiley.com/doi/10.1111/psq.12837",
+      "replication_data": "https://dataverse.harvard.edu/dataverse/areeves",
+      "code": null
+    },
+    "evidence_pages": [
+      1,
+      20
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2,
+          4,
+          5,
+          8
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          8,
+          9,
+          17,
+          20
+        ]
+      },
+      "methods": {
+        "pages": [
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and tables. No causal identification strategy or explicit policy relevance is described. PDF link is not stated in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "comparative politics",
+      "public opinion",
+      "executive power",
+      "democratic values"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "cross-national survey analysis",
+      "observational study"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "confidence": "high"
+  }
+}

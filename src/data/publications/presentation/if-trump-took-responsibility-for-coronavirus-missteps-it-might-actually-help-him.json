@@ -1,0 +1,122 @@
+{
+  "slug": "if-trump-took-responsibility-for-coronavirus-missteps-it-might-actually-help-him",
+  "title": "If Trump took responsibility for coronavirus missteps, it might actually help him.",
+  "authors": [
+    "David Ryan Miller",
+    "Andrew Reeves"
+  ],
+  "year": 2020,
+  "publication_type": "news article",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "David Ryan Miller, Andrew Reeves. (2020). \"If Trump took responsibility for coronavirus missteps, it might actually help him..\"",
+  "links": {
+    "pdf": "/papers/mc-blame.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Survey experiments show that politicians who claim responsibility for crises receive higher public approval than those who deflect blame.",
+  "abstract": null,
+  "plain_english_summary": "When politicians admit mistakes during a crisis instead of blaming others, people tend to view them more favorably, as shown by several survey experiments.",
+  "research_question": "Which strategy is most effective for political leaders during a crisis: avoiding blame or taking responsibility?",
+  "research_highlights": [
+    "Claiming blame is the most effective strategy for leaders to maintain or increase public approval during crises.",
+    "Leaders who accept responsibility for mistakes receive much higher approval ratings than those who deflect blame.",
+    "This effect was observed in both real-world and hypothetical crisis scenarios across multiple survey experiments."
+  ],
+  "methods": [
+    "Survey experiments using both real-world and hypothetical crisis scenarios.",
+    "Online convenience samples (Amazon Mechanical Turk) and a nationally representative panel (The American Panel Survey)."
+  ],
+  "data_sources": [
+    "Amazon Mechanical Turk online convenience samples",
+    "The American Panel Survey (TAPS)"
+  ],
+  "key_variables": [
+    "Leader's blame strategy (claiming blame, deflecting blame, blame-neutral)",
+    "Public approval rating",
+    "Likelihood to vote for the official"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "March 2016 (Flint water crisis study); 2011-2018 (TAPS panel); other studies not precisely dated",
+  "unit_of_analysis": "Survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "In a crisis, avoiding blame is not the best way to maintain public support. Truman, not Machiavelli, offers leaders the better approach for turbulent times like the present.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted information is directly supported by the text. No journal, DOI, or formal citation is provided in the document.",
+  "tags": [
+    "political science",
+    "public opinion",
+    "survey experiment",
+    "blame claiming",
+    "blame deflecting",
+    "political leadership",
+    "public approval",
+    "crisis response",
+    "political communication",
+    "executive leadership",
+    "crisis management"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "public opinion"
+    ],
+    "government_level": [
+      "national",
+      "state",
+      "local"
+    ],
+    "research_design": [
+      "survey experiment"
+    ],
+    "methods": [
+      "Survey experiments using both real-world and hypothetical crisis scenarios.",
+      "Online convenience samples (Amazon Mechanical Turk) and a nationally representative panel (The American Panel Survey)."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "March 2016 (Flint water crisis study); 2011-2018 (TAPS panel); other studies not precisely dated"
+    ],
+    "keywords": [
+      "blame claiming",
+      "blame deflecting",
+      "political leadership",
+      "public approval",
+      "crisis response",
+      "survey experiment"
+    ],
+    "related_topics": [
+      "political communication",
+      "executive leadership",
+      "public opinion",
+      "crisis management"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        2,
+        3
+      ]
+    },
+    "methods": {
+      "pages": [
+        2,
+        3
+      ]
+    }
+  }
+}

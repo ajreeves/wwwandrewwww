@@ -1,0 +1,298 @@
+{
+  "title": {
+    "value": "If Trump took responsibility for coronavirus missteps, it might actually help him.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "David Ryan Miller",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2020,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "news article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "Survey experiments show that politicians who claim responsibility for crises receive higher public approval than those who deflect blame.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "When politicians admit mistakes during a crisis instead of blaming others, people tend to view them more favorably, as shown by several survey experiments.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Which strategy is most effective for political leaders during a crisis: avoiding blame or taking responsibility?",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Claiming blame is the most effective strategy for leaders to maintain or increase public approval during crises.",
+      "Leaders who accept responsibility for mistakes receive much higher approval ratings than those who deflect blame.",
+      "This effect was observed in both real-world and hypothetical crisis scenarios across multiple survey experiments."
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Survey experiments using both real-world and hypothetical crisis scenarios.",
+      "Online convenience samples (Amazon Mechanical Turk) and a nationally representative panel (The American Panel Survey)."
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Amazon Mechanical Turk online convenience samples",
+      "The American Panel Survey (TAPS)"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Leader's blame strategy (claiming blame, deflecting blame, blame-neutral)",
+      "Public approval rating",
+      "Likelihood to vote for the official"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "March 2016 (Flint water crisis study); 2011-2018 (TAPS panel); other studies not precisely dated",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "medium"
+  },
+  "unit_of_analysis": {
+    "value": "Survey respondent",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "blame claiming",
+      "blame deflecting",
+      "political leadership",
+      "public approval",
+      "crisis response",
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political communication",
+      "executive leadership",
+      "public opinion",
+      "crisis management"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "In a crisis, avoiding blame is not the best way to maintain public support. Truman, not Machiavelli, offers leaders the better approach for turbulent times like the present.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/mc-blame.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          3
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          3
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the text. No journal, DOI, or formal citation is provided in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national",
+      "state",
+      "local"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  }
+}

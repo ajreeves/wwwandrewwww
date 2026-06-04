@@ -1,0 +1,357 @@
+{
+  "title": {
+    "value": "Presidential Particularism and Divide-the-Dollar Politics",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas L. Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2015,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "American Political Science Review",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "109",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "1",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "155-171",
+    "evidence_pages": [
+      1,
+      17
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/S0003055414000598",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "In a county-level analysis of federal spending from 1984 to 2008, we find that presidents are not universalistic, but particularistic—that is, they reliably direct dollars to specific constituents to further their political goals. Presidents target both counties within swing states and counties in core states that strongly supported the president in recent elections. Swing state particularism is especially salient during presidential reelection years, and core partisan counties within swing states are most heavily rewarded. Our results suggest that presidents systematically prioritize the needs of politically important constituents rather than strictly pursuing visions of good public policy or pandering to the national median voter.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Presidents systematically target federal grant spending to politically important constituencies, especially swing states and core partisan counties, rather than distributing funds universally or based solely on policy efficiency.",
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      14
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The study finds that U.S. presidents direct more federal grant money to areas that are politically important for their reelection or their party, such as swing states and counties that strongly support them, rather than distributing funds evenly or just based on need.",
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      14
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do presidents allocate federal dollars across the country in a universalistic manner, or do they systematically target politically influential constituencies to further their political goals?",
+    "evidence_pages": [
+      1,
+      4
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents are particularistic in allocating federal grants, targeting swing states and core partisan counties.",
+      "Swing state targeting is especially pronounced during presidential reelection years.",
+      "Core partisan counties within swing states receive the largest increases in federal grant spending.",
+      "Presidential particularism produces greater geographic inequality in federal spending than congressional particularism."
+    ],
+    "evidence_pages": [
+      1,
+      7,
+      9,
+      10,
+      14
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "County-level quantitative analysis of federal grant spending from 1984 to 2008.",
+      "Least-squares regression models with county and year fixed effects.",
+      "Use of the Consolidated Federal Funds Report (CFFR) data."
+    ],
+    "evidence_pages": [
+      1,
+      8,
+      9,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Consolidated Federal Funds Report (CFFR) 1984–2008"
+    ],
+    "evidence_pages": [
+      8
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Federal grant spending by county",
+      "Swing state status",
+      "Core state status",
+      "Presidential party affiliation of congressional representative",
+      "Majority party status of congressional representative",
+      "County population",
+      "Poverty rate",
+      "Per capita income"
+    ],
+    "evidence_pages": [
+      8,
+      9,
+      21
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (county-level analysis)",
+    "evidence_pages": [
+      1,
+      8
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1984–2008",
+    "evidence_pages": [
+      1,
+      8,
+      18
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county-year",
+    "evidence_pages": [
+      8,
+      9,
+      18
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidency",
+      "federal spending",
+      "particularism",
+      "swing states",
+      "partisan politics",
+      "budget allocation",
+      "political geography"
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "distributive politics",
+      "electoral incentives",
+      "partisan targeting",
+      "congressional politics",
+      "executive branch",
+      "public policy"
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Presidents systematically prioritize the needs of politically important constituents.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Kriner, Douglas L., and Andrew Reeves. 2015. \"Presidential Particularism and Divide-the-Dollar Politics.\" American Political Science Review 109(1): 155-171. doi:10.1017/S0003055414000598.",
+    "evidence_pages": [
+      1,
+      17
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/targeting.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          7,
+          9,
+          10,
+          14
+        ]
+      },
+      "methods": {
+        "pages": [
+          8,
+          9,
+          18,
+          21
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      8,
+      9,
+      10,
+      14,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text. No external inference or unstated information included.",
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      8,
+      9,
+      10,
+      14,
+      18,
+      21
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "executive politics",
+      "public finance"
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      7,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      8
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "observational study",
+      "fixed effects regression"
+    ],
+    "evidence_pages": [
+      8,
+      9,
+      18,
+      21
+    ],
+    "confidence": "high"
+  }
+}

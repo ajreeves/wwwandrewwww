@@ -1,0 +1,152 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import FeatureBand from "@components/FeatureBand.astro";
+
+const awards = [
+  {
+    title: "David Hadas Teaching Award",
+    text: "Recognizes a tenured Arts & Sciences faculty member for exceptional commitment to first-year undergraduate teaching.",
+    url: "https://insideartsci.wustl.edu/david-hadas-teaching-award",
+    link: "Washington University Arts & Sciences"
+  },
+  {
+    title: "Delores K. Kennedy Award",
+    text: "Recognizes a member of the Washington University community whose commitment to students strengthens the first-year experience.",
+    url: "https://polisci.wustl.edu/news/prof-andrew-reeves-wins-delores-k-kennedy-award#:~:text=This%20award%20recognizes%20a%20member,in%20Introduction%20to%20American%20Politics.",
+    link: "Political Science News"
+  }
+] as const;
+
+const courses = [
+  {
+    title: "The Practice of Citizenship: Cooperation and Obligations in Democratic Life",
+    type: "Undergraduate Course",
+    image: "/images/citizenship-course.jpg",
+    alt: "Pericles delivering the funeral oration in Athens, painted by Philipp Foltz in 1852",
+    caption: "Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852).",
+    paragraphs: [
+      "This course treats citizenship as both democratic practice and a solution to cooperation problems.",
+      "Students engage political theory, American political voices, and empirical research to ask which civic capacities sustain democracy and what obligations citizens and institutions share in developing them. Readings span Aristotle to MLK and contemporary work on trust, polarization, and civic education."
+    ],
+    links: [
+      {
+        label: "Syllabus",
+        url: "/practice-of-citizenship-syllabus-spring-2026.pdf"
+      }
+    ],
+    video: null
+  },
+  {
+    title: "Introduction to American Politics",
+    type: "Undergraduate Course",
+    image: "/images/intro-course.jpg",
+    alt: "Introduction to American Politics course visual",
+    caption: "Introduction to American Politics course visual.",
+    paragraphs: [
+      "This course examines American politics in a period of polarization, institutional strain, and economic dissatisfaction.",
+      "The first half introduces core political science concepts and institutional foundations. Students then study the operation and evolution of the legislative, judicial, and executive branches. This course is offered intermittently."
+    ],
+    links: [
+      {
+        label: "Syllabus",
+        url: "https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1"
+      }
+    ],
+    video: "https://www.youtube.com/embed/ZcPzyOfqNKQ"
+  },
+  {
+    title: "Business of Elections",
+    type: "Undergraduate Course",
+    image: "/images/business-of-elections-course.jpg",
+    alt: "Business of Elections course visual",
+    caption: "Business of Elections course visual.",
+    paragraphs: [
+      "This course analyzes presidential elections through political science and business strategy.",
+      "Topics include campaign management, voter targeting, messaging, and the organizational logic of modern national campaigns."
+    ],
+    links: [
+      {
+        label: "How a Presidential Election Start-up Could Help Us Rebuild Democracy",
+        url: "https://artsci.washu.edu/ampersand/how-presidential-election-start"
+      },
+      {
+        label: "New Course Studies the Business of Politics",
+        url: "https://olin.washu.edu/about/news-and-media/news/2021/03/new-course-studies-the-business-of-politics.php"
+      }
+    ],
+    video: null
+  }
+] as const;
+
+const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
+---
+
+<BaseLayout title="Teaching" active="Teaching" description="Teaching by Andrew Reeves in American politics, democratic citizenship, and electoral strategy.">
+  <PageHeader
+    eyebrow="Teaching"
+    title="Teaching"
+    intro="Teaching in American politics, democratic citizenship, institutions, and public judgment."
+  />
+
+  <FeatureBand
+    eyebrow="Classroom Practice"
+    title="Evidence, Institutions, and Civic Judgment"
+    text="Courses emphasize analytical rigor, close reading of evidence, and practical democratic reasoning."
+    image="/images/andrew-teaching-page.jpg"
+    alt="Andrew Reeves teaching in a classroom"
+  />
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Honors</p>
+        <h2>Teaching Awards</h2>
+        <p class="mt-4 max-w-2xl text-xl leading-[1.55] text-muted">Selected teaching honors at Washington University in St. Louis.</p>
+      </div>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-2">
+      {
+        awards.map((award) => (
+          <article class="editorial-card">
+            <p class="kicker mb-4">{award.link}</p>
+            <h3 class="card-title">{award.title}</h3>
+            <p class="mt-4 text-lg leading-[1.6] text-muted">{award.text}</p>
+            <a class="ghost-button mt-3" href={award.url}>Read more</a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Courses</p>
+        <h2>American Politics and Citizenship</h2>
+        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Courses on democratic life, American institutions, and electoral strategy.</p>
+      </div>
+    </div>
+    <div class="course-feature-list">
+      {
+        courses.map((course, index) => (
+          <article class={`flw-feature-card course-feature-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
+            <figure class="flw-feature-media course-feature-media">
+              <img src={course.image} alt={course.alt} loading="lazy" />
+              <figcaption>{course.caption}</figcaption>
+            </figure>
+            <div class="flw-feature-copy course-feature-copy">
+              <p class="kicker mb-4">{course.type}</p>
+              <h3>{course.title}</h3>
+              {course.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              <div class="course-action-row">
+                {course.links.map((link) => <a class="ghost-button" href={link.url}>{link.label}</a>)}
+                {course.video && <a class="ghost-button" href={videoWatchUrl(course.video)}>Course video</a>}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
