@@ -1,0 +1,147 @@
+{
+  "slug": "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
+  "title": "Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment",
+  "authors": [
+    "Robert M. Stein",
+    "Barry C. Burden",
+    "Matt Lamb",
+    "Gayle Alberda",
+    "Lonna Atkeson",
+    "Lisa Bryant",
+    "Rachael Cobb",
+    "Michael Gilbert",
+    "Joshua D. Hostetter",
+    "David C. Kimball",
+    "Kenneth R. Mayer",
+    "Costas Panagopoulos",
+    "Andrew Reeves",
+    "Corwin Smidt",
+    "Jennifer Victor"
+  ],
+  "year": 2024,
+  "publication_type": "journal article",
+  "journal": "Election Law Journal",
+  "volume": "00",
+  "issue": "00",
+  "pages": null,
+  "doi": "10.1089/elj.2024.0017",
+  "citation": "Stein, R. M., Burden, B. C., Lamb, M., Alberda, G., Atkeson, L., Bryant, L., Cobb, R., Gilbert, M., Hostetter, J. D., Kimball, D. C., Mayer, K. R., Panagopoulos, C., Reeves, A., Smidt, C., & Victor, J. (2024). Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment. Election Law Journal, 00(00). https://doi.org/10.1089/elj.2024.0017",
+  "links": {
+    "pdf": "/papers/guardians.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Most experienced poll workers remain willing to serve in future elections, with motivation and perceived value of their work being key, while observed voter difficulties are the main deterrent to retention.",
+  "abstract": "Contrary to previous research and press accounts, we find limited evidence that persons who worked the polls in the past, including the 2020 election, are reticent to work in future elections. Our explanation focuses on the motivation and affect persons need to have to work the polls. Persons who believe their work at the polls is consequential for their community and who feel their work is valued, respected, and well-supported are highly motivated to work the polls in future elections. Conflict at the polls with voters and poll watchers, aspects of poll worker training, and collaborations with other poll workers have no appreciable impact on the willingness to work the polls. Only the magnitude and diversity of problems poll workers observed voters had casting their ballots are significant deterrents to working the polls. Our findings identify efficacious steps that local election officials can take to recruit and retain persons to work the polls in future elections.",
+  "plain_english_summary": "Despite concerns about poll worker shortages, most people who have worked at the polls before—including during the challenging 2020 election—are willing to do so again. The main reasons they return are feeling that their work matters and is appreciated, while seeing voters struggle at the polls is the biggest reason some do not return.",
+  "research_question": "What factors influence the retention of experienced poll workers in the United States, especially following the challenging 2020 election?",
+  "research_highlights": [
+    "Most experienced poll workers are willing to work future elections, contrary to reports of widespread shortages.",
+    "Motivation and a sense of being valued and supported are strong predictors of willingness to return.",
+    "Conflict at the polls, training, and collaboration with other poll workers have little impact on retention.",
+    "The main deterrent to returning is observing significant problems that voters have when casting ballots."
+  ],
+  "methods": [
+    "Survey of 5,761 poll workers in 19 jurisdictions across 10 states before the November 2022 election.",
+    "Analysis of poll worker experiences, motivations, and intentions to serve again using multi-item survey batteries and logistic regression models."
+  ],
+  "data_sources": [
+    "Surveys of poll workers in 19 jurisdictions across 10 states (pre-election wave, September 15–October 14, 2022)"
+  ],
+  "key_variables": [
+    "Likelihood to work polls in 2022",
+    "Poll worker training quality",
+    "Collaboration with other poll workers",
+    "Perceived treatment as a poll worker",
+    "Observed voter problems at the polls",
+    "Conflict with voters and poll watchers",
+    "Age",
+    "Number of elections worked since 2020"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (19 jurisdictions in 10 states: Texas, Wisconsin, Michigan, Missouri, Massachusetts, Connecticut, New Mexico, California, South Carolina, Virginia)",
+  "time_period": "Poll worker experiences from November 2020 to October 2022; survey conducted September 15–October 14, 2022",
+  "unit_of_analysis": "Individual poll worker",
+  "policy_relevance": null,
+  "pull_quote": "Persons who believe their work at the polls is consequential for their community and who feel their work is valued, respected, and well-supported are highly motivated to work the polls in future elections.",
+  "pull_quote_page": 1,
+  "confidence_notes": "Most fields are supported by direct quotations or explicit statements in the abstract, introduction, methods, and results sections. No PDF or replication links are stated in the document.",
+  "tags": [
+    "Political Science",
+    "Election Administration",
+    "Public Administration",
+    "Survey research",
+    "Quantitative analysis",
+    "election administration",
+    "poll workers",
+    "voting",
+    "public service motivation",
+    "election staffing",
+    "voter experience",
+    "poll worker recruitment"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Science",
+      "Election Administration",
+      "Public Administration"
+    ],
+    "government_level": [
+      "local",
+      "state"
+    ],
+    "research_design": [
+      "Survey research",
+      "Quantitative analysis"
+    ],
+    "methods": [
+      "Survey of 5,761 poll workers in 19 jurisdictions across 10 states before the November 2022 election.",
+      "Analysis of poll worker experiences, motivations, and intentions to serve again using multi-item survey batteries and logistic regression models."
+    ],
+    "geography": [
+      "United States (19 jurisdictions in 10 states: Texas, Wisconsin, Michigan, Missouri, Massachusetts, Connecticut, New Mexico, California, South Carolina, Virginia)"
+    ],
+    "time_period": [
+      "Poll worker experiences from November 2020 to October 2022; survey conducted September 15–October 14, 2022"
+    ],
+    "keywords": [
+      "election administration",
+      "poll workers",
+      "voting"
+    ],
+    "related_topics": [
+      "public service motivation",
+      "election staffing",
+      "voter experience",
+      "poll worker recruitment"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2,
+        3,
+        4
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        9,
+        10,
+        11
+      ]
+    },
+    "methods": {
+      "pages": [
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    }
+  }
+}

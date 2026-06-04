@@ -1,0 +1,144 @@
+{
+  "slug": "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
+  "title": "Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings",
+  "authors": [
+    "Adam M. Dynes",
+    "Andrew Reeves"
+  ],
+  "year": 2018,
+  "publication_type": "journal article",
+  "journal": "Legislative Studies Quarterly",
+  "volume": "43",
+  "issue": "2",
+  "pages": "207-243",
+  "doi": "10.1111/lsq.12193",
+  "citation": "Dynes, Adam M., and Andrew Reeves. 2018. \"Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings.\" Legislative Studies Quarterly 43(2): 207-243. doi:10.1111/lsq.12193.",
+  "links": {
+    "pdf": "/papers/caucus.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Republican House members who are party leaders or electorally vulnerable are more likely to attend caucus meetings, while those with more seniority or who vote less with their party are less likely to attend, highlighting how caucus participation reflects both private and collective benefits within party organization.",
+  "abstract": "As the role of US congressional parties in the legislative process has increased, so has the importance of understanding the institutions within these organizations. In this article, we examine the weekly caucus meetings held by Republican House leaders with their rank-and-file. We consider how members’ characteristics relate to their decision to attend based on the collective and private benefits that caucus participation affords. Using interviews of members and staffers as well as members’ attendance records at these meetings from 2007 to 2013, we find, among other things, that members who vote less with their party or who have more seniority are less likely to attend while those in leadership positions or who are electorally vulnerable are more likely to do so. Together, these findings provide additional insights on the relationship between party leaders and their members and which members benefit from this central party-building activity.",
+  "plain_english_summary": "This study finds that Republican House members who are party leaders or face tough elections are more likely to attend private party caucus meetings, while those with more experience or who often vote against their party are less likely to attend, suggesting that caucus meetings mainly benefit members who are closely aligned with party leadership or need party support.",
+  "research_question": "How do Republican House members’ characteristics relate to their attendance at party caucus meetings, and what does this reveal about who benefits from party-building activities?",
+  "research_highlights": [
+    "Members who vote less with their party or have more seniority are less likely to attend caucus meetings.",
+    "Party leaders and electorally vulnerable members are more likely to attend caucus meetings.",
+    "Attendance is also lower for members whose districts are farther from Washington, DC.",
+    "Caucus meetings provide both private and collective benefits, but these are not equally valued by all members."
+  ],
+  "methods": [
+    "Qualitative interviews with Republican House members, chiefs of staff, and party staffers (2013–2016).",
+    "Quantitative analysis of confidential attendance records at Republican caucus meetings from 2007 to 2013.",
+    "Multivariate regression models to assess the relationship between member characteristics and attendance."
+  ],
+  "data_sources": [
+    "Interviews with five Republican House members, three chiefs of staff, and multiple party staffers.",
+    "Confidential attendance records from the House Republican Conference (2007–2013)."
+  ],
+  "key_variables": [
+    "Caucus meeting attendance rate",
+    "Party-unity score (proportion of party-line votes)",
+    "DW-NOMINATE score (ideology)",
+    "Leadership position",
+    "Seniority",
+    "Electoral vulnerability",
+    "Distance from district to Washington, DC"
+  ],
+  "identification_strategy": null,
+  "geography": "United States, U.S. House of Representatives (Republican members)",
+  "time_period": "2007–2013",
+  "unit_of_analysis": "Individual Republican House member per Congress",
+  "policy_relevance": null,
+  "pull_quote": "Members who vote less with their party or who have more seniority are less likely to attend while those in leadership positions or who are electorally vulnerable are more likely to do so.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and tables. No external inference or unstated information included.",
+  "tags": [
+    "American politics",
+    "legislative studies",
+    "party politics",
+    "mixed methods",
+    "regression analysis",
+    "qualitative interviews",
+    "party organization",
+    "caucus meetings",
+    "Congress",
+    "Republican Party",
+    "legislative behavior",
+    "attendance",
+    "party leadership",
+    "legislative parties",
+    "party discipline",
+    "congressional behavior",
+    "political polarization"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "legislative studies",
+      "party politics"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "mixed methods",
+      "regression analysis",
+      "qualitative interviews"
+    ],
+    "methods": [
+      "Qualitative interviews with Republican House members, chiefs of staff, and party staffers (2013–2016).",
+      "Quantitative analysis of confidential attendance records at Republican caucus meetings from 2007 to 2013.",
+      "Multivariate regression models to assess the relationship between member characteristics and attendance."
+    ],
+    "geography": [
+      "United States, U.S. House of Representatives (Republican members)"
+    ],
+    "time_period": [
+      "2007–2013"
+    ],
+    "keywords": [
+      "party organization",
+      "caucus meetings",
+      "Congress",
+      "Republican Party",
+      "legislative behavior",
+      "attendance",
+      "party leadership"
+    ],
+    "related_topics": [
+      "legislative parties",
+      "party discipline",
+      "congressional behavior",
+      "political polarization"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        38,
+        235
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        38,
+        235,
+        236
+      ]
+    },
+    "methods": {
+      "pages": [
+        2,
+        38,
+        40,
+        235
+      ]
+    }
+  }
+}

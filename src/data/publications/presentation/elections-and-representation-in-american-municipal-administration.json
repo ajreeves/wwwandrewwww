@@ -1,0 +1,132 @@
+{
+  "slug": "elections-and-representation-in-american-municipal-administration",
+  "title": "Elections and Representation in American Municipal Administration",
+  "authors": [
+    "Wayde Z. C. Marsh",
+    "Michael P. Olson",
+    "Andrew Reeves",
+    "Jordan Duffin Wong"
+  ],
+  "year": 2025,
+  "publication_type": "journal article",
+  "journal": "Political Research Quarterly",
+  "volume": "0",
+  "issue": "0",
+  "pages": "1–17",
+  "doi": "10.1177/10659129251389624",
+  "citation": "Marsh, Wayde Z. C., Michael P. Olson, Andrew Reeves, and Jordan Duffin Wong. 2025. \"Elections and Representation in American Municipal Administration.\" Political Research Quarterly 0(0): 1–17. https://doi.org/10.1177/10659129251389624",
+  "links": {
+    "pdf": "/papers/clerks.pdf",
+    "journal": "https://journals.sagepub.com/home/prq",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Elected municipal clerks in New England are more responsive to constituents than appointed clerks, but selection method has little effect on clerks’ ideological, partisan, or policy representation.",
+  "abstract": "Do selection methods for public officials impact how they represent their constituents? Municipal clerks in the New England states offer an ideal case to examine this question. As key government actors in full-service local governments with minimal overlapping jurisdictions, clerks in these states vary in how they are selected—either through election or appointment. Using an original online and mail survey of municipal clerks across five New England states, we find that elected clerks demonstrate a stronger orientation toward public service and are more responsive to constituent concerns. However, selection methods show little impact on substantive ideological, partisan, or policy representation. These findings highlight the relationship between the mode of selection and representation, offering a foundation for future research on other offices and dimensions of representation.",
+  "plain_english_summary": "This study surveyed municipal clerks in five New England states and found that elected clerks are more focused on serving the public and responding to residents’ concerns than appointed clerks, but whether a clerk is elected or appointed does not significantly change their political or policy views.",
+  "research_question": "Do selection methods for municipal clerks (election vs. appointment) affect how they represent their constituents in New England states?",
+  "research_highlights": [
+    "Elected clerks are more oriented toward public service and more responsive to constituent concerns than appointed clerks.",
+    "Selection method has little impact on clerks’ substantive ideological, partisan, or policy representation.",
+    "Elected clerks are generally less credentialed and work in lower-capacity offices but are more experienced and feel more self-directed than appointed clerks."
+  ],
+  "methods": [
+    "Original online and mail survey of municipal clerks in Connecticut, Massachusetts, New Hampshire, Rhode Island, and Vermont.",
+    "Descriptive and regression analyses comparing elected and appointed clerks on responsiveness, attitudes, and background characteristics."
+  ],
+  "data_sources": [
+    "Original survey data collected from municipal clerks in five New England states."
+  ],
+  "key_variables": [
+    "Clerk selection method (elected vs. appointed)",
+    "Clerk responsiveness to constituents",
+    "Clerk attitudes toward public service",
+    "Clerk ideological and partisan self-identification",
+    "Municipality characteristics (e.g., population, income, education, vote share)"
+  ],
+  "identification_strategy": null,
+  "geography": "Connecticut, Massachusetts, New Hampshire, Rhode Island, and Vermont (New England states)",
+  "time_period": "Spring 2023 (survey fielded)",
+  "unit_of_analysis": "Municipal clerk (individual-level)",
+  "policy_relevance": null,
+  "pull_quote": "Elected clerks report being more responsive to their constituents.",
+  "pull_quote_page": 2,
+  "confidence_notes": "All extracted fields are directly supported by the document text. No causal identification strategy or policy implications are explicitly stated. No public PDF link is provided in the document.",
+  "tags": [
+    "American politics",
+    "local government",
+    "public administration",
+    "original survey",
+    "comparative analysis",
+    "local politics",
+    "municipal clerks",
+    "political representation",
+    "elections",
+    "representation",
+    "bureaucracy"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "local government",
+      "public administration"
+    ],
+    "government_level": [
+      "municipal"
+    ],
+    "research_design": [
+      "original survey",
+      "comparative analysis"
+    ],
+    "methods": [
+      "Original online and mail survey of municipal clerks in Connecticut, Massachusetts, New Hampshire, Rhode Island, and Vermont.",
+      "Descriptive and regression analyses comparing elected and appointed clerks on responsiveness, attitudes, and background characteristics."
+    ],
+    "geography": [
+      "Connecticut, Massachusetts, New Hampshire, Rhode Island, and Vermont (New England states)"
+    ],
+    "time_period": [
+      "Spring 2023 (survey fielded)"
+    ],
+    "keywords": [
+      "local politics",
+      "municipal clerks",
+      "political representation"
+    ],
+    "related_topics": [
+      "elections",
+      "public administration",
+      "local government",
+      "representation",
+      "bureaucracy"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        13,
+        14
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        4,
+        6,
+        7,
+        8
+      ]
+    }
+  }
+}

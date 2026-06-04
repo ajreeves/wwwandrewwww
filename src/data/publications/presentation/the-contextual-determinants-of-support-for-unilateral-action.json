@@ -1,0 +1,131 @@
+{
+  "slug": "the-contextual-determinants-of-support-for-unilateral-action",
+  "title": "The Contextual Determinants of Support for Unilateral Action",
+  "authors": [
+    "Andrew Reeves",
+    "Jon C. Rogowski",
+    "Min Hee Seo",
+    "Andrew R. Stone"
+  ],
+  "year": 2017,
+  "publication_type": "journal article",
+  "journal": "Presidential Studies Quarterly",
+  "volume": "47",
+  "issue": "3",
+  "pages": "448–470",
+  "doi": "10.1111/psq.12391",
+  "citation": "Reeves, Andrew, Jon C. Rogowski, Min Hee Seo, and Andrew R. Stone. 2017. \"The Contextual Determinants of Support for Unilateral Action.\" Presidential Studies Quarterly 47(3): 448–470. doi:10.1111/psq.12391.",
+  "links": {
+    "pdf": "/papers/asking.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Survey experiments show that public support for presidential unilateral action is generally stable and not strongly affected by contextual factors, except when explicitly political considerations are invoked.",
+  "abstract": "This article reports a series of survey experiments (N > 7,500) examining whether public support for presidential unilateral action is sensitive to contextual factors such as the president's identity, the unilateral tool used, justifications for action, and the policy pursued. The authors find little evidence that context affects attitudes toward unilateral powers except in circumstances that invoke explicitly political factors. The findings suggest that public attitudes toward unilateral power are generally stable and have implications for understanding how public opinion constrains presidential power.",
+  "plain_english_summary": "The study finds that most people’s opinions about presidents acting alone to make policy don’t change much based on who the president is, what tool they use, or how the action is described—except when the situation is highly political.",
+  "research_question": "To what extent are public attitudes toward presidential unilateral action sensitive to contextual factors such as the president's identity, the unilateral tool used, justifications for action, and the policy pursued?",
+  "research_highlights": [
+    "Public support for unilateral presidential action is generally low and stable across most contextual variations.",
+    "Contextual factors such as the president's identity, the specific unilateral tool, or legal/historical justifications have little effect on support, except when political or partisan factors are made salient.",
+    "Support for unilateral action increases when the president's policy is supported by a large majority of the public or aligns with the respondent's own views.",
+    "Partisan and policy context can condition support, but these effects are generally small or infrequent."
+  ],
+  "methods": [
+    "Series of survey experiments with over 7,500 respondents recruited via Amazon Mechanical Turk (MTurk).",
+    "Random assignment to baseline or contextual variation conditions in survey questions about support for unilateral presidential action.",
+    "Analysis of treatment effects comparing support across different contextual framings."
+  ],
+  "data_sources": [
+    "Survey data collected from Amazon Mechanical Turk (MTurk) participants in July and August 2016."
+  ],
+  "key_variables": [
+    "Support for unilateral presidential action (measured by agreement with statements about presidents making policy without congressional approval)",
+    "Contextual factors: president's identity, type of unilateral tool, historical/legal justifications, political context, policy domain"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "July–August 2016",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Our results provide little evidence that attitudes toward unilateral power are responsive to contextual influences or framing effects.",
+  "pull_quote_page": 2,
+  "confidence_notes": "All extracted fields are directly supported by the article text or tables. No inferences were made beyond the document content.",
+  "tags": [
+    "American politics",
+    "public opinion",
+    "executive power",
+    "survey experiment",
+    "presidential power",
+    "contextual effect",
+    "executive unilateralism",
+    "political institutions",
+    "framing effects",
+    "partisanship"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "public opinion",
+      "executive power"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "survey experiment"
+    ],
+    "methods": [
+      "Series of survey experiments with over 7,500 respondents recruited via Amazon Mechanical Turk (MTurk).",
+      "Random assignment to baseline or contextual variation conditions in survey questions about support for unilateral presidential action.",
+      "Analysis of treatment effects comparing support across different contextual framings."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "July–August 2016"
+    ],
+    "keywords": [
+      "presidential power",
+      "public opinion",
+      "contextual effect",
+      "survey experiment"
+    ],
+    "related_topics": [
+      "executive unilateralism",
+      "political institutions",
+      "framing effects",
+      "partisanship"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2,
+        3,
+        4
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        2,
+        4,
+        7,
+        17,
+        20,
+        27
+      ]
+    },
+    "methods": {
+      "pages": [
+        2,
+        4,
+        5,
+        6,
+        25,
+        26
+      ]
+    }
+  }
+}

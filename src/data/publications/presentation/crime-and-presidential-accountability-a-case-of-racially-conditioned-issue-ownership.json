@@ -1,0 +1,159 @@
+{
+  "slug": "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership",
+  "title": "Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership",
+  "authors": [
+    "Benjamin S. Noble",
+    "Andrew Reeves",
+    "Steven W. Webster"
+  ],
+  "year": 2022,
+  "publication_type": "journal article",
+  "journal": "Public Opinion Quarterly",
+  "volume": "86",
+  "issue": "1",
+  "pages": "29–50",
+  "doi": "10.1093/poq/nfab074",
+  "citation": "Noble, Benjamin S., Andrew Reeves, and Steven W. Webster. 2022. \"Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership.\" Public Opinion Quarterly 86(1): 29–50. https://doi.org/10.1093/poq/nfab074",
+  "links": {
+    "pdf": "/papers/crime.pdf",
+    "journal": "https://academic.oup.com/poq/article/86/1/29/6530176",
+    "replication_data": "https://doi.org/10.7910/DVN/0D89WX",
+    "code": null
+  },
+  "card_summary": "Anxiety about crime reduces presidential approval, but this effect is conditioned by both the race of the respondent and the party of the president, with White Americans punishing Democratic presidents and Black Americans punishing Republican presidents when anxious about crime.",
+  "abstract": "Americans are anxious about crime regardless of their actual exposure or risk. Given this pervasive concern, US presidents frequently talk about crime, take actions to address it, and list crime prevention efforts among their top accomplishments. We argue that presidents act this way, in part, because fear of crime translates into lowered presidential approval. However, this penalty is not applied evenly. Given the parties’ stances toward crime and the criminal justice system, White Americans punish Democratic presidents (i.e., Clinton and Obama) more severely when they are anxious about crime, while Black Americans are more punitive toward Republican presidents (i.e., Bush and Trump). We examine twenty years of survey data and find evidence consistent with our theory. Our results suggest that the relationship between fear of crime and presidential accountability is conditioned by an individual’s race and the president’s party.",
+  "plain_english_summary": "People who are anxious about crime are less likely to approve of the president, but this depends on both their race and which party the president belongs to: White Americans lower their approval of Democratic presidents when anxious about crime, while Black Americans lower their approval of Republican presidents.",
+  "research_question": "Does anxiety about crime affect presidential approval, and is this relationship conditioned by the race of the respondent and the party of the president?",
+  "research_highlights": [
+    "Anxiety about crime is associated with lower presidential approval.",
+    "Objective crime rates do not significantly affect presidential approval.",
+    "White Americans who are anxious about crime are less likely to approve of Democratic presidents.",
+    "Black Americans who are anxious about crime are less likely to approve of Republican presidents.",
+    "The relationship between crime anxiety and presidential approval is robust to controls for policy preferences."
+  ],
+  "methods": [
+    "Analysis of nearly 15,000 respondents from Gallup Poll Social Series surveys on crime from 2000 to 2019.",
+    "Logistic regression models of presidential approval including measures of crime anxiety, retrospective crime evaluations, crime victimization, and objective crime rates.",
+    "Interaction terms to test for differences by race and presidential party.",
+    "Controls for sociodemographic variables and policy preferences."
+  ],
+  "data_sources": [
+    "Gallup Poll Social Series (GPSS) on crime, 2000–2019",
+    "Federal Bureau of Investigation’s Uniform Crime Reporting database"
+  ],
+  "key_variables": [
+    "Presidential approval",
+    "Crime anxiety (additive scale)",
+    "Retrospective crime evaluation",
+    "Crime victimization",
+    "Change in state-level crime rate",
+    "Race of respondent",
+    "Party of president",
+    "Sociodemographic controls"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "2000–2019",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Anxiety about crime can and does lead individuals to lower their evaluations of the president. However, our results indicate that this relationship is dependent upon both the race of the respondent and the party of the president.",
+  "pull_quote_page": 44,
+  "confidence_notes": "All extracted fields are directly supported by the document text and tables. No causal identification strategy is explicitly described beyond observational analysis.",
+  "tags": [
+    "political science",
+    "public opinion",
+    "race and politics",
+    "presidential studies",
+    "observational study",
+    "survey analysis",
+    "regression analysis",
+    "crime",
+    "presidential approval",
+    "race",
+    "issue ownership",
+    "partisanship",
+    "anxiety",
+    "political behavior",
+    "racial attitudes",
+    "public opinion research",
+    "presidential politics",
+    "criminal justice"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "public opinion",
+      "race and politics",
+      "presidential studies"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "observational study",
+      "survey analysis",
+      "regression analysis"
+    ],
+    "methods": [
+      "Analysis of nearly 15,000 respondents from Gallup Poll Social Series surveys on crime from 2000 to 2019.",
+      "Logistic regression models of presidential approval including measures of crime anxiety, retrospective crime evaluations, crime victimization, and objective crime rates.",
+      "Interaction terms to test for differences by race and presidential party.",
+      "Controls for sociodemographic variables and policy preferences."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "2000–2019"
+    ],
+    "keywords": [
+      "crime",
+      "presidential approval",
+      "public opinion",
+      "race",
+      "issue ownership",
+      "partisanship",
+      "anxiety"
+    ],
+    "related_topics": [
+      "political behavior",
+      "racial attitudes",
+      "public opinion research",
+      "presidential politics",
+      "criminal justice"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        3,
+        18,
+        46
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        3,
+        12,
+        13,
+        18,
+        46
+      ]
+    },
+    "methods": {
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        18,
+        46
+      ]
+    }
+  }
+}

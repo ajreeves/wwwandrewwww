@@ -1,0 +1,267 @@
+{
+  "title": {
+    "value": "How disasters change elections",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2012,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "news article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "Voters tend to reward politicians for taking action after natural disasters, with incumbents seeing increased vote shares when they respond effectively, as shown in county-level election analyses from 1970 to 2006.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "When politicians respond to natural disasters by requesting and approving aid, they are rewarded by voters with higher vote shares, even though they cannot control the disasters themselves.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do natural disasters affect election outcomes for incumbent politicians, and does taking action in response to disasters influence voter behavior?",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Incumbent presidents and governors are rewarded by voters for taking action after natural disasters, such as requesting and approving aid.",
+      "Presidents receive a modest increase (about half a percentage point) in county vote share, while governors see a larger increase (about four percentage points) when they respond to disasters.",
+      "The punishment for disaster damage is smaller than the reward for taking action."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Analysis of all county-level election results for incumbent governors and presidents from 1970 to 2006.",
+      "Examination of countywide damage caused by natural disasters in the three months preceding elections."
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": [
+      "County-level election results",
+      "Incumbency status of governors and presidents",
+      "Countywide damage from natural disasters",
+      "Disaster aid requests and approvals"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1970 to 2006 (for study); Hurricane Sandy (2012) as contemporary example",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "county-level election results",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "natural disasters",
+      "elections",
+      "incumbency",
+      "voter behavior",
+      "disaster response"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political accountability",
+      "emergency management",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Even though politicians don’t control the weather, voters punish them for the damage it causes. But analyzing all county­level election results for incumbent governors and presidents from 1970 to 2006 also shows that this punishment is dwarfed by the reward for taking action.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew. \"How disasters change elections.\" Reuters, November 5, 2012.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/disasters-reuters.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1
+        ]
+      },
+      "methods": {
+        "pages": [
+          1
+        ]
+      }
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the text on page 1; no additional publication metadata is present in the document.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "disaster studies"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal",
+      "state"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "observational study"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  }
+}

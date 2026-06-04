@@ -1,0 +1,116 @@
+{
+  "slug": "how-disasters-change-elections",
+  "title": "How disasters change elections",
+  "authors": [
+    "Andrew Reeves"
+  ],
+  "year": 2012,
+  "publication_type": "news article",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "Reeves, Andrew. \"How disasters change elections.\" Reuters, November 5, 2012.",
+  "links": {
+    "pdf": "/papers/disasters-reuters.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Voters tend to reward politicians for taking action after natural disasters, with incumbents seeing increased vote shares when they respond effectively, as shown in county-level election analyses from 1970 to 2006.",
+  "abstract": null,
+  "plain_english_summary": "When politicians respond to natural disasters by requesting and approving aid, they are rewarded by voters with higher vote shares, even though they cannot control the disasters themselves.",
+  "research_question": "How do natural disasters affect election outcomes for incumbent politicians, and does taking action in response to disasters influence voter behavior?",
+  "research_highlights": [
+    "Incumbent presidents and governors are rewarded by voters for taking action after natural disasters, such as requesting and approving aid.",
+    "Presidents receive a modest increase (about half a percentage point) in county vote share, while governors see a larger increase (about four percentage points) when they respond to disasters.",
+    "The punishment for disaster damage is smaller than the reward for taking action."
+  ],
+  "methods": [
+    "Analysis of all county-level election results for incumbent governors and presidents from 1970 to 2006.",
+    "Examination of countywide damage caused by natural disasters in the three months preceding elections."
+  ],
+  "data_sources": [],
+  "key_variables": [
+    "County-level election results",
+    "Incumbency status of governors and presidents",
+    "Countywide damage from natural disasters",
+    "Disaster aid requests and approvals"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "1970 to 2006 (for study); Hurricane Sandy (2012) as contemporary example",
+  "unit_of_analysis": "county-level election results",
+  "policy_relevance": null,
+  "pull_quote": "Even though politicians don’t control the weather, voters punish them for the damage it causes. But analyzing all county­level election results for incumbent governors and presidents from 1970 to 2006 also shows that this punishment is dwarfed by the reward for taking action.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted information is directly supported by the text on page 1; no additional publication metadata is present in the document.",
+  "tags": [
+    "political science",
+    "disaster studies",
+    "quantitative analysis",
+    "observational study",
+    "natural disasters",
+    "elections",
+    "incumbency",
+    "voter behavior",
+    "disaster response",
+    "political accountability",
+    "emergency management",
+    "public opinion"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "disaster studies"
+    ],
+    "government_level": [
+      "federal",
+      "state"
+    ],
+    "research_design": [
+      "quantitative analysis",
+      "observational study"
+    ],
+    "methods": [
+      "Analysis of all county-level election results for incumbent governors and presidents from 1970 to 2006.",
+      "Examination of countywide damage caused by natural disasters in the three months preceding elections."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "1970 to 2006 (for study); Hurricane Sandy (2012) as contemporary example"
+    ],
+    "keywords": [
+      "natural disasters",
+      "elections",
+      "incumbency",
+      "voter behavior",
+      "disaster response"
+    ],
+    "related_topics": [
+      "political accountability",
+      "emergency management",
+      "public opinion"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1
+      ]
+    },
+    "methods": {
+      "pages": [
+        1
+      ]
+    }
+  }
+}

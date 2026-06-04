@@ -1,0 +1,156 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import FeatureBand from "@components/FeatureBand.astro";
+
+const events = [
+  {
+    title: "Governing Past Gridlock: Why Fiscal Responsibility Still Matters",
+    watch: "https://www.youtube.com/watch?v=-xeyS7nilpU",
+    embed: "https://www.youtube.com/embed/-xeyS7nilpU",
+    label: "Governing Past Gridlock",
+    summary:
+      "A Weidenbaum Center event on fiscal governance, political trust, and strategies for long-term national stability, featuring former U.S. Representative Carolyn Bourdeaux."
+  },
+  {
+    title: "The Past, Present, and Future of the Federal Reserve",
+    watch: "https://www.youtube.com/watch?v=TJEnJcU-PRE",
+    embed: "https://www.youtube.com/embed/TJEnJcU-PRE",
+    label: "Federal Reserve Conversation",
+    summary:
+      "A conversation on the Federal Reserve's evolving role in the U.S. economy with Alberto Musalem, James Bullard, and Thomas Melzer, moderated by Karen Branding."
+  },
+  {
+    title: "The Future of Civic Education and Universities",
+    watch: "https://www.youtube.com/watch?v=1T0Oz9wY6P4",
+    embed: "https://www.youtube.com/embed/1T0Oz9wY6P4",
+    label: "Future of Civic Education",
+    summary:
+      "A panel on civic learning, viewpoint diversity, and open inquiry with Robert Doar, Benjamin Storey, and Andrew Reeves."
+  },
+  {
+    title: "Labor, Regulation, and the Changing Economy Panel",
+    watch: "https://www.youtube.com/watch?v=yUeC-xgeLVM",
+    embed: "https://www.youtube.com/embed/yUeC-xgeLVM",
+    label: "Labor and Regulation Panel",
+    summary:
+      "A cross-ideological panel on labor markets, regulation, tariffs, immigration, and near-term policy shifts, moderated by Pauline Kim."
+  },
+  {
+    title: "A Fireside Chat with James Bullard",
+    watch: "https://www.youtube.com/watch?v=jAvZp5nLsFs",
+    embed: "https://www.youtube.com/embed/jAvZp5nLsFs",
+    label: "Fireside Chat with James Bullard",
+    summary:
+      "A conversation with Andrew Reeves and James Bullard on the economy, elections, and higher education leadership."
+  },
+  {
+    title: "April 2024 Forum: The Outlook for the U.S. Economy and Monetary Policy with Adriana D. Kugler",
+    watch: "https://www.youtube.com/watch?v=qpFScg4RRyY",
+    embed: "https://www.youtube.com/embed/qpFScg4RRyY",
+    label: "U.S. Economy and Monetary Policy Forum",
+    summary:
+      "A forum on the U.S. economic outlook and monetary policy with Federal Reserve Governor Adriana D. Kugler, followed by Q&A with Andrew Reeves."
+  },
+  {
+    title: "December 2023 Policy Lunch: Andrew Reeves on Concerns over Presidential Executive Power",
+    watch: "https://www.youtube.com/watch?v=9uWOQAFgWNc",
+    embed: "https://www.youtube.com/embed/9uWOQAFgWNc",
+    label: "Policy Lunch on Executive Power",
+    summary:
+      "A policy lunch on No Blank Check and evidence on public skepticism toward presidential executive authority, featuring Andrew Reeves."
+  },
+  {
+    title: "January 2023: Hoover Fellow and Presidential Campaign Advisor: A Conversation with Lanhee J. Chen",
+    watch: "https://www.youtube.com/watch?v=FEn1wxqnSUQ",
+    embed: "https://www.youtube.com/embed/FEn1wxqnSUQ",
+    label: "Conversation with Lanhee J. Chen",
+    summary:
+      "A conversation with Lanhee J. Chen on partisan dynamics, campaign strategy, and the 2024 election environment."
+  }
+] as const;
+
+const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
+---
+
+<BaseLayout title="Talks & Events" active="Talks" description="Public events, talks, and recorded conversations featuring Andrew Reeves and the Weidenbaum Center.">
+  <PageHeader
+    eyebrow="Talks"
+    title="Talks & Events"
+    intro="Public conversations on governance, institutions, civic education, and democratic life."
+  />
+
+  <FeatureBand
+    eyebrow="Featured Event"
+    title="The Past, Present, and Future of the Federal Reserve"
+    text="Andrew Reeves introduced a Weidenbaum Center event featuring Alberto Musalem, James Bullard, and Thomas Melzer, moderated by Karen Branding, on September 29, 2025."
+    image="/images/andrew-fed-page.jpg"
+    alt="Andrew Reeves at a Weidenbaum Center Federal Reserve event with Karen Branding, Thomas Melzer, Alberto Musalem, and James Bullard"
+    caption="Photo: Sid Hastings/WashU."
+    actionHref="https://www.youtube.com/watch?v=TJEnJcU-PRE"
+    actionLabel="Watch recording"
+  />
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Recordings</p>
+        <h2>Weidenbaum Center Events</h2>
+        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">
+          Talks, panels, and policy discussions on governance, economics, civic education, and democratic institutions.
+        </p>
+      </div>
+      <a class="hidden section-action sm:inline" href="https://www.youtube.com/channel/UCvJOmn5O0jvtON27hM5GXew">YouTube channel</a>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      {
+        events.map((event) => (
+          <article class="editorial-card">
+            <div class="video-frame video-frame-placeholder">
+              <button
+                type="button"
+                class="video-load-button"
+                data-youtube-embed={event.embed}
+                data-youtube-title={event.title}
+                aria-label={`Load video: ${event.title}`}
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${youtubeId(event.watch)}/hqdefault.jpg`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span>Play recording</span>
+              </button>
+            </div>
+            <p class="small-caps mb-3 mt-5">Recording</p>
+            <h3 class="list-title">
+              <a class="text-ink no-underline hover:text-olive-dark" href={event.watch}>{event.label}</a>
+            </h3>
+            <p class="mt-3 text-base leading-[1.6] text-muted">{event.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll<HTMLButtonElement>("[data-youtube-embed]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const embed = button.dataset.youtubeEmbed;
+        if (!embed) return;
+
+        const title = button.dataset.youtubeTitle || "YouTube video";
+        const iframe = document.createElement("iframe");
+        iframe.src = `${embed}${embed.includes("?") ? "&" : "?"}autoplay=1`;
+        iframe.title = title;
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+        button.replaceWith(iframe);
+      });
+    });
+  </script>
+</BaseLayout>

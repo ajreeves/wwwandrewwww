@@ -1,0 +1,511 @@
+{
+  "title": {
+    "value": "Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Douglas L. Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      29
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2014,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Journal of Health Politics, Policy and Law",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "39",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "717-749",
+    "evidence_pages": [
+      2,
+      30,
+      33
+    ],
+    "confidence": "medium"
+  },
+  "doi": {
+    "value": "10.1215/03616878-2743015",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "We examine the contours of support for the Clinton and Obama health care plans during the 1990s and 2000s based on our own compilation of 120,000 individual-level survey responses from throughout the debates. Despite the rise of the Tea Party, and the racialization of health care politics, opinion dynamics are remarkably similar in both periods. Party ID is the single most powerful predictor of support for reform and the president’s handling of it. Contrary to prominent claims, after controlling for partisanship, demographic characteristics are at best weak predictors of support for reform. We also show that Clinton and Obama did not ‘‘lose’’ blacks, seniors, or wealthy voters over the course of the debate. The small and often nonexistent relationship between these characteristics and support for the plan are constant over time. Instead, the modest fluctuations in support for reform appear to follow the ebb and flow of elite rhetoric. Both mean levels of support and its volatility over time covary with elite partisan discourse. These findings suggest that presidents courting public opinion should seek consensus among their own party’s elites before appealing to other narrower interests.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Public support for the Clinton and Obama health care plans was driven primarily by partisanship, with demographic factors playing a minimal role, and fluctuations in support closely tracked elite partisan rhetoric.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      28,
+      44
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "This study finds that whether people supported the Clinton or Obama health care reforms depended mostly on their political party, not on their age, income, or race, and that changes in support over time were linked to what political leaders from each party were saying in public.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      28,
+      44
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "What factors explain public support for the Clinton and Obama health care reform plans, and how did public opinion change over the course of these policy debates?",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      28
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Party identification is the strongest predictor of support for health care reform and the president’s handling of it.",
+      "Demographic characteristics such as age, income, and race are weak predictors of support for reform after controlling for partisanship.",
+      "Clinton and Obama did not lose support among blacks, seniors, or wealthy voters during the debates.",
+      "Fluctuations in support for reform closely follow changes in elite partisan rhetoric.",
+      "Both the mean level and volatility of support for reform covary with elite partisan discourse."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      28,
+      44
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Compilation and analysis of approximately 120,000 individual-level survey responses from nearly 130 surveys during the Clinton and Obama health care debates.",
+      "Pooled and over-time logistic regression analyses to assess the influence of partisanship and demographic factors on support for reform.",
+      "Content analysis of congressional elite cues in New York Times front-page articles to measure elite partisan rhetoric.",
+      "Multiplicative heteroscedastic linear regression models to examine the effect of elite rhetoric on both the mean and variance of partisan support for reform."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      10,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Individual-level survey data from the Roper Center for Public Opinion Research (including ABC, CBS, CNN, Gallup, Kaiser, Los Angeles Times, NBC, Pew, Time, USA Today, Wall Street Journal, Washington Post, Yankelovich Partners)",
+      "Content-coded congressional statements on health care reform from front-page New York Times articles",
+      "Presidential statements from the Public Papers of the President",
+      "Chronology of positive and negative events from Johnson and Broder (1997)"
+    ],
+    "evidence_pages": [
+      6,
+      19,
+      20,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Party identification",
+      "Support for health care reform (plan approval and president’s handling)",
+      "Age (senior status)",
+      "Income",
+      "Race (African American)",
+      "Elite partisan cues (support/opposition)",
+      "Presidential statements",
+      "Positive and negative rally events"
+    ],
+    "evidence_pages": [
+      9,
+      10,
+      19,
+      20,
+      21,
+      22
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1993–1994 (Clinton plan); 2009–2010 (Obama plan)",
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      10,
+      18,
+      24
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individual survey respondent (for micro-level analysis); Poll-level aggregate by party (for macro-level analysis)",
+    "evidence_pages": [
+      6,
+      9,
+      13,
+      14,
+      18,
+      20
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "health care reform",
+      "public opinion",
+      "partisanship",
+      "elite rhetoric",
+      "Clinton health plan",
+      "Obama health plan",
+      "survey analysis"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      18,
+      19,
+      20
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political behavior",
+      "policy support",
+      "media influence",
+      "elite opinion leadership",
+      "partisan polarization"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      18,
+      19,
+      20
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": "Findings suggest that presidents seeking public support for major policy reforms should prioritize building consensus among their own party’s elites, as elite partisan discourse strongly shapes both the level and stability of public support.",
+    "evidence_pages": [
+      1,
+      28,
+      44
+    ],
+    "confidence": "high"
+  },
+  "pull_quote": {
+    "value": "Party ID is the single most powerful predictor of support for reform and the president’s handling of it.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Kriner, Douglas L., and Andrew Reeves. 2014. \"Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans.\" Journal of Health Politics, Policy and Law 39(4): 717-749. doi:10.1215/03616878-2743015.",
+    "evidence_pages": [
+      1,
+      2,
+      30,
+      33
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/healthcare.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3,
+          28
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3,
+          10,
+          11,
+          28,
+          44
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          6,
+          7,
+          9,
+          10,
+          13,
+          14,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          34,
+          35,
+          36
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28,
+      30,
+      33,
+      34,
+      35,
+      36,
+      44
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and cited pages. No inferences or external sources were used. Page numbers for tables and figures were included where relevant.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28,
+      30,
+      33,
+      34,
+      35,
+      36,
+      44
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "health policy",
+      "public opinion",
+      "political science"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      18,
+      19,
+      20
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      9,
+      10,
+      18,
+      19,
+      20
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "survey analysis",
+      "content analysis",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      10,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      34,
+      35,
+      36
+    ],
+    "confidence": "high"
+  }
+}

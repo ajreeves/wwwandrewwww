@@ -1,0 +1,370 @@
+{
+  "title": {
+    "value": "The Public Cost of Unilateral Action",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2018,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "American Journal of Political Science",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "00",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "0",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "1–17",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/ajps.12340",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Scholarship on democratic responsiveness focuses on whether political outcomes reflect public opinion but overlooks attitudes toward how power is used to achieve those policies. We argue that public attitudes toward unilateral action lead to negative evaluations of presidents who exercise unilateral powers and policies achieved through their use. Evidence from two studies supports our argument. In three nationally representative survey experiments conducted across a range of policy domains, we find that the public reacts negatively when policies are achieved through unilateral powers instead of through legislation passed by Congress. We further show these costs are greatest among respondents who support the president’s policy goals. In an observational study, we show that attitudes toward unilateral action in the abstract affect how respondents evaluate policies achieved through unilateral action by presidents from Lincoln to Obama. Our results suggest that public opinion may constrain presidents’ use of unilateral powers.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "The public reacts negatively to presidential policies achieved through unilateral action rather than legislation, especially among those who support the policy goals, suggesting public opinion may constrain presidents’ use of unilateral powers.",
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      11,
+      13
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People are less supportive of presidents and their policies when those policies are enacted through unilateral executive actions instead of working with Congress, and this negative reaction is strongest among those who agree with the policy itself.",
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      11,
+      13
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How does the public respond to presidents' use of unilateral powers to achieve policy goals, and does this response constrain presidential behavior?",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "The public reacts more negatively to policies achieved through unilateral presidential action than through legislation.",
+      "These negative reactions are strongest among individuals who support the president’s policy goals.",
+      "Attitudes toward unilateral action influence evaluations of both hypothetical and real-world policies achieved unilaterally.",
+      "Unilateral action decreases perceptions that the president respects the rule of law.",
+      "Public opinion may constrain presidents’ use of unilateral powers."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      10,
+      11,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Three nationally representative survey experiments using vignettes about hypothetical presidential candidates and policy issues, randomizing the means of policy achievement (unilateral vs. legislative).",
+      "Observational analysis of a national survey measuring attitudes toward real-world policies achieved through unilateral action."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "The American Panel Study (TAPS), a monthly panel survey by GfK Knowledge Networks.",
+      "A nationally representative survey by The Economist/YouGov (February 2015)."
+    ],
+    "evidence_pages": [
+      5,
+      12
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Support for presidential candidate",
+      "Approval of candidate’s handling of issue",
+      "Perceptions of candidate’s leadership and respect for rule of law",
+      "Attitudes toward unilateral action",
+      "Approval of specific policies achieved through unilateral action"
+    ],
+    "evidence_pages": [
+      6,
+      7,
+      9,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      2,
+      5,
+      12
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      5,
+      6,
+      12
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "unilateral action",
+      "presidential power",
+      "public opinion",
+      "executive orders",
+      "democratic responsiveness",
+      "survey experiment"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      12
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "separation of powers",
+      "legislative process",
+      "executive-legislative relations",
+      "rule of law",
+      "political accountability"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      9
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Our results suggest that public opinion may constrain presidents’ use of unilateral powers.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 00(0): 1–17. https://doi.org/10.1111/ajps.12340",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/constraints.pdf",
+      "journal": null,
+      "replication_data": "https://doi.org/10.7910/DVN/XRJ43D",
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          4,
+          5
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          7,
+          10,
+          11,
+          13,
+          14
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          5,
+          6,
+          12,
+          13
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and page citations. No inferences were made for absent information.",
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      12,
+      13
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "executive power",
+      "public opinion"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey experiment",
+      "observational study"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      5,
+      6,
+      12,
+      13
+    ],
+    "confidence": "high"
+  }
+}

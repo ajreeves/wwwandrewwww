@@ -1,0 +1,148 @@
+{
+  "slug": "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
+  "title": "Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants",
+  "authors": [
+    "Douglas Kriner",
+    "Andrew Reeves"
+  ],
+  "year": 2022,
+  "publication_type": "journal article",
+  "journal": "Ohio State Law Journal Online",
+  "volume": "83",
+  "issue": null,
+  "pages": "230-246",
+  "doi": null,
+  "citation": "Douglas Kriner & Andrew Reeves, Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants, 83 Ohio St. L.J. Online 230 (2022).",
+  "links": {
+    "pdf": "/papers/pasachoff-reply.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This article responds to Pasachoff’s analysis of executive branch control over federal grants, discussing the normative and empirical implications of presidential particularism, especially in the context of partisanship and the Trump administration.",
+  "abstract": null,
+  "plain_english_summary": "The authors discuss how presidents, including Trump, use their power over federal grants to benefit politically important groups, and debate whether this is good for democracy or if it creates unfair advantages.",
+  "research_question": "What are the normative and empirical implications of presidential particularism in the allocation of federal grants, and how does the Trump administration compare to previous presidents in this regard?",
+  "research_highlights": [
+    "Presidents systematically target federal grants to electorally valuable constituencies, such as swing states and core partisan states.",
+    "Republican presidents show stronger evidence of particularistic targeting than Democratic presidents.",
+    "Trump’s actions are consistent with a broader pattern of presidential particularism, though his style may be more overt.",
+    "Normative questions remain about whether strong executive control over distributive policy is desirable compared to alternatives."
+  ],
+  "methods": [
+    "Extension of prior empirical analysis of federal grant allocation using the Consolidated Federal Funds Report (CFFR) data from 1984–2010.",
+    "Regression models with fixed effects for counties and years, examining the impact of swing state and core state status and presidential partisanship."
+  ],
+  "data_sources": [
+    "Consolidated Federal Funds Report (CFFR) 1984–2010"
+  ],
+  "key_variables": [
+    "Swing state status",
+    "Core state status",
+    "Presidential partisanship",
+    "Federal grant spending by county",
+    "Congressional representation"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "1984–2010 (empirical analysis); Trump administration (discussion)",
+  "unit_of_analysis": "county-year",
+  "policy_relevance": null,
+  "pull_quote": "Presidents systematically target disproportionate shares of federal dollars to counties in swing states and core states, and to counties represented by co-partisans in Congress.",
+  "pull_quote_page": 12,
+  "confidence_notes": "Most fields are supported by direct statements or data tables in the text. Abstract is not present. No explicit policy recommendations or identification strategy are described. PDF link is not provided in the document.",
+  "tags": [
+    "political science",
+    "public administration",
+    "American politics",
+    "quantitative analysis",
+    "regression analysis",
+    "comparative analysis",
+    "presidential particularism",
+    "federal grants",
+    "partisanship",
+    "Trump administration",
+    "distributive politics",
+    "executive branch",
+    "political inequality",
+    "executive power",
+    "political polarization",
+    "electoral incentives",
+    "public policy",
+    "democratic legitimacy"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "public administration",
+      "American politics"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "quantitative analysis",
+      "regression analysis",
+      "comparative analysis"
+    ],
+    "methods": [
+      "Extension of prior empirical analysis of federal grant allocation using the Consolidated Federal Funds Report (CFFR) data from 1984–2010.",
+      "Regression models with fixed effects for counties and years, examining the impact of swing state and core state status and presidential partisanship."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "1984–2010 (empirical analysis); Trump administration (discussion)"
+    ],
+    "keywords": [
+      "presidential particularism",
+      "federal grants",
+      "partisanship",
+      "Trump administration",
+      "distributive politics",
+      "executive branch",
+      "political inequality"
+    ],
+    "related_topics": [
+      "executive power",
+      "political polarization",
+      "electoral incentives",
+      "public policy",
+      "democratic legitimacy"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        2,
+        3,
+        4,
+        14,
+        15
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        3,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "methods": {
+      "pages": [
+        10,
+        12,
+        13
+      ]
+    }
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "title": {
+    "value": "The urban-rural divide and residential contentment as antecedents of political ideology",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "James G. Gimpel",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2024,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Cities",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "146",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "104720",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1016/j.cities.2023.104720",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "We explore the foundations of the urban-rural political gulf, which is well-documented in the United States and other western democracies. We theorize that it is anchored in the variable extent of residents’ satisfaction and place attachment. Consistent with a long tradition of sociological findings, we first demonstrate that attachment to one’s neighborhood of residence is much higher among rural populations than in big cities. This variation in place attachment is an important font of political and policy attitudes, substantively contributing to the ideological differences between urban and rural areas. Politically relevant grievances arise most acutely when they are shared as prevailing conditions in specific social environments. The more dissatisfied one is with the place they live, the more attractive they find the policy goals and political agenda of liberal progressivism in US politics. Greater contentment with place, on the other hand, is predictive of politically conservative viewpoints.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "The study finds that lower place attachment in urban areas contributes to more progressive political attitudes, while higher contentment in rural areas is associated with conservatism, helping explain the urban-rural political divide in the US.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People who are happier with where they live, especially in rural areas, tend to have more conservative political views, while those less satisfied, often in cities, are more likely to support progressive policies, helping explain political differences between urban and rural communities.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How does place attachment and residential contentment contribute to the political and ideological divide between urban and rural areas in the United States?",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Place attachment is significantly higher among rural residents than urban residents in the US.",
+      "Lower place attachment (greater discontent) is associated with more progressive/liberal political attitudes, while higher contentment predicts conservatism.",
+      "These patterns persist even after controlling for demographic and socioeconomic variables.",
+      "The urban-rural political divide is partly explained by differences in place attachment and residential satisfaction."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Analysis of survey data from the Cooperative Election Study (CES) across seven waves (2006–2020).",
+      "Measurement of place attachment using a battery of six Likert-scale questions.",
+      "Principal components analysis to create a place attachment score.",
+      "Regression analyses controlling for demographic, socioeconomic, and contextual variables."
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Cooperative Election Study (CES), 2006–2020 waves",
+      "US Census data (ZIP code level)",
+      "US Internal Revenue Service (IRS) adjusted gross income data (ZIP code level)"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Place attachment score",
+      "Population density",
+      "Distance to city",
+      "Political ideology (liberal-conservative scale)",
+      "Demographic variables (age, income, education, race/ethnicity, homeownership, marital status)",
+      "Contextual ZIP code variables (income, home value, racial/ethnic composition)"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2006–2020 (survey waves analyzed)",
+    "evidence_pages": [
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual survey respondent",
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "urban-rural divide",
+      "place attachment",
+      "political ideology",
+      "residential satisfaction",
+      "partisan polarization",
+      "United States"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "political geography",
+      "community satisfaction",
+      "partisan alignment",
+      "urban studies",
+      "rural studies"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "The more dissatisfied one is with the place they live, the more attractive they find the policy goals and political agenda of liberal progressivism in US politics. Greater contentment with place, on the other hand, is predictive of politically conservative viewpoints.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Gimpel, J. G., & Reeves, A. (2024). The urban-rural divide and residential contentment as antecedents of political ideology. Cities, 146, 104720. https://doi.org/10.1016/j.cities.2023.104720",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/attachment.pdf",
+      "journal": "https://www.sciencedirect.com/science/article/pii/S0264275123004292",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "medium"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text. No journal issue number is stated. No explicit policy recommendations or identification strategy are described.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "urban studies",
+      "sociology"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "survey analysis",
+      "cross-sectional analysis"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  }
+}

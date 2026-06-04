@@ -1,0 +1,220 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import FeatureBand from "@components/FeatureBand.astro";
+
+const commentary = [
+  {
+    title: "Trump treats laws as obstacles, not limits − and the only real check on his rule-breaking can come from political pressure",
+    outlet: "The Conversation",
+    date: "May 21, 2025",
+    url: "https://theconversation.com/trump-treats-laws-as-obstacles-not-limits-and-the-only-real-check-on-his-rule-breaking-can-come-from-political-pressure-255834"
+  },
+  {
+    title: "Biden and Trump will talk big at the debate, but how much could either really do?",
+    outlet: "Los Angeles Times",
+    date: "June 25, 2024",
+    url: "https://www.latimes.com/opinion/story/2024-06-25/biden-trump-debate-presidential-campaign"
+  },
+  {
+    title: "Biden’s Supreme Court commission probably won’t sway public opinion",
+    outlet: "The Conversation",
+    date: "June 16, 2021",
+    url: "https://theconversation.com/bidens-supreme-court-commission-probably-wont-sway-public-opinion-159658"
+  },
+  {
+    title: "This pandemic is a test for leaders. Voters do the grading",
+    outlet: "Saint Louis Post-Dispatch",
+    date: "April 1, 2020",
+    url: "https://www.stltoday.com/opinion/columnists/andrew-reeves-this-pandemic-is-a-test-for-leaders-voters-do-the-grading/article_80a024d0-8128-5d4a-809a-122d594e517a.html"
+  },
+  {
+    title: "If Trump took responsibility for coronavirus missteps, it might actually help him",
+    outlet: "Washington Post",
+    date: "March 2020",
+    url: "https://www.washingtonpost.com/politics/2020/03/26/if-trump-took-responsibility-coronavirus-missteps-it-might-actually-help-him/"
+  },
+  {
+    title: "Donald Trump’s lukewarm response to Puerto Rico was pretty predictable. Here’s why",
+    outlet: "Washington Post",
+    date: "October 2, 2017",
+    url: "https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/"
+  },
+  {
+    title: "Florida Disaster Aid Can Help Bush",
+    outlet: "Los Angeles Times",
+    date: "October 3, 2004",
+    url: "/papers/disasters-latimes1.pdf"
+  },
+  {
+    title: "Plucking Votes From Disasters",
+    outlet: "Los Angeles Times",
+    date: "May 12, 2004",
+    url: "/papers/disasters-latimes2.pdf"
+  }
+] as const;
+
+const coverage = [
+  {
+    title: "Swing-State Politics Is Rotting Our Brains and Harming Democracy",
+    outlet: "Slate",
+    date: "October 2024",
+    url: "https://slate.com/news-and-politics/2024/10/us-presidential-election-swing-state-politics-harming-democracy.html"
+  },
+  {
+    title: "Trump seeks to boost presidential bid in Hurricane Helene’s wake, analysts say",
+    outlet: "Reuters",
+    date: "October 2024",
+    url: "https://www.reuters.com/world/us/wake-hurricane-trump-seeks-boost-his-presidential-bid-2024-10-01/"
+  },
+  {
+    title: "Columbia’s political-social climate heavily influenced by University of Missouri",
+    outlet: "Columbia Tribune",
+    date: "February 18, 2024",
+    url: "https://www.columbiatribune.com/story/news/politics/2024/02/18/columbia-political-social-climate-heavily-influenced-university-of-missouri/72588606007/"
+  },
+  {
+    title: "Checking the American Presidency",
+    outlet: "Law & Liberty",
+    date: "January 24, 2023",
+    url: "https://lawliberty.org/book-review/checking-the-american-presidency/"
+  },
+  {
+    title: "Perception matters: How fear about crime impacts presidential approval",
+    outlet: "WashU Source",
+    date: "April 2022",
+    url: "https://source.washu.edu/2022/04/perception-matters-how-fear-about-crime-impacts-presidential-approval/"
+  },
+  {
+    title: "How local and national leaders are tested by major natural disasters",
+    outlet: "NPR",
+    date: "October 2022",
+    url: "https://www.npr.org/2022/10/01/1126239235/politics-natural-disasters-desantis-hurricane-ian"
+  },
+  {
+    title: "Biden Surveys Hurricane Damage in Florida Amid Tension With Governor",
+    outlet: "Voice of America",
+    date: "October 2022",
+    url: "https://www.voanews.com/a/biden-to-survey-hurricane-ian-damage-in-florida/6776635.html"
+  },
+  {
+    title: "Devastating Tornadoes Give Biden One Last Chance to Bridge Red-Blue Rift",
+    outlet: "The Daily Beast",
+    date: "December 2021",
+    url: "https://www.thedailybeast.com/devastating-tornadoes-give-biden-one-last-chance-to-bridge-red-blue-rift"
+  },
+  {
+    title: "Partisanship, the economy, and presidential accountability",
+    outlet: "WashU Source",
+    date: "October 2021",
+    url: "https://source.washu.edu/2021/10/partisanship-the-economy-and-presidential-accountability/"
+  },
+  {
+    title: "Texas’s Disaster Is Over. The Fallout Is Just Beginning",
+    outlet: "The Atlantic",
+    date: "February 2021",
+    url: "https://www.theatlantic.com/politics/archive/2021/02/what-texas-energy-crisis-means-democrats/618127/"
+  },
+  {
+    title: "The Economy is Collapsing. So Are Trump’s Reelection Chances",
+    outlet: "The Atlantic",
+    date: "April 2020",
+    url: "https://www.theatlantic.com/ideas/archive/2020/04/most-important-number-trumps-re-election-chances/609376/"
+  },
+  {
+    title: "The divide between us: Urban-rural political differences rooted in geography",
+    outlet: "WashU Source",
+    date: "February 2020",
+    url: "https://source.washu.edu/2020/02/the-divide-between-us-urban-rural-political-differences-rooted-in-geography/"
+  },
+  {
+    title: "Counties that voted for the president get more in disaster relief",
+    outlet: "The Economist",
+    date: "October 2017",
+    url: "https://www.economist.com/news/united-states/21730430-federal-aid-sent-puerto-rico-fits-longstanding-pattern-counties-voted"
+  },
+  {
+    title: "Disaster Politics Can Get In The Way Of Disaster Preparedness",
+    outlet: "FiveThirtyEight",
+    date: "August 2017",
+    url: "https://fivethirtyeight.com/features/disaster-politics-can-get-in-the-way-of-disaster-preparedness/"
+  },
+  {
+    title: "Good to Know: What is sociotropic voting in politics?",
+    outlet: "Good Authority",
+    date: "",
+    url: "https://goodauthority.org/news/good-to-know-what-is-sociotropic-voting-politics/"
+  },
+  {
+    title: "Do presidents really reward the states that voted them into office?",
+    outlet: "Washington Post",
+    date: "August 2013",
+    url: "https://www.washingtonpost.com/blogs/wonkblog/wp/2013/08/29/do-presidents-really-reward-the-states-that-voted-them-into-office/"
+  },
+  {
+    title: "How Hurricane Sandy Could Matter on Election Day",
+    outlet: "The Monkey Cage",
+    date: "October 2012",
+    url: "https://goodauthority.org/news/how-hurricane-sandy-could-matter-on-election-day/"
+  }
+] as const;
+---
+
+<BaseLayout title="News & Media" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics, and democratic accountability.">
+  <PageHeader
+    eyebrow="News"
+    title="News & Media"
+    intro="Selected essays, commentary, and media coverage on presidential power, disaster politics, political geography, and democratic accountability."
+  />
+
+  <FeatureBand
+    eyebrow="Featured Panel"
+    title="Election Analyst Panel"
+    text="Andrew Reeves moderates the Election Analyst Panel at Political Analytics 2025 at Harvard University, featuring Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley."
+    image="/images/andrew-harvard-page.jpg"
+    alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"
+  />
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Commentary</p>
+        <h2>Essays and Op-Eds</h2>
+        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Public writing on presidential power, disaster politics, and electoral accountability.</p>
+      </div>
+    </div>
+    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
+      {
+        commentary.map((item) => (
+          <article class="editorial-card">
+            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
+            <h3 class="list-title">
+              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
+            </h3>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Coverage</p>
+        <h2>Research in the Media</h2>
+      </div>
+    </div>
+    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
+      {
+        coverage.map((item) => (
+          <article class="editorial-card">
+            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
+            <h3 class="list-title">
+              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
+            </h3>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

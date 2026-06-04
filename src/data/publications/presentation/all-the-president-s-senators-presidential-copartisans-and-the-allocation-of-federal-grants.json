@@ -1,0 +1,151 @@
+{
+  "slug": "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+  "title": "All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants",
+  "authors": [
+    "Dino P. Christenson",
+    "Douglas L. Kriner",
+    "Andrew Reeves"
+  ],
+  "year": 2017,
+  "publication_type": "journal article",
+  "journal": "Legislative Studies Quarterly",
+  "volume": "42",
+  "issue": "2",
+  "pages": "269-294",
+  "doi": "10.1111/lsq.12160",
+  "citation": "Christenson, Dino P., Douglas L. Kriner, and Andrew Reeves. 2017. \"All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants.\" Legislative Studies Quarterly 42(2): 269-294. doi:10.1111/lsq.12160.",
+  "links": {
+    "pdf": "/papers/senators.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Presidential copartisan senators secure more federal grant dollars for their states than opposition party senators, and presidents target grants to states that gain copartisan senators.",
+  "abstract": "Analyzing the allocation of more than $8.5 trillion of federal grants across the states from 1984 to 2008, we show that presidential copartisan senators are more successful than opposition party members in securing federal dollars for their home states. Moreover, presidents appear to target grants ex post to states that gain presidential copartisans in recent elections.",
+  "plain_english_summary": "Senators from the president’s party are better at bringing federal grant money to their states than senators from the other party, and presidents tend to direct more grants to states that recently elected senators from their own party.",
+  "research_question": "Do presidential politics shape distributive outcomes in the Senate, specifically in the allocation of federal grants across states?",
+  "research_highlights": [
+    "Presidential copartisan senators are more successful than opposition party senators in securing federal grant dollars for their states.",
+    "Presidents target grants ex post to states that gain presidential copartisans in recent elections.",
+    "The number of presidential copartisan senators is a strong predictor of per capita grant spending a state receives.",
+    "No similar effect is found for federal retirement and disability spending, which is not subject to political influence."
+  ],
+  "methods": [
+    "Quantitative analysis of state-level federal grant allocations from 1984 to 2008.",
+    "Least squares regression models with state and year fixed effects, standard errors clustered on state.",
+    "Control variables for majority party status, committee membership, electoral vulnerability, and House delegation partisanship.",
+    "Placebo test using retirement and disability spending."
+  ],
+  "data_sources": [
+    "Consolidated Federal Funds Reports (CFFR) for state-level federal grant allocations"
+  ],
+  "key_variables": [
+    "Number of presidential copartisan senators per state",
+    "Per capita federal grant spending (logged)",
+    "Majority party senators",
+    "Democratic senators",
+    "Percentage of House delegation copartisans",
+    "Committee membership",
+    "Electoral vulnerability measures"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (all 50 states)",
+  "time_period": "1984 to 2008",
+  "unit_of_analysis": "state-year",
+  "policy_relevance": null,
+  "pull_quote": "Presidential copartisan senators are more successful than opposition party members in securing federal dollars for their home states.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and tables. No information is inferred beyond the explicit content of the article.",
+  "tags": [
+    "American politics",
+    "legislative studies",
+    "public administration",
+    "observational study",
+    "panel data analysis",
+    "presidential politics",
+    "federal grants",
+    "Senate",
+    "copartisanship",
+    "distributive politics",
+    "United States",
+    "Congressional politics",
+    "executive-legislative relations",
+    "federal spending",
+    "partisanship"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "legislative studies",
+      "public administration"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "observational study",
+      "panel data analysis"
+    ],
+    "methods": [
+      "Quantitative analysis of state-level federal grant allocations from 1984 to 2008.",
+      "Least squares regression models with state and year fixed effects, standard errors clustered on state.",
+      "Control variables for majority party status, committee membership, electoral vulnerability, and House delegation partisanship.",
+      "Placebo test using retirement and disability spending."
+    ],
+    "geography": [
+      "United States (all 50 states)"
+    ],
+    "time_period": [
+      "1984 to 2008"
+    ],
+    "keywords": [
+      "presidential politics",
+      "federal grants",
+      "Senate",
+      "copartisanship",
+      "distributive politics",
+      "United States"
+    ],
+    "related_topics": [
+      "Congressional politics",
+      "executive-legislative relations",
+      "federal spending",
+      "partisanship"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "methods": {
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        41
+      ]
+    }
+  }
+}

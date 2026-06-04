@@ -1,0 +1,382 @@
+{
+  "title": {
+    "value": "Public Opinion Toward Presidential Power",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Jon C. Rogowski"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2015,
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Presidential Studies Quarterly",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "45",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "742-759",
+    "evidence_pages": [
+      1,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article examines public attitudes toward the levers of presidential power using data from a nationally representative survey. The authors find that respondents who provide higher approval ratings of the president are significantly more supportive of presidential powers. The findings suggest that views toward executive power are shaped by presidential approval and that popular presidents can use their prestige to expand the scope of powers available to the presidency.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Public support for presidential powers is shaped by approval of the president, with popular presidents able to leverage their prestige to expand executive authority.",
+    "evidence_pages": [
+      1,
+      2,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "People who like the president are more likely to support giving the president more power, meaning that popular presidents can use their popularity to increase what they are allowed to do.",
+    "evidence_pages": [
+      1,
+      2,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How does public approval of the president relate to support for the powers of the presidency?",
+    "evidence_pages": [
+      1,
+      2,
+      7
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Respondents with higher approval of the president are significantly more supportive of presidential powers.",
+      "Support for specific presidential powers varies widely among the public.",
+      "Partisan differences in support for presidential powers are smaller than differences in presidential approval.",
+      "Public attitudes toward presidential power are distinct from attitudes toward the president as an individual."
+    ],
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Original nationally representative survey of U.S. adults (2013 Cooperative Congressional Election Study)",
+      "Logistic regression analysis of survey responses"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "2013 Cooperative Congressional Election Study (CCES)"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      11,
+      12
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Presidential approval",
+      "Support for presidential powers (unilateral military action, executive privilege, veto powers, appointing judges without Senate confirmation, directing agency implementation, unilateral policy enactment)",
+      "Partisanship",
+      "Education",
+      "Ideology"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      11,
+      12,
+      15
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      7
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "November 2013",
+    "evidence_pages": [
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "individual (survey respondent)",
+    "evidence_pages": [
+      7,
+      8,
+      11
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential power",
+      "public opinion",
+      "presidential approval",
+      "executive authority",
+      "partisanship"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "separation of powers",
+      "executive branch",
+      "political institutions",
+      "democratic accountability"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      14,
+      15
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "These findings provide striking evidence that views toward executive power are shaped by presidential approval and suggest that popular presidents can use their prestige to expand the scope of powers available to the presidency.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, and Jon C. Rogowski. 2015. \"Public Opinion Toward Presidential Power.\" Presidential Studies Quarterly 45(4): 742-759.",
+    "evidence_pages": [
+      1,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/prespower.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          7
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14
+        ]
+      },
+      "methods": {
+        "pages": [
+          7,
+          8,
+          11,
+          12
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the text on the cited pages. No information about DOI, policy relevance, or external links is present in the document.",
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "public opinion",
+      "executive power"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "survey research",
+      "quantitative analysis"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      11,
+      12
+    ],
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "slug": "learning-from-place-in-the-era-of-geolocation",
+  "title": "Learning from Place in the Era of Geolocation",
+  "authors": [
+    "Ryan T. Moore",
+    "Andrew Reeves"
+  ],
+  "year": "2017",
+  "publication_type": "book chapter",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "doi": null,
+  "citation": "Ryan T. Moore, Andrew Reeves. (2017). \"Learning from Place in the Era of Geolocation.\"",
+  "links": {
+    "pdf": "/papers/geolocation.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This chapter reviews current uses, opportunities, challenges, and privacy concerns related to individual geolocation data in social science and policy research.",
+  "abstract": "In this chapter, we give an overview of the ways that scholars and policymakers are currently using individual geolocation data. We also describe some new analytic and service-provision possibilities that geolocation data enables. We discuss several challenges inherent in obtaining geolocation data and making that data useful for social, political, and policy research and practice. We highlight the unique concerns over privacy that arise in this rich data environment, and note some promising approaches for addressing them.",
+  "plain_english_summary": "The chapter explains how geolocation data from smartphones and other devices are being used by researchers and governments to better understand people's environments, improve public services, and address privacy challenges.",
+  "research_question": "How are scholars and policymakers currently using individual geolocation data, what new analytic and service-provision possibilities does it enable, and what challenges and privacy concerns arise in its use?",
+  "research_highlights": [
+    "Geolocation data allow for richer, more dynamic measurement of individuals' social and physical contexts than traditional geographic proxies.",
+    "Such data enable improved public service delivery and new insights for urban planning, public health, and social science research.",
+    "There are significant challenges in collecting, linking, and analyzing geolocation data, including technical, ethical, and privacy concerns.",
+    "Privacy risks are heightened due to the uniqueness and identifiability of geolocation traces, requiring careful data handling and transparency with users."
+  ],
+  "methods": [
+    "Overview and synthesis of existing literature and applications in geolocation data use.",
+    "Discussion of methodological challenges such as the modifiable areal unit problem (MAUP) and the uncertain geographic context problem (UGCoP).",
+    "Examples of data collection methods including smartphone apps, GPS loggers, and survey integration."
+  ],
+  "data_sources": [],
+  "key_variables": [],
+  "identification_strategy": null,
+  "geography": "United States (with examples from Maryland and various cities)",
+  "time_period": null,
+  "unit_of_analysis": "individuals",
+  "policy_relevance": null,
+  "pull_quote": "We can better reflect the modern realities of human mobility by measuring social and political contexts in dynamic ways; we are no longer tied to 'county of residence' to describe people’s experiences.",
+  "pull_quote_page": 17,
+  "confidence_notes": "Most fields are supported by explicit statements in the text. No direct citation, DOI, or public PDF link is provided in the document.",
+  "tags": [
+    "social science",
+    "public policy",
+    "data privacy",
+    "literature review",
+    "conceptual synthesis",
+    "methodological discussion",
+    "geolocation",
+    "privacy",
+    "public goods",
+    "contextual analysis",
+    "smartphones",
+    "policy research",
+    "urban planning",
+    "public health",
+    "survey research",
+    "mobile technology"
+  ],
+  "filters": {
+    "substantive_area": [
+      "social science",
+      "public policy",
+      "data privacy"
+    ],
+    "government_level": [
+      "local",
+      "federal"
+    ],
+    "research_design": [
+      "literature review",
+      "conceptual synthesis",
+      "methodological discussion"
+    ],
+    "methods": [
+      "Overview and synthesis of existing literature and applications in geolocation data use.",
+      "Discussion of methodological challenges such as the modifiable areal unit problem (MAUP) and the uncertain geographic context problem (UGCoP).",
+      "Examples of data collection methods including smartphone apps, GPS loggers, and survey integration."
+    ],
+    "geography": [
+      "United States (with examples from Maryland and various cities)"
+    ],
+    "time_period": [],
+    "keywords": [
+      "geolocation",
+      "privacy",
+      "public goods",
+      "contextual analysis",
+      "smartphones",
+      "social science",
+      "policy research"
+    ],
+    "related_topics": [
+      "urban planning",
+      "public health",
+      "data privacy",
+      "survey research",
+      "mobile technology"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "methods": {
+      "pages": [
+        2,
+        3,
+        4,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  }
+}

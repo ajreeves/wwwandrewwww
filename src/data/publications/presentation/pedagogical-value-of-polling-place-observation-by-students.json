@@ -1,0 +1,157 @@
+{
+  "slug": "pedagogical-value-of-polling-place-observation-by-students",
+  "title": "Pedagogical Value of Polling-Place Observation by Students",
+  "authors": [
+    "Christopher B. Mann",
+    "Gayle A. Alberda",
+    "Nathaniel A. Birkhead",
+    "Yu Ouyang",
+    "Chloe Singer",
+    "Charles Stewart III",
+    "Michael C. Herron",
+    "Emily Beaulieu",
+    "Frederick Boehmke",
+    "Joshua Boston",
+    "Francisco Cantu",
+    "Rachael Cobb",
+    "David Darmofal",
+    "Thomas C. Ellington",
+    "Charles J. Finocchiaro",
+    "Michael Gilbert",
+    "Victor Haynes",
+    "Brian Janssen",
+    "David Kimball",
+    "Charles Kromkowski",
+    "Elena Llaudet",
+    "Matthew R. Miles",
+    "David Miller",
+    "Lindsay Nielson",
+    "Costas Panagopoulos",
+    "Andrew Reeves",
+    "Min Hee Seo",
+    "Haley Simmons",
+    "Corwin Smidt",
+    "Robert Stein",
+    "Rachel VanSickle-Ward",
+    "Abby K. Wood",
+    "Julie Wronski"
+  ],
+  "year": 2018,
+  "publication_type": "journal article",
+  "journal": "PS: Political Science & Politics",
+  "volume": "51",
+  "issue": "4",
+  "pages": "831-837",
+  "doi": "10.1017/S1049096518000550",
+  "citation": "Mann, Christopher B., Gayle A. Alberda, Nathaniel A. Birkhead, Yu Ouyang, et al. 2018. \"Pedagogical Value of Polling-Place Observation by Students.\" PS: Political Science & Politics 51(4): 831-837. doi:10.1017/S1049096518000550.",
+  "links": {
+    "pdf": "/papers/polling.pdf",
+    "journal": "https://doi.org/10.1017/S1049096518000550",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Observing polling places as part of a multi-campus research project provided students with valuable experiential learning, increasing their knowledge and engagement with election science and democratic processes.",
+  "abstract": "We report on an evaluation of the pedagogical value of a research project involving 23 colleges and universities across the country. Faculty trained and supervised students who observed polling places in the 2016 General Election. Our findings indicate that this was a valuable learning experience in both the short and long terms. Students found their experiences to be valuable and reported learning generally and specifically related to course material. Postelection, they also felt more knowledgeable about election science topics, voting behavior, and research methods. Students reported interest in participating in similar research in the future, would recommend other students to do so, and expressed interest in more learning and research about the topics central to their experience. Our results suggest that participants appreciated the importance of elections and their study. Collectively, the participating students are engaged and efficacious—essential qualities of citizens in a democracy.",
+  "plain_english_summary": "Students who observed polling places during the 2016 election as part of a research project reported learning more about elections, research methods, and civic engagement, and showed increased interest in future research and participation in democracy.",
+  "research_question": "Does observing polling locations on Election Day as part of a data-collection process produce pedagogical value for students?",
+  "research_highlights": [
+    "Students reported that observing polling places was a valuable learning experience.",
+    "Participants felt more knowledgeable about election science, voting behavior, and research methods after the experience.",
+    "Students expressed interest in participating in similar research in the future and would recommend the experience to others.",
+    "The project fostered engagement and efficacy, important qualities for democratic citizenship."
+  ],
+  "methods": [
+    "Post-election survey of student participants across 23 colleges and universities.",
+    "Survey measured self-assessed learning, perceived value, and interest in future research.",
+    "Word cloud analysis of open-ended survey responses."
+  ],
+  "data_sources": [
+    "Post-election survey responses from 479 students who participated in polling place observation."
+  ],
+  "key_variables": [
+    "Self-assessed learning",
+    "Perceived value of experience",
+    "Interest in future research",
+    "Knowledge of election science topics"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (23 colleges and universities across the country)",
+  "time_period": "November 2016 (2016 General Election)",
+  "unit_of_analysis": "Student participant",
+  "policy_relevance": null,
+  "pull_quote": "I was really excited to gather data because it made me feel like a real part of the democratic process.",
+  "pull_quote_page": 2,
+  "confidence_notes": "All extracted fields are directly supported by the document text and page references. No inferences were made beyond the provided evidence.",
+  "tags": [
+    "political science",
+    "education",
+    "survey research",
+    "experiential learning assessment",
+    "experiential learning",
+    "election science",
+    "polling place observation",
+    "pedagogy",
+    "student engagement",
+    "civic engagement",
+    "active learning",
+    "research methods",
+    "voting behavior"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "education"
+    ],
+    "government_level": [],
+    "research_design": [
+      "survey research",
+      "experiential learning assessment"
+    ],
+    "methods": [
+      "Post-election survey of student participants across 23 colleges and universities.",
+      "Survey measured self-assessed learning, perceived value, and interest in future research.",
+      "Word cloud analysis of open-ended survey responses."
+    ],
+    "geography": [
+      "United States (23 colleges and universities across the country)"
+    ],
+    "time_period": [
+      "November 2016 (2016 General Election)"
+    ],
+    "keywords": [
+      "experiential learning",
+      "election science",
+      "polling place observation",
+      "pedagogy",
+      "student engagement"
+    ],
+    "related_topics": [
+      "civic engagement",
+      "active learning",
+      "research methods",
+      "voting behavior"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        3
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    "methods": {
+      "pages": [
+        3,
+        4,
+        5
+      ]
+    }
+  }
+}

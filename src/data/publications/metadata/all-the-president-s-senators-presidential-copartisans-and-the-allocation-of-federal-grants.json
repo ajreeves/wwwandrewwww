@@ -1,0 +1,478 @@
+{
+  "title": {
+    "value": "All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Dino P. Christenson",
+      "Douglas L. Kriner",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      21
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2017,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Legislative Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "42",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "269-294",
+    "evidence_pages": [
+      1,
+      2,
+      294
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/lsq.12160",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Analyzing the allocation of more than $8.5 trillion of federal grants across the states from 1984 to 2008, we show that presidential copartisan senators are more successful than opposition party members in securing federal dollars for their home states. Moreover, presidents appear to target grants ex post to states that gain presidential copartisans in recent elections.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Presidential copartisan senators secure more federal grant dollars for their states than opposition party senators, and presidents target grants to states that gain copartisan senators.",
+    "evidence_pages": [
+      1,
+      2,
+      20
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Senators from the president’s party are better at bringing federal grant money to their states than senators from the other party, and presidents tend to direct more grants to states that recently elected senators from their own party.",
+    "evidence_pages": [
+      1,
+      2,
+      20
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do presidential politics shape distributive outcomes in the Senate, specifically in the allocation of federal grants across states?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidential copartisan senators are more successful than opposition party senators in securing federal grant dollars for their states.",
+      "Presidents target grants ex post to states that gain presidential copartisans in recent elections.",
+      "The number of presidential copartisan senators is a strong predictor of per capita grant spending a state receives.",
+      "No similar effect is found for federal retirement and disability spending, which is not subject to political influence."
+    ],
+    "evidence_pages": [
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Quantitative analysis of state-level federal grant allocations from 1984 to 2008.",
+      "Least squares regression models with state and year fixed effects, standard errors clustered on state.",
+      "Control variables for majority party status, committee membership, electoral vulnerability, and House delegation partisanship.",
+      "Placebo test using retirement and disability spending."
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      9,
+      10,
+      13,
+      14,
+      41
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Consolidated Federal Funds Reports (CFFR) for state-level federal grant allocations"
+    ],
+    "evidence_pages": [
+      7
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Number of presidential copartisan senators per state",
+      "Per capita federal grant spending (logged)",
+      "Majority party senators",
+      "Democratic senators",
+      "Percentage of House delegation copartisans",
+      "Committee membership",
+      "Electoral vulnerability measures"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      9,
+      41
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (all 50 states)",
+    "evidence_pages": [
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1984 to 2008",
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "state-year",
+    "evidence_pages": [
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "presidential politics",
+      "federal grants",
+      "Senate",
+      "copartisanship",
+      "distributive politics",
+      "United States"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "Congressional politics",
+      "executive-legislative relations",
+      "federal spending",
+      "partisanship"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Presidential copartisan senators are more successful than opposition party members in securing federal dollars for their home states.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Christenson, Dino P., Douglas L. Kriner, and Andrew Reeves. 2017. \"All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants.\" Legislative Studies Quarterly 42(2): 269-294. doi:10.1111/lsq.12160.",
+    "evidence_pages": [
+      1,
+      21
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/senators.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "methods": {
+        "pages": [
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          41
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      41
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and tables. No information is inferred beyond the explicit content of the article.",
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      41
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "American politics",
+      "legislative studies",
+      "public administration"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "medium"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      41
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "panel data analysis"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      9,
+      10,
+      41
+    ],
+    "confidence": "high"
+  }
+}

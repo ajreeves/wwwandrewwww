@@ -1,0 +1,348 @@
+{
+  "title": {
+    "value": "Defining racial and ethnic context with geolocation data",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Ryan T. Moore",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2020,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Political Science Research and Methods",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "8",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "780–794",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1017/psrm.2020.10",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "research note",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Across disciplines, scholars strive to better understand individuals’ milieus—the people, places, and institutions individuals encounter in their daily lives. In particular, political scientists argue that racial and ethnic context shapes attitudes about candidates, policies, and fellow citizens. Yet, the current standard of measuring milieus is to place survey respondents in a geographic container and then to ascribe all that container’s characteristics to the individual’s milieu. Using a new dataset of over 2.6 million GPS records from over 400 individuals, we compare conventional static measures of racial and ethnic context to dynamic, precise measures of milieus. We demonstrate how low-level static measures tend to overstate how extreme individuals’ racial and ethnic contexts are and offer suggestions for future researchers.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "This study shows that static geographic measures overstate the extremity of individuals’ racial and ethnic contexts compared to dynamic measures using GPS data from over 400 individuals.",
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The authors use GPS data from hundreds of people to show that traditional methods of measuring the racial and ethnic makeup of people's environments often exaggerate how extreme those environments are, and that tracking where people actually go gives a more accurate picture.",
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "How do static geographic measures of racial and ethnic context compare to dynamic, individualized measures based on geolocation data?",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Static measures of racial and ethnic context, even at low geographic levels, often misrepresent individuals’ actual experiences.",
+      "Dynamic, GPS-based measures reveal that individuals’ racial and ethnic milieus are typically more moderate than static measures suggest.",
+      "There is substantial individual variation in contextual experiences, even within the same county or metropolitan area.",
+      "Low-level static measures can sometimes estimate dynamic experiences, but not uniformly across racial and ethnic groups."
+    ],
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Collection of over 2.6 million GPS records from 446 users of the OpenPaths smartphone application.",
+      "Assignment of GPS coordinates to census blocks using FIPS codes.",
+      "Comparison of dynamic, individualized measures of racial and ethnic context to static measures at various geographic levels (block, tract, county, state)."
+    ],
+    "evidence_pages": [
+      1,
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "OpenPaths smartphone application GPS data",
+      "2010 US Census block data",
+      "American Community Survey (2008–2012)"
+    ],
+    "evidence_pages": [
+      6,
+      7,
+      5
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "GPS coordinates (latitude, longitude)",
+      "Census block racial and ethnic composition",
+      "Geographic containers (block, tract, county, state)"
+    ],
+    "evidence_pages": [
+      6,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (all 50 states and the District of Columbia)",
+    "evidence_pages": [
+      7
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "unit_of_analysis": {
+    "value": "individual",
+    "evidence_pages": [
+      1,
+      7,
+      8
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "context",
+      "data collection",
+      "measurement",
+      "spatial methods"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "racial context",
+      "ethnic context",
+      "geolocation",
+      "measurement error",
+      "political behavior"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Static measures of lived experience, usually defined by residence at a single level of geography, fail to capture the variety of experiences that individuals are often posited to have.",
+    "evidence_pages": [
+      10
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 10,
+    "evidence_pages": [
+      10
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Moore, Ryan T., and Andrew Reeves. 2020. \"Defining racial and ethnic context with geolocation data.\" Political Science Research and Methods 8: 780–794. doi:10.1017/psrm.2020.10",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/context.pdf",
+      "journal": "https://doi.org/10.1017/psrm.2020.10",
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          8
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the document text and page references. No information is inferred beyond what is stated.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "measurement",
+      "spatial analysis"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "research_design": {
+    "value": [
+      "descriptive analysis",
+      "measurement comparison"
+    ],
+    "evidence_pages": [
+      1,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confidence": "high"
+  }
+}

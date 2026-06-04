@@ -1,0 +1,144 @@
+{
+  "slug": "polling-place-quality-and-access",
+  "title": "Polling Place Quality and Access",
+  "authors": [
+    "Robert Stein",
+    "Christopher Mann",
+    "Charles Stewart III"
+  ],
+  "year": 2020,
+  "publication_type": "Book chapter",
+  "journal": null,
+  "volume": null,
+  "issue": null,
+  "pages": "83-100",
+  "doi": "10.1007/978-3-030-14947-5_6",
+  "citation": "Stein, R., Mann, C., & Stewart III, C. (2020). Polling Place Quality and Access. In M. Brown, K. Hale, & B. A. King (Eds.), The Future of Election Administration (pp. 83-100). https://doi.org/10.1007/978-3-030-14947-5_6",
+  "links": {
+    "pdf": "/papers/access.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "A national study of 528 polling places in 26 jurisdictions during the 2016 U.S. presidential election found high overall quality and accessibility, with little evidence that polling place attributes varied by race, ethnicity, or socioeconomic composition, and most variation attributable to county and state factors.",
+  "abstract": null,
+  "plain_english_summary": "Researchers observed polling places across 17 states during the 2016 U.S. presidential election and found that most polling places were accessible, well-managed, and had few barriers to voting, with differences in quality mainly due to county and state factors rather than the racial or economic makeup of voters.",
+  "research_question": "What is the variation in polling place accessibility, quality, and barriers to voting across and within U.S. jurisdictions, and are these variations attributable to racial, ethnic, or socioeconomic composition of voters or to jurisdictional factors?",
+  "research_highlights": [
+    "Polling places in the 2016 national sample were generally accessible, well-managed, and had few barriers to voting.",
+    "There was little evidence that polling place accessibility, quality, or barriers varied by race, ethnicity, or socioeconomic composition of voters.",
+    "Most variation in polling place attributes was attributable to county and state (jurisdictional) factors rather than within-county differences."
+  ],
+  "methods": [
+    "Multi-jurisdictional observational study of polling places during the 2016 U.S. presidential election.",
+    "Random and convenience sampling of polling places in 26 jurisdictions across 17 states.",
+    "Student researchers observed and recorded polling place attributes using standardized protocols and forms.",
+    "Regression analysis to assess the relationship between polling place attributes and demographic variables, with and without county fixed effects."
+  ],
+  "data_sources": [
+    "Direct observation of 528 polling places by research teams.",
+    "Demographic data from Catalist (2016) for precinct-level analysis."
+  ],
+  "key_variables": [
+    "Polling place accessibility (visibility, signage, lighting, ease of finding)",
+    "Polling place quality (parking, handicapped access, restrooms, interior lighting, size, waiting area, amenities)",
+    "Barriers to voting (posted instructions, working machines, etc.)",
+    "Demographic composition of precincts (race, ethnicity, poverty, renter status, education)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (26 jurisdictions in 17 states)",
+  "time_period": "2016 U.S. presidential election (November 8, 2016)",
+  "unit_of_analysis": "Polling place",
+  "policy_relevance": null,
+  "pull_quote": "Our national sample indicated that polling places were accessible, well managed, and with few barriers to voters.",
+  "pull_quote_page": 16,
+  "confidence_notes": "All extracted information is directly supported by the cited pages. No abstract or policy recommendations are present in the text. Journal and PDF links are not stated in the document.",
+  "tags": [
+    "election administration",
+    "voting behavior",
+    "public policy",
+    "observational study",
+    "cross-sectional analysis",
+    "regression analysis",
+    "polling place",
+    "voting access",
+    "polling place quality",
+    "barriers to voting",
+    "jurisdictional variation",
+    "2016 presidential election",
+    "election law",
+    "voter turnout",
+    "election policy",
+    "racial and socioeconomic disparities in voting"
+  ],
+  "filters": {
+    "substantive_area": [
+      "election administration",
+      "voting behavior",
+      "public policy"
+    ],
+    "government_level": [
+      "state",
+      "county"
+    ],
+    "research_design": [
+      "observational study",
+      "cross-sectional analysis",
+      "regression analysis"
+    ],
+    "methods": [
+      "Multi-jurisdictional observational study of polling places during the 2016 U.S. presidential election.",
+      "Random and convenience sampling of polling places in 26 jurisdictions across 17 states.",
+      "Student researchers observed and recorded polling place attributes using standardized protocols and forms.",
+      "Regression analysis to assess the relationship between polling place attributes and demographic variables, with and without county fixed effects."
+    ],
+    "geography": [
+      "United States (26 jurisdictions in 17 states)"
+    ],
+    "time_period": [
+      "2016 U.S. presidential election (November 8, 2016)"
+    ],
+    "keywords": [
+      "polling place",
+      "election administration",
+      "voting access",
+      "polling place quality",
+      "barriers to voting",
+      "jurisdictional variation",
+      "2016 presidential election"
+    ],
+    "related_topics": [
+      "election law",
+      "voter turnout",
+      "election policy",
+      "racial and socioeconomic disparities in voting"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        3,
+        4,
+        14
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        3,
+        9,
+        12,
+        14,
+        16
+      ]
+    },
+    "methods": {
+      "pages": [
+        4,
+        6,
+        7,
+        14,
+        15
+      ]
+    }
+  }
+}

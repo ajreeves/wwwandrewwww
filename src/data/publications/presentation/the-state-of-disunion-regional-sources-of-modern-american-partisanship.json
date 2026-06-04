@@ -1,0 +1,121 @@
+{
+  "slug": "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
+  "title": "The State of Disunion: Regional Sources of Modern American Partisanship",
+  "authors": [
+    "Nicole Mellow"
+  ],
+  "year": "2008",
+  "publication_type": "book review",
+  "journal": "Political Science Quarterly",
+  "volume": null,
+  "issue": null,
+  "pages": "743-744",
+  "doi": null,
+  "citation": "Mellow, Nicole. The State of Disunion: Regional Sources of Modern American Partisanship. Baltimore, MD: Johns Hopkins University Press, 2008. Reviewed in Political Science Quarterly, pp. 743-744.",
+  "links": {
+    "pdf": null,
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "This review discusses Nicole Mellow's argument that regional interests are central to understanding modern American partisanship, highlighting both the strengths and limitations of her evidence and conceptualization of regions.",
+  "abstract": null,
+  "plain_english_summary": "Nicole Mellow's book argues that regional differences play a key role in shaping American political parties, but the reviewer notes that the evidence is limited and the definition of regions could be clearer.",
+  "research_question": "Are regions important in understanding American politics, particularly in shaping modern American partisanship?",
+  "research_highlights": [
+    "Regions are largely responsible for the state of party politics today by directing politicians' motives and determining issues.",
+    "Regional interests influence party cohesion on issues like free trade, welfare reform, and abortion.",
+    "The evidence for the independent effect of region is limited and sometimes equivocal, with small sample sizes and somewhat arbitrary regional definitions."
+  ],
+  "methods": [
+    "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
+    "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
+  ],
+  "data_sources": [],
+  "key_variables": [
+    "Region",
+    "Party cohesion",
+    "Issue salience (free trade, welfare reform, abortion)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)",
+  "time_period": "1950s to present (as of 2008)",
+  "unit_of_analysis": "Region (as defined by the author, e.g., North, South, etc.) and legislative behavior",
+  "policy_relevance": null,
+  "pull_quote": "The key to building a successful and stable party coalition is to unite regions that are most easily linked, either because of similar histories or because of similarities in demography, economy, and ideology.",
+  "pull_quote_page": 2,
+  "confidence_notes": "All extracted information is based strictly on the content of the review. No volume or issue number is provided in the text. The reviewer's summary and critique are used for findings and methods.",
+  "tags": [
+    "American politics",
+    "political parties",
+    "regionalism",
+    "comparative analysis",
+    "regression analysis (limited sample)",
+    "partisanship",
+    "party system",
+    "free trade",
+    "welfare reform",
+    "abortion",
+    "legislative behavior",
+    "coalition building",
+    "issue salience"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "political parties",
+      "regionalism"
+    ],
+    "government_level": [
+      "national"
+    ],
+    "research_design": [
+      "comparative analysis",
+      "regression analysis (limited sample)"
+    ],
+    "methods": [
+      "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
+      "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
+    ],
+    "geography": [
+      "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)"
+    ],
+    "time_period": [
+      "1950s to present (as of 2008)"
+    ],
+    "keywords": [
+      "regionalism",
+      "partisanship",
+      "American politics",
+      "party system",
+      "free trade",
+      "welfare reform",
+      "abortion"
+    ],
+    "related_topics": [
+      "legislative behavior",
+      "coalition building",
+      "political parties",
+      "issue salience"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2
+      ]
+    }
+  }
+}

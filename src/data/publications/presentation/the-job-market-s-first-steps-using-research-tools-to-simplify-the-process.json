@@ -1,0 +1,131 @@
+{
+  "slug": "the-job-market-s-first-steps-using-research-tools-to-simplify-the-process",
+  "title": "The Job Market’s First Steps: Using Research Tools to Simplify the Process",
+  "authors": [
+    "Ryan T. Moore",
+    "Andrew Reeves"
+  ],
+  "year": 2011,
+  "publication_type": "journal article",
+  "journal": "PS: Political Science & Politics",
+  "volume": "44",
+  "issue": "2",
+  "pages": "385-391",
+  "doi": "10.1017/S1049096511000230",
+  "citation": "Moore, Ryan T., and Andrew Reeves. 2011. \"The Job Market’s First Steps: Using Research Tools to Simplify the Process.\" PS: Political Science & Politics 44(2): 385-391. doi:10.1017/S1049096511000230.",
+  "links": {
+    "pdf": "/papers/jobs.pdf",
+    "journal": null,
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The article presents open-source tools using R and LaTeX to automate and simplify the process of collecting job information and preparing application materials for the political science job market.",
+  "abstract": "This article introduces free and open-source tools to automate the collection of job information and the generation of application materials for the political science job market. The authors describe how to use R and LaTeX to minimize manual data entry, extract job data from APSA’s eJobs, and produce customized letters and mailing labels, thereby streamlining the application process for job seekers.",
+  "plain_english_summary": "The authors describe how political science job seekers can save time by using free software tools to automatically gather job postings and create application letters, reducing repetitive tasks and minimizing errors in the application process.",
+  "research_question": "How can free and open-source research tools be used to automate and simplify the process of collecting job information and preparing application materials for the political science job market?",
+  "research_highlights": [
+    "The muRL package, using R and LaTeX, automates the extraction of job data from APSA’s eJobs and the creation of customized application letters and mailing labels.",
+    "Automating these tasks reduces manual data entry, saves time, and helps prevent errors in job applications.",
+    "The tools are flexible and can be adapted for other mail-merge tasks, such as letters of recommendation."
+  ],
+  "methods": [
+    "Development and demonstration of open-source software tools (muRL) in R and LaTeX.",
+    "Step-by-step procedural description for automating data collection and letter generation."
+  ],
+  "data_sources": [
+    "APSA eJobs listings"
+  ],
+  "key_variables": [
+    "Job posting information (institution, job type, deadline, contact, department, position title, mailing information)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": null,
+  "unit_of_analysis": "job postings",
+  "policy_relevance": null,
+  "pull_quote": "Our system minimizes manual data entry by extracting and creating a spreadsheet from APSA’s eJobs information.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted information is directly supported by the article text, figures, and footnotes. No inferences were made beyond the explicit content of the document.",
+  "tags": [
+    "political science",
+    "academic job market",
+    "research tools",
+    "software demonstration",
+    "procedural guide",
+    "job market",
+    "automation",
+    "R",
+    "LaTeX",
+    "APSA eJobs",
+    "application letters",
+    "open-source tools",
+    "academic job search",
+    "mail merge",
+    "data processing",
+    "application materials"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "academic job market",
+      "research tools"
+    ],
+    "government_level": [],
+    "research_design": [
+      "software demonstration",
+      "procedural guide"
+    ],
+    "methods": [
+      "Development and demonstration of open-source software tools (muRL) in R and LaTeX.",
+      "Step-by-step procedural description for automating data collection and letter generation."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [],
+    "keywords": [
+      "job market",
+      "political science",
+      "automation",
+      "R",
+      "LaTeX",
+      "APSA eJobs",
+      "application letters",
+      "open-source tools"
+    ],
+    "related_topics": [
+      "academic job search",
+      "mail merge",
+      "data processing",
+      "application materials"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "title": {
+    "value": "Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Robert M. Stein",
+      "Barry C. Burden",
+      "Matt Lamb",
+      "Gayle Alberda",
+      "Lonna Atkeson",
+      "Lisa Bryant",
+      "Rachael Cobb",
+      "Michael Gilbert",
+      "Joshua D. Hostetter",
+      "David C. Kimball",
+      "Kenneth R. Mayer",
+      "Costas Panagopoulos",
+      "Andrew Reeves",
+      "Corwin Smidt",
+      "Jennifer Victor"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2024,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Election Law Journal",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "00",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "00",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": "10.1089/elj.2024.0017",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "Contrary to previous research and press accounts, we find limited evidence that persons who worked the polls in the past, including the 2020 election, are reticent to work in future elections. Our explanation focuses on the motivation and affect persons need to have to work the polls. Persons who believe their work at the polls is consequential for their community and who feel their work is valued, respected, and well-supported are highly motivated to work the polls in future elections. Conflict at the polls with voters and poll watchers, aspects of poll worker training, and collaborations with other poll workers have no appreciable impact on the willingness to work the polls. Only the magnitude and diversity of problems poll workers observed voters had casting their ballots are significant deterrents to working the polls. Our findings identify efficacious steps that local election officials can take to recruit and retain persons to work the polls in future elections.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "Most experienced poll workers remain willing to serve in future elections, with motivation and perceived value of their work being key, while observed voter difficulties are the main deterrent to retention.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Despite concerns about poll worker shortages, most people who have worked at the polls before—including during the challenging 2020 election—are willing to do so again. The main reasons they return are feeling that their work matters and is appreciated, while seeing voters struggle at the polls is the biggest reason some do not return.",
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "What factors influence the retention of experienced poll workers in the United States, especially following the challenging 2020 election?",
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Most experienced poll workers are willing to work future elections, contrary to reports of widespread shortages.",
+      "Motivation and a sense of being valued and supported are strong predictors of willingness to return.",
+      "Conflict at the polls, training, and collaboration with other poll workers have little impact on retention.",
+      "The main deterrent to returning is observing significant problems that voters have when casting ballots."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Survey of 5,761 poll workers in 19 jurisdictions across 10 states before the November 2022 election.",
+      "Analysis of poll worker experiences, motivations, and intentions to serve again using multi-item survey batteries and logistic regression models."
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Surveys of poll workers in 19 jurisdictions across 10 states (pre-election wave, September 15–October 14, 2022)"
+    ],
+    "evidence_pages": [
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Likelihood to work polls in 2022",
+      "Poll worker training quality",
+      "Collaboration with other poll workers",
+      "Perceived treatment as a poll worker",
+      "Observed voter problems at the polls",
+      "Conflict with voters and poll watchers",
+      "Age",
+      "Number of elections worked since 2020"
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (19 jurisdictions in 10 states: Texas, Wisconsin, Michigan, Missouri, Massachusetts, Connecticut, New Mexico, California, South Carolina, Virginia)",
+    "evidence_pages": [
+      4
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "Poll worker experiences from November 2020 to October 2022; survey conducted September 15–October 14, 2022",
+    "evidence_pages": [
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Individual poll worker",
+    "evidence_pages": [
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "election administration",
+      "poll workers",
+      "voting"
+    ],
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "public service motivation",
+      "election staffing",
+      "voter experience",
+      "poll worker recruitment"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      4
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Persons who believe their work at the polls is consequential for their community and who feel their work is valued, respected, and well-supported are highly motivated to work the polls in future elections.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Stein, R. M., Burden, B. C., Lamb, M., Alberda, G., Atkeson, L., Bryant, L., Cobb, R., Gilbert, M., Hostetter, J. D., Kimball, D. C., Mayer, K. R., Panagopoulos, C., Reeves, A., Smidt, C., & Victor, J. (2024). Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment. Election Law Journal, 00(00). https://doi.org/10.1089/elj.2024.0017",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/guardians.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          9,
+          10,
+          11
+        ]
+      },
+      "methods": {
+        "pages": [
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by direct quotations or explicit statements in the abstract, introduction, methods, and results sections. No PDF or replication links are stated in the document.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Election Administration",
+      "Public Administration"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "local",
+      "state"
+    ],
+    "evidence_pages": [
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "Survey research",
+      "Quantitative analysis"
+    ],
+    "evidence_pages": [
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "confidence": "high"
+  }
+}

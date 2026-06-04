@@ -1,0 +1,351 @@
+{
+  "title": {
+    "value": "A Reassessment of “The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996”",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves",
+      "Lanhee Chen",
+      "Tiffany Nagano"
+    ],
+    "evidence_pages": [
+      1,
+      5
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2004,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "The Journal of Politics",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "66",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "2",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "616–620",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "This article reassesses Shaw (1999) and finds that the original study's substantive conclusions about presidential campaign strategy are unsupported when the correct statistical methods are applied.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The authors attempted to replicate and reanalyze a previous study on presidential campaign strategies and found that the original results do not hold up when using the appropriate statistical techniques.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Do the findings of Shaw (1999) regarding the systematic effects of campaign strategy on presidential electoral college strategies hold when the correct statistical methods are applied?",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "The analyses in Shaw (1999) were actually least-squares regressions, not ordered probit or 2SLS as claimed.",
+      "When the correct ordered probit and 2SLS methods are applied, the substantive findings in Shaw (1999) disappear.",
+      "Electoral college strategy is not shown to be a strong function of competitiveness, electoral votes, or TV Ad Cost using appropriate methods.",
+      "Errors in new data used in Shaw (2003) account for differences in findings."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Replication of published results using least-squares regression.",
+      "Implementation of ordered probit analysis.",
+      "Attempted implementation of two-stage least squares (2SLS) analysis."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Data from Shaw (1999)",
+      "Data from CQ’s Guide to U.S. Elections 4th Edition, Volume 1 (Moore, Preimesberger, and Tarr 2001)"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Competitiveness",
+      "Electoral votes",
+      "TV Ad Cost",
+      "Electoral college strategy",
+      "Opponent’s resource allocation"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States",
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1988–1996",
+    "evidence_pages": [
+      1,
+      3,
+      4
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "state-year",
+    "evidence_pages": [
+      3
+    ],
+    "confidence": "medium"
+  },
+  "keywords": {
+    "value": [
+      "presidential elections",
+      "campaign strategy",
+      "electoral college",
+      "replication",
+      "statistical methods"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "political methodology",
+      "election studies",
+      "statistical analysis",
+      "replication studies"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "When we follow the methods as prescribed in Shaw (1999), we find that all substantive conclusions are unsupported by the data and methods.",
+    "evidence_pages": [
+      5
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 5,
+    "evidence_pages": [
+      5
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Reeves, Andrew, Lanhee Chen, and Tiffany Nagano. 2004. \"A Reassessment of 'The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996.'\" The Journal of Politics 66(2): 616–620.",
+    "evidence_pages": [
+      1,
+      5
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "http://www.people.fas.harvard.edu/~reeves/papers/reassessment.pdf",
+      "journal": null,
+      "replication_data": "http://www.people.fas.harvard.edu/~reeves",
+      "code": null
+    },
+    "evidence_pages": [
+      5
+    ],
+    "confidence": "high"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements.",
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "elections"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "medium"
+  },
+  "research_design": {
+    "value": [
+      "replication study",
+      "statistical reanalysis"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "confidence": "high"
+  }
+}

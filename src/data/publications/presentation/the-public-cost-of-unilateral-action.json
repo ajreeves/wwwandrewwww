@@ -1,0 +1,140 @@
+{
+  "slug": "the-public-cost-of-unilateral-action",
+  "title": "The Public Cost of Unilateral Action",
+  "authors": [
+    "Andrew Reeves",
+    "Jon C. Rogowski"
+  ],
+  "year": 2018,
+  "publication_type": "journal article",
+  "journal": "American Journal of Political Science",
+  "volume": "00",
+  "issue": "0",
+  "pages": "1–17",
+  "doi": "10.1111/ajps.12340",
+  "citation": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 00(0): 1–17. https://doi.org/10.1111/ajps.12340",
+  "links": {
+    "pdf": "/papers/constraints.pdf",
+    "journal": null,
+    "replication_data": "https://doi.org/10.7910/DVN/XRJ43D",
+    "code": null
+  },
+  "card_summary": "The public reacts negatively to presidential policies achieved through unilateral action rather than legislation, especially among those who support the policy goals, suggesting public opinion may constrain presidents’ use of unilateral powers.",
+  "abstract": "Scholarship on democratic responsiveness focuses on whether political outcomes reflect public opinion but overlooks attitudes toward how power is used to achieve those policies. We argue that public attitudes toward unilateral action lead to negative evaluations of presidents who exercise unilateral powers and policies achieved through their use. Evidence from two studies supports our argument. In three nationally representative survey experiments conducted across a range of policy domains, we find that the public reacts negatively when policies are achieved through unilateral powers instead of through legislation passed by Congress. We further show these costs are greatest among respondents who support the president’s policy goals. In an observational study, we show that attitudes toward unilateral action in the abstract affect how respondents evaluate policies achieved through unilateral action by presidents from Lincoln to Obama. Our results suggest that public opinion may constrain presidents’ use of unilateral powers.",
+  "plain_english_summary": "People are less supportive of presidents and their policies when those policies are enacted through unilateral executive actions instead of working with Congress, and this negative reaction is strongest among those who agree with the policy itself.",
+  "research_question": "How does the public respond to presidents' use of unilateral powers to achieve policy goals, and does this response constrain presidential behavior?",
+  "research_highlights": [
+    "The public reacts more negatively to policies achieved through unilateral presidential action than through legislation.",
+    "These negative reactions are strongest among individuals who support the president’s policy goals.",
+    "Attitudes toward unilateral action influence evaluations of both hypothetical and real-world policies achieved unilaterally.",
+    "Unilateral action decreases perceptions that the president respects the rule of law.",
+    "Public opinion may constrain presidents’ use of unilateral powers."
+  ],
+  "methods": [
+    "Three nationally representative survey experiments using vignettes about hypothetical presidential candidates and policy issues, randomizing the means of policy achievement (unilateral vs. legislative).",
+    "Observational analysis of a national survey measuring attitudes toward real-world policies achieved through unilateral action."
+  ],
+  "data_sources": [
+    "The American Panel Study (TAPS), a monthly panel survey by GfK Knowledge Networks.",
+    "A nationally representative survey by The Economist/YouGov (February 2015)."
+  ],
+  "key_variables": [
+    "Support for presidential candidate",
+    "Approval of candidate’s handling of issue",
+    "Perceptions of candidate’s leadership and respect for rule of law",
+    "Attitudes toward unilateral action",
+    "Approval of specific policies achieved through unilateral action"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": null,
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "Our results suggest that public opinion may constrain presidents’ use of unilateral powers.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No inferences were made for absent information.",
+  "tags": [
+    "American politics",
+    "executive power",
+    "public opinion",
+    "survey experiment",
+    "observational study",
+    "unilateral action",
+    "presidential power",
+    "executive orders",
+    "democratic responsiveness",
+    "separation of powers",
+    "legislative process",
+    "executive-legislative relations",
+    "rule of law",
+    "political accountability"
+  ],
+  "filters": {
+    "substantive_area": [
+      "American politics",
+      "executive power",
+      "public opinion"
+    ],
+    "government_level": [
+      "federal"
+    ],
+    "research_design": [
+      "survey experiment",
+      "observational study"
+    ],
+    "methods": [
+      "Three nationally representative survey experiments using vignettes about hypothetical presidential candidates and policy issues, randomizing the means of policy achievement (unilateral vs. legislative).",
+      "Observational analysis of a national survey measuring attitudes toward real-world policies achieved through unilateral action."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [],
+    "keywords": [
+      "unilateral action",
+      "presidential power",
+      "public opinion",
+      "executive orders",
+      "democratic responsiveness",
+      "survey experiment"
+    ],
+    "related_topics": [
+      "separation of powers",
+      "legislative process",
+      "executive-legislative relations",
+      "rule of law",
+      "political accountability"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        7,
+        10,
+        11,
+        13,
+        14
+      ]
+    },
+    "methods": {
+      "pages": [
+        1,
+        2,
+        5,
+        6,
+        12,
+        13
+      ]
+    }
+  }
+}

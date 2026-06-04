@@ -1,0 +1,281 @@
+{
+  "title": {
+    "value": "Donald Trump's lukewarm response to Puerto Rico was pretty predictable. Here's why.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      3
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": "2017",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "doi": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "publication_type": {
+    "value": "news article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "The article argues that President Trump's slow response to Hurricane Maria in Puerto Rico is consistent with a broader pattern of U.S. presidents prioritizing disaster aid based on electoral and partisan considerations, disadvantaging places like Puerto Rico that lack political clout.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Presidents, including Trump, often give more disaster aid to places that are important for their own party or future elections, which helps explain why Puerto Rico received less attention after Hurricane Maria since its residents cannot vote for president.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Does the political significance of a place influence the president's response to disasters, as seen in the case of Puerto Rico after Hurricane Maria?",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Presidents are more likely to respond to disasters in electorally competitive or politically significant areas.",
+      "Puerto Rico received less attention because its residents do not vote in presidential elections and have little political influence.",
+      "Research shows that both Republican and Democratic presidents are influenced by electoral and partisan considerations when issuing disaster declarations."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Review and synthesis of previous research studies on presidential disaster declarations and political incentives.",
+      "Reference to studies using data from 1981-2004 and 1984-2013 on disaster declarations and electoral competitiveness."
+    ],
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "key_variables": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States, Puerto Rico",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1981-2013 (referenced studies); 2017 (Hurricane Maria)",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "keywords": {
+    "value": [
+      "presidential particularism",
+      "disaster aid",
+      "Puerto Rico",
+      "Hurricane Maria",
+      "political inequality",
+      "electoral politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "federal disaster response",
+      "U.S. elections",
+      "partisan politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "In other words, Trump, like presidents before him, is probably paying less attention to Puerto Rico’s disaster because of the incentives of the office.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/mc-puerto-rico.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "methods": {
+        "pages": [
+          2
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "Most fields are supported by explicit statements in the article; no formal abstract or citation is present. No direct data sources or identification strategies are described beyond references to prior research.",
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "political science",
+      "disaster response",
+      "executive politics"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "federal"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "synthesis of prior quantitative studies"
+    ],
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "title": {
+    "value": "Polling Place Quality and Access",
+    "evidence_pages": [
+      2,
+      3
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Robert Stein",
+      "Christopher Mann",
+      "Charles Stewart III"
+    ],
+    "evidence_pages": [
+      2,
+      3,
+      18,
+      19
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2020,
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "volume": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "issue": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pages": {
+    "value": "83-100",
+    "evidence_pages": [
+      2,
+      19
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1007/978-3-030-14947-5_6",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "Book chapter",
+    "evidence_pages": [
+      2
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "one_sentence_summary": {
+    "value": "A national study of 528 polling places in 26 jurisdictions during the 2016 U.S. presidential election found high overall quality and accessibility, with little evidence that polling place attributes varied by race, ethnicity, or socioeconomic composition, and most variation attributable to county and state factors.",
+    "evidence_pages": [
+      3,
+      9,
+      12,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "Researchers observed polling places across 17 states during the 2016 U.S. presidential election and found that most polling places were accessible, well-managed, and had few barriers to voting, with differences in quality mainly due to county and state factors rather than the racial or economic makeup of voters.",
+    "evidence_pages": [
+      3,
+      9,
+      12,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "What is the variation in polling place accessibility, quality, and barriers to voting across and within U.S. jurisdictions, and are these variations attributable to racial, ethnic, or socioeconomic composition of voters or to jurisdictional factors?",
+    "evidence_pages": [
+      3,
+      4,
+      14
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Polling places in the 2016 national sample were generally accessible, well-managed, and had few barriers to voting.",
+      "There was little evidence that polling place accessibility, quality, or barriers varied by race, ethnicity, or socioeconomic composition of voters.",
+      "Most variation in polling place attributes was attributable to county and state (jurisdictional) factors rather than within-county differences."
+    ],
+    "evidence_pages": [
+      3,
+      9,
+      12,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Multi-jurisdictional observational study of polling places during the 2016 U.S. presidential election.",
+      "Random and convenience sampling of polling places in 26 jurisdictions across 17 states.",
+      "Student researchers observed and recorded polling place attributes using standardized protocols and forms.",
+      "Regression analysis to assess the relationship between polling place attributes and demographic variables, with and without county fixed effects."
+    ],
+    "evidence_pages": [
+      4,
+      6,
+      7,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Direct observation of 528 polling places by research teams.",
+      "Demographic data from Catalist (2016) for precinct-level analysis."
+    ],
+    "evidence_pages": [
+      5,
+      6,
+      14
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "Polling place accessibility (visibility, signage, lighting, ease of finding)",
+      "Polling place quality (parking, handicapped access, restrooms, interior lighting, size, waiting area, amenities)",
+      "Barriers to voting (posted instructions, working machines, etc.)",
+      "Demographic composition of precincts (race, ethnicity, poverty, renter status, education)"
+    ],
+    "evidence_pages": [
+      7,
+      8,
+      10,
+      14,
+      15
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United States (26 jurisdictions in 17 states)",
+    "evidence_pages": [
+      3,
+      5
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "2016 U.S. presidential election (November 8, 2016)",
+    "evidence_pages": [
+      3,
+      4,
+      5
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Polling place",
+    "evidence_pages": [
+      6,
+      7
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "polling place",
+      "election administration",
+      "voting access",
+      "polling place quality",
+      "barriers to voting",
+      "jurisdictional variation",
+      "2016 presidential election"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      14
+    ],
+    "confidence": "medium"
+  },
+  "related_topics": {
+    "value": [
+      "election law",
+      "voter turnout",
+      "election policy",
+      "racial and socioeconomic disparities in voting"
+    ],
+    "evidence_pages": [
+      4,
+      16
+    ],
+    "confidence": "medium"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "Our national sample indicated that polling places were accessible, well managed, and with few barriers to voters.",
+    "evidence_pages": [
+      16
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 16,
+    "evidence_pages": [
+      16
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Stein, R., Mann, C., & Stewart III, C. (2020). Polling Place Quality and Access. In M. Brown, K. Hale, & B. A. King (Eds.), The Future of Election Administration (pp. 83-100). https://doi.org/10.1007/978-3-030-14947-5_6",
+    "evidence_pages": [
+      2,
+      19
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/access.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          3,
+          4,
+          14
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          3,
+          9,
+          12,
+          14,
+          16
+        ]
+      },
+      "methods": {
+        "pages": [
+          4,
+          6,
+          7,
+          14,
+          15
+        ]
+      }
+    },
+    "evidence_pages": [
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted information is directly supported by the cited pages. No abstract or policy recommendations are present in the text. Journal and PDF links are not stated in the document.",
+    "evidence_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      19
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "election administration",
+      "voting behavior",
+      "public policy"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      16,
+      18,
+      19
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "state",
+      "county"
+    ],
+    "evidence_pages": [
+      3,
+      4,
+      14,
+      16
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "observational study",
+      "cross-sectional analysis",
+      "regression analysis"
+    ],
+    "evidence_pages": [
+      4,
+      6,
+      7,
+      14,
+      15
+    ],
+    "confidence": "high"
+  }
+}

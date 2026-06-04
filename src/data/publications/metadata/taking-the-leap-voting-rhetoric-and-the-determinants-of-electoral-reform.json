@@ -1,0 +1,377 @@
+{
+  "title": {
+    "value": "Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "authors": {
+    "value": [
+      "Scott Moser",
+      "Andrew Reeves"
+    ],
+    "evidence_pages": [
+      1,
+      494
+    ],
+    "confidence": "high"
+  },
+  "year": {
+    "value": 2014,
+    "evidence_pages": [
+      1,
+      37
+    ],
+    "confidence": "high"
+  },
+  "journal": {
+    "value": "Legislative Studies Quarterly",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "volume": {
+    "value": "39",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "issue": {
+    "value": "4",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pages": {
+    "value": "467-502",
+    "evidence_pages": [
+      1,
+      502
+    ],
+    "confidence": "high"
+  },
+  "doi": {
+    "value": "10.1111/lsq.12055",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "publication_type": {
+    "value": "journal article",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "abstract": {
+    "value": "This article analyzes why the Second Reform Act of 1867, which dramatically expanded the voting franchise in the United Kingdom, passed under a minority Conservative government after failing under a majority Liberal government. Using quantitative analysis of parliamentary debates and legislative votes, the authors argue that while partisanship was the most influential factor in parliamentary voting, it does not fully explain the passage of reform. Instead, they find that the narrowed scope and reduced dimensionality of debate under the Conservatives was crucial in enabling the passage of reform. The study provides new insights into party development and legislative behavior in nineteenth-century Britain.",
+    "evidence_pages": [
+      1,
+      2
+    ],
+    "confidence": "high"
+  },
+  "one_sentence_summary": {
+    "value": "The article finds that the successful passage of the Second Reform Act in 1867 was due to the Conservative government's ability to narrow and focus parliamentary debate, rather than changes in party or constituency factors.",
+    "evidence_pages": [
+      1,
+      2,
+      493,
+      494
+    ],
+    "confidence": "high"
+  },
+  "plain_english_summary": {
+    "value": "The study shows that the 1867 law expanding voting rights in Britain passed because the Conservative government kept parliamentary debates more focused, making it easier to reach agreement, while previous broader debates under the Liberals led to failure.",
+    "evidence_pages": [
+      1,
+      2,
+      493,
+      494
+    ],
+    "confidence": "high"
+  },
+  "research_question": {
+    "value": "Why did the Second Reform Act pass under a minority Conservative government in 1867 after failing under a majority Liberal government, and what factors determined the passage of electoral reform in the United Kingdom?",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      493
+    ],
+    "confidence": "high"
+  },
+  "main_findings": {
+    "value": [
+      "Partisanship was the strongest predictor of parliamentary voting on reform, but did not explain the ultimate passage of the Second Reform Act.",
+      "The scope and dimensionality of parliamentary debate was broader under the Liberals and more focused under the Conservatives.",
+      "The reduction in the number of debated aspects under the Conservative government facilitated the passage of reform.",
+      "Constituency-level factors had little influence on MPs' votes on reform."
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      493,
+      494
+    ],
+    "confidence": "high"
+  },
+  "methods": {
+    "value": [
+      "Quantitative analysis of 60 reform-related legislative votes (divisions) in the House of Commons.",
+      "Quantitative text analysis (topic modeling) of over 3,200 parliamentary speeches related to reform.",
+      "Multivariate logistic regression to assess the influence of party and constituency factors on voting."
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      15,
+      16,
+      18,
+      493
+    ],
+    "confidence": "high"
+  },
+  "data_sources": {
+    "value": [
+      "Original dataset of 60 reform-related legislative votes in the UK House of Commons.",
+      "Digitized parliamentary debates (Hansard) from 1866 and 1867."
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      15,
+      16,
+      18
+    ],
+    "confidence": "high"
+  },
+  "key_variables": {
+    "value": [
+      "MP party affiliation",
+      "Constituency malapportionment",
+      "Constituency population change",
+      "Ministerial status",
+      "Speech topics (from topic modeling)"
+    ],
+    "evidence_pages": [
+      12,
+      18,
+      478,
+      484
+    ],
+    "confidence": "high"
+  },
+  "identification_strategy": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "geography": {
+    "value": "United Kingdom (House of Commons)",
+    "evidence_pages": [
+      1,
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "time_period": {
+    "value": "1866-1867",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      493
+    ],
+    "confidence": "high"
+  },
+  "unit_of_analysis": {
+    "value": "Member of Parliament (MP) and parliamentary speech",
+    "evidence_pages": [
+      4,
+      16,
+      18,
+      478,
+      484
+    ],
+    "confidence": "high"
+  },
+  "keywords": {
+    "value": [
+      "Second Reform Act",
+      "parliamentary reform",
+      "United Kingdom",
+      "party politics",
+      "legislative behavior",
+      "topic modeling",
+      "voting behavior",
+      "nineteenth century"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      16,
+      18,
+      493
+    ],
+    "confidence": "high"
+  },
+  "related_topics": {
+    "value": [
+      "British political history",
+      "electoral reform",
+      "party development",
+      "parliamentary debate",
+      "text analysis"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      16,
+      18,
+      493
+    ],
+    "confidence": "high"
+  },
+  "policy_relevance": {
+    "value": null,
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "pull_quote": {
+    "value": "We argue that the narrowed scope of debate under the Conservatives was crucial in passing reform.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "pull_quote_page": {
+    "value": 1,
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "citation": {
+    "value": "Moser, Scott, and Andrew Reeves. 2014. \"Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform.\" Legislative Studies Quarterly 39(4): 467-502. doi:10.1111/lsq.12055.",
+    "evidence_pages": [
+      1
+    ],
+    "confidence": "high"
+  },
+  "links": {
+    "value": {
+      "pdf": "/papers/leap.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "evidence_pages": [],
+    "confidence": "low"
+  },
+  "evidence": {
+    "value": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          4,
+          493
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2,
+          493,
+          494
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          4,
+          15,
+          16,
+          18,
+          493
+        ]
+      }
+    },
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      15,
+      16,
+      18,
+      493,
+      494
+    ],
+    "confidence": "high"
+  },
+  "confidence_notes": {
+    "value": "All extracted fields are directly supported by the cited pages. No inferences were made beyond the document text.",
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      15,
+      16,
+      18,
+      493,
+      494
+    ],
+    "confidence": "high"
+  },
+  "substantive_area": {
+    "value": [
+      "Political Science",
+      "Comparative Politics",
+      "Legislative Studies",
+      "British History"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4,
+      493
+    ],
+    "confidence": "high"
+  },
+  "government_level": {
+    "value": [
+      "national"
+    ],
+    "evidence_pages": [
+      1,
+      2,
+      4
+    ],
+    "confidence": "high"
+  },
+  "research_design": {
+    "value": [
+      "quantitative analysis",
+      "text analysis",
+      "observational study"
+    ],
+    "evidence_pages": [
+      1,
+      4,
+      15,
+      16,
+      18,
+      493
+    ],
+    "confidence": "high"
+  }
+}

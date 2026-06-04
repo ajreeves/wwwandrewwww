@@ -1,0 +1,153 @@
+{
+  "slug": "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology",
+  "title": "The urban-rural divide and residential contentment as antecedents of political ideology",
+  "authors": [
+    "James G. Gimpel",
+    "Andrew Reeves"
+  ],
+  "year": 2024,
+  "publication_type": "journal article",
+  "journal": "Cities",
+  "volume": "146",
+  "issue": null,
+  "pages": "104720",
+  "doi": "10.1016/j.cities.2023.104720",
+  "citation": "Gimpel, J. G., & Reeves, A. (2024). The urban-rural divide and residential contentment as antecedents of political ideology. Cities, 146, 104720. https://doi.org/10.1016/j.cities.2023.104720",
+  "links": {
+    "pdf": "/papers/attachment.pdf",
+    "journal": "https://www.sciencedirect.com/science/article/pii/S0264275123004292",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "The study finds that lower place attachment in urban areas contributes to more progressive political attitudes, while higher contentment in rural areas is associated with conservatism, helping explain the urban-rural political divide in the US.",
+  "abstract": "We explore the foundations of the urban-rural political gulf, which is well-documented in the United States and other western democracies. We theorize that it is anchored in the variable extent of residents’ satisfaction and place attachment. Consistent with a long tradition of sociological findings, we first demonstrate that attachment to one’s neighborhood of residence is much higher among rural populations than in big cities. This variation in place attachment is an important font of political and policy attitudes, substantively contributing to the ideological differences between urban and rural areas. Politically relevant grievances arise most acutely when they are shared as prevailing conditions in specific social environments. The more dissatisfied one is with the place they live, the more attractive they find the policy goals and political agenda of liberal progressivism in US politics. Greater contentment with place, on the other hand, is predictive of politically conservative viewpoints.",
+  "plain_english_summary": "People who are happier with where they live, especially in rural areas, tend to have more conservative political views, while those less satisfied, often in cities, are more likely to support progressive policies, helping explain political differences between urban and rural communities.",
+  "research_question": "How does place attachment and residential contentment contribute to the political and ideological divide between urban and rural areas in the United States?",
+  "research_highlights": [
+    "Place attachment is significantly higher among rural residents than urban residents in the US.",
+    "Lower place attachment (greater discontent) is associated with more progressive/liberal political attitudes, while higher contentment predicts conservatism.",
+    "These patterns persist even after controlling for demographic and socioeconomic variables.",
+    "The urban-rural political divide is partly explained by differences in place attachment and residential satisfaction."
+  ],
+  "methods": [
+    "Analysis of survey data from the Cooperative Election Study (CES) across seven waves (2006–2020).",
+    "Measurement of place attachment using a battery of six Likert-scale questions.",
+    "Principal components analysis to create a place attachment score.",
+    "Regression analyses controlling for demographic, socioeconomic, and contextual variables."
+  ],
+  "data_sources": [
+    "Cooperative Election Study (CES), 2006–2020 waves",
+    "US Census data (ZIP code level)",
+    "US Internal Revenue Service (IRS) adjusted gross income data (ZIP code level)"
+  ],
+  "key_variables": [
+    "Place attachment score",
+    "Population density",
+    "Distance to city",
+    "Political ideology (liberal-conservative scale)",
+    "Demographic variables (age, income, education, race/ethnicity, homeownership, marital status)",
+    "Contextual ZIP code variables (income, home value, racial/ethnic composition)"
+  ],
+  "identification_strategy": null,
+  "geography": "United States",
+  "time_period": "2006–2020 (survey waves analyzed)",
+  "unit_of_analysis": "individual survey respondent",
+  "policy_relevance": null,
+  "pull_quote": "The more dissatisfied one is with the place they live, the more attractive they find the policy goals and political agenda of liberal progressivism in US politics. Greater contentment with place, on the other hand, is predictive of politically conservative viewpoints.",
+  "pull_quote_page": 1,
+  "confidence_notes": "All extracted fields are directly supported by the document text. No journal issue number is stated. No explicit policy recommendations or identification strategy are described.",
+  "tags": [
+    "political science",
+    "urban studies",
+    "sociology",
+    "observational study",
+    "survey analysis",
+    "cross-sectional analysis",
+    "urban-rural divide",
+    "place attachment",
+    "political ideology",
+    "residential satisfaction",
+    "partisan polarization",
+    "United States",
+    "political geography",
+    "community satisfaction",
+    "partisan alignment",
+    "rural studies"
+  ],
+  "filters": {
+    "substantive_area": [
+      "political science",
+      "urban studies",
+      "sociology"
+    ],
+    "government_level": [],
+    "research_design": [
+      "observational study",
+      "survey analysis",
+      "cross-sectional analysis"
+    ],
+    "methods": [
+      "Analysis of survey data from the Cooperative Election Study (CES) across seven waves (2006–2020).",
+      "Measurement of place attachment using a battery of six Likert-scale questions.",
+      "Principal components analysis to create a place attachment score.",
+      "Regression analyses controlling for demographic, socioeconomic, and contextual variables."
+    ],
+    "geography": [
+      "United States"
+    ],
+    "time_period": [
+      "2006–2020 (survey waves analyzed)"
+    ],
+    "keywords": [
+      "urban-rural divide",
+      "place attachment",
+      "political ideology",
+      "residential satisfaction",
+      "partisan polarization",
+      "United States"
+    ],
+    "related_topics": [
+      "political geography",
+      "community satisfaction",
+      "partisan alignment",
+      "urban studies",
+      "rural studies"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "methods": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  }
+}
