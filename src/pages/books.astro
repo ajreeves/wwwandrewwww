@@ -104,9 +104,19 @@ const bookDetails = {
     ],
     reception: [
       {
-        excerpt: "Political scientists, historians, students of communication studies and political rhetoric, and journalists write many books on the American presidency every year. Although these studies add incrementally to our understanding of executive branch politics, very few new books fundamentally reshape scholarly thinking about the presidency ... Douglas Kriner and Andrew Reeves have written a book that meets this threshold, providing a systematic and empirical analysis of presidential efforts to target key constituencies in the electorate with public policy and federal resources ... [they] have produced a well-written study that has the potential to reach a broad audience in political science. Scholars of the American presidency and public policy specialists will find The Particularistic President to be an important book that expands their knowledge about the strategic nature of presidential decision making and the implementation of federal policies.",
-        source: "Adam L. Warber, Congress and the Presidency",
-        url: "https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"
+        label: "Review in Congress & the Presidency",
+        reviewer: "Adam L. Warber",
+        url: "https://www.tandfonline.com/doi/abs/10.1080/07343469.2016.1169116"
+      },
+      {
+        label: "Review in The Journal of Politics",
+        reviewer: "Alex Acs",
+        url: "https://www.journals.uchicago.edu/doi/10.1086/685836"
+      },
+      {
+        label: "Review in Perspectives on Politics",
+        reviewer: "David A. Crockett",
+        url: "https://www.cambridge.org/core/journals/perspectives-on-politics/article/abs/particularistic-president-executive-branch-politics-and-political-equality-by-douglas-l-kriner-and-andrew-reeves-new-york-cambridge-university-press-2015-237p-8184-cloth-2525-paper/68F27782F474D4AC3E05F74BB4D9E4E1"
       }
     ],
     endorsements: [
@@ -200,20 +210,11 @@ const relatedPublicationsFor = (slugs: string[]) =>
                       <div class="book-quote-list">
                         {details.reception.map((item) => (
                           <figure>
-                            {"label" in item ? (
-                              <figcaption>
-                                <a href={item.url}>{item.label}</a>
-                                <br />
-                                {item.reviewer}
-                              </figcaption>
-                            ) : (
-                              <>
-                                <blockquote>“{item.excerpt}”</blockquote>
-                                <figcaption>
-                                  <a href={item.url}>{item.source}</a>
-                                </figcaption>
-                              </>
-                            )}
+                            <figcaption>
+                              <a href={item.url}>{item.label}</a>
+                              <br />
+                              {item.reviewer}
+                            </figcaption>
                           </figure>
                         ))}
                       </div>
