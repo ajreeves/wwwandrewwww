@@ -55,10 +55,10 @@
   },
   "context": {
     "src": "/images/publication-figures/context.jpg",
-    "alt": "Featured visual from Defining Racial and Ethnic Context with Geolocation Data",
+    "alt": "Map of OpenPaths geolocation observations across the United States",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/context.pdf",
-    "selected_page": 5,
+    "selected_page": 7,
     "cropped": true,
     "fallback": false
   },
@@ -199,28 +199,35 @@
   },
   "local-unemployment": {
     "src": "/images/publication-figures/local-unemployment.jpg",
-    "alt": "Featured visual from Local Unemployment and Voting for President: Uncovering Causal Mechanisms",
+    "alt": "Three-panel coefficient plot of local unemployment effects on incumbent-party vote choice",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/unemployment.pdf",
-    "selected_page": 3,
-    "cropped": false,
+    "selected_page": 16,
+    "cropped": true,
     "fallback": false
   },
   "municipal-administration": {
     "src": "/images/publication-figures/municipal-administration.jpg",
-    "alt": "Featured visual from Elections and Representation in American Municipal Administration: Elite Survey Evidence from Five New England States",
+    "alt": "Six-panel chart comparing institutional capacity among appointed and elected municipal clerks",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/clerks.pdf",
-    "selected_page": 5,
+    "selected_page": 7,
     "cropped": true,
+    "fallback": false
+  },
+  "no-blank-check": {
+    "src": "/images/no-blank-check-cover.jpg",
+    "alt": "Book cover for No Blank Check: The Origins and Consequences of Public Antipathy towards Presidential Power",
+    "caption": "Book cover",
+    "kind": "book-cover",
     "fallback": false
   },
   "partisanship-economic-assessments": {
     "src": "/images/publication-figures/partisanship-economic-assessments.jpg",
-    "alt": "Featured visual from Partisanship, Economic Assessments, and Presidential Accountability",
+    "alt": "River plots comparing household economic perceptions among Republicans and Democrats over time",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/transition.pdf",
-    "selected_page": 7,
+    "selected_page": 8,
     "cropped": true,
     "fallback": false
   },
@@ -235,10 +242,10 @@
   },
   "pass-the-buck": {
     "src": "/images/publication-figures/pass-the-buck.jpg",
-    "alt": "Featured visual from Pass the Buck or the Buck Stops Here? The Public Costs of Claiming and Deflecting Blame in Managing Crises",
+    "alt": "Coefficient plot comparing public responses to blame claiming and blame deflection across crises",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/blameclaim.pdf",
-    "selected_page": 16,
+    "selected_page": 13,
     "cropped": true,
     "fallback": false
   },
@@ -285,6 +292,13 @@
     "source_pdf": "/papers/targeting.pdf",
     "selected_page": 10,
     "cropped": true,
+    "fallback": false
+  },
+  "particularistic-president": {
+    "src": "/images/particularistic-president-cover.jpg",
+    "alt": "Book cover for The Particularistic President: Executive Branch Politics and Political Inequality",
+    "caption": "Book cover",
+    "kind": "book-cover",
     "fallback": false
   },
   "prespart": {
@@ -352,11 +366,11 @@
   },
   "rising-seas": {
     "src": "/images/publication-figures/rising-seas.jpg",
-    "alt": "Featured visual from Rising Seas, Rising Concerns: How Climate Change Vulnerability Shapes Opinions Towards Policy",
+    "alt": "County-level U.S. map of sea-level-rise susceptibility from Rising Seas, Rising Concerns",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/environment.pdf",
-    "selected_page": 1,
-    "cropped": false,
+    "selected_page": 9,
+    "cropped": true,
     "fallback": false
   },
   "short-haul-moves": {
@@ -388,10 +402,10 @@
   },
   "unilateral-inaction": {
     "src": "/images/publication-figures/unilateral-inaction.jpg",
-    "alt": "Featured visual from Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power",
+    "alt": "Coefficient plot of unilateral action effects on presidential performance evaluations",
     "caption": "Featured visual from the publication",
     "source_pdf": "/papers/nothing.pdf",
-    "selected_page": 16,
+    "selected_page": 12,
     "cropped": true,
     "fallback": false
   },

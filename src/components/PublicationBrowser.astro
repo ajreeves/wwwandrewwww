@@ -43,6 +43,7 @@ interface PublicationFigure {
   src: string;
   alt: string;
   caption?: string;
+  kind?: string;
 }
 
 interface Props {
@@ -373,7 +374,7 @@ const themeOptions = majorThemeDefinitions
             )}
           </div>
           {figure && (
-            <figure class="archive-record-figure">
+            <figure class={`archive-record-figure ${figure.kind === "book-cover" ? "archive-record-book-cover" : ""}`}>
               <img src={figure.src} alt={figure.alt} loading="lazy" />
             </figure>
           )}

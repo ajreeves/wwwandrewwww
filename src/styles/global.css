@@ -258,6 +258,16 @@
   transition: transform 220ms ease;
 }
 
+.archive-record-book-cover {
+  justify-self: end;
+  width: min(100%, 8.25rem);
+}
+
+.archive-record-book-cover img {
+  aspect-ratio: 2 / 3;
+  padding: 0.45rem;
+}
+
 .archive-record:hover .archive-record-figure img {
   transform: scale(1.025);
 }
