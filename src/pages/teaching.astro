@@ -94,6 +94,13 @@ const courseArchive = {
   ]
 } as const;
 
+const tocLinks = [
+  { href: "#classroom-practice", label: "Classroom Practice" },
+  { href: "#teaching-awards", label: "Teaching Awards" },
+  { href: "#featured-courses", label: "Courses" },
+  { href: "#course-archive", label: "Course Archive" }
+] as const;
+
 const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 ---
 
@@ -104,7 +111,15 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     intro="Reeves teaches courses on American politics, democratic institutions, and civic life, with an emphasis on evidence, institutional reasoning, and practical engagement with democratic questions."
   />
 
+  <nav class="container-wide page-toc" aria-label="On this page">
+    <p class="kicker">On This Page</p>
+    <div>
+      {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
+
   <FeatureBand
+    id="classroom-practice"
     eyebrow="Classroom Practice"
     title="Evidence, Institutions, and Civic Judgment"
     text="Courses emphasize analytical rigor, close reading of evidence, and practical democratic reasoning."
@@ -112,7 +127,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     alt="Andrew Reeves teaching in a classroom"
   />
 
-  <section class="container-wide page-section">
+  <section id="teaching-awards" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Honors</p>
@@ -134,7 +149,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     </div>
   </section>
 
-  <section class="container-wide page-section">
+  <section id="featured-courses" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Courses</p>
@@ -165,7 +180,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     </div>
   </section>
 
-  <section class="container-wide page-section">
+  <section id="course-archive" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Teaching Portfolio</p>

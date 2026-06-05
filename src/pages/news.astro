@@ -164,6 +164,12 @@ const coverage = [
     url: "https://goodauthority.org/news/how-hurricane-sandy-could-matter-on-election-day/"
   }
 ] as const;
+
+const tocLinks = [
+  { href: "#featured-panel", label: "Featured Panel" },
+  { href: "#essays-op-eds", label: "Essays and Op-Eds" },
+  { href: "#research-media", label: "Research in the Media" }
+] as const;
 ---
 
 <BaseLayout title="News & Media" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics, and democratic accountability.">
@@ -173,7 +179,15 @@ const coverage = [
     intro="Selected essays, commentary, and media coverage on presidential power, disaster politics, political geography, and democratic accountability."
   />
 
+  <nav class="container-wide page-toc" aria-label="On this page">
+    <p class="kicker">On This Page</p>
+    <div>
+      {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
+
   <FeatureBand
+    id="featured-panel"
     eyebrow="Featured Panel"
     title="Election Analyst Panel"
     text="Andrew Reeves moderates the Election Analyst Panel at Political Analytics 2025 at Harvard University, featuring Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley."
@@ -181,7 +195,7 @@ const coverage = [
     alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"
   />
 
-  <section class="container-wide page-section">
+  <section id="essays-op-eds" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Commentary</p>
@@ -203,7 +217,7 @@ const coverage = [
     </div>
   </section>
 
-  <section class="container-wide page-section">
+  <section id="research-media" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Coverage</p>

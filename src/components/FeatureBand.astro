@@ -9,12 +9,13 @@ interface Props {
   actionHref?: string;
   actionLabel?: string;
   reversed?: boolean;
+  id?: string;
 }
 
-const { eyebrow, title, text, image, alt, caption, actionHref, actionLabel, reversed = false } = Astro.props;
+const { eyebrow, title, text, image, alt, caption, actionHref, actionLabel, reversed = false, id } = Astro.props;
 ---
 
-<section class="container-wide page-section page-section-feature">
+<section id={id} class="container-wide page-section page-section-feature">
   <div class={`feature-band ${reversed ? "feature-band-reversed" : ""}`}>
     <figure class="feature-band-media">
       <img src={image} alt={alt} loading="eager" />

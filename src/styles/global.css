@@ -2281,7 +2281,7 @@
     padding-block: clamp(1rem, 2vw, 2rem) clamp(4rem, 7vw, 7rem);
   }
 
-  .book-page-toc {
+  .page-toc {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -2290,19 +2290,19 @@
     padding-block: clamp(0.95rem, 1.8vw, 1.35rem);
   }
 
-  .book-page-toc .kicker {
+  .page-toc .kicker {
     margin: 0;
     color: var(--muted);
   }
 
-  .book-page-toc > div {
+  .page-toc > div {
     display: flex;
     flex: 1 1 28rem;
     flex-wrap: wrap;
     gap: 0.55rem clamp(1rem, 2.4vw, 2rem);
   }
 
-  .book-page-toc a {
+  .page-toc a {
     color: var(--ink);
     font-family: var(--font-sans);
     font-size: 0.78rem;
@@ -2313,7 +2313,7 @@
     text-transform: uppercase;
   }
 
-  .book-page-toc a:hover {
+  .page-toc a:hover {
     color: var(--rust);
   }
 

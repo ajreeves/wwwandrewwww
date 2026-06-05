@@ -34,6 +34,11 @@ const sortedDoctoralStudents = [...doctoralStudents].sort((a, b) => {
   return yearB - yearA || a.name.localeCompare(b.name);
 });
 
+const tocLinks = [
+  { href: "#doctoral-students-heading", label: "Doctoral Students" },
+  { href: "#undergraduate-theses-heading", label: "Undergraduate Honors Theses" }
+] as const;
+
 const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? student.profile_url;
 ---
 
@@ -47,6 +52,13 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
     title="Students"
     intro="Mentorship is one of the most rewarding parts of academic life. Over the years I have worked with undergraduate and doctoral students on projects spanning presidential politics, democratic accountability, political geography, election administration, and public policy."
   />
+
+  <nav class="container-wide page-toc" aria-label="On this page">
+    <p class="kicker">On This Page</p>
+    <div>
+      {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
 
   <section class="container-wide page-section student-page-frame" aria-labelledby="doctoral-students-heading">
     <div class="page-section-heading">
