@@ -37,7 +37,7 @@ export const doctoralStudents: StudentRecord[] = [
     name: "Jordon Newton",
     category: "doctoral",
     role: "Committee member",
-    year: "In progress",
+    year: 2026,
     degree: "PhD, Political Science",
     institution: "Washington University in St. Louis",
     research_description: "Research connected to migration, political geography, and the spatial organization of American politics.",
@@ -48,7 +48,7 @@ export const doctoralStudents: StudentRecord[] = [
     image_kind: "site_screenshot",
     photo_source: noVerifiedPhoto,
     related_publications: ["short-haul-moves"],
-    notes: "Homepage supplied by Andrew Reeves and verified by screenshot capture."
+    notes: "Homepage supplied by Andrew Reeves and verified by screenshot capture; advising year updated from the May 24, 2026 CV."
   },
   {
     name: "Jordan Duffin Wong",

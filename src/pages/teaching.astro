@@ -75,6 +75,25 @@ const courses = [
   }
 ] as const;
 
+const courseArchive = {
+  undergraduate: [
+    "The Practice of Citizenship",
+    "Introduction to American Politics",
+    "Campaigns and Elections",
+    "Legislative Behavior",
+    "The American Presidency",
+    "American Elections and Voting Behavior",
+    "Looking Back on the 2016 Election",
+    "Trump's First 100 Days",
+    "Business of Elections"
+  ],
+  graduate: [
+    "American Politics Workshop",
+    "Executive Politics",
+    "Voting and Elections"
+  ]
+} as const;
+
 const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 ---
 
@@ -143,6 +162,29 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
           </article>
         ))
       }
+    </div>
+  </section>
+
+  <section class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Teaching Portfolio</p>
+        <h2>Course Archive</h2>
+      </div>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-2">
+      <article class="editorial-card">
+        <p class="kicker mb-4">Undergraduate</p>
+        <ul class="space-y-3 text-lg leading-[1.55] text-muted">
+          {courseArchive.undergraduate.map((course) => <li>{course}</li>)}
+        </ul>
+      </article>
+      <article class="editorial-card">
+        <p class="kicker mb-4">Graduate</p>
+        <ul class="space-y-3 text-lg leading-[1.55] text-muted">
+          {courseArchive.graduate.map((course) => <li>{course}</li>)}
+        </ul>
+      </article>
     </div>
   </section>
 </BaseLayout>

@@ -88,6 +88,8 @@ const cleanText = (value?: string | number | null) =>
     .replace(/\s+/g, " ")
     .trim();
 
+const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
+
 const normalizeTitle = (value: string) =>
   value
     .toLowerCase()
@@ -202,7 +204,7 @@ const venue = cleanText(metadata?.journal) || publication.data.venue;
 const contribution =
   firstSentence(metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
 const abstract = cleanText(metadata?.abstract);
-const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
+const fullCitation = cleanText(publication.data.citation ?? metadata?.citation);
 const authors = metadata?.authors?.length ? metadata.authors : publication.data.authors;
 
 const addLink = (links: Map<string, PublicationLink>, label: string, url?: string | null) => {
@@ -312,10 +314,10 @@ const relatedPublications = allPublications
     return { entry, sharedThemes };
   })
   .filter(({ sharedThemes }) => sharedThemes > 0)
-  .sort((a, b) => b.sharedThemes - a.sharedThemes || Number(b.entry.data.year) - Number(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
+  .sort((a, b) => b.sharedThemes - a.sharedThemes || yearRank(b.entry.data.year) - yearRank(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
   .slice(0, 5);
 
-const sortedPublications = [...allPublications].sort((a, b) => Number(b.data.year) - Number(a.data.year) || a.data.title.localeCompare(b.data.title));
+const sortedPublications = [...allPublications].sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
 const currentIndex = sortedPublications.findIndex((entry) => entry.slug === publication.slug);
 const previousPublication = currentIndex > 0 ? sortedPublications[currentIndex - 1] : undefined;
 const nextPublication = currentIndex >= 0 && currentIndex < sortedPublications.length - 1 ? sortedPublications[currentIndex + 1] : undefined;
@@ -345,7 +347,7 @@ const publicationStructuredData = {
       abstract: abstract || undefined,
       url: publicationUrl,
       image: absoluteUrl(publicationImage),
-      datePublished: String(publication.data.year),
+      datePublished: typeof publication.data.year === "number" ? String(publication.data.year) : undefined,
       author: authors.map((name) => ({
         "@type": "Person",
         name
