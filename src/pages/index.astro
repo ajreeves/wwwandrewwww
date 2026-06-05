@@ -58,9 +58,62 @@ const featureTiles = [
     alt: "Classroom teaching scene"
   }
 ] as const;
+
+const personStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://andrewreeves.org/#andrew-reeves",
+  name: "Andrew Reeves",
+  url: "https://andrewreeves.org/",
+  image: "https://andrewreeves.org/images/andrew-reeves-portrait-editorial.jpg",
+  jobTitle: [
+    "Professor of Political Science",
+    "Director, Weidenbaum Center on the Economy, Government, and Public Policy",
+    "Director, Frick Initiatives",
+    "Senior Advisor to the Chancellor",
+    "Visiting Fellow"
+  ],
+  worksFor: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Washington University in St. Louis",
+      url: "https://washu.edu/"
+    },
+    {
+      "@type": "Organization",
+      name: "Hoover Institution",
+      url: "https://www.hoover.org/"
+    }
+  ],
+  affiliation: [
+    {
+      "@type": "Organization",
+      name: "Weidenbaum Center on the Economy, Government, and Public Policy",
+      url: "https://wc.wustl.edu/"
+    },
+    {
+      "@type": "Organization",
+      name: "Frick Initiative",
+      url: "https://law.washu.edu/frick-initiative/"
+    }
+  ],
+  sameAs: [
+    "https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ",
+    "https://polisci.wustl.edu/people/andrew-reeves/",
+    "https://wc.wustl.edu/"
+  ],
+  knowsAbout: [
+    "American politics",
+    "Presidential power",
+    "Democratic accountability",
+    "Political geography",
+    "Federal resource allocation",
+    "Public opinion"
+  ]
+};
 ---
 
-<BaseLayout active="Home">
+<BaseLayout active="Home" structuredData={personStructuredData}>
   <section class="home-thesis-hero">
     <div class="home-thesis-copy">
       <h1>Power, place, and accountability in American political life.</h1>

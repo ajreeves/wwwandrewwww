@@ -5,15 +5,27 @@ interface Props {
   title?: string;
   description?: string;
   active?: string;
+  image?: string;
+  imageAlt?: string;
+  ogType?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title = "Andrew Reeves",
   description = "Research on power, place, and accountability in American political life.",
-  active = ""
+  active = "",
+  image = "/images/andrew-reeves-portrait-editorial.jpg",
+  imageAlt = "Portrait of Andrew Reeves",
+  ogType = "website",
+  structuredData
 } = Astro.props;
 
 const pageTitle = title === "Andrew Reeves" ? title : `${title} - Andrew Reeves`;
+const site = Astro.site ?? new URL("https://andrewreeves.org");
+const canonicalUrl = new URL(Astro.url.pathname, site).toString();
+const imageUrl = new URL(image, site).toString();
+const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
 const navItems = [
   ["Home", "/"],
   ["Research", "/research/"],
@@ -36,16 +48,22 @@ const navItems = [
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/andrew-reeves-portrait-editorial.jpg" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
+    {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
   <body>
     <div class="site-shell">

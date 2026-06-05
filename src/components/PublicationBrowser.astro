@@ -1,6 +1,7 @@
 ---
 import metadataIndex from "../data/publications/presentation/index.json";
 import publicationFigures from "../data/publication-figures.json";
+import { researchTopicPath, researchTopics } from "../data/research-topics";
 
 interface Publication {
   slug: string;
@@ -154,32 +155,12 @@ const typeOptions = [
   }))
 ];
 
-const majorThemeDefinitions = [
-  {
-    value: "presidential-power",
-    label: "Presidential Power",
-    description: "Work on executive authority, unilateral action, presidential incentives, and the institutional limits citizens and Congress place on presidents.",
-    terms: ["presidential power", "executive power", "unilateral action", "presidential politics", "presidential particularism", "presidency"]
-  },
-  {
-    value: "democratic-accountability",
-    label: "Democratic Accountability",
-    description: "Work on how citizens evaluate leaders, assign responsibility, and connect governing choices to democratic judgment.",
-    terms: ["democratic accountability", "presidential accountability", "electoral accountability", "retrospective voting", "public opinion", "public support"]
-  },
-  {
-    value: "political-geography",
-    label: "Political Geography",
-    description: "Work on how local context, spatial inequality, urban-rural divides, and place-based experience shape political behavior.",
-    terms: ["political geography", "geographic context", "county-level", "urban-rural", "migration", "place", "electoral geography", "bellwether"]
-  },
-  {
-    value: "federal-resource-allocation",
-    label: "Federal Resource Allocation",
-    description: "Work on how federal attention, grants, disaster declarations, and public resources move across communities.",
-    terms: ["federal resource allocation", "distributive politics", "disaster politics", "federal grants", "federal spending", "federalism", "intergovernmental"]
-  }
-];
+const majorThemeDefinitions = researchTopics.map((topic) => ({
+  value: topic.slug,
+  label: topic.label,
+  description: topic.description,
+  terms: topic.terms
+}));
 
 const searchableFields = (publication: Publication, metadata?: PublicationMetadata) =>
   [
@@ -358,7 +339,7 @@ const themeOptions = majorThemeDefinitions
                   const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
                   return theme && (
                     <>
-                      <a href={`/research/?theme=${theme.value}`}>{theme.label}</a>
+                      <a href={researchTopicPath(theme.value)}>{theme.label}</a>
                     </>
                   );
                 })}

@@ -25,6 +25,9 @@ const authorLine = book.slug === "particularistic-president"
   ? [...book.data.coauthors, "Andrew Reeves"].join(" and ")
   : ["Andrew Reeves", ...book.data.coauthors].join(" and ");
 const bookPage = `/books/#${book.slug}`;
+const coverDimensions = book.slug === "particularistic-president"
+  ? { width: 427, height: 648 }
+  : { width: 415, height: 648 };
 ---
 
 <article class={`flw-feature-card book-feature-card ${reversed ? "flw-feature-card-reversed" : ""}`}>
@@ -33,6 +36,8 @@ const bookPage = `/books/#${book.slug}`;
       <img
         src={book.data.cover}
         alt={`Cover of ${book.data.title}`}
+        width={coverDimensions.width}
+        height={coverDimensions.height}
         loading="lazy"
       />
     </a>

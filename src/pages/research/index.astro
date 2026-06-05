@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PublicationBrowser from "@components/PublicationBrowser.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { researchTopicPath, researchTopics } from "@data/research-topics";
 
 const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
 const publications = (await getCollection("publications")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
@@ -14,6 +15,25 @@ const publications = (await getCollection("publications")).sort((a, b) => yearRa
     title="Publications"
     intro="Published research spanning presidential power, democratic accountability, political geography, and the distribution of federal resources."
   />
+
+  <section class="container-wide page-section" aria-labelledby="research-themes-heading">
+    <div class="page-section-heading">
+      <div>
+        <p class="kicker mb-4">Research Themes</p>
+        <h2 id="research-themes-heading">Browse by Area</h2>
+      </div>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-4">
+      {
+        researchTopics.map((topic) => (
+          <a class="editorial-card no-underline" href={researchTopicPath(topic.slug)}>
+            <h3 class="card-title">{topic.label}</h3>
+            <p class="mt-4 text-lg leading-[1.6] text-muted">{topic.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 
   <PublicationBrowser
     publications={publications}

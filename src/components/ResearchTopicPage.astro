@@ -1,0 +1,89 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import PublicationBrowser from "@components/PublicationBrowser.astro";
+import type { ResearchTopic } from "@data/research-topics";
+import { researchTopicPath } from "@data/research-topics";
+
+interface Props {
+  topic: ResearchTopic;
+  publications: CollectionEntry<"publications">[];
+}
+
+const { topic, publications } = Astro.props;
+const siteUrl = "https://andrewreeves.org";
+const pageUrl = `${siteUrl}${researchTopicPath(topic.slug)}`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: topic.title,
+      description: topic.description,
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Andrew Reeves",
+        url: `${siteUrl}/`
+      },
+      about: {
+        "@type": "Thing",
+        name: topic.label
+      },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: publications.map((publication, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteUrl}/research/${publication.slug}/`,
+          name: publication.data.title
+        }))
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Research",
+          item: `${siteUrl}/research/`
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: topic.label,
+          item: pageUrl
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={topic.title}
+  active="Research"
+  description={topic.description}
+  structuredData={structuredData}
+>
+  <PageHeader
+    eyebrow="Research Theme"
+    title={topic.label}
+    intro={topic.description}
+  />
+
+  <PublicationBrowser
+    publications={publications}
+    heading={`${topic.label} Publications`}
+  />
+</BaseLayout>

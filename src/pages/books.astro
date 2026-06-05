@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BookFeature from "@components/BookFeature.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { researchTopicPath } from "@data/research-topics";
 
 const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
@@ -10,10 +11,10 @@ const publications = await getCollection("publications");
 const publicationsBySlug = new Map(publications.map((publication) => [publication.slug, publication]));
 
 const themeLinks = {
-  presidentialPower: "/research/?theme=presidential-power",
-  democraticAccountability: "/research/?theme=democratic-accountability",
-  federalResourceAllocation: "/research/?theme=federal-resource-allocation",
-  politicalGeography: "/research/?theme=political-geography"
+  presidentialPower: researchTopicPath("presidential-power"),
+  democraticAccountability: researchTopicPath("democratic-accountability"),
+  federalResourceAllocation: researchTopicPath("federal-resource-allocation"),
+  politicalGeography: researchTopicPath("political-geography")
 };
 
 const bookDetails = {
@@ -165,9 +166,85 @@ const relatedPublicationsFor = (slugs: string[]) =>
     const publication = publicationsBySlug.get(slug);
     return publication ? [publication] : [];
   });
+const siteUrl = "https://andrewreeves.org";
+const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
+const authorNamesFor = (book: (typeof books)[number]) =>
+  book.slug === "particularistic-president"
+    ? [...book.data.coauthors, "Andrew Reeves"]
+    : ["Andrew Reeves", ...book.data.coauthors];
+const booksStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/books/#webpage`,
+      url: `${siteUrl}/books/`,
+      name: "Books by Andrew Reeves",
+      description: "Books by Andrew Reeves on presidential power, public opinion, distributive politics, and democratic accountability.",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Andrew Reeves",
+        url: `${siteUrl}/`
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/books/#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Books",
+          item: `${siteUrl}/books/`
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/books/#books`,
+      name: "Books by Andrew Reeves",
+      itemListElement: books.map((book, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteUrl}/books/#${book.slug}`,
+        item: {
+          "@type": "Book",
+          "@id": `${siteUrl}/books/#${book.slug}`,
+          name: book.data.title,
+          alternateName: book.data.subtitle,
+          description: book.data.summary,
+          image: absoluteUrl(book.data.cover),
+          url: book.data.url ?? `${siteUrl}/books/#${book.slug}`,
+          datePublished: String(book.data.year),
+          publisher: {
+            "@type": "Organization",
+            name: book.data.publisher
+          },
+          author: authorNamesFor(book).map((name) => ({
+            "@type": "Person",
+            name
+          }))
+        }
+      }))
+    }
+  ]
+};
 ---
 
-<BaseLayout title="Books" active="Books" description="Books by Andrew Reeves on presidential power, public opinion, distributive politics, and democratic accountability.">
+<BaseLayout
+  title="Books"
+  active="Books"
+  description="Books by Andrew Reeves on presidential power, public opinion, distributive politics, and democratic accountability."
+  image={books[0]?.data.cover}
+  imageAlt={`Cover of ${books[0]?.data.title ?? "Andrew Reeves book"}`}
+  structuredData={booksStructuredData}
+>
   <PageHeader
     eyebrow="Book-Length Research"
     title="Books"
@@ -187,27 +264,29 @@ const relatedPublicationsFor = (slugs: string[]) =>
 
               {details && (
                 <div class="book-expanded-panel">
-                  <section class="book-argument-block" aria-labelledby={`${book.slug}-argument`}>
-                    <p class="kicker">The Argument</p>
-                    <h2 id={`${book.slug}-argument`}>What the book explains</h2>
-                    <div class="book-prose">
+                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.slug}-argument`}>
+                    <div class="editorial-subsection-heading">
+                      <p class="kicker">The Argument</p>
+                      <h2 id={`${book.slug}-argument`}>What the book explains</h2>
+                    </div>
+                    <div class="editorial-prose book-prose">
                       {details.argument.map((paragraph) => <p>{paragraph}</p>)}
                     </div>
                   </section>
 
-                  <section class="book-detail-grid" aria-label={`${book.data.title} details`}>
-                    <div class="book-detail-card book-detail-card-themes">
+                  <section class="editorial-info-grid book-detail-grid" aria-label={`${book.data.title} details`}>
+                    <div class="editorial-info-card book-detail-card book-detail-card-themes">
                       <p class="kicker">Key Themes</p>
-                      <div class="book-theme-list">
+                      <div class="editorial-tag-list book-theme-list">
                         {details.themes.map((theme) => (
                           <a href={theme.href}>{theme.label}</a>
                         ))}
                       </div>
                     </div>
 
-                    <div class="book-detail-card">
+                    <div class="editorial-info-card book-detail-card">
                       <p class="kicker">Reception</p>
-                      <div class="book-quote-list">
+                      <div class="editorial-quote-list book-quote-list">
                         {details.reception.map((item) => (
                           <figure>
                             <figcaption>
@@ -220,10 +299,10 @@ const relatedPublicationsFor = (slugs: string[]) =>
                       </div>
                     </div>
 
-                    <div class="book-detail-card">
+                    <div class="editorial-info-card book-detail-card">
                       <p class="kicker">Endorsements</p>
                       {details.endorsements.length > 0 ? (
-                        <div class="book-quote-list">
+                        <div class="editorial-quote-list book-quote-list">
                           {details.endorsements.map((item) => (
                             <figure>
                               <blockquote>“{item.excerpt}”</blockquote>
@@ -239,14 +318,14 @@ const relatedPublicationsFor = (slugs: string[]) =>
                     </div>
                   </section>
 
-                  <section class="book-related-section" aria-labelledby={`${book.slug}-related`}>
-                    <div>
+                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.slug}-related`}>
+                    <div class="editorial-subsection-heading">
                       <p class="kicker">Related Research</p>
                       <h2 id={`${book.slug}-related`}>Related Articles</h2>
                     </div>
-                    <div class="book-related-list">
+                    <div class="editorial-related-list book-related-list">
                       {relatedPublications.map((publication) => (
-                        <a href={`/research/${publication.slug}/`} class="book-related-item">
+                        <a href={`/research/${publication.slug}/`} class="editorial-related-item book-related-item">
                           <span>{publication.data.title}</span>
                           <small>{publication.data.venue} · {publication.data.year}</small>
                         </a>
@@ -254,7 +333,7 @@ const relatedPublicationsFor = (slugs: string[]) =>
                     </div>
                   </section>
 
-                  <section class="book-publication-info" aria-label={`${book.data.title} publication information`}>
+                  <section class="editorial-info-card editorial-definition-card book-publication-info" aria-label={`${book.data.title} publication information`}>
                     <p class="kicker">Publication Information</p>
                     <dl>
                       {details.publicationInfo.map((item) => (
@@ -270,7 +349,7 @@ const relatedPublicationsFor = (slugs: string[]) =>
             </article>
 
             {index === 0 && (
-              <section class="book-relationship-section" aria-labelledby="book-relationship-heading">
+              <section class="editorial-page-section book-relationship-section" aria-labelledby="book-relationship-heading">
                 <div class="page-section-heading">
                   <div>
                     <p class="kicker">Research Agenda</p>
@@ -280,7 +359,7 @@ const relatedPublicationsFor = (slugs: string[]) =>
                     </p>
                   </div>
                 </div>
-                <div class="book-relationship-prose">
+                <div class="editorial-prose book-relationship-prose">
                   <p>
                     <em>The Particularistic President</em> looks outward from the executive branch to the distribution of government resources. It shows how electoral incentives and administrative discretion can lead presidents to favor politically valuable places, challenging the idea that presidents reliably represent a national constituency.
                   </p>

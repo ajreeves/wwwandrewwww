@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import ResearchTopicPage from "@components/ResearchTopicPage.astro";
+import { publicationMatchesTopic, topicForSlug } from "@data/research-topics";
+
+const topic = topicForSlug("federal-resource-allocation");
+if (!topic) throw new Error("Missing federal-resource-allocation research topic");
+
+const yearRank = (year: number | string) => (typeof year === "number" ? year : Number.parseInt(String(year), 10) || 0);
+const publications = (await getCollection("publications"))
+  .filter((publication) => publicationMatchesTopic(publication, topic))
+  .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
+---
+
+<ResearchTopicPage topic={topic} publications={publications} />

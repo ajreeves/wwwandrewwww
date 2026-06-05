@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { researchTopicPath } from "@data/research-topics";
 import metadataIndex from "../../data/publications/presentation/index.json";
 import publicationFigures from "../../data/publication-figures.json";
 
@@ -247,7 +248,7 @@ const themeTerms = new Map([
 const themeHref = (theme: string) => {
   const themeKey = normalizeTitle(theme);
   const majorTheme = themeTerms.get(themeKey);
-  return majorTheme ? `/research/?theme=${majorTheme}` : `/research/?q=${encodeURIComponent(theme)}`;
+  return majorTheme ? researchTopicPath(majorTheme) : `/research/?q=${encodeURIComponent(theme)}`;
 };
 
 const topicSource = [
@@ -318,12 +319,103 @@ const sortedPublications = [...allPublications].sort((a, b) => Number(b.data.yea
 const currentIndex = sortedPublications.findIndex((entry) => entry.slug === publication.slug);
 const previousPublication = currentIndex > 0 ? sortedPublications[currentIndex - 1] : undefined;
 const nextPublication = currentIndex >= 0 && currentIndex < sortedPublications.length - 1 ? sortedPublications[currentIndex + 1] : undefined;
+const siteUrl = "https://andrewreeves.org";
+const publicationUrl = `${siteUrl}/research/${publication.slug}/`;
+const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
+const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
+const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
+const doiValue = meaningfulValue(metadata?.doi).replace(/^https?:\/\/doi\.org\//, "");
+const doiUrl = doiValue ? `https://doi.org/${doiValue}` : undefined;
+const schemaTypeByPublicationType: Record<string, string> = {
+  Article: "ScholarlyArticle",
+  Chapter: "Chapter",
+  "Working Paper": "ScholarlyArticle",
+  Review: "Review",
+  Book: "Book"
+};
+const publicationStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": schemaTypeByPublicationType[publication.data.type] ?? "CreativeWork",
+      "@id": `${publicationUrl}#publication`,
+      headline: publication.data.title,
+      name: publication.data.title,
+      description: contribution,
+      abstract: abstract || undefined,
+      url: publicationUrl,
+      image: absoluteUrl(publicationImage),
+      datePublished: String(publication.data.year),
+      author: authors.map((name) => ({
+        "@type": "Person",
+        name
+      })),
+      isPartOf: venue
+        ? {
+            "@type": "Periodical",
+            name: venue
+          }
+        : undefined,
+      pagination: meaningfulValue(metadata?.pages) || undefined,
+      identifier: doiValue
+        ? {
+            "@type": "PropertyValue",
+            propertyID: "DOI",
+            value: doiValue,
+            url: doiUrl
+          }
+        : undefined,
+      sameAs: Array.from(new Set([
+        doiUrl,
+        ...primaryLinks.map((link) => link.url).filter((url) => /^https?:\/\//.test(url))
+      ].filter(Boolean))),
+      citation: fullCitation || undefined,
+      keywords: visibleThemes,
+      about: visibleThemes.map((theme) => ({
+        "@type": "Thing",
+        name: theme
+      })),
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": publicationUrl
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${publicationUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Research",
+          item: `${siteUrl}/research/`
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: publication.data.title,
+          item: publicationUrl
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <BaseLayout
   title={`${publication.data.title} | Research`}
   active="Research"
   description={contribution}
+  image={publicationImage}
+  imageAlt={publicationImageAlt}
+  ogType={publication.data.type === "Article" ? "article" : "website"}
+  structuredData={publicationStructuredData}
 >
   <article class="publication-profile container-wide">
     <header class="publication-profile-hero">
