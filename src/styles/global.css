@@ -628,7 +628,7 @@
   }
 
   .kicker {
-    @apply text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-muted;
+    @apply text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-muted;
     font-family: var(--font-sans);
     line-height: 1.25;
     overflow-wrap: anywhere;
@@ -3857,7 +3857,7 @@
   .feature-label {
     color: rgba(255, 255, 255, 0.82);
     font-family: var(--font-sans);
-    font-size: 0.68rem;
+    font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.18em;
     line-height: 1.2;
@@ -6042,9 +6042,9 @@
   .home-spread-heading p,
   .home-question-heading p {
     margin: 0;
-    color: color-mix(in srgb, var(--muted) 78%, var(--paper));
+    color: var(--muted);
     font-family: "Cormorant SC", var(--font-serif);
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     font-variant-caps: all-small-caps;
     letter-spacing: 0.16em;
@@ -7575,9 +7575,9 @@
 
 .page-section-heading .kicker {
   margin: 0;
-  color: color-mix(in srgb, var(--muted) 78%, var(--paper));
+  color: var(--muted);
   font-family: "Cormorant SC", var(--font-serif);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 600;
   font-variant-caps: all-small-caps;
   letter-spacing: 0.16em;
@@ -7725,7 +7725,7 @@
 .publication-meta-label,
 .book-meta,
 .teaching-term {
-  color: color-mix(in srgb, var(--muted) 82%, var(--paper));
+  color: var(--muted);
   font-family: "Cormorant SC", var(--font-serif);
   font-size: 0.78rem;
   font-weight: 600;
