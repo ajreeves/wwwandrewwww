@@ -172,6 +172,11 @@ const authorNamesFor = (book: (typeof books)[number]) =>
   book.slug === "particularistic-president"
     ? [...book.data.coauthors, "Andrew Reeves"]
     : ["Andrew Reeves", ...book.data.coauthors];
+const tocLinks = books.flatMap((book, index) => {
+  const bookLink = { href: `#${book.slug}`, label: book.data.title };
+  if (index === 0) return [bookLink, { href: "#book-relationship-heading", label: "How the Books Relate" }];
+  return [bookLink];
+});
 const booksStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -250,6 +255,13 @@ const booksStructuredData = {
     title="Books"
     intro="Two books examine how political institutions shape the exercise of power, the distribution of public resources, and the constraints imposed by democratic accountability."
   />
+
+  <nav class="container-wide book-page-toc" aria-label="On this page">
+    <p class="kicker">On This Page</p>
+    <div>
+      {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
+    </div>
+  </nav>
 
   <section class="container-wide book-gallery page-section">
     {
