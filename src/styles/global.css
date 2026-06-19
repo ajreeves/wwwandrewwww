@@ -106,7 +106,7 @@
 .home-thesis-copy {
   position: relative;
   min-height: clamp(34rem, calc(100vh - 88px), 48rem);
-  padding-block: clamp(2.7rem, 5vw, 5.4rem);
+  padding-block: clamp(2.25rem, 4.2vw, 4.4rem);
 }
 
 .home-thesis-copy::before {
@@ -122,19 +122,19 @@
 
 .home-thesis-copy h1 {
   max-width: 11.5ch;
-  font-size: clamp(3.75rem, 7.05vw, 7.6rem);
-  line-height: 0.93;
+  font-size: clamp(3.65rem, 6.2vw, 6.95rem);
+  line-height: 0.94;
 }
 
 .home-thesis-lede {
   max-width: 38rem;
-  margin-top: clamp(1.35rem, 2.2vw, 2.2rem);
+  margin-top: clamp(1.15rem, 1.8vw, 1.8rem);
   font-size: clamp(1.22rem, 1.45vw, 1.58rem);
   line-height: 1.38;
 }
 
 .home-thesis-links {
-  margin-top: clamp(1.5rem, 2.5vw, 2.6rem);
+  margin-top: clamp(1.2rem, 2vw, 2rem);
 }
 
 .home-thesis-links a {
@@ -366,12 +366,6 @@
   }
 }
 
-@media (min-width: 1320px) {
-  .home-thesis-copy h1 {
-    font-size: clamp(4rem, 6.4vw, 7.9rem);
-  }
-}
-
 @media (max-width: 1023px) {
   .home-feature-band {
     grid-template-columns: 1fr;
@@ -392,23 +386,6 @@
     justify-content: space-between;
   }
 
-}
-
-.home-thesis-copy h1 {
-  font-size: clamp(3.65rem, 6.2vw, 6.95rem);
-  line-height: 0.94;
-}
-
-.home-thesis-copy {
-  padding-block: clamp(2.25rem, 4.2vw, 4.4rem);
-}
-
-.home-thesis-lede {
-  margin-top: clamp(1.15rem, 1.8vw, 1.8rem);
-}
-
-.home-thesis-links {
-  margin-top: clamp(1.2rem, 2vw, 2rem);
 }
 
 @media (min-width: 1320px) {
@@ -465,7 +442,7 @@
     --rule: #D7D2CB;
     --muted: #64615C;
     --blueprint: #326EAD;
-    --clay: #FF6D6A;
+    --clay: #C49A97;
     --font-sans: "Neutraface", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
     --font-serif: "freight-text-pro", Georgia, "Times New Roman", serif;
     --font-slab: "Neutraface Slab", "freight-text-pro", Georgia, serif;
@@ -606,6 +583,9 @@
     border-block: 1px solid var(--rule);
     padding-block: clamp(1.5rem, 2.5vw, 2.25rem);
     box-shadow: inset 0 5px 0 rgba(19, 50, 43, 0.13);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
   .footer-links {
@@ -624,6 +604,32 @@
     line-height: 1.2;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.25rem;
+    align-content: start;
+  }
+
+  .footer-nav a {
+    color: var(--olive-dark);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .footer-nav a:hover {
+    color: var(--rust);
+  }
+
+  .footer-links a:hover {
+    color: var(--rust);
   }
 
   .container-wide {
@@ -1060,6 +1066,11 @@
     font-weight: 600;
     line-height: 0.92;
     overflow-wrap: anywhere;
+  }
+
+  .page-title-compact {
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    line-height: 1;
   }
 
   .publication-title {
@@ -6505,8 +6516,9 @@
     }
 
     .site-footer {
-      display: flex;
-      justify-content: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
     }
 
     .footer-links {
@@ -8149,5 +8161,11 @@
   .nav-list .nav-link[aria-current="page"] {
     color: var(--rust);
     border-bottom-color: rgba(186, 12, 47, 0.25);
+  }
+}
+
+@media (max-width: 640px) {
+  .cv-frame {
+    display: none;
   }
 }

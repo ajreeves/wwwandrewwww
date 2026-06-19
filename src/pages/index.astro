@@ -32,14 +32,31 @@ const questions = [
   }
 ] as const;
 
-const featureTiles = [
+interface FeatureTile {
+  label: string;
+  title: string;
+  text: string;
+  href: string;
+  image: string;
+  alt: string;
+  width: number;
+  height: number;
+  srcset?: string;
+  sizes?: string;
+}
+
+const featureTiles: FeatureTile[] = [
   {
     label: "Research",
     title: "Where resources land",
     text: "How public resources and presidential incentives move across communities.",
     href: "/research/?theme=federal-resource-allocation",
     image: "/images/federal-resource-allocation-map-1200.jpg",
-    alt: "Map showing federal resource allocation patterns"
+    alt: "Map showing federal resource allocation patterns",
+    width: 1200,
+    height: 800,
+    srcset: "/images/federal-resource-allocation-map-800.jpg 800w, /images/federal-resource-allocation-map-1200.jpg 1200w",
+    sizes: "(max-width: 800px) 800px, 1200px"
   },
   {
     label: "Books",
@@ -47,7 +64,9 @@ const featureTiles = [
     text: "How citizens place limits on unilateral presidential power.",
     href: "/books/#no-blank-check",
     image: "/images/andrew-fed-page.jpg",
-    alt: "Andrew Reeves speaking in a public policy setting"
+    alt: "Andrew Reeves speaking in a public policy setting",
+    width: 1800,
+    height: 1200
   },
   {
     label: "Teaching",
@@ -55,9 +74,11 @@ const featureTiles = [
     text: "Courses on citizenship, elections, institutions, and political accountability.",
     href: "/teaching/",
     image: "/images/andrew-teaching-page.jpg",
-    alt: "Classroom teaching scene"
+    alt: "Classroom teaching scene",
+    width: 1600,
+    height: 1067
   }
-] as const;
+];
 
 const personStructuredData = {
   "@context": "https://schema.org",
@@ -154,29 +175,17 @@ const personStructuredData = {
         alt="Portrait of Andrew Reeves"
         loading="eager"
         fetchpriority="high"
+        width="1200"
+        height="1440"
       />
     </figure>
-  </section>
-
-  <section class="home-bio-note" aria-label="Biographical note">
-    <div class="home-bio-body">
-      <p>
-        Andrew Reeves studies how presidential leadership and institutional design shape public policy outcomes. His research examines executive decision-making, federal resource allocation, and the conditions under which citizens hold leaders accountable when policy meets lived experience.
-      </p>
-      <p>
-        He is Director of the <a href="https://wc.washu.edu/">Weidenbaum Center on the Economy, Government, and Public Policy</a> at <a href="https://washu.edu/">Washington University in St. Louis</a>, where he leads cross-disciplinary initiatives linking research, policy design, and public engagement. He also serves as Senior Advisor to the Chancellor and is a Visiting Fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.
-      </p>
-      <p>
-        His research appears in leading journals and national media. He is coauthor of <em>The Particularistic President</em> and <em>No Blank Check</em>. Across this work, he combines empirical rigor with sustained attention to how institutions structure governance and everyday democratic experience.
-      </p>
-    </div>
   </section>
 
   <section class="home-feature-band" aria-label="Featured site pathways">
     {
       featureTiles.map((item) => (
         <a class="home-feature-tile" href={item.href}>
-          <img src={item.image} alt={item.alt} loading="lazy" />
+          <img src={item.image} alt={item.alt} loading="lazy" width={item.width} height={item.height} srcset={item.srcset} sizes={item.sizes} />
           <span class="feature-label">{item.label}</span>
           <strong class="feature-title-v2">{item.title}</strong>
           <span class="feature-text">{item.text}</span>
