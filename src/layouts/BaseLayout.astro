@@ -73,7 +73,12 @@ const navItems = [
           <a class="nav-home" href="/" aria-label="Andrew Reeves home">
             <span class="site-title">Andrew Reeves</span>
           </a>
-          <div class="nav-list">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav-list" aria-label="Open navigation menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+          <div class="nav-list" id="main-nav-list">
             {
               navItems.map(([label, href]) => (
                 <a class="nav-link" href={href} aria-current={active === label ? "page" : undefined}>
@@ -98,6 +103,35 @@ const navItems = [
         </div>
       </footer>
     </div>
+    <script>
+      const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+      const navList = document.getElementById("main-nav-list");
+
+      navToggle?.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        navToggle.setAttribute("aria-label", expanded ? "Open navigation menu" : "Close navigation menu");
+        navList?.classList.toggle("nav-list-open");
+      });
+
+      document.addEventListener("click", (e) => {
+        const target = e.target as Node;
+        if (!navToggle?.contains(target) && !navList?.contains(target)) {
+          navToggle?.setAttribute("aria-expanded", "false");
+          navToggle?.setAttribute("aria-label", "Open navigation menu");
+          navList?.classList.remove("nav-list-open");
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navToggle?.getAttribute("aria-expanded") === "true") {
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.setAttribute("aria-label", "Open navigation menu");
+          navList?.classList.remove("nav-list-open");
+          navToggle.focus();
+        }
+      });
+    </script>
     <!-- Default Statcounter code for Andrew Reeves (New)
     http://andrewreeves.org -->
     <script is:inline type="text/javascript">

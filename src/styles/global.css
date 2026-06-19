@@ -4,11 +4,56 @@
 
 @font-face {
   font-family: "Neutraface";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_book.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_book.woff") format("woff");
+  src: url("/fonts/Neutra2Text_book.woff2") format("woff2"),
+    url("/fonts/Neutra2Text_book.woff") format("woff");
   font-display: swap;
   font-style: normal;
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neutraface";
+  src: url("/fonts/Neutra2Text_demi.woff2") format("woff2"),
+    url("/fonts/Neutra2Text_demi.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Neutraface";
+  src: url("/fonts/Neutra2Text_bold.woff2") format("woff2"),
+    url("/fonts/Neutra2Text_bold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Neutraface Slab";
+  src: url("/fonts/NeutrafaceSlabText-Book.woff2") format("woff2"),
+    url("/fonts/NeutrafaceSlabText-Book.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neutraface Slab";
+  src: url("/fonts/NeutrafaceSlabText-Demi.woff2") format("woff2"),
+    url("/fonts/NeutrafaceSlabText-Demi.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Neutraface Slab";
+  src: url("/fonts/NeutrafaceSlabText-Bold.woff2") format("woff2"),
+    url("/fonts/NeutrafaceSlabText-Bold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .editorial-button,
@@ -403,50 +448,6 @@
   }
 }
 
-@font-face {
-  font-family: "Neutraface";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_demi.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_demi.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Neutraface";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_bold.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/Neutra2Text_bold.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Neutraface Slab";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Book.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Book.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Neutraface Slab";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Demi.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Demi.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Neutraface Slab";
-  src: url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Bold.woff2") format("woff2"),
-    url("https://franklloydwright.org/wp-content/themes/franklloydwright/static/fonts/NeutrafaceSlabText-Bold.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
 
 @layer base {
   :root {
@@ -7383,26 +7384,6 @@
       min-height: clamp(22rem, 90vw, 30rem);
     }
 
-    .nav-list {
-      flex-wrap: wrap;
-      justify-content: start;
-      column-gap: 0.85rem;
-      row-gap: 0.45rem;
-      margin-inline: -1.25rem;
-      padding-inline: 1.25rem;
-      overflow-x: visible;
-      font-size: 0.66rem;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-list::-webkit-scrollbar {
-      display: none;
-    }
-
-    .nav-list .nav-link {
-      flex: 0 0 auto;
-      white-space: nowrap;
-    }
 
     .hero-name-v2 {
       font-size: clamp(4rem, 18vw, 6.2rem);
@@ -8075,32 +8056,98 @@
   position: relative;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.35rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+  justify-self: end;
+  align-self: center;
+}
+
+.nav-toggle:hover {
+  color: var(--olive-dark);
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 1.35rem;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
 @media (max-width: 700px) {
   .site-nav {
-    padding-right: 0;
+    grid-template-columns: 1fr auto;
+    row-gap: 0;
+    padding-right: clamp(1.25rem, 3vw, 3rem);
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 
   .nav-list {
-    flex-wrap: wrap;
-    width: 100%;
-    overflow-x: visible;
-    padding-right: 1.25rem;
-  }
-
-  .site-nav::after {
-    content: none;
-    position: absolute;
-    right: 0;
-    bottom: clamp(1.5rem, 3vw, 2rem);
-    width: 4.5rem;
-    height: 2.75rem;
-    pointer-events: none;
-    background:
-      linear-gradient(90deg, rgba(253, 252, 248, 0), rgba(253, 252, 248, 0.96) 62%),
-      linear-gradient(90deg, rgba(186, 12, 47, 0), rgba(186, 12, 47, 0.08));
-  }
-
-  .nav-list::-webkit-scrollbar {
     display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0.65rem 0 1rem;
+    border-top: 1px solid var(--rule);
+    overflow: visible;
+  }
+
+  .nav-list.nav-list-open {
+    display: flex;
+  }
+
+  .nav-list .nav-link {
+    display: block;
+    width: 100%;
+    padding-block: 0.62rem;
+    padding-inline: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    border-bottom: 1px solid rgba(215, 210, 203, 0.5);
+    border-left: 0;
+    white-space: normal;
+  }
+
+  .nav-list .nav-link:last-child {
+    border-bottom: 0;
+  }
+
+  .nav-list .nav-link[aria-current="page"] {
+    color: var(--rust);
+    border-bottom-color: rgba(186, 12, 47, 0.25);
   }
 }
