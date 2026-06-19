@@ -58,9 +58,6 @@ const navItems = [
     <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
