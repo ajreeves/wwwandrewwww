@@ -19,7 +19,7 @@
     "confidence": "high"
   },
   "year": {
-    "value": 2025,
+    "value": 2026,
     "evidence_pages": [
       1
     ],
@@ -33,21 +33,21 @@
     "confidence": "high"
   },
   "volume": {
-    "value": "0",
+    "value": "79",
     "evidence_pages": [
       1
     ],
     "confidence": "high"
   },
   "issue": {
-    "value": "0",
+    "value": "1",
     "evidence_pages": [
       1
     ],
     "confidence": "high"
   },
   "pages": {
-    "value": "1–17",
+    "value": "323-339",
     "evidence_pages": [
       1
     ],
@@ -243,7 +243,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Marsh, Wayde Z. C., Michael P. Olson, Andrew Reeves, and Jordan Duffin Wong. 2025. \"Elections and Representation in American Municipal Administration.\" Political Research Quarterly 0(0): 1–17. https://doi.org/10.1177/10659129251389624",
+    "value": "Marsh, Wayde Z. C., Michael P. Olson, Andrew Reeves, and Jordan Duffin Wong. 2026. \"Elections and Representation in American Municipal Administration.\" Political Research Quarterly 79(1): 323-339.",
     "evidence_pages": [
       1
     ],
@@ -252,7 +252,7 @@
   "links": {
     "value": {
       "pdf": "/papers/clerks.pdf",
-      "journal": "https://journals.sagepub.com/home/prq",
+      "journal": "https://journals.sagepub.com/doi/10.1177/10659129251389624",
       "replication_data": null,
       "code": null
     },

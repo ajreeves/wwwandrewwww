@@ -242,6 +242,10 @@ const themeOptions = majorThemeDefinitions
 ---
 
 <section class="container-wide archive-workbench" data-publication-browser>
+  <p class="archive-poster-note">
+    Each publication is paired with a fictional, AI-generated vintage movie poster that playfully interprets the paper’s central finding.
+  </p>
+
   <div class="archive-search-panel">
     <div class="archive-search-heading">
       <div>
@@ -355,8 +359,15 @@ const themeOptions = majorThemeDefinitions
             )}
           </div>
           {figure && (
-            <figure class={`archive-record-figure ${figure.kind === "book-cover" ? "archive-record-book-cover" : ""}`}>
+            <figure
+              class:list={[
+                "archive-record-figure",
+                figure.kind === "book-cover" && "archive-record-book-cover",
+                figure.kind === "poster" && "archive-record-poster"
+              ]}
+            >
               <img src={figure.src} alt={figure.alt} loading="lazy" />
+              <figcaption>Fictional AI-generated movie poster inspired by this research.</figcaption>
             </figure>
           )}
         </article>

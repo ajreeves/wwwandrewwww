@@ -60,14 +60,24 @@ type PublicationMetadata = {
   sample_size?: string | null;
   policy_relevance?: string | null;
   tags?: string[] | null;
-  filters?: string[] | null;
+  filters?: Record<string, string[] | string | null> | string[] | null;
 };
 
 type PublicationFigure = {
   src: string;
   alt: string;
   caption: string;
+  kind?: string;
   fallback?: boolean;
+};
+
+type PublicationProfileOverride = {
+  why?: string[];
+  findings?: string[];
+  designLabel?: string;
+  figureCaption?: string;
+  keywords?: string[];
+  relatedSlugs?: string[];
 };
 
 export async function getStaticPaths() {
@@ -151,7 +161,18 @@ const metadata = metadataForPublication(publication);
 const rawFigure = figureManifest[publication.slug];
 const publicationFigure = rawFigure && !rawFigure.fallback ? rawFigure : undefined;
 
-const profileOverrides: Record<string, { why?: string[]; findings?: string[] }> = {
+const profileOverrides: Record<string, PublicationProfileOverride> = {
+  "rising-seas": {
+    why: [
+      "Rising Seas, Rising Concerns asks whether persistent exposure to sea-level rise changes how people think about climate mitigation.",
+      "The article's contribution is to connect local climate vulnerability to public opinion and voting behavior, showing that coastal risk is politically meaningful even in a polarized climate debate.",
+      "The result is especially important because the strongest relationship appears among residents attached to their communities, not simply those with the greatest financial exposure."
+    ],
+    designLabel: "Survey and precinct-level observational analysis",
+    figureCaption: "County-level susceptibility to sea-level rise, used to connect local climate vulnerability with climate-policy attitudes.",
+    keywords: ["sea-level rise", "climate vulnerability", "climate mitigation", "community attachment"],
+    relatedSlugs: ["ecologies-of-unease", "electoral-geography", "urban-rural-contentment", "context", "disaster-relief"]
+  },
   "no-blank-check": {
     why: [
       "This book asks how citizens think about presidential power when presidents act without Congress.",
@@ -204,8 +225,8 @@ const venue = cleanText(metadata?.journal) || publication.data.venue;
 const contribution =
   firstSentence(metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
 const abstract = cleanText(metadata?.abstract);
-const fullCitation = cleanText(publication.data.citation ?? metadata?.citation);
-const authors = metadata?.authors?.length ? metadata.authors : publication.data.authors;
+const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
+const authors = publication.data.authors.length ? publication.data.authors : metadata?.authors ?? [];
 
 const addLink = (links: Map<string, PublicationLink>, label: string, url?: string | null) => {
   const cleanUrl = cleanText(url);
@@ -253,12 +274,31 @@ const themeHref = (theme: string) => {
   return majorTheme ? researchTopicPath(majorTheme) : `/research/?q=${encodeURIComponent(theme)}`;
 };
 
-const topicSource = [
-  ...publication.data.themes,
-  ...asList(metadata?.tags),
-  ...asList(metadata?.filters)
-];
-const visibleThemes = Array.from(new Set(topicSource)).slice(0, 8);
+const currentOverride = profileOverrides[publication.slug];
+const publicationThemeLinks = Array.from(new Set(publication.data.themes)).slice(0, 5);
+const methodLikeTags = new Set([
+  "observational study",
+  "survey analysis",
+  "regression models",
+  "robustness checks",
+  "falsification tests",
+  "quasi experimental",
+  "quasi experimental precinct level voting analysis"
+]);
+const normalizeTag = (value: string) => normalizeTitle(value).replace(/\s+/g, " ");
+const keywordThemes = Array.from(new Set([
+  ...(currentOverride?.keywords ?? []),
+  ...asList(metadata?.tags)
+]))
+  .filter((theme) => {
+    const key = normalizeTag(theme);
+    return (
+      !publicationThemeLinks.some((existing) => normalizeTag(existing) === key) &&
+      !methodLikeTags.has(key)
+    );
+  })
+  .slice(0, 6);
+const visibleThemes = Array.from(new Set([...publicationThemeLinks, ...keywordThemes])).slice(0, 10);
 
 const lowerContribution = contribution.charAt(0).toLowerCase() + contribution.slice(1);
 const themePhrase = publication.data.themes.slice(0, 3).join(", ").toLowerCase();
@@ -267,7 +307,7 @@ const fallbackOpening =
     ? `${publication.data.title} examines ${lowerContribution.replace(/^examines\s+/i, "").replace(/[.!?]$/, "")}.`
     : `This publication situates ${publication.data.title} within work on ${themePhrase || "American politics"}.`;
 
-const whyItMatters = profileOverrides[publication.slug]?.why ??
+const whyItMatters = currentOverride?.why ??
   [
     metadata?.research_question ? `The publication begins with a motivating question: ${sentenceLimit(metadata.research_question, 2)}` : fallbackOpening,
     `Its central contribution is to show that ${lowerContribution.replace(/[.!?]$/, "")}.`,
@@ -276,7 +316,7 @@ const whyItMatters = profileOverrides[publication.slug]?.why ??
       : `It matters because the findings connect institutional choices to the way authority, public responsibility, and political behavior are experienced in practice.`
   ].filter(Boolean);
 
-const keyFindings = (profileOverrides[publication.slug]?.findings ??
+const keyFindings = (currentOverride?.findings ??
   (asList(metadata?.research_highlights).length
   ? asList(metadata?.research_highlights)
   : sentenceLimit(metadata?.plain_english_summary ?? publication.data.summary, 4)
@@ -285,7 +325,7 @@ const keyFindings = (profileOverrides[publication.slug]?.findings ??
 )).slice(0, 5);
 
 const designRows = [
-  { label: "Design", value: meaningfulValue(metadata?.identification_strategy) || (publication.data.type === "Book" ? "Book-length scholarly monograph" : meaningfulValue(publication.data.type)) },
+  { label: "Design", value: currentOverride?.designLabel || meaningfulValue(metadata?.identification_strategy) || (publication.data.type === "Book" ? "Book-length scholarly monograph" : meaningfulValue(publication.data.type)) },
   { label: "Data", value: asList(metadata?.data_sources).join("; ") },
   { label: "Geography", value: meaningfulValue(metadata?.geography) },
   { label: "Time Period", value: meaningfulValue(metadata?.time_period) },
@@ -315,7 +355,17 @@ const relatedPublications = allPublications
   })
   .filter(({ sharedThemes }) => sharedThemes > 0)
   .sort((a, b) => b.sharedThemes - a.sharedThemes || yearRank(b.entry.data.year) - yearRank(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
-  .slice(0, 5);
+  .slice(0, 8);
+
+const publicationBySlug = new Map(allPublications.map((entry) => [entry.slug, entry]));
+const curatedRelatedPublications = (currentOverride?.relatedSlugs ?? [])
+  .map((slug) => publicationBySlug.get(slug))
+  .filter((entry): entry is Publication => entry !== undefined && entry.slug !== publication.slug);
+const curatedRelatedSlugs = new Set(curatedRelatedPublications.map((entry) => entry.slug));
+const displayedRelatedPublications = [
+  ...curatedRelatedPublications,
+  ...relatedPublications.map(({ entry }) => entry).filter((entry) => !curatedRelatedSlugs.has(entry.slug))
+].slice(0, 5);
 
 const sortedPublications = [...allPublications].sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
 const currentIndex = sortedPublications.findIndex((entry) => entry.slug === publication.slug);
@@ -326,6 +376,7 @@ const publicationUrl = `${siteUrl}/research/${publication.slug}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
 const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
+const publicationFigureCaption = currentOverride?.figureCaption ?? publicationFigure?.caption;
 const doiValue = meaningfulValue(metadata?.doi).replace(/^https?:\/\/doi\.org\//, "");
 const doiUrl = doiValue ? `https://doi.org/${doiValue}` : undefined;
 const schemaTypeByPublicationType: Record<string, string> = {
@@ -420,12 +471,12 @@ const publicationStructuredData = {
   structuredData={publicationStructuredData}
 >
   <article class="publication-profile container-wide">
-    <header class="publication-profile-hero">
-      <div class="publication-profile-meta">
-        <p>{publication.data.type} · {publication.data.year}</p>
-        <p>{venue}</p>
-      </div>
+    <header class:list={["publication-profile-hero", publicationFigure && "publication-profile-hero-with-figure"]}>
       <div class="publication-profile-main">
+        <div class="publication-profile-meta">
+          <p>{publication.data.type} · {publication.data.year}</p>
+          <p>{venue}</p>
+        </div>
         <h1>{publication.data.title}</h1>
         <p class="publication-contribution">{contribution}</p>
         <p class="publication-profile-authors">{formatAuthors(authors)}</p>
@@ -437,13 +488,36 @@ const publicationStructuredData = {
           </nav>
         )}
       </div>
+      {publicationFigure && (
+        <figure class:list={["publication-hero-figure", publicationFigure.kind === "poster" && "publication-hero-poster"]}>
+          <img src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" decoding="async" />
+          {publicationFigureCaption && <figcaption>{publicationFigureCaption}</figcaption>}
+        </figure>
+      )}
     </header>
 
-    {visibleThemes.length > 0 && (
-      <nav class="publication-theme-ribbon" aria-label="Related research themes">
-        {visibleThemes.map((theme) => (
-          <a href={themeHref(theme)}>{theme}</a>
-        ))}
+    {(publicationThemeLinks.length > 0 || keywordThemes.length > 0) && (
+      <nav class="publication-theme-ribbon" aria-label="Related research themes and keywords">
+        {publicationThemeLinks.length > 0 && (
+          <div class="publication-theme-group">
+            <p>Research Themes</p>
+            <div>
+              {publicationThemeLinks.map((theme) => (
+                <a href={themeHref(theme)}>{theme}</a>
+              ))}
+            </div>
+          </div>
+        )}
+        {keywordThemes.length > 0 && (
+          <div class="publication-theme-group">
+            <p>Keywords</p>
+            <div>
+              {keywordThemes.map((theme) => (
+                <a href={themeHref(theme)}>{theme}</a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     )}
 
@@ -491,13 +565,6 @@ const publicationStructuredData = {
       </section>
     )}
 
-    {publicationFigure && (
-      <figure class="publication-profile-figure">
-        <img src={publicationFigure.src} alt={publicationFigure.alt} loading="lazy" decoding="async" />
-        <figcaption>{publicationFigure.caption}</figcaption>
-      </figure>
-    )}
-
     {abstract && (
       <details class="publication-profile-abstract">
         <summary>Full Abstract</summary>
@@ -531,14 +598,14 @@ const publicationStructuredData = {
       </section>
     )}
 
-    {relatedPublications.length > 0 && (
+    {displayedRelatedPublications.length > 0 && (
       <section class="publication-profile-section publication-related-section">
         <div class="publication-profile-section-label">
           <h2>Related Research</h2>
         </div>
         <div class="publication-profile-section-body">
           <div class="publication-related-list">
-            {relatedPublications.map(({ entry }) => (
+            {displayedRelatedPublications.map((entry) => (
               <article class="publication-related-item">
                 <p>{entry.data.year} · {entry.data.venue}</p>
                 <h3><a href={`/research/${entry.slug}/`}>{entry.data.title}</a></h3>

@@ -1,439 +1,535 @@
 {
   "all-presidents-senators": {
-    "src": "/images/publication-figures/all-presidents-senators.jpg",
-    "alt": "Featured visual from All the President's Senators: Presidential Co-Partisans and the Allocation of Federal Grants",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/all-presidents-senators.png",
+    "alt": "AI-generated movie poster for All the President's Senators: Presidential Co-Partisans and the Allocation of Federal Grants",
+    "caption": "AI-generated movie poster for All the President's Senators: Presidential Co-Partisans and the Allocation of Federal Grants.",
     "source_pdf": "/papers/senators.pdf",
     "selected_page": 13,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "senators.png"
   },
   "appearances": {
-    "src": "/images/publication-figures/appearances.jpg",
-    "alt": "Featured visual from Turning Out the Base or Appealing to the Periphery? An Analysis of County-Level Candidate Appearances in the 2008 Presidential Campaign",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/appearances.png",
+    "alt": "AI-generated movie poster for Turning Out the Base or Appealing to the Periphery? An Analysis of County-Level Candidate Appearances in the 2008 Presidential Campaign",
+    "caption": "AI-generated movie poster for Turning Out the Base or Appealing to the Periphery? An Analysis of County-Level Candidate Appearances in the 2008 Presidential Campaign.",
     "source_pdf": "/papers/appearances.pdf",
     "selected_page": 13,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "appearances.png"
   },
   "autos": {
-    "src": "/images/publication-figures/autos.jpg",
-    "alt": "Featured visual from Driving Support: Workers, PACs, and Congressional Support of the Auto Industry",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/autos.png",
+    "alt": "AI-generated movie poster for Driving Support: Workers, PACs, and Congressional Support of the Auto Industry",
+    "caption": "AI-generated movie poster for Driving Support: Workers, PACs, and Congressional Support of the Auto Industry.",
     "source_pdf": "/papers/autos.pdf",
     "selected_page": 22,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "autos.png"
   },
   "bellwether-locations": {
-    "src": "/images/publication-figures/bellwether-locations.jpg",
-    "alt": "Featured visual from Reconsidering Bellwether Locations in U.S. Presidential Elections",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/bellwether-locations.png",
+    "alt": "AI-generated movie poster for Reconsidering Bellwether Locations in U.S. Presidential Elections",
+    "caption": "AI-generated movie poster for Reconsidering Bellwether Locations in U.S. Presidential Elections.",
     "source_pdf": "/papers/bellwether.pdf",
     "selected_page": 5,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "bellwether.png"
   },
   "caucus": {
-    "src": "/images/publication-figures/caucus.jpg",
-    "alt": "Featured visual from Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/caucus.png",
+    "alt": "AI-generated movie poster for Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings",
+    "caption": "AI-generated movie poster for Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings.",
     "source_pdf": "/papers/caucus.pdf",
     "selected_page": 24,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "caucus.png"
   },
   "commissions": {
-    "src": "/images/publication-figures/commissions.jpg",
-    "alt": "Featured visual from Attitudes toward Delegation to Presidential Commissions",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/commissions.png",
+    "alt": "AI-generated movie poster for Attitudes toward Delegation to Presidential Commissions",
+    "caption": "AI-generated movie poster for Attitudes toward Delegation to Presidential Commissions.",
     "source_pdf": "/papers/commissions.pdf",
     "selected_page": 14,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "commissions.png"
   },
   "context": {
-    "src": "/images/publication-figures/context.jpg",
-    "alt": "Map of OpenPaths geolocation observations across the United States",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/context.png",
+    "alt": "AI-generated movie poster for Defining Racial and Ethnic Context with Geolocation Data",
+    "caption": "AI-generated movie poster for Defining Racial and Ethnic Context with Geolocation Data.",
     "source_pdf": "/papers/context.pdf",
     "selected_page": 7,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "context.png"
   },
   "contextual-determinants": {
-    "src": "/images/publication-figures/contextual-determinants.jpg",
-    "alt": "Featured visual from The Contextual Determinants of Support for Unilateral Action",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/contextual-determinants.png",
+    "alt": "AI-generated movie poster for The Contextual Determinants of Support for Unilateral Action",
+    "caption": "AI-generated movie poster for The Contextual Determinants of Support for Unilateral Action.",
     "source_pdf": "/papers/asking.pdf",
     "selected_page": 14,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "asking.png"
   },
   "crime": {
-    "src": "/images/publication-figures/crime.jpg",
-    "alt": "Featured visual from Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/crime.png",
+    "alt": "AI-generated movie poster for Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership",
+    "caption": "AI-generated movie poster for Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership.",
     "source_pdf": "/papers/crime.pdf",
     "selected_page": 12,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "crime.png"
   },
   "crisis": {
-    "src": "/images/publication-figures/crisis.jpg",
-    "alt": "Featured visual from Public Opinion and Public Support in Crisis Management",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/crisis.png",
+    "alt": "AI-generated movie poster for Public Opinion and Public Support in Crisis Management",
+    "caption": "AI-generated movie poster for Public Opinion and Public Support in Crisis Management.",
     "source_pdf": "/papers/crisis.pdf",
     "selected_page": 10,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "crisis.png"
   },
   "democratic-values-executive-power": {
-    "src": "/images/publication-figures/democratic-values-executive-power.jpg",
-    "alt": "Featured visual from Democratic Values and Support for Executive Power",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/democratic-values-executive-power.png",
+    "alt": "AI-generated movie poster for Democratic Values and Support for Executive Power",
+    "caption": "AI-generated movie poster for Democratic Values and Support for Executive Power.",
     "source_pdf": "/papers/values.pdf",
     "selected_page": 8,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "values.png"
   },
   "disaster-relief": {
-    "src": "/images/publication-figures/disaster-relief.jpg",
-    "alt": "Featured visual from The Politics of Disaster Relief",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/disaster-relief.png",
+    "alt": "AI-generated movie poster for The Politics of Disaster Relief",
+    "caption": "AI-generated movie poster for The Politics of Disaster Relief.",
     "source_pdf": "/papers/disasters-review.pdf",
     "selected_page": 4,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "disasters-review.png"
   },
   "disunion-review": {
-    "src": "/images/publication-figures/disunion-review.jpg",
-    "alt": "First page preview of Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow",
-    "caption": "Review preview",
+    "src": "/images/publication-posters/disunion-review.png",
+    "alt": "AI-generated movie poster for Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow",
+    "caption": "AI-generated movie poster for Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow.",
     "source_pdf": "/papers/disunion-review.pdf",
     "selected_page": 1,
     "cropped": false,
-    "fallback": true
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "disunion-review.png"
   },
   "ecologies-of-unease": {
-    "src": "/images/publication-figures/ecologies-of-unease.jpg",
-    "alt": "Featured visual from Ecologies of Unease: Geographic Context and National Economic Evaluations",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/ecologies-of-unease.png",
+    "alt": "AI-generated movie poster for Ecologies of Unease: Geographic Context and National Economic Evaluations",
+    "caption": "AI-generated movie poster for Ecologies of Unease: Geographic Context and National Economic Evaluations.",
     "source_pdf": "/papers/foreclosures.pdf",
     "selected_page": 21,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "foreclosures.png"
   },
   "electionsbib": {
-    "src": "/images/publication-figures/electionsbib.jpg",
-    "alt": "Featured visual from U.S. Presidential Campaigns and Their Impact",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/electionsbib.png",
+    "alt": "AI-generated movie poster for U.S. Presidential Campaigns and Their Impact",
+    "caption": "AI-generated movie poster for U.S. Presidential Campaigns and Their Impact.",
     "source_pdf": "/papers/electionsbib.pdf",
     "selected_page": 16,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "electionsbib.png"
   },
   "electoral-college-particularism": {
-    "src": "/images/publication-figures/electoral-college-particularism.jpg",
-    "alt": "Featured visual from The Electoral College and Presidential Particularism",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/electoral-college-particularism.png",
+    "alt": "AI-generated movie poster for The Electoral College and Presidential Particularism",
+    "caption": "AI-generated movie poster for The Electoral College and Presidential Particularism.",
     "source_pdf": "/papers/electoralcollege.pdf",
     "selected_page": 10,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "electoralcollege.png"
   },
   "electoral-geography": {
-    "src": "/images/publication-figures/electoral-geography.jpg",
-    "alt": "Featured visual from Electoral Geography, Political Behavior and Public Opinion",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/electoral-geography.png",
+    "alt": "AI-generated movie poster for Electoral Geography, Political Behavior and Public Opinion",
+    "caption": "AI-generated movie poster for Electoral Geography, Political Behavior and Public Opinion.",
     "source_pdf": "/papers/political-geography.pdf",
     "selected_page": 3,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "political-geography.png"
   },
   "geolocation": {
-    "src": "/images/publication-figures/geolocation.jpg",
-    "alt": "Featured visual from Learning from Place in the Era of Geolocation",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/geolocation.png",
+    "alt": "AI-generated movie poster for Learning from Place in the Era of Geolocation",
+    "caption": "AI-generated movie poster for Learning from Place in the Era of Geolocation.",
     "source_pdf": "/papers/geolocation.pdf",
     "selected_page": 5,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "geolocation.png"
   },
   "healthcare": {
-    "src": "/images/publication-figures/healthcare.jpg",
-    "alt": "Featured visual from Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/healthcare.png",
+    "alt": "AI-generated movie poster for Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans",
+    "caption": "AI-generated movie poster for Responsive Partisanship: Public Support for the Clinton and Obama Health Care Plans.",
     "source_pdf": "/papers/healthcare.pdf",
     "selected_page": 10,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "healthcare.png"
   },
   "jobs": {
-    "src": "/images/publication-figures/jobs.jpg",
-    "alt": "Featured visual from The Job Market’s First Steps: Using Research Tools to Simplify the Process",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/jobs.png",
+    "alt": "AI-generated movie poster for The Job Market’s First Steps: Using Research Tools to Simplify the Process",
+    "caption": "AI-generated movie poster for The Job Market’s First Steps: Using Research Tools to Simplify the Process.",
     "source_pdf": "/papers/jobs.pdf",
     "selected_page": 4,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "jobs.png"
   },
   "leap": {
-    "src": "/images/publication-figures/leap.jpg",
-    "alt": "Featured visual from Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/leap.png",
+    "alt": "AI-generated movie poster for Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform",
+    "caption": "AI-generated movie poster for Taking the Leap: Voting, Rhetoric, and the Determinants of Electoral Reform.",
     "source_pdf": "/papers/leap.pdf",
     "selected_page": 36,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "leap.png"
   },
   "lines": {
-    "src": "/images/publication-figures/lines.jpg",
-    "alt": "Featured visual from Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-Campus Study",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/lines.png",
+    "alt": "AI-generated movie poster for Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-Campus Study",
+    "caption": "AI-generated movie poster for Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-Campus Study.",
     "source_pdf": "/papers/lines.pdf",
     "selected_page": 8,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "lines.png"
   },
   "local-unemployment": {
-    "src": "/images/publication-figures/local-unemployment.jpg",
-    "alt": "Three-panel coefficient plot of local unemployment effects on incumbent-party vote choice",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/local-unemployment.png",
+    "alt": "AI-generated movie poster for Local Unemployment and Voting for President: Uncovering Causal Mechanisms",
+    "caption": "AI-generated movie poster for Local Unemployment and Voting for President: Uncovering Causal Mechanisms.",
     "source_pdf": "/papers/unemployment.pdf",
     "selected_page": 16,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "unemployment.png"
   },
   "municipal-administration": {
-    "src": "/images/publication-figures/municipal-administration.jpg",
-    "alt": "Six-panel chart comparing institutional capacity among appointed and elected municipal clerks",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/municipal-administration.png",
+    "alt": "AI-generated movie poster for Elections and Representation in American Municipal Administration: Elite Survey Evidence from Five New England States",
+    "caption": "AI-generated movie poster for Elections and Representation in American Municipal Administration: Elite Survey Evidence from Five New England States.",
     "source_pdf": "/papers/clerks.pdf",
     "selected_page": 7,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "clerks.png"
   },
   "no-blank-check": {
-    "src": "/images/no-blank-check-cover.jpg",
-    "alt": "Book cover for No Blank Check: The Origins and Consequences of Public Antipathy towards Presidential Power",
-    "caption": "Book cover",
-    "kind": "book-cover",
-    "fallback": false
+    "src": "/images/publication-posters/no-blank-check.png",
+    "alt": "AI-generated movie poster for No Blank Check: The Origins and Consequences of Public Antipathy towards Presidential Power",
+    "caption": "AI-generated movie poster for No Blank Check: The Origins and Consequences of Public Antipathy towards Presidential Power.",
+    "kind": "poster",
+    "fallback": false,
+    "poster_source": "no-blank-check.png"
   },
   "partisanship-economic-assessments": {
-    "src": "/images/publication-figures/partisanship-economic-assessments.jpg",
-    "alt": "River plots comparing household economic perceptions among Republicans and Democrats over time",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/partisanship-economic-assessments.png",
+    "alt": "AI-generated movie poster for Partisanship, Economic Assessments, and Presidential Accountability",
+    "caption": "AI-generated movie poster for Partisanship, Economic Assessments, and Presidential Accountability.",
     "source_pdf": "/papers/transition.pdf",
     "selected_page": 8,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "transition.png"
   },
   "pasachoff-reply": {
-    "src": "/images/publication-figures/pasachoff-reply.jpg",
-    "alt": "Featured visual from Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/pasachoff-reply.png",
+    "alt": "AI-generated movie poster for Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants",
+    "caption": "AI-generated movie poster for Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants.",
     "source_pdf": "/papers/pasachoff-reply.pdf",
     "selected_page": 14,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "pasachoff-reply.png"
   },
   "pass-the-buck": {
-    "src": "/images/publication-figures/pass-the-buck.jpg",
-    "alt": "Coefficient plot comparing public responses to blame claiming and blame deflection across crises",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/pass-the-buck.png",
+    "alt": "AI-generated movie poster for Pass the Buck or the Buck Stops Here? The Public Costs of Claiming and Deflecting Blame in Managing Crises",
+    "caption": "AI-generated movie poster for Pass the Buck or the Buck Stops Here? The Public Costs of Claiming and Deflecting Blame in Managing Crises.",
     "source_pdf": "/papers/blameclaim.pdf",
     "selected_page": 13,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "blameclaim.png"
   },
   "political-disaster": {
-    "src": "/images/publication-figures/political-disaster.jpg",
-    "alt": "Featured visual from Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/political-disaster.png",
+    "alt": "AI-generated movie poster for Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations",
+    "caption": "AI-generated movie poster for Political Disaster: Unilateral Powers, Electoral Incentives, and Presidential Disaster Declarations.",
     "source_pdf": "/papers/fema.pdf",
     "selected_page": 16,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "fema.png"
   },
   "poll-worker-retention": {
-    "src": "/images/publication-figures/poll-worker-retention.jpg",
-    "alt": "Featured visual from Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/poll-worker-retention.png",
+    "alt": "AI-generated movie poster for Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment",
+    "caption": "AI-generated movie poster for Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment.",
     "source_pdf": "/papers/guardians.pdf",
     "selected_page": 10,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "guardians.png"
   },
   "polling-place-quality": {
-    "src": "/images/publication-figures/polling-place-quality.jpg",
-    "alt": "Featured visual from Polling Place Quality and Access",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/polling-place-quality.png",
+    "alt": "AI-generated movie poster for Polling Place Quality and Access",
+    "caption": "AI-generated movie poster for Polling Place Quality and Access.",
     "source_pdf": "/papers/access.pdf",
     "selected_page": 14,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "access.png"
   },
   "polling": {
-    "src": "/images/publication-figures/polling.jpg",
-    "alt": "Featured visual from Pedagogical Value of Polling Place Observation By Students",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/polling.png",
+    "alt": "AI-generated movie poster for Pedagogical Value of Polling Place Observation By Students",
+    "caption": "AI-generated movie poster for Pedagogical Value of Polling Place Observation By Students.",
     "source_pdf": "/papers/polling.pdf",
     "selected_page": 6,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "polling.png"
   },
   "presidential-particularism-divide-dollar": {
-    "src": "/images/publication-figures/presidential-particularism-divide-dollar.jpg",
-    "alt": "Featured visual from Presidential Particularism and Divide-the-Dollar Politics",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/presidential-particularism-divide-dollar.png",
+    "alt": "AI-generated movie poster for Presidential Particularism and Divide-the-Dollar Politics",
+    "caption": "AI-generated movie poster for Presidential Particularism and Divide-the-Dollar Politics.",
     "source_pdf": "/papers/targeting.pdf",
     "selected_page": 10,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "targeting.png"
   },
   "particularistic-president": {
-    "src": "/images/particularistic-president-cover.jpg",
-    "alt": "Book cover for The Particularistic President: Executive Branch Politics and Political Inequality",
-    "caption": "Book cover",
-    "kind": "book-cover",
-    "fallback": false
+    "src": "/images/publication-posters/particularistic-president.png",
+    "alt": "AI-generated movie poster for The Particularistic President: Executive Branch Politics and Political Inequality",
+    "caption": "AI-generated movie poster for The Particularistic President: Executive Branch Politics and Political Inequality.",
+    "kind": "poster",
+    "fallback": false,
+    "poster_source": "particularistic-president.png"
   },
   "prespart": {
-    "src": "/images/publication-figures/prespart.jpg",
-    "alt": "Featured visual from Presidential Particularism in Disaster Declarations and Military Base Closures",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/prespart.png",
+    "alt": "AI-generated movie poster for Presidential Particularism in Disaster Declarations and Military Base Closures",
+    "caption": "AI-generated movie poster for Presidential Particularism in Disaster Declarations and Military Base Closures.",
     "source_pdf": "/papers/prespart.pdf",
     "selected_page": 17,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "prespart.png"
   },
   "prespower": {
-    "src": "/images/publication-figures/prespower.jpg",
-    "alt": "Featured visual from Public Opinion toward Presidential Power",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/prespower.png",
+    "alt": "AI-generated movie poster for Public Opinion toward Presidential Power",
+    "caption": "AI-generated movie poster for Public Opinion toward Presidential Power.",
     "source_pdf": "/papers/prespower.pdf",
     "selected_page": 12,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "prespower.png"
   },
   "public-cost-unilateral-action": {
-    "src": "/images/publication-figures/public-cost-unilateral-action.jpg",
-    "alt": "Featured visual from The Public Cost of Unilateral Action",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/public-cost-unilateral-action.png",
+    "alt": "AI-generated movie poster for The Public Cost of Unilateral Action",
+    "caption": "AI-generated movie poster for The Public Cost of Unilateral Action.",
     "source_pdf": "/papers/constraints.pdf",
     "selected_page": 6,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "constraints.png"
   },
   "rain": {
-    "src": "/images/publication-figures/rain.jpg",
-    "alt": "Featured visual from Make it Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/rain.png",
+    "alt": "AI-generated movie poster for Make it Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters",
+    "caption": "AI-generated movie poster for Make it Rain? Retrospection and the Attentive Electorate in the Context of Natural Disasters.",
     "source_pdf": "/papers/rain.pdf",
     "selected_page": 11,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "rain.png"
   },
   "reassessment-long": {
-    "src": "/images/publication-figures/reassessment-long.jpg",
-    "alt": "Featured visual from A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/reassessment-long.png",
+    "alt": "AI-generated movie poster for A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation",
+    "caption": "AI-generated movie poster for A Reassessment of Presidential Campaign Strategy Formation and Candidate Resource Allocation.",
     "source_pdf": "/papers/reassessment-long.pdf",
     "selected_page": 5,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "reassessment-long.png"
   },
   "reassessment": {
-    "src": "/images/publication-figures/reassessment.jpg",
-    "alt": "Featured visual from A Reassessment of `The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996’",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/reassessment.png",
+    "alt": "AI-generated movie poster for A Reassessment of `The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996’",
+    "caption": "AI-generated movie poster for A Reassessment of `The Methods behind the Madness: Presidential Electoral College Strategies, 1988–1996’.",
     "source_pdf": "/papers/reassessment.pdf",
     "selected_page": 3,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "reassessment.png"
   },
   "recounts": {
-    "src": "/images/publication-figures/recounts.jpg",
-    "alt": "Featured visual from Using Recounts to Measure the Accuracy of Vote Tabulations: Evidence from New Hampshire Elections 1946-2002",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/recounts.png",
+    "alt": "AI-generated movie poster for Using Recounts to Measure the Accuracy of Vote Tabulations: Evidence from New Hampshire Elections 1946-2002",
+    "caption": "AI-generated movie poster for Using Recounts to Measure the Accuracy of Vote Tabulations: Evidence from New Hampshire Elections 1946-2002.",
     "source_pdf": "/papers/recounts.pdf",
     "selected_page": 2,
     "cropped": false,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "recounts.png"
   },
   "rising-seas": {
-    "src": "/images/publication-figures/rising-seas.jpg",
-    "alt": "County-level U.S. map of sea-level-rise susceptibility from Rising Seas, Rising Concerns",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/rising-seas.png",
+    "alt": "AI-generated movie poster for Rising Seas, Rising Concerns: How Climate Change Vulnerability Shapes Opinions Towards Policy",
+    "caption": "AI-generated movie poster for Rising Seas, Rising Concerns: How Climate Change Vulnerability Shapes Opinions Towards Policy.",
     "source_pdf": "/papers/environment.pdf",
     "selected_page": 9,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "environment.png"
   },
   "short-haul-moves": {
-    "src": "/images/publication-figures/short-haul-moves.jpg",
-    "alt": "Featured visual from Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/short-haul-moves.png",
+    "alt": "AI-generated movie poster for Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
+    "caption": "AI-generated movie poster for Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics.",
     "source_pdf": "/papers/shorthaul.pdf",
     "selected_page": 20,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "shorthaul.png"
   },
   "spending": {
-    "src": "/images/publication-figures/spending.jpg",
-    "alt": "Featured visual from The Influence of Federal Spending on Presidential Elections",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/spending.png",
+    "alt": "AI-generated movie poster for The Influence of Federal Spending on Presidential Elections",
+    "caption": "AI-generated movie poster for The Influence of Federal Spending on Presidential Elections.",
     "source_pdf": "/papers/spending.pdf",
     "selected_page": 7,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "spending.png"
   },
   "unheavenly-review": {
-    "src": "/images/publication-figures/unheavenly-review.jpg",
-    "alt": "First page preview of Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady",
-    "caption": "Review preview",
+    "src": "/images/publication-posters/unheavenly-review.png",
+    "alt": "AI-generated movie poster for Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady",
+    "caption": "AI-generated movie poster for Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady.",
     "source_pdf": "/papers/unheavenly-review.pdf",
     "selected_page": 1,
     "cropped": false,
-    "fallback": true
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "unheavenly-review.png"
   },
   "unilateral-inaction": {
-    "src": "/images/publication-figures/unilateral-inaction.jpg",
-    "alt": "Coefficient plot of unilateral action effects on presidential performance evaluations",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/unilateral-inaction.png",
+    "alt": "AI-generated movie poster for Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power",
+    "caption": "AI-generated movie poster for Unilateral Inaction: Congressional Gridlock, Interbranch Conflict, and Public Evaluations of Executive Power.",
     "source_pdf": "/papers/nothing.pdf",
     "selected_page": 12,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "nothing.png"
   },
   "unilateral-powers-public-opinion": {
-    "src": "/images/publication-figures/unilateral-powers-public-opinion.jpg",
-    "alt": "Featured visual from Unilateral Powers, Public Opinion, and the Presidency",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/unilateral-powers-public-opinion.png",
+    "alt": "AI-generated movie poster for Unilateral Powers, Public Opinion, and the Presidency",
+    "caption": "AI-generated movie poster for Unilateral Powers, Public Opinion, and the Presidency.",
     "source_pdf": "/papers/unilateral.pdf",
     "selected_page": 13,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "unilateral.png"
   },
   "urban-rural-contentment": {
-    "src": "/images/publication-figures/urban-rural-contentment.jpg",
-    "alt": "Featured visual from The Urban-Rural Divide and Residential Contentment as Antecedents of Political Ideology",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/urban-rural-contentment.png",
+    "alt": "AI-generated movie poster for The Urban-Rural Divide and Residential Contentment as Antecedents of Political Ideology",
+    "caption": "AI-generated movie poster for The Urban-Rural Divide and Residential Contentment as Antecedents of Political Ideology.",
     "source_pdf": "/papers/attachment.pdf",
     "selected_page": 8,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "attachment.png"
   },
   "urban-rural-gulf": {
-    "src": "/images/publication-figures/urban-rural-gulf.jpg",
-    "alt": "Featured visual from The Urban-Rural Gulf in American Political Behavior",
-    "caption": "Featured visual from the publication",
+    "src": "/images/publication-posters/urban-rural-gulf.png",
+    "alt": "AI-generated movie poster for The Urban-Rural Gulf in American Political Behavior",
+    "caption": "AI-generated movie poster for The Urban-Rural Gulf in American Political Behavior.",
     "source_pdf": "/papers/urbanrural.pdf",
     "selected_page": 8,
     "cropped": true,
-    "fallback": false
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "urbanrural.png"
   }
 }
