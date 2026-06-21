@@ -61,6 +61,15 @@ const navItems = [
     <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
+    <script is:inline type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-73ZBNNCNMP", { anonymize_ip: true });
+    </script>
   </head>
   <body>
     <div class="site-shell">
@@ -138,6 +147,32 @@ const navItems = [
         }
       });
     </script>
-    <script defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+    <!-- Default Statcounter code for Andrew Reeves (New)
+    http://andrewreeves.org -->
+    <script is:inline type="text/javascript">
+      window["sc_project"] = 12348960;
+      window["sc_invisible"] = 1;
+      window["sc_security"] = "3aa7f28c";
+    </script>
+    <script
+      is:inline
+      type="text/javascript"
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+    <noscript>
+      <div class="statcounter">
+        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank">
+          <img
+            class="statcounter"
+            src="https://c.statcounter.com/12348960/0/3aa7f28c/1/"
+            alt="Web Analytics Made Easy - Statcounter"
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        </a>
+      </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+    <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
   </body>
 </html>
