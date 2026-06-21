@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BookFeature from "@components/BookFeature.astro";
+import { yearRank } from "../utils/publications";
 
-const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 const questions = [
   {
@@ -136,6 +136,9 @@ const personStructuredData = {
 ---
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/andrew-reeves-portrait-editorial.jpg" />
+  </Fragment>
   <section class="home-thesis-hero">
     <div class="home-thesis-copy">
       <h1>Power, place, and accountability in American political life.</h1>
@@ -184,7 +187,7 @@ const personStructuredData = {
   <section class="home-feature-band" aria-label="Featured site pathways">
     {
       featureTiles.map((item) => (
-        <a class="home-feature-tile" href={item.href}>
+        <a class="home-feature-tile" href={item.href} aria-label={item.title}>
           <img src={item.image} alt={item.alt} loading="lazy" width={item.width} height={item.height} srcset={item.srcset} sizes={item.sizes} />
           <span class="feature-label">{item.label}</span>
           <strong class="feature-title-v2">{item.title}</strong>
@@ -211,9 +214,9 @@ const personStructuredData = {
         ))
       }
     </div>
-    <blockquote class="home-research-summary">
+    <p class="home-research-summary">
       Reeves's research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
-    </blockquote>
+    </p>
   </section>
 
   <section class="home-book-spread" aria-labelledby="major-works-heading">

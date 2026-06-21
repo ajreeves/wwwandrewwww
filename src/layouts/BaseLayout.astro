@@ -59,7 +59,9 @@ const navItems = [
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.png" />
     <link rel="preconnect" href="https://use.typekit.net" />
-    <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
+    <link rel="preload" href="https://use.typekit.net/dlf3syd.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
+    <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
     <script is:inline type="text/javascript">
@@ -100,7 +102,7 @@ const navItems = [
       </main>
       <footer class="site-footer-wrap">
         <div class="site-footer">
-          <nav class="footer-nav" aria-label="Site navigation">
+          <div class="footer-nav">
             <a href="/research/">Research</a>
             <a href="/books/">Books</a>
             <a href="/teaching/">Teaching</a>
@@ -109,7 +111,7 @@ const navItems = [
             <a href="/news/">News</a>
             <a href="/cv/">CV</a>
             <a href="/contact/">Contact</a>
-          </nav>
+          </div>
           <div class="footer-links">
             <a href="mailto:reeves@wustl.edu">Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>

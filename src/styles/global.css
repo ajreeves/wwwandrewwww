@@ -6567,7 +6567,6 @@
       font-size: 1rem;
     }
   }
-}
 
 .home-feature-tile {
   align-content: end;
@@ -7314,4 +7313,6 @@
   .cv-frame {
     display: none;
   }
+}
+
 }
