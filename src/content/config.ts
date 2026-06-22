@@ -16,6 +16,7 @@ const publications = defineCollection({
     venue: z.string(),
     authors: z.array(z.string()).default(["Andrew Reeves"]),
     citation: z.string().optional(),
+    cardSummary: z.string().optional(),
     links: z
       .array(
         z.object({

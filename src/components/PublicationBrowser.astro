@@ -15,6 +15,7 @@ interface Publication {
     venue: string;
     authors: string[];
     citation?: string;
+    cardSummary?: string;
     themes: string[];
     links: { label: string; url: string }[];
   };
@@ -89,26 +90,8 @@ const figureFor = (publication: Publication) => figureIndex[publication.slug];
 
 const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
 const firstSentence = (text: string) => text.match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? text;
-const summaryOverrides: Record<string, string> = {
-  "bellwether-locations": "Bellwether counties reveal how geographic polarization reshaped the places that once mirrored national electoral outcomes.",
-  "contextual-determinants": "Support for unilateral presidential action depends on the political and institutional context in which executive power is used.",
-  "democratic-values-executive-power": "Americans’ commitments to democratic values shape when they accept or resist expanded executive authority.",
-  "electoral-college-particularism": "The Electoral College creates incentives for presidents to favor electorally pivotal places over a purely national constituency.",
-  "electoral-geography": "Electoral geography shows how local context and spatial patterns structure political behavior and public opinion.",
-  "municipal-administration": "Local selection rules shape how municipal administrators understand representation and accountability.",
-  "no-blank-check": "Citizens place meaningful political limits on unilateral presidential power, even when they support the president’s policy goals.",
-  "particularistic-president": "Executive branch politics can direct federal benefits toward politically valuable communities and produce unequal patterns of public attention.",
-  "pass-the-buck": "Citizens evaluate leaders differently when officials claim responsibility, deflect blame, or govern through crisis.",
-  "political-disaster": "Presidents use disaster declarations in electorally strategic ways, linking emergency authority to political incentives.",
-  "poll-worker-retention": "Poll worker retention depends on the administrative pressures and civic demands of difficult election environments.",
-  "presidential-particularism-divide-dollar": "Presidents target federal grant spending toward politically important constituencies, including swing states and core partisan counties.",
-  "public-cost-unilateral-action": "Citizens penalize presidents who bypass Congress, even when they support the policy outcome.",
-  "spending": "Voters reward presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear.",
-  "unilateral-inaction": "Public evaluations of executive power are shaped not only by presidential action, but also by inaction under congressional gridlock.",
-  "urban-rural-gulf": "Urban-rural differences help explain enduring divides in American political behavior and public opinion."
-};
 const conciseSummary = (publication: Publication, metadata?: PublicationMetadata) => {
-  if (summaryOverrides[publication.slug]) return summaryOverrides[publication.slug];
+  if (publication.data.cardSummary) return publication.data.cardSummary;
   const summary = metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary;
   return firstSentence(summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
 };
