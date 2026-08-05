@@ -1,126 +1,5 @@
 [
   {
-    "slug": "short-haul-moves",
-    "title": "Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
-    "authors": [
-      "James G. Gimpel",
-      "Jordon Newton",
-      "Andrew Reeves"
-    ],
-    "year": 2026,
-    "publication_type": "journal article",
-    "journal": "Urban Affairs Review",
-    "volume": "62",
-    "issue": "4",
-    "pages": "975-1018",
-    "doi": "10.1177/10780874251380677",
-    "citation": "Gimpel, James G., Jordon Newton, and Andrew Reeves. 2026. \"Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics.\" Urban Affairs Review 62(4): 975-1018.",
-    "links": {
-      "pdf": "/papers/shorthaul.pdf",
-      "journal": "https://journals.sagepub.com/doi/10.1177/10780874251380677",
-      "replication_data": null,
-      "code": null
-    },
-    "card_summary": "Short-distance residential moves within metropolitan areas modestly but clearly reinforce partisan sorting across local political environments.",
-    "abstract": "We consider how the high volume of short-distance migration within metropolitan areas contributes to partisan sorting across the United States. Compared to long-distance moves, these local moves involve many more individuals each year and thus have substantial potential to shape political geography. At the same time, short-distance moves set a high bar for any assortative hypothesis because local movers face more limited destination options. If one cannot find a more politically compatible neighborhood nearby, it may be impossible to move to one. We draw on voter records comparing movers and nonmovers within 215 metro areas across nine states. Our results show surprisingly high levels of sorting even when moves occur within the same core-based statistical area and state. These patterns persist even after accounting for other destination characteristics known to influence relocation. Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
-    "plain_english_summary": "This article studies whether people who move within the same metropolitan area tend to relocate into neighborhoods that better match their partisan identity. Using voter records across 215 metro areas in nine states, it finds that short-distance moves modestly but consistently contribute to partisan sorting and local political lopsidedness.",
-    "research_question": "Does short-distance residential mobility within metropolitan areas contribute to partisan sorting across local political environments?",
-    "research_highlights": [
-      "Short-distance movers sort into more politically compatible neighborhoods even when moves occur within the same core-based statistical area and state.",
-      "The patterns persist after accounting for other destination characteristics known to influence relocation.",
-      "Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses."
-    ],
-    "methods": [
-      "Observational analysis comparing movers and nonmovers identified in voter records.",
-      "Models examine changes in partisan context across block groups, census tracts, and zip codes."
-    ],
-    "data_sources": [
-      "Voter records comparing movers and nonmovers within 215 metropolitan areas across nine states."
-    ],
-    "key_variables": [
-      "Residential movement status",
-      "Party registration",
-      "Partisan composition of origin and destination neighborhoods",
-      "Destination characteristics"
-    ],
-    "identification_strategy": null,
-    "geography": "215 metropolitan areas across nine U.S. states",
-    "time_period": "2012–2020",
-    "unit_of_analysis": "Registered voter",
-    "policy_relevance": null,
-    "pull_quote": "Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
-    "pull_quote_page": 1,
-    "confidence_notes": "Metadata drawn from the article PDF, DOI record, and indexed publication profile. No replication data, code, or causal identification strategy is stated in the article metadata used here.",
-    "tags": [
-      "political geography",
-      "partisan sorting",
-      "migration",
-      "population mobility",
-      "electoral geography",
-      "voter files"
-    ],
-    "filters": {
-      "substantive_area": [
-        "political geography",
-        "public opinion",
-        "elections"
-      ],
-      "government_level": [
-        "local",
-        "state"
-      ],
-      "research_design": [
-        "observational",
-        "voter file analysis"
-      ],
-      "methods": [
-        "Observational analysis comparing movers and nonmovers identified in voter records.",
-        "Models examine changes in partisan context across block groups, census tracts, and zip codes."
-      ],
-      "geography": [
-        "215 metropolitan areas across nine U.S. states"
-      ],
-      "time_period": [
-        "2012–2020"
-      ],
-      "keywords": [
-        "political geography",
-        "partisan sorting",
-        "migration"
-      ],
-      "related_topics": [
-        "population mobility",
-        "electoral geography",
-        "local political change",
-        "partisan geography"
-      ]
-    },
-    "evidence": {
-      "research_question": {
-        "pages": [
-          2,
-          3,
-          4
-        ]
-      },
-      "main_findings": {
-        "pages": [
-          1,
-          4,
-          17,
-          20
-        ]
-      },
-      "methods": {
-        "pages": [
-          3,
-          10,
-          13
-        ]
-      }
-    }
-  },
-  {
     "slug": "elections-and-representation-in-american-municipal-administration",
     "title": "Elections and Representation in American Municipal Administration",
     "authors": [
@@ -248,6 +127,140 @@
           6,
           7,
           8
+        ]
+      }
+    }
+  },
+  {
+    "slug": "public-opinion-on-private-funding-of-public-elections",
+    "title": "Public Opinion on Private Funding of Public Elections",
+    "authors": [
+      "Brian J. Gaines",
+      "James G. Gimpel",
+      "Andrew Reeves"
+    ],
+    "year": 2026,
+    "publication_type": "journal article",
+    "journal": "State and Local Government Review",
+    "volume": null,
+    "issue": null,
+    "pages": "1-9",
+    "doi": "10.1177/0160323X261469253",
+    "citation": "Gaines, Brian J., James G. Gimpel, and Andrew Reeves. 2026. \"Public Opinion on Private Funding of Public Elections.\" State and Local Government Review, 1-9. https://doi.org/10.1177/0160323X261469253.",
+    "links": {
+      "pdf": "/papers/private-funding.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "card_summary": "Americans are wary of private election-administration funding, while arguments for and against bans produce only modest changes in opinion.",
+    "abstract": "More than half of American states have sharply limited or banned private donations to public entities for the purpose of supporting election administration. Such legislation is largely consistent with public opinion: Americans are more wary than supportive of such funding, with support for outright bans about as strong as support for regulation, leaving very few who endorse an unregulated, laissez-faire approach. There is, however, a good-sized pool of undecided individuals, who might be nudged into the pro- or anti-ban camps by persuasive arguments. Our evidence, however, is that neither the main pro- nor the main anti- argument vetted in debates to date moves opinion dramatically, though the anti-ban argument might be a little more effective.",
+    "plain_english_summary": "Most Americans prefer banning or regulating private donations to election administrators rather than leaving them unrestricted, though many remain undecided. Survey experiments conducted before and after the 2024 election show that common arguments on either side generally move opinion only modestly.",
+    "research_question": "What does the American public think about private funding of election administration, and can prominent pro-ban or anti-ban arguments change those opinions?",
+    "research_highlights": [
+      "Americans are more wary than supportive of private funding for election administration, with substantial support for both bans and regulation.",
+      "Very few respondents support allowing private election-administration donations without regulation.",
+      "A large share of respondents remain undecided about the issue.",
+      "The anti-ban argument has a small persuasive effect, while the tested pro-ban argument has little consistent effect."
+    ],
+    "methods": [
+      "Two survey experiments randomly assigned respondents to receive a pro-ban argument, an anti-ban argument, both arguments, or neither argument.",
+      "Weighted comparisons of response distributions and regression models estimated treatment effects before and after the 2024 election."
+    ],
+    "data_sources": [
+      "The American Social Survey fielded by NORC, August 1-9, 2024 (1,031 American adults)",
+      "Post-election Cooperative Election Study survey fielded by YouGov in November 2024 (2,000 American adults)"
+    ],
+    "key_variables": [
+      "Support for banning private election-administration funding",
+      "Support for regulating private election-administration funding",
+      "Support for unrestricted private funding",
+      "Pro-ban argument treatment",
+      "Anti-ban argument treatment",
+      "Party identification",
+      "Residence in a state with a ban"
+    ],
+    "identification_strategy": "Random assignment to pro-ban, anti-ban, both-argument, or no-argument experimental conditions identifies the persuasive effects of the tested arguments.",
+    "geography": "United States",
+    "time_period": "August and November 2024",
+    "unit_of_analysis": "Individual American adult survey respondent",
+    "policy_relevance": "The study informs debates in states considering whether to ban, regulate, or permit private donations to election administrators.",
+    "pull_quote": "Americans are more wary than supportive of such funding, with support for outright bans about as strong as support for regulation",
+    "pull_quote_page": 1,
+    "confidence_notes": "Bibliographic information, abstract, keywords, sample details, design, results, and conclusions are stated directly in the article. No final volume or issue is shown in the supplied online-first PDF. Replication data are available from the contact author by request, but no public repository URL is provided.",
+    "tags": [
+      "Election Administration",
+      "Public Opinion",
+      "State Politics",
+      "Survey experiment",
+      "Quantitative analysis",
+      "election administration",
+      "private grants",
+      "public opinion",
+      "private funding of elections",
+      "election administration policy",
+      "survey experiments",
+      "political persuasion"
+    ],
+    "filters": {
+      "substantive_area": [
+        "Election Administration",
+        "Public Opinion",
+        "State Politics"
+      ],
+      "government_level": [
+        "state",
+        "local"
+      ],
+      "research_design": [
+        "Survey experiment",
+        "Quantitative analysis"
+      ],
+      "methods": [
+        "Two survey experiments randomly assigned respondents to receive a pro-ban argument, an anti-ban argument, both arguments, or neither argument.",
+        "Weighted comparisons of response distributions and regression models estimated treatment effects before and after the 2024 election."
+      ],
+      "geography": [
+        "United States"
+      ],
+      "time_period": [
+        "August and November 2024"
+      ],
+      "keywords": [
+        "election administration",
+        "private grants",
+        "public opinion"
+      ],
+      "related_topics": [
+        "private funding of elections",
+        "election administration policy",
+        "survey experiments",
+        "political persuasion"
+      ]
+    },
+    "evidence": {
+      "research_question": {
+        "pages": [
+          1,
+          3,
+          4
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          4,
+          5,
+          6
         ]
       }
     }

@@ -61,10 +61,46 @@
   "political representation": [
     "elections-and-representation-in-american-municipal-administration"
   ],
-  "environmental politics": [
-    "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic"
+  "Election Administration": [
+    "public-opinion-on-private-funding-of-public-elections",
+    "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment"
+  ],
+  "Public Opinion": [
+    "public-opinion-on-private-funding-of-public-elections",
+    "partisanship-economic-assessments-and-presidential-accountability",
+    "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",
+    "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
+  ],
+  "State Politics": [
+    "public-opinion-on-private-funding-of-public-elections"
+  ],
+  "private funding of elections": [
+    "public-opinion-on-private-funding-of-public-elections"
+  ],
+  "election administration policy": [
+    "public-opinion-on-private-funding-of-public-elections"
+  ],
+  "survey experiments": [
+    "public-opinion-on-private-funding-of-public-elections",
+    "pass-the-buck-or-the-buck-stops-here-the-public-costs-of-claiming-and-deflecting-blame-in-",
+    "attitudes-toward-delegation-to-presidential-commissions"
+  ],
+  "political persuasion": [
+    "public-opinion-on-private-funding-of-public-elections"
+  ],
+  "election administration": [
+    "public-opinion-on-private-funding-of-public-elections",
+    "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
+    "polling-place-quality-and-access",
+    "polling-place-quality-and-access",
+    "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
+    "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study"
+  ],
+  "private grants": [
+    "public-opinion-on-private-funding-of-public-elections"
   ],
   "public opinion": [
+    "public-opinion-on-private-funding-of-public-elections",
     "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic",
     "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic",
     "democratic-values-and-support-for-executive-power",
@@ -95,6 +131,9 @@
     "responsive-partisanship-public-support-for-the-clinton-and-obama-health-care-plans",
     "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
     "how-disasters-change-elections"
+  ],
+  "environmental politics": [
+    "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic"
   ],
   "climate change": [
     "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic"
@@ -145,9 +184,6 @@
     "a-reassessment-of-presidential-campaign-strategy-formation-and-candidate-resource-allocati",
     "the-electoral-college-and-presidential-particularism"
   ],
-  "Election Administration": [
-    "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment"
-  ],
   "Public Administration": [
     "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
     "public-opinion-and-public-support-in-crisis-management"
@@ -163,13 +199,6 @@
   ],
   "poll worker recruitment": [
     "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment"
-  ],
-  "election administration": [
-    "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
-    "polling-place-quality-and-access",
-    "polling-place-quality-and-access",
-    "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
-    "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study"
   ],
   "poll workers": [
     "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment"
@@ -405,11 +434,6 @@
   "density": [
     "electoral-geography-political-behavior-and-public-opinion"
   ],
-  "Public Opinion": [
-    "partisanship-economic-assessments-and-presidential-accountability",
-    "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",
-    "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
-  ],
   "Presidential Accountability": [
     "partisanship-economic-assessments-and-presidential-accountability"
   ],
@@ -492,10 +516,6 @@
   ],
   "responsibility attribution": [
     "pass-the-buck-or-the-buck-stops-here-the-public-costs-of-claiming-and-deflecting-blame-in-"
-  ],
-  "survey experiments": [
-    "pass-the-buck-or-the-buck-stops-here-the-public-costs-of-claiming-and-deflecting-blame-in-",
-    "attitudes-toward-delegation-to-presidential-commissions"
   ],
   "American Politics": [
     "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",

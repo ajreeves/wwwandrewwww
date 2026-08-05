@@ -389,6 +389,17 @@
     "kind": "poster",
     "poster_source": "prespower.png"
   },
+  "private-funding": {
+    "src": "/images/publication-posters/private-funding.png",
+    "alt": "AI-generated movie poster for Public Opinion on Private Funding of Public Elections",
+    "caption": "AI-generated movie poster for Public Opinion on Private Funding of Public Elections.",
+    "source_pdf": "/papers/private-funding.pdf",
+    "selected_page": 1,
+    "cropped": false,
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "private-funding.png"
+  },
   "public-cost-unilateral-action": {
     "src": "/images/publication-posters/public-cost-unilateral-action.png",
     "alt": "AI-generated movie poster for The Public Cost of Unilateral Action",
