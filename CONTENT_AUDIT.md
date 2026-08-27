@@ -117,7 +117,7 @@ Primary sources consulted:
 
 | Item | Status | Problems |
 |---|---|---|
-| Appointments list | Mostly confirmed | Missing Director, The Frick Initiatives; missing Professor of Law by courtesy; includes Hoover role confirmed by CV. |
+| Appointments list | Mostly confirmed | Missing Director, Frick Initiatives; missing Professor of Law by courtesy; includes Hoover role confirmed by CV. |
 | Books list | Confirmed | No Blank Check should use "towards" if full title shown. |
 | Research areas | Plausible | Tags are interpretive, not CV facts. |
 | Download CV | Confirmed | Local PDF exists and source is public CV. |
