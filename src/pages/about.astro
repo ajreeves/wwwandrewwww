@@ -1,6 +1,100 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+
+const galleryPhotos = [
+  {
+    src: "/images/andrew-reeves-frick-initiatives-speaking.jpg",
+    alt: "Andrew Reeves speaking at the launch of the Frick Initiatives",
+    width: 2200,
+    height: 1466,
+    caption: "Andrew Reeves at the launch of the Frick Initiatives. Photo: Suzy Gorman."
+  },
+  {
+    src: "/images/weidenbaum-center-annual-reception-2024.jpg",
+    alt: "Feng Sheng Hu, Andrew Reeves, Chancellor Andrew Martin, and Chancellor Emeritus Mark Wrighton at the 2024 Weidenbaum Center annual reception",
+    width: 2400,
+    height: 1600,
+    caption: "Feng Sheng Hu, Andrew Reeves, Andrew Martin, and Mark Wrighton at the Weidenbaum Center annual reception, May 16, 2024. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/federal-reserve-presidents-andrew-reeves.jpg",
+    alt: "Andrew Martin, Alberto Musalem, Thomas Melzer, Andrew Reeves, James Bullard, Karen Branding, and Elizabeth Larson at a Weidenbaum Center Federal Reserve event",
+    width: 2400,
+    height: 1596,
+    caption: "Andrew Martin, Alberto Musalem, Thomas Melzer, Andrew Reeves, James Bullard, Karen Branding, and Elizabeth Larson at The Past, Present, and Future of the Federal Reserve, September 29, 2025. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/andrew-martin-phil-gramm-andrew-reeves.png",
+    alt: "Chancellor Andrew Martin, former U.S. Senator Phil Gramm, and Andrew Reeves at a Weidenbaum Center event",
+    width: 1537,
+    height: 1023,
+    caption: "Chancellor Andrew Martin, former U.S. Senator Phil Gramm, and Andrew Reeves at a Weidenbaum Center discussion of The Triumph of Economic Freedom, April 9, 2026. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/andrew-reeves-hoover-rai-conference.jpg",
+    alt: "Andrew Reeves speaking at a Hoover Institution Research on American Institutions conference",
+    width: 1750,
+    height: 1250,
+    caption: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference, May 2023."
+  },
+  {
+    src: "/images/adriana-kugler-andrew-reeves-conversation.jpg",
+    alt: "Federal Reserve Governor Adriana Kugler in conversation with Andrew Reeves before an audience at a Weidenbaum Center forum",
+    width: 2400,
+    height: 1111,
+    caption: "Federal Reserve Governor Adriana D. Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum, April 3, 2024. Photo: Jerry Naunheim Jr./WashU."
+  },
+  {
+    src: "/images/andrew-reeves-carolyn-bourdeaux.jpg",
+    alt: "Andrew Reeves in conversation with former U.S. Representative Carolyn Bourdeaux",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves in conversation with former U.S. Representative Carolyn Bourdeaux at Governing Past Gridlock: Why Fiscal Responsibility Still Matters, January 14, 2026. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/andrew-reeves-melanie-fontes-rainer.jpg",
+    alt: "Andrew Reeves with Melanie Fontes Rainer of the U.S. Department of Health and Human Services",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves and Melanie Fontes Rainer, director of the Office for Civil Rights at the U.S. Department of Health and Human Services, November 13, 2024. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/andrew-reeves-frick-candid.jpg",
+    alt: "Andrew Reeves laughing during a conversation at the launch of the Frick Initiatives",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves in conversation with Bob Frick at the launch of the Frick Initiatives. Photo: Suzy Gorman."
+  },
+  {
+    src: "/images/mahendra-gupta-barbara-frick-andrew-reeves.jpg",
+    alt: "Mahendra Gupta, Penny Pennington, and Andrew Reeves at the launch of the Frick Initiatives",
+    width: 2400,
+    height: 1600,
+    caption: "Mahendra Gupta, Penny Pennington, and Andrew Reeves at the launch of the Frick Initiatives. Photo: Suzy Gorman."
+  },
+  {
+    src: "/images/andrew-reeves-andrew-martin-barbara-bob-frick.jpg",
+    alt: "Andrew Reeves, Chancellor Andrew Martin, Barbara Frick, and Bob Frick at the launch of the Frick Initiatives",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves, Chancellor Andrew Martin, Barbara Frick, and Bob Frick at the launch of the Frick Initiatives. Photo: Sid Hastings/WashU."
+  },
+  {
+    src: "/images/andrew-reeves-university-address-2025.jpg",
+    alt: "Andrew Reeves delivering remarks from a lectern at Washington University",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves delivering remarks at Washington University, 2025. Photo: Dan Donovan/WashU."
+  },
+  {
+    src: "/images/andrew-reeves-election-results-2024.jpg",
+    alt: "Andrew Reeves speaking at the Weidenbaum Center's 2024 election results policy luncheon",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves at the Weidenbaum Center policy luncheon on the 2024 election results, November 12, 2024. Photo: Sid Hastings/WashU."
+  }
+] as const;
 ---
 
 <BaseLayout
@@ -16,18 +110,49 @@ import PageHeader from "@components/PageHeader.astro";
   />
 
   <section class="container-wide page-section">
-    <figure class="about-profile-photo mx-auto mb-10 max-w-5xl overflow-hidden md:mb-14">
-      <img
-        class="block h-auto w-full"
-        src="/images/andrew-reeves-frick-initiatives-speaking.jpg"
-        alt="Andrew Reeves speaking at the launch of the Frick Initiatives"
-        width="2200"
-        height="1466"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <figcaption>Photo: Suzy Gorman.</figcaption>
-    </figure>
+    <section
+      class="about-photo-gallery mx-auto mb-10 max-w-5xl md:mb-14"
+      aria-label="Photographs of Andrew Reeves"
+      aria-roledescription="carousel"
+      data-about-gallery
+    >
+      <div class="about-photo-stage" aria-live="off">
+        {
+          galleryPhotos.map((photo, index) => (
+            <figure class:list={["about-profile-photo", index === 0 && "is-active"]} data-gallery-slide aria-hidden={index === 0 ? "false" : "true"}>
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding={index === 0 ? undefined : "async"}
+                fetchpriority={index === 0 ? "high" : undefined}
+              />
+              <figcaption>{photo.caption}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <div class="about-gallery-controls">
+        <div class="about-gallery-nav" aria-label="Choose a photograph">
+          <button class="about-gallery-arrow" type="button" data-gallery-previous aria-label="Show previous photograph">←</button>
+          {
+            galleryPhotos.map((_, index) => (
+              <button
+                class:list={["about-gallery-dot", index === 0 && "is-active"]}
+                type="button"
+                data-gallery-dot={index}
+                aria-label={`Show photograph ${index + 1}`}
+                aria-current={index === 0 ? "true" : undefined}
+              />
+            ))
+          }
+          <button class="about-gallery-arrow" type="button" data-gallery-next aria-label="Show next photograph">→</button>
+        </div>
+        <button class="about-gallery-pause" type="button" data-gallery-pause aria-pressed="false">Pause</button>
+      </div>
+    </section>
 
     <article class="editorial-prose mx-auto max-w-4xl">
       <p>
@@ -51,4 +176,68 @@ import PageHeader from "@components/PageHeader.astro";
       </p>
     </article>
   </section>
+
+  <script>
+    const gallery = document.querySelector<HTMLElement>("[data-about-gallery]");
+
+    if (gallery) {
+      const slides = Array.from(gallery.querySelectorAll<HTMLElement>("[data-gallery-slide]"));
+      const dots = Array.from(gallery.querySelectorAll<HTMLButtonElement>("[data-gallery-dot]"));
+      const pauseButton = gallery.querySelector<HTMLButtonElement>("[data-gallery-pause]");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let current = 0;
+      let paused = reduceMotion;
+      let timer: number | undefined;
+
+      const showSlide = (next: number) => {
+        current = (next + slides.length) % slides.length;
+        slides.forEach((slide, index) => {
+          const active = index === current;
+          slide.classList.toggle("is-active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+        dots.forEach((dot, index) => {
+          const active = index === current;
+          dot.classList.toggle("is-active", active);
+          active ? dot.setAttribute("aria-current", "true") : dot.removeAttribute("aria-current");
+        });
+      };
+
+      const stopTimer = () => {
+        if (timer !== undefined) window.clearInterval(timer);
+        timer = undefined;
+      };
+
+      const startTimer = () => {
+        stopTimer();
+        if (!paused) timer = window.setInterval(() => showSlide(current + 1), 7000);
+      };
+
+      gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => {
+        showSlide(current - 1);
+        startTimer();
+      });
+      gallery.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
+        showSlide(current + 1);
+        startTimer();
+      });
+      dots.forEach((dot) => dot.addEventListener("click", () => {
+        showSlide(Number(dot.dataset.galleryDot));
+        startTimer();
+      }));
+      pauseButton?.addEventListener("click", () => {
+        paused = !paused;
+        pauseButton.textContent = paused ? "Play" : "Pause";
+        pauseButton.setAttribute("aria-pressed", String(paused));
+        startTimer();
+      });
+      document.addEventListener("visibilitychange", () => document.hidden ? stopTimer() : startTimer());
+
+      if (reduceMotion && pauseButton) {
+        pauseButton.textContent = "Play";
+        pauseButton.setAttribute("aria-pressed", "true");
+      }
+      startTimer();
+    }
+  </script>
 </BaseLayout>
