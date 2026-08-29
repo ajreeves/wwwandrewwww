@@ -27,16 +27,12 @@ const canonicalUrl = new URL(Astro.url.pathname, site).toString();
 const imageUrl = new URL(image, site).toString();
 const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
 const navItems = [
-  ["Home", "/"],
-  ["About", "/about/"],
-  ["Research", "/research/"],
-  ["Books", "/books/"],
-  ["Students", "/students/"],
-  ["Teaching", "/teaching/"],
-  ["Talks", "/talks/"],
-  ["News", "/news/"],
-  ["CV", "/cv/"],
-  ["Contact", "/contact/"]
+  { label: "About", href: "/about/", activeOn: ["About"] },
+  { label: "Research", href: "/research/", activeOn: ["Research"] },
+  { label: "Books", href: "/books/", activeOn: ["Books"] },
+  { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"] },
+  { label: "Media", href: "/news/", activeOn: ["News", "Talks"] },
+  { label: "CV", href: "/cv/", activeOn: ["CV"] }
 ];
 ---
 
@@ -89,9 +85,9 @@ const navItems = [
           </button>
           <div class="nav-list" id="main-nav-list">
             {
-              navItems.map(([label, href]) => (
-                <a class="nav-link" href={href} aria-current={active === label ? "page" : undefined}>
-                  {label}
+              navItems.map((item) => (
+                <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) ? "page" : undefined}>
+                  {item.label}
                 </a>
               ))
             }
