@@ -28,6 +28,7 @@ const imageUrl = new URL(image, site).toString();
 const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
 const navItems = [
   ["Home", "/"],
+  ["About", "/about/"],
   ["Research", "/research/"],
   ["Books", "/books/"],
   ["Students", "/students/"],
@@ -103,6 +104,7 @@ const navItems = [
       <footer class="site-footer-wrap">
         <div class="site-footer">
           <div class="footer-nav">
+            <a href="/about/">About</a>
             <a href="/research/">Research</a>
             <a href="/books/">Books</a>
             <a href="/teaching/">Teaching</a>
