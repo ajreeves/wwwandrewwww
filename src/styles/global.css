@@ -6627,7 +6627,8 @@
   object-fit: cover;
 }
 
-.feature-band-media figcaption {
+.feature-band-media figcaption,
+.about-profile-photo figcaption {
   position: absolute;
   right: 0.85rem;
   bottom: 0.75rem;
@@ -6641,6 +6642,10 @@
   line-height: 1.35;
   text-transform: uppercase;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+.about-profile-photo {
+  position: relative;
 }
 
 .feature-band-copy {
