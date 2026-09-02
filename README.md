@@ -24,7 +24,6 @@ Content lives in `src/content/`:
 - `books`
 - `projects`
 - `writing`
-- `timeline`
 
 Images and static files live in `public/`.
 

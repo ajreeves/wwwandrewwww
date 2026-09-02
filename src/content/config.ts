@@ -52,20 +52,8 @@ const writing = defineCollection({
   })
 });
 
-const timeline = defineCollection({
-  type: "content",
-  schema: z.object({
-    title: z.string(),
-    year: z.number(),
-    category: z.enum(["Book", "Article", "Leadership", "Grant", "Event"]),
-    description: z.string(),
-    themes: z.array(z.string()).default([])
-  })
-});
-
 export const collections = {
   publications,
   books,
-  writing,
-  timeline
+  writing
 };
