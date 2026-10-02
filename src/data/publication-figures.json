@@ -466,6 +466,17 @@
     "kind": "poster",
     "poster_source": "environment.png"
   },
+  "persistence-of-localism": {
+    "src": "/images/publication-posters/persistence-of-localism.png",
+    "alt": "AI-generated movie poster for The Persistence of Localism in an Era of Nationalized Politics",
+    "caption": "AI-generated movie poster for The Persistence of Localism in an Era of Nationalized Politics.",
+    "source_pdf": "/papers/localism.pdf",
+    "selected_page": 1,
+    "cropped": false,
+    "fallback": false,
+    "kind": "poster",
+    "poster_source": "persistence-of-localism.png"
+  },
   "short-haul-moves": {
     "src": "/images/publication-posters/short-haul-moves.png",
     "alt": "AI-generated movie poster for Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
