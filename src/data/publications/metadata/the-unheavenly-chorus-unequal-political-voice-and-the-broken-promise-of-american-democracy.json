@@ -1,6 +1,6 @@
 {
   "title": {
-    "value": "The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy",
+    "value": "Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady",
     "evidence_pages": [
       1,
       5
@@ -9,9 +9,7 @@
   },
   "authors": {
     "value": [
-      "Kay Lehman Schlozman",
-      "Sidney Verba",
-      "Henry E. Brady"
+      "Andrew Reeves"
     ],
     "evidence_pages": [
       1,
@@ -20,7 +18,7 @@
     "confidence": "high"
   },
   "year": {
-    "value": 2012,
+    "value": 2013,
     "evidence_pages": [
       1,
       5
@@ -28,24 +26,24 @@
     "confidence": "high"
   },
   "journal": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "The Forum",
+    "evidence_pages": [1, 5],
+    "confidence": "high"
   },
   "volume": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "11",
+    "evidence_pages": [1, 5],
+    "confidence": "high"
   },
   "issue": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "1",
+    "evidence_pages": [1, 5],
+    "confidence": "high"
   },
   "pages": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "63-67",
+    "evidence_pages": [1, 5],
+    "confidence": "high"
   },
   "doi": {
     "value": null,
@@ -227,7 +225,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Schlozman, Kay Lehman, Sidney Verba, and Henry E. Brady. 2012. The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy. Princeton: Princeton University Press.",
+    "value": "Reeves, Andrew. 2013. \"Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady.\" The Forum 11(1): 63-67.",
     "evidence_pages": [
       5
     ],

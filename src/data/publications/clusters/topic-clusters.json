@@ -6,7 +6,7 @@
     "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
     "the-public-cost-of-unilateral-action",
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "attitudes-toward-delegation-to-presidential-commissions",
     "the-contextual-determinants-of-support-for-unilateral-action",
     "by-all-means-how-issue-popularity-emboldens-presidential-power",
@@ -14,13 +14,13 @@
     "presidential-particularism-and-divide-the-dollar-politics",
     "presidential-particularism-in-disaster-declarations-and-military-base-closures",
     "public-opinion-toward-presidential-power",
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
     "the-influence-of-federal-spending-on-presidential-elections",
     "the-influence-of-federal-spending-on-presidential-elections",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
     "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar",
     "turning-out-the-base-or-appealing-to-the-periphery-an-analysis-of-county-level-candidate-a",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole",
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
   ],
   "local government": [
     "elections-and-representation-in-american-municipal-administration",
@@ -30,7 +30,7 @@
     "elections-and-representation-in-american-municipal-administration",
     "elections-and-representation-in-american-municipal-administration",
     "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "the-politics-of-disaster-relief"
   ],
   "elections": [
@@ -168,6 +168,64 @@
   "climate attitudes": [
     "rising-seas-rising-concerns-how-climate-change-vulnerability-shapes-opinions-towards-polic"
   ],
+  "Political Geography": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "Political Behavior": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+    "local-unemployment-and-voting-for-president-uncovering-causal-mechanisms",
+    "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
+  ],
+  "Migration": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "residential mobility": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "political segregation": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "metropolitan politics": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "geographic polarization": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+    "reconsidering-bellwether-locations-in-u-s-presidential-elections"
+  ],
+  "political geography": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+    "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology",
+    "reconsidering-bellwether-locations-in-u-s-presidential-elections",
+    "presidential-particularism-and-divide-the-dollar-politics",
+    "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
+    "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar"
+  ],
+  "partisanship": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+    "democratic-values-and-support-for-executive-power",
+    "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership",
+    "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
+    "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
+    "the-contextual-determinants-of-support-for-unilateral-action",
+    "public-opinion-toward-presidential-power",
+    "responsive-partisanship-public-support-for-the-clinton-and-obama-health-care-plans",
+    "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
+    "the-influence-of-federal-spending-on-presidential-elections",
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "migration": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "geographic sorting": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "partisan sorting": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
+  "population mobility": [
+    "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a"
+  ],
   "Political Science": [
     "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
     "electoral-geography-political-behavior-and-public-opinion",
@@ -216,8 +274,8 @@
     "if-trump-took-responsibility-for-coronavirus-missteps-it-might-actually-help-him",
     "pedagogical-value-of-polling-place-observation-by-students",
     "responsive-partisanship-public-support-for-the-clinton-and-obama-health-care-plans",
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
     "how-disasters-change-elections",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
     "make-it-rain-retrospection-and-the-attentive-electorate-in-the-context-of-natural-disaster",
     "the-job-market-s-first-steps-using-research-tools-to-simplify-the-process",
     "the-job-market-s-first-steps-using-research-tools-to-simplify-the-process",
@@ -232,13 +290,6 @@
   ],
   "sociology": [
     "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology"
-  ],
-  "political geography": [
-    "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology",
-    "reconsidering-bellwether-locations-in-u-s-presidential-elections",
-    "presidential-particularism-and-divide-the-dollar-politics",
-    "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
-    "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar"
   ],
   "community satisfaction": [
     "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology"
@@ -264,9 +315,9 @@
   "United States": [
     "the-urban-rural-divide-and-residential-contentment-as-antecedents-of-political-ideology",
     "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "the-politics-of-disaster-relief",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
   ],
   "comparative politics": [
     "democratic-values-and-support-for-executive-power",
@@ -301,19 +352,6 @@
     "the-public-cost-of-unilateral-action",
     "unilateral-powers-public-opinion-and-the-presidency"
   ],
-  "partisanship": [
-    "democratic-values-and-support-for-executive-power",
-    "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership",
-    "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
-    "political-regimes-and-institutional-support-how-partisanship-affects-attitudes-toward-pres",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
-    "the-contextual-determinants-of-support-for-unilateral-action",
-    "public-opinion-toward-presidential-power",
-    "responsive-partisanship-public-support-for-the-clinton-and-obama-health-care-plans",
-    "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
-    "the-influence-of-federal-spending-on-presidential-elections",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
   "political institutions": [
     "democratic-values-and-support-for-executive-power",
     "public-opinion-and-public-support-in-crisis-management",
@@ -335,7 +373,7 @@
   ],
   "democracy": [
     "democratic-values-and-support-for-executive-power",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
   ],
   "Afrobarometer": [
     "democratic-values-and-support-for-executive-power"
@@ -355,8 +393,8 @@
     "reconsidering-bellwether-locations-in-u-s-presidential-elections",
     "defining-racial-and-ethnic-context-with-geolocation-data",
     "responsive-partisanship-public-support-for-the-clinton-and-obama-health-care-plans",
-    "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
+    "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
   ],
   "racial attitudes": [
     "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership"
@@ -367,7 +405,7 @@
   "presidential politics": [
     "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership",
     "public-opinion-and-public-support-in-crisis-management",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "unilateral-powers-public-opinion-and-the-presidency"
   ],
   "criminal justice": [
@@ -408,7 +446,7 @@
   "political participation": [
     "electoral-geography-political-behavior-and-public-opinion",
     "us-presidential-campaigns-and-their-impact",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
   ],
   "urban-rural differences": [
     "electoral-geography-political-behavior-and-public-opinion"
@@ -467,14 +505,14 @@
   ],
   "federal grants": [
     "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants"
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant"
   ],
   "Trump administration": [
     "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response"
   ],
   "distributive politics": [
     "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "presidential-particularism-and-divide-the-dollar-politics",
     "presidential-particularism-in-disaster-declarations-and-military-base-closures"
   ],
@@ -487,8 +525,8 @@
   "political inequality": [
     "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
     "presidential-particularism-in-disaster-declarations-and-military-base-closures",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
     "donald-trumps-lukewarm-response-to-puerto-rico-was-pretty-predictable-heres-why"
   ],
   "political leadership": [
@@ -564,9 +602,6 @@
   "predictive power": [
     "reconsidering-bellwether-locations-in-u-s-presidential-elections"
   ],
-  "geographic polarization": [
-    "reconsidering-bellwether-locations-in-u-s-presidential-elections"
-  ],
   "voting behavior": [
     "reconsidering-bellwether-locations-in-u-s-presidential-elections",
     "polling-place-quality-and-access",
@@ -579,7 +614,7 @@
   "executive-legislative relations": [
     "unilateral-inaction-congressional-gridlock-interbranch-conflict-and-public-evaluations-of-",
     "the-public-cost-of-unilateral-action",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "by-all-means-how-issue-popularity-emboldens-presidential-power"
   ],
   "democratic accountability": [
@@ -709,10 +744,6 @@
     "us-presidential-campaigns-and-their-impact",
     "florida-disaster-aid-can-help-bush",
     "a-reassessment-of-presidential-campaign-strategy-formation-and-candidate-resource-allocati"
-  ],
-  "Political Behavior": [
-    "local-unemployment-and-voting-for-president-uncovering-causal-mechanisms",
-    "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
   ],
   "Economic voting": [
     "local-unemployment-and-voting-for-president-uncovering-causal-mechanisms"
@@ -890,7 +921,7 @@
   ],
   "policy outcomes": [
     "us-presidential-campaigns-and-their-impact",
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
   ],
   "coattails": [
     "us-presidential-campaigns-and-their-impact"
@@ -907,7 +938,7 @@
   ],
   "legislative studies": [
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants"
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant"
   ],
   "party politics": [
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
@@ -937,7 +968,7 @@
   "legislative behavior": [
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
     "taking-the-leap-voting-rhetoric-and-the-determinants-of-electoral-reform",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
   ],
   "attendance": [
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance"
@@ -946,18 +977,18 @@
     "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance"
   ],
   "Congressional politics": [
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants"
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant"
   ],
   "federal spending": [
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
     "presidential-particularism-and-divide-the-dollar-politics",
     "the-influence-of-federal-spending-on-presidential-elections"
   ],
   "Senate": [
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants"
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant"
   ],
   "copartisanship": [
-    "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants"
+    "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant"
   ],
   "presidential commissions": [
     "attitudes-toward-delegation-to-presidential-commissions"
@@ -1200,6 +1231,18 @@
   "roll call votes": [
     "driving-support-workers-pacs-and-congressional-support-of-the-auto-industry"
   ],
+  "lobbying": [
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
+  ],
+  "socioeconomic status": [
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
+  ],
+  "organized interests": [
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
+  ],
+  "pluralism": [
+    "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american"
+  ],
   "media effects": [
     "ecologies-of-unease-geographic-context-and-national-economic-evaluations"
   ],
@@ -1248,18 +1291,6 @@
   ],
   "electoral accountability": [
     "the-influence-of-federal-spending-on-presidential-elections"
-  ],
-  "lobbying": [
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
-  ],
-  "socioeconomic status": [
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
-  ],
-  "organized interests": [
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
-  ],
-  "pluralism": [
-    "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy"
   ],
   "federal disaster policy": [
     "make-it-rain-retrospection-and-the-attentive-electorate-in-the-context-of-natural-disaster",
@@ -1333,6 +1364,32 @@
   ],
   "presidential candidates": [
     "turning-out-the-base-or-appealing-to-the-periphery-an-analysis-of-county-level-candidate-a"
+  ],
+  "political parties": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole",
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "regionalism": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole",
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "coalition building": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "issue salience": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "party system": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "free trade": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "welfare reform": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
+  ],
+  "abortion": [
+    "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole"
   ],
   "political methodology": [
     "a-reassessment-of-the-methods-behind-the-madness-presidential-electoral-college-strategies",
@@ -1462,31 +1519,5 @@
   ],
   "Tariffs": [
     "the-electoral-college-and-presidential-particularism"
-  ],
-  "political parties": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "regionalism": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "coalition building": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "issue salience": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "party system": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "free trade": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "welfare reform": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
-  ],
-  "abortion": [
-    "the-state-of-disunion-regional-sources-of-modern-american-partisanship"
   ]
 }

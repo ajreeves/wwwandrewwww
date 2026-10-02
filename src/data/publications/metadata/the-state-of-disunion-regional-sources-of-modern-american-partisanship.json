@@ -1,6 +1,6 @@
 {
   "title": {
-    "value": "The State of Disunion: Regional Sources of Modern American Partisanship",
+    "value": "Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow",
     "evidence_pages": [
       1
     ],
@@ -8,7 +8,7 @@
   },
   "authors": {
     "value": [
-      "Nicole Mellow"
+      "Andrew Reeves"
     ],
     "evidence_pages": [
       1
@@ -16,7 +16,7 @@
     "confidence": "high"
   },
   "year": {
-    "value": "2008",
+    "value": 2009,
     "evidence_pages": [
       1
     ],
@@ -30,14 +30,14 @@
     "confidence": "high"
   },
   "volume": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "124",
+    "evidence_pages": [1, 2],
+    "confidence": "high"
   },
   "issue": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "4",
+    "evidence_pages": [1, 2],
+    "confidence": "high"
   },
   "pages": {
     "value": "743-744",
@@ -205,7 +205,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Mellow, Nicole. The State of Disunion: Regional Sources of Modern American Partisanship. Baltimore, MD: Johns Hopkins University Press, 2008. Reviewed in Political Science Quarterly, pp. 743-744.",
+    "value": "Reeves, Andrew. 2009. \"Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow.\" Political Science Quarterly 124(4): 743-744.",
     "evidence_pages": [
       1,
       2

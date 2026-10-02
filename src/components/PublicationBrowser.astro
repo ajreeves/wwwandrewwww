@@ -285,6 +285,7 @@ const themeOptions = majorThemeDefinitions
           data-type-key={slugify(publication.data.type)}
           data-themes={majorThemes.join(" ")}
           data-year={yearSort}
+          data-year-label={publication.data.year}
           data-citations={citationCount}
           data-search={searchText}
           data-landmark={landmark ? "true" : "false"}
@@ -428,7 +429,7 @@ const themeOptions = majorThemeDefinitions
           const heading = document.createElement("div");
           heading.className = "archive-year-heading";
           heading.dataset.yearHeading = year;
-          heading.textContent = year;
+          heading.textContent = record.dataset.yearLabel ?? year;
           list.append(heading);
         }
         list.append(record);

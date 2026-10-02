@@ -1,6 +1,6 @@
 {
   "title": {
-    "value": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study",
+    "value": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study",
     "evidence_pages": [
       1
     ],
@@ -8,34 +8,30 @@
   },
   "authors": {
     "value": [
-      "Robert M. Stein",
-      "Christopher Mann",
-      "Charles Stewart III",
+      "Robert Stein",
       "Zachary Birenbaum",
-      "Anson Fung",
-      "Jed Greenberg",
       "Farhan Kawsar",
+      "Charles Stewart III",
       "Gayle Alberda",
       "R. Michael Alvarez",
-      "Lonna Atkeson",
       "Emily Beaulieu",
       "Nathaniel A. Birkhead",
-      "Frederick J. Boehmke",
+      "Frederick Boehmke",
       "Joshua Boston",
       "Barry C. Burden",
       "Francisco Cantu",
       "Rachael Cobb",
       "David Darmofal",
       "Thomas C. Ellington",
-      "Terri Susan Fine",
       "Charles J. Finocchiaro",
-      "Michael D. Gilbert",
+      "Michael Gilbert",
       "Victor Haynes",
       "Brian Janssen",
       "David Kimball",
       "Charles Kromkowski",
       "Elena Llaudet",
-      "Kenneth R. Mayer",
+      "Christopher Mann",
+      "Ken Mayer",
       "Matthew R. Miles",
       "David Miller",
       "Lindsay Nielson",
@@ -43,11 +39,8 @@
       "Costas Panagopoulos",
       "Andrew Reeves",
       "Min Hee Seo",
-      "Haley Simmons",
       "Corwin Smidt",
-      "Farrah M. Stone",
       "Rachel VanSickle-Ward",
-      "Jennifer Nicoll Victor",
       "Abby Wood",
       "Julie Wronski"
     ],
@@ -58,7 +51,7 @@
     "confidence": "high"
   },
   "year": {
-    "value": 2019,
+    "value": 2020,
     "evidence_pages": [
       1
     ],
@@ -72,17 +65,17 @@
     "confidence": "high"
   },
   "volume": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "73",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "issue": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "2",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "pages": {
-    "value": "1–15",
+    "value": "439-453",
     "evidence_pages": [
       1
     ],
@@ -296,7 +289,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Stein, R. M., Mann, C., Stewart III, C., Birenbaum, Z., Fung, A., Greenberg, J., Kawsar, F., Alberda, G., Alvarez, R. M., Atkeson, L., Beaulieu, E., Birkhead, N. A., Boehmke, F. J., Boston, J., Burden, B. C., Cantu, F., Cobb, R., Darmofal, D., Ellington, T. C., Fine, T. S., Finocchiaro, C. J., Gilbert, M. D., Haynes, V., Janssen, B., Kimball, D., Kromkowski, C., Llaudet, E., Mayer, K. R., Miles, M. R., Miller, D., Nielson, L., Ouyang, Y., Panagopoulos, C., Reeves, A., Seo, M. H., Simmons, H., Smidt, C., Stone, F. M., VanSickle-Ward, R., Victor, J. N., Wood, A., & Wronski, J. (2019). Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study. Political Research Quarterly, 1–15. https://doi.org/10.1177/1065912919832374",
+    "value": "Stein, Robert, Zachary Birenbaum, Farhan Kawsar, Charles Stewart III, Gayle Alberda, R. Michael Alvarez, Emily Beaulieu, Nathaniel A. Birkhead, Frederick Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Charles J. Finocchiaro, Michael Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Christopher Mann, Ken Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Corwin Smidt, Rachel VanSickle-Ward, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439-453. https://doi.org/10.1177/1065912919832374",
     "evidence_pages": [
       1
     ],

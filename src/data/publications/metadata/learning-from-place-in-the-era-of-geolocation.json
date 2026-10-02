@@ -24,9 +24,9 @@
     "confidence": "high"
   },
   "journal": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "Analytics, Policy, and Governance",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "volume": {
     "value": null,
@@ -39,9 +39,9 @@
     "confidence": "low"
   },
   "pages": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "118-136",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "doi": {
     "value": null,
@@ -237,9 +237,9 @@
     "confidence": "high"
   },
   "citation": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "Moore, Ryan T., and Andrew Reeves. 2017. \"Learning from Place in the Era of Geolocation.\" In Analytics, Policy, and Governance, edited by Jennifer Bachner, Benjamin Ginsberg, and Kathryn Wagner Hill, 118-136. New Haven, CT: Yale University Press.",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "links": {
     "value": {

@@ -24,9 +24,9 @@
     "confidence": "high"
   },
   "journal": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "Handbook on Politics and Public Opinion",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "volume": {
     "value": null,
@@ -39,9 +39,9 @@
     "confidence": "low"
   },
   "pages": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "224-240",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "doi": {
     "value": null,
@@ -270,7 +270,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Gimpel, James G., and Andrew Reeves. 2022. \"Electoral Geography, Political Behavior and Public Opinion.\" In Thomas J. Rudolph (ed.), Handbook on Politics and Public Opinion. Northampton, MA: Edward Elgar Publishing, Inc.",
+    "value": "Gimpel, James G., and Andrew Reeves. 2022. \"Electoral Geography, Political Behavior and Public Opinion.\" In Handbook on Politics and Public Opinion, edited by Thomas J. Rudolph, 224-240. Cheltenham, UK: Edward Elgar Publishing.",
     "evidence_pages": [
       1
     ],

@@ -1,0 +1,134 @@
+{
+  "slug": "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+  "title": "Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
+  "authors": [
+    "James G. Gimpel",
+    "Jordon Newton",
+    "Andrew Reeves"
+  ],
+  "year": 2026,
+  "publication_type": "journal article",
+  "journal": "Urban Affairs Review",
+  "volume": "62",
+  "issue": "4",
+  "pages": "975-1018",
+  "doi": "10.1177/10780874251380677",
+  "citation": "Gimpel, James G., Jordon Newton, and Andrew Reeves. 2026. \"Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics.\" Urban Affairs Review 62(4): 975-1018. https://doi.org/10.1177/10780874251380677",
+  "links": {
+    "pdf": "/papers/shorthaul.pdf",
+    "journal": "https://doi.org/10.1177/10780874251380677",
+    "replication_data": null,
+    "code": null
+  },
+  "card_summary": "Short-distance moves within metropolitan areas contribute modestly but meaningfully to partisan geographic sorting.",
+  "abstract": "We consider how the high volume of short-distance migration within metropolitan areas contributes to partisan sorting across the United States. Using voter records comparing movers and nonmovers within 215 metro areas across nine states, we find high levels of sorting even when moves occur within the same core-based statistical area and state. Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
+  "plain_english_summary": "Using voter records from 215 metropolitan areas in nine states, the study finds that even nearby movers tend to choose destinations that better match their partisanship, gradually increasing geographic polarization.",
+  "research_question": "Do short-distance moves within metropolitan areas contribute to partisan geographic sorting?",
+  "research_highlights": [
+    "Short-distance movers tend to select destinations that are more politically compatible with their partisanship.",
+    "These patterns persist after accounting for other destination characteristics.",
+    "Local moves can produce small but meaningful changes in the partisan composition of legislative districts."
+  ],
+  "methods": [
+    "Comparison of movers and nonmovers using longitudinal voter-file records.",
+    "Metro-area statistical analyses of origin and destination partisanship and other destination characteristics."
+  ],
+  "data_sources": [
+    "Voter-file records covering 32.3 million registered voters in 215 metropolitan areas across nine states over eight years."
+  ],
+  "key_variables": [
+    "Mover party identification",
+    "Origin ZIP-code partisanship",
+    "Destination ZIP-code partisanship",
+    "Move distance",
+    "Metropolitan area"
+  ],
+  "identification_strategy": null,
+  "geography": "215 U.S. metropolitan areas across nine states",
+  "time_period": "Eight-year voter-file panel",
+  "unit_of_analysis": "Registered voter residential move",
+  "policy_relevance": null,
+  "pull_quote": "Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
+  "pull_quote_page": 1,
+  "confidence_notes": "Bibliographic information, abstract, keywords, data coverage, and principal findings are stated directly in the article.",
+  "tags": [
+    "Political Geography",
+    "Political Behavior",
+    "Migration",
+    "Observational study",
+    "Longitudinal voter-file analysis",
+    "Quantitative analysis",
+    "political geography",
+    "partisanship",
+    "migration",
+    "geographic sorting",
+    "partisan sorting",
+    "population mobility",
+    "residential mobility",
+    "political segregation",
+    "metropolitan politics",
+    "geographic polarization"
+  ],
+  "filters": {
+    "substantive_area": [
+      "Political Geography",
+      "Political Behavior",
+      "Migration"
+    ],
+    "government_level": [
+      "local",
+      "state",
+      "federal"
+    ],
+    "research_design": [
+      "Observational study",
+      "Longitudinal voter-file analysis",
+      "Quantitative analysis"
+    ],
+    "methods": [
+      "Comparison of movers and nonmovers using longitudinal voter-file records.",
+      "Metro-area statistical analyses of origin and destination partisanship and other destination characteristics."
+    ],
+    "geography": [
+      "215 U.S. metropolitan areas across nine states"
+    ],
+    "time_period": [
+      "Eight-year voter-file panel"
+    ],
+    "keywords": [
+      "political geography",
+      "partisanship",
+      "migration",
+      "geographic sorting",
+      "partisan sorting",
+      "population mobility"
+    ],
+    "related_topics": [
+      "residential mobility",
+      "political segregation",
+      "metropolitan politics",
+      "geographic polarization"
+    ]
+  },
+  "evidence": {
+    "research_question": {
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    "main_findings": {
+      "pages": [
+        1,
+        5
+      ]
+    },
+    "methods": {
+      "pages": [
+        3,
+        5
+      ]
+    }
+  }
+}

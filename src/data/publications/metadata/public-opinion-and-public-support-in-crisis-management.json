@@ -9,7 +9,7 @@
   "authors": {
     "value": [
       "Zoe Ang",
-      "Benjamin S. Noble",
+      "Benjamin Noble",
       "Andrew Reeves"
     ],
     "evidence_pages": [
@@ -25,9 +25,9 @@
     "confidence": "high"
   },
   "journal": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "The Oxford Encyclopedia of Crisis Analysis",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "volume": {
     "value": null,
@@ -52,9 +52,9 @@
     "confidence": "high"
   },
   "publication_type": {
-    "value": null,
-    "evidence_pages": [],
-    "confidence": "low"
+    "value": "book chapter",
+    "evidence_pages": [1],
+    "confidence": "high"
   },
   "abstract": {
     "value": "In times of crisis, citizens look to their leaders for aid and assistance. In the democratic context, the focal figure is likely the chief executive accountable to the whole of the nation. With a specific focus on the American president and the incidences of natural hazards, public opinion and governmental response to these crises are analyzed. While one may expect such a universal actor to aid each according to their need, new scholarship finds that voter behavior and electoral institutions incentivize the president to support only a small slice of the electorate. Empowered by federal disaster relief legislation in the 1950s, the president targets electorally valuable voters when disbursing aid or allocating resources in response to disaster damage. Voters in those areas respond myopically and tend to vote for the incumbent for reasons ranging from economic to emotional. Thus, elites anticipate voter reactions and strategically respond to disasters to mitigate blame or punishment for the event and capitalize on an opportunity for electoral gains.",
@@ -209,7 +209,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Ang, Z., Noble, B. S., & Reeves, A. (2021). Public Opinion and Public Support in Crisis Management. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
+    "value": "Ang, Zoe, Benjamin Noble, and Andrew Reeves. 2021. \"Public Opinion and Public Support in Crisis Management.\" In The Oxford Encyclopedia of Crisis Analysis, edited by Eric Stern. New York, NY: Oxford University Press. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
     "evidence_pages": [
       1
     ],

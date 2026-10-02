@@ -271,7 +271,7 @@
     "authors": [
       "Tyler Reny",
       "Andrew Reeves",
-      "Dino Christenson"
+      "Dino P. Christenson"
     ],
     "year": 2026,
     "publication_type": "journal article",
@@ -433,33 +433,167 @@
     }
   },
   {
+    "slug": "short-haul-moves-and-the-political-geography-of-partisanship-intrametropolitan-migration-a",
+    "title": "Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics",
+    "authors": [
+      "James G. Gimpel",
+      "Jordon Newton",
+      "Andrew Reeves"
+    ],
+    "year": 2026,
+    "publication_type": "journal article",
+    "journal": "Urban Affairs Review",
+    "volume": "62",
+    "issue": "4",
+    "pages": "975-1018",
+    "doi": "10.1177/10780874251380677",
+    "citation": "Gimpel, James G., Jordon Newton, and Andrew Reeves. 2026. \"Short-Haul Moves and the Political Geography of Partisanship: Intrametropolitan Migration as a Force for Change in U.S. Politics.\" Urban Affairs Review 62(4): 975-1018. https://doi.org/10.1177/10780874251380677",
+    "links": {
+      "pdf": "/papers/shorthaul.pdf",
+      "journal": "https://doi.org/10.1177/10780874251380677",
+      "replication_data": null,
+      "code": null
+    },
+    "card_summary": "Short-distance moves within metropolitan areas contribute modestly but meaningfully to partisan geographic sorting.",
+    "abstract": "We consider how the high volume of short-distance migration within metropolitan areas contributes to partisan sorting across the United States. Using voter records comparing movers and nonmovers within 215 metro areas across nine states, we find high levels of sorting even when moves occur within the same core-based statistical area and state. Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
+    "plain_english_summary": "Using voter records from 215 metropolitan areas in nine states, the study finds that even nearby movers tend to choose destinations that better match their partisanship, gradually increasing geographic polarization.",
+    "research_question": "Do short-distance moves within metropolitan areas contribute to partisan geographic sorting?",
+    "research_highlights": [
+      "Short-distance movers tend to select destinations that are more politically compatible with their partisanship.",
+      "These patterns persist after accounting for other destination characteristics.",
+      "Local moves can produce small but meaningful changes in the partisan composition of legislative districts."
+    ],
+    "methods": [
+      "Comparison of movers and nonmovers using longitudinal voter-file records.",
+      "Metro-area statistical analyses of origin and destination partisanship and other destination characteristics."
+    ],
+    "data_sources": [
+      "Voter-file records covering 32.3 million registered voters in 215 metropolitan areas across nine states over eight years."
+    ],
+    "key_variables": [
+      "Mover party identification",
+      "Origin ZIP-code partisanship",
+      "Destination ZIP-code partisanship",
+      "Move distance",
+      "Metropolitan area"
+    ],
+    "identification_strategy": null,
+    "geography": "215 U.S. metropolitan areas across nine states",
+    "time_period": "Eight-year voter-file panel",
+    "unit_of_analysis": "Registered voter residential move",
+    "policy_relevance": null,
+    "pull_quote": "Short-distance moves contribute modestly but meaningfully to the growing political lopsidedness of many legislative districts between censuses.",
+    "pull_quote_page": 1,
+    "confidence_notes": "Bibliographic information, abstract, keywords, data coverage, and principal findings are stated directly in the article.",
+    "tags": [
+      "Political Geography",
+      "Political Behavior",
+      "Migration",
+      "Observational study",
+      "Longitudinal voter-file analysis",
+      "Quantitative analysis",
+      "political geography",
+      "partisanship",
+      "migration",
+      "geographic sorting",
+      "partisan sorting",
+      "population mobility",
+      "residential mobility",
+      "political segregation",
+      "metropolitan politics",
+      "geographic polarization"
+    ],
+    "filters": {
+      "substantive_area": [
+        "Political Geography",
+        "Political Behavior",
+        "Migration"
+      ],
+      "government_level": [
+        "local",
+        "state",
+        "federal"
+      ],
+      "research_design": [
+        "Observational study",
+        "Longitudinal voter-file analysis",
+        "Quantitative analysis"
+      ],
+      "methods": [
+        "Comparison of movers and nonmovers using longitudinal voter-file records.",
+        "Metro-area statistical analyses of origin and destination partisanship and other destination characteristics."
+      ],
+      "geography": [
+        "215 U.S. metropolitan areas across nine states"
+      ],
+      "time_period": [
+        "Eight-year voter-file panel"
+      ],
+      "keywords": [
+        "political geography",
+        "partisanship",
+        "migration",
+        "geographic sorting",
+        "partisan sorting",
+        "population mobility"
+      ],
+      "related_topics": [
+        "residential mobility",
+        "political segregation",
+        "metropolitan politics",
+        "geographic polarization"
+      ]
+    },
+    "evidence": {
+      "research_question": {
+        "pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          5
+        ]
+      },
+      "methods": {
+        "pages": [
+          3,
+          5
+        ]
+      }
+    }
+  },
+  {
     "slug": "guardians-at-the-gates-poll-worker-retention-in-a-challenging-election-environment",
     "title": "Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment",
     "authors": [
       "Robert M. Stein",
       "Barry C. Burden",
-      "Matt Lamb",
       "Gayle Alberda",
       "Lonna Atkeson",
       "Lisa Bryant",
       "Rachael Cobb",
       "Michael Gilbert",
-      "Joshua D. Hostetter",
+      "Josh Hostetter",
       "David C. Kimball",
+      "Matthew Lamb",
       "Kenneth R. Mayer",
       "Costas Panagopoulos",
       "Andrew Reeves",
       "Corwin Smidt",
       "Jennifer Victor"
     ],
-    "year": 2024,
+    "year": 2025,
     "publication_type": "journal article",
     "journal": "Election Law Journal",
-    "volume": "00",
-    "issue": "00",
-    "pages": null,
+    "volume": "24",
+    "issue": "1",
+    "pages": "62-73",
     "doi": "10.1089/elj.2024.0017",
-    "citation": "Stein, R. M., Burden, B. C., Lamb, M., Alberda, G., Atkeson, L., Bryant, L., Cobb, R., Gilbert, M., Hostetter, J. D., Kimball, D. C., Mayer, K. R., Panagopoulos, C., Reeves, A., Smidt, C., & Victor, J. (2024). Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment. Election Law Journal, 00(00). https://doi.org/10.1089/elj.2024.0017",
+    "citation": "Stein, Robert M., Barry C. Burden, Gayle Alberda, Lonna Atkeson, Lisa Bryant, Rachael Cobb, Michael Gilbert, Josh Hostetter, David C. Kimball, Matthew Lamb, Kenneth R. Mayer, Costas Panagopoulos, Andrew Reeves, Corwin Smidt, and Jennifer Victor. 2025. \"Guardians at the Gates: Poll Worker Retention in a Challenging Election Environment.\" Election Law Journal 24(1): 62-73. https://doi.org/10.1089/elj.2024.0017",
     "links": {
       "pdf": "/papers/guardians.pdf",
       "journal": null,
@@ -895,7 +1029,7 @@
     "slug": "crime-and-presidential-accountability-a-case-of-racially-conditioned-issue-ownership",
     "title": "Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership",
     "authors": [
-      "Benjamin S. Noble",
+      "Benjamin Noble",
       "Andrew Reeves",
       "Steven W. Webster"
     ],
@@ -906,7 +1040,7 @@
     "issue": "1",
     "pages": "29–50",
     "doi": "10.1093/poq/nfab074",
-    "citation": "Noble, Benjamin S., Andrew Reeves, and Steven W. Webster. 2022. \"Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership.\" Public Opinion Quarterly 86(1): 29–50. https://doi.org/10.1093/poq/nfab074",
+    "citation": "Noble, Benjamin, Andrew Reeves, and Steven W. Webster. 2022. \"Crime and Presidential Accountability: A Case of Racially Conditioned Issue Ownership.\" Public Opinion Quarterly 86(1): 29-50. https://doi.org/10.1093/poq/nfab074",
     "links": {
       "pdf": "/papers/crime.pdf",
       "journal": "https://academic.oup.com/poq/article/86/1/29/6530176",
@@ -1059,12 +1193,12 @@
     ],
     "year": 2022,
     "publication_type": "book chapter",
-    "journal": null,
+    "journal": "Handbook on Politics and Public Opinion",
     "volume": null,
     "issue": null,
-    "pages": null,
+    "pages": "224-240",
     "doi": null,
-    "citation": "Gimpel, James G., and Andrew Reeves. 2022. \"Electoral Geography, Political Behavior and Public Opinion.\" In Thomas J. Rudolph (ed.), Handbook on Politics and Public Opinion. Northampton, MA: Edward Elgar Publishing, Inc.",
+    "citation": "Gimpel, James G., and Andrew Reeves. 2022. \"Electoral Geography, Political Behavior and Public Opinion.\" In Handbook on Politics and Public Opinion, edited by Thomas J. Rudolph, 224-240. Cheltenham, UK: Edward Elgar Publishing.",
     "links": {
       "pdf": "/papers/political-geography.pdf",
       "journal": null,
@@ -1330,7 +1464,7 @@
     "slug": "partisanship-trump-and-the-normative-implications-of-presidential-particularism-a-response",
     "title": "Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants",
     "authors": [
-      "Douglas Kriner",
+      "Douglas L. Kriner",
       "Andrew Reeves"
     ],
     "year": 2022,
@@ -1340,7 +1474,7 @@
     "issue": null,
     "pages": "230-246",
     "doi": null,
-    "citation": "Douglas Kriner & Andrew Reeves, Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants, 83 Ohio St. L.J. Online 230 (2022).",
+    "citation": "Douglas L. Kriner & Andrew Reeves, Partisanship, Trump, and the Normative Implications of Presidential Particularism: A Response to Pasachoff’s Executive Branch Control of Federal Grants, 83 Ohio St. L.J. Online 230 (2022).",
     "links": {
       "pdf": "/papers/pasachoff-reply.pdf",
       "journal": null,
@@ -1478,7 +1612,7 @@
     "slug": "pass-the-buck-or-the-buck-stops-here-the-public-costs-of-claiming-and-deflecting-blame-in-",
     "title": "Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises",
     "authors": [
-      "David Miller",
+      "David R. Miller",
       "Andrew Reeves"
     ],
     "year": 2022,
@@ -1488,7 +1622,7 @@
     "issue": "1",
     "pages": "63–91",
     "doi": "10.1017/S0143814X21000039",
-    "citation": "Miller, David, and Andrew Reeves. 2022. \"Pass the buck or the buck stops here? The public costs of claiming and deflecting blame in managing crises.\" Journal of Public Policy 42(1): 63–91. doi:10.1017/S0143814X21000039.",
+    "citation": "Miller, David R., and Andrew Reeves. 2022. \"Pass the Buck or the Buck Stops Here? The Public Costs of Claiming and Deflecting Blame in Managing Crises.\" Journal of Public Policy 42(1): 63-91. doi:10.1017/S0143814X21000039.",
     "links": {
       "pdf": "/papers/blameclaim.pdf",
       "journal": "https://doi.org/10.1017/S0143814X21000039",
@@ -2053,17 +2187,17 @@
     "title": "Public Opinion and Public Support in Crisis Management",
     "authors": [
       "Zoe Ang",
-      "Benjamin S. Noble",
+      "Benjamin Noble",
       "Andrew Reeves"
     ],
     "year": 2021,
-    "publication_type": null,
-    "journal": null,
+    "publication_type": "book chapter",
+    "journal": "The Oxford Encyclopedia of Crisis Analysis",
     "volume": null,
     "issue": null,
     "pages": null,
     "doi": "10.1093/acrefore/9780190228637.013.1544",
-    "citation": "Ang, Z., Noble, B. S., & Reeves, A. (2021). Public Opinion and Public Support in Crisis Management. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
+    "citation": "Ang, Zoe, Benjamin Noble, and Andrew Reeves. 2021. \"Public Opinion and Public Support in Crisis Management.\" In The Oxford Encyclopedia of Crisis Analysis, edited by Eric Stern. New York, NY: Oxford University Press. https://doi.org/10.1093/acrefore/9780190228637.013.1544",
     "links": {
       "pdf": "/papers/crisis.pdf",
       "journal": null,
@@ -2565,7 +2699,44 @@
     "authors": [
       "Robert Stein",
       "Christopher Mann",
-      "Charles Stewart III"
+      "Charles Stewart III",
+      "Zachary Birenbaum",
+      "Anson Fung",
+      "Jeb Greenberg",
+      "Farhan Kawsar",
+      "Gayle Alberda",
+      "R. Michael Alvarez",
+      "Emily Beaulieu",
+      "Nathaniel A. Birkhead",
+      "Frederick Boehmke",
+      "Joshua Boston",
+      "Barry C. Burden",
+      "Francisco Cantu",
+      "Rachael Cobb",
+      "David Darmofal",
+      "Thomas C. Ellington",
+      "Terri Fine",
+      "Charles J. Finocchiaro",
+      "Michael Gilbert",
+      "Victor Haynes",
+      "Brian Janssen",
+      "David Kimball",
+      "Charles Kromkowski",
+      "Elena Llaudet",
+      "Ken Mayer",
+      "Matthew R. Miles",
+      "David Miller",
+      "Lindsay Nielson",
+      "Yu Ouyang",
+      "Costas Panagopoulos",
+      "Andrew Reeves",
+      "Min Hee Seo",
+      "Haley Simmons",
+      "Corwin Smidt",
+      "Rachel VanSickle-Ward",
+      "Jennifer Nicoll Victor",
+      "Abby Wood",
+      "Julie Wronski"
     ],
     "year": 2020,
     "publication_type": "Book chapter",
@@ -2846,36 +3017,32 @@
   },
   {
     "slug": "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
-    "title": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study",
+    "title": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study",
     "authors": [
-      "Robert M. Stein",
-      "Christopher Mann",
-      "Charles Stewart III",
+      "Robert Stein",
       "Zachary Birenbaum",
-      "Anson Fung",
-      "Jed Greenberg",
       "Farhan Kawsar",
+      "Charles Stewart III",
       "Gayle Alberda",
       "R. Michael Alvarez",
-      "Lonna Atkeson",
       "Emily Beaulieu",
       "Nathaniel A. Birkhead",
-      "Frederick J. Boehmke",
+      "Frederick Boehmke",
       "Joshua Boston",
       "Barry C. Burden",
       "Francisco Cantu",
       "Rachael Cobb",
       "David Darmofal",
       "Thomas C. Ellington",
-      "Terri Susan Fine",
       "Charles J. Finocchiaro",
-      "Michael D. Gilbert",
+      "Michael Gilbert",
       "Victor Haynes",
       "Brian Janssen",
       "David Kimball",
       "Charles Kromkowski",
       "Elena Llaudet",
-      "Kenneth R. Mayer",
+      "Christopher Mann",
+      "Ken Mayer",
       "Matthew R. Miles",
       "David Miller",
       "Lindsay Nielson",
@@ -2883,22 +3050,19 @@
       "Costas Panagopoulos",
       "Andrew Reeves",
       "Min Hee Seo",
-      "Haley Simmons",
       "Corwin Smidt",
-      "Farrah M. Stone",
       "Rachel VanSickle-Ward",
-      "Jennifer Nicoll Victor",
       "Abby Wood",
       "Julie Wronski"
     ],
-    "year": 2019,
+    "year": 2020,
     "publication_type": "research-article",
     "journal": "Political Research Quarterly",
-    "volume": null,
-    "issue": null,
-    "pages": "1–15",
+    "volume": "73",
+    "issue": "2",
+    "pages": "439-453",
     "doi": "10.1177/1065912919832374",
-    "citation": "Stein, R. M., Mann, C., Stewart III, C., Birenbaum, Z., Fung, A., Greenberg, J., Kawsar, F., Alberda, G., Alvarez, R. M., Atkeson, L., Beaulieu, E., Birkhead, N. A., Boehmke, F. J., Boston, J., Burden, B. C., Cantu, F., Cobb, R., Darmofal, D., Ellington, T. C., Fine, T. S., Finocchiaro, C. J., Gilbert, M. D., Haynes, V., Janssen, B., Kimball, D., Kromkowski, C., Llaudet, E., Mayer, K. R., Miles, M. R., Miller, D., Nielson, L., Ouyang, Y., Panagopoulos, C., Reeves, A., Seo, M. H., Simmons, H., Smidt, C., Stone, F. M., VanSickle-Ward, R., Victor, J. N., Wood, A., & Wronski, J. (2019). Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-county Study. Political Research Quarterly, 1–15. https://doi.org/10.1177/1065912919832374",
+    "citation": "Stein, Robert, Zachary Birenbaum, Farhan Kawsar, Charles Stewart III, Gayle Alberda, R. Michael Alvarez, Emily Beaulieu, Nathaniel A. Birkhead, Frederick Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Charles J. Finocchiaro, Michael Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Christopher Mann, Ken Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Corwin Smidt, Rachel VanSickle-Ward, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439-453. https://doi.org/10.1177/1065912919832374",
     "links": {
       "pdf": "/papers/lines.pdf",
       "journal": "https://journals.sagepub.com/home/prq",
@@ -3202,11 +3366,11 @@
     "year": 2018,
     "publication_type": "journal article",
     "journal": "American Journal of Political Science",
-    "volume": "00",
-    "issue": "0",
-    "pages": "1–17",
+    "volume": "62",
+    "issue": "2",
+    "pages": "424-440",
     "doi": "10.1111/ajps.12340",
-    "citation": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 00(0): 1–17. https://doi.org/10.1111/ajps.12340",
+    "citation": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 62(2): 424-440. https://doi.org/10.1111/ajps.12340",
     "links": {
       "pdf": "/papers/constraints.pdf",
       "journal": null,
@@ -3341,13 +3505,13 @@
       "Bryant Moy"
     ],
     "year": 2018,
-    "publication_type": "bibliography",
+    "publication_type": "book chapter",
     "journal": "Oxford Bibliographies in Political Science",
     "volume": null,
     "issue": null,
     "pages": null,
     "doi": "10.1093/OBO/9780199756223-0156",
-    "citation": "Reeves, Andrew, David Miller, and Bryant Moy. \"US Presidential Campaigns and Their Impact.\" Oxford Bibliographies in Political Science. Last modified 24 July 2018. doi:10.1093/OBO/9780199756223-0156.",
+    "citation": "Reeves, Andrew, David Miller, and Bryant Moy. 2018. \"US Presidential Campaigns and Their Impact.\" In Oxford Bibliographies in Political Science, edited by L. Sandy Maisel. New York, NY: Oxford University Press. doi:10.1093/OBO/9780199756223-0156.",
     "links": {
       "pdf": "/papers/electionsbib.pdf",
       "journal": "http://www.oxfordbibliographies.com/view/document/obo-9780199756223-0156",
@@ -3495,7 +3659,7 @@
     "slug": "who-benefits-from-the-party-organization-evidence-from-republican-house-members-attendance",
     "title": "Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings",
     "authors": [
-      "Adam M. Dynes",
+      "Adam Dynes",
       "Andrew Reeves"
     ],
     "year": 2018,
@@ -3505,7 +3669,7 @@
     "issue": "2",
     "pages": "207-243",
     "doi": "10.1111/lsq.12193",
-    "citation": "Dynes, Adam M., and Andrew Reeves. 2018. \"Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings.\" Legislative Studies Quarterly 43(2): 207-243. doi:10.1111/lsq.12193.",
+    "citation": "Dynes, Adam, and Andrew Reeves. 2018. \"Who Benefits from the Party Organization? Evidence from Republican House Members’ Attendance at Caucus Meetings.\" Legislative Studies Quarterly 43(2): 207-243. doi:10.1111/lsq.12193.",
     "links": {
       "pdf": "/papers/caucus.pdf",
       "journal": null,
@@ -3636,8 +3800,8 @@
     }
   },
   {
-    "slug": "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
-    "title": "All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants",
+    "slug": "all-the-president-s-senators-presidential-co-partisans-and-the-allocation-of-federal-grant",
+    "title": "All the President’s Senators: Presidential Co-Partisans and the Allocation of Federal Grants",
     "authors": [
       "Dino P. Christenson",
       "Douglas L. Kriner",
@@ -3650,7 +3814,7 @@
     "issue": "2",
     "pages": "269-294",
     "doi": "10.1111/lsq.12160",
-    "citation": "Christenson, Dino P., Douglas L. Kriner, and Andrew Reeves. 2017. \"All the President’s Senators: Presidential Copartisans and the Allocation of Federal Grants.\" Legislative Studies Quarterly 42(2): 269-294. doi:10.1111/lsq.12160.",
+    "citation": "Christenson, Dino P., Douglas L. Kriner, and Andrew Reeves. 2017. \"All the President’s Senators: Presidential Co-Partisans and the Allocation of Federal Grants.\" Legislative Studies Quarterly 42(2): 269-294. doi:10.1111/lsq.12160.",
     "links": {
       "pdf": "/papers/senators.pdf",
       "journal": null,
@@ -5415,6 +5579,140 @@
     }
   },
   {
+    "slug": "review-of-the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american",
+    "title": "Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady",
+    "authors": [
+      "Andrew Reeves"
+    ],
+    "year": 2013,
+    "publication_type": "book review",
+    "journal": "The Forum",
+    "volume": "11",
+    "issue": "1",
+    "pages": "63-67",
+    "doi": null,
+    "citation": "Reeves, Andrew. 2013. \"Review of The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy by Kay Lehman Schlozman, Sidney Verba, and Henry E. Brady.\" The Forum 11(1): 63-67.",
+    "links": {
+      "pdf": "/papers/unheavenly-review.pdf",
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "card_summary": "The Unheavenly Chorus documents persistent and severe inequalities in American political voice, showing that both individual and organized interest participation are strongly skewed toward the privileged, with little change over time.",
+    "abstract": null,
+    "plain_english_summary": "This book review explains that The Unheavenly Chorus finds political participation in America is dominated by wealthier and more privileged groups and individuals, and that this inequality has remained stable over decades, affecting both individual and group political voices.",
+    "research_question": "Who has political voice in America today, and how is this voice distributed among individuals and organized interests?",
+    "research_highlights": [
+      "Socioeconomic status (SES) is positively related to nearly every form of political participation.",
+      "The relationship between SES and political participation is stable over time and persists at both local and national levels.",
+      "Technological changes, such as the Internet, have not reduced SES-based inequalities in political participation.",
+      "The majority of organized interests represent privileged groups, with very few representing the less-privileged.",
+      "The number of organized interest groups has increased dramatically, but the distribution remains skewed toward privileged interests.",
+      "There is severe inequality in both individual and collective political voice in America."
+    ],
+    "methods": [
+      "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
+      "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
+    ],
+    "data_sources": [
+      "Citizen Participation Study of 1990",
+      "American National Election Studies (1952–2008)",
+      "Roper surveys (1970–2003)",
+      "Washington Directory (for organized interest groups)"
+    ],
+    "key_variables": [
+      "Socioeconomic status (SES)",
+      "Political participation (individual and online)",
+      "Type and number of organized interest groups"
+    ],
+    "identification_strategy": null,
+    "geography": "United States",
+    "time_period": "1952–2008 (individual participation); 1981–2006 (organized interests)",
+    "unit_of_analysis": "Individuals and organized interest groups",
+    "policy_relevance": null,
+    "pull_quote": "The flaw in the pluralist heaven is that the heavenly chorus sings with a strong upper-class accent.",
+    "pull_quote_page": 1,
+    "confidence_notes": "All extracted information is directly supported by the review text; no unsupported fields are filled.",
+    "tags": [
+      "political science",
+      "American politics",
+      "political inequality",
+      "descriptive analysis",
+      "survey analysis",
+      "historical trend analysis",
+      "political participation",
+      "socioeconomic status",
+      "organized interests",
+      "pluralism",
+      "United States",
+      "democracy",
+      "lobbying",
+      "policy outcomes",
+      "political behavior"
+    ],
+    "filters": {
+      "substantive_area": [
+        "political science",
+        "American politics",
+        "political inequality"
+      ],
+      "government_level": [
+        "national",
+        "state",
+        "local"
+      ],
+      "research_design": [
+        "descriptive analysis",
+        "survey analysis",
+        "historical trend analysis"
+      ],
+      "methods": [
+        "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
+        "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
+      ],
+      "geography": [
+        "United States"
+      ],
+      "time_period": [
+        "1952–2008 (individual participation); 1981–2006 (organized interests)"
+      ],
+      "keywords": [
+        "political participation",
+        "socioeconomic status",
+        "political inequality",
+        "organized interests",
+        "pluralism",
+        "United States"
+      ],
+      "related_topics": [
+        "democracy",
+        "lobbying",
+        "policy outcomes",
+        "political behavior"
+      ]
+    },
+    "evidence": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          2,
+          3,
+          4
+        ]
+      },
+      "methods": {
+        "pages": [
+          2,
+          3
+        ]
+      }
+    }
+  },
+  {
     "slug": "ecologies-of-unease-geographic-context-and-national-economic-evaluations",
     "title": "Ecologies of Unease: Geographic Context and National Economic Evaluations",
     "authors": [
@@ -5824,142 +6122,6 @@
           5,
           15,
           16
-        ]
-      }
-    }
-  },
-  {
-    "slug": "the-unheavenly-chorus-unequal-political-voice-and-the-broken-promise-of-american-democracy",
-    "title": "The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy",
-    "authors": [
-      "Kay Lehman Schlozman",
-      "Sidney Verba",
-      "Henry E. Brady"
-    ],
-    "year": 2012,
-    "publication_type": "book review",
-    "journal": null,
-    "volume": null,
-    "issue": null,
-    "pages": null,
-    "doi": null,
-    "citation": "Schlozman, Kay Lehman, Sidney Verba, and Henry E. Brady. 2012. The Unheavenly Chorus: Unequal Political Voice and the Broken Promise of American Democracy. Princeton: Princeton University Press.",
-    "links": {
-      "pdf": "/papers/unheavenly-review.pdf",
-      "journal": null,
-      "replication_data": null,
-      "code": null
-    },
-    "card_summary": "The Unheavenly Chorus documents persistent and severe inequalities in American political voice, showing that both individual and organized interest participation are strongly skewed toward the privileged, with little change over time.",
-    "abstract": null,
-    "plain_english_summary": "This book review explains that The Unheavenly Chorus finds political participation in America is dominated by wealthier and more privileged groups and individuals, and that this inequality has remained stable over decades, affecting both individual and group political voices.",
-    "research_question": "Who has political voice in America today, and how is this voice distributed among individuals and organized interests?",
-    "research_highlights": [
-      "Socioeconomic status (SES) is positively related to nearly every form of political participation.",
-      "The relationship between SES and political participation is stable over time and persists at both local and national levels.",
-      "Technological changes, such as the Internet, have not reduced SES-based inequalities in political participation.",
-      "The majority of organized interests represent privileged groups, with very few representing the less-privileged.",
-      "The number of organized interest groups has increased dramatically, but the distribution remains skewed toward privileged interests.",
-      "There is severe inequality in both individual and collective political voice in America."
-    ],
-    "methods": [
-      "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
-      "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
-    ],
-    "data_sources": [
-      "Citizen Participation Study of 1990",
-      "American National Election Studies (1952–2008)",
-      "Roper surveys (1970–2003)",
-      "Washington Directory (for organized interest groups)"
-    ],
-    "key_variables": [
-      "Socioeconomic status (SES)",
-      "Political participation (individual and online)",
-      "Type and number of organized interest groups"
-    ],
-    "identification_strategy": null,
-    "geography": "United States",
-    "time_period": "1952–2008 (individual participation); 1981–2006 (organized interests)",
-    "unit_of_analysis": "Individuals and organized interest groups",
-    "policy_relevance": null,
-    "pull_quote": "The flaw in the pluralist heaven is that the heavenly chorus sings with a strong upper-class accent.",
-    "pull_quote_page": 1,
-    "confidence_notes": "All extracted information is directly supported by the review text; no unsupported fields are filled.",
-    "tags": [
-      "political science",
-      "American politics",
-      "political inequality",
-      "descriptive analysis",
-      "survey analysis",
-      "historical trend analysis",
-      "political participation",
-      "socioeconomic status",
-      "organized interests",
-      "pluralism",
-      "United States",
-      "democracy",
-      "lobbying",
-      "policy outcomes",
-      "political behavior"
-    ],
-    "filters": {
-      "substantive_area": [
-        "political science",
-        "American politics",
-        "political inequality"
-      ],
-      "government_level": [
-        "national",
-        "state",
-        "local"
-      ],
-      "research_design": [
-        "descriptive analysis",
-        "survey analysis",
-        "historical trend analysis"
-      ],
-      "methods": [
-        "Analysis of survey data, including the Citizen Participation Study of 1990 and American National Election Studies (1952–2008) and Roper surveys (1970–2003).",
-        "Comprehensive data collection on over 35,000 organized interest groups from 1981, 1991, 2001, and 2006, primarily using the Washington Directory and categorization of groups."
-      ],
-      "geography": [
-        "United States"
-      ],
-      "time_period": [
-        "1952–2008 (individual participation); 1981–2006 (organized interests)"
-      ],
-      "keywords": [
-        "political participation",
-        "socioeconomic status",
-        "political inequality",
-        "organized interests",
-        "pluralism",
-        "United States"
-      ],
-      "related_topics": [
-        "democracy",
-        "lobbying",
-        "policy outcomes",
-        "political behavior"
-      ]
-    },
-    "evidence": {
-      "research_question": {
-        "pages": [
-          1
-        ]
-      },
-      "main_findings": {
-        "pages": [
-          2,
-          3,
-          4
-        ]
-      },
-      "methods": {
-        "pages": [
-          2,
-          3
         ]
       }
     }
@@ -6531,6 +6693,127 @@
           32,
           33,
           34
+        ]
+      }
+    }
+  },
+  {
+    "slug": "review-of-the-state-of-disunion-regional-sources-of-modern-american-partisanship-by-nicole",
+    "title": "Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow",
+    "authors": [
+      "Andrew Reeves"
+    ],
+    "year": 2009,
+    "publication_type": "book review",
+    "journal": "Political Science Quarterly",
+    "volume": "124",
+    "issue": "4",
+    "pages": "743-744",
+    "doi": null,
+    "citation": "Reeves, Andrew. 2009. \"Review of The State of Disunion: Regional Sources of Modern American Partisanship by Nicole Mellow.\" Political Science Quarterly 124(4): 743-744.",
+    "links": {
+      "pdf": null,
+      "journal": null,
+      "replication_data": null,
+      "code": null
+    },
+    "card_summary": "This review discusses Nicole Mellow's argument that regional interests are central to understanding modern American partisanship, highlighting both the strengths and limitations of her evidence and conceptualization of regions.",
+    "abstract": null,
+    "plain_english_summary": "Nicole Mellow's book argues that regional differences play a key role in shaping American political parties, but the reviewer notes that the evidence is limited and the definition of regions could be clearer.",
+    "research_question": "Are regions important in understanding American politics, particularly in shaping modern American partisanship?",
+    "research_highlights": [
+      "Regions are largely responsible for the state of party politics today by directing politicians' motives and determining issues.",
+      "Regional interests influence party cohesion on issues like free trade, welfare reform, and abortion.",
+      "The evidence for the independent effect of region is limited and sometimes equivocal, with small sample sizes and somewhat arbitrary regional definitions."
+    ],
+    "methods": [
+      "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
+      "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
+    ],
+    "data_sources": [],
+    "key_variables": [
+      "Region",
+      "Party cohesion",
+      "Issue salience (free trade, welfare reform, abortion)"
+    ],
+    "identification_strategy": null,
+    "geography": "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)",
+    "time_period": "1950s to present (as of 2008)",
+    "unit_of_analysis": "Region (as defined by the author, e.g., North, South, etc.) and legislative behavior",
+    "policy_relevance": null,
+    "pull_quote": "The key to building a successful and stable party coalition is to unite regions that are most easily linked, either because of similar histories or because of similarities in demography, economy, and ideology.",
+    "pull_quote_page": 2,
+    "confidence_notes": "All extracted information is based strictly on the content of the review. No volume or issue number is provided in the text. The reviewer's summary and critique are used for findings and methods.",
+    "tags": [
+      "American politics",
+      "political parties",
+      "regionalism",
+      "comparative analysis",
+      "regression analysis (limited sample)",
+      "partisanship",
+      "party system",
+      "free trade",
+      "welfare reform",
+      "abortion",
+      "legislative behavior",
+      "coalition building",
+      "issue salience"
+    ],
+    "filters": {
+      "substantive_area": [
+        "American politics",
+        "political parties",
+        "regionalism"
+      ],
+      "government_level": [
+        "national"
+      ],
+      "research_design": [
+        "comparative analysis",
+        "regression analysis (limited sample)"
+      ],
+      "methods": [
+        "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
+        "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
+      ],
+      "geography": [
+        "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)"
+      ],
+      "time_period": [
+        "1950s to present (as of 2008)"
+      ],
+      "keywords": [
+        "regionalism",
+        "partisanship",
+        "American politics",
+        "party system",
+        "free trade",
+        "welfare reform",
+        "abortion"
+      ],
+      "related_topics": [
+        "legislative behavior",
+        "coalition building",
+        "political parties",
+        "issue salience"
+      ]
+    },
+    "evidence": {
+      "research_question": {
+        "pages": [
+          1
+        ]
+      },
+      "main_findings": {
+        "pages": [
+          1,
+          2
+        ]
+      },
+      "methods": {
+        "pages": [
+          1,
+          2
         ]
       }
     }
@@ -7181,12 +7464,12 @@
     ],
     "year": "2017",
     "publication_type": "book chapter",
-    "journal": null,
+    "journal": "Analytics, Policy, and Governance",
     "volume": null,
     "issue": null,
-    "pages": null,
+    "pages": "118-136",
     "doi": null,
-    "citation": "Ryan T. Moore, Andrew Reeves. (2017). \"Learning from Place in the Era of Geolocation.\"",
+    "citation": "Moore, Ryan T., and Andrew Reeves. 2017. \"Learning from Place in the Era of Geolocation.\" In Analytics, Policy, and Governance, edited by Jennifer Bachner, Benjamin Ginsberg, and Kathryn Wagner Hill, 118-136. New Haven, CT: Yale University Press.",
     "links": {
       "pdf": "/papers/geolocation.pdf",
       "journal": null,
@@ -7319,7 +7602,7 @@
     "slug": "the-electoral-college-and-presidential-particularism",
     "title": "The Electoral College and Presidential Particularism",
     "authors": [
-      "Douglas Kriner",
+      "Douglas L. Kriner",
       "Andrew Reeves"
     ],
     "year": "2014",
@@ -7329,7 +7612,7 @@
     "issue": null,
     "pages": "741-766",
     "doi": null,
-    "citation": "Douglas Kriner & Andrew Reeves, The Electoral College and Presidential Particularism, 94 Boston University Law Review 741-766 (2014).",
+    "citation": "Douglas L. Kriner & Andrew Reeves, The Electoral College and Presidential Particularism, 94 Boston University Law Review 741-766 (2014).",
     "links": {
       "pdf": "/papers/electoralcollege.pdf",
       "journal": null,
@@ -7468,127 +7751,6 @@
           11,
           12,
           24
-        ]
-      }
-    }
-  },
-  {
-    "slug": "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
-    "title": "The State of Disunion: Regional Sources of Modern American Partisanship",
-    "authors": [
-      "Nicole Mellow"
-    ],
-    "year": "2008",
-    "publication_type": "book review",
-    "journal": "Political Science Quarterly",
-    "volume": null,
-    "issue": null,
-    "pages": "743-744",
-    "doi": null,
-    "citation": "Mellow, Nicole. The State of Disunion: Regional Sources of Modern American Partisanship. Baltimore, MD: Johns Hopkins University Press, 2008. Reviewed in Political Science Quarterly, pp. 743-744.",
-    "links": {
-      "pdf": null,
-      "journal": null,
-      "replication_data": null,
-      "code": null
-    },
-    "card_summary": "This review discusses Nicole Mellow's argument that regional interests are central to understanding modern American partisanship, highlighting both the strengths and limitations of her evidence and conceptualization of regions.",
-    "abstract": null,
-    "plain_english_summary": "Nicole Mellow's book argues that regional differences play a key role in shaping American political parties, but the reviewer notes that the evidence is limited and the definition of regions could be clearer.",
-    "research_question": "Are regions important in understanding American politics, particularly in shaping modern American partisanship?",
-    "research_highlights": [
-      "Regions are largely responsible for the state of party politics today by directing politicians' motives and determining issues.",
-      "Regional interests influence party cohesion on issues like free trade, welfare reform, and abortion.",
-      "The evidence for the independent effect of region is limited and sometimes equivocal, with small sample sizes and somewhat arbitrary regional definitions."
-    ],
-    "methods": [
-      "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
-      "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
-    ],
-    "data_sources": [],
-    "key_variables": [
-      "Region",
-      "Party cohesion",
-      "Issue salience (free trade, welfare reform, abortion)"
-    ],
-    "identification_strategy": null,
-    "geography": "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)",
-    "time_period": "1950s to present (as of 2008)",
-    "unit_of_analysis": "Region (as defined by the author, e.g., North, South, etc.) and legislative behavior",
-    "policy_relevance": null,
-    "pull_quote": "The key to building a successful and stable party coalition is to unite regions that are most easily linked, either because of similar histories or because of similarities in demography, economy, and ideology.",
-    "pull_quote_page": 2,
-    "confidence_notes": "All extracted information is based strictly on the content of the review. No volume or issue number is provided in the text. The reviewer's summary and critique are used for findings and methods.",
-    "tags": [
-      "American politics",
-      "political parties",
-      "regionalism",
-      "comparative analysis",
-      "regression analysis (limited sample)",
-      "partisanship",
-      "party system",
-      "free trade",
-      "welfare reform",
-      "abortion",
-      "legislative behavior",
-      "coalition building",
-      "issue salience"
-    ],
-    "filters": {
-      "substantive_area": [
-        "American politics",
-        "political parties",
-        "regionalism"
-      ],
-      "government_level": [
-        "national"
-      ],
-      "research_design": [
-        "comparative analysis",
-        "regression analysis (limited sample)"
-      ],
-      "methods": [
-        "Comparative analysis of party positions on key issues (free trade, welfare reform, abortion) across regions.",
-        "Multivariate regression analysis (noted as being based on a small sample of 40 cases)."
-      ],
-      "geography": [
-        "United States (with regional breakdowns such as North, South, West, Pacific, New England, etc.)"
-      ],
-      "time_period": [
-        "1950s to present (as of 2008)"
-      ],
-      "keywords": [
-        "regionalism",
-        "partisanship",
-        "American politics",
-        "party system",
-        "free trade",
-        "welfare reform",
-        "abortion"
-      ],
-      "related_topics": [
-        "legislative behavior",
-        "coalition building",
-        "political parties",
-        "issue salience"
-      ]
-    },
-    "evidence": {
-      "research_question": {
-        "pages": [
-          1
-        ]
-      },
-      "main_findings": {
-        "pages": [
-          1,
-          2
-        ]
-      },
-      "methods": {
-        "pages": [
-          1,
-          2
         ]
       }
     }

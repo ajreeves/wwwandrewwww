@@ -54,7 +54,7 @@
     "confidence": "high"
   },
   "publication_type": {
-    "value": "bibliography",
+    "value": "book chapter",
     "evidence_pages": [
       1
     ],
@@ -257,7 +257,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Reeves, Andrew, David Miller, and Bryant Moy. \"US Presidential Campaigns and Their Impact.\" Oxford Bibliographies in Political Science. Last modified 24 July 2018. doi:10.1093/OBO/9780199756223-0156.",
+    "value": "Reeves, Andrew, David Miller, and Bryant Moy. 2018. \"US Presidential Campaigns and Their Impact.\" In Oxford Bibliographies in Political Science, edited by L. Sandy Maisel. New York, NY: Oxford University Press. doi:10.1093/OBO/9780199756223-0156.",
     "evidence_pages": [
       1
     ],

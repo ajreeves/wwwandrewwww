@@ -31,21 +31,21 @@
     "confidence": "high"
   },
   "volume": {
-    "value": "00",
+    "value": "62",
     "evidence_pages": [
       1
     ],
     "confidence": "high"
   },
   "issue": {
-    "value": "0",
+    "value": "2",
     "evidence_pages": [
       1
     ],
     "confidence": "high"
   },
   "pages": {
-    "value": "1–17",
+    "value": "424-440",
     "evidence_pages": [
       1
     ],
@@ -248,7 +248,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 00(0): 1–17. https://doi.org/10.1111/ajps.12340",
+    "value": "Reeves, Andrew, and Jon C. Rogowski. 2018. \"The Public Cost of Unilateral Action.\" American Journal of Political Science 62(2): 424-440. https://doi.org/10.1111/ajps.12340",
     "evidence_pages": [
       1
     ],
