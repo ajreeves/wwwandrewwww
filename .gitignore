@@ -9,3 +9,6 @@ npm-debug.log*
 test-results/
 .quarto/
 .Rproj.user/
+
+# Local Netlify folder
+.netlify
