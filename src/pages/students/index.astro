@@ -10,7 +10,7 @@ import {
 } from "@data/doctoralStudents";
 
 const publications = await getCollection("publications");
-const publicationBySlug = new Map(publications.map((publication) => [publication.slug, publication]));
+const publicationBySlug = new Map(publications.map((publication) => [publication.id, publication]));
 
 const getPublication = (slug: string) => {
   const publication = publicationBySlug.get(slug);
@@ -142,7 +142,7 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
                     <ul>
                       {relatedPublications.map((publication) => (
                         <li>
-                          <a href={`/research/${publication.slug}/`}>{publication.data.title}</a>
+                          <a href={`/research/${publication.id}/`}>{publication.data.title}</a>
                           <em>{publication.data.year} · {publication.data.venue}</em>
                         </li>
                       ))}

@@ -12,7 +12,7 @@ type PublicationLink = {
 };
 
 type Publication = {
-  slug: string;
+  id: string;
   data: {
     title: string;
     summary: string;
@@ -84,7 +84,7 @@ type PublicationProfileOverride = {
 export async function getStaticPaths() {
   const publications = await getCollection("publications");
   return publications.map((publication) => ({
-    params: { slug: publication.slug },
+    params: { slug: publication.id },
     props: { publication }
   }));
 }
@@ -119,13 +119,13 @@ const pdfBasenames = (entry: Publication) =>
     .filter(Boolean);
 
 const metadataForPublication = (entry: Publication) => {
-  const alias = metadataAliases[entry.slug];
+  const alias = metadataAliases[entry.id];
   if (alias) {
     const aliasMatch = metadataItems.find((item) => item.slug === alias);
     if (aliasMatch) return aliasMatch;
   }
 
-  const slugMatch = metadataItems.find((item) => item.slug === entry.slug);
+  const slugMatch = metadataItems.find((item) => item.slug === entry.id);
   if (slugMatch) return slugMatch;
 
   const normalized = normalizeTitle(entry.data.title);
@@ -150,7 +150,7 @@ const metadataForPublication = (entry: Publication) => {
 };
 
 const metadata = metadataForPublication(publication);
-const rawFigure = figureManifest[publication.slug];
+const rawFigure = figureManifest[publication.id];
 const publicationFigure = rawFigure && !rawFigure.fallback ? rawFigure : undefined;
 
 const profileOverrides: Record<string, PublicationProfileOverride> = {
@@ -282,7 +282,7 @@ const themeHref = (theme: string) => {
   return majorTheme ? researchTopicPath(majorTheme) : `/research/?q=${encodeURIComponent(theme)}`;
 };
 
-const currentOverride = profileOverrides[publication.slug];
+const currentOverride = profileOverrides[publication.id];
 const publicationThemeLinks = Array.from(new Set(publication.data.themes)).slice(0, 5);
 const methodLikeTags = new Set([
   "observational study",
@@ -356,7 +356,7 @@ const summaryForPublication = (entry: Publication) => {
 };
 
 const relatedPublications = allPublications
-  .filter((entry) => entry.slug !== publication.slug)
+  .filter((entry) => entry.id !== publication.id)
   .map((entry) => {
     const sharedThemes = entry.data.themes.filter((theme) => publication.data.themes.includes(theme)).length;
     return { entry, sharedThemes };
@@ -365,22 +365,22 @@ const relatedPublications = allPublications
   .sort((a, b) => b.sharedThemes - a.sharedThemes || yearRank(b.entry.data.year) - yearRank(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
   .slice(0, 8);
 
-const publicationBySlug = new Map(allPublications.map((entry) => [entry.slug, entry]));
+const publicationBySlug = new Map(allPublications.map((entry) => [entry.id, entry]));
 const curatedRelatedPublications = (currentOverride?.relatedSlugs ?? [])
   .map((slug) => publicationBySlug.get(slug))
-  .filter((entry): entry is Publication => entry !== undefined && entry.slug !== publication.slug);
-const curatedRelatedSlugs = new Set(curatedRelatedPublications.map((entry) => entry.slug));
+  .filter((entry): entry is Publication => entry !== undefined && entry.id !== publication.id);
+const curatedRelatedSlugs = new Set(curatedRelatedPublications.map((entry) => entry.id));
 const displayedRelatedPublications = [
   ...curatedRelatedPublications,
-  ...relatedPublications.map(({ entry }) => entry).filter((entry) => !curatedRelatedSlugs.has(entry.slug))
+  ...relatedPublications.map(({ entry }) => entry).filter((entry) => !curatedRelatedSlugs.has(entry.id))
 ].slice(0, 5);
 
 const sortedPublications = [...allPublications].sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
-const currentIndex = sortedPublications.findIndex((entry) => entry.slug === publication.slug);
+const currentIndex = sortedPublications.findIndex((entry) => entry.id === publication.id);
 const previousPublication = currentIndex > 0 ? sortedPublications[currentIndex - 1] : undefined;
 const nextPublication = currentIndex >= 0 && currentIndex < sortedPublications.length - 1 ? sortedPublications[currentIndex + 1] : undefined;
 const siteUrl = "https://andrewreeves.org";
-const publicationUrl = `${siteUrl}/research/${publication.slug}/`;
+const publicationUrl = `${siteUrl}/research/${publication.id}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
 const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
@@ -616,7 +616,7 @@ const publicationStructuredData = {
             {displayedRelatedPublications.map((entry) => (
               <article class="publication-related-item">
                 <p>{entry.data.year} · {entry.data.venue}</p>
-                <h3><a href={`/research/${entry.slug}/`}>{entry.data.title}</a></h3>
+                <h3><a href={`/research/${entry.id}/`}>{entry.data.title}</a></h3>
                 <p>{summaryForPublication(entry)}</p>
               </article>
             ))}
@@ -627,7 +627,7 @@ const publicationStructuredData = {
 
     <nav class="publication-neighbors publication-neighbors-quiet" aria-label="Publication navigation">
       {previousPublication ? (
-        <a href={`/research/${previousPublication.slug}/`}>
+        <a href={`/research/${previousPublication.id}/`}>
           <span>Newer</span>
           {previousPublication.data.title}
         </a>
@@ -635,7 +635,7 @@ const publicationStructuredData = {
         <span></span>
       )}
       {nextPublication ? (
-        <a href={`/research/${nextPublication.slug}/`}>
+        <a href={`/research/${nextPublication.id}/`}>
           <span>Older</span>
           {nextPublication.data.title}
         </a>

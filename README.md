@@ -2,10 +2,12 @@
 
 A static academic website built with Astro, TypeScript, Tailwind CSS, and MDX content collections.
 
+Use Node.js 22.23.4 or newer. `.nvmrc`, GitHub Actions, and Netlify use the Node 22 release line.
+
 ## Commands
 
 ```sh
-npm install
+npm ci
 npm run dev
 npm run build
 npm run preview
@@ -15,6 +17,23 @@ npm run publications:embeddings
 ```
 
 The production build is emitted to `dist/`.
+
+## Automated checks and dependency updates
+
+GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. Both **Build and validate** and **Dependency audit** must pass before merging to `master`.
+
+Dependabot checks npm packages and GitHub Actions weekly. Related Astro upgrades are grouped so the framework and integrations can be tested together. Actions are pinned to commit hashes, and workflow tokens have read-only access.
+
+To verify an update locally:
+
+```sh
+npm ci
+npm run publications:validate
+npm run build
+npm audit --audit-level=low
+```
+
+Content collections are configured in `src/content.config.ts`. Their IDs preserve the existing publication URLs and book anchors. Tailwind 3 runs through PostCSS, without the retired Astro Tailwind integration.
 
 ## Content
 

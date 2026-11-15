@@ -37,7 +37,7 @@ const structuredData = {
         itemListElement: publications.map((publication, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          url: `${siteUrl}/research/${publication.slug}/`,
+          url: `${siteUrl}/research/${publication.id}/`,
           name: publication.data.title
         }))
       }

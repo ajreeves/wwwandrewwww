@@ -7,7 +7,7 @@ export type ResearchTopic = {
 };
 
 export type PublicationLike = {
-  slug: string;
+  id: string;
   body?: string;
   data: {
     title: string;

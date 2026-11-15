@@ -1,4 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const baseEntry = {
   title: z.string(),
@@ -9,7 +11,7 @@ const baseEntry = {
 };
 
 const publications = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/publications" }),
   schema: z.object({
     ...baseEntry,
     type: z.enum(["Book", "Article", "Chapter", "Working Paper", "Review"]),
@@ -29,7 +31,7 @@ const publications = defineCollection({
 });
 
 const books = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/books" }),
   schema: z.object({
     ...baseEntry,
     subtitle: z.string().optional(),
@@ -43,7 +45,7 @@ const books = defineCollection({
 });
 
 const writing = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/writing" }),
   schema: z.object({
     ...baseEntry,
     dek: z.string(),

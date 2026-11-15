@@ -5,7 +5,7 @@ import { researchTopicPath, researchTopics } from "../data/research-topics";
 import { slugify, normalizeTitle, yearRank } from "../utils/publications";
 
 interface Publication {
-  slug: string;
+  id: string;
   body?: string;
   data: {
     title: string;
@@ -71,7 +71,7 @@ const metadataItems = metadataIndex as unknown as PublicationMetadata[];
 const figureIndex = publicationFigures as Record<string, PublicationFigure>;
 const metadataFor = (publication: Publication) => {
   const normalized = normalizeTitle(publication.data.title);
-  const slugMatch = metadataItems.find((entry) => entry.slug === publication.slug);
+  const slugMatch = metadataItems.find((entry) => entry.slug === publication.id);
   if (slugMatch) return slugMatch;
 
   const exactTitleMatch = metadataItems.find((entry) => normalizeTitle(entry.title) === normalized);
@@ -86,7 +86,7 @@ const metadataFor = (publication: Publication) => {
     );
   });
 };
-const figureFor = (publication: Publication) => figureIndex[publication.slug];
+const figureFor = (publication: Publication) => figureIndex[publication.id];
 
 const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
 const firstSentence = (text: string) => text.match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? text;
@@ -300,7 +300,7 @@ const themeOptions = majorThemeDefinitions
                 <span>{publication.data.type === "Book" ? "Book" : venue}</span>
               </p>
             )}
-            <h3><a href={`/research/${publication.slug}/`}>{publication.data.title}</a></h3>
+            <h3><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h3>
             <p class="archive-record-venue">{venue} · {publication.data.year}</p>
             <p class="archive-record-authors">{compactAuthors(publication.data.authors)}</p>
             <p class="archive-record-summary">{displaySummary}</p>
