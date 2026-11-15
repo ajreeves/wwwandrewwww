@@ -876,7 +876,7 @@
     flex-wrap: wrap;
     gap: 0.72rem clamp(1.25rem, 2.2vw, 2.45rem);
     justify-content: start;
-    color: color-mix(in srgb, var(--ink) 68%, var(--paper));
+    color: var(--muted);
     font-family: var(--font-sans);
     font-size: 0.68rem;
     font-weight: 600;

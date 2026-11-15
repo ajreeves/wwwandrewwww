@@ -8,10 +8,12 @@ import { doctoralStudents, undergraduateHonorsTheses } from "../src/data/doctora
 
 const root = new URL("../", import.meta.url);
 const figures = JSON.parse(await readFile(new URL("src/data/publication-figures.json", root), "utf8"));
+const students = [...doctoralStudents, ...undergraduateHonorsTheses];
+const portraits = new Map(students.filter((student) => student.photo_url).map((student) => [student.photo_url, student]));
 const sources = new Set([
   ...galleryPhotos.map((photo) => photo.src),
   ...Object.values(figures).map((figure) => figure.src),
-  ...[...doctoralStudents, ...undergraduateHonorsTheses].flatMap((student) => [student.image_url, student.photo_url]),
+  ...students.flatMap((student) => [student.image_url, student.photo_url]),
   "/images/andrew-reeves-portrait-editorial.jpg",
   "/images/andrew-fed-page.jpg",
   "/images/andrew-teaching-page.jpg",
@@ -25,9 +27,26 @@ for (const src of [...sources].sort()) {
   const metadata = await sharp(input).metadata();
   const { width, height } = metadata.autoOrient ?? metadata;
   if (!width || !height) throw new Error(`Missing image dimensions: ${src}`);
-  const widths = [...new Set([320, 640, 960, 1440].map((size) => Math.min(size, width)))];
+  const portrait = portraits.get(src);
+  let crop;
+  if (portrait) {
+    const [x, y] = (portrait.photo_position ?? "50% 35%").split(/\s+/).map(parseFloat);
+    if (![x, y].every((value) => Number.isFinite(value) && value >= 0 && value <= 100)) {
+      throw new Error(`Invalid portrait crop position: ${src}`);
+    }
+    const cropWidth = Math.min(width, Math.floor(height * 4 / 5));
+    const cropHeight = Math.min(height, Math.floor(width * 5 / 4));
+    crop = { left: Math.round((width - cropWidth) * x / 100), top: Math.round((height - cropHeight) * y / 100), width: cropWidth, height: cropHeight };
+  }
+  // Crop portrait derivatives before resizing so landscape originals stay sharp
+  // in the 4:5 thumbnail. Source photographs are retained without this crop.
+  const outputWidth = crop?.width ?? width;
+  const outputHeight = crop?.height ?? height;
+  const sizes = portrait ? [64, 88, 128, 176, 264] : [320, 640, 960, 1440];
+  const widths = [...new Set(sizes.map((size) => Math.min(size, outputWidth)))];
   // Content-addressed names also invalidate immutable CDN/browser caches.
-  const hash = createHash("sha256").update(input).update("webp-q80-v1").digest("hex").slice(0, 12);
+  const recipe = crop ? `webp-q80-portrait-v1-${JSON.stringify(crop)}` : "webp-q80-v1";
+  const hash = createHash("sha256").update(input).update(recipe).digest("hex").slice(0, 12);
   const stem = src.slice("/images/".length).replace(/\.[^.]+$/, "");
   const variants = [];
   for (const size of widths) {
@@ -37,7 +56,9 @@ for (const src of [...sources].sort()) {
     await mkdir(path.dirname(outputPath), { recursive: true });
     const exists = await access(output).then(() => true, () => false);
     if (!exists) {
-      await sharp(input).autoOrient().resize({ width: size, withoutEnlargement: true }).webp({ quality: 80 }).toFile(outputPath);
+      const pipeline = sharp(input).autoOrient();
+      if (crop) pipeline.extract(crop);
+      await pipeline.resize({ width: size, withoutEnlargement: true }).webp({ quality: 80 }).toFile(outputPath);
       generated++;
     }
     variants.push({ src: url, width: size });
@@ -45,8 +66,8 @@ for (const src of [...sources].sort()) {
   manifest[src] = {
     src: variants.find((variant) => variant.width >= 640)?.src ?? variants.at(-1).src,
     srcset: variants.map((variant) => `${variant.src} ${variant.width}w`).join(", "),
-    width,
-    height
+    width: outputWidth,
+    height: outputHeight
   };
 }
 const destination = new URL("src/data/responsive-images.json", root);

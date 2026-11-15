@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import type { StudentRecord } from "@data/doctoralStudents";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 
 interface Props {
   student: StudentRecord;
@@ -8,18 +9,37 @@ interface Props {
 }
 
 const { student, publications = [] } = Astro.props;
+const initials = student.name.split(/\s+/).filter(Boolean).map((part) => part[0]);
+const monogram = initials.length > 1 ? `${initials[0]}${initials.at(-1)}` : initials[0];
+const hasDetails = student.current_position || student.dissertation_or_thesis_title || student.awards?.length;
+const profileHost = student.profile_url ? new URL(student.profile_url).hostname : "";
+const profileIsLinkedIn = profileHost === "linkedin.com" || profileHost.endsWith(".linkedin.com");
+const linkedInUrl = student.linkedin_url ?? (profileIsLinkedIn ? student.profile_url : undefined);
+const primaryLink = student.homepage_url ?? linkedInUrl ?? student.profile_url;
 ---
 
 <article class="student-card">
-  <header>
-    <p class="kicker">{student.role} · {student.year}</p>
-    <h3>{student.name}</h3>
+  <header class="student-card-header">
+    <div class="student-card-portrait">
+      {student.photo_url ? (
+        <ResponsiveImage
+          src={student.photo_url}
+          alt={`Portrait of ${student.name}`}
+          sizes="(max-width: 640px) 64px, 88px"
+          loading="lazy"
+        />
+      ) : <span class="student-card-initials" aria-hidden="true">{monogram}</span>}
+    </div>
+    <div class="student-card-identity">
+      <h3>{primaryLink ? <a class="student-name-link" href={primaryLink}>{student.name}</a> : student.name}</h3>
+      <p class="student-card-advising">Advising role: {student.role} <span>· {student.year}</span></p>
+    </div>
   </header>
+  {student.photo_credit && <p class="student-card-photo-credit">Photo: {student.photo_credit}</p>}
+  <p class="student-card-education">{student.degree} <span aria-hidden="true">·</span> {student.institution}</p>
   {student.research_description && <p class="student-card-description">{student.research_description}</p>}
 
-  <dl class="student-card-details">
-    <div><dt>Degree</dt><dd>{student.degree}</dd></div>
-    <div><dt>Institution</dt><dd>{student.institution}</dd></div>
+  {hasDetails && <dl class="student-card-details">
     {student.current_position && <div><dt>Position</dt><dd>{student.current_position}</dd></div>}
     {student.dissertation_or_thesis_title && (
       <div>
@@ -30,7 +50,7 @@ const { student, publications = [] } = Astro.props;
     {student.awards && student.awards.length > 0 && (
       <div><dt>Recognition</dt><dd><ul>{student.awards.map((award) => <li>{award}</li>)}</ul></dd></div>
     )}
-  </dl>
+  </dl>}
 
   {publications.length > 0 && (
     <div class="student-card-work">
@@ -46,10 +66,11 @@ const { student, publications = [] } = Astro.props;
     </div>
   )}
 
-  {(student.homepage_url || student.profile_url) && (
+  {(student.homepage_url || student.profile_url || linkedInUrl) && (
     <div class="student-card-links">
       {student.homepage_url && <a href={student.homepage_url}>Homepage<span class="sr-only">: {student.name}</span></a>}
-      {student.profile_url && <a href={student.profile_url}>Profile<span class="sr-only">: {student.name}</span></a>}
+      {linkedInUrl && <a href={linkedInUrl}>LinkedIn<span class="sr-only">: {student.name}</span></a>}
+      {student.profile_url && !profileIsLinkedIn && <a href={student.profile_url}>Profile<span class="sr-only">: {student.name}</span></a>}
     </div>
   )}
 </article>
@@ -63,9 +84,20 @@ const { student, publications = [] } = Astro.props;
     background: var(--paper);
     overflow-wrap: anywhere;
   }
-  h3 { margin: 0.6rem 0 0; font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.2; }
-  .student-card-description { margin: 1rem 0 0; font-size: 1.05rem; line-height: 1.5; }
-  .student-card-details { display: grid; gap: 0.7rem; margin: 1.2rem 0 0; }
+  .student-card-header { display: flex; align-items: center; gap: 1.1rem; }
+  .student-card-portrait { flex: 0 0 88px; width: 88px; height: 110px; overflow: hidden; border-radius: 2px; background: var(--ivory); }
+  .student-card-portrait :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .student-card-initials { display: grid; place-items: center; height: 100%; border: 1px solid var(--rule); color: var(--olive-dark); font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.04em; }
+  .student-card-identity { min-width: 0; }
+  h3 { margin: 0; font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.2; }
+  .student-name-link { color: inherit; text-decoration: none; }
+  .student-name-link:hover, .student-name-link:focus-visible { color: var(--olive-dark); text-decoration: underline; text-underline-offset: 0.15em; }
+  .student-card-advising { margin: 0.5rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.45; }
+  .student-card-advising span { white-space: nowrap; }
+  .student-card-photo-credit { margin: 0.4rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.75rem; }
+  .student-card-education { margin: 1rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; }
+  .student-card-description { margin: 0.8rem 0 0; font-size: 1.05rem; line-height: 1.5; }
+  .student-card-details { display: grid; gap: 0.7rem; margin: 1rem 0 0; }
   .student-card-details div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0.75rem; }
   dt { color: var(--muted); font-family: var(--font-sans); font-size: 0.8rem; line-height: 1.5; }
   dd { margin: 0; font-size: 0.95rem; line-height: 1.5; }
@@ -76,6 +108,11 @@ const { student, publications = [] } = Astro.props;
   .student-card-work span { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
   .student-card-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-top: 1.2rem; }
   .student-card-links a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-sans); font-size: 0.85rem; }
+  @media (max-width: 640px) {
+    .student-card-header { gap: 0.9rem; }
+    .student-card-portrait { flex-basis: 64px; width: 64px; height: 80px; }
+    .student-card-initials { font-size: 1.5rem; }
+  }
   @media (max-width: 420px) {
     .student-card-details div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
   }
