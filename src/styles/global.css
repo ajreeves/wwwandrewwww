@@ -250,7 +250,7 @@
 .archive-record-figure figcaption {
   margin: 0;
   padding: 0.55rem 0.75rem 0.7rem;
-  color: color-mix(in srgb, var(--muted) 84%, var(--paper));
+  color: var(--muted);
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-style: italic;
@@ -387,7 +387,13 @@
   }
 
   :where([id]) {
-    scroll-margin-top: clamp(7.5rem, 10vw, 9.5rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
@@ -454,6 +460,13 @@
   letter-spacing: 0.2em;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .site-title {
+    /* Keep the wordmark beside the menu control when text is enlarged. */
+    font-size: min(1.82rem, 32px);
+  }
 }
 
 @layer components {
@@ -6294,10 +6307,6 @@
       font-size: 17px;
     }
 
-    :where([id]) {
-      scroll-margin-top: 7.25rem;
-    }
-
     .container-wide,
     .container-narrow {
       @apply px-4;
@@ -7357,10 +7366,17 @@
 }
 
 @media (max-width: 700px) {
+  .site-header {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+
   .site-nav {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 20px;
     row-gap: 0;
-    padding-right: clamp(1.25rem, 3vw, 3rem);
+    padding: 24px 20px;
   }
 
   .nav-toggle {

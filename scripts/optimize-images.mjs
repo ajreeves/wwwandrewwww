@@ -16,7 +16,11 @@ const sources = new Set([
   ...students.flatMap((student) => [student.image_url, student.photo_url]),
   "/images/andrew-reeves-portrait-editorial.jpg",
   "/images/andrew-fed-page.jpg",
+  "/images/andrew-harvard-page.jpg",
   "/images/andrew-teaching-page.jpg",
+  "/images/citizenship-course.jpg",
+  "/images/intro-course.jpg",
+  "/images/business-of-elections-course.jpg",
   "/images/federal-resource-allocation-map-1200.jpg"
 ].filter((src) => src?.startsWith("/images/")));
 

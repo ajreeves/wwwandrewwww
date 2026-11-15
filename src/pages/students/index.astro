@@ -89,31 +89,6 @@ const tocLinks = [
 </BaseLayout>
 
 <script>
-  // Fonts and the desktop grid can move a section after the browser's first
-  // fragment jump. Correct it once, unless the reader has already interacted.
-  const initialHash = window.location.hash;
-  const initialSection = document.getElementById(initialHash.slice(1));
-  const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
-  // Leave reload and history restoration to the browser.
-  if ((!navigation || navigation.type === "navigate") && initialSection?.matches(".student-page-frame .page-section-heading h2")) {
-    const interaction = new AbortController();
-    let readerMoved = false;
-    for (const event of ["wheel", "touchstart", "pointerdown", "keydown"]) {
-      window.addEventListener(event, () => { readerMoved = true; }, { passive: true, signal: interaction.signal });
-    }
-    const alignInitialSection = async () => {
-      await document.fonts.ready;
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        interaction.abort();
-        if (!readerMoved && window.location.hash === initialHash) {
-          initialSection.scrollIntoView({ block: "start", behavior: "instant" });
-        }
-      }));
-    };
-    if (document.readyState === "complete") alignInitialSection();
-    else window.addEventListener("load", alignInitialSection, { once: true });
-  }
-
   // Measure natural card heights without moving DOM nodes or changing tab order.
   // Ordinary grid rows remain the fallback when ResizeObserver is unavailable.
   if ("ResizeObserver" in window) {
@@ -175,8 +150,5 @@ const tocLinks = [
   }
   @media (max-width: 1000px) {
     .student-card-list { grid-template-columns: minmax(0, 1fr); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    :global(html) { scroll-behavior: auto; }
   }
 </style>

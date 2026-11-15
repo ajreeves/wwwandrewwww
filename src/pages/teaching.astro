@@ -2,6 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import FeatureBand from "@components/FeatureBand.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 
 const awards = [
   {
@@ -170,7 +171,12 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
         courses.map((course, index) => (
           <article class={`flw-feature-card course-feature-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
             <figure class="flw-feature-media course-feature-media">
-              <img src={course.image} alt={course.alt} loading="lazy" />
+              <ResponsiveImage
+                src={course.image}
+                alt={course.alt}
+                loading="lazy"
+                sizes="(min-width: 1500px) 700px, (min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 4rem), calc(100vw - 2rem)"
+              />
               <figcaption>{course.caption}</figcaption>
             </figure>
             <div class="flw-feature-copy course-feature-copy">

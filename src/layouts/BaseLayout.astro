@@ -114,8 +114,45 @@ const navItems = [
       </footer>
     </div>
     <script>
+      // Fonts and responsive layouts can move a section after the browser's first
+      // fragment jump. Correct it once, unless the reader has already interacted.
+      const initialHash = window.location.hash;
+      const initialSection = (() => {
+        try {
+          return document.getElementById(decodeURIComponent(initialHash.slice(1)));
+        } catch {
+          return null;
+        }
+      })();
+      const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+      // Leave reload and history restoration to the browser.
+      if ((!navigation || navigation.type === "navigate") && initialSection?.closest("main")) {
+        const interaction = new AbortController();
+        let readerMoved = false;
+        for (const event of ["wheel", "touchstart", "pointerdown", "keydown"]) {
+          window.addEventListener(event, () => { readerMoved = true; }, { passive: true, signal: interaction.signal });
+        }
+        const alignInitialSection = async () => {
+          await document.fonts.ready;
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            interaction.abort();
+            if (!readerMoved && window.location.hash === initialHash) {
+              initialSection.scrollIntoView({ block: "start", behavior: "instant" });
+            }
+          }));
+        };
+        if (document.readyState === "complete") alignInitialSection();
+        else window.addEventListener("load", alignInitialSection, { once: true });
+      }
+
       const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
       const navList = document.getElementById("main-nav-list");
+
+      const closeNavigation = () => {
+        navToggle?.setAttribute("aria-expanded", "false");
+        navToggle?.setAttribute("aria-label", "Open navigation menu");
+        navList?.classList.remove("nav-list-open");
+      };
 
       navToggle?.addEventListener("click", () => {
         const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -127,17 +164,21 @@ const navItems = [
       document.addEventListener("click", (e) => {
         const target = e.target as Node;
         if (!navToggle?.contains(target) && !navList?.contains(target)) {
-          navToggle?.setAttribute("aria-expanded", "false");
-          navToggle?.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
+        }
+      });
+
+      // Keep the expanded header from covering the next keyboard destination.
+      document.querySelector(".site-nav")?.addEventListener("focusout", (event) => {
+        const next = (event as FocusEvent).relatedTarget;
+        if (next instanceof Node && !navToggle?.contains(next) && !navList?.contains(next)) {
+          closeNavigation();
         }
       });
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && navToggle?.getAttribute("aria-expanded") === "true") {
-          navToggle.setAttribute("aria-expanded", "false");
-          navToggle.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
           navToggle.focus();
         }
       });
