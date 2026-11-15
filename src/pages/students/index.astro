@@ -88,6 +88,41 @@ const tocLinks = [
   </section>
 </BaseLayout>
 
+<script>
+  // Measure natural card heights without moving DOM nodes or changing tab order.
+  // Ordinary grid rows remain the fallback when ResizeObserver is unavailable.
+  if ("ResizeObserver" in window) {
+    const lists = [...document.querySelectorAll<HTMLElement>(".student-card-list")];
+    let frame = 0;
+
+    const updateSpans = () => {
+      frame = 0;
+      const measurements = lists.flatMap((list) => {
+        const styles = getComputedStyle(list);
+        const gap = parseFloat(styles.columnGap);
+        const rowHeight = parseFloat(styles.getPropertyValue("--student-card-row-height"));
+        return [...list.querySelectorAll<HTMLElement>(".student-card")].map((card) => ({
+          card,
+          span: String(Math.ceil((card.getBoundingClientRect().height + gap) / rowHeight))
+        }));
+      });
+      for (const { card, span } of measurements) {
+        card.style.setProperty("--student-card-span", span);
+      }
+      for (const list of lists) list.dataset.stacked = "true";
+    };
+
+    const scheduleLayout = () => {
+      if (!frame) frame = requestAnimationFrame(updateSpans);
+    };
+    const observer = new ResizeObserver(scheduleLayout);
+    for (const list of lists) {
+      for (const card of list.querySelectorAll<HTMLElement>(".student-card")) observer.observe(card);
+    }
+    scheduleLayout();
+  }
+</script>
+
 <style>
   .students-opening :global(.page-opening) { padding-block: clamp(1.5rem, 3vw, 2.5rem); }
   .students-opening :global(.page-opening-panel) { min-height: 0; padding: clamp(1.25rem, 2.5vw, 2rem); }
@@ -96,11 +131,22 @@ const tocLinks = [
   .student-page-frame .page-section-heading { display: block; border-top: 0; margin-bottom: 1.5rem; padding-top: 1.5rem; }
   .student-page-frame .page-section-heading h2 { max-width: none; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; }
   .student-card-list {
+    --student-card-row-height: 4px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
     gap: 1rem;
     margin-top: 0;
+  }
+  @media (min-width: 1001px) {
+    .student-card-list[data-stacked] {
+      grid-auto-rows: var(--student-card-row-height);
+      grid-auto-flow: row; /* Sparse placement preserves top-to-bottom, left-to-right order. */
+      row-gap: 0;
+    }
+    .student-card-list[data-stacked] > :global(.student-card) {
+      grid-row-end: span var(--student-card-span);
+    }
   }
   @media (max-width: 1000px) {
     .student-card-list { grid-template-columns: minmax(0, 1fr); }
