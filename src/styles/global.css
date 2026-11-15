@@ -6654,8 +6654,7 @@
   object-fit: cover;
 }
 
-.feature-band-media figcaption,
-.about-profile-photo figcaption {
+.feature-band-media figcaption {
   position: absolute;
   right: 0.85rem;
   bottom: 0.75rem;
@@ -6676,15 +6675,17 @@
 }
 
 .about-photo-stage {
+  display: grid;
   position: relative;
-  aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: var(--ink);
+  background: var(--ivory);
 }
 
 .about-profile-photo {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
   margin: 0;
   opacity: 0;
   transition: opacity 900ms ease;
@@ -6697,11 +6698,29 @@
   pointer-events: auto;
 }
 
-.about-profile-photo img {
+.about-photo-media {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.about-photo-media img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.about-profile-photo figcaption {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-inline: 1px solid rgba(44, 44, 39, 0.18);
+  color: var(--ink);
+  background: var(--ivory);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-wrap: pretty;
 }
 
 .about-gallery-controls,

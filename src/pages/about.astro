@@ -30,13 +30,15 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
         {
           galleryPhotos.map((photo, index) => (
             <figure class:list={["about-profile-photo", index === 0 && "is-active"]} data-gallery-slide aria-hidden={index === 0 ? "false" : "true"}>
-              {index === 0 ? (
-                <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" fetchpriority="high" />
-              ) : (
-                <template data-gallery-image>
-                  <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" />
-                </template>
-              )}
+              <div class="about-photo-media">
+                {index === 0 ? (
+                  <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" fetchpriority="high" />
+                ) : (
+                  <template data-gallery-image>
+                    <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" />
+                  </template>
+                )}
+              </div>
               <figcaption>{photo.caption}</figcaption>
             </figure>
           ))

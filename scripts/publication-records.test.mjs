@@ -37,10 +37,21 @@ test("build validation catches missing mappings, duplicate mappings, and author 
   }
 });
 
-test("search includes coauthors, venue, abstract, and page text", () => {
+test("search uses canonical content instead of superseded imported descriptions", () => {
   const entry = publication("paper", "A paper");
   entry.data.venue = "American Political Science Review";
-  entry.body = "A distinctive explanation from the publication page.";
-  const text = publicationSearchText(entry, {abstract:"An abstract-only phrase: administrative discretion."});
-  for (const term of ["rogowski", "american political science review", "administrative discretion", "distinctive explanation"]) assert(text.includes(term));
+  entry.data.summary = "A superseded imported summary.";
+  entry.body = "An obsolete description from an earlier import.";
+  entry.data.editorial = {context:["A curated explanation from the publication page."]};
+  const text = publicationSearchText(entry, {abstract:"An abstract-only phrase: administrative discretion.", card_summary:"The verified research finding."});
+  for (const term of ["rogowski", "american political science review", "administrative discretion", "curated explanation", "verified research finding"]) assert(text.includes(term));
+  for (const term of ["superseded imported summary", "obsolete description"]) assert(!text.includes(term));
+});
+
+test("search retains summaries and prose for publications without canonical metadata", () => {
+  const entry = publication("recounts", "A chapter without extracted metadata");
+  entry.data.summary = "A maintained chapter summary.";
+  entry.body = "A distinctive explanation from the chapter.";
+  const text = publicationSearchText(entry);
+  for (const term of ["maintained chapter summary", "distinctive explanation"]) assert(text.includes(term));
 });

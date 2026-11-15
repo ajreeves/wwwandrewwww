@@ -104,10 +104,13 @@ const searchableText = (value: unknown): string => {
 
 export const publicationSearchText = (publication: Publication, metadata = getPublicationMetadata(publication)) =>
   searchableText([
-    publication.data.title, publication.data.summary, publication.data.cardSummary,
+    publication.data.title, publicationSummary(publication.data, metadata),
     publication.data.type, publication.data.year, publication.data.venue,
     publication.data.citation, publication.data.authors, publication.data.themes,
-    publication.data.editorial, publication.body,
+    publication.data.editorial,
+    // Imported MDX prose can predate the corrected canonical record. Index the
+    // content used by the research page, retaining prose for content-only entries.
+    metadata ? undefined : publication.body,
     metadata?.title, metadata?.authors, metadata?.journal, metadata?.citation,
     metadata?.abstract, metadata?.plain_english_summary, metadata?.card_summary,
     metadata?.research_question, metadata?.research_highlights, metadata?.methods,

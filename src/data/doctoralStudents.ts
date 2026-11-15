@@ -105,13 +105,13 @@ export const doctoralStudents: StudentRecord[] = [
     year: 2024,
     degree: "PhD, Business",
     institution: "Washington University in St. Louis",
-    current_position: "Head of Strategy, NeuroFusion Inc.",
+    current_position: "Founder & CEO, UNIVERSE8 Inc.",
     profile_url: "https://www.linkedin.com/in/hyunjoo-oh/",
     image_url: "/images/students/hyunjoo-oh-linkedin.png",
     image_alt: "Screenshot of Hyunjoo Oh's LinkedIn profile.",
     image_source: "https://www.linkedin.com/in/hyunjoo-oh/",
     image_kind: "site_screenshot",
-    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated screenshot capture; Founder & CEO of UNIVERSE8 Inc. confirmed in the captured profile during the November 15, 2026 content review."
   },
   {
     name: "Lucas Boschelli",
@@ -373,13 +373,13 @@ export const doctoralStudents: StudentRecord[] = [
     year: 2014,
     degree: "PhD, Political Science",
     institution: "Boston University",
-    current_position: "Director of Research and Training, International Consortium for Law and Development",
+    current_position: "Director, Knowledge Strategy and Operations, Tufts University",
     profile_url: "https://www.linkedin.com/in/lauraclucas/",
     image_url: "/images/students/laura-lucas-linkedin.png",
     image_alt: "Screenshot of Laura Lucas's LinkedIn profile.",
     image_source: "https://www.linkedin.com/in/lauraclucas/",
     image_kind: "site_screenshot",
-    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated profile capture."
+    notes: "LinkedIn profile supplied by Andrew Reeves and verified by authenticated profile capture; current Tufts role confirmed at https://ouri.tufts.edu/university-wide-research-council on November 15, 2026."
   },
   {
     name: "Alex Whalen",
