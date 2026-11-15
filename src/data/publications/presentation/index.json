@@ -3019,30 +3019,34 @@
     "slug": "waiting-to-vote-in-the-2016-presidential-election-evidence-from-a-multi-county-study",
     "title": "Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study",
     "authors": [
-      "Robert Stein",
-      "Zachary Birenbaum",
-      "Farhan Kawsar",
+      "Robert M. Stein",
+      "Christopher Mann",
       "Charles Stewart III",
+      "Zachary Birenbaum",
+      "Anson Fung",
+      "Jed Greenberg",
+      "Farhan Kawsar",
       "Gayle Alberda",
       "R. Michael Alvarez",
+      "Lonna Atkeson",
       "Emily Beaulieu",
       "Nathaniel A. Birkhead",
-      "Frederick Boehmke",
+      "Frederick J. Boehmke",
       "Joshua Boston",
       "Barry C. Burden",
       "Francisco Cantu",
       "Rachael Cobb",
       "David Darmofal",
       "Thomas C. Ellington",
+      "Terri Susan Fine",
       "Charles J. Finocchiaro",
-      "Michael Gilbert",
+      "Michael D. Gilbert",
       "Victor Haynes",
       "Brian Janssen",
       "David Kimball",
       "Charles Kromkowski",
       "Elena Llaudet",
-      "Christopher Mann",
-      "Ken Mayer",
+      "Kenneth R. Mayer",
       "Matthew R. Miles",
       "David Miller",
       "Lindsay Nielson",
@@ -3050,8 +3054,11 @@
       "Costas Panagopoulos",
       "Andrew Reeves",
       "Min Hee Seo",
+      "Haley Simmons",
       "Corwin Smidt",
+      "Farrah M. Stone",
       "Rachel VanSickle-Ward",
+      "Jennifer Nicoll Victor",
       "Abby Wood",
       "Julie Wronski"
     ],
@@ -3062,16 +3069,16 @@
     "issue": "2",
     "pages": "439-453",
     "doi": "10.1177/1065912919832374",
-    "citation": "Stein, Robert, Zachary Birenbaum, Farhan Kawsar, Charles Stewart III, Gayle Alberda, R. Michael Alvarez, Emily Beaulieu, Nathaniel A. Birkhead, Frederick Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Charles J. Finocchiaro, Michael Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Christopher Mann, Ken Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Corwin Smidt, Rachel VanSickle-Ward, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439-453. https://doi.org/10.1177/1065912919832374",
+    "citation": "Stein, Robert M., Christopher Mann, Charles Stewart III, Zachary Birenbaum, Anson Fung, Jed Greenberg, Farhan Kawsar, Gayle Alberda, R. Michael Alvarez, Lonna Atkeson, Emily Beaulieu, Nathaniel A. Birkhead, Frederick J. Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Terri Susan Fine, Charles J. Finocchiaro, Michael D. Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Kenneth R. Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Haley Simmons, Corwin Smidt, Farrah M. Stone, Rachel VanSickle-Ward, Jennifer Nicoll Victor, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439–453. https://doi.org/10.1177/1065912919832374",
     "links": {
       "pdf": "/papers/lines.pdf",
       "journal": "https://journals.sagepub.com/home/prq",
       "replication_data": null,
       "code": null
     },
-    "card_summary": "A nationwide observational study of polling places during the 2016 U.S. presidential election found that wait times and voting processes varied by time of day and that strict voter ID requirements had different effects on check-in times in majority-white versus majority-nonwhite polling places.",
+    "card_summary": "Researchers observed polling-place operations in 28 jurisdictions during the 2016 U.S. presidential election, measuring queues, check-in times, and ballot completion times.",
     "abstract": "This paper is the result of a nationwide study of polling place dynamics in the 2016 presidential election. Research teams, recruited from local colleges and universities and located in twenty-eight election jurisdictions across the United States, observed and timed voters as they entered the queue at their respective polling places and then voted. We report results about four specific polling place operations and practices: the length of the check-in line, the number of voters leaving the check-in line once they have joined it, the time for a voter to check in to vote (i.e., verify voter’s identification and obtain a ballot), and the time to complete a ballot. Long lines, waiting times, and times to vote are closely related to time of day (mornings are busiest for polling places). We found the recent adoption of photographic voter identification (ID) requirements to have a disparate effect on the time to check in among white and nonwhite polling places. In majority-white polling places, scanning a voter’s driver’s license speeds up the check-in process. In majority nonwhite polling locations, the effect of strict voter ID requirements increases time to check in, albeit modestly.",
-    "plain_english_summary": "Researchers observed polling places across the U.S. during the 2016 presidential election and found that mornings were busiest, more poll workers reduced wait times, and strict voter ID laws sped up check-in in majority-white areas but slowed it in majority-nonwhite areas.",
+    "plain_english_summary": "Researchers observed polling-place operations in 28 jurisdictions during the 2016 U.S. presidential election, measuring queues, check-in times, and ballot completion times. Mornings were busiest, and photo ID requirements had different associations with check-in times in majority-white and majority-nonwhite polling places.",
     "research_question": "What are the dynamics of polling place operations and wait times during the 2016 presidential election, and how do factors such as time of day, poll worker staffing, and voter ID requirements affect voter experiences?",
     "research_highlights": [
       "Long lines, waiting times, and times to vote are closely related to time of day, with mornings being the busiest.",
@@ -3110,7 +3117,7 @@
     "policy_relevance": null,
     "pull_quote": "Long lines, waiting times, and times to vote are closely related to time of day (mornings are busiest for polling places).",
     "pull_quote_page": 1,
-    "confidence_notes": "Most fields are supported by explicit statements in the abstract, methods, results, and conclusion sections. Volume and issue are not stated in the document. Policy relevance is not directly discussed.",
+    "confidence_notes": "Most fields are supported by explicit statements in the abstract, methods, results, and conclusion sections. Volume and issue are not stated in the document. Policy relevance is not directly discussed. Author names and order were reconciled against PDF page 1. The 2020 issue date, volume 73(2), and pages 439–453 are corroborated by Crossref (DOI 10.1177/1065912919832374); the supplied PDF is the 2019 online-first version.",
     "tags": [
       "American politics",
       "election administration",
@@ -6000,7 +6007,7 @@
     "links": {
       "pdf": "/papers/spending.pdf",
       "journal": null,
-      "replication_data": "http://people.bu.edu/areeves",
+      "replication_data": null,
       "code": null
     },
     "card_summary": "Voters reward incumbent presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear, with liberals and moderates more responsive than conservatives.",
@@ -6038,7 +6045,7 @@
     "policy_relevance": null,
     "pull_quote": "Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
     "pull_quote_page": 1,
-    "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed.",
+    "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "tags": [
       "American politics",
       "political economy",
@@ -6144,7 +6151,7 @@
     "links": {
       "pdf": "/papers/rain.pdf",
       "journal": null,
-      "replication_data": "http://people.bu.edu/areeves",
+      "replication_data": null,
       "code": null
     },
     "card_summary": "Voters punish presidents and governors for severe weather damage, but reward or punish them more strongly based on their actions in response to disasters, demonstrating that electorates can distinguish between random events and government responsibility.",
@@ -6184,7 +6191,7 @@
     "policy_relevance": null,
     "pull_quote": "The electorate is able to separate random events from governmental responses and attribute actions based on the defined roles of these two politicians.",
     "pull_quote_page": 1,
-    "confidence_notes": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article.",
+    "confidence_notes": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "tags": [
       "political science",
       "elections",
@@ -6290,8 +6297,8 @@
     "links": {
       "pdf": "/papers/fema.pdf",
       "journal": null,
-      "replication_data": "http://people.bu.edu/areeves",
-      "code": "http://people.bu.edu/areeves"
+      "replication_data": null,
+      "code": null
     },
     "card_summary": "Presidents are more likely to issue disaster declarations to electorally competitive states, especially after the 1988 Stafford Act, and are rewarded electorally for doing so.",
     "abstract": "This article argues that presidents use unilateral powers for particularistic aims to gain electoral support, focusing on presidential disaster declarations. An analysis from 1981 to 2004 finds that a state’s electoral competitiveness influences the likelihood of receiving a disaster declaration, especially after the 1988 Stafford Act expanded presidential powers. Competitive states can expect more disaster declarations, and these decisions yield electoral benefits for presidents, who are rewarded at the ballot box for issuing such declarations.",
@@ -6329,7 +6336,7 @@
     "policy_relevance": null,
     "pull_quote": "A highly competitive state can expect to receive twice as many presidential disaster declarations as an uncompetitive state.",
     "pull_quote_page": 1,
-    "confidence_notes": "All extracted fields are directly supported by the cited pages. No policy recommendations or identification strategies are explicitly described in the text.",
+    "confidence_notes": "All extracted fields are directly supported by the cited pages. No policy recommendations or identification strategies are explicitly described in the text. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "tags": [
       "American politics",
       "executive politics",
@@ -6569,7 +6576,7 @@
     "links": {
       "pdf": "/papers/appearances.pdf",
       "journal": "http://apr.sagepub.com/content/39/3/534",
-      "replication_data": "http://people.bu.edu/areeves",
+      "replication_data": null,
       "code": null
     },
     "card_summary": "In the 2008 presidential campaign, McCain-Palin targeted core Republican counties while Obama-Biden focused on counties with significant population growth, reflecting divergent base and peripheral campaign strategies.",
@@ -6606,7 +6613,7 @@
     "policy_relevance": null,
     "pull_quote": "McCain-Palin pursued a base strategy by targeting core partisan counties where the Bush–Cheney ticket performed well in 2004. Barack Obama and Joseph Biden, in contrast, pursued a peripheral strategy.",
     "pull_quote_page": 3,
-    "confidence_notes": "All extracted fields are directly supported by the article text and tables. No inferences were made beyond the explicit content of the document.",
+    "confidence_notes": "All extracted fields are directly supported by the article text and tables. No inferences were made beyond the explicit content of the document. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "tags": [
       "American politics",
       "elections",
@@ -6837,7 +6844,7 @@
     "links": {
       "pdf": "http://www.people.fas.harvard.edu/~reeves/papers/reassessment.pdf",
       "journal": null,
-      "replication_data": "http://www.people.fas.harvard.edu/~reeves",
+      "replication_data": null,
       "code": null
     },
     "card_summary": "This article reassesses Shaw (1999) and finds that the original study's substantive conclusions about presidential campaign strategy are unsupported when the correct statistical methods are applied.",
@@ -6873,7 +6880,7 @@
     "policy_relevance": null,
     "pull_quote": "When we follow the methods as prescribed in Shaw (1999), we find that all substantive conclusions are unsupported by the data and methods.",
     "pull_quote_page": 5,
-    "confidence_notes": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements.",
+    "confidence_notes": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "tags": [
       "political science",
       "elections",

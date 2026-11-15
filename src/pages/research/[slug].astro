@@ -2,67 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { researchTopicPath } from "@data/research-topics";
-import metadataIndex from "../../data/publications/presentation/index.json";
+import { getPublicationMetadata, validatePublicationMappings, type Publication } from "../../utils/publication-records";
 import publicationFigures from "../../data/publication-figures.json";
-import { normalizeTitle, yearRank } from "../../utils/publications";
+import { normalizeTitle, yearRank, publicationSummary } from "../../utils/publications";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 
-type PublicationLink = {
-  label: string;
-  url: string;
-};
-
-type Publication = {
-  id: string;
-  data: {
-    title: string;
-    summary: string;
-    year: number | string;
-    type: "Book" | "Article" | "Chapter" | "Working Paper" | "Review";
-    venue: string;
-    authors: string[];
-    citation?: string;
-    themes: string[];
-    links: PublicationLink[];
-  };
-};
-
-type MetadataLinkSet = {
-  pdf?: string | null;
-  journal?: string | null;
-  replication_data?: string | null;
-  code?: string | null;
-  publisher?: string | null;
-};
-
-type PublicationMetadata = {
-  slug?: string;
-  title: string;
-  authors?: string[];
-  year?: number | string;
-  publication_type?: string | null;
-  journal?: string | null;
-  volume?: string | null;
-  issue?: string | null;
-  pages?: string | null;
-  doi?: string | null;
-  citation?: string | null;
-  links?: MetadataLinkSet | null;
-  card_summary?: string | null;
-  abstract?: string | null;
-  plain_english_summary?: string | null;
-  research_question?: string | null;
-  research_highlights?: string[] | null;
-  methods?: string[] | null;
-  data_sources?: string[] | null;
-  identification_strategy?: string | null;
-  geography?: string | null;
-  time_period?: string | null;
-  unit_of_analysis?: string | null;
-  sample_size?: string | null;
-  policy_relevance?: string | null;
-  tags?: string[] | null;
-  filters?: Record<string, string[] | string | null> | string[] | null;
-};
+type PublicationLink = { label: string; url: string };
 
 type PublicationFigure = {
   src: string;
@@ -72,26 +17,18 @@ type PublicationFigure = {
   fallback?: boolean;
 };
 
-type PublicationProfileOverride = {
-  why?: string[];
-  findings?: string[];
-  designLabel?: string;
-  figureCaption?: string;
-  keywords?: string[];
-  relatedSlugs?: string[];
-};
-
 export async function getStaticPaths() {
   const publications = await getCollection("publications");
+  validatePublicationMappings(publications);
   return publications.map((publication) => ({
     params: { slug: publication.id },
     props: { publication }
   }));
 }
 
-const { publication } = Astro.props as { publication: Publication };
-const allPublications = (await getCollection("publications")) as Publication[];
-const metadataItems = metadataIndex as unknown as PublicationMetadata[];
+interface Props { publication: Publication; }
+const { publication } = Astro.props;
+const allPublications = await getCollection("publications");
 const figureManifest = publicationFigures as Record<string, PublicationFigure>;
 
 const cleanText = (value?: string | number | null) =>
@@ -99,122 +36,9 @@ const cleanText = (value?: string | number | null) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const basename = (value: string) => value.split(/[/?#]/)[0]?.split("/").pop()?.replace(/\.pdf$/i, "") ?? "";
-
-const metadataAliases: Record<string, string> = {
-  "all-presidents-senators": "all-the-president-s-senators-presidential-copartisans-and-the-allocation-of-federal-grants",
-  "disunion-review": "the-state-of-disunion-regional-sources-of-modern-american-partisanship",
-  "municipal-administration": "elections-and-representation-in-american-municipal-administration",
-  "political-disaster": "political-disaster-unilateral-powers-electoral-incentives-and-presidential-disaster-declar",
-  "presidential-particularism-divide-dollar": "presidential-particularism-and-divide-the-dollar-politics",
-  "public-cost-unilateral-action": "the-public-cost-of-unilateral-action",
-  spending: "the-influence-of-federal-spending-on-presidential-elections"
-};
-
-const pdfBasenames = (entry: Publication) =>
-  entry.data.links
-    .map((link) => link.url)
-    .filter((url) => /\.pdf(?:$|[?#])/i.test(url))
-    .map(basename)
-    .filter(Boolean);
-
-const metadataForPublication = (entry: Publication) => {
-  const alias = metadataAliases[entry.id];
-  if (alias) {
-    const aliasMatch = metadataItems.find((item) => item.slug === alias);
-    if (aliasMatch) return aliasMatch;
-  }
-
-  const slugMatch = metadataItems.find((item) => item.slug === entry.id);
-  if (slugMatch) return slugMatch;
-
-  const normalized = normalizeTitle(entry.data.title);
-  const titleMatch = metadataItems.find((item) => normalizeTitle(item.title) === normalized);
-  if (titleMatch) return titleMatch;
-
-  const basenames = pdfBasenames(entry);
-  const pdfMatch = metadataItems.find((item) => {
-    const pdf = item.links?.pdf ? basename(item.links.pdf) : "";
-    return pdf && basenames.includes(pdf);
-  });
-  if (pdfMatch) return pdfMatch;
-
-  return metadataItems.find((item) => {
-    const metadataTitle = normalizeTitle(item.title);
-    return (
-      normalized.length > 42 &&
-      metadataTitle.length > 42 &&
-      (normalized.startsWith(metadataTitle) || metadataTitle.startsWith(normalized))
-    );
-  });
-};
-
-const metadata = metadataForPublication(publication);
+const metadata = getPublicationMetadata(publication);
 const rawFigure = figureManifest[publication.id];
 const publicationFigure = rawFigure && !rawFigure.fallback ? rawFigure : undefined;
-
-const profileOverrides: Record<string, PublicationProfileOverride> = {
-  "rising-seas": {
-    why: [
-      "Rising Seas, Rising Concerns asks whether persistent exposure to sea-level rise changes how people think about climate mitigation.",
-      "The article's contribution is to connect local climate vulnerability to public opinion and voting behavior, showing that coastal risk is politically meaningful even in a polarized climate debate.",
-      "The result is especially important because the strongest relationship appears among residents attached to their communities, not simply those with the greatest financial exposure."
-    ],
-    designLabel: "Survey and precinct-level observational analysis",
-    figureCaption: "County-level susceptibility to sea-level rise, used to connect local climate vulnerability with climate-policy attitudes.",
-    keywords: ["sea-level rise", "climate vulnerability", "climate mitigation", "community attachment"],
-    relatedSlugs: ["ecologies-of-unease", "electoral-geography", "urban-rural-contentment", "context", "disaster-relief"]
-  },
-  "no-blank-check": {
-    why: [
-      "This book asks how citizens think about presidential power when presidents act without Congress.",
-      "Its contribution is to show that public antipathy toward unilateral power can create political limits on executive authority, linking public opinion to debates about institutional constraint.",
-      "The argument matters because democratic accountability depends not only on formal checks, but also on the public's willingness to judge how power is used."
-    ],
-    findings: [
-      "Citizens do not treat presidential unilateral action as a blank check, even when policy goals are attractive.",
-      "Public attitudes toward executive power create political limits on how presidents can act outside Congress.",
-      "The book connects public opinion about the presidency to democratic accountability and institutional constraint."
-    ]
-  },
-  "particularistic-president": {
-    why: [
-      "This book asks how presidential incentives shape the distribution of federal attention and benefits.",
-      "Its contribution is to show how executive branch politics can produce unequal geographic patterns in public resources, connecting presidential power to political inequality.",
-      "The argument matters because federal governance is experienced locally: where benefits flow, which communities receive attention, and how citizens understand the reach of national authority."
-    ],
-    findings: [
-      "Presidents can use executive branch discretion to direct attention and benefits toward politically valuable constituencies.",
-      "Executive branch politics helps explain unequal geographic patterns in federal benefits.",
-      "The book links presidential incentives to political inequality and distributive politics."
-    ]
-  },
-  "persistence-of-localism": {
-    why: [
-      "This chapter asks how local political environments can remain consequential when American elections, media, and party conflict have become increasingly nationalized.",
-      "Its central contribution is to distinguish convergence in political form from persistence in political substance: national party labels supply a common vocabulary, but local social, economic, and institutional conditions continue to shape what that vocabulary means.",
-      "The argument matters because national parties govern coalitions whose members may share a label and candidates while holding systematically different priorities rooted in the places where they live."
-    ],
-    findings: [
-      "Electoral outcomes become more dispersed, not less, as analysis moves from the nation to states, counties, and more local geographic units.",
-      "The urban-rural divide structures how people experience and interpret national political conflict.",
-      "Place-based differences persist within parties, especially on guns, environmental policy, immigration, reproductive policy, and public spending.",
-      "Nationalization has reorganized localism within national parties rather than eliminating it."
-    ],
-    designLabel: "County-level electoral distributions and survey analysis",
-    keywords: ["nationalization", "localism", "urban-rural divide", "place effects", "intraparty heterogeneity"],
-    relatedSlugs: ["electoral-geography", "urban-rural-contentment", "short-haul-moves", "geolocation", "ecologies-of-unease"]
-  }
-};
-
-const firstSentence = (text: string) => cleanText(text).match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? cleanText(text);
-
-const sentenceLimit = (text?: string | null, limit = 2) => {
-  const value = cleanText(text);
-  if (!value) return "";
-  const sentences = value.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((sentence) => sentence.trim()) ?? [value];
-  return cleanText(sentences.slice(0, limit).join(" "));
-};
 
 const asList = (value?: string[] | null) => (Array.isArray(value) ? value.map(cleanText).filter(Boolean) : []);
 
@@ -230,8 +54,7 @@ const formatAuthors = (authors: string[]) => {
 };
 
 const venue = cleanText(metadata?.journal) || publication.data.venue;
-const contribution =
-  firstSentence(metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+const contribution = publicationSummary(publication.data, metadata);
 const abstract = cleanText(metadata?.abstract);
 const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
 const authors = publication.data.authors.length ? publication.data.authors : metadata?.authors ?? [];
@@ -248,7 +71,6 @@ publication.data.links.forEach((link) => addLink(linkMap, link.label, link.url))
 addLink(linkMap, "PDF", metadata?.links?.pdf);
 addLink(linkMap, "DOI", metadata?.doi ? `https://doi.org/${metadata.doi.replace(/^https?:\/\/doi\.org\//, "")}` : undefined);
 addLink(linkMap, "Journal", metadata?.links?.journal);
-addLink(linkMap, "Publisher", metadata?.links?.publisher);
 addLink(linkMap, "Replication Data", metadata?.links?.replication_data);
 addLink(linkMap, "Code", metadata?.links?.code);
 
@@ -282,7 +104,8 @@ const themeHref = (theme: string) => {
   return majorTheme ? researchTopicPath(majorTheme) : `/research/?q=${encodeURIComponent(theme)}`;
 };
 
-const currentOverride = profileOverrides[publication.id];
+const editorial = publication.data.editorial;
+const isReview = publication.data.type === "Review";
 const publicationThemeLinks = Array.from(new Set(publication.data.themes)).slice(0, 5);
 const methodLikeTags = new Set([
   "observational study",
@@ -295,7 +118,7 @@ const methodLikeTags = new Set([
 ]);
 const normalizeTag = (value: string) => normalizeTitle(value).replace(/\s+/g, " ");
 const keywordThemes = Array.from(new Set([
-  ...(currentOverride?.keywords ?? []),
+  ...(editorial?.keywords ?? []),
   ...asList(metadata?.tags)
 ]))
   .filter((theme) => {
@@ -308,39 +131,19 @@ const keywordThemes = Array.from(new Set([
   .slice(0, 6);
 const visibleThemes = Array.from(new Set([...publicationThemeLinks, ...keywordThemes])).slice(0, 10);
 
-const lowerContribution = contribution.charAt(0).toLowerCase() + contribution.slice(1);
-const themePhrase = publication.data.themes.slice(0, 3).join(", ").toLowerCase();
-const fallbackOpening =
-  publication.data.type === "Book"
-    ? `${publication.data.title} examines ${lowerContribution.replace(/^examines\s+/i, "").replace(/[.!?]$/, "")}.`
-    : `This publication situates ${publication.data.title} within work on ${themePhrase || "American politics"}.`;
-
-const whyItMatters = currentOverride?.why ??
-  [
-    metadata?.research_question ? `The publication begins with a motivating question: ${sentenceLimit(metadata.research_question, 2)}` : fallbackOpening,
-    `Its central contribution is to show that ${lowerContribution.replace(/[.!?]$/, "")}.`,
-    metadata?.policy_relevance
-      ? sentenceLimit(metadata.policy_relevance, 2)
-      : `It matters because the findings connect institutional choices to the way authority, public responsibility, and political behavior are experienced in practice.`
-  ].filter(Boolean);
-
-const keyFindings = (currentOverride?.findings ??
-  (asList(metadata?.research_highlights).length
-  ? asList(metadata?.research_highlights)
-  : sentenceLimit(metadata?.plain_english_summary ?? publication.data.summary, 4)
-      .split(/(?<=[.!?])\s+/)
-      .filter(Boolean)
-)).slice(0, 5);
-
-const designRows = [
-  { label: "Design", value: currentOverride?.designLabel || meaningfulValue(metadata?.identification_strategy) || (publication.data.type === "Book" ? "Book-length scholarly monograph" : meaningfulValue(publication.data.type)) },
+const contextParagraphs = editorial?.context ?? (metadata?.policy_relevance ? [cleanText(metadata.policy_relevance)] : []);
+const keyFindings = (editorial?.findings ?? asList(metadata?.research_highlights)).slice(0, 5);
+const designRows = (isReview ? [
+  { label: "Format", value: editorial?.designLabel || "Critical book review" },
+  { label: "Evidence discussed in the book", value: asList(metadata?.data_sources).join("; ") }
+] : [
+  { label: "Design", value: editorial?.designLabel || meaningfulValue(metadata?.identification_strategy) || asList(metadata?.filters.research_design).join("; ") || (publication.data.type === "Book" ? "Book-length scholarly monograph" : "") },
   { label: "Data", value: asList(metadata?.data_sources).join("; ") },
   { label: "Geography", value: meaningfulValue(metadata?.geography) },
   { label: "Time Period", value: meaningfulValue(metadata?.time_period) },
   { label: "Unit of Analysis", value: meaningfulValue(metadata?.unit_of_analysis) },
-  { label: "Sample Size", value: meaningfulValue(metadata?.sample_size) },
   { label: "Methods", value: asList(metadata?.methods).join("; ") }
-].filter((row) => row.value);
+]).filter((row) => row.value);
 
 const citationRows = [
   { label: "Venue", value: venue },
@@ -351,8 +154,8 @@ const citationRows = [
 ].filter((row) => row.value);
 
 const summaryForPublication = (entry: Publication) => {
-  const entryMetadata = metadataForPublication(entry);
-  return firstSentence(entryMetadata?.card_summary ?? entryMetadata?.plain_english_summary ?? entry.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+  const entryMetadata = getPublicationMetadata(entry);
+  return publicationSummary(entry.data, entryMetadata);
 };
 
 const relatedPublications = allPublications
@@ -366,7 +169,7 @@ const relatedPublications = allPublications
   .slice(0, 8);
 
 const publicationBySlug = new Map(allPublications.map((entry) => [entry.id, entry]));
-const curatedRelatedPublications = (currentOverride?.relatedSlugs ?? [])
+const curatedRelatedPublications = (editorial?.relatedSlugs ?? [])
   .map((slug) => publicationBySlug.get(slug))
   .filter((entry): entry is Publication => entry !== undefined && entry.id !== publication.id);
 const curatedRelatedSlugs = new Set(curatedRelatedPublications.map((entry) => entry.id));
@@ -384,7 +187,9 @@ const publicationUrl = `${siteUrl}/research/${publication.id}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
 const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
-const publicationFigureCaption = currentOverride?.figureCaption ?? publicationFigure?.caption;
+const publicationFigureCaption = publicationFigure?.kind === "poster"
+  ? "Fictional AI-generated illustration inspired by this research. Imagery and numbers are illustrative, not research findings."
+  : editorial?.figureCaption ?? publicationFigure?.caption;
 const doiValue = meaningfulValue(metadata?.doi).replace(/^https?:\/\/doi\.org\//, "");
 const doiUrl = doiValue ? `https://doi.org/${doiValue}` : undefined;
 const schemaTypeByPublicationType: Record<string, string> = {
@@ -411,7 +216,10 @@ const publicationStructuredData = {
         "@type": "Person",
         name
       })),
-      isPartOf: venue
+      publisher: publication.data.type === "Book" && venue
+        ? { "@type": "Organization", name: venue }
+        : undefined,
+      isPartOf: publication.data.type !== "Book" && venue
         ? {
             "@type": "Periodical",
             name: venue
@@ -495,10 +303,13 @@ const publicationStructuredData = {
             ))}
           </nav>
         )}
+        {publication.data.resourceNote && (
+          <p class="publication-resource-note">{publication.data.resourceNote} <a href="/contact/">Ask about replication materials.</a></p>
+        )}
       </div>
       {publicationFigure && (
         <figure class:list={["publication-hero-figure", publicationFigure.kind === "poster" && "publication-hero-poster"]}>
-          <img src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" decoding="async" />
+          <ResponsiveImage src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" sizes="(max-width: 900px) calc(100vw - 48px), 36vw" />
           {publicationFigureCaption && <figcaption>{publicationFigureCaption}</figcaption>}
         </figure>
       )}
@@ -529,21 +340,23 @@ const publicationStructuredData = {
       </nav>
     )}
 
-    <section class="publication-profile-section">
-      <div class="publication-profile-section-label">
-        <h2>Why It Matters</h2>
-      </div>
-      <div class="publication-profile-section-body publication-essay">
-        {whyItMatters.map((paragraph) => (
-          <p>{paragraph}</p>
-        ))}
-      </div>
-    </section>
+    {contextParagraphs.length > 0 && (
+      <section class="publication-profile-section">
+        <div class="publication-profile-section-label">
+          <h2>{isReview ? "About the Review" : "Why It Matters"}</h2>
+        </div>
+        <div class="publication-profile-section-body publication-essay">
+          {contextParagraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+    )}
 
     {keyFindings.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>Key Findings</h2>
+          <h2>{isReview ? "Evidence Discussed in the Book" : "Key Findings"}</h2>
         </div>
         <div class="publication-profile-section-body">
           <ul class="publication-finding-list">
@@ -558,7 +371,7 @@ const publicationStructuredData = {
     {designRows.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>Research Design</h2>
+          <h2>{isReview ? "Review Format and Sources" : "Research Design"}</h2>
         </div>
         <div class="publication-profile-section-body">
           <dl class="publication-design-grid">

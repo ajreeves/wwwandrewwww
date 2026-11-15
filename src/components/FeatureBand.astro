@@ -1,4 +1,6 @@
 ---
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+
 interface Props {
   eyebrow: string;
   title: string;
@@ -18,7 +20,12 @@ const { eyebrow, title, text, image, alt, caption, actionHref, actionLabel, reve
 <section id={id} class="container-wide page-section page-section-feature">
   <div class={`feature-band ${reversed ? "feature-band-reversed" : ""}`}>
     <figure class="feature-band-media">
-      <img src={image} alt={alt} loading="lazy" />
+      <ResponsiveImage
+        src={image}
+        alt={alt}
+        loading="lazy"
+        sizes="(min-width: 1500px) 940px, (min-width: 1024px) 65vw, (min-width: 640px) calc(100vw - 4rem), calc(100vw - 2rem)"
+      />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
     <div class="feature-band-copy">

@@ -1,106 +1,16 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { academicAppointment } from "@data/academic-appointment";
 
-const galleryPhotos = [
-  {
-    src: "/images/andrew-reeves-frick-initiatives-speaking.jpg",
-    alt: "Andrew Reeves speaking at the launch of the Frick Initiatives",
-    width: 2200,
-    height: 1466,
-    caption: "Andrew Reeves at the launch of the Frick Initiatives. Photo: Suzy Gorman."
-  },
-  {
-    src: "/images/weidenbaum-center-annual-reception-2024.jpg",
-    alt: "Feng Sheng Hu, Andrew Reeves, Chancellor Andrew Martin, and Chancellor Emeritus Mark Wrighton at the 2024 Weidenbaum Center annual reception",
-    width: 2400,
-    height: 1600,
-    caption: "Feng Sheng Hu, Andrew Reeves, Andrew Martin, and Mark Wrighton at the Weidenbaum Center annual reception, May 16, 2024. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/federal-reserve-presidents-andrew-reeves.jpg",
-    alt: "Andrew Martin, Alberto Musalem, Thomas Melzer, Andrew Reeves, James Bullard, Karen Branding, and Elizabeth Larson at a Weidenbaum Center Federal Reserve event",
-    width: 2400,
-    height: 1596,
-    caption: "Andrew Martin, Alberto Musalem, Thomas Melzer, Andrew Reeves, James Bullard, Karen Branding, and Elizabeth Larson at The Past, Present, and Future of the Federal Reserve, September 29, 2025. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/andrew-martin-phil-gramm-andrew-reeves.png",
-    alt: "Chancellor Andrew Martin, former U.S. Senator Phil Gramm, and Andrew Reeves at a Weidenbaum Center event",
-    width: 1537,
-    height: 1023,
-    caption: "Chancellor Andrew Martin, former U.S. Senator Phil Gramm, and Andrew Reeves at a Weidenbaum Center discussion of The Triumph of Economic Freedom, April 9, 2026. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/george-zimmer-andrew-reeves.jpg",
-    alt: "George Zimmer and Andrew Reeves during Zimmer's visit to Washington University",
-    width: 2400,
-    height: 1600,
-    caption: "George Zimmer and Andrew Reeves during Zimmer's visit to Washington University, April 18, 2023. Photo: Jerry Naunheim Jr./WashU."
-  },
-  {
-    src: "/images/andrew-reeves-hoover-rai-conference.jpg",
-    alt: "Andrew Reeves speaking at a Hoover Institution Research on American Institutions conference",
-    width: 1750,
-    height: 1250,
-    caption: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference, May 2023."
-  },
-  {
-    src: "/images/adriana-kugler-andrew-reeves-conversation.jpg",
-    alt: "Federal Reserve Governor Adriana Kugler in conversation with Andrew Reeves before an audience at a Weidenbaum Center forum",
-    width: 2400,
-    height: 1111,
-    caption: "Federal Reserve Governor Adriana D. Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum, April 3, 2024. Photo: Jerry Naunheim Jr./WashU."
-  },
-  {
-    src: "/images/andrew-reeves-carolyn-bourdeaux.jpg",
-    alt: "Andrew Reeves in conversation with former U.S. Representative Carolyn Bourdeaux",
-    width: 2400,
-    height: 1600,
-    caption: "Andrew Reeves in conversation with former U.S. Representative Carolyn Bourdeaux at Governing Past Gridlock: Why Fiscal Responsibility Still Matters, January 14, 2026. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/andrew-reeves-melanie-fontes-rainer.jpg",
-    alt: "Andrew Reeves with Melanie Fontes Rainer of the U.S. Department of Health and Human Services",
-    width: 2400,
-    height: 1600,
-    caption: "Andrew Reeves and Melanie Fontes Rainer, director of the Office for Civil Rights at the U.S. Department of Health and Human Services, November 13, 2024. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/andrew-reeves-frick-candid.jpg",
-    alt: "Andrew Reeves laughing during a conversation at the launch of the Frick Initiatives",
-    width: 2400,
-    height: 1600,
-    caption: "Andrew Reeves in conversation with Bob Frick at the launch of the Frick Initiatives. Photo: Suzy Gorman."
-  },
-  {
-    src: "/images/mahendra-gupta-barbara-frick-andrew-reeves.jpg",
-    alt: "Mahendra Gupta, Penny Pennington, and Andrew Reeves at the launch of the Frick Initiatives",
-    width: 2400,
-    height: 1600,
-    caption: "Mahendra Gupta, Penny Pennington, and Andrew Reeves at the launch of the Frick Initiatives. Photo: Suzy Gorman."
-  },
-  {
-    src: "/images/andrew-reeves-andrew-martin-barbara-bob-frick.jpg",
-    alt: "Andrew Reeves, Chancellor Andrew Martin, Barbara Frick, and Bob Frick at the launch of the Frick Initiatives",
-    width: 2400,
-    height: 1600,
-    caption: "Andrew Reeves, Chancellor Andrew Martin, Barbara Frick, and Bob Frick at the launch of the Frick Initiatives. Photo: Sid Hastings/WashU."
-  },
-  {
-    src: "/images/andrew-reeves-university-address-2025.jpg",
-    alt: "Andrew Reeves delivering remarks from a lectern at Washington University",
-    width: 2400,
-    height: 1600,
-    caption: "Andrew Reeves delivering remarks at Washington University, 2025. Photo: Dan Donovan/WashU."
-  }
-] as const;
+import { galleryPhotos } from "@data/about-gallery";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 ---
 
 <BaseLayout
   title="About"
   active="About"
-  description="Biography of Andrew Reeves, professor of political science at Washington University in St. Louis."
+  description={`Biography of Andrew Reeves, ${academicAppointment.descriptionTitle} at Washington University in St. Louis.`}
 >
   <PageHeader
     eyebrow="Biography"
@@ -120,15 +30,15 @@ const galleryPhotos = [
         {
           galleryPhotos.map((photo, index) => (
             <figure class:list={["about-profile-photo", index === 0 && "is-active"]} data-gallery-slide aria-hidden={index === 0 ? "false" : "true"}>
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                width={photo.width}
-                height={photo.height}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding={index === 0 ? undefined : "async"}
-                fetchpriority={index === 0 ? "high" : undefined}
-              />
+              <div class="about-photo-media">
+                {index === 0 ? (
+                  <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" fetchpriority="high" />
+                ) : (
+                  <template data-gallery-image>
+                    <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(max-width: 1100px) calc(100vw - 32px), 1024px" loading="eager" />
+                  </template>
+                )}
+              </div>
               <figcaption>{photo.caption}</figcaption>
             </figure>
           ))
@@ -156,7 +66,7 @@ const galleryPhotos = [
 
     <article class="editorial-prose mx-auto max-w-4xl">
       <p>
-        Andrew Reeves is Professor of Political Science at Washington University in St. Louis. He studies the American presidency, public policy, and democratic accountability. His work examines how presidents exercise power, how government distributes resources, and how citizens&rsquo; experiences of policy shape their evaluations of elected leaders. He is particularly interested in the geographic and political inequalities that emerge when public policy is put into practice.
+        Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. He studies the American presidency, public policy, and democratic accountability. His work examines how presidents exercise power, how government distributes resources, and how citizens&rsquo; experiences of policy shape their evaluations of elected leaders. He is particularly interested in the geographic and political inequalities that emerge when public policy is put into practice.
       </p>
 
       <p>
@@ -172,7 +82,7 @@ const galleryPhotos = [
       </p>
 
       <p>
-        Reeves also serves as Senior Advisor to the Chancellor and as a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
+        Reeves also serves as Professor of Law by courtesy at WashU, Senior Advisor to the Chancellor, and a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
       </p>
     </article>
   </section>
@@ -187,10 +97,22 @@ const galleryPhotos = [
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       let current = 0;
       let paused = reduceMotion;
+      let pausedBeforePointer = paused;
       let timer: number | undefined;
 
-      const showSlide = (next: number) => {
+      const loadSlide = (index: number) => {
+        const slide = slides[(index + slides.length) % slides.length];
+        const template = slide.querySelector<HTMLTemplateElement>("[data-gallery-image]");
+        if (template) template.replaceWith(template.content.cloneNode(true));
+        return slide.querySelector<HTMLImageElement>("img");
+      };
+
+      const showSlide = async (next: number) => {
         current = (next + slides.length) % slides.length;
+        const requested = current;
+        const image = loadSlide(current);
+        await image?.decode().catch(() => {});
+        if (current !== requested) return;
         slides.forEach((slide, index) => {
           const active = index === current;
           slide.classList.toggle("is-active", active);
@@ -201,6 +123,7 @@ const galleryPhotos = [
           dot.classList.toggle("is-active", active);
           active ? dot.setAttribute("aria-current", "true") : dot.removeAttribute("aria-current");
         });
+        loadSlide(current + 1);
       };
 
       const stopTimer = () => {
@@ -210,8 +133,22 @@ const galleryPhotos = [
 
       const startTimer = () => {
         stopTimer();
-        if (!paused) timer = window.setInterval(() => showSlide(current + 1), 7000);
+        if (!paused && !document.hidden) timer = window.setInterval(() => showSlide(current + 1), 7000);
       };
+
+      const setPaused = (value: boolean) => {
+        paused = value;
+        if (pauseButton) {
+          pauseButton.textContent = paused ? "Play" : "Pause";
+          pauseButton.setAttribute("aria-pressed", String(paused));
+        }
+        startTimer();
+      };
+
+      // Stop on focus entry and require an explicit Play action to resume.
+      gallery.addEventListener("focusin", (event) => {
+        if (!(event.relatedTarget instanceof Node) || !gallery.contains(event.relatedTarget)) setPaused(true);
+      });
 
       gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => {
         showSlide(current - 1);
@@ -225,19 +162,14 @@ const galleryPhotos = [
         showSlide(Number(dot.dataset.galleryDot));
         startTimer();
       }));
-      pauseButton?.addEventListener("click", () => {
-        paused = !paused;
-        pauseButton.textContent = paused ? "Play" : "Pause";
-        pauseButton.setAttribute("aria-pressed", String(paused));
-        startTimer();
+      pauseButton?.addEventListener("pointerdown", () => { pausedBeforePointer = paused; });
+      pauseButton?.addEventListener("click", (event) => {
+        setPaused(!(event.detail > 0 ? pausedBeforePointer : paused));
       });
       document.addEventListener("visibilitychange", () => document.hidden ? stopTimer() : startTimer());
 
-      if (reduceMotion && pauseButton) {
-        pauseButton.textContent = "Play";
-        pauseButton.setAttribute("aria-pressed", "true");
-      }
-      startTimer();
+      loadSlide(1);
+      setPaused(reduceMotion);
     }
   </script>
 </BaseLayout>

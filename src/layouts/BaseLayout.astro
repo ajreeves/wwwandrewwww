@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { siteEnvironment } from "@data/site-environment";
 
 interface Props {
   title?: string;
@@ -32,7 +33,8 @@ const navItems = [
   { label: "Books", href: "/books/", activeOn: ["Books"] },
   { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"] },
   { label: "Media", href: "/news/", activeOn: ["News", "Talks"] },
-  { label: "CV", href: "/cv/", activeOn: ["CV"] }
+  { label: "CV", href: "/cv/", activeOn: ["CV"] },
+  { label: "Search", href: "/search/", activeOn: ["Search"] }
 ];
 ---
 
@@ -41,6 +43,7 @@ const navItems = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {siteEnvironment.noIndex && <meta name="robots" content="noindex, nofollow" />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />
@@ -60,15 +63,6 @@ const navItems = [
     <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
-    <script is:inline type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-73ZBNNCNMP", { anonymize_ip: true });
-    </script>
   </head>
   <body>
     <div class="site-shell">
@@ -109,6 +103,7 @@ const navItems = [
             <a href="/news/">News</a>
             <a href="/cv/">CV</a>
             <a href="/contact/">Contact</a>
+            <a href="/search/">Search</a>
           </div>
           <div class="footer-links">
             <a href="mailto:reeves@wustl.edu">Email</a>
@@ -119,8 +114,45 @@ const navItems = [
       </footer>
     </div>
     <script>
+      // Fonts and responsive layouts can move a section after the browser's first
+      // fragment jump. Correct it once, unless the reader has already interacted.
+      const initialHash = window.location.hash;
+      const initialSection = (() => {
+        try {
+          return document.getElementById(decodeURIComponent(initialHash.slice(1)));
+        } catch {
+          return null;
+        }
+      })();
+      const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+      // Leave reload and history restoration to the browser.
+      if ((!navigation || navigation.type === "navigate") && initialSection?.closest("main")) {
+        const interaction = new AbortController();
+        let readerMoved = false;
+        for (const event of ["wheel", "touchstart", "pointerdown", "keydown"]) {
+          window.addEventListener(event, () => { readerMoved = true; }, { passive: true, signal: interaction.signal });
+        }
+        const alignInitialSection = async () => {
+          await document.fonts.ready;
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            interaction.abort();
+            if (!readerMoved && window.location.hash === initialHash) {
+              initialSection.scrollIntoView({ block: "start", behavior: "instant" });
+            }
+          }));
+        };
+        if (document.readyState === "complete") alignInitialSection();
+        else window.addEventListener("load", alignInitialSection, { once: true });
+      }
+
       const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
       const navList = document.getElementById("main-nav-list");
+
+      const closeNavigation = () => {
+        navToggle?.setAttribute("aria-expanded", "false");
+        navToggle?.setAttribute("aria-label", "Open navigation menu");
+        navList?.classList.remove("nav-list-open");
+      };
 
       navToggle?.addEventListener("click", () => {
         const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -132,47 +164,27 @@ const navItems = [
       document.addEventListener("click", (e) => {
         const target = e.target as Node;
         if (!navToggle?.contains(target) && !navList?.contains(target)) {
-          navToggle?.setAttribute("aria-expanded", "false");
-          navToggle?.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
+        }
+      });
+
+      // Keep the expanded header from covering the next keyboard destination.
+      document.querySelector(".site-nav")?.addEventListener("focusout", (event) => {
+        const next = (event as FocusEvent).relatedTarget;
+        if (next instanceof Node && !navToggle?.contains(next) && !navList?.contains(next)) {
+          closeNavigation();
         }
       });
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && navToggle?.getAttribute("aria-expanded") === "true") {
-          navToggle.setAttribute("aria-expanded", "false");
-          navToggle.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
           navToggle.focus();
         }
       });
     </script>
-    <!-- Default Statcounter code for Andrew Reeves (New)
-    http://andrewreeves.org -->
-    <script is:inline type="text/javascript">
-      window["sc_project"] = 12348960;
-      window["sc_invisible"] = 1;
-      window["sc_security"] = "3aa7f28c";
-    </script>
-    <script
-      is:inline
-      type="text/javascript"
-      src="https://www.statcounter.com/counter/counter.js"
-      async
-    ></script>
-    <noscript>
-      <div class="statcounter">
-        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank">
-          <img
-            class="statcounter"
-            src="https://c.statcounter.com/12348960/0/3aa7f28c/1/"
-            alt="Web Analytics Made Easy - Statcounter"
-            referrerpolicy="no-referrer-when-downgrade"
-          />
-        </a>
-      </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
-    <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+    {siteEnvironment.analyticsEnabled && (
+      <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+    )}
   </body>
 </html>

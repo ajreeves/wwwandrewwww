@@ -16,7 +16,7 @@
   "links": {
     "pdf": "/papers/appearances.pdf",
     "journal": "http://apr.sagepub.com/content/39/3/534",
-    "replication_data": "http://people.bu.edu/areeves",
+    "replication_data": null,
     "code": null
   },
   "card_summary": "In the 2008 presidential campaign, McCain-Palin targeted core Republican counties while Obama-Biden focused on counties with significant population growth, reflecting divergent base and peripheral campaign strategies.",
@@ -53,7 +53,7 @@
   "policy_relevance": null,
   "pull_quote": "McCain-Palin pursued a base strategy by targeting core partisan counties where the Bush–Cheney ticket performed well in 2004. Barack Obama and Joseph Biden, in contrast, pursued a peripheral strategy.",
   "pull_quote_page": 3,
-  "confidence_notes": "All extracted fields are directly supported by the article text and tables. No inferences were made beyond the explicit content of the document.",
+  "confidence_notes": "All extracted fields are directly supported by the article text and tables. No inferences were made beyond the explicit content of the document. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
   "tags": [
     "American politics",
     "elections",

@@ -1,0 +1,129 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { StudentRecord } from "@data/doctoralStudents";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+
+interface Props {
+  student: StudentRecord;
+  publications?: CollectionEntry<"publications">[];
+}
+
+const { student, publications = [] } = Astro.props;
+const initials = student.name.split(/\s+/).filter(Boolean).map((part) => part[0]);
+const monogram = initials.length > 1 ? `${initials[0]}${initials.at(-1)}` : initials[0];
+const hasDetails = student.current_position || student.dissertation_or_thesis_title || student.awards?.length;
+const profileHost = student.profile_url ? new URL(student.profile_url).hostname : "";
+const profileIsLinkedIn = profileHost === "linkedin.com" || profileHost.endsWith(".linkedin.com");
+const linkedInUrl = student.linkedin_url ?? (profileIsLinkedIn ? student.profile_url : undefined);
+const primaryLink = student.homepage_url ?? linkedInUrl ?? student.profile_url;
+const PortraitTag = primaryLink ? "a" : "div";
+const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" : linkedInUrl ? "LinkedIn profile" : "profile"}`;
+---
+
+<article class="student-card">
+  <header class="student-card-header">
+    <PortraitTag class="student-card-portrait" href={primaryLink} aria-label={primaryLink ? portraitLinkLabel : undefined}>
+      {student.photo_url ? (
+        <ResponsiveImage
+          src={student.photo_url}
+          alt={`Portrait of ${student.name}`}
+          sizes="(max-width: 640px) 80px, 112px"
+          loading="lazy"
+        />
+      ) : <span class="student-card-initials" aria-hidden="true">{monogram}</span>}
+    </PortraitTag>
+    <div class="student-card-identity">
+      <div class="student-card-heading">
+        <h3>{primaryLink ? <a class="student-name-link" href={primaryLink}>{student.name}</a> : student.name}</h3>
+        <p class="student-card-advising"><span class="student-card-advising-label">Advising role: </span>{student.role} <span class="student-card-year">· {student.year}</span></p>
+      </div>
+      <p class="student-card-education"><span>{student.degree}</span> <span class="student-card-education-separator" aria-hidden="true">·</span> <span>{student.institution}</span></p>
+      {(student.homepage_url || student.profile_url || linkedInUrl) && (
+        <div class="student-card-links">
+          {student.homepage_url && <a href={student.homepage_url}>Homepage<span class="sr-only">: {student.name}</span></a>}
+          {linkedInUrl && <a href={linkedInUrl}>LinkedIn<span class="sr-only">: {student.name}</span></a>}
+          {student.profile_url && !profileIsLinkedIn && <a href={student.profile_url}>Profile<span class="sr-only">: {student.name}</span></a>}
+        </div>
+      )}
+    </div>
+  </header>
+  {student.photo_credit && <p class="student-card-photo-credit">Photo: {student.photo_credit}</p>}
+  {student.research_description && <p class="student-card-description">{student.research_description}</p>}
+
+  {hasDetails && <dl class="student-card-details">
+    {student.current_position && <div><dt>Position</dt><dd>{student.current_position}</dd></div>}
+    {student.dissertation_or_thesis_title && (
+      <div>
+        <dt>{student.category === "doctoral" ? "Dissertation" : "Thesis"}</dt>
+        <dd>{student.dissertation_or_thesis_title}</dd>
+      </div>
+    )}
+    {student.awards && student.awards.length > 0 && (
+      <div><dt>Recognition</dt><dd><ul>{student.awards.map((award) => <li>{award}</li>)}</ul></dd></div>
+    )}
+  </dl>}
+
+  {publications.length > 0 && (
+    <div class="student-card-work">
+      <p class="kicker">Selected collaborative work</p>
+      <ul>
+        {publications.map((publication) => (
+          <li>
+            <a href={`/research/${publication.id}/`}>{publication.data.title}</a>
+            <span>{publication.data.year} · {publication.data.venue}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</article>
+
+<style>
+  .student-card {
+    min-width: 0;
+    padding: clamp(1rem, 1.5vw, 1.25rem);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--olive);
+    background: var(--paper);
+    overflow-wrap: anywhere;
+  }
+  .student-card-header { display: flex; align-items: flex-start; gap: 1rem; }
+  .student-card-portrait { flex: 0 0 112px; width: 112px; height: 140px; overflow: hidden; border-radius: 2px; background: var(--ivory); }
+  a.student-card-portrait:hover, a.student-card-portrait:focus-visible { outline: 3px solid var(--olive-dark); outline-offset: 4px; }
+  .student-card-portrait :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .student-card-initials { display: grid; place-items: center; height: 100%; border: 1px solid var(--rule); color: var(--olive-dark); font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.04em; }
+  .student-card-identity { min-width: 0; }
+  h3 { margin: 0; font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.2; }
+  .student-name-link { color: inherit; text-decoration: none; }
+  .student-name-link:hover, .student-name-link:focus-visible { color: var(--olive-dark); text-decoration: underline; text-underline-offset: 0.15em; }
+  .student-card-advising { margin: 0.35rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.45; }
+  .student-card-year { white-space: nowrap; }
+  .student-card-photo-credit { margin: 0.4rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.75rem; }
+  .student-card-education { margin: 0.35rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; }
+  .student-card-description { margin: 0.65rem 0 0; font-size: 1.05rem; line-height: 1.5; }
+  .student-card-details { display: grid; gap: 0.45rem; margin: 0.65rem 0 0; }
+  .student-card-details div { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 0.6rem; }
+  dt { color: var(--muted); font-family: var(--font-sans); font-size: 0.8rem; line-height: 1.5; }
+  dd { margin: 0; font-size: 0.95rem; line-height: 1.5; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  .student-card-work { border-top: 1px solid var(--rule); margin-top: 0.75rem; padding-top: 0.65rem; }
+  .student-card-work .kicker { margin: 0; }
+  .student-card-work ul { display: grid; gap: 0.55rem; margin-top: 0.4rem; }
+  .student-card-work li { line-height: 1.4; }
+  .student-card-work a { font-size: 1rem; line-height: 1.4; }
+  .student-card-work span { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+  .student-card-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.25rem; }
+  .student-card-links a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-sans); font-size: 0.85rem; }
+  @media (max-width: 640px) {
+    .student-card-header { display: grid; grid-template-columns: 80px minmax(0, 1fr); grid-template-rows: auto 1fr auto; gap: 0.25rem 0.75rem; }
+    .student-card-identity { display: contents; }
+    .student-card-heading { grid-column: 2; grid-row: 1; min-width: 0; }
+    .student-card-portrait { grid-column: 1; grid-row: 1 / span 2; width: 80px; height: 100px; }
+    .student-card-initials { font-size: 1.5rem; }
+    .student-card-advising-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .student-card-education { display: flex; flex-direction: column; grid-column: 1 / -1; grid-row: 3; margin-top: 0.4rem; }
+    .student-card-education-separator { display: none; }
+    .student-card-links { grid-column: 2; grid-row: 2; align-self: start; margin-top: 0; }
+    .student-card-details div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  }
+</style>

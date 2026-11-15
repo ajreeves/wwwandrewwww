@@ -263,7 +263,7 @@
     "value": {
       "pdf": "/papers/spending.pdf",
       "journal": null,
-      "replication_data": "http://people.bu.edu/areeves",
+      "replication_data": null,
       "code": null
     },
     "evidence_pages": [
@@ -311,7 +311,7 @@
     "confidence": "high"
   },
   "confidence_notes": {
-    "value": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed.",
+    "value": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "evidence_pages": [
       1,
       2,

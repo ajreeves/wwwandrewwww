@@ -8,30 +8,34 @@
   },
   "authors": {
     "value": [
-      "Robert Stein",
-      "Zachary Birenbaum",
-      "Farhan Kawsar",
+      "Robert M. Stein",
+      "Christopher Mann",
       "Charles Stewart III",
+      "Zachary Birenbaum",
+      "Anson Fung",
+      "Jed Greenberg",
+      "Farhan Kawsar",
       "Gayle Alberda",
       "R. Michael Alvarez",
+      "Lonna Atkeson",
       "Emily Beaulieu",
       "Nathaniel A. Birkhead",
-      "Frederick Boehmke",
+      "Frederick J. Boehmke",
       "Joshua Boston",
       "Barry C. Burden",
       "Francisco Cantu",
       "Rachael Cobb",
       "David Darmofal",
       "Thomas C. Ellington",
+      "Terri Susan Fine",
       "Charles J. Finocchiaro",
-      "Michael Gilbert",
+      "Michael D. Gilbert",
       "Victor Haynes",
       "Brian Janssen",
       "David Kimball",
       "Charles Kromkowski",
       "Elena Llaudet",
-      "Christopher Mann",
-      "Ken Mayer",
+      "Kenneth R. Mayer",
       "Matthew R. Miles",
       "David Miller",
       "Lindsay Nielson",
@@ -39,14 +43,16 @@
       "Costas Panagopoulos",
       "Andrew Reeves",
       "Min Hee Seo",
+      "Haley Simmons",
       "Corwin Smidt",
+      "Farrah M. Stone",
       "Rachel VanSickle-Ward",
+      "Jennifer Nicoll Victor",
       "Abby Wood",
       "Julie Wronski"
     ],
     "evidence_pages": [
-      1,
-      2
+      1
     ],
     "confidence": "high"
   },
@@ -66,12 +72,16 @@
   },
   "volume": {
     "value": "73",
-    "evidence_pages": [1],
+    "evidence_pages": [
+      1
+    ],
     "confidence": "high"
   },
   "issue": {
     "value": "2",
-    "evidence_pages": [1],
+    "evidence_pages": [
+      1
+    ],
     "confidence": "high"
   },
   "pages": {
@@ -103,18 +113,16 @@
     "confidence": "high"
   },
   "one_sentence_summary": {
-    "value": "A nationwide observational study of polling places during the 2016 U.S. presidential election found that wait times and voting processes varied by time of day and that strict voter ID requirements had different effects on check-in times in majority-white versus majority-nonwhite polling places.",
+    "value": "Researchers observed polling-place operations in 28 jurisdictions during the 2016 U.S. presidential election, measuring queues, check-in times, and ballot completion times.",
     "evidence_pages": [
-      1,
-      12
+      1
     ],
     "confidence": "high"
   },
   "plain_english_summary": {
-    "value": "Researchers observed polling places across the U.S. during the 2016 presidential election and found that mornings were busiest, more poll workers reduced wait times, and strict voter ID laws sped up check-in in majority-white areas but slowed it in majority-nonwhite areas.",
+    "value": "Researchers observed polling-place operations in 28 jurisdictions during the 2016 U.S. presidential election, measuring queues, check-in times, and ballot completion times. Mornings were busiest, and photo ID requirements had different associations with check-in times in majority-white and majority-nonwhite polling places.",
     "evidence_pages": [
-      1,
-      12
+      1
     ],
     "confidence": "high"
   },
@@ -289,7 +297,7 @@
     "confidence": "high"
   },
   "citation": {
-    "value": "Stein, Robert, Zachary Birenbaum, Farhan Kawsar, Charles Stewart III, Gayle Alberda, R. Michael Alvarez, Emily Beaulieu, Nathaniel A. Birkhead, Frederick Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Charles J. Finocchiaro, Michael Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Christopher Mann, Ken Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Corwin Smidt, Rachel VanSickle-Ward, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439-453. https://doi.org/10.1177/1065912919832374",
+    "value": "Stein, Robert M., Christopher Mann, Charles Stewart III, Zachary Birenbaum, Anson Fung, Jed Greenberg, Farhan Kawsar, Gayle Alberda, R. Michael Alvarez, Lonna Atkeson, Emily Beaulieu, Nathaniel A. Birkhead, Frederick J. Boehmke, Joshua Boston, Barry C. Burden, Francisco Cantu, Rachael Cobb, David Darmofal, Thomas C. Ellington, Terri Susan Fine, Charles J. Finocchiaro, Michael D. Gilbert, Victor Haynes, Brian Janssen, David Kimball, Charles Kromkowski, Elena Llaudet, Kenneth R. Mayer, Matthew R. Miles, David Miller, Lindsay Nielson, Yu Ouyang, Costas Panagopoulos, Andrew Reeves, Min Hee Seo, Haley Simmons, Corwin Smidt, Farrah M. Stone, Rachel VanSickle-Ward, Jennifer Nicoll Victor, Abby Wood, and Julie Wronski. 2020. \"Waiting to Vote in the 2016 Presidential Election: Evidence from a Multi-County Study.\" Political Research Quarterly 73(2): 439–453. https://doi.org/10.1177/1065912919832374",
     "evidence_pages": [
       1
     ],
@@ -357,7 +365,7 @@
     "confidence": "high"
   },
   "confidence_notes": {
-    "value": "Most fields are supported by explicit statements in the abstract, methods, results, and conclusion sections. Volume and issue are not stated in the document. Policy relevance is not directly discussed.",
+    "value": "Most fields are supported by explicit statements in the abstract, methods, results, and conclusion sections. Volume and issue are not stated in the document. Policy relevance is not directly discussed. Author names and order were reconciled against PDF page 1. The 2020 issue date, volume 73(2), and pages 439–453 are corroborated by Crossref (DOI 10.1177/1065912919832374); the supplied PDF is the 2019 online-first version.",
     "evidence_pages": [
       1,
       4,

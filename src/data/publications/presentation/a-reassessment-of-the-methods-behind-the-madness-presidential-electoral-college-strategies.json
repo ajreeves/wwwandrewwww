@@ -17,7 +17,7 @@
   "links": {
     "pdf": "http://www.people.fas.harvard.edu/~reeves/papers/reassessment.pdf",
     "journal": null,
-    "replication_data": "http://www.people.fas.harvard.edu/~reeves",
+    "replication_data": null,
     "code": null
   },
   "card_summary": "This article reassesses Shaw (1999) and finds that the original study's substantive conclusions about presidential campaign strategy are unsupported when the correct statistical methods are applied.",
@@ -53,7 +53,7 @@
   "policy_relevance": null,
   "pull_quote": "When we follow the methods as prescribed in Shaw (1999), we find that all substantive conclusions are unsupported by the data and methods.",
   "pull_quote_page": 5,
-  "confidence_notes": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements.",
+  "confidence_notes": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
   "tags": [
     "political science",
     "elections",

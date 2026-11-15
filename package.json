@@ -5,13 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "npm run test:appointment && npm run test:publications && npm run test:environment && astro check && astro build",
+    "test:appointment": "node --test scripts/academic-appointment.test.mjs",
     "preview": "astro preview",
     "publications:extract": "node scripts/publications/extract.mjs",
     "publications:validate": "node scripts/publications/validate.mjs",
     "publications:present": "node scripts/publications/presentation.mjs",
     "publications:embeddings": "node scripts/publications/embeddings.mjs",
-    "publications:generate": "npm run publications:validate && npm run publications:present"
+    "publications:generate": "npm run publications:validate && npm run publications:present",
+    "predev": "npm run images:optimize",
+    "prebuild": "npm run images:optimize",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "test:publications": "node --test scripts/publication-*.test.mjs",
+    "test:environment": "node --test scripts/site-environment.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.12",
@@ -24,7 +30,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "puppeteer-core": "^25.17.0"
+    "puppeteer-core": "^25.17.0",
+    "sharp": "0.35.5"
   },
   "engines": {
     "node": ">=22.23.4"

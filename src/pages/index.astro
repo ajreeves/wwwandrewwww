@@ -2,7 +2,10 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BookFeature from "@components/BookFeature.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
+import { academicAppointment } from "@data/academic-appointment";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 const questions = [
@@ -52,7 +55,7 @@ const featureTiles: FeatureTile[] = [
     text: "How public resources and presidential incentives move across communities.",
     href: "/research/?theme=federal-resource-allocation",
     image: "/images/federal-resource-allocation-map-1200.jpg",
-    alt: "Map showing federal resource allocation patterns",
+    alt: "Illustrative U.S. map with lines radiating from Washington, D.C.",
     width: 1200,
     height: 800,
     srcset: "/images/federal-resource-allocation-map-800.jpg 800w, /images/federal-resource-allocation-map-1200.jpg 1200w",
@@ -88,7 +91,7 @@ const personStructuredData = {
   url: "https://andrewreeves.org/",
   image: "https://andrewreeves.org/images/andrew-reeves-portrait-editorial.jpg",
   jobTitle: [
-    "Professor of Political Science",
+    academicAppointment.title,
     "Professor of Law by courtesy",
     "Director, Weidenbaum Center on the Economy, Government, and Public Policy",
     "Director, Frick Initiatives",
@@ -137,45 +140,47 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href="/images/andrew-reeves-portrait-editorial.jpg" />
+    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 900px) 100vw, 360px" />
   </Fragment>
   <section class="home-thesis-hero">
     <div class="home-thesis-copy">
       <h1>Power, place, and accountability in American political life.</h1>
       <p class="home-thesis-lede">
-        Reeves studies how presidents act through institutions, how public resources move across communities, and how citizens judge leaders when policy meets lived experience.
+        Andrew Reeves studies presidential power, how government resources reach communities, and how citizens hold leaders accountable.
       </p>
       <ul class="home-affiliations" aria-label="Appointments and affiliations">
-        <li class="affil-item">
-          <a class="affil-role" href="https://polisci.wustl.edu/">Professor of Political Science</a>
+        <li class="affil-item affil-item--primary">
+          <a class="affil-role" href="https://polisci.wustl.edu/">{academicAppointment.title}</a>
           <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://frick.washu.edu/">Director, Frick Initiatives</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item affil-item--external">
-          <a class="affil-role" href="https://www.hoover.org/">Visiting Fellow</a>
-          <a class="affil-inst" href="https://www.hoover.org/">Hoover Institution</a>
         </li>
       </ul>
       <div class="home-thesis-links" aria-label="Primary homepage links">
         <a href="/research/">Explore research</a>
         <a href="/books/">Browse books</a>
       </div>
+      <ul class="home-affiliations home-secondary-affiliations" aria-label="Additional appointments at Washington University and Hoover Institution">
+        <li class="affil-item">
+          <a class="affil-role" href="https://law.washu.edu/">Professor of Law by courtesy</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://frick.washu.edu/">Director, Frick Initiatives</a>
+        </li>
+        <li class="affil-item">
+          <a class="affil-role" href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a>
+        </li>
+        <li class="affil-item affil-item--external">
+          <a class="affil-role" href="https://www.hoover.org/">Visiting Fellow, Hoover Institution</a>
+        </li>
+      </ul>
     </div>
     <figure class="home-thesis-portrait">
-      <img
+      <ResponsiveImage
         src="/images/andrew-reeves-portrait-editorial.jpg"
         alt="Portrait of Andrew Reeves"
+        sizes="(max-width: 900px) 100vw, 360px"
         loading="eager"
         fetchpriority="high"
         width="1200"
@@ -188,7 +193,7 @@ const personStructuredData = {
     {
       featureTiles.map((item) => (
         <a class="home-feature-tile" href={item.href} aria-label={item.title}>
-          <img src={item.image} alt={item.alt} loading="lazy" width={item.width} height={item.height} srcset={item.srcset} sizes={item.sizes} />
+          <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 100vw, 33vw" />
           <span class="feature-label">{item.label}</span>
           <strong class="feature-title-v2">{item.title}</strong>
           <span class="feature-text">{item.text}</span>

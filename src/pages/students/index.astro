@@ -2,11 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import StudentCard from "@components/StudentCard.astro";
 import {
   doctoralStudents,
+  type StudentRecord,
   undergraduateHonorsNote,
-  undergraduateHonorsTheses,
-  type StudentRecord
+  undergraduateHonorsTheses
 } from "@data/doctoralStudents";
 
 const publications = await getCollection("publications");
@@ -20,26 +21,19 @@ const getPublication = (slug: string) => {
   return publication;
 };
 
-const initialsFor = (name: string) =>
-  name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("");
-
-const sortedDoctoralStudents = [...doctoralStudents].sort((a, b) => {
+const newestFirst = (a: StudentRecord, b: StudentRecord) => {
   const yearA = typeof a.year === "number" ? a.year : 9999;
   const yearB = typeof b.year === "number" ? b.year : 9999;
   return yearB - yearA || a.name.localeCompare(b.name);
-});
+};
+const sortedDoctoralStudents = [...doctoralStudents].sort(newestFirst);
+const sortedUndergraduateTheses = [...undergraduateHonorsTheses].sort(newestFirst);
 
 const tocLinks = [
   { href: "#doctoral-students-heading", label: "Doctoral Students" },
   { href: "#undergraduate-theses-heading", label: "Undergraduate Honors Theses" }
 ] as const;
 
-const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? student.profile_url;
 ---
 
 <BaseLayout
@@ -47,11 +41,14 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
   active="Students"
   description="Mentorship, advising, and student research."
 >
-  <PageHeader
-    eyebrow="Mentorship & Advising"
-    title="Students"
-    intro="Mentorship is one of the most rewarding parts of academic life. Over the years I have worked with undergraduate and doctoral students on projects spanning presidential politics, democratic accountability, political geography, election administration, and public policy."
-  />
+  <div class="students-opening">
+    <PageHeader
+      eyebrow="Mentorship & Advising"
+      title="Students"
+      intro="Mentorship is one of the most rewarding parts of academic life. I work with doctoral and undergraduate students on research in American politics and public policy."
+      compact
+    />
+  </div>
 
   <nav class="container-wide page-toc" aria-label="On this page">
     <p class="kicker">On This Page</p>
@@ -62,170 +59,25 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
 
   <section class="container-wide page-section student-page-frame" aria-labelledby="doctoral-students-heading">
     <div class="page-section-heading">
-      <p class="kicker">Graduate Mentorship</p>
       <h2 id="doctoral-students-heading">Doctoral Students</h2>
     </div>
 
-    <div class="student-profile-list">
-      {
-        sortedDoctoralStudents.map((student, index) => {
-          const profileHref = renderProfileHref(student);
-          const relatedPublications = (student.related_publications ?? []).map(getPublication);
-
-          return (
-            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
-                {
-                  student.image_url ? (
-                    <img
-                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
-                      src={student.image_url}
-                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
-                      loading="eager"
-                      decoding="async"
-                    />
-                  ) : student.photo_url ? (
-                    <img
-                      class="student-profile-photo"
-                      src={student.photo_url}
-                      alt={`Professional portrait of ${student.name}`}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
-                  )
-                }
-              </figure>
-
-              <div class="flw-feature-copy student-profile-copy">
-                <p class="kicker">{student.role} · {student.year}</p>
-                <h3>{student.name}</h3>
-                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
-
-                {student.dissertation_or_thesis_title && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Dissertation</span>
-                    <p>{student.dissertation_or_thesis_title}</p>
-                  </div>
-                )}
-
-                <dl class="student-meta-list">
-                  <div>
-                    <dt>Degree</dt>
-                    <dd>{student.degree}</dd>
-                  </div>
-                  <div>
-                    <dt>Institution</dt>
-                    <dd>{student.institution}</dd>
-                  </div>
-                  {student.current_position && (
-                    <div>
-                      <dt>Position</dt>
-                      <dd>{student.current_position}</dd>
-                    </div>
-                  )}
-                </dl>
-
-                {student.awards && student.awards.length > 0 && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Recognition</span>
-                    <ul>
-                      {student.awards.map((award) => <li>{award}</li>)}
-                    </ul>
-                  </div>
-                )}
-
-                {relatedPublications.length > 0 && (
-                  <div class="editorial-related-list student-related-work">
-                    <span>Selected collaborative work</span>
-                    <ul>
-                      {relatedPublications.map((publication) => (
-                        <li>
-                          <a href={`/research/${publication.id}/`}>{publication.data.title}</a>
-                          <em>{publication.data.year} · {publication.data.venue}</em>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {profileHref && (
-                  <div class="student-link-row">
-                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
-                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
-                  </div>
-                )}
-              </div>
-            </article>
-          );
-        })
-      }
+    <div class="student-card-list">
+      {sortedDoctoralStudents.map((student) => (
+        <StudentCard student={student} publications={(student.related_publications ?? []).map(getPublication)} />
+      ))}
     </div>
   </section>
 
   <section class="container-wide page-section student-page-frame student-undergraduate-frame" aria-labelledby="undergraduate-theses-heading">
     <div class="page-section-heading">
-      <p class="kicker">Undergraduate Mentorship</p>
       <h2 id="undergraduate-theses-heading">Undergraduate Honors Theses</h2>
     </div>
 
     {
       undergraduateHonorsTheses.length > 0 ? (
-        <div class="student-profile-list">
-          {undergraduateHonorsTheses.map((student, index) => (
-            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
-                {
-                  student.image_url ? (
-                    <img
-                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
-                      src={student.image_url}
-                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : student.photo_url ? (
-                    <img
-                      class="student-profile-photo"
-                      src={student.photo_url}
-                      alt={`Professional portrait of ${student.name}`}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
-                  )
-                }
-              </figure>
-              <div class="flw-feature-copy student-profile-copy">
-                <p class="kicker">{student.role} · {student.year}</p>
-                <h3>{student.name}</h3>
-                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
-                {student.dissertation_or_thesis_title && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Thesis</span>
-                    <p>{student.dissertation_or_thesis_title}</p>
-                  </div>
-                )}
-                {student.awards && student.awards.length > 0 && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Recognition</span>
-                    <ul>
-                      {student.awards.map((award) => <li>{award}</li>)}
-                    </ul>
-                  </div>
-                )}
-
-                {renderProfileHref(student) && (
-                  <div class="student-link-row">
-                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
-                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
-                  </div>
-                )}
-              </div>
-            </article>
-          ))}
+        <div class="student-card-list">
+          {sortedUndergraduateTheses.map((student) => <StudentCard student={student} />)}
         </div>
       ) : (
         <div class="student-empty-note">
@@ -235,3 +87,68 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
     }
   </section>
 </BaseLayout>
+
+<script>
+  // Measure natural card heights without moving DOM nodes or changing tab order.
+  // Ordinary grid rows remain the fallback when ResizeObserver is unavailable.
+  if ("ResizeObserver" in window) {
+    const lists = [...document.querySelectorAll<HTMLElement>(".student-card-list")];
+    let frame = 0;
+
+    const updateSpans = () => {
+      frame = 0;
+      const measurements = lists.flatMap((list) => {
+        const styles = getComputedStyle(list);
+        const gap = parseFloat(styles.columnGap);
+        const rowHeight = parseFloat(styles.getPropertyValue("--student-card-row-height"));
+        return [...list.querySelectorAll<HTMLElement>(".student-card")].map((card) => ({
+          card,
+          span: String(Math.ceil((card.getBoundingClientRect().height + gap) / rowHeight))
+        }));
+      });
+      for (const { card, span } of measurements) {
+        card.style.setProperty("--student-card-span", span);
+      }
+      for (const list of lists) list.dataset.stacked = "true";
+    };
+
+    const scheduleLayout = () => {
+      if (!frame) frame = requestAnimationFrame(updateSpans);
+    };
+    const observer = new ResizeObserver(scheduleLayout);
+    for (const list of lists) {
+      for (const card of list.querySelectorAll<HTMLElement>(".student-card")) observer.observe(card);
+    }
+    scheduleLayout();
+  }
+</script>
+
+<style>
+  .students-opening :global(.page-opening) { padding-block: clamp(1.5rem, 3vw, 2.5rem); }
+  .students-opening :global(.page-opening-panel) { min-height: 0; padding: clamp(1.25rem, 2.5vw, 2rem); }
+  .students-opening :global(.page-opening-panel > .kicker) { margin-bottom: 0.65rem; }
+  .students-opening :global(.page-intro) { margin-top: 0.8rem; font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.5; }
+  .student-page-frame .page-section-heading { display: block; border-top: 0; margin-bottom: 1.5rem; padding-top: 1.5rem; }
+  .student-page-frame .page-section-heading h2 { max-width: none; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; scroll-margin-top: 1.5rem; }
+  .student-card-list {
+    --student-card-row-height: 4px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1rem;
+    margin-top: 0;
+  }
+  @media (min-width: 1001px) {
+    .student-card-list[data-stacked] {
+      grid-auto-rows: var(--student-card-row-height);
+      grid-auto-flow: row; /* Sparse placement preserves top-to-bottom, left-to-right order. */
+      row-gap: 0;
+    }
+    .student-card-list[data-stacked] > :global(.student-card) {
+      grid-row-end: span var(--student-card-span);
+    }
+  }
+  @media (max-width: 1000px) {
+    .student-card-list { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

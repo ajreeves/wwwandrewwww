@@ -271,15 +271,15 @@ const booksStructuredData = {
 
         return (
           <>
-            <article id={book.id} class="book-destination">
-              <BookFeature book={book} reversed={index % 2 === 1} />
+            <article id={book.id} class="book-destination" aria-labelledby={`${book.id}-title`}>
+              <BookFeature book={book} reversed={index % 2 === 1} headingLevel={2} headingId={`${book.id}-title`} />
 
               {details && (
                 <div class="book-expanded-panel">
-                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-argument`}>
+                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-title ${book.id}-argument`}>
                     <div class="editorial-subsection-heading">
                       <p class="kicker">The Argument</p>
-                      <h2 id={`${book.id}-argument`}>What the book explains</h2>
+                      <h3 id={`${book.id}-argument`}>What the book explains</h3>
                     </div>
                     <div class="editorial-prose book-prose">
                       {details.argument.map((paragraph) => <p>{paragraph}</p>)}
@@ -328,10 +328,10 @@ const booksStructuredData = {
                     </div>
                   </section>
 
-                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-related`}>
+                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-title ${book.id}-related`}>
                     <div class="editorial-subsection-heading">
                       <p class="kicker">Related Research</p>
-                      <h2 id={`${book.id}-related`}>Related Articles</h2>
+                      <h3 id={`${book.id}-related`}>Related Articles</h3>
                     </div>
                     <div class="editorial-related-list book-related-list">
                       {relatedPublications.map((publication) => (
