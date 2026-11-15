@@ -1,0 +1,53 @@
+name: Dependabot auto-merge
+
+on:
+  pull_request_target:
+    branches: [master]
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions: {}
+
+concurrency:
+  group: dependabot-auto-merge-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  auto-merge:
+    name: Configure Dependabot auto-merge
+    if: >-
+      github.repository == 'ajreeves/wwwandrewwww' &&
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      # This privileged workflow reads metadata only. Never check out or run PR code.
+      - name: Verify Dependabot update metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3
+        with:
+          github-token: ${{ github.token }}
+      - name: Apply the minor and patch update policy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          UPDATE_TYPE: ${{ steps.metadata.outputs.update-type }}
+        run: |
+          # For a grouped update, update-type is the highest semver change.
+          case "$UPDATE_TYPE" in
+            version-update:semver-minor|version-update:semver-patch)
+              gh pr merge "$PR_URL" --auto --squash --match-head-commit "$PR_HEAD_SHA"
+              ;;
+            *)
+              # Major or unclassified updates must remain manual, even after a rebase.
+              if [ "$(gh pr view "$PR_URL" --json autoMergeRequest --jq '.autoMergeRequest != null')" = "true" ]; then
+                gh pr merge "$PR_URL" --disable-auto
+              fi
+              echo "Manual review required for update type: $UPDATE_TYPE"
+              ;;
+          esac
