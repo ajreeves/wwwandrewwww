@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "npm run test:appointment && astro check && astro build",
+    "test:appointment": "node --test scripts/academic-appointment.test.mjs",
     "preview": "astro preview",
     "publications:extract": "node scripts/publications/extract.mjs",
     "publications:validate": "node scripts/publications/validate.mjs",

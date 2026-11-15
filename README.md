@@ -18,6 +18,14 @@ npm run publications:embeddings
 
 The production build is emitted to `dist/`.
 
+## January 2027 appointment preview
+
+The endowed-chair title is **Edward Mallinckrodt Distinguished University Professor**, effective January 1, 2027 at midnight in America/Chicago (06:00 UTC). `src/data/academic-appointment.ts` controls the homepage, About biography, and metadata together.
+
+Netlify deploy previews and branch previews show the forthcoming title and include `noindex, nofollow` metadata. For a local preview, run `CHAIR_TITLE_PREVIEW=true npm run dev`. Production builds always retain the current title before the effective date, even if that preview flag is accidentally set. Because the site is static, the production release must be built and deployed on or after the effective date.
+
+`npm run build` runs the appointment date-boundary tests before building. Keep the appointment preview pull request unmerged until the January 1 release.
+
 ## Automated checks and dependency updates
 
 GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. **Build and validate**, **Dependency audit**, and the **Netlify deployment preview** must pass before merging to `master`.

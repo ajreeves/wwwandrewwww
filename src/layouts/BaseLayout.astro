@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { academicAppointment } from "@data/academic-appointment";
 
 interface Props {
   title?: string;
@@ -41,6 +42,7 @@ const navItems = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {academicAppointment.isEarlyPreview && <meta name="robots" content="noindex, nofollow" />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />

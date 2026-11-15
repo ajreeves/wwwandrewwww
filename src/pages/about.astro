@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { academicAppointment } from "@data/academic-appointment";
 
 const galleryPhotos = [
   {
@@ -100,7 +101,7 @@ const galleryPhotos = [
 <BaseLayout
   title="About"
   active="About"
-  description="Biography of Andrew Reeves, professor of political science at Washington University in St. Louis."
+  description={`Biography of Andrew Reeves, ${academicAppointment.descriptionTitle} at Washington University in St. Louis.`}
 >
   <PageHeader
     eyebrow="Biography"
@@ -156,7 +157,7 @@ const galleryPhotos = [
 
     <article class="editorial-prose mx-auto max-w-4xl">
       <p>
-        Andrew Reeves is Professor of Political Science at Washington University in St. Louis. He studies the American presidency, public policy, and democratic accountability. His work examines how presidents exercise power, how government distributes resources, and how citizens&rsquo; experiences of policy shape their evaluations of elected leaders. He is particularly interested in the geographic and political inequalities that emerge when public policy is put into practice.
+        Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. He studies the American presidency, public policy, and democratic accountability. His work examines how presidents exercise power, how government distributes resources, and how citizens&rsquo; experiences of policy shape their evaluations of elected leaders. He is particularly interested in the geographic and political inequalities that emerge when public policy is put into practice.
       </p>
 
       <p>

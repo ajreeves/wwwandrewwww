@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BookFeature from "@components/BookFeature.astro";
 import { yearRank } from "../utils/publications";
+import { academicAppointment } from "@data/academic-appointment";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 const questions = [
@@ -88,7 +89,7 @@ const personStructuredData = {
   url: "https://andrewreeves.org/",
   image: "https://andrewreeves.org/images/andrew-reeves-portrait-editorial.jpg",
   jobTitle: [
-    "Professor of Political Science",
+    academicAppointment.title,
     "Professor of Law by courtesy",
     "Director, Weidenbaum Center on the Economy, Government, and Public Policy",
     "Director, Frick Initiatives",
@@ -147,7 +148,7 @@ const personStructuredData = {
       </p>
       <ul class="home-affiliations" aria-label="Appointments and affiliations">
         <li class="affil-item">
-          <a class="affil-role" href="https://polisci.wustl.edu/">Professor of Political Science</a>
+          <a class="affil-role" href="https://polisci.wustl.edu/">{academicAppointment.title}</a>
           <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
         </li>
         <li class="affil-item">
