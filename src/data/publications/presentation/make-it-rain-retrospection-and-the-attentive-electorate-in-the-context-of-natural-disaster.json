@@ -16,7 +16,7 @@
   "links": {
     "pdf": "/papers/rain.pdf",
     "journal": null,
-    "replication_data": "http://people.bu.edu/areeves",
+    "replication_data": null,
     "code": null
   },
   "card_summary": "Voters punish presidents and governors for severe weather damage, but reward or punish them more strongly based on their actions in response to disasters, demonstrating that electorates can distinguish between random events and government responsibility.",
@@ -56,7 +56,7 @@
   "policy_relevance": null,
   "pull_quote": "The electorate is able to separate random events from governmental responses and attribute actions based on the defined roles of these two politicians.",
   "pull_quote_page": 1,
-  "confidence_notes": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article.",
+  "confidence_notes": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
   "tags": [
     "political science",
     "elections",

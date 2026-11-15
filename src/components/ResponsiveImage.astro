@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import manifest from "@data/responsive-images.json";
+
+interface Props extends Omit<HTMLAttributes<"img">, "src" | "alt"> {
+  src: string;
+  alt: string;
+  sizes: string;
+}
+const { src, alt, sizes, width, height, ...attributes } = Astro.props;
+const optimized = (manifest as Record<string, { src: string; srcset: string; width: number; height: number }>)[src];
+if (src.startsWith("/images/") && !optimized) throw new Error(`Missing responsive image: ${src}. Run npm run images:optimize.`);
+---
+<img
+  {...attributes}
+  src={optimized?.src ?? src}
+  srcset={optimized?.srcset}
+  sizes={sizes}
+  width={optimized?.width ?? width}
+  height={optimized?.height ?? height}
+  alt={alt}
+  decoding={attributes.decoding ?? "async"}
+/>

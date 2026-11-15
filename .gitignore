@@ -12,3 +12,7 @@ test-results/
 
 # Local Netlify folder
 .netlify
+
+# Reproducible responsive image derivatives, generated before dev/build.
+public/images/optimized/
+src/data/responsive-images.json

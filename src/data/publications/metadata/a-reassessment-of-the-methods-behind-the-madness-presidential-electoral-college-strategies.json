@@ -254,7 +254,7 @@
     "value": {
       "pdf": "http://www.people.fas.harvard.edu/~reeves/papers/reassessment.pdf",
       "journal": null,
-      "replication_data": "http://www.people.fas.harvard.edu/~reeves",
+      "replication_data": null,
       "code": null
     },
     "evidence_pages": [
@@ -301,7 +301,7 @@
     "confidence": "high"
   },
   "confidence_notes": {
-    "value": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements.",
+    "value": "All extracted information is directly supported by the text on the cited pages. No inferences were made beyond the document's explicit statements. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "evidence_pages": [
       1,
       2,

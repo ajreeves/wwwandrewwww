@@ -2,7 +2,8 @@
 import metadataIndex from "../data/publications/presentation/index.json";
 import publicationFigures from "../data/publication-figures.json";
 import { researchTopicPath, researchTopics } from "../data/research-topics";
-import { slugify, normalizeTitle, yearRank } from "../utils/publications";
+import { slugify, normalizeTitle, yearRank, publicationSummary } from "../utils/publications";
+import ResponsiveImage from "./ResponsiveImage.astro";
 
 interface Publication {
   id: string;
@@ -89,12 +90,6 @@ const metadataFor = (publication: Publication) => {
 const figureFor = (publication: Publication) => figureIndex[publication.id];
 
 const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
-const firstSentence = (text: string) => text.match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? text;
-const conciseSummary = (publication: Publication, metadata?: PublicationMetadata) => {
-  if (publication.data.cardSummary) return publication.data.cardSummary;
-  const summary = metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary;
-  return firstSentence(summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
-};
 const asText = (value: unknown) => {
   if (Array.isArray(value)) return value.filter(Boolean).map(String).join(" ");
   if (typeof value === "string" || typeof value === "number") return String(value);
@@ -175,7 +170,7 @@ const archiveItems = publications.map((publication) => {
     .filter((theme) => theme.terms.some((term) => source.includes(term)))
     .map((theme) => theme.value);
   const abstract = metadata?.abstract ?? "";
-  const displaySummary = conciseSummary(publication, metadata);
+  const displaySummary = publicationSummary(publication.data, metadata);
   const venue = metadata?.journal ?? publication.data.venue;
   const normalizedVenue = normalizeTitle(venue);
   const landmark =
@@ -334,8 +329,8 @@ const themeOptions = majorThemeDefinitions
                 figure.kind === "poster" && "archive-record-poster"
               ]}
             >
-              <img src={figure.src} alt={figure.alt} loading="lazy" />
-              <figcaption>Fictional AI-generated movie poster inspired by this research.</figcaption>
+              <ResponsiveImage src={figure.src} alt={figure.alt} loading="lazy" sizes="(max-width: 760px) 120px, 160px" />
+              <figcaption>{figure.kind === "poster" ? "Fictional AI-generated illustration. Imagery and numbers are illustrative, not research findings." : figure.caption}</figcaption>
             </figure>
           )}
         </article>

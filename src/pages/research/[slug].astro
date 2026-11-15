@@ -4,7 +4,8 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import { researchTopicPath } from "@data/research-topics";
 import metadataIndex from "../../data/publications/presentation/index.json";
 import publicationFigures from "../../data/publication-figures.json";
-import { normalizeTitle, yearRank } from "../../utils/publications";
+import { normalizeTitle, yearRank, publicationSummary } from "../../utils/publications";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 
 type PublicationLink = {
   label: string;
@@ -16,6 +17,8 @@ type Publication = {
   data: {
     title: string;
     summary: string;
+    cardSummary?: string;
+    resourceNote?: string;
     year: number | string;
     type: "Book" | "Article" | "Chapter" | "Working Paper" | "Review";
     venue: string;
@@ -161,7 +164,6 @@ const profileOverrides: Record<string, PublicationProfileOverride> = {
       "The result is especially important because the strongest relationship appears among residents attached to their communities, not simply those with the greatest financial exposure."
     ],
     designLabel: "Survey and precinct-level observational analysis",
-    figureCaption: "County-level susceptibility to sea-level rise, used to connect local climate vulnerability with climate-policy attitudes.",
     keywords: ["sea-level rise", "climate vulnerability", "climate mitigation", "community attachment"],
     relatedSlugs: ["ecologies-of-unease", "electoral-geography", "urban-rural-contentment", "context", "disaster-relief"]
   },
@@ -207,15 +209,6 @@ const profileOverrides: Record<string, PublicationProfileOverride> = {
   }
 };
 
-const firstSentence = (text: string) => cleanText(text).match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? cleanText(text);
-
-const sentenceLimit = (text?: string | null, limit = 2) => {
-  const value = cleanText(text);
-  if (!value) return "";
-  const sentences = value.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((sentence) => sentence.trim()) ?? [value];
-  return cleanText(sentences.slice(0, limit).join(" "));
-};
-
 const asList = (value?: string[] | null) => (Array.isArray(value) ? value.map(cleanText).filter(Boolean) : []);
 
 const meaningfulValue = (value?: string | number | null) => {
@@ -230,8 +223,7 @@ const formatAuthors = (authors: string[]) => {
 };
 
 const venue = cleanText(metadata?.journal) || publication.data.venue;
-const contribution =
-  firstSentence(metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+const contribution = publicationSummary(publication.data, metadata);
 const abstract = cleanText(metadata?.abstract);
 const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
 const authors = publication.data.authors.length ? publication.data.authors : metadata?.authors ?? [];
@@ -317,19 +309,17 @@ const fallbackOpening =
 
 const whyItMatters = currentOverride?.why ??
   [
-    metadata?.research_question ? `The publication begins with a motivating question: ${sentenceLimit(metadata.research_question, 2)}` : fallbackOpening,
+    metadata?.research_question ? `The publication begins with a motivating question: ${cleanText(metadata.research_question)}` : fallbackOpening,
     `Its central contribution is to show that ${lowerContribution.replace(/[.!?]$/, "")}.`,
     metadata?.policy_relevance
-      ? sentenceLimit(metadata.policy_relevance, 2)
+      ? cleanText(metadata.policy_relevance)
       : `It matters because the findings connect institutional choices to the way authority, public responsibility, and political behavior are experienced in practice.`
   ].filter(Boolean);
 
 const keyFindings = (currentOverride?.findings ??
   (asList(metadata?.research_highlights).length
   ? asList(metadata?.research_highlights)
-  : sentenceLimit(metadata?.plain_english_summary ?? publication.data.summary, 4)
-      .split(/(?<=[.!?])\s+/)
-      .filter(Boolean)
+  : [cleanText(metadata?.plain_english_summary ?? publication.data.summary)].filter(Boolean)
 )).slice(0, 5);
 
 const designRows = [
@@ -352,7 +342,7 @@ const citationRows = [
 
 const summaryForPublication = (entry: Publication) => {
   const entryMetadata = metadataForPublication(entry);
-  return firstSentence(entryMetadata?.card_summary ?? entryMetadata?.plain_english_summary ?? entry.data.summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
+  return publicationSummary(entry.data, entryMetadata);
 };
 
 const relatedPublications = allPublications
@@ -384,7 +374,9 @@ const publicationUrl = `${siteUrl}/research/${publication.id}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
 const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
-const publicationFigureCaption = currentOverride?.figureCaption ?? publicationFigure?.caption;
+const publicationFigureCaption = publicationFigure?.kind === "poster"
+  ? "Fictional AI-generated illustration inspired by this research. Imagery and numbers are illustrative, not research findings."
+  : currentOverride?.figureCaption ?? publicationFigure?.caption;
 const doiValue = meaningfulValue(metadata?.doi).replace(/^https?:\/\/doi\.org\//, "");
 const doiUrl = doiValue ? `https://doi.org/${doiValue}` : undefined;
 const schemaTypeByPublicationType: Record<string, string> = {
@@ -495,10 +487,13 @@ const publicationStructuredData = {
             ))}
           </nav>
         )}
+        {publication.data.resourceNote && (
+          <p class="publication-resource-note">{publication.data.resourceNote} <a href="/contact/">Ask about replication materials.</a></p>
+        )}
       </div>
       {publicationFigure && (
         <figure class:list={["publication-hero-figure", publicationFigure.kind === "poster" && "publication-hero-poster"]}>
-          <img src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" decoding="async" />
+          <ResponsiveImage src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" sizes="(max-width: 900px) calc(100vw - 48px), 36vw" />
           {publicationFigureCaption && <figcaption>{publicationFigureCaption}</figcaption>}
         </figure>
       )}

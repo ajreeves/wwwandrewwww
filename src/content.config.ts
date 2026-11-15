@@ -19,6 +19,7 @@ const publications = defineCollection({
     authors: z.array(z.string()).default(["Andrew Reeves"]),
     citation: z.string().optional(),
     cardSummary: z.string().optional(),
+    resourceNote: z.string().optional(),
     links: z
       .array(
         z.object({

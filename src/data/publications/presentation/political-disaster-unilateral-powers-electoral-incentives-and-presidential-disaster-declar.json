@@ -15,8 +15,8 @@
   "links": {
     "pdf": "/papers/fema.pdf",
     "journal": null,
-    "replication_data": "http://people.bu.edu/areeves",
-    "code": "http://people.bu.edu/areeves"
+    "replication_data": null,
+    "code": null
   },
   "card_summary": "Presidents are more likely to issue disaster declarations to electorally competitive states, especially after the 1988 Stafford Act, and are rewarded electorally for doing so.",
   "abstract": "This article argues that presidents use unilateral powers for particularistic aims to gain electoral support, focusing on presidential disaster declarations. An analysis from 1981 to 2004 finds that a state’s electoral competitiveness influences the likelihood of receiving a disaster declaration, especially after the 1988 Stafford Act expanded presidential powers. Competitive states can expect more disaster declarations, and these decisions yield electoral benefits for presidents, who are rewarded at the ballot box for issuing such declarations.",
@@ -54,7 +54,7 @@
   "policy_relevance": null,
   "pull_quote": "A highly competitive state can expect to receive twice as many presidential disaster declarations as an uncompetitive state.",
   "pull_quote_page": 1,
-  "confidence_notes": "All extracted fields are directly supported by the cited pages. No policy recommendations or identification strategies are explicitly described in the text.",
+  "confidence_notes": "All extracted fields are directly supported by the cited pages. No policy recommendations or identification strategies are explicitly described in the text. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
   "tags": [
     "American politics",
     "executive politics",

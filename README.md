@@ -18,6 +18,14 @@ npm run publications:embeddings
 
 The production build is emitted to `dist/`.
 
+`npm run dev` and `npm run build` first generate responsive WebP images with
+`npm run images:optimize`. Originals remain in `public/images/`; derived files
+under `public/images/optimized/` and `src/data/responsive-images.json` are ignored
+by Git and recreated from the gallery, publication, and student data. Cached
+variants are reused when their source and encoding settings have not changed.
+Use `ResponsiveImage.astro` for these images so dimensions and responsive sources
+stay in sync. The About gallery initially requests only its active and next images.
+
 ## January 2027 appointment preview
 
 The endowed-chair title is **Edward Mallinckrodt Distinguished University Professor**, effective January 1, 2027 at midnight in America/Chicago (06:00 UTC). `src/data/academic-appointment.ts` controls the homepage, About biography, and metadata together.

@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BookFeature from "@components/BookFeature.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
 import { academicAppointment } from "@data/academic-appointment";
 
@@ -138,7 +140,7 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href="/images/andrew-reeves-portrait-editorial.jpg" />
+    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 900px) 100vw, 360px" />
   </Fragment>
   <section class="home-thesis-hero">
     <div class="home-thesis-copy">
@@ -174,9 +176,10 @@ const personStructuredData = {
       </div>
     </div>
     <figure class="home-thesis-portrait">
-      <img
+      <ResponsiveImage
         src="/images/andrew-reeves-portrait-editorial.jpg"
         alt="Portrait of Andrew Reeves"
+        sizes="(max-width: 900px) 100vw, 360px"
         loading="eager"
         fetchpriority="high"
         width="1200"
@@ -189,7 +192,7 @@ const personStructuredData = {
     {
       featureTiles.map((item) => (
         <a class="home-feature-tile" href={item.href} aria-label={item.title}>
-          <img src={item.image} alt={item.alt} loading="lazy" width={item.width} height={item.height} srcset={item.srcset} sizes={item.sizes} />
+          <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 100vw, 33vw" />
           <span class="feature-label">{item.label}</span>
           <strong class="feature-title-v2">{item.title}</strong>
           <span class="feature-text">{item.text}</span>

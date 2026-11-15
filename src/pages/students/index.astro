@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
 import {
   doctoralStudents,
   undergraduateHonorsNote,
@@ -77,18 +78,20 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
               <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
                 {
                   student.image_url ? (
-                    <img
+                    <ResponsiveImage
                       class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
                       src={student.image_url}
                       alt={student.image_alt ?? `Public professional page for ${student.name}`}
-                      loading="eager"
+                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
+                      loading="lazy"
                       decoding="async"
                     />
                   ) : student.photo_url ? (
-                    <img
+                    <ResponsiveImage
                       class="student-profile-photo"
                       src={student.photo_url}
                       alt={`Professional portrait of ${student.name}`}
+                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
                       loading="lazy"
                       decoding="async"
                     />
@@ -178,18 +181,20 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
               <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
                 {
                   student.image_url ? (
-                    <img
+                    <ResponsiveImage
                       class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
                       src={student.image_url}
                       alt={student.image_alt ?? `Public professional page for ${student.name}`}
+                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
                       loading="lazy"
                       decoding="async"
                     />
                   ) : student.photo_url ? (
-                    <img
+                    <ResponsiveImage
                       class="student-profile-photo"
                       src={student.photo_url}
                       alt={`Professional portrait of ${student.name}`}
+                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
                       loading="lazy"
                       decoding="async"
                     />
