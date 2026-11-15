@@ -1,22 +1,12 @@
+import type { Publication } from "../utils/publication-records.ts";
+import { normalizeTitle } from "../utils/publications.ts";
+
 export type ResearchTopic = {
   slug: string;
   label: string;
   title: string;
   description: string;
   terms: string[];
-};
-
-export type PublicationLike = {
-  id: string;
-  body?: string;
-  data: {
-    title: string;
-    summary: string;
-    venue: string;
-    authors: string[];
-    citation?: string;
-    themes: string[];
-  };
 };
 
 export const researchTopics: ResearchTopic[] = [
@@ -52,15 +42,8 @@ export const researchTopics: ResearchTopic[] = [
 
 export const researchTopicPath = (slug: string) => `/research/${slug}/`;
 
-const normalize = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-
-export const publicationTopicSource = (publication: PublicationLike) =>
-  normalize(
+export const publicationTopicSource = (publication: Publication) =>
+  normalizeTitle(
     [
       publication.data.title,
       publication.data.summary,
@@ -74,9 +57,10 @@ export const publicationTopicSource = (publication: PublicationLike) =>
       .join(" ")
   );
 
-export const publicationMatchesTopic = (publication: PublicationLike, topic: ResearchTopic) => {
+// Both dedicated topic pages and archive filters use this exact membership rule.
+export const publicationMatchesTopic = (publication: Publication, topic: ResearchTopic) => {
   const source = publicationTopicSource(publication);
-  return topic.terms.some((term) => source.includes(normalize(term)));
+  return topic.terms.some((term) => source.includes(normalizeTitle(term)));
 };
 
 export const topicForSlug = (slug: string) => researchTopics.find((topic) => topic.slug === slug);

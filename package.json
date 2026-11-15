@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run test:appointment && npm run test:publications && astro check && astro build",
+    "build": "npm run test:appointment && npm run test:publications && npm run test:environment && astro check && astro build",
     "test:appointment": "node --test scripts/academic-appointment.test.mjs",
     "preview": "astro preview",
     "publications:extract": "node scripts/publications/extract.mjs",
@@ -16,7 +16,8 @@
     "predev": "npm run images:optimize",
     "prebuild": "npm run images:optimize",
     "images:optimize": "node scripts/optimize-images.mjs",
-    "test:publications": "node --test scripts/publication-summary.test.mjs"
+    "test:publications": "node --test scripts/publication-*.test.mjs",
+    "test:environment": "node --test scripts/site-environment.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.12",

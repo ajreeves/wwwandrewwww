@@ -294,6 +294,7 @@
 
 .archive-record-themes span {
   flex-basis: 100%;
+  margin-right: 0.45rem;
 }
 
 .archive-record-themes a {
@@ -3209,16 +3210,6 @@
     text-align: left;
   }
 
-  .archive-theme-button span {
-    color: inherit;
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.11em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
   .archive-theme-button strong {
     color: inherit;
     font-size: 0.68rem;
@@ -3359,11 +3350,6 @@
     letter-spacing: 0.13em;
     line-height: 1.45;
     text-transform: uppercase;
-  }
-
-  .archive-record-themes span {
-    margin-right: 0.45rem;
-    color: color-mix(in srgb, var(--muted) 72%, var(--paper));
   }
 
   .archive-record-themes a {
@@ -5243,6 +5229,21 @@
   .affil-item--external {
     margin-top: 0.35rem;
     border-top: 1px solid var(--rule);
+  }
+
+  .home-secondary-affiliations {
+    margin-top: 1.5rem;
+    border-top: 0;
+  }
+
+  .home-secondary-affiliations .affil-item {
+    padding-block: 0.4rem;
+    border-bottom: 0;
+  }
+
+  .home-secondary-affiliations .affil-role {
+    font-size: 0.95rem;
+    font-weight: 400;
   }
 
   .home-affiliations a {

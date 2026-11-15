@@ -30,7 +30,9 @@ stay in sync. The About gallery initially requests only its active and next imag
 
 The endowed-chair title is **Edward Mallinckrodt Distinguished University Professor**, effective January 1, 2027 at midnight in America/Chicago (06:00 UTC). `src/data/academic-appointment.ts` controls the homepage, About biography, and metadata together.
 
-Netlify deploy previews and branch previews show the forthcoming title and include `noindex, nofollow` metadata. For a local preview, run `CHAIR_TITLE_PREVIEW=true npm run dev`. Production builds always retain the current title before the effective date, even if that preview flag is accidentally set. Because the site is static, the production release must be built and deployed on or after the effective date.
+Netlify deploy previews and branch previews show the forthcoming title. For a local preview, run `CHAIR_TITLE_PREVIEW=true npm run dev`. Production builds always retain the current title before the effective date, even if that preview flag is accidentally set. Because the site is static, the production release must be built and deployed on or after the effective date.
+
+Indexing and analytics are controlled separately by `src/data/site-environment.ts`. Only `CONTEXT=production` builds allow indexing and load Plausible. Every other context, including local builds and previews after January 1, emits `noindex, nofollow` and omits analytics. Netlify supplies `CONTEXT`; when building for production elsewhere, set it explicitly. Google Analytics and Statcounter have been removed to avoid duplicate page-view tracking.
 
 `npm run build` runs the appointment date-boundary tests before building. Keep the appointment preview pull request unmerged until the January 1 release.
 
@@ -63,6 +65,12 @@ Content lives in `src/content/`:
 - `writing`
 
 Images and static files live in `public/`.
+
+Publication pages, archive cards, and search share the metadata resolver in `src/utils/publication-records.ts`. It matches explicit aliases, IDs, normalized titles, PDF pathnames, then unique long-title prefixes. Ambiguous matches fail the build; validation also checks unique mappings and author count/order (allowing differences in middle initials). Two books and the `persistence-of-localism` and `recounts` chapters currently have no extracted metadata; they use their content entries and are explicitly listed as exceptions. Any other missing mapping fails the build.
+
+Use optional `cardSummary` and `editorial` frontmatter in publication MDX for curated copy. `editorial` supports `context`, `findings`, `designLabel`, `figureCaption`, `keywords`, and `relatedSlugs`; existing examples include `rising-seas.mdx` and `disunion-review.mdx`. Context appears only when curated or supported by canonical policy-relevance metadata. Review pages attribute evidence to the reviewed book. Keep canonical metadata changes in the extraction pipeline below.
+
+Dedicated topic pages and archive theme filters use `publicationMatchesTopic` in `src/data/research-topics.ts`. Site search and archive text search share publication text, including authors, venues, abstracts, summaries, and MDX page text. Search also indexes book and public-writing entries; it does not index the full text of linked PDFs.
 
 ## Publication Extraction Pipeline
 

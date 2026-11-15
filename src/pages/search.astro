@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { publicationSearchEntry } from "../utils/publication-records";
+import { yearRank } from "../utils/publications";
 
 const collections = await Promise.all([
   getCollection("publications"),
@@ -10,30 +12,22 @@ const collections = await Promise.all([
 ]);
 
 const [publications, books, writing] = collections;
-const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
 const searchIndex = [
-  ...publications.filter((entry) => entry.data.type !== "Book").map((entry) => ({
-    title: entry.data.title,
-    summary: entry.data.summary,
-    type: entry.data.type,
-    year: entry.data.year,
-    themes: entry.data.themes,
-    url: `/research/${entry.id}/`
-  })),
+  ...publications.filter((entry) => entry.data.type !== "Book").map(publicationSearchEntry),
   ...books.map((entry) => ({
     title: entry.data.title,
     summary: entry.data.summary,
     type: "Book",
     year: entry.data.year,
-    themes: entry.data.themes,
-    url: "/books/"
+    searchText: [entry.data.title, entry.data.subtitle, entry.data.summary, "Andrew Reeves", ...entry.data.coauthors, entry.data.publisher, entry.data.year, ...entry.data.themes, entry.body].join(" ").toLowerCase(),
+    url: `/books/#${entry.id}`
   })),
   ...writing.map((entry) => ({
     title: entry.data.title,
     summary: entry.data.summary,
     type: "Writing",
     year: entry.data.year,
-    themes: entry.data.themes,
+    searchText: [entry.data.title, entry.data.summary, entry.data.dek, entry.data.outlet, "Andrew Reeves", entry.data.year, ...entry.data.themes, entry.body].join(" ").toLowerCase(),
     url: entry.data.url ?? "/news/"
   }))
 ].sort((a, b) => yearRank(b.year) - yearRank(a.year));
@@ -43,7 +37,7 @@ const searchIndex = [
   <PageHeader
     eyebrow="Site Index"
     title="Search the Work"
-    intro="Full-text search across publications, books, and public writing. Results stay local to the static site."
+    intro="Find publications, books, and public writing by title, author, journal, topic, or words in their summaries and abstracts."
   />
   <section class="container-narrow page-section" data-search-page>
     <label class="small-caps mb-3 block" for="site-search">Search terms</label>
@@ -76,8 +70,7 @@ const searchIndex = [
     }
 
     function score(item, query) {
-      const haystack = `${item.title} ${item.summary} ${item.type} ${item.year} ${(item.themes || []).join(" ")}`.toLowerCase();
-      return query.every((term) => haystack.includes(term));
+      return query.every((term) => item.searchText.includes(term));
     }
 
     function queryTerms() {
