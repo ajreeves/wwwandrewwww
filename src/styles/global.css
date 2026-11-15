@@ -5268,6 +5268,19 @@
     line-height: 1.3;
   }
 
+  .affil-item--primary {
+    gap: 0.35rem;
+    padding-block: 0.9rem 1rem;
+  }
+
+  .affil-item--primary .affil-role {
+    color: var(--olive-dark);
+    font-size: clamp(1.08rem, 1.4vw, 1.32rem);
+    font-weight: 600;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
   .affil-inst {
     font-family: var(--font-sans);
     font-size: clamp(0.68rem, 0.76vw, 0.76rem);
@@ -5823,6 +5836,10 @@
     .home-thesis-copy {
       grid-column: 1;
       grid-row: 1;
+    }
+
+    .home-thesis-copy h1 {
+      font-size: clamp(4.4rem, 7.5vw, 8rem);
     }
 
     .home-thesis-portrait {
