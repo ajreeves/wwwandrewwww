@@ -2,12 +2,11 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import ResponsiveImage from "@components/ResponsiveImage.astro";
+import StudentCard from "@components/StudentCard.astro";
 import {
   doctoralStudents,
   undergraduateHonorsNote,
-  undergraduateHonorsTheses,
-  type StudentRecord
+  undergraduateHonorsTheses
 } from "@data/doctoralStudents";
 
 const publications = await getCollection("publications");
@@ -21,14 +20,6 @@ const getPublication = (slug: string) => {
   return publication;
 };
 
-const initialsFor = (name: string) =>
-  name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("");
-
 const sortedDoctoralStudents = [...doctoralStudents].sort((a, b) => {
   const yearA = typeof a.year === "number" ? a.year : 9999;
   const yearB = typeof b.year === "number" ? b.year : 9999;
@@ -40,7 +31,6 @@ const tocLinks = [
   { href: "#undergraduate-theses-heading", label: "Undergraduate Honors Theses" }
 ] as const;
 
-const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? student.profile_url;
 ---
 
 <BaseLayout
@@ -67,103 +57,10 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
       <h2 id="doctoral-students-heading">Doctoral Students</h2>
     </div>
 
-    <div class="student-profile-list">
-      {
-        sortedDoctoralStudents.map((student, index) => {
-          const profileHref = renderProfileHref(student);
-          const relatedPublications = (student.related_publications ?? []).map(getPublication);
-
-          return (
-            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
-                {
-                  student.image_url ? (
-                    <ResponsiveImage
-                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
-                      src={student.image_url}
-                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
-                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : student.photo_url ? (
-                    <ResponsiveImage
-                      class="student-profile-photo"
-                      src={student.photo_url}
-                      alt={`Professional portrait of ${student.name}`}
-                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
-                  )
-                }
-              </figure>
-
-              <div class="flw-feature-copy student-profile-copy">
-                <p class="kicker">{student.role} · {student.year}</p>
-                <h3>{student.name}</h3>
-                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
-
-                {student.dissertation_or_thesis_title && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Dissertation</span>
-                    <p>{student.dissertation_or_thesis_title}</p>
-                  </div>
-                )}
-
-                <dl class="student-meta-list">
-                  <div>
-                    <dt>Degree</dt>
-                    <dd>{student.degree}</dd>
-                  </div>
-                  <div>
-                    <dt>Institution</dt>
-                    <dd>{student.institution}</dd>
-                  </div>
-                  {student.current_position && (
-                    <div>
-                      <dt>Position</dt>
-                      <dd>{student.current_position}</dd>
-                    </div>
-                  )}
-                </dl>
-
-                {student.awards && student.awards.length > 0 && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Recognition</span>
-                    <ul>
-                      {student.awards.map((award) => <li>{award}</li>)}
-                    </ul>
-                  </div>
-                )}
-
-                {relatedPublications.length > 0 && (
-                  <div class="editorial-related-list student-related-work">
-                    <span>Selected collaborative work</span>
-                    <ul>
-                      {relatedPublications.map((publication) => (
-                        <li>
-                          <a href={`/research/${publication.id}/`}>{publication.data.title}</a>
-                          <em>{publication.data.year} · {publication.data.venue}</em>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {profileHref && (
-                  <div class="student-link-row">
-                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
-                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
-                  </div>
-                )}
-              </div>
-            </article>
-          );
-        })
-      }
+    <div class="student-card-list">
+      {sortedDoctoralStudents.map((student) => (
+        <StudentCard student={student} publications={(student.related_publications ?? []).map(getPublication)} />
+      ))}
     </div>
   </section>
 
@@ -175,62 +72,8 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
 
     {
       undergraduateHonorsTheses.length > 0 ? (
-        <div class="student-profile-list">
-          {undergraduateHonorsTheses.map((student, index) => (
-            <article class={`flw-feature-card student-profile-card ${student.image_kind === "site_screenshot" ? "student-profile-card-has-screenshot" : ""} ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-              <figure class={`flw-feature-media student-profile-media ${student.image_kind === "site_screenshot" ? "student-profile-media-screenshot" : ""}`}>
-                {
-                  student.image_url ? (
-                    <ResponsiveImage
-                      class={student.image_kind === "site_screenshot" ? "student-site-preview" : "student-profile-photo"}
-                      src={student.image_url}
-                      alt={student.image_alt ?? `Public professional page for ${student.name}`}
-                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : student.photo_url ? (
-                    <ResponsiveImage
-                      class="student-profile-photo"
-                      src={student.photo_url}
-                      alt={`Professional portrait of ${student.name}`}
-                      sizes="(max-width: 760px) calc(100vw - 64px), 40vw"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  ) : (
-                    <div class="student-monogram" aria-hidden="true">{initialsFor(student.name)}</div>
-                  )
-                }
-              </figure>
-              <div class="flw-feature-copy student-profile-copy">
-                <p class="kicker">{student.role} · {student.year}</p>
-                <h3>{student.name}</h3>
-                {student.research_description && <p class="student-research-line">{student.research_description}</p>}
-                {student.dissertation_or_thesis_title && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Thesis</span>
-                    <p>{student.dissertation_or_thesis_title}</p>
-                  </div>
-                )}
-                {student.awards && student.awards.length > 0 && (
-                  <div class="editorial-info-card student-detail">
-                    <span>Recognition</span>
-                    <ul>
-                      {student.awards.map((award) => <li>{award}</li>)}
-                    </ul>
-                  </div>
-                )}
-
-                {renderProfileHref(student) && (
-                  <div class="student-link-row">
-                    {student.homepage_url && <a href={student.homepage_url}>Homepage</a>}
-                    {student.profile_url && <a href={student.profile_url}>Profile</a>}
-                  </div>
-                )}
-              </div>
-            </article>
-          ))}
+        <div class="student-card-list">
+          {undergraduateHonorsTheses.map((student) => <StudentCard student={student} />)}
         </div>
       ) : (
         <div class="student-empty-note">
@@ -240,3 +83,16 @@ const renderProfileHref = (student: StudentRecord) => student.homepage_url ?? st
     }
   </section>
 </BaseLayout>
+
+<style>
+  .student-card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 1000px) {
+    .student-card-list { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

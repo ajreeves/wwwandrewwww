@@ -2017,8 +2017,8 @@
     padding-top: clamp(1.35rem, 2.4vw, 2.25rem);
   }
 
-  .book-argument-block h2,
-  .book-related-section h2 {
+  .book-argument-block h3,
+  .book-related-section h3 {
     max-width: 18ch;
     margin: 0;
     color: var(--rust);
@@ -2231,7 +2231,7 @@
       grid-column: 1;
     }
 
-    .book-argument-block h2,
+    .book-argument-block h3,
     .book-argument-block .book-prose {
       grid-column: 2;
     }
@@ -3539,7 +3539,7 @@
     z-index: 1;
   }
 
-  .flw-feature-copy h3 {
+  .flw-feature-copy :is(h2, h3) {
     max-width: 16ch;
     margin: 0;
     color: var(--rust);
@@ -6957,7 +6957,7 @@
   white-space: normal;
 }
 
-.editorial-subsection-heading h2 {
+.editorial-subsection-heading :is(h2, h3) {
   max-width: 18ch;
   margin: 0;
   color: var(--rust);
@@ -7136,7 +7136,7 @@
     grid-column: 1;
   }
 
-  .editorial-subsection-split .editorial-subsection-heading h2,
+  .editorial-subsection-split .editorial-subsection-heading :is(h2, h3),
   .editorial-subsection-split > .editorial-prose,
   .editorial-subsection-split > .editorial-related-list {
     grid-column: 2;

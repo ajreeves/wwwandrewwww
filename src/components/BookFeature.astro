@@ -18,9 +18,12 @@ interface Book {
 interface Props {
   book: Book;
   reversed?: boolean;
+  headingLevel?: 2 | 3;
+  headingId?: string;
 }
 
-const { book, reversed = false } = Astro.props;
+const { book, reversed = false, headingLevel = 3, headingId } = Astro.props;
+const Heading = headingLevel === 2 ? "h2" : "h3";
 const authorLine = book.id === "particularistic-president"
   ? [...book.data.coauthors, "Andrew Reeves"].join(" and ")
   : ["Andrew Reeves", ...book.data.coauthors].join(" and ");
@@ -44,9 +47,9 @@ const coverDimensions = book.id === "particularistic-president"
   </figure>
   <div class="flw-feature-copy">
     <p class="kicker mb-4">Book · {book.data.year}</p>
-    <h3 class="book-title">
+    <Heading class="book-title" id={headingId}>
       <a href={bookPage} class="no-underline">{book.data.title}</a>
-    </h3>
+    </Heading>
     {book.data.subtitle && <p class="book-subtitle">{book.data.subtitle}</p>}
     <p class="book-authors">{authorLine}</p>
     <p class="book-publisher">{book.data.publisher}, {book.data.year}</p>

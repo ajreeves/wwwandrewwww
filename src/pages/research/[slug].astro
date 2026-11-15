@@ -216,7 +216,10 @@ const publicationStructuredData = {
         "@type": "Person",
         name
       })),
-      isPartOf: venue
+      publisher: publication.data.type === "Book" && venue
+        ? { "@type": "Organization", name: venue }
+        : undefined,
+      isPartOf: publication.data.type !== "Book" && venue
         ? {
             "@type": "Periodical",
             name: venue

@@ -66,6 +66,10 @@ Content lives in `src/content/`:
 
 Images and static files live in `public/`.
 
+Talks use event dates with source links, retaining month-only precision when the source does not establish a day. Speaker roles describe the time of the event. Teaching terms identify the linked syllabus or documented offering. Students are rendered as compact text cards from `src/data/doctoralStudents.ts`; keep advising details and collaborative-publication links in that data source.
+
+`BookFeature` defaults to an `h3` under a section heading on the homepage; use `headingLevel={2}` for book titles directly beneath the Books page heading. The About gallery pauses when focus enters and resumes only through Play. Video activation transfers focus to the loaded player.
+
 Publication pages, archive cards, and search share the metadata resolver in `src/utils/publication-records.ts`. It matches explicit aliases, IDs, normalized titles, PDF pathnames, then unique long-title prefixes. Ambiguous matches fail the build; validation also checks unique mappings and author count/order (allowing differences in middle initials). Two books and the `persistence-of-localism` and `recounts` chapters currently have no extracted metadata; they use their content entries and are explicitly listed as exceptions. Any other missing mapping fails the build.
 
 Use optional `cardSummary` and `editorial` frontmatter in publication MDX for curated copy. `editorial` supports `context`, `findings`, `designLabel`, `figureCaption`, `keywords`, and `relatedSlugs`; existing examples include `rising-seas.mdx` and `disunion-review.mdx`. Context appears only when curated or supported by canonical policy-relevance metadata. Review pages attribute evidence to the reviewed book. Keep canonical metadata changes in the extraction pipeline below.

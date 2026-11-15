@@ -80,7 +80,7 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
       </p>
 
       <p>
-        Reeves also serves as Senior Advisor to the Chancellor and as a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
+        Reeves also serves as Professor of Law by courtesy at WashU, Senior Advisor to the Chancellor, and a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
       </p>
     </article>
   </section>
@@ -95,6 +95,7 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       let current = 0;
       let paused = reduceMotion;
+      let pausedBeforePointer = paused;
       let timer: number | undefined;
 
       const loadSlide = (index: number) => {
@@ -130,8 +131,22 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
 
       const startTimer = () => {
         stopTimer();
-        if (!paused) timer = window.setInterval(() => showSlide(current + 1), 7000);
+        if (!paused && !document.hidden) timer = window.setInterval(() => showSlide(current + 1), 7000);
       };
+
+      const setPaused = (value: boolean) => {
+        paused = value;
+        if (pauseButton) {
+          pauseButton.textContent = paused ? "Play" : "Pause";
+          pauseButton.setAttribute("aria-pressed", String(paused));
+        }
+        startTimer();
+      };
+
+      // Stop on focus entry and require an explicit Play action to resume.
+      gallery.addEventListener("focusin", (event) => {
+        if (!(event.relatedTarget instanceof Node) || !gallery.contains(event.relatedTarget)) setPaused(true);
+      });
 
       gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => {
         showSlide(current - 1);
@@ -145,20 +160,14 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
         showSlide(Number(dot.dataset.galleryDot));
         startTimer();
       }));
-      pauseButton?.addEventListener("click", () => {
-        paused = !paused;
-        pauseButton.textContent = paused ? "Play" : "Pause";
-        pauseButton.setAttribute("aria-pressed", String(paused));
-        startTimer();
+      pauseButton?.addEventListener("pointerdown", () => { pausedBeforePointer = paused; });
+      pauseButton?.addEventListener("click", (event) => {
+        setPaused(!(event.detail > 0 ? pausedBeforePointer : paused));
       });
       document.addEventListener("visibilitychange", () => document.hidden ? stopTimer() : startTimer());
 
-      if (reduceMotion && pauseButton) {
-        pauseButton.textContent = "Play";
-        pauseButton.setAttribute("aria-pressed", "true");
-      }
       loadSlide(1);
-      startTimer();
+      setPaused(reduceMotion);
     }
   </script>
 </BaseLayout>

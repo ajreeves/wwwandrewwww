@@ -1,0 +1,82 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { StudentRecord } from "@data/doctoralStudents";
+
+interface Props {
+  student: StudentRecord;
+  publications?: CollectionEntry<"publications">[];
+}
+
+const { student, publications = [] } = Astro.props;
+---
+
+<article class="student-card">
+  <header>
+    <p class="kicker">{student.role} · {student.year}</p>
+    <h3>{student.name}</h3>
+  </header>
+  {student.research_description && <p class="student-card-description">{student.research_description}</p>}
+
+  <dl class="student-card-details">
+    <div><dt>Degree</dt><dd>{student.degree}</dd></div>
+    <div><dt>Institution</dt><dd>{student.institution}</dd></div>
+    {student.current_position && <div><dt>Position</dt><dd>{student.current_position}</dd></div>}
+    {student.dissertation_or_thesis_title && (
+      <div>
+        <dt>{student.category === "doctoral" ? "Dissertation" : "Thesis"}</dt>
+        <dd>{student.dissertation_or_thesis_title}</dd>
+      </div>
+    )}
+    {student.awards && student.awards.length > 0 && (
+      <div><dt>Recognition</dt><dd><ul>{student.awards.map((award) => <li>{award}</li>)}</ul></dd></div>
+    )}
+  </dl>
+
+  {publications.length > 0 && (
+    <div class="student-card-work">
+      <p class="kicker">Selected collaborative work</p>
+      <ul>
+        {publications.map((publication) => (
+          <li>
+            <a href={`/research/${publication.id}/`}>{publication.data.title}</a>
+            <span>{publication.data.year} · {publication.data.venue}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {(student.homepage_url || student.profile_url) && (
+    <div class="student-card-links">
+      {student.homepage_url && <a href={student.homepage_url}>Homepage<span class="sr-only">: {student.name}</span></a>}
+      {student.profile_url && <a href={student.profile_url}>Profile<span class="sr-only">: {student.name}</span></a>}
+    </div>
+  )}
+</article>
+
+<style>
+  .student-card {
+    min-width: 0;
+    padding: clamp(1.2rem, 2.4vw, 2rem);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--olive);
+    background: var(--paper);
+    overflow-wrap: anywhere;
+  }
+  h3 { margin: 0.6rem 0 0; font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.2; }
+  .student-card-description { margin: 1rem 0 0; font-size: 1.05rem; line-height: 1.5; }
+  .student-card-details { display: grid; gap: 0.7rem; margin: 1.2rem 0 0; }
+  .student-card-details div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0.75rem; }
+  dt { color: var(--muted); font-family: var(--font-sans); font-size: 0.8rem; line-height: 1.5; }
+  dd { margin: 0; font-size: 0.95rem; line-height: 1.5; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  .student-card-work { border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 1.2rem; }
+  .student-card-work ul { display: grid; gap: 0.8rem; margin-top: 0.7rem; }
+  .student-card-work a { font-size: 1rem; line-height: 1.4; }
+  .student-card-work span { display: block; margin-top: 0.25rem; color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+  .student-card-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-top: 1.2rem; }
+  .student-card-links a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-sans); font-size: 0.85rem; }
+  @media (max-width: 420px) {
+    .student-card-details div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  }
+</style>

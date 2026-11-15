@@ -21,6 +21,8 @@ const awards = [
 const courses = [
   {
     title: "The Practice of Citizenship: Cooperation and Obligations in Democratic Life",
+    term: "Spring 2026",
+    termLabel: "Syllabus",
     type: "Undergraduate Course",
     image: "/images/citizenship-course.jpg",
     alt: "Pericles delivering the funeral oration in Athens, painted by Philipp Foltz in 1852",
@@ -39,6 +41,8 @@ const courses = [
   },
   {
     title: "Introduction to American Politics",
+    term: "Fall 2024",
+    termLabel: "Syllabus",
     type: "Undergraduate Course",
     image: "/images/intro-course.jpg",
     alt: "Introduction to American Politics course visual",
@@ -57,6 +61,8 @@ const courses = [
   },
   {
     title: "Business of Elections",
+    term: "Fall 2024",
+    termLabel: "Documented offering",
     type: "Undergraduate Course",
     image: "/images/business-of-elections-course.jpg",
     alt: "Business of Elections course visual",
@@ -156,7 +162,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
       <div>
         <p class="kicker mb-4">Courses</p>
         <h2>American Politics and Citizenship</h2>
-        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Courses on democratic life, American institutions, and electoral strategy.</p>
+        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Selected courses and past teaching materials. Terms identify the linked syllabus or documented offering.</p>
       </div>
     </div>
     <div class="course-feature-list">
@@ -170,6 +176,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
             <div class="flw-feature-copy course-feature-copy">
               <p class="kicker mb-4">{course.type}</p>
               <h3>{course.title}</h3>
+              <p class="kicker course-term">{course.termLabel} · {course.term}</p>
               {course.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
               <div class="course-action-row">
                 {course.links.map((link) => <a class="ghost-button" href={link.url}>{link.label}</a>)}
@@ -205,3 +212,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .course-term { margin-top: 1rem; color: var(--olive-dark); line-height: 1.5; }
+</style>
