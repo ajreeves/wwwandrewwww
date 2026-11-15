@@ -89,6 +89,31 @@ const tocLinks = [
 </BaseLayout>
 
 <script>
+  // Fonts and the desktop grid can move a section after the browser's first
+  // fragment jump. Correct it once, unless the reader has already interacted.
+  const initialHash = window.location.hash;
+  const initialSection = document.getElementById(initialHash.slice(1));
+  const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+  // Leave reload and history restoration to the browser.
+  if ((!navigation || navigation.type === "navigate") && initialSection?.matches(".student-page-frame .page-section-heading h2")) {
+    const interaction = new AbortController();
+    let readerMoved = false;
+    for (const event of ["wheel", "touchstart", "pointerdown", "keydown"]) {
+      window.addEventListener(event, () => { readerMoved = true; }, { passive: true, signal: interaction.signal });
+    }
+    const alignInitialSection = async () => {
+      await document.fonts.ready;
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        interaction.abort();
+        if (!readerMoved && window.location.hash === initialHash) {
+          initialSection.scrollIntoView({ block: "start", behavior: "instant" });
+        }
+      }));
+    };
+    if (document.readyState === "complete") alignInitialSection();
+    else window.addEventListener("load", alignInitialSection, { once: true });
+  }
+
   // Measure natural card heights without moving DOM nodes or changing tab order.
   // Ordinary grid rows remain the fallback when ResizeObserver is unavailable.
   if ("ResizeObserver" in window) {
@@ -129,7 +154,7 @@ const tocLinks = [
   .students-opening :global(.page-opening-panel > .kicker) { margin-bottom: 0.65rem; }
   .students-opening :global(.page-intro) { margin-top: 0.8rem; font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.5; }
   .student-page-frame .page-section-heading { display: block; border-top: 0; margin-bottom: 1.5rem; padding-top: 1.5rem; }
-  .student-page-frame .page-section-heading h2 { max-width: none; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; }
+  .student-page-frame .page-section-heading h2 { max-width: none; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.15; scroll-margin-top: 1.5rem; }
   .student-card-list {
     --student-card-row-height: 4px;
     display: grid;
@@ -150,5 +175,8 @@ const tocLinks = [
   }
   @media (max-width: 1000px) {
     .student-card-list { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) { scroll-behavior: auto; }
   }
 </style>
