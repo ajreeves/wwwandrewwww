@@ -16,20 +16,22 @@ const profileHost = student.profile_url ? new URL(student.profile_url).hostname 
 const profileIsLinkedIn = profileHost === "linkedin.com" || profileHost.endsWith(".linkedin.com");
 const linkedInUrl = student.linkedin_url ?? (profileIsLinkedIn ? student.profile_url : undefined);
 const primaryLink = student.homepage_url ?? linkedInUrl ?? student.profile_url;
+const PortraitTag = primaryLink ? "a" : "div";
+const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" : linkedInUrl ? "LinkedIn profile" : "profile"}`;
 ---
 
 <article class="student-card">
   <header class="student-card-header">
-    <div class="student-card-portrait">
+    <PortraitTag class="student-card-portrait" href={primaryLink} aria-label={primaryLink ? portraitLinkLabel : undefined}>
       {student.photo_url ? (
         <ResponsiveImage
           src={student.photo_url}
           alt={`Portrait of ${student.name}`}
-          sizes="(max-width: 640px) 64px, 88px"
+          sizes="(max-width: 640px) 80px, 112px"
           loading="lazy"
         />
       ) : <span class="student-card-initials" aria-hidden="true">{monogram}</span>}
-    </div>
+    </PortraitTag>
     <div class="student-card-identity">
       <h3>{primaryLink ? <a class="student-name-link" href={primaryLink}>{student.name}</a> : student.name}</h3>
       <p class="student-card-advising">Advising role: {student.role} <span>· {student.year}</span></p>
@@ -85,7 +87,8 @@ const primaryLink = student.homepage_url ?? linkedInUrl ?? student.profile_url;
     overflow-wrap: anywhere;
   }
   .student-card-header { display: flex; align-items: center; gap: 1.1rem; }
-  .student-card-portrait { flex: 0 0 88px; width: 88px; height: 110px; overflow: hidden; border-radius: 2px; background: var(--ivory); }
+  .student-card-portrait { flex: 0 0 112px; width: 112px; height: 140px; overflow: hidden; border-radius: 2px; background: var(--ivory); }
+  a.student-card-portrait:hover, a.student-card-portrait:focus-visible { outline: 3px solid var(--olive-dark); outline-offset: 4px; }
   .student-card-portrait :global(img) { display: block; width: 100%; height: 100%; object-fit: cover; }
   .student-card-initials { display: grid; place-items: center; height: 100%; border: 1px solid var(--rule); color: var(--olive-dark); font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.04em; }
   .student-card-identity { min-width: 0; }
@@ -110,7 +113,7 @@ const primaryLink = student.homepage_url ?? linkedInUrl ?? student.profile_url;
   .student-card-links a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-sans); font-size: 0.85rem; }
   @media (max-width: 640px) {
     .student-card-header { gap: 0.9rem; }
-    .student-card-portrait { flex-basis: 64px; width: 64px; height: 80px; }
+    .student-card-portrait { flex-basis: 80px; width: 80px; height: 100px; }
     .student-card-initials { font-size: 1.5rem; }
   }
   @media (max-width: 420px) {
