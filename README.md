@@ -20,9 +20,11 @@ The production build is emitted to `dist/`.
 
 ## Automated checks and dependency updates
 
-GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. Both **Build and validate** and **Dependency audit** must pass before merging to `master`.
+GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. **Build and validate**, **Dependency audit**, and the **Netlify deployment preview** must pass before merging to `master`.
 
-Dependabot checks npm packages and GitHub Actions weekly. Related Astro upgrades are grouped so the framework and integrations can be tested together. Actions are pinned to commit hashes, and workflow tokens have read-only access.
+Dependabot checks npm packages and GitHub Actions weekly. Related Astro upgrades are grouped so the framework and integrations can be tested together. Dependabot PRs containing only minor and patch updates merge automatically after all required checks pass. Major updates, groups containing a major update, and updates that cannot be classified remain manual. Automatic merges use squash and trigger Netlify's normal production deployment.
+
+Actions are pinned to commit hashes. Build workflows have read-only tokens. The separate auto-merge workflow verifies Dependabot metadata and has only the write permissions needed to configure merges; it never checks out or executes pull-request code.
 
 To verify an update locally:
 
