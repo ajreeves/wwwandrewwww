@@ -12,7 +12,7 @@ interface Book {
     url?: string;
     amazonUrl?: string;
   };
-  slug: string;
+  id: string;
 }
 
 interface Props {
@@ -21,11 +21,11 @@ interface Props {
 }
 
 const { book, reversed = false } = Astro.props;
-const authorLine = book.slug === "particularistic-president"
+const authorLine = book.id === "particularistic-president"
   ? [...book.data.coauthors, "Andrew Reeves"].join(" and ")
   : ["Andrew Reeves", ...book.data.coauthors].join(" and ");
-const bookPage = `/books/#${book.slug}`;
-const coverDimensions = book.slug === "particularistic-president"
+const bookPage = `/books/#${book.id}`;
+const coverDimensions = book.id === "particularistic-president"
   ? { width: 427, height: 648 }
   : { width: 415, height: 648 };
 ---

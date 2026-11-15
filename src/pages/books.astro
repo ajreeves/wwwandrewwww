@@ -8,7 +8,7 @@ import { researchTopicPath } from "@data/research-topics";
 const yearRank = (year: number | string) => (typeof year === "number" ? year : 9999);
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 const publications = await getCollection("publications");
-const publicationsBySlug = new Map(publications.map((publication) => [publication.slug, publication]));
+const publicationsBySlug = new Map(publications.map((publication) => [publication.id, publication]));
 
 const themeLinks = {
   presidentialPower: researchTopicPath("presidential-power"),
@@ -169,11 +169,11 @@ const relatedPublicationsFor = (slugs: string[]) =>
 const siteUrl = "https://andrewreeves.org";
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
 const authorNamesFor = (book: (typeof books)[number]) =>
-  book.slug === "particularistic-president"
+  book.id === "particularistic-president"
     ? [...book.data.coauthors, "Andrew Reeves"]
     : ["Andrew Reeves", ...book.data.coauthors];
 const tocLinks = books.flatMap((book, index) => {
-  const bookLink = { href: `#${book.slug}`, label: book.data.title };
+  const bookLink = { href: `#${book.id}`, label: book.data.title };
   if (index === 0) return [bookLink, { href: "#book-relationship-heading", label: "How the Books Relate" }];
   return [bookLink];
 });
@@ -217,15 +217,15 @@ const booksStructuredData = {
       itemListElement: books.map((book, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `${siteUrl}/books/#${book.slug}`,
+        url: `${siteUrl}/books/#${book.id}`,
         item: {
           "@type": "Book",
-          "@id": `${siteUrl}/books/#${book.slug}`,
+          "@id": `${siteUrl}/books/#${book.id}`,
           name: book.data.title,
           alternateName: book.data.subtitle,
           description: book.data.summary,
           image: absoluteUrl(book.data.cover),
-          url: book.data.url ?? `${siteUrl}/books/#${book.slug}`,
+          url: book.data.url ?? `${siteUrl}/books/#${book.id}`,
           datePublished: String(book.data.year),
           publisher: {
             "@type": "Organization",
@@ -266,20 +266,20 @@ const booksStructuredData = {
   <section class="container-wide book-gallery page-section">
     {
       books.map((book, index) => {
-        const details = detailsFor(book.slug);
+        const details = detailsFor(book.id);
         const relatedPublications = details ? relatedPublicationsFor(details.related) : [];
 
         return (
           <>
-            <article id={book.slug} class="book-destination">
+            <article id={book.id} class="book-destination">
               <BookFeature book={book} reversed={index % 2 === 1} />
 
               {details && (
                 <div class="book-expanded-panel">
-                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.slug}-argument`}>
+                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-argument`}>
                     <div class="editorial-subsection-heading">
                       <p class="kicker">The Argument</p>
-                      <h2 id={`${book.slug}-argument`}>What the book explains</h2>
+                      <h2 id={`${book.id}-argument`}>What the book explains</h2>
                     </div>
                     <div class="editorial-prose book-prose">
                       {details.argument.map((paragraph) => <p>{paragraph}</p>)}
@@ -328,14 +328,14 @@ const booksStructuredData = {
                     </div>
                   </section>
 
-                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.slug}-related`}>
+                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-related`}>
                     <div class="editorial-subsection-heading">
                       <p class="kicker">Related Research</p>
-                      <h2 id={`${book.slug}-related`}>Related Articles</h2>
+                      <h2 id={`${book.id}-related`}>Related Articles</h2>
                     </div>
                     <div class="editorial-related-list book-related-list">
                       {relatedPublications.map((publication) => (
-                        <a href={`/research/${publication.slug}/`} class="editorial-related-item book-related-item">
+                        <a href={`/research/${publication.id}/`} class="editorial-related-item book-related-item">
                           <span>{publication.data.title}</span>
                           <small>{publication.data.venue} · {publication.data.year}</small>
                         </a>
