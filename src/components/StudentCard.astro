@@ -33,9 +33,11 @@ const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" 
       ) : <span class="student-card-initials" aria-hidden="true">{monogram}</span>}
     </PortraitTag>
     <div class="student-card-identity">
-      <h3>{primaryLink ? <a class="student-name-link" href={primaryLink}>{student.name}</a> : student.name}</h3>
-      <p class="student-card-advising">Advising role: {student.role} <span>· {student.year}</span></p>
-      <p class="student-card-education">{student.degree} <span aria-hidden="true">·</span> {student.institution}</p>
+      <div class="student-card-heading">
+        <h3>{primaryLink ? <a class="student-name-link" href={primaryLink}>{student.name}</a> : student.name}</h3>
+        <p class="student-card-advising"><span class="student-card-advising-label">Advising role: </span>{student.role} <span class="student-card-year">· {student.year}</span></p>
+      </div>
+      <p class="student-card-education"><span>{student.degree}</span> <span class="student-card-education-separator" aria-hidden="true">·</span> <span>{student.institution}</span></p>
       {(student.homepage_url || student.profile_url || linkedInUrl) && (
         <div class="student-card-links">
           {student.homepage_url && <a href={student.homepage_url}>Homepage<span class="sr-only">: {student.name}</span></a>}
@@ -95,7 +97,7 @@ const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" 
   .student-name-link { color: inherit; text-decoration: none; }
   .student-name-link:hover, .student-name-link:focus-visible { color: var(--olive-dark); text-decoration: underline; text-underline-offset: 0.15em; }
   .student-card-advising { margin: 0.35rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.45; }
-  .student-card-advising span { white-space: nowrap; }
+  .student-card-year { white-space: nowrap; }
   .student-card-photo-credit { margin: 0.4rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.75rem; }
   .student-card-education { margin: 0.35rem 0 0; color: var(--muted); font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; }
   .student-card-description { margin: 0.65rem 0 0; font-size: 1.05rem; line-height: 1.5; }
@@ -113,11 +115,15 @@ const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" 
   .student-card-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.25rem; }
   .student-card-links a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-sans); font-size: 0.85rem; }
   @media (max-width: 640px) {
-    .student-card-header { gap: 0.9rem; }
-    .student-card-portrait { flex-basis: 80px; width: 80px; height: 100px; }
+    .student-card-header { display: grid; grid-template-columns: 80px minmax(0, 1fr); grid-template-rows: auto 1fr auto; gap: 0.25rem 0.75rem; }
+    .student-card-identity { display: contents; }
+    .student-card-heading { grid-column: 2; grid-row: 1; min-width: 0; }
+    .student-card-portrait { grid-column: 1; grid-row: 1 / span 2; width: 80px; height: 100px; }
     .student-card-initials { font-size: 1.5rem; }
-  }
-  @media (max-width: 420px) {
+    .student-card-advising-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .student-card-education { display: flex; flex-direction: column; grid-column: 1 / -1; grid-row: 3; margin-top: 0.4rem; }
+    .student-card-education-separator { display: none; }
+    .student-card-links { grid-column: 2; grid-row: 2; align-self: start; margin-top: 0; }
     .student-card-details div { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
   }
 </style>
