@@ -2,7 +2,7 @@
 
 Verified on November 15, 2026. Portraits are stored locally, resized without enlargement, and served through the responsive image pipeline. Identity was checked against the named professional or institutional source. Website screenshots, cartoon avatars, and university logos are not used as portraits.
 
-Any supplied photographer credit is recorded as `photo_credit` and displayed below the portrait header. `photo_position` accepts horizontal and vertical percentages (for example, `"50% 35%"`) and controls a 4:5 crop in the generated thumbnails without altering the source image. Portrait variants are 64–264 pixels wide; smaller originals are never enlarged.
+Any supplied photographer credit is recorded as `photo_credit` and displayed below the portrait header. `photo_position` accepts horizontal and vertical percentages (for example, `"50% 35%"`), placing the crop within the space left after framing. `photo_zoom` tightens that 4:5 crop: `1` uses the largest crop that fits the source, and `2` halves its width and height. Each portrait is individually framed around the face and upper shoulders, with a similar eye line where the source allows. These settings affect generated thumbnails only; source photographs remain unchanged. Portrait variants are 64–264 pixels wide, capped at the cropped source resolution without enlargement. Crop settings are included in the cache key so revised framing appears immediately after deployment.
 
 ## Included portraits
 

@@ -30,16 +30,22 @@ for (const src of [...sources].sort()) {
   const portrait = portraits.get(src);
   let crop;
   if (portrait) {
+    const zoom = portrait.photo_zoom ?? 1;
+    if (!Number.isFinite(zoom) || zoom < 1) {
+      throw new Error(`Invalid portrait zoom: ${src}`);
+    }
     const [x, y] = (portrait.photo_position ?? "50% 35%").split(/\s+/).map(parseFloat);
     if (![x, y].every((value) => Number.isFinite(value) && value >= 0 && value <= 100)) {
       throw new Error(`Invalid portrait crop position: ${src}`);
     }
-    const cropWidth = Math.min(width, Math.floor(height * 4 / 5));
-    const cropHeight = Math.min(height, Math.floor(width * 5 / 4));
+    const cropWidth = Math.floor(Math.min(width, height * 4 / 5) / zoom);
+    const cropHeight = Math.floor(cropWidth * 5 / 4);
+    if (cropWidth < 1 || cropHeight < 1) throw new Error(`Portrait crop is too small: ${src}`);
     crop = { left: Math.round((width - cropWidth) * x / 100), top: Math.round((height - cropHeight) * y / 100), width: cropWidth, height: cropHeight };
   }
   // Crop portrait derivatives before resizing so landscape originals stay sharp
-  // in the 4:5 thumbnail. Source photographs are retained without this crop.
+  // in the 4:5 thumbnail. Per-person zoom and position keep heads consistently
+  // framed; source photographs are retained without this crop.
   const outputWidth = crop?.width ?? width;
   const outputHeight = crop?.height ?? height;
   const sizes = portrait ? [64, 88, 128, 176, 264] : [320, 640, 960, 1440];
