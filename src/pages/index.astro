@@ -8,29 +8,25 @@ import { yearRank } from "../utils/publications";
 import { academicAppointment } from "@data/academic-appointment";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
-const questions = [
+const researchAreas = [
   {
-    question: "What can presidents actually do?",
-    title: "Presidential Power",
-    text: "How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.",
+    title: "Presidential power",
+    text: "When presidents can act on their own, and how the public responds.",
     href: "/research/?theme=presidential-power"
   },
   {
-    question: "When do citizens assign responsibility?",
-    title: "Democratic Accountability",
-    text: "When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.",
+    title: "Democratic accountability",
+    text: "How voters decide whom to credit or blame for government decisions and events.",
     href: "/research/?theme=democratic-accountability"
   },
   {
-    question: "How does place enter national politics?",
-    title: "Political Geography",
-    text: "How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.",
+    title: "Political geography",
+    text: "How where people live—and where they move—shapes their political views.",
     href: "/research/?theme=political-geography"
   },
   {
-    question: "Where does federal attention go?",
-    title: "Federal Resource Allocation",
-    text: "How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.",
+    title: "Federal spending",
+    text: "How presidents direct federal resources toward particular states and communities.",
     href: "/research/?theme=federal-resource-allocation"
   }
 ] as const;
@@ -96,9 +92,8 @@ const personStructuredData = {
   </Fragment>
   <section class="container-wide home-thesis-hero">
     <div class="home-thesis-copy">
-      <p class="kicker">American politics · Power, place, accountability</p>
-      <h1>How power<br /> reaches people.</h1>
-      <p class="home-thesis-lede">I’m Andrew Reeves. I study how presidents exercise power, how public resources reach communities, and how citizens hold leaders accountable.</p>
+      <h1>Andrew Reeves</h1>
+      <p class="home-thesis-lede">I’m a political scientist at Washington University in St. Louis. I study the American presidency, public opinion, and the politics of federal spending.</p>
       <ul class="home-affiliations" aria-label="Primary appointment">
         <li class="affil-item affil-item--primary">
           <a class="affil-role" href="https://polisci.wustl.edu/">{academicAppointment.title}</a>
@@ -106,8 +101,8 @@ const personStructuredData = {
         </li>
       </ul>
       <div class="home-thesis-links" aria-label="Primary homepage links">
-        <a href="/research/">Explore my research</a>
-        <a href="/about/">About me</a>
+        <a href="/research/">Research</a>
+        <a href="/about/">More about me</a>
       </div>
     </div>
     <figure class="home-thesis-portrait">
@@ -116,7 +111,7 @@ const personStructuredData = {
   </section>
 
   <aside class="container-wide home-appointments" aria-label="Additional appointments and affiliations">
-    <p class="kicker">Across the university & beyond</p>
+    <p class="kicker">Other roles</p>
     <ul class="home-affiliations home-secondary-affiliations">
       <li class="affil-item"><a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a></li>
       <li class="affil-item"><a class="affil-role" href="https://frick.washu.edu/">Director, Frick Initiatives</a></li>
@@ -128,14 +123,12 @@ const personStructuredData = {
 
   <section class="container-wide home-question-map" aria-labelledby="questions-heading">
     <div class="home-question-heading">
-      <p class="kicker">Research</p>
-      <h2 id="questions-heading">Questions that drive my work</h2>
+      <h2 id="questions-heading">Research</h2>
     </div>
     <div class="home-question-grid">
-      {questions.map((item) => (
+      {researchAreas.map((item) => (
         <article class="home-question-card">
-          <p class="home-question-title">{item.title}</p>
-          <h3><a href={item.href}>{item.question}</a></h3>
+          <h3><a href={item.href}>{item.title}</a></h3>
           <p>{item.text}</p>
         </article>
       ))}
@@ -144,8 +137,7 @@ const personStructuredData = {
 
   <section class="container-wide home-book-spread" aria-labelledby="major-works-heading">
     <div class="home-spread-heading">
-      <p class="kicker">Books</p>
-      <h2 id="major-works-heading">Presidential power, examined</h2>
+      <h2 id="major-works-heading">Books</h2>
     </div>
     <div class="home-book-objects">
       {books.map((book) => <BookFeature book={book} />)}
@@ -154,21 +146,20 @@ const personStructuredData = {
 
   <section class="container-wide home-public-life" aria-labelledby="public-life-heading">
     <div class="home-spread-heading">
-      <p class="kicker">Teaching & conversation</p>
-      <h2 id="public-life-heading">Ideas belong in public life.</h2>
+      <h2 id="public-life-heading">Teaching and talks</h2>
     </div>
     <div class="home-public-life-grid">
       <article>
-        <a class="home-story-image" href="/teaching/" aria-label="Explore teaching"><ResponsiveImage src="/images/andrew-teaching-page.jpg" alt="Andrew Reeves teaching in a classroom" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
-        <h3><a href="/teaching/">In the classroom</a></h3>
-        <p>I teach students to ask careful questions about institutions, evidence, and the responsibilities of citizenship.</p>
-        <a class="home-story-link" href="/students/">Meet my students</a>
+        <a class="home-story-image" href="/teaching/" aria-label="Teaching"><ResponsiveImage src="/images/andrew-teaching-page.jpg" alt="Andrew Reeves teaching in a classroom" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
+        <h3><a href="/teaching/">Teaching</a></h3>
+        <p>I teach undergraduate and graduate courses on American politics, elections, and citizenship.</p>
+        <a class="home-story-link" href="/students/">Students and advising</a>
       </article>
       <article>
-        <a class="home-story-image" href="/talks/" aria-label="Explore talks and events"><ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
-        <h3><a href="/talks/">Beyond the university</a></h3>
-        <p>Conversations with scholars, policymakers, and civic leaders connect research to the questions we face together.</p>
-        <a class="home-story-link" href="/news/">Read commentary & media coverage</a>
+        <a class="home-story-image" href="/talks/" aria-label="Talks and events"><ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
+        <h3><a href="/talks/">Talks and events</a></h3>
+        <p>I host conversations at the Weidenbaum Center with scholars, policymakers, and other guests.</p>
+        <a class="home-story-link" href="/news/">Commentary and media coverage</a>
       </article>
     </div>
   </section>
