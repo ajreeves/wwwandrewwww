@@ -1,32 +1,32 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import BookFeature from "@components/BookFeature.astro";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
 import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
 import { academicAppointment } from "@data/academic-appointment";
+import "../styles/home.css";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+const bookNotes: Record<string, string> = {
+  "no-blank-check": "How public opinion limits presidents who act without Congress.",
+  "particularistic-president": "Why presidents direct more federal resources to some communities than others."
+};
 const researchAreas = [
   {
     title: "Presidential power",
-    text: "When presidents can act on their own, and how the public responds.",
     href: "/research/?theme=presidential-power"
   },
   {
     title: "Democratic accountability",
-    text: "How voters decide whom to credit or blame for government decisions and events.",
     href: "/research/?theme=democratic-accountability"
   },
   {
     title: "Political geography",
-    text: "How where people live—and where they move—shapes their political views.",
     href: "/research/?theme=political-geography"
   },
   {
     title: "Federal spending",
-    text: "How presidents direct federal resources toward particular states and communities.",
     href: "/research/?theme=federal-resource-allocation"
   }
 ] as const;
@@ -88,79 +88,90 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) 40vw, 460px" />
+    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 300px" />
   </Fragment>
-  <section class="container-wide home-thesis-hero">
-    <div class="home-thesis-copy">
-      <h1>Andrew Reeves</h1>
-      <p class="home-thesis-lede">I’m a political scientist at Washington University in St. Louis. I study the American presidency, public opinion, and the politics of federal spending.</p>
-      <ul class="home-affiliations" aria-label="Primary appointment">
-        <li class="affil-item affil-item--primary">
-          <a class="affil-role" href="https://polisci.wustl.edu/">{academicAppointment.title}</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-      </ul>
-      <div class="home-thesis-links" aria-label="Primary homepage links">
-        <a href="/research/">Research</a>
-        <a href="/about/">More about me</a>
+  <div class="home-page">
+    <section class="container-wide home-intro" aria-labelledby="home-name">
+      <div class="home-intro-copy">
+        <h1 id="home-name">Andrew Reeves</h1>
+        <p class="home-intro-lede">I’m a political scientist at Washington University in St. Louis. I study the American presidency, public opinion, and the politics of federal spending.</p>
+        <p class="home-primary-appointment"><a href="https://polisci.wustl.edu/">{academicAppointment.title}</a></p>
+        <div class="home-links" aria-label="Primary homepage links">
+          <a href="/research/">Research</a>
+          <a href="/about/">More about me</a>
+        </div>
       </div>
-    </div>
-    <figure class="home-thesis-portrait">
-      <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1200px) 40vw, 460px" loading="eager" fetchpriority="high" width="1200" height="1440" />
-    </figure>
-  </section>
+      <figure class="home-portrait">
+        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 300px" loading="eager" fetchpriority="high" />
+      </figure>
+    </section>
 
-  <aside class="container-wide home-appointments" aria-label="Additional appointments and affiliations">
-    <p class="kicker">Other roles</p>
-    <ul class="home-affiliations home-secondary-affiliations">
-      <li class="affil-item"><a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a></li>
-      <li class="affil-item"><a class="affil-role" href="https://frick.washu.edu/">Director, Frick Initiatives</a></li>
-      <li class="affil-item"><a class="affil-role" href="https://law.washu.edu/">Professor of Law by courtesy</a></li>
-      <li class="affil-item"><a class="affil-role" href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a></li>
-      <li class="affil-item"><a class="affil-role" href="https://www.hoover.org/">Visiting Fellow, Hoover Institution</a></li>
-    </ul>
-  </aside>
-
-  <section class="container-wide home-question-map" aria-labelledby="questions-heading">
-    <div class="home-question-heading">
-      <h2 id="questions-heading">Research</h2>
-    </div>
-    <div class="home-question-grid">
-      {researchAreas.map((item) => (
-        <article class="home-question-card">
-          <h3><a href={item.href}>{item.title}</a></h3>
-          <p>{item.text}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="container-wide home-book-spread" aria-labelledby="major-works-heading">
-    <div class="home-spread-heading">
+    <section class="container-wide home-books" aria-labelledby="major-works-heading">
       <h2 id="major-works-heading">Books</h2>
-    </div>
-    <div class="home-book-objects">
-      {books.map((book) => <BookFeature book={book} />)}
-    </div>
-  </section>
+      <div class="home-books-pair">
+        {books.map((book) => (
+          <article class="home-book">
+            <a class="home-book-cover" href={`/books/#${book.id}`} aria-label={`${book.data.title} book page`}>
+              <img src={book.data.cover} alt={`Cover of ${book.data.title}`} width={book.id === "particularistic-president" ? 427 : 415} height="648" loading="lazy" />
+            </a>
+            <div class="home-book-copy">
+              <h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
+              <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
+              <p>{bookNotes[book.id] ?? book.data.summary}</p>
+              <a class="home-text-link" href={`/books/#${book.id}`}>About the book<span class="sr-only">: {book.data.title}</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
 
-  <section class="container-wide home-public-life" aria-labelledby="public-life-heading">
-    <div class="home-spread-heading">
-      <h2 id="public-life-heading">Teaching and talks</h2>
-    </div>
-    <div class="home-public-life-grid">
+    <section class="container-wide home-research" aria-labelledby="questions-heading">
+      <div>
+        <h2 id="questions-heading">Research</h2>
+        <a class="home-text-link" href="/research/">All publications</a>
+      </div>
+      <nav class="home-research-topics" aria-label="Research areas">
+        <ul>{researchAreas.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
+      </nav>
+    </section>
+
+    <section class="container-wide home-classroom" aria-labelledby="public-life-heading">
+      <figure class="home-classroom-photo">
+        <a href="/teaching/" aria-label="Teaching"><ResponsiveImage src="/images/andrew-teaching-page.jpg" alt="Andrew Reeves teaching in a classroom" loading="lazy" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1280px) 57vw, 720px" /></a>
+        <figcaption>Teaching at Washington University in St. Louis.</figcaption>
+      </figure>
+      <div class="home-classroom-note">
+        <h2 id="public-life-heading">In the classroom</h2>
+        <p>In my Citizenship course, we read Aristotle and Martin Luther King Jr. alongside research on trust and polarization.</p>
+        <p>We ask how people learn to take part in democracy, and what citizens owe one another.</p>
+        <div class="home-links">
+          <a href="/teaching/">Courses and syllabi</a>
+          <a href="/students/">Students and advising</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-wide home-conversations" aria-labelledby="home-conversations-heading">
+      <a class="home-conversation-photo" href="/talks/" aria-label="Talks and events"><ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum" loading="lazy" sizes="(max-width: 760px) 112px, 200px" /></a>
       <article>
-        <a class="home-story-image" href="/teaching/" aria-label="Teaching"><ResponsiveImage src="/images/andrew-teaching-page.jpg" alt="Andrew Reeves teaching in a classroom" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
-        <h3><a href="/teaching/">Teaching</a></h3>
-        <p>I teach undergraduate and graduate courses on American politics, elections, and citizenship.</p>
-        <a class="home-story-link" href="/students/">Students and advising</a>
-      </article>
-      <article>
-        <a class="home-story-image" href="/talks/" aria-label="Talks and events"><ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum" loading="lazy" sizes="(min-width: 1200px) 580px, (min-width: 760px) 46vw, calc(100vw - 40px)" /></a>
-        <h3><a href="/talks/">Talks and events</a></h3>
+        <h2 id="home-conversations-heading">Talks and events</h2>
         <p>I host conversations at the Weidenbaum Center with scholars, policymakers, and other guests.</p>
-        <a class="home-story-link" href="/news/">Commentary and media coverage</a>
+        <div class="home-links">
+          <a href="/talks/">Watch the conversations</a>
+          <a href="/news/">Commentary and media coverage</a>
+        </div>
       </article>
-    </div>
-  </section>
+    </section>
+
+    <aside class="container-wide home-other-roles" aria-label="Additional appointments and affiliations">
+      <p class="home-label">Other roles</p>
+      <ul>
+        <li><a href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a></li>
+        <li><a href="https://frick.washu.edu/">Director, Frick Initiatives</a></li>
+        <li><a href="https://law.washu.edu/">Professor of Law by courtesy</a></li>
+        <li><a href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a></li>
+        <li><a href="https://www.hoover.org/">Visiting Fellow, Hoover Institution</a></li>
+      </ul>
+    </aside>
+  </div>
 </BaseLayout>
