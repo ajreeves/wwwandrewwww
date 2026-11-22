@@ -6,8 +6,7 @@ import { getPublicationMetadata, validatePublicationMappings, type Publication }
 import publicationFigures from "../../data/publication-figures.json";
 import { normalizeTitle, yearRank, publicationSummary } from "../../utils/publications";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
-
-type PublicationLink = { label: string; url: string };
+import { publicationLinks, publicationCitation } from "../../utils/publication-citations";
 
 type PublicationFigure = {
   src: string;
@@ -61,27 +60,8 @@ const abstract = cleanText(metadata?.abstract);
 const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
 const authors = publication.data.authors.length ? publication.data.authors : metadata?.authors ?? [];
 
-const addLink = (links: Map<string, PublicationLink>, label: string, url?: string | null) => {
-  const cleanUrl = cleanText(url);
-  if (!cleanUrl) return;
-  const normalizedLabel = label === "Data" ? "Replication Data" : label;
-  if (!links.has(normalizedLabel)) links.set(normalizedLabel, { label: normalizedLabel, url: cleanUrl });
-};
-
-const linkMap = new Map<string, PublicationLink>();
-publication.data.links.forEach((link) => addLink(linkMap, link.label, link.url));
-addLink(linkMap, "PDF", metadata?.links?.pdf);
-addLink(linkMap, "DOI", metadata?.doi ? `https://doi.org/${metadata.doi.replace(/^https?:\/\/doi\.org\//, "")}` : undefined);
-addLink(linkMap, "Journal", metadata?.links?.journal);
-addLink(linkMap, "Replication Data", metadata?.links?.replication_data);
-addLink(linkMap, "Code", metadata?.links?.code);
-
-const linkOrder = ["PDF", "DOI", "Journal", "Publisher", "Replication Data", "Data", "Code", "Research Profile"];
-const primaryLinks = Array.from(linkMap.values()).sort((a, b) => {
-  const aIndex = linkOrder.indexOf(a.label);
-  const bIndex = linkOrder.indexOf(b.label);
-  return (aIndex === -1 ? 99 : aIndex) - (bIndex === -1 ? 99 : bIndex) || a.label.localeCompare(b.label);
-});
+const primaryLinks = publicationLinks(publication, metadata);
+const { tags: citationTags, bibtex } = publicationCitation(publication, metadata);
 
 const themeTerms = new Map([
   ["presidential power", "presidential-power"],
@@ -288,6 +268,9 @@ const publicationStructuredData = {
   ogType={publication.data.type === "Article" ? "article" : "website"}
   structuredData={publicationStructuredData}
 >
+  <Fragment slot="head">
+    {citationTags.map(({ name, content }) => <meta name={name} content={content} />)}
+  </Fragment>
   <article class="publication-profile container-wide">
     <header class:list={["publication-profile-hero", heroFigure && "publication-profile-hero-with-figure"]}>
       <div class="publication-profile-main">
@@ -316,6 +299,13 @@ const publicationStructuredData = {
         </figure>
       )}
     </header>
+
+    {abstract && (
+      <details class="publication-profile-abstract" open>
+        <summary>Full Abstract</summary>
+        <p>{abstract}</p>
+      </details>
+    )}
 
     {(publicationThemeLinks.length > 0 || keywordThemes.length > 0) && (
       <nav class="publication-theme-ribbon" aria-label="Related research themes and keywords">
@@ -388,13 +378,6 @@ const publicationStructuredData = {
       </section>
     )}
 
-    {abstract && (
-      <details class="publication-profile-abstract">
-        <summary>Full Abstract</summary>
-        <p>{abstract}</p>
-      </details>
-    )}
-
     {(fullCitation || citationRows.length > 0) && (
       <section class="publication-profile-section publication-citation-section">
         <div class="publication-profile-section-label">
@@ -404,9 +387,16 @@ const publicationStructuredData = {
           {fullCitation && (
             <div class="publication-citation-copy">
               <p>{fullCitation}</p>
-              <button type="button" data-copy-citation data-citation={fullCitation}>Copy citation</button>
             </div>
           )}
+          <div class="publication-citation-copy publication-citation-actions">
+            {fullCitation && <button type="button" data-copy-text={fullCitation} aria-live="polite" hidden>Copy citation</button>}
+            <button type="button" data-copy-text={bibtex} aria-live="polite" hidden>Copy BibTeX</button>
+          </div>
+          <details class="publication-bibtex">
+            <summary>View BibTeX</summary>
+            <pre><code>{bibtex}</code></pre>
+          </details>
           {citationRows.length > 0 && (
             <dl class="publication-citation-grid">
               {citationRows.map((row) => (
@@ -494,9 +484,10 @@ const publicationStructuredData = {
       return copied;
     };
 
-    document.querySelectorAll<HTMLButtonElement>("[data-copy-citation]").forEach((button) => {
+    document.querySelectorAll<HTMLButtonElement>("[data-copy-text]").forEach((button) => {
+      button.hidden = false;
       button.addEventListener("click", async () => {
-        const citation = button.dataset.citation ?? "";
+        const citation = button.dataset.copyText ?? "";
         if (!citation) return;
 
         const originalText = button.textContent ?? "Copy citation";

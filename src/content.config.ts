@@ -20,6 +20,11 @@ const publications = defineCollection({
     citation: z.string().optional(),
     cardSummary: z.string().optional(),
     resourceNote: z.string().optional(),
+    bibliography: z.object({
+      editors: z.array(z.string()).optional(),
+      publisher: z.string().optional(),
+      pages: z.string().optional()
+    }).optional(),
     editorial: z.object({
       context: z.array(z.string()).optional(),
       findings: z.array(z.string()).optional(),

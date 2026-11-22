@@ -2,6 +2,7 @@
 import { getPublicationMetadata, publicationSearchText, type Publication } from "../utils/publication-records";
 import { researchTopicPath, researchTopics, publicationMatchesTopic } from "../data/research-topics";
 import { slugify, normalizeTitle, yearRank, publicationSummary } from "../utils/publications";
+import { publicationArchiveLinks, compactPublicationAuthors } from "../utils/publication-citations";
 
 interface Props {
   publications: Publication[];
@@ -21,7 +22,6 @@ const pluralizeType = (type: string) => {
 };
 
 
-const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
 const typeOrder = ["Book", "Article", "Chapter", "Working Paper", "Review"];
 const typeCounts = new Map<string, number>();
 publications.forEach((publication) => {
@@ -73,6 +73,7 @@ const archiveItems = publications.map((publication) => {
     majorThemes,
     venue,
     landmark,
+    resourceLinks: publicationArchiveLinks(publication, metadata),
     searchText: publicationSearchText(publication, metadata),
     yearSort: yearRank(publication.data.year)
   };
@@ -154,7 +155,7 @@ const themeOptions = majorThemeDefinitions
 
   <div class="archive-list-panel">
     <div class="archive-record-list" data-publication-list>
-      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, landmark, searchText, yearSort }) => (
+      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, landmark, resourceLinks, searchText, yearSort }) => (
         <article
           class={`archive-record ${landmark ? "archive-record-landmark" : ""}`}
           data-publication-record
@@ -177,7 +178,7 @@ const themeOptions = majorThemeDefinitions
             )}
             <h3><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h3>
             <p class="archive-record-venue">{venue} · {publication.data.year}</p>
-            <p class="archive-record-authors">{compactAuthors(publication.data.authors)}</p>
+            <p class="archive-record-authors">{compactPublicationAuthors(publication.data.authors)}</p>
             <p class="archive-record-summary">{displaySummary}</p>
             {majorThemes.length > 0 && (
               <div class="archive-record-themes" aria-label="Related themes">
@@ -192,6 +193,7 @@ const themeOptions = majorThemeDefinitions
                 })}
               </div>
             )}
+            <div class="archive-record-actions">
             {abstract && (
               <details class="archive-record-details">
                 <summary>View abstract</summary>
@@ -200,6 +202,10 @@ const themeOptions = majorThemeDefinitions
                 </div>
               </details>
             )}
+              <nav class="archive-resource-links" aria-label={`Resources for ${publication.data.title}`}>
+                {resourceLinks.map((link) => <a href={link.url}>[{link.label}]</a>)}
+              </nav>
+            </div>
           </div>
         </article>
       ))}

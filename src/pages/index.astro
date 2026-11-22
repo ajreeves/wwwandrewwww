@@ -8,6 +8,10 @@ import { academicAppointment } from "@data/academic-appointment";
 import "../styles/home.css";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+const recentArticles = (await getCollection("publications"))
+  .filter((entry) => entry.data.type === "Article" && /^\d{4}$/.test(String(entry.data.year)))
+  .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title))
+  .slice(0, 4);
 const bookNotes: Record<string, string> = {
   "no-blank-check": "How public opinion limits presidents who act without Congress.",
   "particularistic-president": "Why presidents direct more federal resources to some communities than others."
@@ -68,6 +72,7 @@ const personStructuredData = {
     "Director, Weidenbaum Center on the Economy, Government, and Public Policy",
     "Director, Frick Initiatives",
     "Senior Advisor to the Chancellor",
+    "Co-Chair, Ordered Liberty Project",
     "Visiting Fellow"
   ],
   worksFor: [
@@ -120,18 +125,19 @@ const personStructuredData = {
         <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" loading="eager" fetchpriority="high" />
       </figure>
       <div class="home-intro-copy">
-        <h1 id="home-name">Andrew Reeves researches and teaches American politics at Washington University in St. Louis.</h1>
-        <p class="home-intro-lede">His work examines how presidents make decisions, how people judge their leaders, and who benefits from government policy.</p>
-        <p class="home-primary-appointment"><a href="https://polisci.wustl.edu/">{academicAppointment.title}</a></p>
+        <h1 id="home-name">Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis.</h1>
+        <p class="home-intro-lede">He studies American politics: how presidents make decisions, how people judge their leaders, and who benefits from government policy.</p>
+        <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a>, and serves as Senior Advisor to the Chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
+          <a href="#leadership">University leadership</a>
           <a href="/about/">Biography</a>
           <a href="/contact/">Contact</a>
         </div>
       </div>
     </section>
 
-    <nav class="home-photo-nav" aria-label="Explore my work">
+    <nav class="home-photo-nav" aria-label="Explore Andrew Reeves’s work">
       {photoLinks.map((item) => (
         <a class="home-photo-link" href={item.href} aria-label={item.title}>
           <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 96px, 33vw" />
@@ -162,6 +168,18 @@ const personStructuredData = {
       </div>
     </section>
 
+    <section class="container-wide home-recent" aria-labelledby="recent-articles-heading">
+      <h2 id="recent-articles-heading">Recent articles</h2>
+      <ul>
+        {recentArticles.map((article) => (
+          <li>
+            <h3><a href={`/research/${article.id}/`}>{article.data.title}</a></h3>
+            <p>{article.data.venue} · {article.data.year}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
     <section class="container-wide home-research" aria-labelledby="questions-heading">
       <div>
         <h2 id="questions-heading">Research</h2>
@@ -175,8 +193,8 @@ const personStructuredData = {
     <section class="container-wide home-teaching-note" aria-labelledby="public-life-heading">
       <h2 id="public-life-heading">Teaching citizenship</h2>
       <div>
-        <p>In my Citizenship course, we read Aristotle and Martin Luther King Jr. alongside research on trust and polarization.</p>
-        <p>We ask how people learn to take part in democracy, and what citizens owe one another.</p>
+        <p>In Reeves’s Citizenship course, students read Aristotle and Martin Luther King Jr. alongside research on trust and polarization.</p>
+        <p>They consider how people learn to take part in democracy and what citizens owe one another.</p>
         <div class="home-links">
           <a href="/teaching/">Courses and syllabi</a>
           <a href="/students/">Students and advising</a>
@@ -184,15 +202,25 @@ const personStructuredData = {
       </div>
     </section>
 
-    <aside class="container-wide home-other-roles" aria-label="Additional appointments and affiliations">
-      <p class="home-label">Other roles</p>
-      <ul>
-        <li><a href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a></li>
-        <li><a href="https://frick.washu.edu/">Director, Frick Initiatives</a></li>
-        <li><a href="https://law.washu.edu/">Professor of Law by courtesy</a></li>
-        <li><a href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a></li>
-        <li><a href="https://www.hoover.org/">Visiting Fellow, Hoover Institution</a></li>
-      </ul>
-    </aside>
+    <section id="leadership" class="container-wide home-leadership" aria-labelledby="leadership-heading">
+      <h2 id="leadership-heading">University leadership</h2>
+      <div class="home-leadership-copy">
+        <dl>
+          <div>
+            <dt><a href="https://wc.wustl.edu/">Weidenbaum Center</a><span>Director</span></dt>
+            <dd>Reeves leads the Center on the Economy, Government, and Public Policy, supporting social science research and bringing scholars, policymakers, and civic leaders into conversation.</dd>
+          </div>
+          <div>
+            <dt><a href="https://frick.washu.edu/">Frick Initiatives</a><span>Director</span></dt>
+            <dd>He oversees support for university and community projects on civil discourse, free speech, free and open markets, and personal responsibility.</dd>
+          </div>
+          <div>
+            <dt><a href="https://andrewdmartin.washu.edu/people/">Office of the Chancellor</a><span>Senior Advisor to the Chancellor</span></dt>
+            <dd>Reeves also co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist, supporting free inquiry and debate across the university.</dd>
+          </div>
+        </dl>
+        <p class="home-affiliations">He also serves as <a href="https://law.washu.edu/">Professor of Law by courtesy</a> at WashU and a <a href="https://www.hoover.org/">Visiting Fellow at the Hoover Institution</a>.</p>
+      </div>
+    </section>
   </div>
 </BaseLayout>
