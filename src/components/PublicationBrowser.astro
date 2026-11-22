@@ -1,16 +1,7 @@
 ---
 import { getPublicationMetadata, publicationSearchText, type Publication } from "../utils/publication-records";
-import publicationFigures from "../data/publication-figures.json";
 import { researchTopicPath, researchTopics, publicationMatchesTopic } from "../data/research-topics";
 import { slugify, normalizeTitle, yearRank, publicationSummary } from "../utils/publications";
-import ResponsiveImage from "./ResponsiveImage.astro";
-
-interface PublicationFigure {
-  src: string;
-  alt: string;
-  caption?: string;
-  kind?: string;
-}
 
 interface Props {
   publications: Publication[];
@@ -29,9 +20,6 @@ const pluralizeType = (type: string) => {
   return `${type}s`;
 };
 
-
-const figureIndex = publicationFigures as Record<string, PublicationFigure>;
-const figureFor = (publication: Publication) => figureIndex[publication.id];
 
 const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
 const typeOrder = ["Book", "Article", "Chapter", "Working Paper", "Review"];
@@ -64,7 +52,6 @@ const majorThemeDefinitions = researchTopics.map((topic) => ({
 
 const archiveItems = publications.map((publication) => {
   const metadata = getPublicationMetadata(publication);
-  const figure = figureFor(publication);
   const majorThemes = researchTopics
     .filter((topic) => publicationMatchesTopic(publication, topic))
     .map((topic) => topic.slug);
@@ -85,7 +72,6 @@ const archiveItems = publications.map((publication) => {
     displaySummary,
     majorThemes,
     venue,
-    figure,
     landmark,
     searchText: publicationSearchText(publication, metadata),
     yearSort: yearRank(publication.data.year)
@@ -102,10 +88,6 @@ const themeOptions = majorThemeDefinitions
 ---
 
 <section class="container-wide archive-workbench" data-publication-browser>
-  <p class="archive-poster-note">
-    Each publication is paired with a fictional, AI-generated vintage movie poster that playfully interprets the paper’s central finding.
-  </p>
-
   <div class="archive-search-panel">
     <div class="archive-search-heading">
       <div>
@@ -169,7 +151,7 @@ const themeOptions = majorThemeDefinitions
 
   <div class="archive-list-panel">
     <div class="archive-record-list" data-publication-list>
-      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, figure, landmark, searchText, yearSort }) => (
+      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, landmark, searchText, yearSort }) => (
         <article
           class={`archive-record ${landmark ? "archive-record-landmark" : ""}`}
           data-publication-record
@@ -210,25 +192,13 @@ const themeOptions = majorThemeDefinitions
             )}
             {abstract && (
               <details class="archive-record-details">
-                <summary>View abstract +</summary>
+                <summary>View abstract</summary>
                 <div>
                   <p>{abstract}</p>
                 </div>
               </details>
             )}
           </div>
-          {figure && (
-            <figure
-              class:list={[
-                "archive-record-figure",
-                figure.kind === "book-cover" && "archive-record-book-cover",
-                figure.kind === "poster" && "archive-record-poster"
-              ]}
-            >
-              <ResponsiveImage src={figure.src} alt={figure.alt} loading="lazy" sizes="(max-width: 760px) 120px, 160px" />
-              <figcaption>{figure.kind === "poster" ? "Fictional AI-generated illustration. Imagery and numbers are illustrative, not research findings." : figure.caption}</figcaption>
-            </figure>
-          )}
         </article>
       ))}
     </div>

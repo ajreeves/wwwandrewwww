@@ -16,23 +16,20 @@ const publications = (await getCollection("publications")).sort((a, b) => yearRa
     intro="Published research spanning presidential power, democratic accountability, political geography, and the distribution of federal resources."
   />
 
-  <section class="container-wide page-section" aria-labelledby="research-themes-heading">
-    <div class="page-section-heading">
-      <div>
-        <p class="kicker mb-4">Research Themes</p>
-        <h2 id="research-themes-heading">Browse by Area</h2>
+  <section class="container-wide research-browse" aria-label="Research themes">
+    <details class="research-topic-disclosure">
+      <summary id="research-themes-heading">Explore the research themes</summary>
+      <div class="grid gap-5 lg:grid-cols-4">
+        {
+          researchTopics.map((topic) => (
+            <a class="editorial-card no-underline" href={researchTopicPath(topic.slug)}>
+              <h2 class="card-title">{topic.label}</h2>
+              <p class="mt-4 text-lg leading-[1.6] text-muted">{topic.description}</p>
+            </a>
+          ))
+        }
       </div>
-    </div>
-    <div class="grid gap-5 lg:grid-cols-4">
-      {
-        researchTopics.map((topic) => (
-          <a class="editorial-card no-underline" href={researchTopicPath(topic.slug)}>
-            <h3 class="card-title">{topic.label}</h3>
-            <p class="mt-4 text-lg leading-[1.6] text-muted">{topic.description}</p>
-          </a>
-        ))
-      }
-    </div>
+    </details>
   </section>
 
   <PublicationBrowser

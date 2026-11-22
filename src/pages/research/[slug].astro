@@ -309,7 +309,7 @@ const publicationStructuredData = {
       </div>
       {publicationFigure && (
         <figure class:list={["publication-hero-figure", publicationFigure.kind === "poster" && "publication-hero-poster"]}>
-          <ResponsiveImage src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" sizes="(max-width: 900px) calc(100vw - 48px), 36vw" />
+          <ResponsiveImage src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" sizes="(max-width: 760px) 300px, (min-width: 1200px) 355px, 30vw" />
           {publicationFigureCaption && <figcaption>{publicationFigureCaption}</figcaption>}
         </figure>
       )}

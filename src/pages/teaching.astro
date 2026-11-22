@@ -74,7 +74,7 @@ const courses = [
     ],
     links: [
       {
-        label: "In the news →",
+        label: "In the news",
         url: "https://artsci.washu.edu/ampersand/how-presidential-election-start"
       }
     ],
@@ -115,7 +115,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <PageHeader
     eyebrow="Courses & Teaching"
     title="Teaching"
-    intro="Reeves teaches courses on American politics, democratic institutions, and civic life, with an emphasis on evidence, institutional reasoning, and practical engagement with democratic questions."
+    intro="I teach American politics, democratic institutions, and civic life—helping students connect evidence and ideas to the practice of citizenship."
     actionHref="/students/"
     actionLabel="Students & Mentoring"
   />
@@ -130,8 +130,8 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <FeatureBand
     id="classroom-practice"
     eyebrow="Classroom Practice"
-    title="Evidence, Institutions, and Civic Judgment"
-    text="Courses emphasize analytical rigor, close reading of evidence, and practical democratic reasoning."
+    title="Thinking together about democratic life"
+    text="In my classroom, we use evidence, close reading, and discussion to ask how institutions work and what citizens owe one another."
     image="/images/andrew-teaching-page.jpg"
     alt="Andrew Reeves teaching in a classroom"
   />
@@ -151,7 +151,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
             <p class="kicker mb-4">{award.link}</p>
             <h3 class="card-title">{award.title}</h3>
             <p class="mt-4 text-lg leading-[1.6] text-muted">{award.text}</p>
-            <a class="ghost-button mt-3" href={award.url}>Award announcement →</a>
+            <a class="ghost-button mt-3" href={award.url}>Award announcement</a>
           </article>
         ))
       }
@@ -162,7 +162,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Courses</p>
-        <h2>American Politics and Citizenship</h2>
+        <h2>American politics and citizenship</h2>
         <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Selected courses and past teaching materials. Terms identify the linked syllabus or documented offering.</p>
       </div>
     </div>
@@ -175,7 +175,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
                 src={course.image}
                 alt={course.alt}
                 loading="lazy"
-                sizes="(min-width: 1500px) 700px, (min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 4rem), calc(100vw - 2rem)"
+                sizes="(min-width: 1200px) 280px, (min-width: 760px) 24vw, calc(100vw - 40px)"
               />
               <figcaption>{course.caption}</figcaption>
             </figure>

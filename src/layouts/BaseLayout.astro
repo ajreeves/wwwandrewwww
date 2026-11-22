@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/editorial.css";
 import { siteEnvironment } from "@data/site-environment";
 
 interface Props {
@@ -64,7 +65,7 @@ const navItems = [
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
-  <body>
+  <body class:list={[active !== "CV" && "editorial-site"]}>
     <div class="site-shell">
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header">
