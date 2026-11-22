@@ -112,23 +112,23 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 300px" />
+    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" />
   </Fragment>
   <div class="home-page">
     <section class="container-wide home-intro" aria-labelledby="home-name">
+      <figure class="home-portrait">
+        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" loading="eager" fetchpriority="high" />
+      </figure>
       <div class="home-intro-copy">
-        <h1 id="home-name">Andrew Reeves</h1>
-        <p class="home-intro-lede">I’m a political scientist at Washington University in St. Louis. I study the American presidency, public opinion, and the politics of federal spending.</p>
+        <h1 id="home-name">Andrew Reeves researches and teaches American politics at Washington University in St. Louis.</h1>
+        <p class="home-intro-lede">His work examines how presidents make decisions, how people judge their leaders, and who benefits from government policy.</p>
         <p class="home-primary-appointment"><a href="https://polisci.wustl.edu/">{academicAppointment.title}</a></p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
-          <a href="/about/">More about me</a>
+          <a href="/about/">Biography</a>
           <a href="/contact/">Contact</a>
         </div>
       </div>
-      <figure class="home-portrait">
-        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 300px" loading="eager" fetchpriority="high" />
-      </figure>
     </section>
 
     <nav class="home-photo-nav" aria-label="Explore my work">
