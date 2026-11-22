@@ -343,7 +343,7 @@ const publicationStructuredData = {
     {contextParagraphs.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>{isReview ? "About the Review" : "Why It Matters"}</h2>
+          <h2>{isReview ? "About the Review" : publication.data.type === "Book" ? "About the Book" : "About the Research"}</h2>
         </div>
         <div class="publication-profile-section-body publication-essay">
           {contextParagraphs.map((paragraph) => (
@@ -356,7 +356,7 @@ const publicationStructuredData = {
     {keyFindings.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>{isReview ? "Evidence Discussed in the Book" : "Key Findings"}</h2>
+          <h2>{isReview ? "Evidence Discussed in the Book" : "Findings"}</h2>
         </div>
         <div class="publication-profile-section-body">
           <ul class="publication-finding-list">

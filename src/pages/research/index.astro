@@ -13,12 +13,12 @@ const publications = (await getCollection("publications")).sort((a, b) => yearRa
   <PageHeader
     eyebrow="Research Archive"
     title="Publications"
-    intro="Published research spanning presidential power, democratic accountability, political geography, and the distribution of federal resources."
+    intro="My published research on the presidency, public opinion, political geography, and federal spending."
   />
 
   <section class="container-wide research-browse" aria-label="Research themes">
     <details class="research-topic-disclosure">
-      <summary id="research-themes-heading">Explore the research themes</summary>
+      <summary id="research-themes-heading">Browse research topics</summary>
       <div class="grid gap-5 lg:grid-cols-4">
         {
           researchTopics.map((topic) => (

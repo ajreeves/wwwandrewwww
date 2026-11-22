@@ -26,7 +26,7 @@ const events = [
     embed: "https://www.youtube.com/embed/-xeyS7nilpU",
     label: "Governing Past Gridlock",
     summary:
-      "A Weidenbaum Center event on fiscal governance, political trust, and strategies for long-term national stability, featuring former U.S. Representative Carolyn Bourdeaux."
+      "Former U.S. Representative Carolyn Bourdeaux discusses fiscal responsibility and political trust at a Weidenbaum Center event."
   },
   {
     title: "The Past, Present, and Future of the Federal Reserve",
@@ -48,7 +48,7 @@ const events = [
     embed: "https://www.youtube.com/embed/1T0Oz9wY6P4",
     label: "Future of Civic Education",
     summary:
-      "A panel on civic learning, viewpoint diversity, and open inquiry with Robert Doar, Benjamin Storey, and Andrew Reeves."
+      "Robert Doar, Benjamin Storey, and Andrew Reeves discuss how universities teach citizenship and encourage debate among people with different views."
   },
   {
     title: "Labor, Regulation, and the Changing Economy Panel",
@@ -59,7 +59,7 @@ const events = [
     embed: "https://www.youtube.com/embed/yUeC-xgeLVM",
     label: "Labor and Regulation Panel",
     summary:
-      "A cross-ideological panel on labor markets, regulation, tariffs, immigration, and near-term policy shifts, moderated by Pauline Kim."
+      "Pauline Kim moderates a panel on labor markets, regulation, tariffs, immigration, and upcoming policy changes."
   },
   {
     title: "A Fireside Chat with James Bullard",
@@ -92,7 +92,7 @@ const events = [
     embed: "https://www.youtube.com/embed/9uWOQAFgWNc",
     label: "Policy Lunch on Executive Power",
     summary:
-      "A policy lunch on No Blank Check and evidence on public skepticism toward presidential executive authority, featuring Andrew Reeves."
+      "I discuss No Blank Check and why the public is often skeptical of presidents acting without Congress."
   },
   {
     title: "January 2023: Hoover Fellow and Presidential Campaign Advisor: A Conversation with Lanhee J. Chen",
@@ -103,7 +103,7 @@ const events = [
     embed: "https://www.youtube.com/embed/FEn1wxqnSUQ",
     label: "Conversation with Lanhee J. Chen",
     summary:
-      "A conversation with Lanhee J. Chen on partisan dynamics, campaign strategy, and the 2024 election environment."
+      "A conversation with Lanhee J. Chen about partisanship, campaign strategy, and the 2024 election."
   }
 ] as const;
 
@@ -114,13 +114,13 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
   <PageHeader
     eyebrow="Public Events"
     title="Talks & Events"
-    intro="Public conversations on governance, institutions, civic education, and democratic life."
+    intro="Recordings of talks, panels, and conversations from the Weidenbaum Center and my public work."
   />
 
   <FeatureBand
     eyebrow="Featured Event"
     title="The Past, Present, and Future of the Federal Reserve"
-    text="Andrew Reeves introduced a Weidenbaum Center event featuring Alberto Musalem, James Bullard, and Thomas Melzer, moderated by Karen Branding, on September 29, 2025."
+    text="I introduced this Weidenbaum Center conversation with Alberto Musalem, James Bullard, and Thomas Melzer on September 29, 2025. Karen Branding moderated the discussion."
     image="/images/andrew-fed-page.jpg"
     alt="Andrew Reeves at a Weidenbaum Center Federal Reserve event with Karen Branding, Thomas Melzer, Alberto Musalem, and James Bullard"
     caption="Photo: Sid Hastings/WashU."
@@ -134,7 +134,7 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
         <p class="kicker mb-4">Recordings</p>
         <h2>Weidenbaum Center Events</h2>
         <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">
-          Talks, panels, and policy discussions on governance, economics, civic education, and democratic institutions. Dates refer to the events; speaker roles reflect their positions at the time.
+          Dates are the event dates, and speakers’ titles are those they held at the time.
         </p>
       </div>
       <a class="hidden section-action sm:inline" href="https://www.youtube.com/channel/UCvJOmn5O0jvtON27hM5GXew">YouTube channel</a>
