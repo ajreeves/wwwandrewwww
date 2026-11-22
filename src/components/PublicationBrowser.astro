@@ -89,14 +89,10 @@ const themeOptions = majorThemeDefinitions
 
 <section class="container-wide archive-workbench" data-publication-browser>
   <div class="archive-search-panel">
-    <div class="archive-search-heading">
-      <div>
-        <h2>{heading}</h2>
-      </div>
-    </div>
+    <h2 class="sr-only">{heading}</h2>
 
     <div class="archive-search-row">
-      <label for="publication-search">Search title, author, journal, topic, or abstract</label>
+      <label for="publication-search">Search publications</label>
       <div class="archive-search-control">
         <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal, or topic…" />
         <button type="button" data-archive-reset>Reset</button>
@@ -105,7 +101,9 @@ const themeOptions = majorThemeDefinitions
     </div>
   </div>
 
-  <div class="archive-control-panel" aria-label="Publication filters">
+  <details class="archive-filters">
+    <summary>Filters and sort<span class="archive-filter-summary" data-archive-state-summary></span></summary>
+    <div class="archive-control-panel" aria-label="Publication filters">
     <div class="archive-control-group">
       <p>Publication Type</p>
       <div class="archive-segmented-control" role="group" aria-label="Filter publications by type">
@@ -147,7 +145,12 @@ const themeOptions = majorThemeDefinitions
         <option value="oldest">Oldest first</option>
       </select>
     </div>
-  </div>
+    </div>
+    <nav class="archive-topic-links" aria-label="About the research topics">
+      <span>About these topics:</span>
+      {researchTopics.map((topic) => <a href={researchTopicPath(topic.slug)}>{topic.label}</a>)}
+    </nav>
+  </details>
 
   <div class="archive-list-panel">
     <div class="archive-record-list" data-publication-list>
@@ -164,7 +167,6 @@ const themeOptions = majorThemeDefinitions
           data-landmark={landmark ? "true" : "false"}
         >
           <div class="archive-record-year">
-            <span>{publication.data.year}</span>
             <small>{publication.data.type}</small>
           </div>
           <div class="archive-record-main">
@@ -333,7 +335,11 @@ const themeOptions = majorThemeDefinitions
       if (summary) {
         const typeLabel = typeButtons.find((button) => button.getAttribute("data-filter-type") === state.type)?.querySelector("span")?.textContent ?? "All";
         const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All themes";
-        summary.textContent = `${typeLabel}; ${themeLabel}; ${sortSelect.options[sortSelect.selectedIndex]?.text ?? "Newest first"}.`;
+        summary.textContent = [
+          state.type !== "all" ? typeLabel : "",
+          state.theme !== "all" ? themeLabel : "",
+          state.sort !== "newest" ? "Oldest first" : ""
+        ].filter(Boolean).join(" · ");
       }
 
       if (empty) empty.hidden = visibleRecords.length > 0;

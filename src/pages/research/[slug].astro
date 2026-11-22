@@ -39,6 +39,8 @@ const cleanText = (value?: string | number | null) =>
 const metadata = getPublicationMetadata(publication);
 const rawFigure = figureManifest[publication.id];
 const publicationFigure = rawFigure && !rawFigure.fallback ? rawFigure : undefined;
+const heroFigure = publicationFigure?.kind !== "poster" ? publicationFigure : undefined;
+const supplementalPoster = publicationFigure?.kind === "poster" ? publicationFigure : undefined;
 
 const asList = (value?: string[] | null) => (Array.isArray(value) ? value.map(cleanText).filter(Boolean) : []);
 
@@ -185,8 +187,8 @@ const nextPublication = currentIndex >= 0 && currentIndex < sortedPublications.l
 const siteUrl = "https://andrewreeves.org";
 const publicationUrl = `${siteUrl}/research/${publication.id}/`;
 const absoluteUrl = (path: string) => new URL(path, siteUrl).toString();
-const publicationImage = publicationFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
-const publicationImageAlt = publicationFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
+const publicationImage = heroFigure?.src ?? "/images/andrew-reeves-portrait-editorial.jpg";
+const publicationImageAlt = heroFigure?.alt ?? `Research by Andrew Reeves: ${publication.data.title}`;
 const publicationFigureCaption = publicationFigure?.kind === "poster"
   ? "Fictional AI-generated illustration inspired by this research. Imagery and numbers are illustrative, not research findings."
   : editorial?.figureCaption ?? publicationFigure?.caption;
@@ -287,7 +289,7 @@ const publicationStructuredData = {
   structuredData={publicationStructuredData}
 >
   <article class="publication-profile container-wide">
-    <header class:list={["publication-profile-hero", publicationFigure && "publication-profile-hero-with-figure"]}>
+    <header class:list={["publication-profile-hero", heroFigure && "publication-profile-hero-with-figure"]}>
       <div class="publication-profile-main">
         <div class="publication-profile-meta">
           <p>{publication.data.type} · {publication.data.year}</p>
@@ -307,9 +309,9 @@ const publicationStructuredData = {
           <p class="publication-resource-note">{publication.data.resourceNote} <a href="/contact/">Ask about replication materials.</a></p>
         )}
       </div>
-      {publicationFigure && (
-        <figure class:list={["publication-hero-figure", publicationFigure.kind === "poster" && "publication-hero-poster"]}>
-          <ResponsiveImage src={publicationFigure.src} alt={publicationFigure.alt} loading="eager" sizes="(max-width: 760px) 300px, (min-width: 1200px) 355px, 30vw" />
+      {heroFigure && (
+        <figure class="publication-hero-figure">
+          <ResponsiveImage src={heroFigure.src} alt={heroFigure.alt} loading="eager" sizes="(max-width: 760px) 300px, (min-width: 1200px) 355px, 30vw" />
           {publicationFigureCaption && <figcaption>{publicationFigureCaption}</figcaption>}
         </figure>
       )}
@@ -417,6 +419,16 @@ const publicationStructuredData = {
           )}
         </div>
       </section>
+    )}
+
+    {supplementalPoster && (
+      <details class="publication-illustration">
+        <summary>View an illustration inspired by this research</summary>
+        <figure>
+          <ResponsiveImage src={supplementalPoster.src} alt={supplementalPoster.alt} loading="lazy" sizes="(max-width: 400px) calc(100vw - 40px), 320px" />
+          <figcaption>{publicationFigureCaption}</figcaption>
+        </figure>
+      </details>
     )}
 
     {displayedRelatedPublications.length > 0 && (

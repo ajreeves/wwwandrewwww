@@ -26,10 +26,13 @@
 .home-page .home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 
 .home-page .home-photo-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #13322b; }
-.home-page .home-photo-link { position: relative; display: grid; align-content: end; min-width: 0; min-height: clamp(240px, 22.22vw, 400px); padding: 28px; color: white; text-decoration: none; isolation: isolate; }
+.home-page .home-photo-link { position: relative; display: grid; align-content: end; min-width: 0; min-height: clamp(240px, 22.22vw, 400px); padding: 28px; color: white; text-decoration: none; isolation: isolate; overflow: hidden; }
 .home-page .home-photo-link + .home-photo-link { border-left: 1px solid #ffffff40; }
 .home-page .home-photo-link img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.home-page .home-photo-link::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, #13322b05 5%, #13322b99 50%, #13322bf5 100%); }
+.home-page .home-photo-link::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, transparent 30%, #111a1633 52%, #111a16e6 100%); }
+.home-page .home-photo-link[href="/research/"] img { transform: scale(1.12); object-position: center 60%; }
+.home-page .home-photo-link[href="/teaching/"] img { object-position: 38% center; }
+.home-page .home-photo-copy { text-shadow: 0 1px 5px #0009; }
 .home-page .home-photo-title { display: block; color: white; font-family: var(--font-sans); font-size: 32px; font-weight: 600; line-height: 1.15; }
 .home-page .home-photo-description { display: block; max-width: 36ch; margin-top: 10px; color: white; font-size: 18px; line-height: 1.45; }
 .home-page .home-photo-link:hover .home-photo-title { text-decoration: underline; text-underline-offset: 6px; }
@@ -91,6 +94,8 @@
   .home-page .home-photo-link { grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: 20px; min-height: 0; padding: 16px 20px; }
   .home-page .home-photo-link + .home-photo-link { border-left: 0; border-top: 1px solid #ffffff40; }
   .home-page .home-photo-link img { position: static; width: 96px; height: 64px; }
+  .home-page .home-photo-link[href="/research/"] img { transform: none; }
+  .home-page .home-photo-copy { text-shadow: none; }
   .home-page .home-photo-link::after { content: none; }
   .home-page .home-photo-title { font-size: 25px; }
   .home-page .home-photo-description { margin-top: 8px; font-size: 16px; }

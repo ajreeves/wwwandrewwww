@@ -5,6 +5,9 @@ import { academicAppointment } from "@data/academic-appointment";
 
 import { galleryPhotos } from "@data/about-gallery";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
+
+const leadPhoto = galleryPhotos.find((photo) => photo.src === "/images/andrew-reeves-frick-candid.jpg")!;
+const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
 ---
 
 <BaseLayout
@@ -23,56 +26,27 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
     <div class="about-introduction">
       <div class="editorial-prose about-lead-prose">
         <p>
-          Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. He studies presidential power, federal spending, and how people judge their elected leaders. His research examines why some communities receive more government resources than others and how people&rsquo;s experiences with public policy shape their political views.
+          I’m {academicAppointment.biographyRole} at Washington University in St. Louis. I study presidential power, federal spending, and how people judge their elected leaders.
         </p>
+        <p>
+          I’m intrigued by the space between behavior and institutions. My research asks why some communities receive more government resources than others and how people’s experiences with public policy shape their political views.
+        </p>
+        <nav class="about-links" aria-label="About page links">
+          <a href="#biography">Biography</a>
+          <a href="/talks/">Talks and events</a>
+          <a href="/contact/">Contact</a>
+        </nav>
       </div>
-      <section
-        class="about-photo-gallery"
-        aria-label="Photographs of Andrew Reeves"
-        aria-roledescription="carousel"
-        data-about-gallery
-      >
-        <div class="about-photo-stage" aria-live="off">
-          {
-            galleryPhotos.map((photo, index) => (
-              <figure class:list={["about-profile-photo", index === 0 && "is-active"]} data-gallery-slide aria-hidden={index === 0 ? "false" : "true"}>
-                <div class="about-photo-media">
-                  {index === 0 ? (
-                    <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(min-width: 1200px) 660px, (min-width: 900px) 54vw, calc(100vw - 40px)" loading="eager" fetchpriority="high" />
-                  ) : (
-                    <template data-gallery-image>
-                      <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(min-width: 1200px) 660px, (min-width: 900px) 54vw, calc(100vw - 40px)" loading="eager" />
-                    </template>
-                  )}
-                </div>
-                <figcaption>{photo.caption}</figcaption>
-              </figure>
-            ))
-          }
-        </div>
-        <div class="about-gallery-controls">
-          <div class="about-gallery-nav" aria-label="Choose a photograph">
-            <button class="about-gallery-arrow" type="button" data-gallery-previous aria-label="Show previous photograph">←</button>
-            {
-              galleryPhotos.map((_, index) => (
-                <button
-                  class:list={["about-gallery-dot", index === 0 && "is-active"]}
-                  type="button"
-                  data-gallery-dot={index}
-                  aria-label={`Show photograph ${index + 1}`}
-                  aria-current={index === 0 ? "true" : undefined}
-                />
-              ))
-            }
-            <button class="about-gallery-arrow" type="button" data-gallery-next aria-label="Show next photograph">→</button>
-          </div>
-          <button class="about-gallery-pause" type="button" data-gallery-pause aria-pressed="false">Pause</button>
-        </div>
-      </section>
+      <figure class="about-lead-photo">
+        <ResponsiveImage src={leadPhoto.src} alt={leadPhoto.alt} sizes="(min-width: 1200px) 660px, (min-width: 761px) 54vw, calc(100vw - 40px)" loading="eager" fetchpriority="high" />
+        <figcaption>{leadPhoto.caption}</figcaption>
+      </figure>
 
     </div>
 
-    <article class="editorial-prose about-biography">
+    <article id="biography" class="editorial-prose about-biography" aria-labelledby="biography-heading">
+      <h2 id="biography-heading">Biography</h2>
+      <p>Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. His research examines presidential power, federal spending, and public opinion.</p>
       <p>
         In <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>, Reeves and Jon C. Rogowski show that Americans care about how presidents use their authority, as well as what they accomplish. In <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a>, Reeves and Douglas L. Kriner examine how party politics and elections shape federal spending. The book won the 2016 Richard E. Neustadt Award. Reeves&rsquo;s research has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em>, and <em>Journal of Politics</em>.
       </p>
@@ -89,6 +63,36 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
         Reeves also serves as Professor of Law by courtesy at WashU, Senior Advisor to the Chancellor, and a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
       </p>
     </article>
+
+    <details class="about-gallery-disclosure">
+      <summary>Photographs from talks and university life</summary>
+      <section class="about-photo-gallery" aria-label="Photographs of Andrew Reeves" aria-roledescription="carousel" data-about-gallery>
+        <div class="about-photo-stage" aria-live="polite" aria-atomic="true">
+          {additionalPhotos.map((photo, index) => (
+            <figure class:list={["about-profile-photo", index === 0 && "is-active"]} data-gallery-slide aria-hidden={index === 0 ? "false" : "true"}>
+              <div class="about-photo-media">
+                {index === 0 ? (
+                  <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(min-width: 760px) 680px, calc(100vw - 40px)" loading="lazy" />
+                ) : (
+                  <template data-gallery-image>
+                    <ResponsiveImage src={photo.src} alt={photo.alt} sizes="(min-width: 760px) 680px, calc(100vw - 40px)" loading="eager" />
+                  </template>
+                )}
+              </div>
+              <figcaption>{photo.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="about-gallery-controls" data-gallery-controls hidden>
+          <button type="button" data-gallery-previous aria-label="Show previous photograph">Previous</button>
+          <span data-gallery-status aria-live="polite" aria-atomic="true">1 of {additionalPhotos.length}</span>
+          <button type="button" data-gallery-next aria-label="Show next photograph">Next</button>
+        </div>
+        <noscript>
+          <ul>{additionalPhotos.slice(1).map((photo) => <li><a href={photo.src}>{photo.caption}</a></li>)}</ul>
+        </noscript>
+      </section>
+    </details>
   </section>
 
   <script>
@@ -96,13 +100,10 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
 
     if (gallery) {
       const slides = Array.from(gallery.querySelectorAll<HTMLElement>("[data-gallery-slide]"));
-      const dots = Array.from(gallery.querySelectorAll<HTMLButtonElement>("[data-gallery-dot]"));
-      const pauseButton = gallery.querySelector<HTMLButtonElement>("[data-gallery-pause]");
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const controls = gallery.querySelector<HTMLElement>("[data-gallery-controls]");
+      const status = gallery.querySelector<HTMLElement>("[data-gallery-status]");
       let current = 0;
-      let paused = reduceMotion;
-      let pausedBeforePointer = paused;
-      let timer: number | undefined;
+      if (controls) controls.hidden = false;
 
       const loadSlide = (index: number) => {
         const slide = slides[(index + slides.length) % slides.length];
@@ -122,58 +123,11 @@ import ResponsiveImage from "@components/ResponsiveImage.astro";
           slide.classList.toggle("is-active", active);
           slide.setAttribute("aria-hidden", String(!active));
         });
-        dots.forEach((dot, index) => {
-          const active = index === current;
-          dot.classList.toggle("is-active", active);
-          active ? dot.setAttribute("aria-current", "true") : dot.removeAttribute("aria-current");
-        });
-        loadSlide(current + 1);
+        if (status) status.textContent = `${current + 1} of ${slides.length}`;
       };
 
-      const stopTimer = () => {
-        if (timer !== undefined) window.clearInterval(timer);
-        timer = undefined;
-      };
-
-      const startTimer = () => {
-        stopTimer();
-        if (!paused && !document.hidden) timer = window.setInterval(() => showSlide(current + 1), 7000);
-      };
-
-      const setPaused = (value: boolean) => {
-        paused = value;
-        if (pauseButton) {
-          pauseButton.textContent = paused ? "Play" : "Pause";
-          pauseButton.setAttribute("aria-pressed", String(paused));
-        }
-        startTimer();
-      };
-
-      // Stop on focus entry and require an explicit Play action to resume.
-      gallery.addEventListener("focusin", (event) => {
-        if (!(event.relatedTarget instanceof Node) || !gallery.contains(event.relatedTarget)) setPaused(true);
-      });
-
-      gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => {
-        showSlide(current - 1);
-        startTimer();
-      });
-      gallery.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
-        showSlide(current + 1);
-        startTimer();
-      });
-      dots.forEach((dot) => dot.addEventListener("click", () => {
-        showSlide(Number(dot.dataset.galleryDot));
-        startTimer();
-      }));
-      pauseButton?.addEventListener("pointerdown", () => { pausedBeforePointer = paused; });
-      pauseButton?.addEventListener("click", (event) => {
-        setPaused(!(event.detail > 0 ? pausedBeforePointer : paused));
-      });
-      document.addEventListener("visibilitychange", () => document.hidden ? stopTimer() : startTimer());
-
-      loadSlide(1);
-      setPaused(reduceMotion);
+      gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => showSlide(current - 1));
+      gallery.querySelector("[data-gallery-next]")?.addEventListener("click", () => showSlide(current + 1));
     }
   </script>
 </BaseLayout>

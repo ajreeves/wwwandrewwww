@@ -27,7 +27,6 @@ const Heading = headingLevel === 2 ? "h2" : "h3";
 const authorLine = book.id === "particularistic-president"
   ? [...book.data.coauthors, "Andrew Reeves"].join(" and ")
   : ["Andrew Reeves", ...book.data.coauthors].join(" and ");
-const bookPage = `/books/#${book.id}`;
 const coverDimensions = book.id === "particularistic-president"
   ? { width: 427, height: 648 }
   : { width: 415, height: 648 };
@@ -35,7 +34,7 @@ const coverDimensions = book.id === "particularistic-president"
 
 <article class={`flw-feature-card book-feature-card ${reversed ? "flw-feature-card-reversed" : ""}`}>
   <figure class="flw-feature-media book-cover-panel">
-    <a href={bookPage} class="book-single-link no-underline" aria-label={`${book.data.title} book page`}>
+    <div class="book-cover-object">
       <img
         src={book.data.cover}
         alt={`Cover of ${book.data.title}`}
@@ -43,19 +42,17 @@ const coverDimensions = book.id === "particularistic-president"
         height={coverDimensions.height}
         loading="lazy"
       />
-    </a>
+    </div>
   </figure>
   <div class="flw-feature-copy">
-    <p class="kicker mb-4">Book · {book.data.year}</p>
     <Heading class="book-title" id={headingId}>
-      <a href={bookPage} class="no-underline">{book.data.title}</a>
+      {book.data.title}
     </Heading>
     {book.data.subtitle && <p class="book-subtitle">{book.data.subtitle}</p>}
     <p class="book-authors">{authorLine}</p>
     <p class="book-publisher">{book.data.publisher}, {book.data.year}</p>
     <p class="book-description">{book.data.summary}</p>
     <div class="book-action-row">
-      <a class="editorial-button" href={bookPage}>Book Page</a>
       {book.data.url && <a class="ghost-button" href={book.data.url}>Publisher</a>}
     </div>
   </div>
