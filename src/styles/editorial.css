@@ -1,10 +1,10 @@
 /* Shared WashU-aligned presentation, including the CV page's HTML shell.
    The downloadable CV and its contents are maintained separately. */
 .editorial-site {
-  /* WashU's approved system alternatives. */
-  --font-sans: Calibri, "Segoe UI", Arial, sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-slab: Georgia, "Times New Roman", serif;
+  /* WashU brand fonts, with approved system alternatives as fallbacks. */
+  --font-sans: "ivystyle-sans", Calibri, "Segoe UI", Arial, sans-serif;
+  --font-serif: "ivypresto-headline", Georgia, "Times New Roman", serif;
+  --font-slab: var(--font-serif);
   --paper: #ffffff;
   --ivory: #ffffff;
   --ink: #222222;
