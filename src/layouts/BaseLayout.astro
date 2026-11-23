@@ -28,6 +28,8 @@ const site = Astro.site ?? new URL("https://andrewreeves.org");
 const canonicalUrl = new URL(Astro.url.pathname, site).toString();
 const imageUrl = new URL(image, site).toString();
 const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
+// Preserve the CV's existing header as well as its document and page content.
+const personalMobileHeader = active !== "CV";
 const navItems = [
   { label: "About", href: "/about/", activeOn: ["About"] },
   { label: "Research", href: "/research/", activeOn: ["Research"] },
@@ -70,7 +72,7 @@ const navItems = [
   <body class="editorial-site">
     <div class="site-shell">
       <a class="skip-link" href="#main">Skip to content</a>
-      <header class="site-header">
+      <header class:list={["site-header", personalMobileHeader && "site-header-personal"]}>
         <nav class="site-nav" aria-label="Main navigation">
           <div class="site-brand">
               <a class="nav-home" href="/" aria-label="Andrew Reeves home">
@@ -97,6 +99,11 @@ const navItems = [
                 </>
               ))
             }
+            {personalMobileHeader && (
+              <a class="nav-university-signature" href="https://washu.edu/">
+                <img src="/brand/washu-logo.svg" alt="Washington University in St. Louis" width="132" height="32" />
+              </a>
+            )}
           </div>
         </nav>
       </header>
