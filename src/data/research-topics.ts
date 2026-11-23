@@ -8,31 +8,31 @@ export const researchTopics: ResearchTopic[] = [
     "slug": "presidential-power",
     "label": "Presidential power",
     "title": "Presidential power research",
-    "description": "How presidents use their authority, when they act without Congress and how Congress and the public limit their power."
+    "description": "What can presidents do without Congress, and what limits their power?"
   },
   {
     "slug": "democratic-accountability",
     "label": "Democratic accountability",
     "title": "Democratic accountability research",
-    "description": "How people judge elected leaders and decide whom to credit or blame for government decisions."
+    "description": "When do citizens hold leaders accountable, and whom do they credit or blame for government decisions?"
   },
   {
     "slug": "political-geography",
     "label": "Political geography",
     "title": "Political geography research",
-    "description": "How where people live shapes their political views, including differences between cities, suburbs and rural communities."
+    "description": "How does place shape political views and choices?"
   },
   {
     "slug": "federal-resource-allocation",
     "label": "Federal resource allocation",
     "title": "Federal resource allocation research",
-    "description": "How presidents distribute federal spending, grants and disaster assistance among states and communities."
+    "description": "Which communities benefit from federal spending, and why do presidents favor some places over others?"
   },
   {
     "slug": "election-administration",
     "label": "Election administration",
     "title": "Election administration research",
-    "description": "How elections are funded and run, and what voters and election workers experience at the polls."
+    "description": "How do the funding, staffing and management of elections shape voters’ experiences?"
   }
 ];
 
