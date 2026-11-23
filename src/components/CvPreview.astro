@@ -6,9 +6,17 @@ import "pdfjs-dist/web/pdf_viewer.css";
   <p class="cv-preview-status" role="status">The full CV is available using Download CV (PDF) above.</p>
   <div class="cv-preview-reader" hidden>
     <div class="cv-preview-controls" aria-label="CV preview controls">
-      <button type="button" data-previous disabled aria-label="Previous CV page">Previous</button>
-      <span data-page-count>Page 1</span>
-      <button type="button" data-next disabled aria-label="Next CV page">Next</button>
+      <div class="cv-preview-control-group">
+        <button type="button" data-previous disabled aria-label="Previous CV page">Previous</button>
+        <span data-page-count>Page 1</span>
+        <button type="button" data-next disabled aria-label="Next CV page">Next</button>
+      </div>
+      <div class="cv-preview-control-group" role="group" aria-label="CV zoom controls">
+        <button type="button" data-zoom-out disabled aria-label="Zoom out CV">−</button>
+        <output data-zoom-level aria-label="CV zoom" aria-live="polite">—</output>
+        <button type="button" data-zoom-in disabled aria-label="Zoom in CV">+</button>
+        <button type="button" data-fit-width disabled aria-pressed="true">Fit width</button>
+      </div>
     </div>
     <div class="cv-preview-shell">
       <div class="cv-preview-scroll" tabindex="0" role="region" aria-label="Curriculum vitae document preview">
@@ -30,6 +38,10 @@ import "pdfjs-dist/web/pdf_viewer.css";
     const previous = root.querySelector<HTMLButtonElement>("[data-previous]")!;
     const next = root.querySelector<HTMLButtonElement>("[data-next]")!;
     const counter = root.querySelector<HTMLElement>("[data-page-count]")!;
+    const zoomOut = root.querySelector<HTMLButtonElement>("[data-zoom-out]")!;
+    const zoomIn = root.querySelector<HTMLButtonElement>("[data-zoom-in]")!;
+    const zoomLevel = root.querySelector<HTMLOutputElement>("[data-zoom-level]")!;
+    const fitWidth = root.querySelector<HTMLButtonElement>("[data-fit-width]")!;
     const desktop = window.matchMedia("(min-width: 641px)");
     let started = false;
 
@@ -55,6 +67,15 @@ import "pdfjs-dist/web/pdf_viewer.css";
         reader.hidden = false;
         const viewer = new PDFViewer({ container, viewer: pages, eventBus, linkService });
         linkService.setViewer(viewer);
+        const minScale = 0.5;
+        const maxScale = 3;
+        const updateZoom = () => {
+          zoomLevel.value = `${Math.round(viewer.currentScale * 100)}%`;
+          zoomOut.disabled = viewer.currentScale <= minScale;
+          zoomIn.disabled = viewer.currentScale >= maxScale;
+          fitWidth.disabled = false;
+          fitWidth.setAttribute("aria-pressed", String(viewer.currentScaleValue === "page-width"));
+        };
         const updateControls = () => {
           counter.textContent = `Page ${viewer.currentPageNumber} of ${viewer.pagesCount}`;
           previous.disabled = viewer.currentPageNumber <= 1;
@@ -63,23 +84,35 @@ import "pdfjs-dist/web/pdf_viewer.css";
         eventBus.on("pagesinit", () => {
           viewer.currentScaleValue = "page-width";
           updateControls();
+          updateZoom();
         });
         eventBus.on("pagechanging", updateControls);
+        eventBus.on("scalechanging", updateZoom);
         eventBus.on("pagerendered", ({ error }: { error?: unknown }) => {
           if (error) showError();
           else if (!failed) status.hidden = true;
         });
         previous.addEventListener("click", () => { viewer.currentPageNumber -= 1; });
         next.addEventListener("click", () => { viewer.currentPageNumber += 1; });
+        const zoomBy = (step: number) => {
+          viewer.currentScale = Math.min(maxScale, Math.max(minScale, Math.round((viewer.currentScale + step) * 100) / 100));
+          updateZoom();
+        };
+        zoomOut.addEventListener("click", () => { zoomBy(-0.25); });
+        zoomIn.addEventListener("click", () => { zoomBy(0.25); });
+        fitWidth.addEventListener("click", () => {
+          viewer.currentScaleValue = "page-width";
+          updateZoom();
+        });
         const document = await pdfjs.getDocument({ url: "/reevescv.pdf" }).promise;
         linkService.setDocument(document);
         viewer.setDocument(document);
-        // Refitting preserves crisp text when the browser or sidebar is resized.
+        // Keep manual zoom when resizing; only refit in Fit width mode.
         let width = container.clientWidth;
         new ResizeObserver(() => {
           if (container.clientWidth > 0 && container.clientWidth !== width) {
             width = container.clientWidth;
-            viewer.currentScaleValue = "page-width";
+            if (viewer.currentScaleValue === "page-width") viewer.currentScaleValue = "page-width";
           }
         }).observe(container);
       } catch {
@@ -93,8 +126,11 @@ import "pdfjs-dist/web/pdf_viewer.css";
 
 <style>
   .cv-preview-status { margin: 0; padding: 20px; }
-  .cv-preview-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 16px; border-bottom: 1px solid var(--rule); font-size: 15px; }
-  .cv-preview-controls button { min-height: 44px; padding: 8px 12px; color: var(--rust); font: inherit; font-weight: 600; }
+  .cv-preview-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; padding: 8px 16px; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .cv-preview-control-group { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+  .cv-preview-controls button { min-width: 44px; min-height: 44px; padding: 8px 12px; color: var(--rust); font: inherit; font-weight: 600; }
+  .cv-preview-controls output { min-width: 4ch; text-align: center; font-variant-numeric: tabular-nums; }
+  .cv-preview-controls [aria-pressed="true"] { text-decoration: underline; text-underline-offset: 4px; }
   .cv-preview-controls button:disabled { color: var(--muted); opacity: .55; }
   .cv-preview-controls button:focus-visible, .cv-preview-scroll:focus-visible { outline: 2px solid var(--rust); outline-offset: -3px; }
   .cv-preview-shell { position: relative; height: 72vh; min-height: 620px; }
