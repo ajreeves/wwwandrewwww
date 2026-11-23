@@ -136,10 +136,10 @@
 }
 
 @media (max-width: 360px) {
-  .home-page .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 96px; gap: 18px; }
+  .home-page .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 72px; gap: 16px 12px; }
   .home-page .home-intro-copy { display: contents; }
-  .home-page .home-intro h1 { grid-column: 1 / -1; grid-row: 1; }
-  .home-page .home-intro-university { grid-column: 1; grid-row: 2; align-self: center; margin: 0; }
-  .home-page .home-portrait { float: none; grid-column: 2; grid-row: 2; margin: 0; }
+  .home-page .home-intro h1 { grid-column: 1; grid-row: 1; }
+  .home-page .home-intro-university { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+  .home-page .home-portrait { float: none; grid-column: 2; grid-row: 1; width: 72px; margin: 0; }
   .home-page :is(.home-intro-lede, .home-intro-leadership, .home-intro .home-links) { grid-column: 1 / -1; margin: 0; }
 }

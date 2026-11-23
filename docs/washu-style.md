@@ -54,6 +54,8 @@ Leadership descriptions explain what each entity is and what it does for readers
 
 Present the three leadership entries as rows divided by fine warm-gray rules. Put a small WashU-red role label above each IvyPresto Headline entity name. Use a compact title column on desktop and stack each title above its description on tablet and mobile. Separate Frick’s purpose and scale into paragraphs, with the commitment in regular body weight. Start the Chancellor’s Office description with Reeves’s responsibilities. Preserve the approved wording; derive search descriptions from the same paragraph data. Give the Law and Hoover affiliations a separate closing line.
 
+At 360 pixels and below, group the homepage chair headline and a 72 × 90 portrait in the same top row, with the university name spanning the row beneath. Keep the headline's existing font size and full wording, the portrait's existing crop, and the introduction at full width. Retain the 96-pixel portrait and layout above that breakpoint, plus the existing tablet and desktop sizes. Keep the image and preload size hints in sync.
+
 ## Photography and recorded events
 
 The homepage uses restrained Lightroom edits of its existing photographs: lift shadow detail, protect highlights and reduce competing color casts. Keep the originals and all student portraits unchanged. Export full-size JPEG copies under `public/images/editorial/`; the existing image pipeline supplies responsive WebP versions. See [photo treatment notes](photo-treatment.md) for sources and Lightroom settings.
