@@ -4,7 +4,7 @@ The site follows WashU's visual and editorial guidance while keeping Andrew Reev
 
 ## Typography and color
 
-- Use Georgia for headings and the attributed quotation, with Calibri for body copy, the personal masthead, navigation and labels. This follows the serif-heading/sans-serif-body hierarchy of current WashU sites. These are WashU's approved system alternatives to IvyPresto and IvyStyle Sans. Platform fallbacks are Times New Roman for serif text and Segoe UI/Arial for sans serif text.
+- Use Georgia for headings, with Calibri for body copy, the personal masthead, navigation and labels. This follows the serif-heading/sans-serif-body hierarchy of current WashU sites. These are WashU's approved system alternatives to IvyPresto and IvyStyle Sans. Platform fallbacks are Times New Roman for serif text and Segoe UI/Arial for sans serif text.
 - Keep the Adobe Freight kit on the CV only. A future Ivy switch requires a licensed Adobe Fonts web project containing the appropriate Ivy families; do not borrow another site's kit.
 - Use white, neutral dark text, WashU red (`#BA0C2F`) and warm gray (`#D7D2CB`). Lead with red in the masthead rule, active navigation, primary actions and mobile photo navigation. Reserve dark red (`#971B2F`) for hover states and dark green (`#13322B`) for secondary accents. Keep reading text and major headings dark, and use warm gray for the footer.
 - Prefer sentence case and left alignment. Preserve the capitalization of proper names, publication titles and formal course/event titles.
@@ -39,6 +39,6 @@ Reviewed November 2026:
 
 ## Editorial hierarchy and leadership examples
 
-The homepage uses the appointment title as its heading, with the university on a separate line. Keep the appointment date guard intact. Recent articles reuse the research archive’s curated findings. Non-CV page, book, publication, course and student headings use Georgia at regular weight; body copy and navigation retain Calibri and its fallbacks. Avoid labels that repeat an adjacent heading.
+The homepage uses the appointment title as its heading, with the university on a separate line. Keep the appointment date guard intact. Recent articles use concise versions of the research archive’s curated findings, preserving qualifications about scope, association and effect size. Two long article titles omit their subtitles on the homepage; accessible link names, publication pages and citations retain the full titles. Research topic links belong with Recent articles. University leadership follows the photo strip and leads directly with the three roles, without a pull quote. Non-CV page, book, publication, course and student headings use Georgia at regular weight; body copy and navigation retain Calibri and its fallbacks. Avoid labels that repeat an adjacent heading.
 
 Leadership examples distinguish Reeves’s role from the work of supported projects. Sources: [Weidenbaum Center programs](https://wc.washu.edu/), [Frick-supported projects](https://frick.washu.edu/frick-action), and [Ordered Liberty reporting](https://source.washu.edu/2026/09/the-university-challenge/). The Kugler forum uses the historical speaker role and links to its recording on Talks.

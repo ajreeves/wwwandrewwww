@@ -11,11 +11,18 @@ import { publicationSearchEntry } from "../utils/publication-records";
 import "../styles/home.css";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+// Short homepage treatments; publication pages and citations retain full titles.
+const articleNotes: Record<string, { title?: string; finding: string }> = {
+  "municipal-administration": { finding: "Surveyed elected municipal clerks report a stronger focus on responding to residents than appointed clerks." },
+  "private-funding": { finding: "Americans are wary of private election funding; arguments for and against bans change opinion only modestly." },
+  "rising-seas": { title: "Rising Seas, Rising Concerns", finding: "Sea-level vulnerability is associated with greater support for climate mitigation, especially among residents strongly attached to their communities." },
+  "short-haul-moves": { title: "Short-Haul Moves and the Political Geography of Partisanship", finding: "Short moves within metropolitan areas contribute modestly to partisan geographic sorting." }
+};
 const recentArticles = (await getCollection("publications"))
   .filter((entry) => entry.data.type === "Article" && /^\d{4}$/.test(String(entry.data.year)))
   .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title))
   .slice(0, 4)
-  .map((entry) => ({ ...publicationSearchEntry(entry), venue: entry.data.venue }));
+  .map((entry) => ({ ...publicationSearchEntry(entry), venue: entry.data.venue, note: articleNotes[entry.id] }));
 const bookNotes: Record<string, string> = {
   "no-blank-check": "Americans care about how presidents use power, even when they agree with the policy. Public resistance to action without Congress can carry political costs.",
   "particularistic-president": "Presidents govern the whole country, but their electoral incentives favor some places over others. Federal spending reveals the political geography of presidential representation."
@@ -121,17 +128,17 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" />
+    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" />
   </Fragment>
   <div class="home-page">
     <section class="container-wide home-intro" aria-labelledby="home-name">
       <figure class="home-portrait">
-        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" loading="eager" fetchpriority="high" />
+        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" loading="eager" fetchpriority="high" />
       </figure>
       <div class="home-intro-copy">
         <h1 id="home-name">{academicAppointment.title}</h1>
         <p class="home-intro-university">Washington University in St. Louis</p>
-        <p class="home-intro-lede">His research asks how political institutions shape behavior and whose interests they serve. He studies how presidents allocate public resources and how citizens judge the power exercised in their name.</p>
+        <p class="home-intro-lede">Reeves studies who benefits from government decisions and how citizens hold leaders accountable. His work examines presidential power, federal spending and the ways communities shape political behavior.</p>
         <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and serves as senior advisor to the chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
@@ -145,7 +152,9 @@ const personStructuredData = {
     <nav class="home-photo-nav" aria-label="Explore Andrew Reeves’s work">
       {photoLinks.map((item) => (
         <a class="home-photo-link" href={item.href} aria-label={item.title}>
-          <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 96px, 33vw" />
+          <span class="home-photo-image">
+            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 160px, (max-width: 1200px) 240px, 55vw" />
+          </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
             <span class="home-photo-description">{item.text}</span>
@@ -155,13 +164,7 @@ const personStructuredData = {
     </nav>
 
     <section id="leadership" class="container-wide home-leadership" aria-labelledby="leadership-heading">
-      <div class="home-leadership-intro">
-        <h2 id="leadership-heading">University leadership</h2>
-        <blockquote cite="https://source.washu.edu/2026/09/the-university-challenge/">
-          <p>“The goal is to understand and engage the other side rather than simply defeat it.”</p>
-          <footer>Andrew Reeves on civil discourse, <cite><a href="https://source.washu.edu/2026/09/the-university-challenge/">WashU Magazine</a></cite></footer>
-        </blockquote>
-      </div>
+      <h2 id="leadership-heading">University leadership</h2>
       <div class="home-leadership-copy">
         <dl>
           {leadershipRoles.map((item) => (
@@ -171,7 +174,7 @@ const personStructuredData = {
             </div>
           ))}
         </dl>
-        <p class="home-affiliations">He also serves as <a href="https://law.washu.edu/">professor of law by courtesy</a> at WashU and a <a href="https://www.hoover.org/">visiting fellow at the Hoover Institution</a>.</p>
+        <p class="home-affiliations">He also serves as professor of law by courtesy at WashU and a visiting fellow at the Hoover Institution.</p>
       </div>
     </section>
 
@@ -187,6 +190,7 @@ const personStructuredData = {
               <div class="home-book-heading">
                 <h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
                 <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
+                <p class="home-book-publication">{book.data.publisher}, {book.data.year}</p>
               </div>
               <p>{bookNotes[book.id] ?? book.data.summary}</p>
               <a class="home-text-link" href={`/books/#${book.id}`}>About the book<span class="sr-only">: {book.data.title}</span></a>
@@ -197,23 +201,19 @@ const personStructuredData = {
     </section>
 
     <section class="container-wide home-recent" aria-labelledby="recent-articles-heading">
-      <h2 id="recent-articles-heading">Recent articles</h2>
-      <ul>
+      <div class="home-section-heading">
+        <h2 id="recent-articles-heading">Recent articles</h2>
+        <a class="home-text-link" href="/research/">All publications</a>
+      </div>
+      <ul class="home-article-list">
         {recentArticles.map((article) => (
           <li>
-            <h3><a href={article.url}>{article.title}</a></h3>
-            <p class="home-recent-finding">{article.summary}</p>
+            <h3><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h3>
+            <p class="home-recent-finding">{article.note?.finding ?? article.summary}</p>
             <p>{article.venue} · {article.year}</p>
           </li>
         ))}
       </ul>
-    </section>
-
-    <section class="container-wide home-research" aria-labelledby="questions-heading">
-      <div>
-        <h2 id="questions-heading">Research</h2>
-        <a class="home-text-link" href="/research/">All publications</a>
-      </div>
       <nav class="home-research-topics" aria-label="Research areas">
         <ul>{researchAreas.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
       </nav>
@@ -222,7 +222,7 @@ const personStructuredData = {
     <section class="container-wide home-teaching-note" aria-labelledby="public-life-heading">
       <h2 id="public-life-heading">Teaching and advising</h2>
       <div>
-        <p>Reeves teaches undergraduate and graduate courses on American politics and advises student research on political behavior, institutions and public policy.</p>
+        <p>Reeves teaches American politics and works with students on undergraduate theses, doctoral dissertations and coauthored research.</p>
         <div class="home-links">
           <a href="/teaching/">Courses and syllabi</a>
           <a href="/students/">Students and advising</a>

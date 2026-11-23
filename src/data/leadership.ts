@@ -6,11 +6,11 @@ export const leadershipRoles = [
     name: "Weidenbaum Center on the Economy, Government, and Public Policy",
     role: "Director",
     url: "https://wc.washu.edu/",
-    description: "Reeves leads the center’s support for social science research and its public programs on economic and policy questions.",
+    description: "Reeves directs support for social science research and public discussion of economic and policy questions.",
     example: {
-      before: "He has led public conversations including a ",
-      label: "forum with Adriana Kugler",
-      after: ", then a Federal Reserve governor, on the economy and monetary policy.",
+      before: "His public conversations include a ",
+      label: "forum on monetary policy with Adriana Kugler",
+      after: ".",
       url: "/talks/#event-qpFScg4RRyY"
     }
   },
@@ -19,9 +19,9 @@ export const leadershipRoles = [
     name: "Frick Initiatives",
     role: "Director",
     url: "https://frick.washu.edu/",
-    description: "He directs funding for research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility.",
+    description: "He directs funding for projects on civil discourse, free speech, free and open markets, and personal responsibility.",
     example: {
-      before: "Supported work includes the ",
+      before: "The initiatives support the ",
       label: "Small Business Practicum",
       after: ", which pairs WashU students with St. Louis-area businesses.",
       url: "https://frick.washu.edu/frick-action"
@@ -32,11 +32,11 @@ export const leadershipRoles = [
     name: "Office of the Chancellor",
     role: "Senior Advisor to the Chancellor",
     url: "https://andrewdmartin.washu.edu/people/",
-    description: "Reeves co-chairs the Ordered Liberty Project, bringing together the university’s work on free inquiry and debate.",
+    description: "Reeves co-chairs the Ordered Liberty Project, coordinating university efforts to strengthen free inquiry and debate.",
     example: {
-      before: "The project also supports ",
+      before: "That work includes ",
       label: "faculty hiring in classical liberalism",
-      after: ", including the appointment of philosopher Daniel Layman.",
+      after: " and programs that bring differing perspectives into campus discussion.",
       url: "https://source.washu.edu/2026/09/the-university-challenge/"
     }
   }

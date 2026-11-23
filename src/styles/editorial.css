@@ -381,7 +381,8 @@
 .editorial-site :is(.publication-profile-section-label h2, .editorial-subsection-heading h3) { font-family: var(--font-sans); }
 .editorial-site .editorial-tag-list a { text-transform: none; letter-spacing: 0; }
 
-@media (max-width: 1000px) {
+/* Collapse before the personal name, WashU signature and links stop fitting. */
+@media (max-width: 1100px) {
   .editorial-site .site-nav { grid-template-columns: minmax(0, 1fr) auto; padding-block: 20px; }
   .editorial-site .nav-toggle { display: flex; }
   .editorial-site .nav-list { display: none; grid-column: 1 / -1; flex-direction: column; align-items: stretch; width: 100%; gap: 0; padding: 10px 0 0; border-top: 1px solid var(--rule); }
@@ -389,6 +390,9 @@
   .editorial-site .nav-list .nav-mobile-only { display: block; }
   .editorial-site .nav-list .nav-link { padding: 12px 0; font-size: 17px; letter-spacing: 0.02em; border-bottom: 1px solid var(--rule); }
   .editorial-site .site-header { max-height: 100dvh; overflow-y: auto; }
+}
+
+@media (max-width: 1000px) {
   .editorial-site .home-book-objects { gap: 32px; }
   .editorial-site .home-book-objects .book-feature-card { grid-template-columns: 1fr; }
   .editorial-site .home-book-objects .book-cover-panel { justify-content: start; }
