@@ -505,6 +505,9 @@
 }
 
 @media (max-width: 760px) {
+  /* Collapsed header: 2.5rem menu control + 36px padding + 7px borders. */
+  html.editorial-document { scroll-padding-top: calc(2.5rem + 43px); }
+  .editorial-site main [id] { scroll-margin-top: .75rem; }
   .editorial-site .container-wide { padding-inline: 20px; }
   .editorial-site .site-nav { padding: 18px 20px; gap: 0 12px; }
   .editorial-site .site-title { font-size: 28px; letter-spacing: 0; }
@@ -521,6 +524,7 @@
   .editorial-site main .students-opening .page-intro { font-size: 18px; }
   .editorial-site .page-toc { gap: 8px; padding-block: 12px; margin-bottom: 8px; }
   .editorial-site .page-toc > div { gap: 6px 20px; }
+  .editorial-site .page-toc a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; padding-block: 10px; }
   .editorial-site .page-toc .kicker { flex-basis: 100%; }
   .editorial-site .page-section { padding-block: 24px; }
   .editorial-site .page-section-heading { margin-bottom: 20px; padding-top: 0; }

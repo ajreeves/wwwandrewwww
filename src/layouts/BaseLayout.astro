@@ -40,7 +40,7 @@ const navItems = [
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="editorial-document">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,6 +89,7 @@ const navItems = [
             {
               navItems.map((item) => (
                 <>
+                  {item.label === "Search" && <a class="nav-link nav-mobile-only" href="/contact/" aria-current={active === "Contact" ? "page" : undefined}>Contact</a>}
                   <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) && !(active === "Students" || active === "Talks") ? "page" : undefined}>
                     {item.label}
                   </a>
