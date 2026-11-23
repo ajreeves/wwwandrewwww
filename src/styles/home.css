@@ -61,6 +61,10 @@
 
 .home-page :is(.home-recent, .home-leadership) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 32px; padding-block: 32px 40px; border-top: 1px solid var(--rule); }
 .home-page :is(.home-recent, .home-leadership) h2 { font-size: 30px; }
+.home-page .home-leadership-intro blockquote { margin: 24px 0 0; }
+.home-page .home-leadership-intro blockquote p { color: var(--muted); font-size: 19px; line-height: 1.5; }
+.home-page .home-leadership-intro blockquote footer { margin-top: 12px; color: var(--muted); font-family: var(--font-sans); font-size: 14px; line-height: 1.5; }
+.home-page .home-leadership-intro cite { font-style: normal; }
 .home-page .home-recent ul { display: grid; gap: 20px; list-style: none; margin: 0; padding: 0; }
 .home-page .home-recent h3 { font-size: 23px; line-height: 1.3; }
 .home-page .home-recent p { margin-top: 5px; color: var(--muted); font-family: var(--font-sans); font-size: 15px; }
@@ -109,8 +113,12 @@
   .home-page .home-books > h2 { margin-bottom: 26px; }
   .home-page .home-books-pair { grid-template-columns: 1fr; gap: 32px; }
   .home-page .home-book { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+  .home-page .home-book-copy { display: contents; }
+  .home-page .home-book-heading { align-self: center; }
   .home-page .home-book-copy h3 { font-size: 27px; }
   .home-page .home-book-copy p { margin-top: 12px; font-size: 18px; }
+  .home-page .home-book-copy > p { grid-column: 1 / -1; margin: 0; }
+  .home-page .home-book-copy > .home-text-link { grid-column: 1 / -1; justify-self: start; margin: 0; }
   .home-page .home-book-copy .home-book-author { font-size: 15px; }
   .home-page .home-teaching-note { grid-template-columns: 1fr; gap: 20px; padding-block: 28px; }
   .home-page .home-teaching-note h2 { max-width: none; }

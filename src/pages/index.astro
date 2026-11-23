@@ -18,8 +18,8 @@ const recentArticles = (await getCollection("publications"))
   .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title))
   .slice(0, 4);
 const bookNotes: Record<string, string> = {
-  "no-blank-check": "How public opinion limits presidents who act without Congress.",
-  "particularistic-president": "Why presidents direct more federal resources to some communities than others."
+  "no-blank-check": "Americans care about how presidents use power, even when they agree with the policy. Public resistance to action without Congress can carry political costs.",
+  "particularistic-president": "Presidents govern the whole country, but their electoral incentives favor some places over others. Federal spending reveals the political geography of presidential representation."
 };
 const researchAreas = [
   {
@@ -43,21 +43,21 @@ const researchAreas = [
 const photoLinks = [
   {
     title: "Research",
-    text: "Presidential power, public opinion and place.",
+    text: "Power, representation and the role of place.",
     href: "/research/",
     image: "/images/andrew-harvard-page.jpg",
     alt: "Andrew Reeves moderating the Election Analyst Panel at Harvard University"
   },
   {
     title: "Teaching",
-    text: "American politics, elections and citizenship.",
+    text: "Citizenship and democratic life.",
     href: "/teaching/",
     image: "/images/andrew-teaching-page.jpg",
     alt: "Andrew Reeves teaching in a classroom"
   },
   {
     title: "Talks and events",
-    text: "Weidenbaum Center conversations.",
+    text: "Conversations about policy and public life.",
     href: "/talks/",
     image: "/images/adriana-kugler-andrew-reeves-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum"
@@ -131,7 +131,7 @@ const personStructuredData = {
       </figure>
       <div class="home-intro-copy">
         <h1 id="home-name">Andrew Reeves is {biographyRole} at Washington University in St. Louis.</h1>
-        <p class="home-intro-lede">He studies American politics: how presidents make decisions, how people judge their leaders and who benefits from government policy.</p>
+        <p class="home-intro-lede">His research asks how political institutions shape behavior and whose interests they serve. He studies how presidents allocate public resources and how citizens judge the power exercised in their name.</p>
         <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and serves as senior advisor to the chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
@@ -155,20 +155,26 @@ const personStructuredData = {
     </nav>
 
     <section id="leadership" class="container-wide home-leadership" aria-labelledby="leadership-heading">
-      <h2 id="leadership-heading">University leadership</h2>
+      <div class="home-leadership-intro">
+        <h2 id="leadership-heading">University leadership</h2>
+        <blockquote cite="https://source.washu.edu/2026/09/the-university-challenge/">
+          <p>“The goal is to understand and engage the other side rather than simply defeat it.”</p>
+          <footer>Andrew Reeves on civil discourse, <cite><a href="https://source.washu.edu/2026/09/the-university-challenge/">WashU Magazine</a></cite></footer>
+        </blockquote>
+      </div>
       <div class="home-leadership-copy">
         <dl>
           <div>
             <dt><a href="https://wc.wustl.edu/">Weidenbaum Center</a><span>Director</span></dt>
-            <dd>Reeves leads the Center on the Economy, Government, and Public Policy, supporting social science research and bringing scholars, policymakers and civic leaders into conversation.</dd>
+            <dd>Reeves directs a research institute that funds social science scholarship and connects it to public debate. Its programs bring scholars, policymakers and the public together to examine economic and policy questions.</dd>
           </div>
           <div>
             <dt><a href="https://frick.washu.edu/">Frick Initiatives</a><span>Director</span></dt>
-            <dd>He oversees support for university and community projects on civil discourse, free speech, free and open markets, and personal responsibility.</dd>
+            <dd>He oversees funding for research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility.</dd>
           </div>
           <div>
             <dt><a href="https://andrewdmartin.washu.edu/people/">Office of the Chancellor</a><span>Senior Advisor to the Chancellor</span></dt>
-            <dd>Reeves also co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist, supporting free inquiry and debate across the university.</dd>
+            <dd>Reeves co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist. The project supports free inquiry and engagement with differing viewpoints in university life.</dd>
           </div>
         </dl>
         <p class="home-affiliations">He also serves as <a href="https://law.washu.edu/">professor of law by courtesy</a> at WashU and a <a href="https://www.hoover.org/">visiting fellow at the Hoover Institution</a>.</p>
@@ -184,8 +190,10 @@ const personStructuredData = {
               <img src={book.data.cover} alt={`Cover of ${book.data.title}`} width={book.id === "particularistic-president" ? 427 : 415} height="648" loading="lazy" />
             </a>
             <div class="home-book-copy">
-              <h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
-              <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
+              <div class="home-book-heading">
+                <h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
+                <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
+              </div>
               <p>{bookNotes[book.id] ?? book.data.summary}</p>
               <a class="home-text-link" href={`/books/#${book.id}`}>About the book<span class="sr-only">: {book.data.title}</span></a>
             </div>
@@ -219,8 +227,7 @@ const personStructuredData = {
     <section class="container-wide home-teaching-note" aria-labelledby="public-life-heading">
       <h2 id="public-life-heading">Teaching citizenship</h2>
       <div>
-        <p>In Reeves’s Citizenship course, students read Aristotle and Martin Luther King Jr. alongside research on trust and polarization.</p>
-        <p>They consider how people learn to take part in democracy and what citizens owe one another.</p>
+        <p>Reeves teaches citizenship as a practice of living with others amid disagreement. Students read Aristotle and Martin Luther King Jr. alongside research on trust and polarization, considering how cooperation becomes possible and what citizens owe one another.</p>
         <div class="home-links">
           <a href="/teaching/">Courses and syllabi</a>
           <a href="/students/">Students and advising</a>
