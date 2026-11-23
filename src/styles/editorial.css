@@ -136,6 +136,11 @@
   line-height: 1.55;
 }
 .editorial-site .page-opening-action { margin-top: 20px; }
+.editorial-site [data-search-page] [hidden] { display: none; }
+.editorial-site .search-browse { margin-top: 24px; }
+.editorial-site .search-browse p { margin: 0; }
+.editorial-site .search-browse > div { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.editorial-site .search-browse a { display: inline-flex; align-items: center; min-height: 44px; }
 .editorial-site .cv-frame { background: white; border: 1px solid var(--rule); box-shadow: none; }
 .editorial-site .cv-frame iframe { display: block; border: 0; }
 .editorial-site .page-toc {
@@ -518,6 +523,7 @@
   .editorial-site .nav-university-signature { display: flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: 12px; padding-block: 7px; }
   .editorial-site .nav-university-signature img { display: block; width: auto; height: 30px; }
   .editorial-site :is(.page-opening, .students-opening .page-opening) { padding-block: 28px 24px; }
+  .editorial-site .page-opening.page-opening-mobile-compact { padding-bottom: 12px; }
   .editorial-site :is(.page-title, .page-title-compact) { font-size: clamp(2.25rem, 8vw, 3rem); }
   .editorial-site .page-opening-panel > .kicker { margin-bottom: 10px; }
   .editorial-site :is(.page-intro, .students-opening .page-intro) { margin-top: 14px; font-size: 18px; }
@@ -527,6 +533,8 @@
   .editorial-site .page-toc a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; padding-block: 10px; }
   .editorial-site .page-toc .kicker { flex-basis: 100%; }
   .editorial-site .page-section { padding-block: 24px; }
+  .editorial-site .page-opening-mobile-compact + .page-section { padding-top: 0; }
+  .editorial-site [data-search-page] { padding-inline: 20px; }
   .editorial-site .page-section-heading { margin-bottom: 20px; padding-top: 0; }
   .editorial-site .editorial-prose { font-size: 18px; }
   .editorial-site .home-thesis-hero { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 32px; }
