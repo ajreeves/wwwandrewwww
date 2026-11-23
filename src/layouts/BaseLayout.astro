@@ -33,7 +33,7 @@ const navItems = [
   { label: "Research", href: "/research/", activeOn: ["Research"] },
   { label: "Books", href: "/books/", activeOn: ["Books"] },
   { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"], child: { label: "Students", href: "/students/", active: "Students" } },
-  { label: "Media", href: "/news/", activeOn: ["News", "Talks"], child: { label: "Talks and events", href: "/talks/", active: "Talks" } },
+  { label: "Media", submenuLabel: "Coverage and commentary", href: "/news/", activeOn: ["News", "Talks"], child: { label: "Talks and events", href: "/talks/", active: "Talks" } },
   { label: "CV", href: "/cv/", activeOn: ["CV"] },
   { label: "Contact", href: "/contact/", activeOn: ["Contact"] },
   { label: "Search", href: "/search/", activeOn: ["Search"] }
@@ -97,7 +97,7 @@ const navItems = [
                     <details class="nav-group nav-desktop-only">
                       <summary class:list={["nav-link", { "nav-section-active": item.activeOn.includes(active) }]}>{item.label}</summary>
                       <div class="nav-submenu">
-                        <a class="nav-link" href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>{item.label}</a>
+                        <a class="nav-link" href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>{item.submenuLabel ?? item.label}</a>
                         <a class="nav-link" href={item.child.href} aria-current={active === item.child.active ? "page" : undefined}>{item.child.label}</a>
                       </div>
                     </details>
