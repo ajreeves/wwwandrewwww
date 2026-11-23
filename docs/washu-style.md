@@ -6,13 +6,17 @@ The site follows WashU's visual and editorial guidance while keeping Andrew Reev
 
 - Use IvyPresto Headline for headings, with IvyStyle Sans for body copy, the personal masthead, navigation and labels. This follows the serif-heading/sans-serif-body hierarchy of current WashU sites. Retain WashU's approved system alternatives, Georgia and Calibri, as fallbacks, followed by Times New Roman for serif text and Segoe UI/Arial for sans serif text.
 - Load the owner's Adobe Fonts project, [Andrew Reeves Website](https://fonts.adobe.com/my_fonts?project_id=yjm8eqw#web_projects-section), once through the shared layout using `https://use.typekit.net/yjm8eqw.css`. It contains IvyPresto Headline regular/italic (400) and IvyStyle Sans regular/italic (400), semibold (600), and bold/bold italic (700). Both families use `font-display: swap` so text remains readable while the fonts load. Adobe hosts the fonts; keep the subscription/project active and do not self-host the font files or borrow another site's kit.
-- Use white, neutral dark text, WashU red (`#BA0C2F`) and warm gray (`#D7D2CB`). Lead with red in the masthead rule, active navigation, primary actions and mobile photo navigation. Reserve dark red (`#971B2F`) for hover states and dark green (`#13322B`) for secondary accents. Keep reading text and major headings dark, and use warm gray for the footer.
+- Use white, neutral dark text, WashU red (`#BA0C2F`) and warm gray (`#D7D2CB`). Lead with red in the masthead rule, active navigation, primary actions and mobile photo navigation. Reserve dark red (`#971B2F`) for hover states and dark green (`#13322B`) for secondary accents. Keep reading text and major headings dark, use warm gray for rules, and give the footer a black background with white text.
 - Prefer sentence case and left alignment. Preserve the capitalization of proper names, publication titles and formal course/event titles.
 - Use one compact, full-color WashU logo as a secondary signature beside the personal name (below it on mobile). The complete shield and wordmark must remain together and unaltered. Display it at 32 pixels high on desktop and 30 pixels on mobile, with separation from the name and navigation.
 
 ### Logo provenance
 
 `public/brand/washu-logo.svg` is the unmodified inline SVG artwork from the header of [University Marketing & Communications](https://marcomm.washu.edu/), captured November 23, 2026. Its paths, colors and proportions are preserved; it is served as an image with an accessible university-name alternative and a link to WashU. Do not redraw, recolor, crop or separate the wordmark and shield.
+
+### Footer
+
+Follow the contact-and-navigation structure of the [Office of the Chancellor biography footer](https://andrewdmartin.washu.edu/biography/), reviewed November 23, 2026. Use a black surface, white IvyStyle Sans text, small uppercase section labels, underlined links and a fine divider. Keep Reeves's own contact details, academic profiles and personal copyright attribution. Place contact information beside two columns of site links on desktop; stack Contact and Explore on mobile. Footer links retain a minimum 44-pixel target height and a visible white keyboard-focus outline. The shared footer also appears on the CV page without changing its content or downloadable document.
 
 ## Editorial conventions
 

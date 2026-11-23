@@ -376,9 +376,29 @@
 .editorial-site main .student-card { border-color: var(--rule); border-top-width: 1px; background: transparent; box-shadow: none; }
 .editorial-site main .student-card .student-card-heading h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.015em; }
 .editorial-site main .student-page-frame .page-section-heading { padding-top: 0; }
-.editorial-site .site-footer-wrap { max-width: none; margin: 48px 0 0; padding: 0; background: var(--rule); box-shadow: none; }
-.editorial-site .site-footer { max-width: 1280px; margin-inline: auto; padding: 36px 40px; box-shadow: none; border: 0; }
-.editorial-site :is(.footer-nav a, .footer-links a) { font-size: 14px; letter-spacing: 0.035em; text-transform: none; }
+/* Contact and navigation follow the restrained black WashU Chancellor footer. */
+.editorial-site .site-footer-wrap { max-width: none; margin: 48px 0 0; padding: 0; background: #000; color: #fff; box-shadow: none; }
+.editorial-site .site-footer { display: block; max-width: 1280px; margin-inline: auto; padding: 56px 40px 32px; box-shadow: none; border: 0; font-size: 1rem; line-height: 1.5; }
+.editorial-site .footer-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 48px; }
+.editorial-site .footer-contact { padding-right: 48px; border-right: 1px solid #666; }
+.editorial-site .footer-heading { margin: 0 0 20px; color: inherit; font-family: var(--font-sans); font-size: .875rem; font-weight: 600; line-height: 1.4; letter-spacing: .04em; text-transform: uppercase; }
+.editorial-site .footer-contact address { font-style: normal; }
+.editorial-site .footer-contact strong { font-weight: 600; }
+.editorial-site .footer-contact-links { display: grid; justify-items: start; margin-top: 20px; }
+.editorial-site .footer-profiles { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 16px; }
+.editorial-site .footer-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+.editorial-site .site-footer a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 10px; color: #fff; font-size: 1rem; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none; text-decoration: underline; text-decoration-color: #999; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+.editorial-site .site-footer a:hover { color: #fff; text-decoration-color: #fff; text-decoration-thickness: 2px; }
+.editorial-site .site-footer a:focus-visible { outline-color: #fff; }
+.editorial-site .footer-copyright { margin: 40px 0 0; color: #ccc; font-size: .875rem; }
+
+@media (max-width: 760px) {
+  .editorial-site .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .editorial-site .footer-contact { padding: 0 0 28px; border-right: 0; border-bottom: 1px solid #666; }
+  .editorial-site .footer-heading { margin-bottom: 16px; }
+  .editorial-site .footer-nav { column-gap: 20px; }
+  .editorial-site .footer-copyright { margin-top: 32px; }
+}
 .editorial-site :is(.publication-profile-meta, .publication-profile-abstract > summary, .publication-theme-group p, .publication-profile-section-label h2, .publication-design-grid dt, .publication-citation-grid dt, .publication-related-item > p:first-child) { text-transform: none; letter-spacing: 0; }
 .editorial-site :is(.publication-profile-section-label h2, .editorial-subsection-heading h3) { font-family: var(--font-sans); }
 .editorial-site .editorial-tag-list a { text-transform: none; letter-spacing: 0; }
@@ -467,7 +487,7 @@
   .editorial-site .publication-profile-hero-with-figure { grid-template-columns: 1fr; gap: 28px; }
   .editorial-site .publication-profile-main h1 { font-size: 32px; }
   .editorial-site .publication-hero-figure { max-width: 300px; }
-  .editorial-site .site-footer { padding: 28px 20px; }
+  .editorial-site .site-footer { padding: 36px 20px 24px; }
 }
 
 @media (max-width: 360px) {
