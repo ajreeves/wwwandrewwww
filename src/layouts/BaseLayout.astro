@@ -32,9 +32,10 @@ const navItems = [
   { label: "About", href: "/about/", activeOn: ["About"] },
   { label: "Research", href: "/research/", activeOn: ["Research"] },
   { label: "Books", href: "/books/", activeOn: ["Books"] },
-  { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"] },
-  { label: "Media", href: "/news/", activeOn: ["News", "Talks"] },
+  { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"], child: { label: "Students", href: "/students/", active: "Students" } },
+  { label: "Media", href: "/news/", activeOn: ["News", "Talks"], child: { label: "Talks and events", href: "/talks/", active: "Talks" } },
   { label: "CV", href: "/cv/", activeOn: ["CV"] },
+  { label: "Contact", href: "/contact/", activeOn: ["Contact"] },
   { label: "Search", href: "/search/", activeOn: ["Search"] }
 ];
 ---
@@ -92,12 +93,19 @@ const navItems = [
             {
               navItems.map((item) => (
                 <>
-                  {item.label === "Search" && <a class="nav-link nav-mobile-only" href="/contact/" aria-current={active === "Contact" ? "page" : undefined}>Contact</a>}
-                  <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) && !(active === "Students" || active === "Talks") ? "page" : undefined}>
+                  {item.child && (
+                    <details class="nav-group nav-desktop-only">
+                      <summary class:list={["nav-link", { "nav-section-active": item.activeOn.includes(active) }]}>{item.label}</summary>
+                      <div class="nav-submenu">
+                        <a class="nav-link" href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>{item.label}</a>
+                        <a class="nav-link" href={item.child.href} aria-current={active === item.child.active ? "page" : undefined}>{item.child.label}</a>
+                      </div>
+                    </details>
+                  )}
+                  <a class:list={["nav-link", { "nav-mobile-only": !!item.child }]} href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>
                     {item.label}
                   </a>
-                  {item.label === "Teaching" && <a class="nav-link nav-mobile-only" href="/students/" aria-current={active === "Students" ? "page" : undefined}>Students</a>}
-                  {item.label === "Media" && <a class="nav-link nav-mobile-only" href="/talks/" aria-current={active === "Talks" ? "page" : undefined}>Talks and events</a>}
+                  {item.child && <a class="nav-link nav-mobile-only" href={item.child.href} aria-current={active === item.child.active ? "page" : undefined}>{item.child.label}</a>}
                 </>
               ))
             }
@@ -182,6 +190,31 @@ const navItems = [
 
       const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
       const navList = document.getElementById("main-nav-list");
+
+      const navGroups = document.querySelectorAll<HTMLDetailsElement>(".nav-group");
+      for (const group of navGroups) {
+        group.addEventListener("toggle", () => {
+          if (group.open) navGroups.forEach((other) => { if (other !== group) other.open = false; });
+        });
+        group.addEventListener("focusout", (event) => {
+          const next = (event as FocusEvent).relatedTarget;
+          if (next instanceof Node && !group.contains(next)) group.open = false;
+        });
+        group.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && group.open) {
+            group.open = false;
+            group.querySelector("summary")?.focus();
+          }
+        });
+      }
+      document.addEventListener("click", (event) => {
+        navGroups.forEach((group) => { if (!group.contains(event.target as Node)) group.open = false; });
+      });
+      // Do not retain an open desktop dropdown when switching to the mobile menu.
+      window.matchMedia("(max-width: 1200px)").addEventListener("change", () => {
+        navGroups.forEach((group) => { group.open = false; });
+        closeNavigation();
+      });
 
       const closeNavigation = () => {
         navToggle?.setAttribute("aria-expanded", "false");

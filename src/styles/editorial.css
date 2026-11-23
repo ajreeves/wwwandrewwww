@@ -60,6 +60,15 @@
 .editorial-site .nav-link { border-bottom-width: 3px; }
 .editorial-site .nav-link[aria-current="page"] { border-bottom-color: var(--rust); color: var(--rust); }
 .editorial-site .nav-mobile-only { display: none; }
+.editorial-site .nav-group { position: relative; }
+.editorial-site .nav-group summary { display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; }
+.editorial-site .nav-group summary::-webkit-details-marker { display: none; }
+.editorial-site .nav-group summary::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.editorial-site .nav-group[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.editorial-site .nav-list .nav-section-active { color: var(--rust); border-bottom-color: var(--rust); }
+.editorial-site .nav-submenu { position: absolute; top: calc(100% + 12px); left: -16px; min-width: 190px; padding: 8px 16px; background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 8px 20px rgb(0 0 0 / 8%); }
+.editorial-site .nav-submenu .nav-link { display: block; padding-block: 12px; white-space: nowrap; }
+.editorial-site .nav-group summary:focus-visible { outline: 2px solid var(--rust); outline-offset: 4px; }
 
 .editorial-site .nav-list {
   font-size: 15px;
@@ -489,13 +498,14 @@
 .editorial-site .editorial-tag-list a { text-transform: none; letter-spacing: 0; }
 
 /* Collapse before the personal name, WashU signature and links stop fitting. */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .editorial-site .site-nav { grid-template-columns: minmax(0, 1fr) auto; padding-block: 20px; }
   /* Expand the tap area while preserving the icon position and header height. */
   .editorial-site .nav-toggle { display: flex; width: 2.75rem; height: 2.75rem; margin: -.125rem; }
   .editorial-site .nav-list { display: none; grid-column: 1 / -1; flex-direction: column; align-items: stretch; width: 100%; gap: 0; padding: 10px 0 0; border-top: 1px solid var(--rule); }
   .editorial-site .nav-list.nav-list-open { display: flex; }
   .editorial-site .nav-list .nav-mobile-only { display: block; }
+  .editorial-site .nav-list .nav-desktop-only { display: none; }
   .editorial-site .nav-list .nav-link { padding: 12px 0; font-size: 17px; letter-spacing: 0.02em; border-bottom: 1px solid var(--rule); }
   .editorial-site .site-header { max-height: 100dvh; overflow-y: auto; }
 }
