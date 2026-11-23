@@ -132,7 +132,7 @@
 
 @media (max-width: 380px) {
   .home-page .home-book { grid-template-columns: 1fr; gap: 20px; }
-  .home-page .home-book-cover { width: 180px; }
+  .home-page .home-book-cover { width: 140px; }
 }
 
 @media (max-width: 360px) {

@@ -28,9 +28,9 @@ const roles: LeadershipRole[] = [
     role: "Director",
     url: "https://frick.washu.edu/",
     paragraphs: [
-      { text: "A WashU civic initiative supporting translational research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility." },
+      { text: "A WashU initiative supporting translational research, teaching and community projects in civil discourse, free speech, free and open markets, and personal responsibility." },
       {
-        text: "Expanded through a $22 million commitment from Robert and Barbara Frick, it funds promising ideas and helps develop programs that can take root in other schools, businesses and communities."
+        text: "Expanded by a $22 million commitment from Robert and Barbara Frick, it develops programs that other schools, businesses and communities can adopt."
       }
     ]
   },
