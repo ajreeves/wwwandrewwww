@@ -9,7 +9,7 @@ const events = [
   {
     title: "Ukraine at a Crossroads: Former Ukrainian President Viktor Yushchenko",
     date: "2026-10-28",
-    dateLabel: "October 28, 2026",
+    dateLabel: "Oct. 28, 2026",
     dateSource: "https://wc.washu.edu/past-events/ukraine-crossroads-former-ukrainian-president-viktor-yushchenko",
     watch: "https://www.youtube.com/watch?v=421Ykr1wdPY",
     embed: "https://www.youtube.com/embed/421Ykr1wdPY",
@@ -20,7 +20,7 @@ const events = [
   {
     title: "Governing Past Gridlock: Why Fiscal Responsibility Still Matters",
     date: "2026-01-14",
-    dateLabel: "January 14, 2026",
+    dateLabel: "Jan. 14, 2026",
     dateSource: "https://wc.washu.edu/past-events/governing-past-gridlock-why-fiscal-responsibility-still-matters",
     watch: "https://www.youtube.com/watch?v=-xeyS7nilpU",
     embed: "https://www.youtube.com/embed/-xeyS7nilpU",
@@ -31,35 +31,35 @@ const events = [
   {
     title: "The Past, Present, and Future of the Federal Reserve",
     date: "2025-09-29",
-    dateLabel: "September 29, 2025",
+    dateLabel: "Sept. 29, 2025",
     dateSource: "https://happenings.washu.edu/event/the-past-present-and-future-of-the-federal-reserve",
     watch: "https://www.youtube.com/watch?v=TJEnJcU-PRE",
     embed: "https://www.youtube.com/embed/TJEnJcU-PRE",
     label: "Federal Reserve Conversation",
     summary:
-      "A conversation on the Federal Reserve's evolving role in the U.S. economy with Alberto Musalem, James Bullard, and Thomas Melzer, moderated by Karen Branding."
+      "A conversation on the Federal Reserve's evolving role in the U.S. economy with Alberto Musalem, James Bullard and Thomas Melzer, moderated by Karen Branding."
   },
   {
     title: "The Future of Civic Education and Universities",
     date: "2025-09-04",
-    dateLabel: "September 4, 2025",
+    dateLabel: "Sept. 4, 2025",
     dateSource: "https://wc.washu.edu/ay-25-26-start-year-letter",
     watch: "https://www.youtube.com/watch?v=1T0Oz9wY6P4",
     embed: "https://www.youtube.com/embed/1T0Oz9wY6P4",
     label: "Future of Civic Education",
     summary:
-      "Robert Doar, Benjamin Storey, and Andrew Reeves discuss how universities teach citizenship and encourage debate among people with different views."
+      "Robert Doar, Benjamin Storey and Andrew Reeves discuss how universities teach citizenship and encourage debate among people with different views."
   },
   {
     title: "Labor, Regulation, and the Changing Economy Panel",
     date: "2025-02-24",
-    dateLabel: "February 24, 2025",
+    dateLabel: "Feb. 24, 2025",
     dateSource: "https://wc.washu.edu/weidenbaum-center-newsletter-march-2025",
     watch: "https://www.youtube.com/watch?v=yUeC-xgeLVM",
     embed: "https://www.youtube.com/embed/yUeC-xgeLVM",
     label: "Labor and Regulation Panel",
     summary:
-      "Pauline Kim moderates a panel on labor markets, regulation, tariffs, immigration, and upcoming policy changes."
+      "Pauline Kim moderates a panel on labor markets, regulation, tariffs, immigration and upcoming policy changes."
   },
   {
     title: "A Fireside Chat with James Bullard",
@@ -70,7 +70,7 @@ const events = [
     embed: "https://www.youtube.com/embed/jAvZp5nLsFs",
     label: "Fireside Chat with James Bullard",
     summary:
-      "A conversation with Andrew Reeves and James Bullard on the economy, elections, and higher education leadership."
+      "A conversation with Andrew Reeves and James Bullard on the economy, elections and higher education leadership."
   },
   {
     title: "April 2024 Forum: The Outlook for the U.S. Economy and Monetary Policy with Adriana D. Kugler",
@@ -103,26 +103,26 @@ const events = [
     embed: "https://www.youtube.com/embed/FEn1wxqnSUQ",
     label: "Conversation with Lanhee J. Chen",
     summary:
-      "A conversation with Lanhee J. Chen about partisanship, campaign strategy, and the 2024 election."
+      "A conversation with Lanhee J. Chen about partisanship, campaign strategy and the 2024 election."
   }
 ] as const;
 
 const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
 ---
 
-<BaseLayout title="Talks & Events" active="Talks" description="Public events, talks, and recorded conversations featuring Andrew Reeves and the Weidenbaum Center.">
+<BaseLayout title="Talks and events" active="Talks" description="Public events, talks and recorded conversations featuring Andrew Reeves and the Weidenbaum Center.">
   <PageHeader
-    eyebrow="Public Events"
-    title="Talks & Events"
-    intro="Recordings of talks, panels, and conversations from the Weidenbaum Center and Andrew Reeves’s public work."
+    eyebrow="Public events"
+    title="Talks and events"
+    intro="Recordings of talks, panels and conversations from the Weidenbaum Center and Andrew Reeves’s public work."
   />
 
   <FeatureBand
-    eyebrow="Featured Event"
+    eyebrow="Featured event"
     title="The Past, Present, and Future of the Federal Reserve"
-    text="Andrew Reeves introduced this Weidenbaum Center conversation with Alberto Musalem, James Bullard, and Thomas Melzer on September 29, 2025. Karen Branding moderated the discussion."
+    text="Andrew Reeves introduced this Weidenbaum Center conversation with Alberto Musalem, James Bullard and Thomas Melzer on Sept. 29, 2025. Karen Branding moderated the discussion."
     image="/images/andrew-fed-page.jpg"
-    alt="Andrew Reeves at a Weidenbaum Center Federal Reserve event with Karen Branding, Thomas Melzer, Alberto Musalem, and James Bullard"
+    alt="Andrew Reeves at a Weidenbaum Center Federal Reserve event with Karen Branding, Thomas Melzer, Alberto Musalem and James Bullard"
     caption="Photo: Sid Hastings/WashU."
     actionHref="https://www.youtube.com/watch?v=TJEnJcU-PRE"
     actionLabel="Watch recording"
@@ -132,7 +132,7 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Recordings</p>
-        <h2>Weidenbaum Center Events</h2>
+        <h2>Weidenbaum Center events</h2>
         <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">
           Dates are the event dates, and speakers’ titles are those they held at the time.
         </p>

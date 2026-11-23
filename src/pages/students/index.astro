@@ -30,8 +30,8 @@ const sortedDoctoralStudents = [...doctoralStudents].sort(newestFirst);
 const sortedUndergraduateTheses = [...undergraduateHonorsTheses].sort(newestFirst);
 
 const tocLinks = [
-  { href: "#doctoral-students-heading", label: "Doctoral Students" },
-  { href: "#undergraduate-theses-heading", label: "Undergraduate Honors Theses" }
+  { href: "#doctoral-students-heading", label: "Doctoral students" },
+  { href: "#undergraduate-theses-heading", label: "Undergraduate honors theses" }
 ] as const;
 
 ---
@@ -39,11 +39,11 @@ const tocLinks = [
 <BaseLayout
   title="Students"
   active="Students"
-  description="Mentorship, advising, and student research."
+  description="Mentorship, advising and student research."
 >
   <div class="students-opening">
     <PageHeader
-      eyebrow="Mentorship & Advising"
+      eyebrow="Mentorship and advising"
       title="Students"
       intro="Andrew Reeves works with doctoral and undergraduate students on research in American politics and public policy. These profiles feature students he has advised and their projects."
       compact
@@ -51,7 +51,7 @@ const tocLinks = [
   </div>
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On This Page</p>
+    <p class="kicker">On this page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -59,7 +59,7 @@ const tocLinks = [
 
   <section class="container-wide page-section student-page-frame" aria-labelledby="doctoral-students-heading">
     <div class="page-section-heading">
-      <h2 id="doctoral-students-heading">Doctoral Students</h2>
+      <h2 id="doctoral-students-heading">Doctoral students</h2>
     </div>
 
     <div class="student-card-list">
@@ -71,7 +71,7 @@ const tocLinks = [
 
   <section class="container-wide page-section student-page-frame student-undergraduate-frame" aria-labelledby="undergraduate-theses-heading">
     <div class="page-section-heading">
-      <h2 id="undergraduate-theses-heading">Undergraduate Honors Theses</h2>
+      <h2 id="undergraduate-theses-heading">Undergraduate honors theses</h2>
     </div>
 
     {

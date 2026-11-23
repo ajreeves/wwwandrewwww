@@ -4,8 +4,13 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
 import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
-import { academicAppointment } from "@data/academic-appointment";
+import { academicAppointment, currentAcademicTitle } from "@data/academic-appointment";
+
 import "../styles/home.css";
+
+const biographyRole = academicAppointment.title === currentAcademicTitle
+  ? academicAppointment.descriptionTitle
+  : academicAppointment.biographyRole;
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 const recentArticles = (await getCollection("publications"))
@@ -38,14 +43,14 @@ const researchAreas = [
 const photoLinks = [
   {
     title: "Research",
-    text: "Presidential power, public opinion, and place.",
+    text: "Presidential power, public opinion and place.",
     href: "/research/",
     image: "/images/andrew-harvard-page.jpg",
     alt: "Andrew Reeves moderating the Election Analyst Panel at Harvard University"
   },
   {
     title: "Teaching",
-    text: "American politics, elections, and citizenship.",
+    text: "American politics, elections and citizenship.",
     href: "/teaching/",
     image: "/images/andrew-teaching-page.jpg",
     alt: "Andrew Reeves teaching in a classroom"
@@ -125,9 +130,9 @@ const personStructuredData = {
         <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 240px, 260px" loading="eager" fetchpriority="high" />
       </figure>
       <div class="home-intro-copy">
-        <h1 id="home-name">Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis.</h1>
-        <p class="home-intro-lede">He studies American politics: how presidents make decisions, how people judge their leaders, and who benefits from government policy.</p>
-        <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a>, and serves as Senior Advisor to the Chancellor.</p>
+        <h1 id="home-name">Andrew Reeves is {biographyRole} at Washington University in St. Louis.</h1>
+        <p class="home-intro-lede">He studies American politics: how presidents make decisions, how people judge their leaders and who benefits from government policy.</p>
+        <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and serves as senior advisor to the chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
           <a href="#leadership">University leadership</a>
@@ -155,7 +160,7 @@ const personStructuredData = {
         <dl>
           <div>
             <dt><a href="https://wc.wustl.edu/">Weidenbaum Center</a><span>Director</span></dt>
-            <dd>Reeves leads the Center on the Economy, Government, and Public Policy, supporting social science research and bringing scholars, policymakers, and civic leaders into conversation.</dd>
+            <dd>Reeves leads the Center on the Economy, Government, and Public Policy, supporting social science research and bringing scholars, policymakers and civic leaders into conversation.</dd>
           </div>
           <div>
             <dt><a href="https://frick.washu.edu/">Frick Initiatives</a><span>Director</span></dt>
@@ -166,7 +171,7 @@ const personStructuredData = {
             <dd>Reeves also co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist, supporting free inquiry and debate across the university.</dd>
           </div>
         </dl>
-        <p class="home-affiliations">He also serves as <a href="https://law.washu.edu/">Professor of Law by courtesy</a> at WashU and a <a href="https://www.hoover.org/">Visiting Fellow at the Hoover Institution</a>.</p>
+        <p class="home-affiliations">He also serves as <a href="https://law.washu.edu/">professor of law by courtesy</a> at WashU and a <a href="https://www.hoover.org/">visiting fellow at the Hoover Institution</a>.</p>
       </div>
     </section>
 

@@ -31,25 +31,25 @@ const commentary = [
   {
     title: "Distance and Density, Not Just Demographics, Affect Urban-Rural Vote",
     outlet: "Daily Yonder",
-    date: "February 24, 2020",
+    date: "Feb. 24, 2020",
     url: "https://www.dailyyonder.com/distance-and-density-not-just-demographics-affect-urban-rural-vote/2020/02/24/"
   },
   {
     title: "Donald Trump’s lukewarm response to Puerto Rico was pretty predictable. Here’s why",
     outlet: "Washington Post",
-    date: "October 2, 2017",
+    date: "Oct. 2, 2017",
     url: "https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/"
   },
   {
     title: "How Disasters Change Elections",
     outlet: "Reuters",
-    date: "November 5, 2012",
+    date: "Nov. 5, 2012",
     url: "/papers/disasters-reuters.pdf"
   },
   {
     title: "Florida Disaster Aid Can Help Bush",
     outlet: "Los Angeles Times",
-    date: "October 3, 2004",
+    date: "Oct. 3, 2004",
     url: "/papers/disasters-latimes1.pdf"
   },
   {
@@ -64,7 +64,7 @@ const coverage = [
   {
     title: "Climate disasters do not automatically lead to greater care for the world",
     outlet: "Le Monde",
-    date: "August 1, 2026",
+    date: "Aug. 1, 2026",
     url: "https://www.lemonde.fr/en/opinion/article/2026/08/01/climate-disasters-do-not-automatically-lead-to-greater-care-for-the-world_6756060_23.html"
   },
   {
@@ -88,13 +88,13 @@ const coverage = [
   {
     title: "Columbia’s political-social climate heavily influenced by University of Missouri",
     outlet: "Columbia Tribune",
-    date: "February 18, 2024",
+    date: "Feb. 18, 2024",
     url: "https://www.columbiatribune.com/story/news/politics/2024/02/18/columbia-political-social-climate-heavily-influenced-university-of-missouri/72588606007/"
   },
   {
     title: "Checking the American Presidency",
     outlet: "Law & Liberty",
-    date: "January 24, 2023",
+    date: "Jan. 24, 2023",
     url: "https://lawliberty.org/book-review/checking-the-american-presidency/"
   },
   {
@@ -178,23 +178,23 @@ const coverage = [
 ] as const;
 
 const tocLinks = [
-  { href: "#featured-panel", label: "Featured Panel" },
-  { href: "#essays-op-eds", label: "Essays and Op-Eds" },
-  { href: "#research-media", label: "Research in the Media" }
+  { href: "#featured-panel", label: "Featured panel" },
+  { href: "#essays-op-eds", label: "Essays and op-eds" },
+  { href: "#research-media", label: "Research in the media" }
 ] as const;
 ---
 
-<BaseLayout title="News & Media" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics, and democratic accountability.">
+<BaseLayout title="News and media" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics and democratic accountability.">
   <PageHeader
-    eyebrow="Commentary & Coverage"
-    title="News & Media"
+    eyebrow="Commentary and coverage"
+    title="News and media"
     intro="Essays and commentary by Andrew Reeves, along with news coverage of his research."
     actionHref="/talks/"
-    actionLabel="Talks & Events"
+    actionLabel="Talks and events"
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On This Page</p>
+    <p class="kicker">On this page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -202,9 +202,9 @@ const tocLinks = [
 
   <FeatureBand
     id="featured-panel"
-    eyebrow="Featured Panel"
+    eyebrow="Featured panel"
     title="Election Analyst Panel"
-    text="Andrew Reeves moderated this panel with Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley at Political Analytics 2025 at Harvard University."
+    text="Andrew Reeves moderated this panel with Dave Wasserman, Jacob Rubashkin and Geoffrey Skelley at Political Analytics 2025 at Harvard University."
     image="/images/andrew-harvard-page.jpg"
     alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"
   />
@@ -213,7 +213,7 @@ const tocLinks = [
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Commentary</p>
-        <h2>Essays and Op-Eds</h2>
+        <h2>Essays and op-eds</h2>
       </div>
     </div>
     <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
@@ -234,7 +234,7 @@ const tocLinks = [
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Coverage</p>
-        <h2>Research in the Media</h2>
+        <h2>Research in the media</h2>
       </div>
     </div>
     <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">

@@ -12,30 +12,30 @@ export type ResearchTopic = {
 export const researchTopics: ResearchTopic[] = [
   {
     slug: "presidential-power",
-    label: "Presidential Power",
-    title: "Presidential Power Research",
-    description: "How presidents use their authority, when they act without Congress, and how Congress and the public limit their power.",
+    label: "Presidential power",
+    title: "Presidential power research",
+    description: "How presidents use their authority, when they act without Congress and how Congress and the public limit their power.",
     terms: ["presidential power", "executive power", "unilateral action", "presidential politics", "presidential particularism", "presidency"]
   },
   {
     slug: "democratic-accountability",
-    label: "Democratic Accountability",
-    title: "Democratic Accountability Research",
+    label: "Democratic accountability",
+    title: "Democratic accountability research",
     description: "How people judge elected leaders and decide whom to credit or blame for government decisions.",
     terms: ["democratic accountability", "presidential accountability", "electoral accountability", "retrospective voting", "public opinion", "public support"]
   },
   {
     slug: "political-geography",
-    label: "Political Geography",
-    title: "Political Geography Research",
-    description: "How where people live shapes their political views, including differences between cities, suburbs, and rural communities.",
+    label: "Political geography",
+    title: "Political geography research",
+    description: "How where people live shapes their political views, including differences between cities, suburbs and rural communities.",
     terms: ["political geography", "geographic context", "county-level", "urban-rural", "migration", "place", "electoral geography", "bellwether"]
   },
   {
     slug: "federal-resource-allocation",
-    label: "Federal Resource Allocation",
-    title: "Federal Resource Allocation Research",
-    description: "How presidents distribute federal spending, grants, and disaster assistance among states and communities.",
+    label: "Federal resource allocation",
+    title: "Federal resource allocation research",
+    description: "How presidents distribute federal spending, grants and disaster assistance among states and communities.",
     terms: ["federal resource allocation", "distributive politics", "disaster politics", "federal grants", "federal spending", "federalism", "intergovernmental"]
   }
 ];

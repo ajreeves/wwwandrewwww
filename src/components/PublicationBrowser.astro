@@ -16,7 +16,7 @@ const pluralizeType = (type: string) => {
   if (type === "Book") return "Books";
   if (type === "Article") return "Articles";
   if (type === "Chapter") return "Chapters";
-  if (type === "Working Paper") return "Working Papers";
+  if (type === "Working Paper") return "Working papers";
   if (type === "Review") return "Reviews";
   return `${type}s`;
 };
@@ -95,7 +95,7 @@ const themeOptions = majorThemeDefinitions
     <div class="archive-search-row">
       <label for="publication-search">Search publications</label>
       <div class="archive-search-control">
-        <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal, or topic…" />
+        <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal or topic…" />
         <button type="button" data-archive-reset>Reset</button>
       </div>
       <p class="archive-result-count" aria-live="polite" data-publication-count></p>
@@ -106,7 +106,7 @@ const themeOptions = majorThemeDefinitions
     <summary>Filters and sort<span class="archive-filter-summary" data-archive-state-summary></span></summary>
     <div class="archive-control-panel" aria-label="Publication filters">
     <div class="archive-control-group">
-      <p>Publication Type</p>
+      <p>Publication type</p>
       <div class="archive-segmented-control" role="group" aria-label="Filter publications by type">
         {typeOptions.map((option) => (
           <button

@@ -15,7 +15,7 @@ interface Props {
 
 const {
   title = "Andrew Reeves",
-  description = "Research on power, place, and accountability in American political life.",
+  description = "Research on power, place and accountability in American political life.",
   active = "",
   image = "/images/andrew-reeves-portrait-editorial.jpg",
   imageAlt = "Portrait of Andrew Reeves",
@@ -59,9 +59,13 @@ const navItems = [
     <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.png" />
-    <link rel="preconnect" href="https://use.typekit.net" />
-    <link rel="preload" href="https://use.typekit.net/dlf3syd.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
+    {active === "CV" && (
+      <>
+        <link rel="preconnect" href="https://use.typekit.net" />
+        <link rel="preload" href="https://use.typekit.net/dlf3syd.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
+      </>
+    )}
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
@@ -72,6 +76,7 @@ const navItems = [
         <nav class="site-nav" aria-label="Main navigation">
           <a class="nav-home" href="/" aria-label="Andrew Reeves home">
             <span class="site-title">Andrew Reeves</span>
+            {active !== "CV" && <span class="site-affiliation">Washington University in <span>St. Louis</span></span>}
           </a>
           <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav-list" aria-label="Open navigation menu">
             <span class="nav-toggle-bar"></span>
@@ -109,7 +114,7 @@ const navItems = [
           <div class="footer-links">
             <a href="mailto:reeves@wustl.edu">Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>
-            <a href="https://polisci.wustl.edu/people/andrew-reeves/">Department Profile</a>
+            <a href="https://polisci.wustl.edu/people/andrew-reeves/">{active === "CV" ? "Department Profile" : "Department profile"}</a>
           </div>
         </div>
       </footer>

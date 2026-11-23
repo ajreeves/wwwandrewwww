@@ -122,8 +122,8 @@ const designRows = (isReview ? [
   { label: "Design", value: editorial?.designLabel || meaningfulValue(metadata?.identification_strategy) || asList(metadata?.filters.research_design).join("; ") || (publication.data.type === "Book" ? "Book-length scholarly monograph" : "") },
   { label: "Data", value: asList(metadata?.data_sources).join("; ") },
   { label: "Geography", value: meaningfulValue(metadata?.geography) },
-  { label: "Time Period", value: meaningfulValue(metadata?.time_period) },
-  { label: "Unit of Analysis", value: meaningfulValue(metadata?.unit_of_analysis) },
+  { label: "Time period", value: meaningfulValue(metadata?.time_period) },
+  { label: "Unit of analysis", value: meaningfulValue(metadata?.unit_of_analysis) },
   { label: "Methods", value: asList(metadata?.methods).join("; ") }
 ]).filter((row) => row.value);
 
@@ -302,7 +302,7 @@ const publicationStructuredData = {
 
     {abstract && (
       <details class="publication-profile-abstract" open>
-        <summary>Full Abstract</summary>
+        <summary>Full abstract</summary>
         <p>{abstract}</p>
       </details>
     )}
@@ -311,7 +311,7 @@ const publicationStructuredData = {
       <nav class="publication-theme-ribbon" aria-label="Related research themes and keywords">
         {publicationThemeLinks.length > 0 && (
           <div class="publication-theme-group">
-            <p>Research Themes</p>
+            <p>Research themes</p>
             <div>
               {publicationThemeLinks.map((theme) => (
                 <a href={themeHref(theme)}>{theme}</a>
@@ -335,7 +335,7 @@ const publicationStructuredData = {
     {contextParagraphs.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>{isReview ? "About the Review" : publication.data.type === "Book" ? "About the Book" : "About the Research"}</h2>
+          <h2>{isReview ? "About the review" : publication.data.type === "Book" ? "About the book" : "About the research"}</h2>
         </div>
         <div class="publication-profile-section-body publication-essay">
           {contextParagraphs.map((paragraph) => (
@@ -348,7 +348,7 @@ const publicationStructuredData = {
     {keyFindings.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>{isReview ? "Evidence Discussed in the Book" : "Findings"}</h2>
+          <h2>{isReview ? "Evidence discussed in the book" : "Findings"}</h2>
         </div>
         <div class="publication-profile-section-body">
           <ul class="publication-finding-list">
@@ -363,7 +363,7 @@ const publicationStructuredData = {
     {designRows.length > 0 && (
       <section class="publication-profile-section">
         <div class="publication-profile-section-label">
-          <h2>{isReview ? "Review Format and Sources" : "Research Design"}</h2>
+          <h2>{isReview ? "Review format and sources" : "Research design"}</h2>
         </div>
         <div class="publication-profile-section-body">
           <dl class="publication-design-grid">
@@ -424,7 +424,7 @@ const publicationStructuredData = {
     {displayedRelatedPublications.length > 0 && (
       <section class="publication-profile-section publication-related-section">
         <div class="publication-profile-section-label">
-          <h2>Related Research</h2>
+          <h2>Related research</h2>
         </div>
         <div class="publication-profile-section-body">
           <div class="publication-related-list">

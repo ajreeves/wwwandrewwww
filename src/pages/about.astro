@@ -1,10 +1,14 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { academicAppointment } from "@data/academic-appointment";
+import { academicAppointment, currentAcademicTitle } from "@data/academic-appointment";
 
 import { galleryPhotos } from "@data/about-gallery";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
+
+const biographyRole = academicAppointment.title === currentAcademicTitle
+  ? academicAppointment.descriptionTitle
+  : academicAppointment.biographyRole;
 
 const leadPhoto = galleryPhotos.find((photo) => photo.src === "/images/andrew-reeves-frick-candid.jpg")!;
 const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
@@ -26,7 +30,7 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
     <div class="about-introduction">
       <div class="editorial-prose about-lead-prose">
         <p>
-          Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. He studies presidential power, federal spending, and how people judge their elected leaders.
+          Andrew Reeves is {biographyRole} at Washington University in St. Louis. He studies presidential power, federal spending and how people judge their elected leaders.
         </p>
         <p>
           He is intrigued by the space between behavior and institutions. His research asks why some communities receive more government resources than others and how people’s experiences with public policy shape their political views.
@@ -46,13 +50,13 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
 
     <article id="biography" class="editorial-prose about-biography" aria-labelledby="biography-heading">
       <h2 id="biography-heading">Biography</h2>
-      <p>Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis. His research examines presidential power, federal spending, and public opinion.</p>
+      <p>Andrew Reeves is {biographyRole} at Washington University in St. Louis. His research examines presidential power, federal spending and public opinion.</p>
       <p>
-        In <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>, Reeves and Jon C. Rogowski show that Americans care about how presidents use their authority, as well as what they accomplish. In <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a>, Reeves and Douglas L. Kriner examine how party politics and elections shape federal spending. The book won the 2016 Richard E. Neustadt Award. Reeves&rsquo;s research has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em>, and <em>Journal of Politics</em>.
+        In <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>, Reeves and Jon C. Rogowski show that Americans care about how presidents use their authority, as well as what they accomplish. In <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a>, Reeves and Douglas L. Kriner examine how party politics and elections shape federal spending. The book won the 2016 Richard E. Neustadt Award. Reeves&rsquo;s research has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em> and <em>Journal of Politics</em>.
       </p>
 
       <p>
-        Reeves directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> at WashU. The center supports social science research and hosts discussions with scholars, policymakers, and civic leaders.
+        Reeves directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> at WashU. The center supports social science research and hosts discussions with scholars, policymakers and civic leaders.
       </p>
 
       <p>
@@ -60,11 +64,11 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
       </p>
 
       <p>
-        As Senior Advisor to the Chancellor, Reeves also co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist, supporting free inquiry and debate across the university.
+        As senior advisor to the chancellor, Reeves also co-chairs the <a href="https://source.washu.edu/2026/09/the-university-challenge/">Ordered Liberty Project</a> with Stefanie Lindquist, supporting free inquiry and debate across the university.
       </p>
 
       <p>
-        He serves as Professor of Law by courtesy at WashU and a Visiting Fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
+        He serves as professor of law by courtesy at WashU and a visiting fellow at the Hoover Institution. He received his PhD from the Department of Government at Harvard University.
       </p>
     </article>
 

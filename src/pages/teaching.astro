@@ -30,7 +30,7 @@ const courses = [
     caption: "Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852).",
     paragraphs: [
       "This course asks how citizens cooperate and what they owe one another.",
-      "Students read Aristotle, Martin Luther King Jr., and research on trust, polarization, and civic education. They consider how people learn to take part in democracy and what responsibilities citizens and institutions share."
+      "Students read Aristotle, Martin Luther King Jr. and research on trust, polarization and civic education. They consider how people learn to take part in democracy and what responsibilities citizens and institutions share."
     ],
     links: [
       {
@@ -49,8 +49,8 @@ const courses = [
     alt: "Historical mural depicting America's founders",
     caption: "Introduction to American Politics course visual.",
     paragraphs: [
-      "This course introduces American politics, with attention to polarization, pressures on institutions, and dissatisfaction with the economy.",
-      "Students start with basic political science concepts, then study how Congress, the courts, and the presidency work and have changed over time. Reeves offers this course periodically."
+      "This course introduces American politics, with attention to polarization, pressures on institutions and dissatisfaction with the economy.",
+      "Students start with basic political science concepts, then study how Congress, the courts and the presidency work and have changed over time. Reeves offers this course periodically."
     ],
     links: [
       {
@@ -70,7 +70,7 @@ const courses = [
     caption: "Business of Elections course visual.",
     paragraphs: [
       "This course analyzes presidential elections through political science and business strategy.",
-      "Topics include campaign management, voter targeting, messaging, and how national campaigns are organized."
+      "Topics include campaign management, voter targeting, messaging and how national campaigns are organized."
     ],
     links: [
       {
@@ -102,26 +102,26 @@ const courseArchive = {
 } as const;
 
 const tocLinks = [
-  { href: "#classroom-practice", label: "Classroom Practice" },
-  { href: "#teaching-awards", label: "Teaching Awards" },
+  { href: "#classroom-practice", label: "Classroom practice" },
+  { href: "#teaching-awards", label: "Teaching awards" },
   { href: "#featured-courses", label: "Courses" },
-  { href: "#course-archive", label: "Course Archive" }
+  { href: "#course-archive", label: "Course archive" }
 ] as const;
 
 const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 ---
 
-<BaseLayout title="Teaching" active="Teaching" description="Teaching by Andrew Reeves in American politics, democratic citizenship, and electoral strategy.">
+<BaseLayout title="Teaching" active="Teaching" description="Teaching by Andrew Reeves in American politics, democratic citizenship and electoral strategy.">
   <PageHeader
-    eyebrow="Courses & Teaching"
+    eyebrow="Courses and teaching"
     title="Teaching"
-    intro="Andrew Reeves teaches undergraduate and graduate courses on American politics, elections, and citizenship."
+    intro="Andrew Reeves teaches undergraduate and graduate courses on American politics, elections and citizenship."
     actionHref="/students/"
-    actionLabel="Students & Mentoring"
+    actionLabel="Students and mentoring"
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On This Page</p>
+    <p class="kicker">On this page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -129,9 +129,9 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 
   <FeatureBand
     id="classroom-practice"
-    eyebrow="Classroom Practice"
+    eyebrow="Classroom practice"
     title="In the classroom"
-    text="In The Practice of Citizenship, students read political theory alongside research on trust, polarization, and civic education."
+    text="In The Practice of Citizenship, students read political theory alongside research on trust, polarization and civic education."
     image="/images/andrew-teaching-page.jpg"
     alt="Andrew Reeves teaching in a classroom"
   />
@@ -140,7 +140,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     <div class="page-section-heading">
       <div>
         <p class="kicker mb-4">Honors</p>
-        <h2>Teaching Awards</h2>
+        <h2>Teaching awards</h2>
         <p class="mt-4 max-w-2xl text-xl leading-[1.55] text-muted">Selected teaching honors at Washington University in St. Louis.</p>
       </div>
     </div>
@@ -198,7 +198,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <section id="course-archive" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
-        <h2>Course Archive</h2>
+        <h2>Course archive</h2>
       </div>
     </div>
     <div class="grid gap-5 lg:grid-cols-2">

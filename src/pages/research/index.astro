@@ -8,10 +8,10 @@ const yearRank = (year: number | string) => (typeof year === "number" ? year : 9
 const publications = (await getCollection("publications")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
 ---
 
-<BaseLayout title="Research" active="Research" description="Research by Andrew Reeves on presidential power, democratic accountability, political geography, and federal resource allocation.">
+<BaseLayout title="Research" active="Research" description="Research by Andrew Reeves on presidential power, democratic accountability, political geography and federal resource allocation.">
   <PageHeader
     title="Publications"
-    intro="Publications by Andrew Reeves on the presidency, public opinion, political geography, and federal spending."
+    intro="Publications by Andrew Reeves on the presidency, public opinion, political geography and federal spending."
   />
 
   <PublicationBrowser

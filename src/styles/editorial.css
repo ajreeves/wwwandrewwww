@@ -1,12 +1,17 @@
 /* The CV deliberately retains its existing presentation. All design changes
    live under this opt-in class, which BaseLayout omits on the CV route. */
 .editorial-site {
-  --paper: #f6f4ee;
-  --ivory: #fffdf8;
-  --ink: #293b34;
-  --muted: #625f57;
+  /* WashU's approved system alternatives; the CV retains its original fonts. */
+  --font-sans: Calibri, "Segoe UI", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-slab: Georgia, "Times New Roman", serif;
+  --paper: #ffffff;
+  --ivory: #ffffff;
+  --ink: #222222;
+  --muted: #555555;
   --rust: #ba0c2f;
-  --rule: #d5d2c7;
+  --rule: #d7d2cb;
+  --tobacco: #555555;
   background: var(--paper);
   color: var(--ink);
 }
@@ -33,26 +38,33 @@
 }
 
 .editorial-site .site-title {
+  font-family: var(--font-serif);
   font-size: 32px;
-  line-height: 1;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-variant-caps: normal;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-transform: none;
 }
+.editorial-site .site-affiliation { margin-top: 7px; color: var(--muted); font-family: var(--font-sans); font-size: 14px; line-height: 1.35; }
+.editorial-site .site-affiliation > span { white-space: nowrap; }
 
 .editorial-site .nav-list {
   font-size: 15px;
-  letter-spacing: 0.035em;
+  letter-spacing: 0;
   text-transform: none;
   gap: 24px;
 }
 
-.editorial-site :is(.kicker, .small-caps, .book-meta, .teaching-term, .publication-meta-label) {
+.editorial-site :is(.kicker, .small-caps, .book-meta, .teaching-term, .publication-meta-label,
+  .archive-record-flags, .editorial-info-card > span, .editorial-related-list > span) {
   font-family: var(--font-sans);
   font-size: 14px;
   font-variant-caps: normal;
   font-weight: 600;
   line-height: 1.4;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  text-transform: none;
   color: var(--muted);
 }
 
@@ -94,8 +106,8 @@
 .editorial-site :is(.page-title, .page-title-compact) {
   max-width: 23ch;
   color: var(--rust);
-  font-family: var(--font-sans);
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-weight: 400;
   font-size: clamp(2.75rem, 4.4vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
@@ -130,9 +142,9 @@
   max-width: 30ch;
   margin: 0;
   color: var(--rust);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: clamp(1.9rem, 3vw, 2.8rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.15;
 }
 .editorial-site .page-section-heading p:not(.kicker) { max-width: 48rem; margin-top: 12px; font-size: 19px; line-height: 1.5; }
@@ -259,7 +271,7 @@
 .editorial-site .about-gallery-controls { padding: 8px 0; border: 0; border-top: 1px solid var(--rule); background: transparent; }
 .editorial-site .about-biography { max-width: 46rem; margin: 40px auto 0; padding-top: 28px; border-top: 1px solid var(--rule); }
 
-.editorial-site .about-biography h2 { margin: 0 0 20px; color: var(--rust); font-family: var(--font-sans); font-size: 30px; font-weight: 600; }
+.editorial-site .about-biography h2 { margin: 0 0 20px; color: var(--rust); font-family: var(--font-serif); font-size: 30px; font-weight: 400; }
 
 /* Search stays visible; detailed filters expand only when needed. */
 .editorial-site .archive-workbench { margin-block: 0 56px; gap: 0; }
@@ -351,6 +363,9 @@
 .editorial-site .site-footer-wrap { margin-top: 48px; background: transparent; box-shadow: none; }
 .editorial-site .site-footer { max-width: 1280px; padding: 36px 40px; box-shadow: none; border-top: 1px solid var(--rule); }
 .editorial-site :is(.footer-nav a, .footer-links a) { font-size: 14px; letter-spacing: 0.035em; text-transform: none; }
+.editorial-site :is(.publication-profile-meta, .publication-profile-abstract > summary, .publication-theme-group p, .publication-profile-section-label h2, .publication-design-grid dt, .publication-citation-grid dt, .publication-related-item > p:first-child) { text-transform: none; letter-spacing: 0; }
+.editorial-site :is(.publication-profile-section-label h2, .editorial-subsection-heading h3) { font-family: var(--font-sans); }
+.editorial-site .editorial-tag-list a { text-transform: none; letter-spacing: 0; }
 
 @media (max-width: 1000px) {
   .editorial-site .site-nav { grid-template-columns: minmax(0, 1fr) auto; padding-block: 20px; }
@@ -432,7 +447,8 @@
 }
 
 @media (max-width: 360px) {
-  .editorial-site .site-title { font-size: 25px; letter-spacing: 0.025em; }
+  .editorial-site .site-title { font-size: 25px; letter-spacing: -0.025em; }
+  .editorial-site .site-affiliation { max-width: 23ch; font-size: 13px; }
   .editorial-site .home-book-spread .home-book-objects .book-feature-card { grid-template-columns: 1fr; }
   .editorial-site .home-book-objects .book-feature-card .flw-feature-copy { grid-column: 1; grid-row: 2; }
 }
