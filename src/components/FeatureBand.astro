@@ -2,7 +2,7 @@
 import ResponsiveImage from "@components/ResponsiveImage.astro";
 
 interface Props {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   text: string;
   image: string;
@@ -29,7 +29,7 @@ const { eyebrow, title, text, image, alt, caption, actionHref, actionLabel, reve
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
     <div class="feature-band-copy">
-      <p class="kicker">{eyebrow}</p>
+      {eyebrow && <p class="kicker">{eyebrow}</p>}
       <h2>{title}</h2>
       <p>{text}</p>
       {actionHref && actionLabel && <a class="ghost-button feature-band-action" href={actionHref}>{actionLabel}</a>}

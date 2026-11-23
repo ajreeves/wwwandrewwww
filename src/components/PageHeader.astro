@@ -2,7 +2,7 @@
 interface Props {
   eyebrow?: string;
   title: string;
-  intro: string;
+  intro?: string;
   actionHref?: string;
   actionLabel?: string;
   compact?: boolean;
@@ -15,7 +15,7 @@ const { eyebrow, title, intro, actionHref, actionLabel, compact } = Astro.props;
   <div class="page-opening-panel">
     {eyebrow && <p class="kicker">{eyebrow}</p>}
     <h1 class={compact ? "page-title page-title-compact" : "page-title"}>{title}</h1>
-    <p class="page-intro">{intro}</p>
+    {intro && <p class="page-intro">{intro}</p>}
     {actionHref && actionLabel && <a class="editorial-button page-opening-action" href={actionHref}>{actionLabel}</a>}
   </div>
 </header>

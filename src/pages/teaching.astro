@@ -3,6 +3,8 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import FeatureBand from "@components/FeatureBand.astro";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
+import { contentAnchor } from "../utils/content-anchors";
+import { courses, courseArchive } from "@data/teaching";
 
 const awards = [
   {
@@ -19,88 +21,6 @@ const awards = [
   }
 ] as const;
 
-const courses = [
-  {
-    title: "The Practice of Citizenship: Cooperation and Obligations in Democratic Life",
-    term: "Spring 2026",
-    termLabel: "Syllabus",
-    type: "Undergraduate Course",
-    image: "/images/citizenship-course.jpg",
-    alt: "Pericles delivering the funeral oration in Athens, painted by Philipp Foltz in 1852",
-    caption: "Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852).",
-    paragraphs: [
-      "This course asks how citizens cooperate and what they owe one another.",
-      "Students read Aristotle, Martin Luther King Jr. and research on trust, polarization and civic education. They consider how people learn to take part in democracy and what responsibilities citizens and institutions share."
-    ],
-    links: [
-      {
-        label: "Syllabus",
-        url: "/practice-of-citizenship-syllabus-spring-2026.pdf"
-      }
-    ],
-    video: null
-  },
-  {
-    title: "Introduction to American Politics",
-    term: "Fall 2024",
-    termLabel: "Syllabus",
-    type: "Undergraduate Course",
-    image: "/images/intro-course.jpg",
-    alt: "Historical mural depicting America's founders",
-    caption: "Introduction to American Politics course visual.",
-    paragraphs: [
-      "This course introduces American politics, with attention to polarization, pressures on institutions and dissatisfaction with the economy.",
-      "Students start with basic political science concepts, then study how Congress, the courts and the presidency work and have changed over time. Reeves offers this course periodically."
-    ],
-    links: [
-      {
-        label: "Syllabus",
-        url: "https://docs.google.com/document/u/0/d/e/2PACX-1vQEwsc-KnpOY1IIwf8QzK6P0d4cSRdFKf8xxJ9AEhS_55LbCgezSwSWuKN-Sse9Kg561KUWttA7S1-k/pub?pli=1"
-      }
-    ],
-    video: "https://www.youtube.com/embed/ZcPzyOfqNKQ"
-  },
-  {
-    title: "Business of Elections",
-    term: "Fall 2024",
-    termLabel: "Documented offering",
-    type: "Undergraduate Course",
-    image: "/images/business-of-elections-course.jpg",
-    alt: "Illustration of a suited figure running beside an American flag and rising arrows",
-    caption: "Business of Elections course visual.",
-    paragraphs: [
-      "This course analyzes presidential elections through political science and business strategy.",
-      "Topics include campaign management, voter targeting, messaging and how national campaigns are organized."
-    ],
-    links: [
-      {
-        label: "In the news",
-        url: "https://artsci.washu.edu/ampersand/how-presidential-election-start"
-      }
-    ],
-    video: null
-  }
-] as const;
-
-const courseArchive = {
-  undergraduate: [
-    "The Practice of Citizenship",
-    "Introduction to American Politics",
-    "Campaigns and Elections",
-    "Legislative Behavior",
-    "The American Presidency",
-    "American Elections and Voting Behavior",
-    "Looking Back on the 2016 Election",
-    "Trump's First 100 Days",
-    "Business of Elections"
-  ],
-  graduate: [
-    "American Politics Workshop",
-    "Executive Politics",
-    "Voting and Elections"
-  ]
-} as const;
-
 const tocLinks = [
   { href: "#classroom-practice", label: "Classroom practice" },
   { href: "#teaching-awards", label: "Teaching awards" },
@@ -113,7 +33,6 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 
 <BaseLayout title="Teaching" active="Teaching" description="Teaching by Andrew Reeves in American politics, democratic citizenship and electoral strategy.">
   <PageHeader
-    eyebrow="Courses and teaching"
     title="Teaching"
     intro="Andrew Reeves teaches undergraduate and graduate courses on American politics, elections and citizenship."
     actionHref="/students/"
@@ -121,7 +40,6 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On this page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -129,7 +47,6 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
 
   <FeatureBand
     id="classroom-practice"
-    eyebrow="Classroom practice"
     title="In the classroom"
     text="In The Practice of Citizenship, students read political theory alongside research on trust, polarization and civic education."
     image="/images/andrew-teaching-page.jpg"
@@ -139,7 +56,6 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <section id="teaching-awards" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
-        <p class="kicker mb-4">Honors</p>
         <h2>Teaching awards</h2>
         <p class="mt-4 max-w-2xl text-xl leading-[1.55] text-muted">Selected teaching honors at Washington University in St. Louis.</p>
       </div>
@@ -161,15 +77,14 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <section id="featured-courses" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
-        <p class="kicker mb-4">Courses</p>
-        <h2>American politics and citizenship</h2>
+        <h2>Courses</h2>
         <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Selected courses and past syllabi. Each term refers to the linked syllabus or a past offering of the course.</p>
       </div>
     </div>
     <div class="course-feature-list">
       {
         courses.map((course, index) => (
-          <article class={`flw-feature-card course-feature-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
+          <article id={contentAnchor("course", course.title)} class={`flw-feature-card course-feature-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
             <figure class="flw-feature-media course-feature-media">
               <ResponsiveImage
                 src={course.image}

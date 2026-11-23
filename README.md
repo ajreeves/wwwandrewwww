@@ -74,7 +74,7 @@ Publication pages, archive cards, and search share the metadata resolver in `src
 
 Use optional `cardSummary` and `editorial` frontmatter in publication MDX for curated copy. `editorial` supports `context`, `findings`, `designLabel`, `figureCaption`, `keywords`, and `relatedSlugs`; existing examples include `rising-seas.mdx` and `disunion-review.mdx`. Context appears only when curated or supported by canonical policy-relevance metadata. Review pages attribute evidence to the reviewed book. Keep canonical metadata changes in the extraction pipeline below.
 
-Dedicated topic pages and archive theme filters use `publicationMatchesTopic` in `src/data/research-topics.ts`. Site search and archive text search share publication text, including authors, venues, abstracts, summaries, and MDX page text. Search also indexes book and public-writing entries; it does not index the full text of linked PDFs.
+Dedicated topic pages and archive theme filters use `publicationMatchesTopic` in `src/data/research-topics.ts`. Site search and archive text search share publication text, including authors, venues, abstracts, summaries, and MDX page text. Search also indexes books, public writing, main pages, leadership roles, student profiles, courses and recorded talks. Student, course and event results link to stable page anchors. Course and event content is shared between its page and the search index through `src/data/teaching.ts` and `src/data/talks.ts`; leadership descriptions and examples live in `src/data/leadership.ts`. Search does not index the full text of linked PDFs or private student notes.
 
 ## Publication Extraction Pipeline
 

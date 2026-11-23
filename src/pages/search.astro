@@ -4,6 +4,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { publicationSearchEntry } from "../utils/publication-records";
 import { yearRank } from "../utils/publications";
+import { supplementalSearchEntries } from "../utils/site-search";
 
 const collections = await Promise.all([
   getCollection("publications"),
@@ -12,7 +13,7 @@ const collections = await Promise.all([
 ]);
 
 const [publications, books, writing] = collections;
-const searchIndex = [
+const publicationIndex = [
   ...publications.filter((entry) => entry.data.type !== "Book").map(publicationSearchEntry),
   ...books.map((entry) => ({
     title: entry.data.title,
@@ -31,13 +32,13 @@ const searchIndex = [
     url: entry.data.url ?? "/news/"
   }))
 ].sort((a, b) => yearRank(b.year) - yearRank(a.year));
+const searchIndex = [...supplementalSearchEntries, ...publicationIndex];
 ---
 
-<BaseLayout title="Search" active="Search" description="Search Andrew Reeves's publications, books and public writing.">
+<BaseLayout title="Search" active="Search" description="Search Andrew Reeves’s research, students, courses, leadership, talks and public writing.">
   <PageHeader
-    eyebrow="Site index"
     title="Search"
-    intro="Search Andrew Reeves’s publications, books and public writing by title, author, journal or topic. Summaries and abstracts are searchable too."
+    intro="Find research, students, courses, university leadership, talks and public writing."
   />
   <section class="container-narrow page-section" data-search-page>
     <label class="small-caps mb-3 block" for="site-search">Search terms</label>
@@ -45,7 +46,7 @@ const searchIndex = [
       id="site-search"
       type="search"
       class="w-full border border-rule bg-ivory px-5 py-4 font-serif text-xl text-ink outline-none transition focus:border-olive-dark"
-      placeholder="Title, author, journal or topic…"
+      placeholder="Name, title, course or topic…"
       autocomplete="off"
       data-search-input
     />
@@ -99,13 +100,13 @@ const searchIndex = [
         .map(
           (item) => `
             <article class="border-b border-rule py-5" data-search-result>
-              <p class="small-caps mb-2">${escapeHtml(item.type)} · ${escapeHtml(item.year)}</p>
+              <p class="small-caps mb-2">${escapeHtml(item.type)}${item.year ? ` · ${escapeHtml(item.year)}` : ""}</p>
               <h2 class="list-title"><a class="text-ink no-underline hover:text-olive-dark" href="${escapeHtml(item.url)}">${escapeHtml(item.title)}</a></h2>
               <p class="mt-3 text-lg leading-[1.55] text-muted">${escapeHtml(item.summary)}</p>
             </article>
           `
         )
-        .join("");
+        .join("") || '<p class="text-lg">No matches. Try a name or a shorter search, or browse <a href="/research/">Research</a>, <a href="/students/">Students</a> or <a href="/teaching/">Teaching</a>.</p>';
       if (count) count.textContent = terms.length === 0 ? "Showing all entries." : `${matches.length} result${matches.length === 1 ? "" : "s"}.`;
       if (shouldUpdateUrl) updateUrl();
     }

@@ -36,3 +36,9 @@ Reviewed November 2026:
 - [Dates](https://marcomm.washu.edu/style-guide-entries/dates/)
 - [Arts & Sciences](https://marcomm.washu.edu/style-guide-entries/arts-sciences/)
 - [Official logo usage guide](https://marcomm.washu.edu/official-logo-usage-guide/)
+
+## Editorial hierarchy and leadership examples
+
+The homepage uses the appointment title as its heading, with the university on a separate line. Keep the appointment date guard intact. Recent articles reuse the research archive’s curated findings. Non-CV page, book, publication, course and student headings use Georgia at regular weight; body copy and navigation retain Calibri and its fallbacks. Avoid labels that repeat an adjacent heading.
+
+Leadership examples distinguish Reeves’s role from the work of supported projects. Sources: [Weidenbaum Center programs](https://wc.washu.edu/), [Frick-supported projects](https://frick.washu.edu/frick-action), and [Ordered Liberty reporting](https://source.washu.edu/2026/09/the-university-challenge/). The Kugler forum uses the historical speaker role and links to its recording on Talks.

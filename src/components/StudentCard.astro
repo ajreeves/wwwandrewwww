@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import type { StudentRecord } from "@data/doctoralStudents";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
+import { contentAnchor } from "../utils/content-anchors";
 
 interface Props {
   student: StudentRecord;
@@ -20,7 +21,7 @@ const PortraitTag = primaryLink ? "a" : "div";
 const portraitLinkLabel = `${student.name}: ${student.homepage_url ? "homepage" : linkedInUrl ? "LinkedIn profile" : "profile"}`;
 ---
 
-<article class="student-card">
+<article class="student-card" id={contentAnchor("student", student.name)}>
   <header class="student-card-header">
     <PortraitTag class="student-card-portrait" href={primaryLink} aria-label={primaryLink ? portraitLinkLabel : undefined}>
       {student.photo_url ? (

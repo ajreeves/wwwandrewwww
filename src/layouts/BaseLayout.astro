@@ -96,9 +96,13 @@ const navItems = [
           <div class="nav-list" id="main-nav-list">
             {
               navItems.map((item) => (
-                <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) ? "page" : undefined}>
-                  {item.label}
-                </a>
+                <>
+                  <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) && !(active === "Students" || active === "Talks") ? "page" : undefined}>
+                    {item.label}
+                  </a>
+                  {active !== "CV" && item.label === "Teaching" && <a class="nav-link nav-mobile-only" href="/students/" aria-current={active === "Students" ? "page" : undefined}>Students</a>}
+                  {active !== "CV" && item.label === "Media" && <a class="nav-link nav-mobile-only" href="/talks/" aria-current={active === "Talks" ? "page" : undefined}>Talks and events</a>}
+                </>
               ))
             }
           </div>

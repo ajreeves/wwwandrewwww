@@ -254,7 +254,6 @@ const booksStructuredData = {
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On this page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -275,8 +274,7 @@ const booksStructuredData = {
                 <div class="book-expanded-panel">
                   <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-title ${book.id}-argument`}>
                     <div class="editorial-subsection-heading">
-                      <p class="kicker">The argument</p>
-                      <h3 id={`${book.id}-argument`}>What the book explains</h3>
+                      <h3 id={`${book.id}-argument`}>The argument</h3>
                     </div>
                     <div class="editorial-prose book-prose">
                       {details.argument.map((paragraph) => <p>{paragraph}</p>)}
@@ -327,7 +325,6 @@ const booksStructuredData = {
 
                   <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-title ${book.id}-related`}>
                     <div class="editorial-subsection-heading">
-                      <p class="kicker">Related research</p>
                       <h3 id={`${book.id}-related`}>Related articles</h3>
                     </div>
                     <div class="editorial-related-list book-related-list">
