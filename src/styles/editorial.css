@@ -511,8 +511,8 @@
   .editorial-site .site-brand { flex-direction: column; align-items: flex-start; gap: 10px; }
   .editorial-site .university-signature { padding: 0; border: 0; }
   .editorial-site .university-signature img { width: auto; height: 30px; }
-  .editorial-site .site-header-personal .site-brand .university-signature { display: none; }
-  .editorial-site .site-header-personal .nav-university-signature { display: flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: 12px; padding-block: 7px; }
+  .editorial-site .site-brand .university-signature { display: none; }
+  .editorial-site .nav-university-signature { display: flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: 12px; padding-block: 7px; }
   .editorial-site .nav-university-signature img { display: block; width: auto; height: 30px; }
   .editorial-site :is(.page-opening, .students-opening .page-opening) { padding-block: 28px 24px; }
   .editorial-site :is(.page-title, .page-title-compact) { font-size: clamp(2.25rem, 8vw, 3rem); }
