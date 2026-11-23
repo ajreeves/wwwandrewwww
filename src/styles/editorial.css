@@ -24,6 +24,7 @@
   padding-inline: 40px;
 }
 .editorial-site .site-shell { background: var(--paper); }
+.editorial-site .skip-link { z-index: 1100; }
 
 .editorial-site .site-header {
   background: var(--paper);
@@ -394,6 +395,7 @@
 .editorial-site .publication-illustration figcaption { margin-top: 12px; color: var(--muted); font-family: var(--font-sans); font-size: 14px; line-height: 1.5; }
 .editorial-site .publication-primary-links { font-size: 14px; letter-spacing: 0; text-transform: none; }
 .editorial-site .publication-primary-links a { min-height: 44px; border: 1px solid var(--rule); background: transparent; }
+.editorial-site .publication-version-link { margin-top: 14px; font-size: 16px; }
 .editorial-site .publication-hero-figure { align-self: start; padding: 0; border: 0; }
 .editorial-site .publication-hero-figure img { width: 100%; max-height: 400px; box-shadow: none; background: transparent; }
 .editorial-site .publication-hero-figure figcaption { font-size: 14px; }
@@ -517,6 +519,8 @@
   .editorial-site .publication-profile { padding-block: 24px; }
   .editorial-site .publication-profile-hero-with-figure { grid-template-columns: 1fr; gap: 28px; }
   .editorial-site .publication-profile-main h1 { font-size: 32px; }
+  .editorial-site .publication-theme-group { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .editorial-site .publication-theme-group p { margin-top: 0; }
   .editorial-site .publication-hero-figure { max-width: 300px; }
   .editorial-site .site-footer { padding: 36px 20px 24px; }
 }

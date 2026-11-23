@@ -7,6 +7,7 @@ import publicationFigures from "../../data/publication-figures.json";
 import { normalizeTitle, yearRank, publicationSummary } from "../../utils/publications";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
 import { publicationLinks, publicationCitation } from "../../utils/publication-citations";
+import { relatedPublicationsFor } from "../../utils/publication-related";
 
 type PublicationFigure = {
   src: string;
@@ -85,17 +86,17 @@ const methodLikeTags = new Set([
   "quasi experimental precinct level voting analysis"
 ]);
 const normalizeTag = (value: string) => normalizeTitle(value).replace(/\s+/g, " ");
-const keywordThemes = Array.from(new Set([
+const seenKeywords = new Set<string>();
+const keywordThemes = [
   ...publication.data.themes,
   ...(editorial?.keywords ?? []),
   ...asList(metadata?.tags)
-]))
+]
   .filter((theme) => {
     const key = normalizeTag(theme);
-    return (
-      !themeTerms.has(key) &&
-      !methodLikeTags.has(key)
-    );
+    if (!key || themeTerms.has(key) || methodLikeTags.has(key) || seenKeywords.has(key)) return false;
+    seenKeywords.add(key);
+    return true;
   })
   .slice(0, 6);
 const visibleThemes = Array.from(new Set([...publicationThemeLinks, ...keywordThemes])).slice(0, 10);
@@ -118,7 +119,7 @@ const citationRows = [
   { label: "Venue", value: venue },
   { label: "Volume", value: meaningfulValue(metadata?.volume) },
   { label: "Issue", value: meaningfulValue(metadata?.issue) },
-  { label: "Pages", value: meaningfulValue(metadata?.pages) },
+  { label: "Pages", value: meaningfulValue(publication.data.bibliography?.pages ?? metadata?.pages) },
   { label: "DOI", value: doiValue }
 ].filter((row) => row.value);
 
@@ -127,25 +128,10 @@ const summaryForPublication = (entry: Publication) => {
   return publicationSummary(entry.data, entryMetadata);
 };
 
-const relatedPublications = allPublications
-  .filter((entry) => entry.id !== publication.id)
-  .map((entry) => {
-    const sharedThemes = entry.data.themes.filter((theme) => publication.data.themes.includes(theme)).length;
-    return { entry, sharedThemes };
-  })
-  .filter(({ sharedThemes }) => sharedThemes > 0)
-  .sort((a, b) => b.sharedThemes - a.sharedThemes || yearRank(b.entry.data.year) - yearRank(a.entry.data.year) || a.entry.data.title.localeCompare(b.entry.data.title))
-  .slice(0, 8);
-
-const publicationBySlug = new Map(allPublications.map((entry) => [entry.id, entry]));
-const curatedRelatedPublications = (editorial?.relatedSlugs ?? [])
-  .map((slug) => publicationBySlug.get(slug))
-  .filter((entry): entry is Publication => entry !== undefined && entry.id !== publication.id);
-const curatedRelatedSlugs = new Set(curatedRelatedPublications.map((entry) => entry.id));
-const displayedRelatedPublications = [
-  ...curatedRelatedPublications,
-  ...relatedPublications.map(({ entry }) => entry).filter((entry) => !curatedRelatedSlugs.has(entry.id))
-].slice(0, 5);
+const displayedRelatedPublications = relatedPublicationsFor(publication, allPublications);
+const relatedVersion = editorial?.relatedVersion
+  ? allPublications.find((entry) => entry.id === editorial.relatedVersion?.slug)
+  : undefined;
 
 const sortedPublications = [...allPublications].sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
 const currentIndex = sortedPublications.findIndex((entry) => entry.id === publication.id);
@@ -193,7 +179,7 @@ const publicationStructuredData = {
             name: venue
           }
         : undefined,
-      pagination: meaningfulValue(metadata?.pages) || undefined,
+      pagination: meaningfulValue(publication.data.bibliography?.pages ?? metadata?.pages) || undefined,
       identifier: doiValue
         ? {
             "@type": "PropertyValue",
@@ -273,6 +259,9 @@ const publicationStructuredData = {
               <a href={link.url}>{link.label}</a>
             ))}
           </nav>
+        )}
+        {relatedVersion && editorial?.relatedVersion && (
+          <p class="publication-version-link"><a href={`/research/${relatedVersion.id}/`} aria-label={`${editorial.relatedVersion.label}: ${relatedVersion.data.title}`}>{editorial.relatedVersion.label}</a></p>
         )}
         {publication.data.resourceNote && (
           <p class="publication-resource-note">{publication.data.resourceNote} <a href="/contact/">Ask about replication materials.</a></p>

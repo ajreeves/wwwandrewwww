@@ -31,7 +31,8 @@ const publications = defineCollection({
       designLabel: z.string().optional(),
       figureCaption: z.string().optional(),
       keywords: z.array(z.string()).optional(),
-      relatedSlugs: z.array(z.string()).optional()
+      relatedSlugs: z.array(z.string()).optional(),
+      relatedVersion: z.object({ slug: z.string(), label: z.string() }).optional()
     }).optional(),
     links: z
       .array(

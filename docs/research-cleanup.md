@@ -138,3 +138,21 @@ Measured with disclosures closed against the immediately preceding dev version; 
 | Research, 390 px | 27,462 px | 22,765 px | 17% |
 | Books, 1440 px | 7,082 px | 4,716 px | 33% |
 | Books, 390 px | 9,482 px | 7,669 px | 19% |
+
+## Peer-review follow-up
+
+Implemented the five small fixes selected after the visual, editorial, usability and academic reviews:
+
+- Keep the keyboard Skip to content link above the sticky masthead and make its main-content target focusable. Enter now transfers focus into the page, and the next Tab continues through content links.
+- Complete the prose citations for both books and the 2003 working paper. Move known editors, publishers and available page ranges from existing citation records into structured bibliography fields for six chapters. All eight chapter BibTeX exports now include editors and publishers. Preserve author names and order; keep supplied editor initials rather than inventing expanded names. Separate three container titles from their publishers so BibTeX does not repeat the publisher in the book title.
+- Stack publication topic and keyword labels above their chips below 760 px, and deduplicate keywords regardless of capitalization before limiting their number.
+- Clarify the Frick Initiatives' translational research and $22 million commitment on About, and add a sentence about teaching and advising. Preserve the owner's sentence about the space between behavior and institutions; the commitment remains normal-weight text.
+- Link the 2003 working paper and 2004 published article explicitly in both directions. Place the counterpart first in Related research, retain existing curated relationships, and fill remaining suggestions using reviewed subjects instead of generic method keywords. Invalid explicit relationships fail the build.
+
+Validation for this follow-up:
+
+- Deploy-preview build passes all 27 tests (4 appointment, 21 publication, 2 environment). Astro reports zero errors, warnings or hints and builds 67 routes, plus the 404 document. All 54 metadata records validate.
+- All 2,740 local links and fragments resolve across 68 generated HTML documents. The 67 documents using the shared layout have the focusable main target and preview noindex metadata; the remaining document is a redirect.
+- All 51 publication author lists match the preceding commit. All eight chapter exports include editors and publishers; all keyword lists are unique ignoring capitalization. Both reciprocal version links and their priority in Related research are verified.
+- Browser checks cover desktop at 1440 px, mobile at 390 px and narrow publication layouts at 320 px. Skip-link focus, counterpart navigation and citation/BibTeX button feedback work. Copy payloads include the completed citation fields. About and publication pages stay within the viewport; desktop topic labels retain their two-column layout.
+- Homepage content/layout, student portraits, CV content/PDF, appointment controls and release automation remain unchanged. The shared accessibility fix applies to all pages. `git diff --check` passes.
