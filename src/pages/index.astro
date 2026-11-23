@@ -169,8 +169,17 @@ const personStructuredData = {
         <dl>
           {leadershipRoles.map((item) => (
             <div id={item.id}>
-              <dt><a href={item.url}>{item.name}</a><span>{item.role}</span></dt>
-              <dd>{item.description}</dd>
+              <dt><span class="home-leadership-role">{item.role}</span><a href={item.url}>{item.name}</a></dt>
+              <dd>
+                {item.paragraphs.map((paragraph) => {
+                  const parts = paragraph.emphasis ? paragraph.text.split(paragraph.emphasis) : [paragraph.text];
+                  return (
+                    <p class:list={[paragraph.supporting && "home-leadership-supporting"]}>
+                      {parts.map((part, index) => <>{index > 0 && <strong>{paragraph.emphasis}</strong>}{part}</>)}
+                    </p>
+                  );
+                })}
+              </dd>
             </div>
           ))}
         </dl>
