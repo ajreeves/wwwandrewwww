@@ -54,8 +54,8 @@
 .editorial-site .site-brand .nav-home { flex: none; white-space: nowrap; }
 .editorial-site .university-signature { flex: none; padding-left: 24px; border-left: 1px solid var(--rule); }
 .editorial-site .university-signature img { display: block; width: 132px; height: 32px; }
-.editorial-site .nav-university-signature { display: none; }
-.editorial-site .nav-university-signature:focus-visible { outline: 2px solid var(--rust); outline-offset: 4px; }
+.editorial-site .mobile-university-shield { display: none; }
+.editorial-site .mobile-university-shield:focus-visible { outline: 2px solid var(--rust); outline-offset: 4px; }
 .editorial-site .nav-home:hover { color: var(--rust); }
 .editorial-site .nav-link { border-bottom-width: 3px; }
 .editorial-site .nav-link[aria-current="page"] { border-bottom-color: var(--rust); color: var(--rust); }
@@ -516,10 +516,11 @@
   .editorial-site main [id] { scroll-margin-top: .75rem; }
   .editorial-site .container-wide { padding-inline: 20px; }
   .editorial-site .site-nav { padding: 18px 20px; gap: 0 12px; }
-  .editorial-site .site-title { font-size: 28px; letter-spacing: 0; }
+  .editorial-site .site-title { font-size: clamp(1.5rem, 7.2vw, 1.75rem); letter-spacing: 0; }
+  .editorial-site .site-brand { gap: 8px; min-width: 0; }
   .editorial-site .site-brand .university-signature { display: none; }
-  .editorial-site .nav-university-signature { display: flex; align-self: flex-start; align-items: center; min-height: 44px; margin-top: 12px; padding-block: 7px; }
-  .editorial-site .nav-university-signature img { display: block; width: auto; height: 30px; }
+  .editorial-site .mobile-university-shield { display: flex; flex: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-block: -2px; }
+  .editorial-site .mobile-university-shield img { display: block; width: auto; height: 32px; }
   .editorial-site :is(.page-opening, .students-opening .page-opening) { padding-block: 28px 24px; }
   .editorial-site .page-opening.page-opening-mobile-compact { padding-bottom: 12px; }
   .editorial-site :is(.page-title, .page-title-compact) { font-size: clamp(2.25rem, 8vw, 3rem); }
