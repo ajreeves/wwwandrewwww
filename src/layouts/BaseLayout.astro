@@ -59,35 +59,22 @@ const navItems = [
     <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.png" />
-    {active === "CV" && (
-      <>
-        <link rel="preconnect" href="https://use.typekit.net" />
-        <link rel="preload" href="https://use.typekit.net/dlf3syd.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
-      </>
-    )}
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
-  <body class:list={[active !== "CV" && "editorial-site"]}>
+  <body class="editorial-site">
     <div class="site-shell">
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header">
         <nav class="site-nav" aria-label="Main navigation">
-          {active === "CV" ? (
-            <a class="nav-home" href="/" aria-label="Andrew Reeves home">
-              <span class="site-title">Andrew Reeves</span>
-            </a>
-          ) : (
-            <div class="site-brand">
+          <div class="site-brand">
               <a class="nav-home" href="/" aria-label="Andrew Reeves home">
                 <span class="site-title">Andrew Reeves</span>
               </a>
               <a class="university-signature" href="https://washu.edu/">
                 <img src="/brand/washu-logo.svg" alt="Washington University in St. Louis" width="132" height="32" />
               </a>
-            </div>
-          )}
+          </div>
           <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav-list" aria-label="Open navigation menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -100,8 +87,8 @@ const navItems = [
                   <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) && !(active === "Students" || active === "Talks") ? "page" : undefined}>
                     {item.label}
                   </a>
-                  {active !== "CV" && item.label === "Teaching" && <a class="nav-link nav-mobile-only" href="/students/" aria-current={active === "Students" ? "page" : undefined}>Students</a>}
-                  {active !== "CV" && item.label === "Media" && <a class="nav-link nav-mobile-only" href="/talks/" aria-current={active === "Talks" ? "page" : undefined}>Talks and events</a>}
+                  {item.label === "Teaching" && <a class="nav-link nav-mobile-only" href="/students/" aria-current={active === "Students" ? "page" : undefined}>Students</a>}
+                  {item.label === "Media" && <a class="nav-link nav-mobile-only" href="/talks/" aria-current={active === "Talks" ? "page" : undefined}>Talks and events</a>}
                 </>
               ))
             }
@@ -120,7 +107,7 @@ const navItems = [
             <a href="/teaching/">Teaching</a>
             <a href="/students/">Students</a>
             <a href="/talks/">Talks</a>
-            <a href="/news/">{active === "CV" ? "News" : "Media"}</a>
+            <a href="/news/">Media</a>
             <a href="/cv/">CV</a>
             <a href="/contact/">Contact</a>
             <a href="/search/">Search</a>
@@ -128,7 +115,7 @@ const navItems = [
           <div class="footer-links">
             <a href="mailto:reeves@wustl.edu">Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>
-            <a href="https://polisci.wustl.edu/people/andrew-reeves/">{active === "CV" ? "Department Profile" : "Department profile"}</a>
+            <a href="https://polisci.wustl.edu/people/andrew-reeves/">Department profile</a>
           </div>
         </div>
       </footer>

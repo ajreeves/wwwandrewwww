@@ -1,7 +1,7 @@
-/* The CV deliberately retains its existing presentation. All design changes
-   live under this opt-in class, which BaseLayout omits on the CV route. */
+/* Shared WashU-aligned presentation, including the CV page's HTML shell.
+   The downloadable CV and its contents are maintained separately. */
 .editorial-site {
-  /* WashU's approved system alternatives; the CV retains its original fonts. */
+  /* WashU's approved system alternatives. */
   --font-sans: Calibri, "Segoe UI", Arial, sans-serif;
   --font-serif: Georgia, "Times New Roman", serif;
   --font-slab: Georgia, "Times New Roman", serif;
@@ -133,6 +133,8 @@
   line-height: 1.55;
 }
 .editorial-site .page-opening-action { margin-top: 20px; }
+.editorial-site .cv-frame { background: white; border: 1px solid var(--rule); box-shadow: none; }
+.editorial-site .cv-frame iframe { display: block; border: 0; }
 .editorial-site .page-toc {
   display: flex;
   align-items: baseline;

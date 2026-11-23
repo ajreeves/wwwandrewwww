@@ -35,7 +35,7 @@ export const supplementalSearchEntries: SiteSearchEntry[] = [
   ...pages.map(({ keywords, ...page }) => entry({ ...page, type: "Page" }, keywords)),
   ...leadershipRoles.map((role) => entry({
     title: role.name,
-    summary: `${role.role}. ${role.description} ${role.example.before}${role.example.label}${role.example.after}`,
+    summary: `${role.role}. ${role.description}`,
     type: "Leadership",
     url: `/#${role.id}`
   })),

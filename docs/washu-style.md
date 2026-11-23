@@ -1,14 +1,14 @@
 # WashU style on the personal website
 
-The site follows WashU's visual and editorial guidance while keeping Andrew Reeves's name as its primary identity. The CV keeps its existing design and content. All visual overrides belong under `.editorial-site`; do not change shared base styles to implement this direction.
+The site follows WashU's visual and editorial guidance while keeping Andrew Reeves's name as its primary identity. The CV page uses the shared design, while its text, update date and downloadable PDF remain unchanged. All visual overrides belong under `.editorial-site`; do not change shared base styles to implement this direction.
 
 ## Typography and color
 
 - Use Georgia for headings, with Calibri for body copy, the personal masthead, navigation and labels. This follows the serif-heading/sans-serif-body hierarchy of current WashU sites. These are WashU's approved system alternatives to IvyPresto and IvyStyle Sans. Platform fallbacks are Times New Roman for serif text and Segoe UI/Arial for sans serif text.
-- Keep the Adobe Freight kit on the CV only. A future Ivy switch requires a licensed Adobe Fonts web project containing the appropriate Ivy families; do not borrow another site's kit.
+- A future Ivy switch requires a licensed Adobe Fonts web project containing the appropriate Ivy families; do not borrow another site's kit.
 - Use white, neutral dark text, WashU red (`#BA0C2F`) and warm gray (`#D7D2CB`). Lead with red in the masthead rule, active navigation, primary actions and mobile photo navigation. Reserve dark red (`#971B2F`) for hover states and dark green (`#13322B`) for secondary accents. Keep reading text and major headings dark, and use warm gray for the footer.
 - Prefer sentence case and left alignment. Preserve the capitalization of proper names, publication titles and formal course/event titles.
-- Use one compact, full-color WashU logo as a secondary signature beside the personal name (below it on mobile). The complete shield and wordmark must remain together and unaltered. Display it at 32 pixels high on desktop and 30 pixels on mobile, with separation from the name and navigation. The CV is excluded.
+- Use one compact, full-color WashU logo as a secondary signature beside the personal name (below it on mobile). The complete shield and wordmark must remain together and unaltered. Display it at 32 pixels high on desktop and 30 pixels on mobile, with separation from the name and navigation.
 
 ### Logo provenance
 
@@ -37,8 +37,8 @@ Reviewed November 2026:
 - [Arts & Sciences](https://marcomm.washu.edu/style-guide-entries/arts-sciences/)
 - [Official logo usage guide](https://marcomm.washu.edu/official-logo-usage-guide/)
 
-## Editorial hierarchy and leadership examples
+## Editorial hierarchy and leadership
 
-The homepage uses the appointment title as its heading, with the university on a separate line. Keep the appointment date guard intact. Recent articles use concise versions of the research archive’s curated findings, preserving qualifications about scope, association and effect size. Two long article titles omit their subtitles on the homepage; accessible link names, publication pages and citations retain the full titles. Research topic links belong with Recent articles. University leadership follows the photo strip and leads directly with the three roles, without a pull quote. Non-CV page, book, publication, course and student headings use Georgia at regular weight; body copy and navigation retain Calibri and its fallbacks. Avoid labels that repeat an adjacent heading.
+The homepage uses the appointment title as its heading, with the university on a separate line. Keep the appointment date guard intact. Recent articles use concise versions of the research archive’s curated findings, preserving qualifications about scope, association and effect size. Two long article titles omit their subtitles on the homepage; accessible link names, publication pages and citations retain the full titles. Research topic links belong with Recent articles. University leadership follows the photo strip and describes the three roles and their responsibilities, without a pull quote or specific event and project examples. Page, book, publication, course and student headings use Georgia at regular weight; body copy and navigation retain Calibri and its fallbacks. Avoid labels that repeat an adjacent heading.
 
-Leadership examples distinguish Reeves’s role from the work of supported projects. Sources: [Weidenbaum Center programs](https://wc.washu.edu/), [Frick-supported projects](https://frick.washu.edu/frick-action), and [Ordered Liberty reporting](https://source.washu.edu/2026/09/the-university-challenge/). The Kugler forum uses the historical speaker role and links to its recording on Talks.
+Leadership descriptions focus on responsibilities. Sources: [Weidenbaum Center](https://wc.washu.edu/), [Frick Initiatives](https://frick.washu.edu/), and [Ordered Liberty reporting](https://source.washu.edu/2026/09/the-university-challenge/). Recordings and historical speaker details remain on Talks.

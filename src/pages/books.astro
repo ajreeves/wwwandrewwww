@@ -170,11 +170,7 @@ const authorNamesFor = (book: (typeof books)[number]) =>
   book.id === "particularistic-president"
     ? [...book.data.coauthors, "Andrew Reeves"]
     : ["Andrew Reeves", ...book.data.coauthors];
-const tocLinks = books.flatMap((book, index) => {
-  const bookLink = { href: `#${book.id}`, label: book.data.title };
-  if (index === 0) return [bookLink, { href: "#book-relationship-heading", label: "How the books relate" }];
-  return [bookLink];
-});
+const tocLinks = books.map((book) => ({ href: `#${book.id}`, label: book.data.title }));
 const booksStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -352,23 +348,6 @@ const booksStructuredData = {
               )}
             </article>
 
-            {index === 0 && (
-              <section class="editorial-page-section book-relationship-section" aria-labelledby="book-relationship-heading">
-                <div class="page-section-heading">
-                  <div>
-                    <h2 id="book-relationship-heading">How the books relate</h2>
-                  </div>
-                </div>
-                <div class="editorial-prose book-relationship-prose">
-                  <p>
-                    <em>The Particularistic President</em> examines where federal resources go and why presidents favor some places over others.
-                  </p>
-                  <p>
-                    <em>No Blank Check</em> examines how citizens respond when presidents act without Congress. It shows that people care about how a policy is made as well as what it does.
-                  </p>
-                </div>
-              </section>
-            )}
           </>
         );
       })

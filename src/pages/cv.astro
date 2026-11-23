@@ -13,7 +13,7 @@ import PageHeader from "@components/PageHeader.astro";
     compact
   />
 
-  <section class="container-wide page-section">
+  <section class="container-wide page-section cv-preview-section">
     <div class="cv-frame">
       <iframe
         src="/reevescv.pdf#view=FitH&navpanes=0&toolbar=0"
@@ -24,3 +24,10 @@ import PageHeader from "@components/PageHeader.astro";
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .cv-preview-section { padding-top: 8px; }
+  @media (max-width: 640px) {
+    .cv-preview-section { display: none; }
+  }
+</style>
