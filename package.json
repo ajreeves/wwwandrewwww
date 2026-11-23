@@ -25,6 +25,7 @@
     "@astrojs/sitemap": "^3.7.6",
     "astro": "^7.4.13",
     "autoprefixer": "^10.7.0",
+    "pdfjs-dist": "6.5.438",
     "postcss": "^8.5.33",
     "tailwindcss": "^3.4.19",
     "typescript": "^5.9.3"
