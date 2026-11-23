@@ -1,5 +1,13 @@
 // Dates describe the event, not the video upload. Retain month precision when
 // the source does not establish a day. Speaker roles are historical context.
+// Use photographs from the actual event where the archive has one.
+// Other recordings retain their original YouTube thumbnail.
+export const eventPhotos: Record<string, { src: string; credit: string; position?: string }> = {
+  "-xeyS7nilpU": { src: "/images/andrew-reeves-carolyn-bourdeaux.jpg", credit: "Photo: Sid Hastings/WashU", position: "center 38%" },
+  "TJEnJcU-PRE": { src: "/images/andrew-fed-page.jpg", credit: "Photo: Sid Hastings/WashU" },
+  "qpFScg4RRyY": { src: "/images/editorial/adriana-kugler-conversation.jpg", credit: "Photo: Jerry Naunheim Jr./WashU" }
+};
+
 export const events = [
   {
     title: "Ukraine at a Crossroads: Former Ukrainian President Viktor Yushchenko",

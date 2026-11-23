@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { galleryPhotos } from "../src/data/about-gallery.ts";
 import { doctoralStudents, undergraduateHonorsTheses } from "../src/data/doctoralStudents.ts";
+import { events, eventPhotos } from "../src/data/talks.ts";
 
 const root = new URL("../", import.meta.url);
 const figures = JSON.parse(await readFile(new URL("src/data/publication-figures.json", root), "utf8"));
@@ -12,12 +13,19 @@ const students = [...doctoralStudents, ...undergraduateHonorsTheses];
 const portraits = new Map(students.filter((student) => student.photo_url).map((student) => [student.photo_url, student]));
 const sources = new Set([
   ...galleryPhotos.map((photo) => photo.src),
+  ...Object.values(eventPhotos).map((photo) => photo.src),
   ...Object.values(figures).map((figure) => figure.src),
   ...students.flatMap((student) => [student.image_url, student.photo_url]),
+  ...events.map((event) => new URL(event.watch).searchParams.get("v"))
+    .filter((id) => !eventPhotos[id]).map((id) => `/images/recordings/${id}.jpg`),
   "/images/andrew-reeves-portrait-editorial.jpg",
   "/images/andrew-fed-page.jpg",
   "/images/andrew-harvard-page.jpg",
   "/images/andrew-teaching-page.jpg",
+  "/images/editorial/andrew-reeves-portrait.jpg",
+  "/images/editorial/harvard-panel.jpg",
+  "/images/editorial/classroom.jpg",
+  "/images/editorial/adriana-kugler-conversation.jpg",
   "/images/citizenship-course.jpg",
   "/images/intro-course.jpg",
   "/images/business-of-elections-course.jpg",

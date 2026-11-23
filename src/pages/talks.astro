@@ -2,14 +2,22 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import FeatureBand from "@components/FeatureBand.astro";
+import RecordingPreview from "@components/RecordingPreview.astro";
 import { eventAnchor } from "../utils/content-anchors";
 
-import { events } from "@data/talks";
+import { events, eventPhotos } from "@data/talks";
+import { siteEnvironment } from "@data/site-environment";
+import "../styles/talks.css";
 
 const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
+// New preview assets must resolve before the production site is released.
+const shareImage = new URL("/images/editorial/talks-share.jpg",
+  siteEnvironment.noIndex && process.env.DEPLOY_PRIME_URL
+    ? process.env.DEPLOY_PRIME_URL : Astro.site ?? "https://andrewreeves.org").href;
 ---
 
-<BaseLayout title="Talks and events" active="Talks" description="Public events, talks and recorded conversations featuring Andrew Reeves and the Weidenbaum Center.">
+<BaseLayout title="Talks and events" active="Talks" description="Public events, talks and recorded conversations featuring Andrew Reeves and the Weidenbaum Center." image={shareImage} imageAlt="Talks and events — Andrew Reeves at Washington University in St. Louis; Adriana Kugler in conversation with Reeves.">
+  <div class="talks-page">
   <PageHeader
     title="Talks and events"
     intro="Recordings of talks, panels and conversations from the Weidenbaum Center and Andrew Reeves’s public work."
@@ -39,24 +47,8 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
     <div class="grid gap-6 lg:grid-cols-2">
       {
         events.map((event) => (
-          <article id={eventAnchor(event.watch)} class="editorial-card">
-            <div class="video-frame video-frame-placeholder">
-              <button
-                type="button"
-                class="video-load-button"
-                data-youtube-embed={event.embed}
-                data-youtube-title={event.title}
-                aria-label={`Load video: ${event.title}`}
-              >
-                <img
-                  src={`https://i.ytimg.com/vi/${youtubeId(event.watch)}/hqdefault.jpg`}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span>Play recording</span>
-              </button>
-            </div>
+          <article id={eventAnchor(event.watch)} class="editorial-card recording-card">
+            <RecordingPreview title={event.title} embed={event.embed} watch={event.watch} photo={eventPhotos[youtubeId(event.watch)]} />
             <p class="small-caps mb-3 mt-5">Recorded event · <time datetime={event.date}>{event.dateLabel}</time></p>
             <h3 class="list-title">
               <a class="text-ink no-underline hover:text-olive-dark" href={event.watch}>{event.label}</a>
@@ -68,6 +60,7 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
       }
     </div>
   </section>
+  </div>
 
   <script>
     document.querySelectorAll<HTMLButtonElement>("[data-youtube-embed]").forEach((button) => {
@@ -90,7 +83,3 @@ const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
     });
   </script>
 </BaseLayout>
-
-<style>
-  .event-source-link { display: inline-flex; align-items: center; min-height: 28px; margin-top: 0.75rem; font-size: 0.9rem; }
-</style>

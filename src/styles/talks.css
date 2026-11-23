@@ -1,0 +1,14 @@
+.editorial-site .talks-page .recording-preview { margin: 0; }
+.editorial-site .talks-page .recording-frame { border: 0; border-top: 3px solid var(--rust); background: var(--ink); }
+.editorial-site .talks-page .recording-play { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: var(--ink); color: white; cursor: pointer; text-align: left; }
+.editorial-site .talks-page .recording-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.editorial-site .talks-page .recording-play-label { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 16px; background: #ba0c2f; color: white; font-family: var(--font-sans); font-size: 1rem; font-weight: 600; line-height: 1.4; }
+.editorial-site .talks-page .recording-play:is(:hover, :focus-visible) .recording-play-label { background: #971b2f; text-decoration: underline; text-underline-offset: 4px; }
+.editorial-site .talks-page .recording-play:focus-visible { outline: 3px solid white; outline-offset: -6px; }
+.editorial-site .talks-page .recording-preview figcaption { margin-top: 8px; color: var(--muted); font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.4; }
+.editorial-site .talks-page .recording-card { padding-top: 0; border-top: 0; }
+.editorial-site .talks-page .recording-card .list-title { max-width: 30ch; text-wrap: balance; line-height: 1.15; }
+.editorial-site .talks-page .event-source-link { display: inline-flex; align-items: center; min-height: 36px; margin-top: 0.75rem; font-size: 0.9375rem; }
+@media (max-width: 480px) {
+  .editorial-site .talks-page .recording-play-label { left: 12px; bottom: 12px; padding: 8px 12px; }
+}

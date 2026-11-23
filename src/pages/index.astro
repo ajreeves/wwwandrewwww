@@ -51,21 +51,21 @@ const photoLinks = [
     title: "Research",
     text: "Power, representation and the role of place.",
     href: "/research/",
-    image: "/images/andrew-harvard-page.jpg",
+    image: "/images/editorial/harvard-panel.jpg",
     alt: "Andrew Reeves moderating the Election Analyst Panel at Harvard University"
   },
   {
     title: "Teaching",
     text: "American politics in the classroom.",
     href: "/teaching/",
-    image: "/images/andrew-teaching-page.jpg",
+    image: "/images/editorial/classroom.jpg",
     alt: "Andrew Reeves teaching in a classroom"
   },
   {
     title: "Talks and events",
     text: "Conversations about policy and public life.",
     href: "/talks/",
-    image: "/images/adriana-kugler-andrew-reeves-conversation.jpg",
+    image: "/images/editorial/adriana-kugler-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum"
   }
 ] as const;
@@ -76,7 +76,7 @@ const personStructuredData = {
   "@id": "https://andrewreeves.org/#andrew-reeves",
   name: "Andrew Reeves",
   url: "https://andrewreeves.org/",
-  image: "https://andrewreeves.org/images/andrew-reeves-portrait-editorial.jpg",
+  image: "https://andrewreeves.org/images/editorial/andrew-reeves-portrait.jpg",
   jobTitle: [
     academicAppointment.title,
     "Professor of Law by courtesy",
@@ -128,12 +128,12 @@ const personStructuredData = {
 
 <BaseLayout active="Home" structuredData={personStructuredData}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].src} imagesrcset={responsiveImages["/images/andrew-reeves-portrait-editorial.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" />
+    <link rel="preload" as="image" href={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].src} imagesrcset={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].srcset} imagesizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" />
   </Fragment>
   <div class="home-page">
     <section class="container-wide home-intro" aria-labelledby="home-name">
       <figure class="home-portrait">
-        <ResponsiveImage src="/images/andrew-reeves-portrait-editorial.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" loading="eager" fetchpriority="high" />
+        <ResponsiveImage src="/images/editorial/andrew-reeves-portrait.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 96px, (max-width: 1000px) 160px, 260px" loading="eager" fetchpriority="high" />
       </figure>
       <div class="home-intro-copy">
         <h1 id="home-name">{academicAppointment.title}</h1>

@@ -1,0 +1,32 @@
+# Homepage photo treatment
+
+Edited in the owner's Adobe Lightroom web account on November 23, 2026. All four originals remain in `public/images/`; full-size JPEG exports live in `public/images/editorial/`. The existing image optimizer creates responsive WebP copies without changing student portraits.
+
+These are photographic light/color adjustments only. No generated subjects, face retouching, object removal, background replacement or synthetic blur was used. The existing homepage crops remain in CSS.
+
+| Export | Original | Lightroom adjustments |
+| --- | --- | --- |
+| `andrew-reeves-portrait.jpg` | `andrew-reeves-portrait-editorial.jpg` | Exposure +0.10, highlights −14, shadows +12, tint −3, saturation −3 |
+| `harvard-panel.jpg` | `andrew-harvard-page.jpg` | Exposure +0.20, contrast +4, highlights −30, shadows +28, temperature −7, saturation −6 |
+| `classroom.jpg` | `andrew-teaching-page.jpg` | Exposure +0.10, highlights −18, shadows +16, temperature −3, saturation −4 |
+| `adriana-kugler-conversation.jpg` | `adriana-kugler-andrew-reeves-conversation.jpg` | Exposure +0.25, highlights −20, shadows +24, temperature −4, saturation −4 |
+
+Temperature/tint values are relative JPEG adjustments, not Kelvin. All other controls remain at their imported values. Lightroom keeps the editable originals and settings in the owner's account.
+
+## Recording previews
+
+`RecordingPreview.astro` is the reusable template. Titles and captions remain accessible HTML using the site's Adobe Fonts kit. Each preview uses a 16:9 photograph, a red top rule and a 44-pixel-or-larger labeled play control. Videos load only after activation; the title remains a direct link to the recording.
+
+Three recordings use photographs already verified in the site's archive:
+
+- Governing Past Gridlock, Jan. 14, 2026: `andrew-reeves-carolyn-bourdeaux.jpg`, Sid Hastings/WashU.
+- The Past, Present, and Future of the Federal Reserve, Sept. 29, 2025: `andrew-fed-page.jpg`, Sid Hastings/WashU.
+- Adriana D. Kugler forum, April 3, 2024: the Lightroom export above, Jerry Naunheim Jr./WashU.
+
+The other six recordings retain their own YouTube thumbnails, downloaded from `https://i.ytimg.com/vi/{video-id}/maxresdefault.jpg` on November 23, 2026. All six were available at 1280 × 720. They are stored under `public/images/recordings/` by video ID and served through the responsive image pipeline, replacing the remote 480 × 360 previews. Do not substitute photographs from a different event.
+
+## Sharing image
+
+`design/talks-share.html` is the editable 1200 × 630 sharing-card source. It uses the owner's hosted Adobe Fonts project and the edited Kugler photograph, with its credit retained. The exported JPEG is the Talks page's Open Graph/Twitter image. The design source is kept outside `public/` and is not published as a site page.
+
+Netlify previews use [DEPLOY_PRIME_URL](https://docs.netlify.com/build/configure-builds/environment-variables/) for this new image so it resolves before release. Production uses the canonical site origin. Indexing, analytics, appointment dates and release automation are unchanged.

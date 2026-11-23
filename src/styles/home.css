@@ -1,6 +1,6 @@
 /* Loaded only by the homepage; keep the shared pages and CV untouched. */
 .home-page { --rust: #ba0c2f; }
-.home-page :is(h1, h2, h3) { color: var(--ink); font-family: var(--font-serif); font-weight: 400; }
+.home-page :is(h1, h2, h3) { color: var(--ink); font-family: var(--font-serif); font-weight: 400; text-wrap: balance; }
 .home-page h2 { margin: 0; font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; }
 .home-page h3 { margin: 0; font-size: 28px; line-height: 1.2; letter-spacing: -0.015em; }
 .home-page :is(h2, h3) a { color: inherit; text-decoration: none; }
@@ -12,7 +12,7 @@
 
 .home-page .home-intro { display: grid; grid-template-columns: minmax(0, 760px) 260px; align-items: start; gap: 48px; padding-block: 32px; }
 .home-page .home-intro-copy { grid-column: 1; grid-row: 1; }
-.home-page .home-intro h1 { max-width: 36ch; margin: 0; font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 1.2; letter-spacing: -0.015em; }
+.home-page .home-intro h1 { max-width: 36ch; margin: 0; font-size: clamp(1.75rem, 2.8vw, 2.5rem); line-height: 1.16; letter-spacing: -0.01em; }
 .home-page .home-intro-university { margin-top: 12px; color: var(--muted); font-size: 18px; line-height: 1.4; }
 .home-page .home-intro-lede { max-width: 52ch; margin-top: 24px; font-size: 22px; line-height: 1.5; }
 .home-page .home-intro-leadership { max-width: 58ch; margin-top: 16px; font-size: 18px; line-height: 1.55; }

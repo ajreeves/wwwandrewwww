@@ -30,8 +30,7 @@ const roles: LeadershipRole[] = [
     paragraphs: [
       { text: "A WashU civic initiative supporting translational research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility." },
       {
-        text: "Expanded through a $22 million commitment from Robert and Barbara Frick, it funds promising ideas and helps develop programs that can take root in other schools, businesses and communities.",
-        emphasis: "$22 million commitment"
+        text: "Expanded through a $22 million commitment from Robert and Barbara Frick, it funds promising ideas and helps develop programs that can take root in other schools, businesses and communities."
       }
     ]
   },
@@ -40,7 +39,7 @@ const roles: LeadershipRole[] = [
     name: "Office of the Chancellor",
     role: "Senior Advisor to the Chancellor",
     url: "https://andrewdmartin.washu.edu/people/",
-    paragraphs: [{ text: "The university’s central leadership office. Reeves serves as senior advisor and co-chairs the Ordered Liberty Project, a WashU initiative supporting free expression, open inquiry and discussion across political and intellectual differences." }]
+    paragraphs: [{ text: "Reeves serves as senior advisor and co-chairs the Ordered Liberty Project, a WashU initiative supporting free expression, open inquiry and discussion across political and intellectual differences." }]
   }
 ];
 
