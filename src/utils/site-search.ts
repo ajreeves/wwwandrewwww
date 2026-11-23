@@ -28,6 +28,7 @@ const pages = [
   { title: "News and media", url: "/news/", summary: "Essays, commentary and news coverage of Reeves’s research.", keywords: "press op-eds journalism" },
   { title: "Talks and events", url: "/talks/", summary: "Recordings of public talks, panels and Weidenbaum Center conversations.", keywords: "video YouTube speakers" },
   { title: "Contact", url: "/contact/", summary: "Email, office hours, telephone and mailing address.", keywords: "reeves@wustl.edu Seigle Hall office appointment" },
+  { title: "Media and event resources", url: "/contact/#press-resources", summary: "A short biography to copy and a downloadable portrait of Andrew Reeves.", keywords: "headshot press kit speaker bio photograph journalist organizer" },
   { title: "Curriculum vitae", url: "/cv/", summary: "Download Andrew Reeves’s academic CV.", keywords: "resume vita academic record" }
 ] as const;
 

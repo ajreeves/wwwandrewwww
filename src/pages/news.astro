@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import FeatureBand from "@components/FeatureBand.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import MediaList from "@components/MediaList.astro";
 
 const commentary = [
   {
@@ -178,9 +179,9 @@ const coverage = [
 ] as const;
 
 const tocLinks = [
-  { href: "#featured-panel", label: "Featured panel" },
+  { href: "#research-media", label: "Research in the media" },
   { href: "#essays-op-eds", label: "Essays and op-eds" },
-  { href: "#research-media", label: "Research in the media" }
+  { href: "#featured-panel", label: "Panels and conversations" }
 ] as const;
 ---
 
@@ -188,8 +189,8 @@ const tocLinks = [
   <PageHeader
     title="News and media"
     intro="Essays and commentary by Andrew Reeves, along with news coverage of his research."
-    actionHref="/talks/"
-    actionLabel="Talks and events"
+    actionHref="/contact/#press-resources"
+    actionLabel="Media and event resources"
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
@@ -198,51 +199,38 @@ const tocLinks = [
     </div>
   </nav>
 
-  <FeatureBand
-    id="featured-panel"
-    title="Election Analyst Panel"
-    text="Andrew Reeves moderated this panel with Dave Wasserman, Jacob Rubashkin and Geoffrey Skelley at Political Analytics 2025 at Harvard University."
-    image="/images/andrew-harvard-page.jpg"
-    alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"
-  />
+  <section id="research-media" class="container-wide page-section">
+    <div class="page-section-heading">
+      <h2>Research in the media</h2>
+    </div>
+    <MediaList items={coverage.slice(0, 2)} featured />
+    <details class="media-archive">
+      <summary>Earlier coverage <span>({coverage.length - 2})</span></summary>
+      <MediaList items={coverage.slice(2)} />
+    </details>
+  </section>
 
   <section id="essays-op-eds" class="container-wide page-section">
     <div class="page-section-heading">
-      <div>
-        <h2>Essays and op-eds</h2>
-      </div>
+      <h2>Essays and op-eds</h2>
     </div>
-    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
-      {
-        commentary.map((item) => (
-          <article class="editorial-card">
-            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
-            <h3 class="list-title">
-              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
-            </h3>
-          </article>
-        ))
-      }
-    </div>
+    <MediaList items={commentary.slice(0, 3)} />
+    <details class="media-archive">
+      <summary>Earlier essays and op-eds <span>({commentary.length - 3})</span></summary>
+      <MediaList items={commentary.slice(3)} />
+    </details>
   </section>
 
-  <section id="research-media" class="container-wide page-section">
-    <div class="page-section-heading">
+  <section id="featured-panel" class="container-wide page-section">
+    <div class="media-panel">
+      <figure>
+        <ResponsiveImage src="/images/editorial/harvard-panel.jpg" alt="Andrew Reeves moderating the Election Analyst Panel at Harvard University" loading="lazy" sizes="(min-width: 761px) 280px, calc(100vw - 40px)" />
+      </figure>
       <div>
-        <h2>Research in the media</h2>
+        <h2>Election Analyst Panel</h2>
+        <p>Andrew Reeves moderated this panel with Dave Wasserman, Jacob Rubashkin and Geoffrey Skelley at Political Analytics 2025 at Harvard University.</p>
+        <a class="ghost-button" href="/talks/">Talks and events</a>
       </div>
-    </div>
-    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
-      {
-        coverage.map((item) => (
-          <article class="editorial-card">
-            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
-            <h3 class="list-title">
-              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
-            </h3>
-          </article>
-        ))
-      }
     </div>
   </section>
 </BaseLayout>

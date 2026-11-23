@@ -56,3 +56,11 @@ Present the three leadership entries as rows divided by fine warm-gray rules. Pu
 The homepage uses restrained Lightroom edits of its existing photographs: lift shadow detail, protect highlights and reduce competing color casts. Keep the originals and all student portraits unchanged. Export full-size JPEG copies under `public/images/editorial/`; the existing image pipeline supplies responsive WebP versions. See [photo treatment notes](photo-treatment.md) for sources and Lightroom settings.
 
 Use one recording-preview component with a 16:9 image, a thin WashU-red rule and a clearly labeled red play control. Use photographs from the actual event when available and retain photographer credits; otherwise retain the recording’s original YouTube thumbnail. Keep titles in live IvyPresto text beneath the image, with balanced wrapping. Load the video only after activation and preserve the direct YouTube link as a fallback.
+
+## Teaching, Media and Contact
+
+Teaching retains the real classroom photograph. Present courses before teaching awards, using compact rows with titles, dated syllabus or offering labels and resource links beside the descriptions. Stack these on mobile. Course illustrations are omitted from the page; the source images and course descriptions remain unchanged.
+
+Media opens with the two 2026 coverage entries. Keep research coverage distinct from authored essays and op-eds. Earlier entries remain in the static HTML inside native expandable lists, with their original titles, outlets, dates and links. The Harvard panel is a smaller supporting photograph and description below the lists, with a link to Talks and events.
+
+Contact puts email and telephone above compact office and mailing details. Media and event resources provide a selectable short biography, an enhanced copy button and a download of the existing full-size homepage portrait. The biography uses the shared appointment resolver; do not hard-code the future chair title. Keep these resources discoverable from Media and site search. At the owner's request on November 23, 2026, omit a portrait credit for now rather than supply an unverified photographer name.

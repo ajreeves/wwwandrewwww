@@ -30,3 +30,7 @@ The other six recordings retain their own YouTube thumbnails, downloaded from `h
 `design/talks-share.html` is the editable 1200 × 630 sharing-card source. It uses the owner's hosted Adobe Fonts project and the edited Kugler photograph, with its credit retained. The exported JPEG is the Talks page's Open Graph/Twitter image. The design source is kept outside `public/` and is not published as a site page.
 
 Netlify previews use [DEPLOY_PRIME_URL](https://docs.netlify.com/build/configure-builds/environment-variables/) for this new image so it resolves before release. Production uses the canonical site origin. Indexing, analytics, appointment dates and release automation are unchanged.
+
+## Contact portrait download
+
+The Contact page links directly to the existing Lightroom export, `public/images/editorial/andrew-reeves-portrait.jpg` (1200 × 1440 pixels), with the download filename `Andrew-Reeves-portrait.jpg`. The image is not modified or enlarged. No photographer is identified in the source files; the owner explicitly requested that the credit be left off for now on November 23, 2026.

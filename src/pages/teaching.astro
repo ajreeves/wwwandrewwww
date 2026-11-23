@@ -2,7 +2,6 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import FeatureBand from "@components/FeatureBand.astro";
-import ResponsiveImage from "@components/ResponsiveImage.astro";
 import { contentAnchor } from "../utils/content-anchors";
 import { courses, courseArchive } from "@data/teaching";
 
@@ -23,8 +22,8 @@ const awards = [
 
 const tocLinks = [
   { href: "#classroom-practice", label: "Classroom practice" },
-  { href: "#teaching-awards", label: "Teaching awards" },
   { href: "#featured-courses", label: "Courses" },
+  { href: "#teaching-awards", label: "Teaching awards" },
   { href: "#course-archive", label: "Course archive" }
 ] as const;
 
@@ -53,6 +52,32 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     alt="Andrew Reeves teaching in a classroom"
   />
 
+  <section id="featured-courses" class="container-wide page-section">
+    <div class="page-section-heading">
+      <div>
+        <h2>Courses</h2>
+        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Selected undergraduate courses. Dates identify the linked syllabus or a past offering.</p>
+      </div>
+    </div>
+    <div class="teaching-course-list">
+      {courses.map((course) => (
+        <article id={contentAnchor("course", course.title)} class="teaching-course">
+          <div class="teaching-course-heading">
+            <h3>{course.title}</h3>
+            <p class="teaching-course-term">{course.termLabel} · {course.term}</p>
+            <div class="course-action-row">
+              {course.links.map((link) => <a class="ghost-button" href={link.url} aria-label={`${link.label}: ${course.title}`}>{link.label}</a>)}
+              {course.video && <a class="ghost-button" href={videoWatchUrl(course.video)} aria-label={`Course video: ${course.title}`}>Course video</a>}
+            </div>
+          </div>
+          <div class="teaching-course-description">
+            {course.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section id="teaching-awards" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
@@ -68,42 +93,6 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
             <h3 class="card-title">{award.title}</h3>
             <p class="mt-4 text-lg leading-[1.6] text-muted">{award.text}</p>
             <a class="ghost-button mt-3" href={award.url}>Award announcement</a>
-          </article>
-        ))
-      }
-    </div>
-  </section>
-
-  <section id="featured-courses" class="container-wide page-section">
-    <div class="page-section-heading">
-      <div>
-        <h2>Courses</h2>
-        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Selected courses and past syllabi. Each term refers to the linked syllabus or a past offering of the course.</p>
-      </div>
-    </div>
-    <div class="course-feature-list">
-      {
-        courses.map((course, index) => (
-          <article id={contentAnchor("course", course.title)} class={`flw-feature-card course-feature-card ${index % 2 === 1 ? "flw-feature-card-reversed" : ""}`}>
-            <figure class="flw-feature-media course-feature-media">
-              <ResponsiveImage
-                src={course.image}
-                alt={course.alt}
-                loading="lazy"
-                sizes="(min-width: 1200px) 280px, (min-width: 760px) 24vw, calc(100vw - 40px)"
-              />
-              <figcaption>{course.caption}</figcaption>
-            </figure>
-            <div class="flw-feature-copy course-feature-copy">
-              <p class="kicker mb-4">{course.type}</p>
-              <h3>{course.title}</h3>
-              <p class="kicker course-term">{course.termLabel} · {course.term}</p>
-              {course.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-              <div class="course-action-row">
-                {course.links.map((link) => <a class="ghost-button" href={link.url}>{link.label}</a>)}
-                {course.video && <a class="ghost-button" href={videoWatchUrl(course.video)}>Course video</a>}
-              </div>
-            </div>
           </article>
         ))
       }
@@ -132,7 +121,3 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
     </div>
   </section>
 </BaseLayout>
-
-<style>
-  .course-term { margin-top: 1rem; color: var(--olive-dark); line-height: 1.5; }
-</style>
