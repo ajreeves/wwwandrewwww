@@ -1,6 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import metadataIndex from "../data/publications/presentation/index.json" with { type: "json" };
 import { normalizeTitle, publicationSummary } from "./publications.ts";
+import { publicationTopics, researchTopics } from "../data/research-topics.ts";
 
 export type Publication = CollectionEntry<"publications">;
 export type PublicationMetadata = (typeof metadataIndex)[number];
@@ -108,6 +109,7 @@ export const publicationSearchText = (publication: Publication, metadata = getPu
     publication.data.type, publication.data.year, publication.data.venue,
     publication.data.citation, publication.data.authors, publication.data.themes,
     publication.data.editorial,
+    researchTopics.filter((topic) => publicationTopics(publication).includes(topic.slug)).map((topic) => topic.label),
     // Imported MDX prose can predate the corrected canonical record. Index the
     // content used by the research page, retaining prose for content-only entries.
     metadata ? undefined : publication.body,

@@ -3,6 +3,20 @@ import { getPublicationMetadata, type Publication, type PublicationMetadata } fr
 type Link = { label: string; url: string };
 type Metadata = Partial<PublicationMetadata>;
 const siteUrl = "https://andrewreeves.org";
+// Browsing PDFs stays on the current deployment; citation metadata stays canonical.
+const resourceUrl = (input: string) => {
+  try {
+    const url = new URL(input, siteUrl);
+    if (["andrewreeves.org", "www.andrewreeves.org"].includes(url.hostname) && url.pathname.startsWith("/papers/")) {
+      return `${url.pathname}${url.search}${url.hash}`;
+    }
+    if (url.hostname === "hdl.handle.net" && url.protocol === "http:") {
+      url.protocol = "https:";
+      return url.href;
+    }
+  } catch { /* Leave non-URL input for content validation. */ }
+  return input;
+};
 const value = (input: unknown) => {
   const text = String(input ?? "").trim();
   return /^(?:0+)?$/.test(text) ? "" : text;
@@ -12,7 +26,7 @@ const value = (input: unknown) => {
 export function publicationLinks(publication: Publication, metadata: Metadata | undefined = getPublicationMetadata(publication)): Link[] {
   const links = new Map<string, Link>();
   const add = (label: string, url?: string | null) => {
-    const cleanUrl = value(url);
+    const cleanUrl = resourceUrl(value(url));
     const normalizedLabel = label === "Data" ? "Replication Data" : label;
     if (cleanUrl && !links.has(normalizedLabel)) links.set(normalizedLabel, { label: normalizedLabel, url: cleanUrl });
   };
@@ -54,7 +68,7 @@ export function publicationCitation(publication: Publication, metadata: Metadata
   const pdf = links.find((link) => link.label === "PDF")?.url;
   const doi = links.find((link) => link.label === "DOI")?.url.replace(/^https?:\/\/(?:dx\.)?doi\.org\//, "");
   const year = /^\d{4}$/.test(String(data.year)) ? String(data.year) : "";
-  const venue = value(metadata?.journal) || data.venue;
+  const venue = data.type === "Working Paper" ? data.venue : value(metadata?.journal) || data.venue;
   const pages = value(data.bibliography?.pages ?? metadata?.pages);
   const pageRange = pages.split(/\s*[-–—]+\s*/);
   const publisher = data.bibliography?.publisher || (data.type === "Book" ? venue : "");

@@ -63,3 +63,22 @@ test("BibTeX escapes special characters and protects capitalization while HTML m
   assert.deepEqual(tagsFor(citation, "citation_title"), [title]);
   assert(citation.bibtex.includes("title = {{U.S. Politics \\& 50\\% \\{Support\\}\\_A \\#1}}"));
 });
+
+test("owned PDFs stay on the current deployment while citations stay canonical and external PDFs are preserved", () => {
+  for (const url of ["http://andrewreeves.org/papers/current.pdf", "https://www.andrewreeves.org/papers/current.pdf"]) {
+    const paper = entry({ links: [{ label: "PDF", url: `${url}?download=1#page=2` }] });
+    assert.equal(publicationArchiveLinks(paper, {})[0].url, "/papers/current.pdf?download=1#page=2");
+    assert.deepEqual(tagsFor(publicationCitation(paper, {}), "citation_pdf_url"), ["https://andrewreeves.org/papers/current.pdf?download=1#page=2"]);
+  }
+  const external = "https://publisher.example/papers/current.pdf";
+  assert.equal(publicationArchiveLinks(entry({ links: [{ label: "PDF", url: external }] }), {})[0].url, external);
+  assert.equal(publicationLinks(entry({ links: [{ label: "Data", url: "http://hdl.handle.net/1902.1/21320" }] }), {})[0].url, "https://hdl.handle.net/1902.1/21320");
+});
+
+test("maintained DOI overrides extraction consistently in citation tags and BibTeX", () => {
+  const paper = entry({ links: [{ label: "DOI", url: "https://doi.org/10.1000/verified" }] });
+  const citation = publicationCitation(paper, { doi: "10.1000/stale" });
+  assert.deepEqual(tagsFor(citation, "citation_doi"), ["10.1000/verified"]);
+  assert.match(citation.bibtex, /doi = \{10.1000\/verified\}/);
+  assert.doesNotMatch(citation.bibtex, /stale/);
+});

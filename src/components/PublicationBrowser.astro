@@ -1,7 +1,7 @@
 ---
 import { getPublicationMetadata, publicationSearchText, type Publication } from "../utils/publication-records";
 import { researchTopicPath, researchTopics, publicationMatchesTopic } from "../data/research-topics";
-import { slugify, normalizeTitle, yearRank, publicationSummary } from "../utils/publications";
+import { slugify, yearRank, publicationSummary } from "../utils/publications";
 import { publicationArchiveLinks, compactPublicationAuthors } from "../utils/publication-citations";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   intro?: string;
 }
 
-const { publications, heading = "Archive" } = Astro.props;
+const { publications, heading = "Publications" } = Astro.props;
 
 const pluralizeType = (type: string) => {
   if (type === "Book") return "Books";
@@ -46,8 +46,7 @@ const typeOptions = [
 const majorThemeDefinitions = researchTopics.map((topic) => ({
   value: topic.slug,
   label: topic.label,
-  description: topic.description,
-  terms: topic.terms
+  description: topic.description
 }));
 
 const archiveItems = publications.map((publication) => {
@@ -57,13 +56,7 @@ const archiveItems = publications.map((publication) => {
     .map((topic) => topic.slug);
   const abstract = metadata?.abstract ?? "";
   const displaySummary = publicationSummary(publication.data, metadata);
-  const venue = metadata?.journal ?? publication.data.venue;
-  const normalizedVenue = normalizeTitle(venue);
-  const landmark =
-    publication.data.type === "Book" ||
-    normalizedVenue.includes("american political science review") ||
-    normalizedVenue.includes("american journal of political science") ||
-    normalizedVenue.includes("journal of politics");
+  const venue = publication.data.type === "Working Paper" ? publication.data.venue : metadata?.journal ?? publication.data.venue;
 
   return {
     publication,
@@ -72,12 +65,11 @@ const archiveItems = publications.map((publication) => {
     displaySummary,
     majorThemes,
     venue,
-    landmark,
     resourceLinks: publicationArchiveLinks(publication, metadata),
     searchText: publicationSearchText(publication, metadata),
     yearSort: yearRank(publication.data.year)
   };
-});
+}).sort((a, b) => b.yearSort - a.yearSort || a.publication.data.title.localeCompare(b.publication.data.title));
 
 const themeOptions = majorThemeDefinitions
   .map((theme) => ({
@@ -98,7 +90,7 @@ const themeOptions = majorThemeDefinitions
         <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal or topic…" />
         <button type="button" data-archive-reset>Reset</button>
       </div>
-      <p class="archive-result-count" aria-live="polite" data-publication-count></p>
+      <p class="archive-result-count" aria-live="polite" data-publication-count>{publications.length} publications</p>
     </div>
   </div>
 
@@ -124,8 +116,8 @@ const themeOptions = majorThemeDefinitions
     </div>
 
     <div class="archive-control-group archive-theme-panel">
-      <p>Research topics</p>
-      <div class="archive-theme-filters" role="group" aria-label="Filter publications by research theme">
+      <p>Topics</p>
+      <div class="archive-theme-filters" role="group" aria-label="Filter publications by topic">
         <button type="button" class="archive-theme-button" data-filter-theme="all" aria-pressed="true">
           <span>All</span>
           <strong>{publications.length}</strong>
@@ -148,16 +140,21 @@ const themeOptions = majorThemeDefinitions
     </div>
     </div>
     <nav class="archive-topic-links" aria-label="About the research topics">
-      <span>About these topics:</span>
+      <span>Explore topics:</span>
       {researchTopics.map((topic) => <a href={researchTopicPath(topic.slug)}>{topic.label}</a>)}
     </nav>
   </details>
 
   <div class="archive-list-panel">
     <div class="archive-record-list" data-publication-list>
-      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, landmark, resourceLinks, searchText, yearSort }) => (
+      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, resourceLinks, searchText, yearSort }, index) => (
+        <>
+        {(index === 0 || archiveItems[index - 1].yearSort !== yearSort) && (
+          <h3 class="archive-year-heading" data-year-heading={yearSort}>{publication.data.year}</h3>
+        )}
         <article
-          class={`archive-record ${landmark ? "archive-record-landmark" : ""}`}
+          class="archive-record"
+          aria-labelledby={`publication-${publication.id}`}
           data-publication-record
           data-type={publication.data.type}
           data-type-key={slugify(publication.data.type)}
@@ -165,49 +162,43 @@ const themeOptions = majorThemeDefinitions
           data-year={yearSort}
           data-year-label={publication.data.year}
           data-search={searchText}
-          data-landmark={landmark ? "true" : "false"}
         >
-          <div class="archive-record-year">
-            <small>{publication.data.type}</small>
-          </div>
           <div class="archive-record-main">
-            {landmark && (
-              <p class="archive-record-flags">
-                <span>{publication.data.type === "Book" ? "Book" : venue}</span>
-              </p>
-            )}
-            <h3><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h3>
-            <p class="archive-record-venue">{venue} · {publication.data.year}</p>
-            <p class="archive-record-authors">{compactPublicationAuthors(publication.data.authors)}</p>
+            <h4 class="archive-record-title" id={`publication-${publication.id}`}><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h4>
+            <div class="archive-record-metadata">
+              <p class="archive-record-venue"><span class="archive-record-type">{publication.data.type}</span> · {venue}<span class="archive-record-date"> · {publication.data.year}</span></p>
+              {publication.data.authors.length > 3 ? (
+                <details class="archive-record-authors archive-authors-disclosure">
+                  <summary>{compactPublicationAuthors(publication.data.authors)} <span class="archive-authors-label">All {publication.data.authors.length} authors<span class="sr-only"> for {publication.data.title}</span></span></summary>
+                  <p>{publication.data.authors.join(", ")}</p>
+                </details>
+              ) : <p class="archive-record-authors">{publication.data.authors.join(", ")}</p>}
+            </div>
             <p class="archive-record-summary">{displaySummary}</p>
-            {majorThemes.length > 0 && (
-              <div class="archive-record-themes" aria-label="Related themes">
-                <span>Related themes</span>
-                {majorThemes.map((themeValue) => {
-                  const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
-                  return theme && (
-                    <>
-                      <a href={researchTopicPath(theme.value)}>{theme.label}</a>
-                    </>
-                  );
-                })}
-              </div>
-            )}
             <div class="archive-record-actions">
             {abstract && (
               <details class="archive-record-details">
-                <summary>View abstract</summary>
+                <summary>View abstract<span class="sr-only"> for {publication.data.title}</span></summary>
                 <div>
                   <p>{abstract}</p>
                 </div>
               </details>
             )}
               <nav class="archive-resource-links" aria-label={`Resources for ${publication.data.title}`}>
-                {resourceLinks.map((link) => <a href={link.url}>[{link.label}]</a>)}
+                {resourceLinks.map((link) => <a href={link.url} aria-label={`${link.label}: ${publication.data.title}`}>[{link.label}]</a>)}
               </nav>
+              {majorThemes.length > 0 && (
+                <div class="archive-record-themes" aria-label="Topics">
+                  {majorThemes.map((themeValue) => {
+                    const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
+                    return theme && <a href={researchTopicPath(theme.value)}>{theme.label}</a>;
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </article>
+        </>
       ))}
     </div>
 
@@ -279,8 +270,8 @@ const themeOptions = majorThemeDefinitions
       const sorted = [...visibleRecords].sort((a, b) => {
         const yearA = Number(a.dataset.year ?? 0);
         const yearB = Number(b.dataset.year ?? 0);
-        const titleA = normalize(a.querySelector("h3")?.textContent ?? "");
-        const titleB = normalize(b.querySelector("h3")?.textContent ?? "");
+        const titleA = normalize(a.querySelector(".archive-record-title")?.textContent ?? "");
+        const titleB = normalize(b.querySelector(".archive-record-title")?.textContent ?? "");
 
         if (state.sort === "oldest") return yearA - yearB || titleA.localeCompare(titleB);
         return yearB - yearA || titleA.localeCompare(titleB);
@@ -292,7 +283,7 @@ const themeOptions = majorThemeDefinitions
         const year = record.dataset.year ?? "";
         if (year && year !== currentYear) {
           currentYear = year;
-          const heading = document.createElement("div");
+          const heading = document.createElement("h3");
           heading.className = "archive-year-heading";
           heading.dataset.yearHeading = year;
           heading.textContent = record.dataset.yearLabel ?? year;
@@ -327,6 +318,28 @@ const themeOptions = majorThemeDefinitions
         if (visible) visibleRecords.push(record);
       });
 
+      // Facet counts apply the search and the other filter, not their own selection.
+      typeButtons.forEach((button) => {
+        const type = button.getAttribute("data-filter-type");
+        const total = records.filter((record) =>
+          matchesSearch(record, terms) &&
+          (state.theme === "all" || (record.dataset.themes ?? "").split(/\s+/).includes(state.theme)) &&
+          (type === "all" || record.dataset.typeKey === type)
+        ).length;
+        const value = button.querySelector("strong");
+        if (value) value.textContent = String(total);
+      });
+      themeButtons.forEach((button) => {
+        const theme = button.getAttribute("data-filter-theme");
+        const total = records.filter((record) =>
+          matchesSearch(record, terms) &&
+          (state.type === "all" || record.dataset.typeKey === state.type) &&
+          (theme === "all" || (record.dataset.themes ?? "").split(/\s+/).includes(theme ?? ""))
+        ).length;
+        const value = button.querySelector("strong");
+        if (value) value.textContent = String(total);
+      });
+
       sortRecords(visibleRecords);
 
       if (count) {
@@ -340,7 +353,7 @@ const themeOptions = majorThemeDefinitions
 
       if (summary) {
         const typeLabel = typeButtons.find((button) => button.getAttribute("data-filter-type") === state.type)?.querySelector("span")?.textContent ?? "All";
-        const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All themes";
+        const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All topics";
         summary.textContent = [
           state.type !== "all" ? typeLabel : "",
           state.theme !== "all" ? themeLabel : "",

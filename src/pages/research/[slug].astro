@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { researchTopicPath } from "@data/research-topics";
+import { researchTopicPath, researchTopics, publicationTopics } from "@data/research-topics";
 import { getPublicationMetadata, validatePublicationMappings, type Publication } from "../../utils/publication-records";
 import publicationFigures from "../../data/publication-figures.json";
 import { normalizeTitle, yearRank, publicationSummary } from "../../utils/publications";
@@ -54,31 +54,17 @@ const formatAuthors = (authors: string[]) => {
   return `${authors.slice(0, -1).join(", ")}, and ${authors.at(-1)}`;
 };
 
-const venue = cleanText(metadata?.journal) || publication.data.venue;
+const venue = publication.data.type === "Working Paper" ? publication.data.venue : cleanText(metadata?.journal) || publication.data.venue;
 const contribution = publicationSummary(publication.data, metadata);
 const abstract = cleanText(metadata?.abstract);
-const fullCitation = cleanText(metadata?.citation ?? publication.data.citation);
+const fullCitation = cleanText(publication.data.type === "Working Paper" ? publication.data.citation : metadata?.citation ?? publication.data.citation);
 const authors = publication.data.authors.length ? publication.data.authors : metadata?.authors ?? [];
 
 const primaryLinks = publicationLinks(publication, metadata);
 const { tags: citationTags, bibtex } = publicationCitation(publication, metadata);
+const doiValue = citationTags.find((tag) => tag.name === "citation_doi")?.content ?? "";
 
-const themeTerms = new Map([
-  ["presidential power", "presidential-power"],
-  ["executive power", "presidential-power"],
-  ["unilateral action", "presidential-power"],
-  ["presidential accountability", "democratic-accountability"],
-  ["democratic accountability", "democratic-accountability"],
-  ["public opinion", "democratic-accountability"],
-  ["political geography", "political-geography"],
-  ["geographic context", "political-geography"],
-  ["urban-rural politics", "political-geography"],
-  ["electoral geography", "political-geography"],
-  ["federal resource allocation", "federal-resource-allocation"],
-  ["distributive politics", "federal-resource-allocation"],
-  ["disaster politics", "federal-resource-allocation"],
-  ["federal spending", "federal-resource-allocation"]
-]);
+const themeTerms = new Map(researchTopics.map((topic) => [normalizeTitle(topic.label), topic.slug]));
 
 const themeHref = (theme: string) => {
   const themeKey = normalizeTitle(theme);
@@ -88,7 +74,7 @@ const themeHref = (theme: string) => {
 
 const editorial = publication.data.editorial;
 const isReview = publication.data.type === "Review";
-const publicationThemeLinks = Array.from(new Set(publication.data.themes)).slice(0, 5);
+const publicationThemeLinks = researchTopics.filter((topic) => publicationTopics(publication).includes(topic.slug)).map((topic) => topic.label);
 const methodLikeTags = new Set([
   "observational study",
   "survey analysis",
@@ -100,13 +86,14 @@ const methodLikeTags = new Set([
 ]);
 const normalizeTag = (value: string) => normalizeTitle(value).replace(/\s+/g, " ");
 const keywordThemes = Array.from(new Set([
+  ...publication.data.themes,
   ...(editorial?.keywords ?? []),
   ...asList(metadata?.tags)
 ]))
   .filter((theme) => {
     const key = normalizeTag(theme);
     return (
-      !publicationThemeLinks.some((existing) => normalizeTag(existing) === key) &&
+      !themeTerms.has(key) &&
       !methodLikeTags.has(key)
     );
   })
@@ -132,7 +119,7 @@ const citationRows = [
   { label: "Volume", value: meaningfulValue(metadata?.volume) },
   { label: "Issue", value: meaningfulValue(metadata?.issue) },
   { label: "Pages", value: meaningfulValue(metadata?.pages) },
-  { label: "DOI", value: meaningfulValue(metadata?.doi) }
+  { label: "DOI", value: doiValue }
 ].filter((row) => row.value);
 
 const summaryForPublication = (entry: Publication) => {
@@ -172,7 +159,6 @@ const publicationImageAlt = heroFigure?.alt ?? `Research by Andrew Reeves: ${pub
 const publicationFigureCaption = publicationFigure?.kind === "poster"
   ? "Fictional AI-generated illustration inspired by this research. Imagery and numbers are illustrative, not research findings."
   : editorial?.figureCaption ?? publicationFigure?.caption;
-const doiValue = meaningfulValue(metadata?.doi).replace(/^https?:\/\/doi\.org\//, "");
 const doiUrl = doiValue ? `https://doi.org/${doiValue}` : undefined;
 const schemaTypeByPublicationType: Record<string, string> = {
   Article: "ScholarlyArticle",
@@ -308,10 +294,10 @@ const publicationStructuredData = {
     )}
 
     {(publicationThemeLinks.length > 0 || keywordThemes.length > 0) && (
-      <nav class="publication-theme-ribbon" aria-label="Related research themes and keywords">
+      <nav class="publication-theme-ribbon" aria-label="Research topics and keywords">
         {publicationThemeLinks.length > 0 && (
           <div class="publication-theme-group">
-            <p>Research themes</p>
+            <p>Topics</p>
             <div>
               {publicationThemeLinks.map((theme) => (
                 <a href={themeHref(theme)}>{theme}</a>

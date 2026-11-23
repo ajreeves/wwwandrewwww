@@ -21,8 +21,7 @@ const bookDetails = {
   "no-blank-check": {
     argument: [
       "Presidents can change policy without Congress. Andrew Reeves and Jon C. Rogowski ask whether public opinion limits that power, alongside Congress, the courts and the practical limits of administration.",
-      "Citizens judge how presidents pursue a policy as well as the policy itself. They may oppose a president bypassing Congress even when they support the proposed outcome.",
-      "Using surveys, experiments, historical polling and comparative evidence, the authors show that public opposition to unilateral action can carry political costs for presidents. These judgments about process, legality and restraint help explain the limits of presidential power."
+      "Using surveys, experiments, historical polling and comparative evidence, the authors show that citizens judge how presidents pursue a policy as well as the policy itself. They may oppose a president bypassing Congress even when they support the outcome. That opposition can carry political costs for presidents."
     ],
     themes: [
       { label: "Presidential power", href: themeLinks.presidentialPower },
@@ -91,8 +90,7 @@ const bookDetails = {
   "particularistic-president": {
     argument: [
       "Presidents are elected nationally, but does that mean they represent all places equally? Douglas L. Kriner and Andrew Reeves examine how presidents decide where federal resources go.",
-      "The authors study disaster declarations, military base closings, transportation grants, federal spending and election results. Presidents often direct benefits toward swing states, supporters of their party and other places that matter to their electoral success.",
-      "The Electoral College, party coalitions and presidential control over government programs can encourage this unequal distribution. Moving decisions from Congress to the presidency does not necessarily make representation more equal."
+      "Across disaster declarations, military base closings, transportation grants and federal spending, the authors find that presidents often favor swing states and supporters of their party. The Electoral College and party coalitions help explain why moving decisions from Congress to the presidency does not necessarily make representation more equal."
     ],
     themes: [
       { label: "Federal spending", href: themeLinks.federalResourceAllocation },
@@ -306,7 +304,7 @@ const booksStructuredData = {
                       <p class="kicker">Endorsements</p>
                       {details.endorsements.length > 0 ? (
                         <div class="editorial-quote-list book-quote-list">
-                          {details.endorsements.map((item) => (
+                          {details.endorsements.slice(0, 1).map((item) => (
                             <figure>
                               <blockquote>“{item.excerpt}”</blockquote>
                               <figcaption>
@@ -314,6 +312,19 @@ const booksStructuredData = {
                               </figcaption>
                             </figure>
                           ))}
+                          {details.endorsements.length > 1 && (
+                            <details class="book-more">
+                              <summary>More endorsements<span class="sr-only"> for {book.data.title}</span></summary>
+                              <div class="editorial-quote-list book-quote-list">
+                                {details.endorsements.slice(1).map((item) => (
+                                  <figure>
+                                    <blockquote>“{item.excerpt}”</blockquote>
+                                    <figcaption><a href={item.url}>{item.scholar}</a>, {item.affiliation}</figcaption>
+                                  </figure>
+                                ))}
+                              </div>
+                            </details>
+                          )}
                         </div>
                       ) : null}
                     </div>
@@ -333,8 +344,8 @@ const booksStructuredData = {
                     </div>
                   </section>
 
-                  <section class="editorial-info-card editorial-definition-card book-publication-info" aria-label={`${book.data.title} publication information`}>
-                    <p class="kicker">Publication information</p>
+                  <details class="editorial-info-card editorial-definition-card book-publication-info book-more">
+                    <summary>Publication information<span class="sr-only"> for {book.data.title}</span></summary>
                     <dl>
                       {details.publicationInfo.map((item) => (
                         <>
@@ -343,7 +354,7 @@ const booksStructuredData = {
                         </>
                       ))}
                     </dl>
-                  </section>
+                  </details>
                 </div>
               )}
             </article>

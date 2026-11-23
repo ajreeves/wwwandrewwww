@@ -38,13 +38,13 @@ test("build validation catches missing mappings, duplicate mappings, and author 
 });
 
 test("search uses canonical content instead of superseded imported descriptions", () => {
-  const entry = publication("paper", "A paper");
+  const entry = publication("polling", "A paper");
   entry.data.venue = "American Political Science Review";
   entry.data.summary = "A superseded imported summary.";
   entry.body = "An obsolete description from an earlier import.";
   entry.data.editorial = {context:["A curated explanation from the publication page."]};
   const text = publicationSearchText(entry, {abstract:"An abstract-only phrase: administrative discretion.", card_summary:"The verified research finding."});
-  for (const term of ["rogowski", "american political science review", "administrative discretion", "curated explanation", "verified research finding"]) assert(text.includes(term));
+  for (const term of ["rogowski", "american political science review", "administrative discretion", "curated explanation", "verified research finding", "election administration"]) assert(text.includes(term));
   for (const term of ["superseded imported summary", "obsolete description"]) assert(!text.includes(term));
 });
 
