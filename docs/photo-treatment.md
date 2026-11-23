@@ -33,4 +33,4 @@ Netlify previews use [DEPLOY_PRIME_URL](https://docs.netlify.com/build/configure
 
 ## Contact portrait download
 
-The Contact page links directly to the existing Lightroom export, `public/images/editorial/andrew-reeves-portrait.jpg` (1200 × 1440 pixels), with the download filename `Andrew-Reeves-portrait.jpg`. The image is not modified or enlarged. No photographer is identified in the source files; the owner explicitly requested that the credit be left off for now on November 23, 2026.
+The Contact page's download uses the full-resolution JPEG supplied by the owner on November 23, 2026: `Weidenbaum Reeves_A-1090751.jpg`. It is stored byte-for-byte at `public/downloads/andrew-reeves-portrait-full-resolution.jpg` (5314 × 3134 pixels; 5,281,417 bytes), with the download filename `Andrew-Reeves-portrait-full-resolution.jpg`. It is not cropped, recompressed, enlarged or passed through the image optimizer. The on-page preview retains the existing 1200 × 1440 Lightroom crop and its responsive derivatives. No photographer is identified in the source files; the owner explicitly requested that the credit be left off for now on November 23, 2026.
