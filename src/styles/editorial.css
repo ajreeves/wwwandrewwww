@@ -491,7 +491,8 @@
 /* Collapse before the personal name, WashU signature and links stop fitting. */
 @media (max-width: 1100px) {
   .editorial-site .site-nav { grid-template-columns: minmax(0, 1fr) auto; padding-block: 20px; }
-  .editorial-site .nav-toggle { display: flex; }
+  /* Expand the tap area while preserving the icon position and header height. */
+  .editorial-site .nav-toggle { display: flex; width: 2.75rem; height: 2.75rem; margin: -.125rem; }
   .editorial-site .nav-list { display: none; grid-column: 1 / -1; flex-direction: column; align-items: stretch; width: 100%; gap: 0; padding: 10px 0 0; border-top: 1px solid var(--rule); }
   .editorial-site .nav-list.nav-list-open { display: flex; }
   .editorial-site .nav-list .nav-mobile-only { display: block; }
@@ -510,7 +511,7 @@
 }
 
 @media (max-width: 760px) {
-  /* Collapsed header: 2.5rem menu control + 36px padding + 7px borders. */
+  /* Collapsed header: 2.5rem occupied menu space + 36px padding + 7px borders. */
   html.editorial-document { scroll-padding-top: calc(2.5rem + 43px); }
   .editorial-site main [id] { scroll-margin-top: .75rem; }
   .editorial-site .container-wide { padding-inline: 20px; }
@@ -587,6 +588,11 @@
   .editorial-site .about-lead-photo { grid-row: 1; }
   .editorial-site .about-lead-prose p { font-size: 18px; }
   .editorial-site .about-biography { margin-top: 28px; padding-top: 20px; }
+  .editorial-site .archive-filters { padding-block: 4px; }
+  .editorial-site .archive-filters > summary { min-height: 44px; padding-block: 8px; }
+  .editorial-site .archive-control-panel :is(.archive-filter-button, .archive-theme-button) { min-height: 44px; align-items: center; }
+  .editorial-site .archive-record-actions :is(summary, .archive-resource-links a, .archive-record-themes a) { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; padding-block: 6px; }
+  .editorial-site .publication-profile-abstract > summary { min-height: 44px; padding-block: 12px; }
   .editorial-site .archive-record { padding-block: 20px; }
   .editorial-site .archive-record-year { display: flex; align-items: baseline; gap: 12px; }
   .editorial-site .archive-record-year span { font-size: 20px; }

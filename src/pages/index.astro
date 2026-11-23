@@ -21,7 +21,7 @@ const articleNotes: Record<string, { title?: string; finding: string }> = {
 const recentArticles = (await getCollection("publications"))
   .filter((entry) => entry.data.type === "Article" && /^\d{4}$/.test(String(entry.data.year)))
   .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title))
-  .slice(0, 4)
+  .slice(0, 3)
   .map((entry) => ({ ...publicationSearchEntry(entry), venue: entry.data.venue, note: articleNotes[entry.id] }));
 const bookNotes: Record<string, string> = {
   "no-blank-check": "Americans care about how presidents use power, even when they agree with the policy. Public resistance to action without Congress can carry political costs.",
@@ -228,12 +228,5 @@ const personStructuredData = {
       </nav>
     </section>
 
-    <section class="container-wide home-teaching-note" aria-labelledby="public-life-heading">
-      <h2 id="public-life-heading">Teaching and advising</h2>
-      <div class="home-links">
-        <a href="/teaching/">Courses and syllabi</a>
-        <a href="/students/">Students and advising</a>
-      </div>
-    </section>
   </div>
 </BaseLayout>
