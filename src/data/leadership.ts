@@ -28,12 +28,11 @@ const roles: LeadershipRole[] = [
     role: "Director",
     url: "https://frick.washu.edu/",
     paragraphs: [
-      { text: "A WashU civic initiative supporting research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility." },
+      { text: "A WashU civic initiative supporting translational research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility." },
       {
         text: "Expanded through a $22 million commitment from Robert and Barbara Frick, it funds promising ideas and helps develop programs that can take root in other schools, businesses and communities.",
         emphasis: "$22 million commitment"
-      },
-      { text: "It is administered by the Weidenbaum Center.", supporting: true }
+      }
     ]
   },
   {
