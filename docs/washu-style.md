@@ -4,11 +4,15 @@ The site follows WashU's visual and editorial guidance while keeping Andrew Reev
 
 ## Typography and color
 
-- Use Georgia for headings and reading text, with Calibri for navigation, labels and other supporting text. These are WashU's approved system alternatives to IvyPresto and IvyStyle Sans. Platform fallbacks are Times New Roman for serif text and Segoe UI/Arial for sans serif text.
+- Use Georgia for headings and the attributed quotation, with Calibri for body copy, the personal masthead, navigation and labels. This follows the serif-heading/sans-serif-body hierarchy of current WashU sites. These are WashU's approved system alternatives to IvyPresto and IvyStyle Sans. Platform fallbacks are Times New Roman for serif text and Segoe UI/Arial for sans serif text.
 - Keep the Adobe Freight kit on the CV only. A future Ivy switch requires a licensed Adobe Fonts web project containing the appropriate Ivy families; do not borrow another site's kit.
-- Use white, neutral dark text, WashU red (`#BA0C2F`), warm gray rules (`#D7D2CB`) and restrained dark green (`#13322B`). Keep red as the principal accent.
+- Use white, neutral dark text, WashU red (`#BA0C2F`) and warm gray (`#D7D2CB`). Lead with red in the masthead rule, active navigation, primary actions and mobile photo navigation. Reserve dark red (`#971B2F`) for hover states and dark green (`#13322B`) for secondary accents. Keep reading text and major headings dark, and use warm gray for the footer.
 - Prefer sentence case and left alignment. Preserve the capitalization of proper names, publication titles and formal course/event titles.
-- The masthead's university affiliation is plain text, not a university logo or a recreated wordmark.
+- Use one compact, full-color WashU logo as a secondary signature beside the personal name (below it on mobile). The complete shield and wordmark must remain together and unaltered. Display it at 32 pixels high on desktop and 30 pixels on mobile, with separation from the name and navigation. The CV is excluded.
+
+### Logo provenance
+
+`public/brand/washu-logo.svg` is the unmodified inline SVG artwork from the header of [University Marketing & Communications](https://marcomm.washu.edu/), captured November 23, 2026. Its paths, colors and proportions are preserved; it is served as an image with an accessible university-name alternative and a link to WashU. Do not redraw, recolor, crop or separate the wordmark and shield.
 
 ## Editorial conventions
 

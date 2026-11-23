@@ -5,7 +5,7 @@
 }
 
 .home-page :is(h1, h2, h3) { color: var(--ink); font-family: var(--font-serif); font-weight: 400; }
-.home-page h2 { margin: 0; color: var(--rust); font-family: var(--font-serif); font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 400; line-height: 1.12; letter-spacing: -0.02em; }
+.home-page h2 { margin: 0; color: var(--ink); font-family: var(--font-serif); font-size: clamp(2rem, 3.2vw, 2.8rem); font-weight: 400; line-height: 1.12; letter-spacing: -0.02em; }
 .home-page h3 { margin: 0; font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; }
 .home-page :is(h2, h3) a { color: inherit; text-decoration: none; }
 .home-page :is(h2, h3) a:hover { color: var(--rust); text-decoration: underline; text-underline-offset: 0.12em; }
@@ -24,7 +24,7 @@
 .home-page .home-portrait { grid-column: 2; grid-row: 1; margin: 0; }
 .home-page .home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 
-.home-page .home-photo-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #13322b; }
+.home-page .home-photo-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 4px solid var(--rust); background: var(--rust); }
 .home-page .home-photo-link { position: relative; display: grid; align-content: end; min-width: 0; min-height: clamp(240px, 22.22vw, 400px); padding: 28px; color: white; text-decoration: none; isolation: isolate; overflow: hidden; }
 .home-page .home-photo-link + .home-photo-link { border-left: 1px solid #ffffff40; }
 .home-page .home-photo-link img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -62,14 +62,14 @@
 .home-page :is(.home-recent, .home-leadership) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 32px; padding-block: 32px 40px; border-top: 1px solid var(--rule); }
 .home-page :is(.home-recent, .home-leadership) h2 { font-size: 30px; }
 .home-page .home-leadership-intro blockquote { margin: 24px 0 0; }
-.home-page .home-leadership-intro blockquote p { color: var(--muted); font-size: 19px; line-height: 1.5; }
+.home-page .home-leadership-intro blockquote p { color: var(--muted); font-family: var(--font-serif); font-size: 19px; line-height: 1.5; }
 .home-page .home-leadership-intro blockquote footer { margin-top: 12px; color: var(--muted); font-family: var(--font-sans); font-size: 14px; line-height: 1.5; }
 .home-page .home-leadership-intro cite { font-style: normal; }
 .home-page .home-recent ul { display: grid; gap: 20px; list-style: none; margin: 0; padding: 0; }
 .home-page .home-recent h3 { font-size: 23px; line-height: 1.3; }
 .home-page .home-recent p { margin-top: 5px; color: var(--muted); font-family: var(--font-sans); font-size: 15px; }
 .home-page .home-leadership dl { display: grid; gap: 24px; margin: 0; }
-.home-page .home-leadership dt { font-size: 23px; line-height: 1.3; }
+.home-page .home-leadership dt { font-family: var(--font-serif); font-size: 23px; line-height: 1.3; }
 .home-page .home-leadership dt a { color: var(--ink); text-decoration-color: var(--rule); text-underline-offset: 4px; }
 .home-page .home-leadership dt span { display: block; margin-top: 5px; color: var(--muted); font-family: var(--font-sans); font-size: 15px; }
 .home-page .home-leadership dd { max-width: 60ch; margin: 10px 0 0; font-size: 18px; line-height: 1.55; }

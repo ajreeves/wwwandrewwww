@@ -74,10 +74,20 @@ const navItems = [
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header">
         <nav class="site-nav" aria-label="Main navigation">
-          <a class="nav-home" href="/" aria-label="Andrew Reeves home">
-            <span class="site-title">Andrew Reeves</span>
-            {active !== "CV" && <span class="site-affiliation">Washington University in <span>St. Louis</span></span>}
-          </a>
+          {active === "CV" ? (
+            <a class="nav-home" href="/" aria-label="Andrew Reeves home">
+              <span class="site-title">Andrew Reeves</span>
+            </a>
+          ) : (
+            <div class="site-brand">
+              <a class="nav-home" href="/" aria-label="Andrew Reeves home">
+                <span class="site-title">Andrew Reeves</span>
+              </a>
+              <a class="university-signature" href="https://washu.edu/">
+                <img src="/brand/washu-logo.svg" alt="Washington University in St. Louis" width="132" height="32" />
+              </a>
+            </div>
+          )}
           <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav-list" aria-label="Open navigation menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>

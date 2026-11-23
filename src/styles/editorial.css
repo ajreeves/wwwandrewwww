@@ -14,6 +14,7 @@
   --tobacco: #555555;
   background: var(--paper);
   color: var(--ink);
+  font-family: var(--font-sans);
 }
 
 .editorial-site .container-wide {
@@ -27,27 +28,34 @@
 .editorial-site .site-header {
   background: var(--paper);
   box-shadow: none;
+  border-top: 6px solid var(--rust);
   border-bottom: 1px solid var(--rule);
 }
 
 .editorial-site .site-nav {
   max-width: 1280px;
+  grid-template-columns: auto minmax(0, 1fr);
   margin-inline: auto;
   padding: 22px 40px;
   gap: 18px 32px;
 }
 
 .editorial-site .site-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 600;
   font-variant-caps: normal;
   line-height: 1.15;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   text-transform: none;
 }
-.editorial-site .site-affiliation { margin-top: 7px; color: var(--muted); font-family: var(--font-sans); font-size: 14px; line-height: 1.35; }
-.editorial-site .site-affiliation > span { white-space: nowrap; }
+.editorial-site .site-brand { display: flex; align-items: center; gap: 24px; }
+.editorial-site .site-brand .nav-home { flex: none; white-space: nowrap; }
+.editorial-site .university-signature { flex: none; padding-left: 24px; border-left: 1px solid var(--rule); }
+.editorial-site .university-signature img { display: block; width: 132px; height: 32px; }
+.editorial-site .nav-home:hover { color: var(--rust); }
+.editorial-site .nav-link { border-bottom-width: 3px; }
+.editorial-site .nav-link[aria-current="page"] { border-bottom-color: var(--rust); color: var(--rust); }
 
 .editorial-site .nav-list {
   font-size: 15px;
@@ -67,6 +75,7 @@
   text-transform: none;
   color: var(--muted);
 }
+.editorial-site .kicker { color: var(--rust); }
 
 .editorial-site :is(.editorial-button, .ghost-button) {
   min-height: 44px;
@@ -79,6 +88,8 @@
 }
 
 .editorial-site .ghost-button { background: transparent; }
+.editorial-site .editorial-button { background: var(--rust); border: 1px solid var(--rust); color: white; }
+.editorial-site .editorial-button:hover { background: #971b2f; border-color: #971b2f; }
 .editorial-site :is(.editorial-button, .ghost-button, .home-thesis-links a)::after { content: none; }
 .editorial-site :is(a, button, input, select, summary):focus-visible {
   outline: 2px solid var(--rust);
@@ -105,7 +116,7 @@
 .editorial-site main .students-opening .page-intro { font-size: 20px; }
 .editorial-site :is(.page-title, .page-title-compact) {
   max-width: 23ch;
-  color: var(--rust);
+  color: var(--ink);
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(2.75rem, 4.4vw, 4rem);
@@ -141,7 +152,7 @@
 .editorial-site :is(.page-section-heading h2, .home-spread-heading h2, .home-question-heading h2) {
   max-width: 30ch;
   margin: 0;
-  color: var(--rust);
+  color: var(--ink);
   font-family: var(--font-serif);
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   font-weight: 400;
@@ -271,7 +282,7 @@
 .editorial-site .about-gallery-controls { padding: 8px 0; border: 0; border-top: 1px solid var(--rule); background: transparent; }
 .editorial-site .about-biography { max-width: 46rem; margin: 40px auto 0; padding-top: 28px; border-top: 1px solid var(--rule); }
 
-.editorial-site .about-biography h2 { margin: 0 0 20px; color: var(--rust); font-family: var(--font-serif); font-size: 30px; font-weight: 400; }
+.editorial-site .about-biography h2 { margin: 0 0 20px; color: var(--ink); font-family: var(--font-serif); font-size: 30px; font-weight: 400; }
 
 /* Search stays visible; detailed filters expand only when needed. */
 .editorial-site .archive-workbench { margin-block: 0 56px; gap: 0; }
@@ -360,8 +371,8 @@
 .editorial-site :is(.work-question-thesis h2, .work-question-header h2) { color: var(--ink); font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.15; }
 .editorial-site .work-question-block { padding: 28px 0; border-block: 1px solid var(--rule); }
 .editorial-site main .student-card { border-color: var(--rule); border-top-width: 1px; background: transparent; box-shadow: none; }
-.editorial-site .site-footer-wrap { margin-top: 48px; background: transparent; box-shadow: none; }
-.editorial-site .site-footer { max-width: 1280px; padding: 36px 40px; box-shadow: none; border-top: 1px solid var(--rule); }
+.editorial-site .site-footer-wrap { max-width: none; margin: 48px 0 0; padding: 0; background: var(--rule); box-shadow: none; }
+.editorial-site .site-footer { max-width: 1280px; margin-inline: auto; padding: 36px 40px; box-shadow: none; border: 0; }
 .editorial-site :is(.footer-nav a, .footer-links a) { font-size: 14px; letter-spacing: 0.035em; text-transform: none; }
 .editorial-site :is(.publication-profile-meta, .publication-profile-abstract > summary, .publication-theme-group p, .publication-profile-section-label h2, .publication-design-grid dt, .publication-citation-grid dt, .publication-related-item > p:first-child) { text-transform: none; letter-spacing: 0; }
 .editorial-site :is(.publication-profile-section-label h2, .editorial-subsection-heading h3) { font-family: var(--font-sans); }
@@ -386,7 +397,10 @@
 @media (max-width: 760px) {
   .editorial-site .container-wide { padding-inline: 20px; }
   .editorial-site .site-nav { padding: 18px 20px; gap: 0 12px; }
-  .editorial-site .site-title { font-size: 28px; letter-spacing: 0.045em; }
+  .editorial-site .site-title { font-size: 28px; letter-spacing: 0; }
+  .editorial-site .site-brand { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .editorial-site .university-signature { padding: 0; border: 0; }
+  .editorial-site .university-signature img { width: auto; height: 30px; }
   .editorial-site :is(.page-opening, .students-opening .page-opening) { padding-block: 28px 24px; }
   .editorial-site :is(.page-title, .page-title-compact) { font-size: clamp(2.25rem, 8vw, 3rem); }
   .editorial-site .page-opening-panel > .kicker { margin-bottom: 10px; }
@@ -447,8 +461,7 @@
 }
 
 @media (max-width: 360px) {
-  .editorial-site .site-title { font-size: 25px; letter-spacing: -0.025em; }
-  .editorial-site .site-affiliation { max-width: 23ch; font-size: 13px; }
+  .editorial-site .site-title { font-size: 25px; letter-spacing: 0; }
   .editorial-site .home-book-spread .home-book-objects .book-feature-card { grid-template-columns: 1fr; }
   .editorial-site .home-book-objects .book-feature-card .flw-feature-copy { grid-column: 1; grid-row: 2; }
 }
