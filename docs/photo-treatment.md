@@ -37,12 +37,12 @@ The Contact page's download uses the full-resolution JPEG supplied by the owner 
 
 ## Homepage photograph selection — November 24, 2026
 
-The homepage navigation now uses a closer set of existing documentary photographs:
+The homepage navigation uses three documentary photographs with consistent 3:2 frames and serif destination titles:
 
-- Research: `andrew-reeves-hoover-rai-conference.jpg`, showing Reeves at the Research on American Institutions conference at Hoover in May 2023. Replaces the distant Harvard auditorium view on Home only.
-- Teaching: the existing Lightroom export `editorial/classroom.jpg`.
-- Talks and events: `andrew-reeves-carolyn-bourdeaux.jpg`, a conversation with Carolyn Bourdeaux at the January 14, 2026 event. Credit: Sid Hastings/WashU. Replaces the Kugler photograph on Home only.
+- Research: `andrew-reeves-hoover-rai-conference.jpg`, showing Reeves at the Research on American Institutions conference at Hoover in May 2023. CSS crop: scale 1.5, origin 100%/0%; saturation 0.8, contrast 0.96, brightness 1.04.
+- Teaching: the existing Lightroom export `editorial/classroom.jpg`. CSS crop: scale 1.45, origin 30%/20%; saturation 0.9, contrast 0.98.
+- Talks and events: the Lightroom export `editorial/adriana-kugler-conversation.jpg`, keeping both participants visible. No additional zoom; saturation 0.9, contrast 0.98, brightness 1.03. Credit: Jerry Naunheim Jr./WashU.
 
-All three use 3:2 display frames, IvyPresto titles and short factual captions. Mobile image widths range from 112 to 160 pixels instead of 96 pixels. The Hoover image uses a 1.35 CSS scale anchored at the top right to emphasize Reeves and his gesture; the classroom uses a 1.3 scale anchored at 30%/30%; the Bourdeaux image keeps both participants without additional zoom. Caption context is exposed through `aria-describedby`, and the existing keyboard focus treatment remains.
+Visible labels identify destinations only: Research, Teaching, and Talks and events. Location and participant captions were removed because they confused the meaning of the navigation links. Descriptive alternative text retains the actual photo context. The conversation photograph credit sits below the set, outside the links. Mobile image widths range from 112 to 160 pixels. Keyboard focus remains visible.
 
-These changes use existing responsive assets and reversible CSS crops. No source photographs, colors, faces, backgrounds or student portraits were altered. The Harvard and Kugler photographs remain available elsewhere on the site. Captions and event identifications follow the existing verified About gallery records.
+The Bourdeaux photograph remains in the About gallery and Talks page; its darker background and spotlight were less consistent with this homepage set. The Harvard photograph also remains elsewhere on the site. These changes use existing responsive assets and reversible CSS cropping and color treatment. No source photographs, faces, backgrounds, student portraits or original image files were altered.
