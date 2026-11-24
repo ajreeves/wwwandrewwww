@@ -39,7 +39,7 @@ const roles: LeadershipRole[] = [
     name: "Office of the Chancellor",
     role: "Senior Advisor to the Chancellor",
     url: "https://andrewdmartin.washu.edu/people/",
-    paragraphs: [{ text: "Reeves serves as senior advisor and co-chairs the Ordered Liberty Project, a WashU initiative supporting free expression, open inquiry and discussion across political and intellectual differences." }]
+    paragraphs: [{ text: "Reeves co-chairs the Ordered Liberty Project, a WashU initiative supporting free expression, open inquiry and discussion across political and intellectual differences." }]
   }
 ];
 

@@ -50,21 +50,18 @@ const researchAreas = [
 const photoLinks = [
   {
     title: "Research",
-    text: "Power, representation and the role of place.",
     href: "/research/",
     image: "/images/editorial/harvard-panel.jpg",
     alt: "Andrew Reeves moderating the Election Analyst Panel at Harvard University"
   },
   {
     title: "Teaching",
-    text: "American politics in the classroom.",
     href: "/teaching/",
     image: "/images/editorial/classroom.jpg",
     alt: "Andrew Reeves teaching in a classroom"
   },
   {
     title: "Talks and events",
-    text: "Conversations about policy and public life.",
     href: "/talks/",
     image: "/images/editorial/adriana-kugler-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum"
@@ -139,8 +136,8 @@ const personStructuredData = {
       <div class="home-intro-copy">
         <h1 id="home-name" class="sr-only">Andrew Reeves</h1>
         <p class="home-intro-lede">Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis.</p>
-        <p class="home-intro-leadership">He also serves as director of the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and as senior advisor to the chancellor.</p>
         <p class="home-intro-research">He studies the relationship between political institutions and human behavior, with a particular interest in presidential power and democratic accountability.</p>
+        <p class="home-intro-leadership">He also serves as director of the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and as senior advisor to the chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/cv/">CV</a>
           <a href="#leadership">University leadership</a>
@@ -158,7 +155,6 @@ const personStructuredData = {
           </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
-            <span class="home-photo-description">{item.text}</span>
           </span>
         </a>
       ))}
