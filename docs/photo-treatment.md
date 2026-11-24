@@ -34,3 +34,15 @@ Netlify previews use [DEPLOY_PRIME_URL](https://docs.netlify.com/build/configure
 ## Contact portrait download
 
 The Contact page's download uses the full-resolution JPEG supplied by the owner on November 23, 2026: `Weidenbaum Reeves_A-1090751.jpg`. It is stored byte-for-byte at `public/downloads/andrew-reeves-portrait-full-resolution.jpg` (5314 × 3134 pixels; 5,281,417 bytes), with the download filename `Andrew-Reeves-portrait-full-resolution.jpg`. It is not cropped, recompressed, enlarged or passed through the image optimizer. The on-page preview retains the existing 1200 × 1440 Lightroom crop and its responsive derivatives. No photographer is identified in the source files; the owner explicitly requested that the credit be left off for now on November 23, 2026.
+
+## Homepage photograph selection — November 24, 2026
+
+The homepage navigation now uses a closer set of existing documentary photographs:
+
+- Research: `andrew-reeves-hoover-rai-conference.jpg`, showing Reeves at the Research on American Institutions conference at Hoover in May 2023. Replaces the distant Harvard auditorium view on Home only.
+- Teaching: the existing Lightroom export `editorial/classroom.jpg`.
+- Talks and events: `andrew-reeves-carolyn-bourdeaux.jpg`, a conversation with Carolyn Bourdeaux at the January 14, 2026 event. Credit: Sid Hastings/WashU. Replaces the Kugler photograph on Home only.
+
+All three use 3:2 display frames, IvyPresto titles and short factual captions. Mobile image widths range from 112 to 160 pixels instead of 96 pixels. The Hoover image uses a 1.35 CSS scale anchored at the top right to emphasize Reeves and his gesture; the classroom uses a 1.3 scale anchored at 30%/30%; the Bourdeaux image keeps both participants without additional zoom. Caption context is exposed through `aria-describedby`, and the existing keyboard focus treatment remains.
+
+These changes use existing responsive assets and reversible CSS crops. No source photographs, colors, faces, backgrounds or student portraits were altered. The Harvard and Kugler photographs remain available elsewhere on the site. Captions and event identifications follow the existing verified About gallery records.

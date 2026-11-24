@@ -51,20 +51,26 @@ const photoLinks = [
   {
     title: "Research",
     href: "/research/",
-    image: "/images/editorial/harvard-panel.jpg",
-    alt: "Andrew Reeves moderating the Election Analyst Panel at Harvard University"
+    image: "/images/andrew-reeves-hoover-rai-conference.jpg",
+    alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference",
+    caption: "Hoover Institution",
+    credit: ""
   },
   {
     title: "Teaching",
     href: "/teaching/",
     image: "/images/editorial/classroom.jpg",
-    alt: "Andrew Reeves teaching in a classroom"
+    alt: "Andrew Reeves teaching in a classroom",
+    caption: "Washington University in St. Louis",
+    credit: ""
   },
   {
     title: "Talks and events",
     href: "/talks/",
-    image: "/images/editorial/adriana-kugler-conversation.jpg",
-    alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum"
+    image: "/images/andrew-reeves-carolyn-bourdeaux.jpg",
+    alt: "Andrew Reeves in conversation with former U.S. Representative Carolyn Bourdeaux",
+    caption: "With Carolyn Bourdeaux",
+    credit: "Photo: Sid Hastings/WashU."
   }
 ] as const;
 
@@ -149,13 +155,15 @@ const personStructuredData = {
     </section>
 
     <nav class="container-wide home-photo-nav" aria-label="Explore Andrew Reeves’s work">
-      {photoLinks.map((item) => (
-        <a class="home-photo-link" href={item.href} aria-label={item.title}>
+      {photoLinks.map((item, index) => (
+        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={`home-photo-caption-${index}`}>
           <span class="home-photo-image">
-            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 96px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
+            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
           </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
+            <span class="home-photo-caption" id={`home-photo-caption-${index}`}>{item.caption}</span>
+            {item.credit && <span class="home-photo-credit">{item.credit}</span>}
           </span>
         </a>
       ))}
