@@ -4,13 +4,16 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import ResponsiveImage from "@components/ResponsiveImage.astro";
 import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
-import { academicAppointment } from "@data/academic-appointment";
+import { academicAppointment, endowedChairTitle } from "@data/academic-appointment";
 import { leadershipRoles } from "@data/leadership";
 import { publicationSearchEntry } from "../utils/publication-records";
 
 import "../styles/home.css";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
+const appointmentIntroduction = academicAppointment.title === endowedChairTitle
+  ? "where he holds the Edward Mallinckrodt Distinguished University Professorship"
+  : "where he is a professor of political science";
 // Short homepage treatments; publication pages and citations retain full titles.
 const articleNotes: Record<string, { title?: string; finding: string }> = {
   "municipal-administration": { finding: "Surveyed elected municipal clerks report a stronger focus on responding to residents than appointed clerks." },
@@ -137,12 +140,8 @@ const personStructuredData = {
       </figure>
       <div class="home-intro-copy">
         <h1 id="home-name" class="sr-only">Andrew Reeves</h1>
-        <p class="home-intro-lede">Reeves studies the relationship between political institutions and human behavior.</p>
-        <p class="home-intro-research">His work examines how presidents use power, why government benefits some communities more than others and when citizens hold leaders accountable.</p>
-        <div class="home-intro-appointment">
-          <p class="home-intro-title">{academicAppointment.title}</p>
-          <p class="home-intro-university">Washington University in St. Louis</p>
-        </div>
+        <p class="home-intro-lede">Andrew Reeves is a political scientist at Washington University in St. Louis, {appointmentIntroduction}.</p>
+        <p class="home-intro-research">His research examines how political institutions shape people’s behavior: how presidents use power, why government benefits some communities more than others, and when citizens hold leaders accountable.</p>
         <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and serves as senior advisor to the chancellor.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/research/">Research</a>
