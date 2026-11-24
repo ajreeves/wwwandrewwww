@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import FeatureBand from "@components/FeatureBand.astro";
 import RecordingPreview from "@components/RecordingPreview.astro";
 import { eventAnchor } from "../utils/content-anchors";
 
@@ -10,6 +9,20 @@ import { siteEnvironment } from "@data/site-environment";
 import "../styles/talks.css";
 
 const youtubeId = (url: string) => new URL(url).searchParams.get("v") ?? "";
+const featuredIds = ["9uWOQAFgWNc", "qpFScg4RRyY"];
+const featuredEvents = featuredIds.map((id) => {
+  const event = events.find((event) => youtubeId(event.watch) === id);
+  if (!event) throw new Error(`Missing featured recording: ${id}`);
+  return event;
+});
+const recordingRoles: Record<string, string> = {
+  "9uWOQAFgWNc": "Speaker: Andrew Reeves",
+  "qpFScg4RRyY": "Q&A with Andrew Reeves"
+};
+const recordingSections = [
+  { id: "featured-recordings", title: "Featured recordings", events: featuredEvents },
+  { id: "event-archive", title: "More Weidenbaum Center events", events: events.filter((event) => !featuredIds.includes(youtubeId(event.watch))) }
+];
 // New preview assets must resolve before the production site is released.
 const shareImage = new URL("/images/editorial/talks-share.jpg",
   siteEnvironment.noIndex && process.env.DEPLOY_PRIME_URL
@@ -24,43 +37,33 @@ const shareImage = new URL("/images/editorial/talks-share.jpg",
     compactMobile
   />
 
-  <FeatureBand
-    title="The Past, Present, and Future of the Federal Reserve"
-    text="Andrew Reeves introduced this Weidenbaum Center conversation with Alberto Musalem, James Bullard and Thomas Melzer on Sept. 29, 2025. Karen Branding moderated the discussion."
-    image="/images/andrew-fed-page.jpg"
-    alt="Andrew Reeves at a Weidenbaum Center Federal Reserve event with Karen Branding, Thomas Melzer, Alberto Musalem and James Bullard"
-    caption="Photo: Sid Hastings/WashU."
-    actionHref="https://www.youtube.com/watch?v=TJEnJcU-PRE"
-    actionLabel="Watch recording"
-  />
-
-  <section class="container-wide page-section">
-    <div class="page-section-heading">
-      <div>
-        <h2>Weidenbaum Center events</h2>
-        <p class="mt-3 max-w-3xl text-sm leading-[1.55] text-muted">
-          Dates and speakers’ titles refer to the time of each event.
-        </p>
+  {recordingSections.map((section) => (
+    <section class="container-wide page-section" aria-labelledby={section.id}>
+      <div class="page-section-heading">
+        <div>
+          <h2 id={section.id}>{section.title}</h2>
+          {section.id === "event-archive" && <p class="mt-3 max-w-3xl text-sm leading-[1.55] text-muted">
+            Dates and speakers’ titles refer to the time of each event.
+          </p>}
+        </div>
+        {section.id === "event-archive" && <a class="hidden section-action sm:inline" href="https://www.youtube.com/channel/UCvJOmn5O0jvtON27hM5GXew">YouTube channel</a>}
       </div>
-      <a class="hidden section-action sm:inline" href="https://www.youtube.com/channel/UCvJOmn5O0jvtON27hM5GXew">YouTube channel</a>
-    </div>
 
-    <div class="grid gap-6 lg:grid-cols-2">
-      {
-        events.map((event) => (
+      <div class="grid gap-6 lg:grid-cols-2">
+        {section.events.map((event) => (
           <article id={eventAnchor(event.watch)} class="editorial-card recording-card">
             <RecordingPreview title={event.title} embed={event.embed} watch={event.watch} photo={eventPhotos[youtubeId(event.watch)]} />
-            <p class="small-caps mb-3 mt-5">Recorded event · <time datetime={event.date}>{event.dateLabel}</time></p>
+            <p class="small-caps mb-3 mt-5">{recordingRoles[youtubeId(event.watch)] ?? "Recorded event"} · <time datetime={event.date}>{event.dateLabel}</time></p>
             <h3 class="list-title">
               <a class="text-ink no-underline hover:text-olive-dark" href={event.watch}>{event.label}</a>
             </h3>
             <p class="mt-3 text-base leading-[1.6] text-muted">{event.summary}</p>
             <a class="event-source-link" href={event.dateSource}>Event source<span class="sr-only">: {event.label}</span></a>
           </article>
-        ))
-      }
-    </div>
-  </section>
+        ))}
+      </div>
+    </section>
+  ))}
   </div>
 
   <script>

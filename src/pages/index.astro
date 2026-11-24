@@ -50,7 +50,7 @@ const researchAreas = [
 const photoLinks = [
   {
     title: "Research",
-    description: "Books and articles on power, accountability and place.",
+    description: "Books and articles on American politics.",
     href: "/research/",
     image: "/images/andrew-reeves-hoover-rai-conference.jpg",
     alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference",
@@ -59,7 +59,7 @@ const photoLinks = [
   },
   {
     title: "University leadership",
-    description: "Research institutes and programs that connect scholarship with civic life.",
+    description: "Social science and civic life at WashU.",
     href: "#leadership",
     image: "/images/andrew-reeves-frick-initiatives-speaking.jpg",
     alt: "Andrew Reeves speaking at the launch of the Frick Initiatives",
@@ -68,7 +68,7 @@ const photoLinks = [
   },
   {
     title: "Public engagement",
-    description: "Conversations with scholars, policymakers and public leaders.",
+    description: "Talks and conversations with public leaders.",
     href: "/talks/",
     image: "/images/editorial/adriana-kugler-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum",
@@ -196,7 +196,6 @@ const personStructuredData = {
 
     <section id="research" class="container-wide home-research" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
-      <p class="home-research-introduction">His books and articles examine how presidents exercise power, how citizens hold leaders accountable, and why federal resources reach some places more than others.</p>
 
       <section class="home-books" aria-labelledby="major-works-heading">
         <h3 id="major-works-heading">Books</h3>
@@ -228,9 +227,11 @@ const personStructuredData = {
         <ul class="home-article-list">
           {recentArticles.map((article) => (
             <li>
-              <h4><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h4>
+              <div class="home-article-heading">
+                <h4><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h4>
+                <p>{article.venue} · {article.year}</p>
+              </div>
               <p class="home-recent-finding">{article.note?.finding ?? article.summary}</p>
-              <p>{article.venue} · {article.year}</p>
             </li>
           ))}
         </ul>
