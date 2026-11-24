@@ -37,12 +37,12 @@ The Contact page's download uses the full-resolution JPEG supplied by the owner 
 
 ## Homepage photograph selection — November 24, 2026
 
-The homepage navigation uses three documentary photographs with consistent 3:2 frames and serif destination titles:
+The homepage navigation uses three documentary photographs with consistent 3:2 crops, light photographic mats and serif destination titles:
 
 - Research: `andrew-reeves-hoover-rai-conference.jpg`, showing Reeves at the Research on American Institutions conference at Hoover in May 2023. CSS crop: scale 1.5, origin 100%/0%; saturation 0.8, contrast 0.96, brightness 1.04.
 - Teaching: the existing Lightroom export `editorial/classroom.jpg`. CSS crop: scale 1.45, origin 30%/20%; saturation 0.9, contrast 0.98.
 - Talks and events: the Lightroom export `editorial/adriana-kugler-conversation.jpg`, keeping both participants visible. No additional zoom; saturation 0.9, contrast 0.98, brightness 1.03. Credit: Jerry Naunheim Jr./WashU.
 
-Visible labels identify destinations only: Research, Teaching, and Talks and events. Location and participant captions were removed because they confused the meaning of the navigation links. Descriptive alternative text retains the actual photo context. The conversation photograph credit sits below the set, outside the links. Mobile image widths range from 112 to 160 pixels. Keyboard focus remains visible.
+Visible labels identify destinations only: Research, Teaching, and Talks and events. Location and participant captions were removed because they confused the meaning of the navigation links. Descriptive alternative text retains the actual photo context. The conversation photograph credit sits below the set, outside the links. Mobile frame widths range from 112 to 160 pixels. Mats use a warm-white background, a 1-pixel warm-gray border, and 8 pixels of padding on desktop or 4 pixels on mobile. An inner crop container keeps enlarged images inside the mat. Keyboard focus remains visible.
 
 The Bourdeaux photograph remains in the About gallery and Talks page; its darker background and spotlight were less consistent with this homepage set. The Harvard photograph also remains elsewhere on the site. These changes use existing responsive assets and reversible CSS cropping and color treatment. No source photographs, faces, backgrounds, student portraits or original image files were altered.

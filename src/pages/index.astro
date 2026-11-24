@@ -152,7 +152,9 @@ const personStructuredData = {
       {photoLinks.map((item) => (
         <a class="home-photo-link" href={item.href} aria-label={item.title}>
           <span class="home-photo-image">
-            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
+            <span class="home-photo-crop">
+              <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
+            </span>
           </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
