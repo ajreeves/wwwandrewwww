@@ -6,6 +6,7 @@ import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
 import { academicAppointment } from "@data/academic-appointment";
 import { leadershipRoles } from "@data/leadership";
+import { researchTopicPath } from "@data/research-topics";
 import { publicationSearchEntry } from "../utils/publication-records";
 
 import "../styles/home.css";
@@ -30,19 +31,19 @@ const bookNotes: Record<string, string> = {
 const researchAreas = [
   {
     title: "Presidential power",
-    href: "/research/?theme=presidential-power"
+    href: researchTopicPath("presidential-power")
   },
   {
     title: "Democratic accountability",
-    href: "/research/?theme=democratic-accountability"
+    href: researchTopicPath("democratic-accountability")
   },
   {
     title: "Political geography",
-    href: "/research/?theme=political-geography"
+    href: researchTopicPath("political-geography")
   },
   {
     title: "Federal spending",
-    href: "/research/?theme=federal-resource-allocation"
+    href: researchTopicPath("federal-resource-allocation")
   }
 ] as const;
 
@@ -141,7 +142,7 @@ const personStructuredData = {
         <p class="home-intro-leadership">He also serves as director of the <a href="https://wc.wustl.edu/">Weidenbaum Center</a> and the <a href="https://frick.washu.edu/">Frick Initiatives</a> and as senior advisor to the chancellor.</p>
         <p class="home-intro-research">He studies the relationship between political institutions and human behavior, with a particular interest in presidential power and democratic accountability.</p>
         <div class="home-links" aria-label="Primary homepage links">
-          <a href="/research/">Research</a>
+          <a href="/cv/">CV</a>
           <a href="#leadership">University leadership</a>
           <a href="/about/">Biography</a>
           <a href="/contact/">Contact</a>
@@ -149,11 +150,11 @@ const personStructuredData = {
       </div>
     </section>
 
-    <nav class="home-photo-nav" aria-label="Explore Andrew Reeves’s work">
+    <nav class="container-wide home-photo-nav" aria-label="Explore Andrew Reeves’s work">
       {photoLinks.map((item) => (
         <a class="home-photo-link" href={item.href} aria-label={item.title}>
           <span class="home-photo-image">
-            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 160px, (max-width: 1200px) 240px, 55vw" />
+            <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 760px) 96px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
           </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
