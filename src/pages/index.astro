@@ -53,13 +53,15 @@ const photoLinks = [
     href: "/research/",
     image: "/images/andrew-reeves-hoover-rai-conference.jpg",
     alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference",
+    caption: "",
     credit: ""
   },
   {
     title: "Teaching",
     href: "/teaching/",
     image: "/images/editorial/classroom.jpg",
-    alt: "Andrew Reeves teaching in a classroom",
+    alt: "Andrew Reeves teaching The Business of Elections at WashU",
+    caption: "The Business of Elections",
     credit: ""
   },
   {
@@ -67,6 +69,7 @@ const photoLinks = [
     href: "/talks/",
     image: "/images/editorial/adriana-kugler-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum",
+    caption: "",
     credit: "Jerry Naunheim Jr./WashU"
   }
 ] as const;
@@ -153,11 +156,11 @@ const personStructuredData = {
 
     <nav class="container-wide home-photo-nav" aria-label="Explore Andrew Reeves’s work">
       {photoLinks.map((item, index) => (
-        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={item.credit ? `home-photo-credit-${index}` : undefined}>
+        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={item.caption || item.credit ? `home-photo-caption-${index}` : undefined}>
           <span class="home-photo-image">
             <span class="home-photo-crop">
               <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
-              {item.credit && <span class="home-photo-credit" id={`home-photo-credit-${index}`}><span class="sr-only">Photo: </span>{item.credit}</span>}
+              {(item.caption || item.credit) && <span class="home-photo-caption" id={`home-photo-caption-${index}`}>{item.credit && <span class="sr-only">Photo: </span>}{item.caption || item.credit}</span>}
             </span>
           </span>
           <span class="home-photo-copy">
