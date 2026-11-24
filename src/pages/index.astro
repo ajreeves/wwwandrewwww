@@ -52,19 +52,22 @@ const photoLinks = [
     title: "Research",
     href: "/research/",
     image: "/images/andrew-reeves-hoover-rai-conference.jpg",
-    alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference"
+    alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference",
+    credit: ""
   },
   {
     title: "Teaching",
     href: "/teaching/",
     image: "/images/editorial/classroom.jpg",
-    alt: "Andrew Reeves teaching in a classroom"
+    alt: "Andrew Reeves teaching in a classroom",
+    credit: ""
   },
   {
     title: "Talks and events",
     href: "/talks/",
     image: "/images/editorial/adriana-kugler-conversation.jpg",
-    alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum"
+    alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum",
+    credit: "Jerry Naunheim Jr./WashU"
   }
 ] as const;
 
@@ -149,11 +152,12 @@ const personStructuredData = {
     </section>
 
     <nav class="container-wide home-photo-nav" aria-label="Explore Andrew Reeves’s work">
-      {photoLinks.map((item) => (
-        <a class="home-photo-link" href={item.href} aria-label={item.title}>
+      {photoLinks.map((item, index) => (
+        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={item.credit ? `home-photo-credit-${index}` : undefined}>
           <span class="home-photo-image">
             <span class="home-photo-crop">
               <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
+              {item.credit && <span class="home-photo-credit" id={`home-photo-credit-${index}`}><span class="sr-only">Photo: </span>{item.credit}</span>}
             </span>
           </span>
           <span class="home-photo-copy">
@@ -161,7 +165,6 @@ const personStructuredData = {
           </span>
         </a>
       ))}
-      <p class="home-photo-credit">Conversation photograph: Jerry Naunheim Jr./WashU.</p>
     </nav>
 
     <section id="leadership" class="container-wide home-leadership" aria-labelledby="leadership-heading">
