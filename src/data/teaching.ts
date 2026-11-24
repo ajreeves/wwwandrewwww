@@ -42,7 +42,7 @@ export const courses = [
   {
     title: "Business of Elections",
     term: "Fall 2024",
-    termLabel: "Documented offering",
+    termLabel: "Taught",
     type: "Undergraduate Course",
     image: "/images/business-of-elections-course.jpg",
     alt: "Illustration of a suited figure running beside an American flag and rising arrows",
@@ -53,7 +53,7 @@ export const courses = [
     ],
     links: [
       {
-        label: "In the news",
+        label: "Read about the course",
         url: "https://artsci.washu.edu/ampersand/how-presidential-election-start"
       }
     ],

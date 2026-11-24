@@ -16,15 +16,15 @@ const awards = [
     title: "Delores K. Kennedy Award",
     text: "Awarded for commitment to students in the first-year experience. Washington University Political Science, 2018.",
     url: "https://polisci.wustl.edu/news/prof-andrew-reeves-wins-delores-k-kennedy-award#:~:text=This%20award%20recognizes%20a%20member,in%20Introduction%20to%20American%20Politics.",
-    link: "Political Science News"
+    link: "Washington University Political Science"
   }
 ] as const;
 
 const tocLinks = [
-  { href: "#classroom-practice", label: "Classroom practice" },
+  { href: "#classroom-practice", label: "In the classroom" },
   { href: "#featured-courses", label: "Courses" },
   { href: "#teaching-awards", label: "Teaching awards" },
-  { href: "#course-archive", label: "Course archive" }
+  { href: "#course-archive", label: "Past courses" }
 ] as const;
 
 const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
@@ -100,7 +100,7 @@ const videoWatchUrl = (url: string) => url.replace("/embed/", "/watch?v=");
   <section id="course-archive" class="container-wide page-section">
     <div class="page-section-heading">
       <div>
-        <h2>Course archive</h2>
+        <h2>Past courses</h2>
       </div>
     </div>
     <div class="grid gap-5 lg:grid-cols-2">
