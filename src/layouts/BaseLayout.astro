@@ -24,7 +24,7 @@ const {
 } = Astro.props;
 
 const pageTitle = title === "Andrew Reeves"
-  ? "Andrew Reeves | Political Scientist at WashU"
+  ? "Andrew Reeves | Political Science at WashU"
   : `${title} | Andrew Reeves`;
 const site = Astro.site ?? new URL("https://andrewreeves.org");
 const canonicalUrl = new URL(Astro.url.pathname, site).toString();
