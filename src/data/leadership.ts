@@ -20,7 +20,7 @@ const roles: LeadershipRole[] = [
     name: "Weidenbaum Center on the Economy, Government, and Public Policy",
     role: "Director",
     url: "https://wc.washu.edu/",
-    paragraphs: [{ text: "A WashU research institute supporting scholarship in economics, political science, sociology and public policy. It funds faculty research and hosts public programs connecting scholars, policymakers and the wider community." }]
+    paragraphs: [{ text: "The Weidenbaum Center supports social science research and brings scholars, policymakers and the public into conversation. As director, he leads its research support and public programs in economics, political science, sociology and public policy." }]
   },
   {
     id: "frick-initiatives",
@@ -28,9 +28,9 @@ const roles: LeadershipRole[] = [
     role: "Director",
     url: "https://frick.washu.edu/",
     paragraphs: [
-      { text: "A WashU initiative supporting translational research, teaching and community projects in civil discourse, free speech, free and open markets, and personal responsibility." },
+      { text: "Expanded through a $22 million commitment from Robert and Barbara Frick, the Frick Initiatives support translational research, teaching and community projects that strengthen civil society." },
       {
-        text: "Expanded by a $22 million commitment from Robert and Barbara Frick, it develops programs that other schools, businesses and communities can adopt."
+        text: "He directs the development of programs that other schools, businesses and communities can adopt."
       }
     ]
   },
@@ -39,7 +39,7 @@ const roles: LeadershipRole[] = [
     name: "Office of the Chancellor",
     role: "Senior Advisor to the Chancellor",
     url: "https://andrewdmartin.washu.edu/people/",
-    paragraphs: [{ text: "He co-chairs the Ordered Liberty Project, a WashU initiative supporting free expression, open inquiry and discussion across political and intellectual differences." }]
+    paragraphs: [{ text: "The Ordered Liberty Project supports free expression, open inquiry and discussion across political and intellectual differences at WashU. As senior advisor to the chancellor, he co-chairs the project." }]
   }
 ];
 

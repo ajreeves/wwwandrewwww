@@ -50,6 +50,7 @@ const researchAreas = [
 const photoLinks = [
   {
     title: "Research",
+    description: "Books and articles on power, accountability and place.",
     href: "/research/",
     image: "/images/andrew-reeves-hoover-rai-conference.jpg",
     alt: "Andrew Reeves speaking at the Hoover Institution Research on American Institutions conference",
@@ -57,15 +58,17 @@ const photoLinks = [
     credit: ""
   },
   {
-    title: "Teaching",
-    href: "/teaching/",
-    image: "/images/editorial/classroom.jpg",
-    alt: "Andrew Reeves teaching The Business of Elections at WashU",
-    caption: "The Business of Elections",
-    credit: ""
+    title: "University leadership",
+    description: "Research institutes and programs that connect scholarship with civic life.",
+    href: "#leadership",
+    image: "/images/andrew-reeves-frick-initiatives-speaking.jpg",
+    alt: "Andrew Reeves speaking at the launch of the Frick Initiatives",
+    caption: "",
+    credit: "Suzy Gorman"
   },
   {
-    title: "Talks and events",
+    title: "Public engagement",
+    description: "Conversations with scholars, policymakers and public leaders.",
     href: "/talks/",
     image: "/images/editorial/adriana-kugler-conversation.jpg",
     alt: "Adriana Kugler in conversation with Andrew Reeves at a Weidenbaum Center forum",
@@ -153,7 +156,7 @@ const personStructuredData = {
 
     <nav class="container-wide home-photo-nav" aria-label="Explore Andrew Reeves’s work">
       {photoLinks.map((item, index) => (
-        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={item.caption || item.credit ? `home-photo-caption-${index}` : undefined}>
+        <a class="home-photo-link" href={item.href} aria-label={item.title} aria-describedby={`home-photo-description-${index}${item.caption || item.credit ? ` home-photo-caption-${index}` : ""}`}>
           <span class="home-photo-image">
             <span class="home-photo-crop">
               <ResponsiveImage src={item.image} alt={item.alt} loading="lazy" sizes="(max-width: 329px) 112px, (max-width: 470px) 34vw, (max-width: 760px) 160px, (min-width: 1280px) 382px, calc((100vw - 136px) / 3)" />
@@ -162,6 +165,7 @@ const personStructuredData = {
           </span>
           <span class="home-photo-copy">
             <span class="home-photo-title">{item.title}</span>
+            <span class="home-photo-description" id={`home-photo-description-${index}`}>{item.description}</span>
           </span>
         </a>
       ))}
@@ -190,46 +194,51 @@ const personStructuredData = {
       </div>
     </section>
 
-    <section class="container-wide home-books" aria-labelledby="major-works-heading">
-      <h2 id="major-works-heading">Books</h2>
-      <div class="home-books-pair">
-        {books.map((book) => (
-          <article class="home-book">
-            <a class="home-book-cover" href={`/books/#${book.id}`} aria-label={`${book.data.title} book page`}>
-              <img src={book.data.cover} alt={`Cover of ${book.data.title}`} width={book.id === "particularistic-president" ? 427 : 415} height="648" loading="lazy" />
-            </a>
-            <div class="home-book-copy">
-              <div class="home-book-heading">
-                <h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
-                <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
-                <p class="home-book-publication">{book.data.publisher}, {book.data.year}</p>
-              </div>
-              <p>{bookNotes[book.id] ?? book.data.summary}</p>
-              <a class="home-text-link" href={`/books/#${book.id}`}>About the book<span class="sr-only">: {book.data.title}</span></a>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
+    <section id="research" class="container-wide home-research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <p class="home-research-introduction">His books and articles examine how presidents exercise power, how citizens hold leaders accountable, and why federal resources reach some places more than others.</p>
 
-    <section class="container-wide home-recent" aria-labelledby="recent-articles-heading">
-      <div class="home-section-heading">
-        <h2 id="recent-articles-heading">Recent articles</h2>
-        <a class="home-text-link" href="/research/">All publications</a>
-      </div>
-      <ul class="home-article-list">
-        {recentArticles.map((article) => (
-          <li>
-            <h3><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h3>
-            <p class="home-recent-finding">{article.note?.finding ?? article.summary}</p>
-            <p>{article.venue} · {article.year}</p>
-          </li>
-        ))}
-      </ul>
-      <nav class="home-research-topics" aria-labelledby="research-topics-heading">
-        <h3 id="research-topics-heading">Browse by topic</h3>
-        <ul>{researchAreas.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
-      </nav>
+      <section class="home-books" aria-labelledby="major-works-heading">
+        <h3 id="major-works-heading">Books</h3>
+        <div class="home-books-pair">
+          {books.map((book) => (
+            <article class="home-book">
+              <a class="home-book-cover" href={`/books/#${book.id}`} aria-label={`${book.data.title} book page`}>
+                <img src={book.data.cover} alt={`Cover of ${book.data.title}`} width={book.id === "particularistic-president" ? 427 : 415} height="648" loading="lazy" />
+              </a>
+              <div class="home-book-copy">
+                <div class="home-book-heading">
+                  <h4><a href={`/books/#${book.id}`}>{book.data.title}</a></h4>
+                  <p class="home-book-author">With {book.data.coauthors.join(" and ")}</p>
+                  <p class="home-book-publication">{book.data.publisher}, {book.data.year}</p>
+                </div>
+                <p>{bookNotes[book.id] ?? book.data.summary}</p>
+                <a class="home-text-link" href={`/books/#${book.id}`}>About the book<span class="sr-only">: {book.data.title}</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="home-recent" aria-labelledby="recent-articles-heading">
+        <div class="home-section-heading">
+          <h3 id="recent-articles-heading">Recent articles</h3>
+          <a class="home-text-link" href="/research/">All publications</a>
+        </div>
+        <ul class="home-article-list">
+          {recentArticles.map((article) => (
+            <li>
+              <h4><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h4>
+              <p class="home-recent-finding">{article.note?.finding ?? article.summary}</p>
+              <p>{article.venue} · {article.year}</p>
+            </li>
+          ))}
+        </ul>
+        <nav class="home-research-topics" aria-labelledby="research-topics-heading">
+          <h3 id="research-topics-heading">Browse by topic</h3>
+          <ul>{researchAreas.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
+        </nav>
+      </section>
     </section>
 
   </div>
