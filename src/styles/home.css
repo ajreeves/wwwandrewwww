@@ -105,9 +105,9 @@
   .home-page h2 { font-size: 30px; }
   .home-page :is(.home-books, .home-recent) h2 { font-size: 26px; }
   .home-page .home-intro { display: flow-root; padding-block: 24px; }
-  .home-page .home-intro-lede { font-size: 22px; }
-  .home-page .home-intro-research { clear: both; font-size: 18px; }
-  .home-page .home-portrait { float: right; width: 96px; margin: 0 0 12px 20px; }
+  .home-page .home-intro-lede { font-size: clamp(20px, 4.8vw, 22px); line-height: 1.5; }
+  .home-page .home-intro-research { clear: both; margin-top: 20px; font-size: 18px; }
+  .home-page .home-portrait { float: right; width: clamp(72px, 20vw, 96px); margin: 0 0 12px 16px; }
   .home-page .home-intro .home-links { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 16px; margin-top: 16px; }
   .home-page .home-photo-nav { grid-template-columns: 1fr; gap: 0; padding-bottom: 12px; }
   .home-page .home-photo-link { display: grid; grid-template-columns: clamp(112px, 34vw, 160px) minmax(0, 1fr); align-items: center; gap: 20px; padding-block: 20px; }
@@ -140,5 +140,5 @@
 }
 
 @media (max-width: 360px) {
-  .home-page .home-portrait { width: 72px; margin-left: 16px; }
+  .home-page .home-portrait { margin-left: 12px; }
 }
