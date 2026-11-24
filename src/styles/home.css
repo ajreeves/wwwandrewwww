@@ -13,9 +13,8 @@
 .home-page .home-intro { display: grid; grid-template-columns: minmax(0, 760px) 300px; align-items: start; gap: 48px; padding-block: 32px; }
 .home-page .home-intro-copy { grid-column: 1; grid-row: 1; }
 .home-page .home-intro-lede { max-width: 50ch; font-family: var(--font-serif); font-size: 28px; font-weight: 400; line-height: 1.4; text-wrap: pretty; }
-.home-page .home-intro-affiliation { margin-top: 16px; color: var(--ink); }
-.home-page .home-intro-affiliation a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 4px; }
-.home-page .home-intro-affiliation a:hover { text-decoration-color: currentColor; }
+.home-page .home-intro-lede a { color: inherit; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+.home-page .home-intro-lede a:hover { text-decoration-color: currentColor; }
 .home-page .home-intro-research { max-width: 58ch; margin-top: 16px; font-size: 20px; line-height: 1.55; }
 .home-page .home-portrait { grid-column: 2; grid-row: 1; margin: 0; }
 .home-page .home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
@@ -107,7 +106,6 @@
   .home-page :is(.home-books, .home-recent) h2 { font-size: 26px; }
   .home-page .home-intro { display: flow-root; padding-block: 24px; }
   .home-page .home-intro-lede { font-size: 22px; }
-  .home-page .home-intro-affiliation { clear: both; }
   .home-page .home-intro-research { clear: both; font-size: 18px; }
   .home-page .home-portrait { float: right; width: 96px; margin: 0 0 12px 20px; }
   .home-page .home-intro .home-links { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 16px; margin-top: 16px; }
