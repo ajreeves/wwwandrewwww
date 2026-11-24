@@ -503,10 +503,11 @@
   /* Expand the tap area while preserving the icon position and header height. */
   .editorial-site .nav-toggle { display: flex; width: 2.75rem; height: 2.75rem; margin: -.125rem; }
   .editorial-site .nav-list { display: none; grid-column: 1 / -1; flex-direction: column; align-items: stretch; width: 100%; gap: 0; padding: 10px 0 0; border-top: 1px solid var(--rule); }
-  .editorial-site .nav-list.nav-list-open { display: flex; }
+  .editorial-site .nav-list.nav-list-open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
   .editorial-site .nav-list .nav-mobile-only { display: block; }
   .editorial-site .nav-list .nav-desktop-only { display: none; }
   .editorial-site .nav-list .nav-link { padding: 12px 0; font-size: 17px; letter-spacing: 0.02em; border-bottom: 1px solid var(--rule); }
+  .editorial-site .nav-list > .nav-link { display: flex; align-items: center; min-width: 0; min-height: 44px; white-space: normal; }
   .editorial-site .site-header { max-height: 100dvh; overflow-y: auto; }
 }
 
