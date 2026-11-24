@@ -14,7 +14,7 @@ import "../styles/home.css";
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
 // Short homepage treatments; publication pages and citations retain full titles.
 const articleNotes: Record<string, { title?: string; finding: string }> = {
-  "municipal-administration": { finding: "Surveyed elected municipal clerks report a stronger focus on responding to residents than appointed clerks." },
+  "municipal-administration": { finding: "Elected municipal clerks report focusing more on residents’ needs than appointed clerks do." },
   "private-funding": { finding: "Americans are wary of private election funding; arguments for and against bans change opinion only modestly." },
   "rising-seas": { title: "Rising Seas, Rising Concerns", finding: "Sea-level vulnerability is associated with greater support for climate mitigation, especially among residents strongly attached to their communities." },
   "short-haul-moves": { title: "Short-Haul Moves and the Political Geography of Partisanship", finding: "Short moves within metropolitan areas contribute modestly to partisan geographic sorting." }
@@ -25,7 +25,7 @@ const recentArticles = (await getCollection("publications"))
   .slice(0, 3)
   .map((entry) => ({ ...publicationSearchEntry(entry), venue: entry.data.venue, note: articleNotes[entry.id] }));
 const bookNotes: Record<string, string> = {
-  "no-blank-check": "Americans care about how presidents use power, even when they agree with the policy. Public resistance to action without Congress can carry political costs.",
+  "no-blank-check": "Americans care how presidents use power, even when they support the policy. Acting without Congress can carry political costs.",
   "particularistic-president": "Presidents govern the whole country, but their electoral incentives favor some places over others. Federal spending reveals the political geography of presidential representation."
 };
 const researchAreas = [
@@ -106,7 +106,7 @@ const personStructuredData = {
     {
       "@type": "Organization",
       name: "Weidenbaum Center on the Economy, Government, and Public Policy",
-      url: "https://wc.wustl.edu/"
+      url: "https://wc.washu.edu/"
     },
     {
       "@type": "Organization",
@@ -117,7 +117,7 @@ const personStructuredData = {
   sameAs: [
     "https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ",
     "https://polisci.wustl.edu/people/andrew-reeves/",
-    "https://wc.wustl.edu/"
+    "https://wc.washu.edu/"
   ],
   knowsAbout: [
     "American politics",
@@ -141,14 +141,10 @@ const personStructuredData = {
       </figure>
       <div class="home-intro-copy">
         <h1 id="home-name" class="sr-only">Andrew Reeves</h1>
-        <p class="home-intro-lede">Andrew Reeves is {academicAppointment.biographyRole} at Washington University in St. Louis.</p>
-        <p class="home-intro-research">He studies the relationship between political institutions and human behavior, with a particular interest in presidential power and democratic accountability.</p>
-        <p class="home-intro-leadership">He directs the <a href="https://wc.wustl.edu/">Weidenbaum Center</a>, a social science research institute that brings scholars, policymakers and the public into conversation, and the <a href="https://frick.washu.edu/">Frick Initiatives</a>, which support translational research, teaching and community programs that strengthen civil society.</p>
-        <p class="home-intro-leadership">He also serves as senior advisor to the chancellor and is a visiting fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.</p>
+        <p class="home-intro-lede">Andrew Reeves is a political scientist and {academicAppointment.biographyRole} at Washington University in St. Louis.</p>
+        <p class="home-intro-research">He studies power, place and accountability in American politics—how the public responds when presidents act alone, and how electoral incentives shape where federal dollars go.</p>
         <div class="home-links" aria-label="Primary homepage links">
           <a href="/cv/">CV</a>
-          <a href="#leadership">University leadership</a>
-          <a href="/about/">Biography</a>
           <a href="/contact/">Contact</a>
         </div>
       </div>
@@ -190,7 +186,7 @@ const personStructuredData = {
             </div>
           ))}
         </dl>
-        <p class="home-affiliations">He also serves as professor of law by courtesy at WashU and a visiting fellow at the Hoover Institution.</p>
+        <p class="home-affiliations">He is also a visiting fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.</p>
       </div>
     </section>
 
@@ -230,7 +226,8 @@ const personStructuredData = {
           </li>
         ))}
       </ul>
-      <nav class="home-research-topics" aria-label="Research areas">
+      <nav class="home-research-topics" aria-labelledby="research-topics-heading">
+        <h3 id="research-topics-heading">Browse by topic</h3>
         <ul>{researchAreas.map((item) => <li><a href={item.href}>{item.title}</a></li>)}</ul>
       </nav>
     </section>

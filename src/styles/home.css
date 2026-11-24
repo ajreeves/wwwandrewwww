@@ -14,8 +14,6 @@
 .home-page .home-intro-copy { grid-column: 1; grid-row: 1; }
 .home-page .home-intro-lede { max-width: 50ch; font-family: var(--font-serif); font-size: 28px; font-weight: 400; line-height: 1.4; text-wrap: pretty; }
 .home-page .home-intro-research { max-width: 58ch; margin-top: 16px; font-size: 20px; line-height: 1.55; }
-.home-page .home-intro-leadership { max-width: 58ch; margin-top: 16px; font-size: 18px; line-height: 1.55; }
-.home-page .home-intro-leadership a { text-decoration-color: var(--rule); text-underline-offset: 4px; }
 .home-page .home-portrait { grid-column: 2; grid-row: 1; margin: 0; }
 .home-page .home-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 
@@ -70,6 +68,7 @@
 .home-page .home-article-list p { grid-column: 2; margin-top: 6px; color: var(--muted); font-size: 15px; }
 .home-page .home-article-list .home-recent-finding { max-width: 62ch; margin-top: 0; color: var(--ink); font-size: 18px; line-height: 1.5; }
 .home-page .home-research-topics { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.home-page .home-research-topics h3 { margin-bottom: 8px; font-family: var(--font-sans); font-size: 16px; font-weight: 600; letter-spacing: 0; }
 .home-page .home-research-topics ul { display: flex; flex-wrap: wrap; gap: 8px 32px; list-style: none; margin: 0; padding: 0; }
 .home-page .home-research-topics a { display: inline-block; padding-block: 8px; font-size: 18px; line-height: 1.4; text-underline-offset: 5px; text-decoration-color: var(--rule); }
 .home-page .home-research-topics a:hover { color: var(--rust); text-decoration-color: currentColor; }
@@ -77,7 +76,6 @@
 @media (max-width: 1000px) {
   .home-page .home-intro { grid-template-columns: minmax(0, 1fr) 160px; gap: 32px; }
   .home-page .home-intro-lede { max-width: none; font-size: 26px; }
-  .home-page .home-intro-leadership { max-width: none; }
   .home-page .home-books-pair { gap: 32px; }
   .home-page .home-book { grid-template-columns: 1fr; align-content: start; gap: 24px; }
   .home-page .home-book-cover { width: min(100%, 250px); }
