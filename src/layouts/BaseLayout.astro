@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/editorial.css";
+import narrativeInteriorStyles from "../styles/narrative-interior.css?url";
 import { siteEnvironment } from "@data/site-environment";
 
 interface Props {
@@ -29,6 +30,8 @@ const pageTitle = title === "Andrew Reeves"
 const site = Astro.site ?? new URL("https://andrewreeves.org");
 const canonicalUrl = new URL(Astro.url.pathname, site).toString();
 const imageUrl = new URL(image, site).toString();
+// All interior pages share the narrative styling; the CV document stays unchanged.
+const narrativeInterior = Astro.url.pathname !== "/";
 const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
 const navItems = [
   { label: "About", href: "/about/", activeOn: ["About"] },
@@ -67,10 +70,12 @@ const navItems = [
     <link rel="mask-icon" href="/brand/safari-pinned-tab.svg" color="#971B2F" />
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
     <link rel="stylesheet" href="https://use.typekit.net/yjm8eqw.css" />
+    {narrativeInterior && <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />}
+    {narrativeInterior && <link rel="stylesheet" href={narrativeInteriorStyles} />}
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
   </head>
-  <body class="editorial-site">
+  <body class:list={["editorial-site", { "narrative-interior": narrativeInterior }]}>
     <div class="site-shell">
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header">

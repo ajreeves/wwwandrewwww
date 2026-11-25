@@ -20,7 +20,7 @@ const entry = (item: Omit<SiteSearchEntry, "searchText">, keywords = ""): SiteSe
 
 const pages = [
   { title: "About Andrew Reeves", url: "/about/", summary: "Biography, research interests, university leadership and photographs.", keywords: "Harvard PhD Hoover visiting fellow professor of law by courtesy" },
-  { title: "University leadership", url: "/#leadership", summary: "The Weidenbaum Center, Frick Initiatives and Office of the Chancellor.", keywords: "administration administrative portfolio Ordered Liberty" },
+  { title: "University leadership", url: "/#leadership", summary: "The Weidenbaum Center, Frick Initiatives, and Office of the Chancellor.", keywords: "administration administrative portfolio Ordered Liberty" },
   { title: "Research", url: "/research/", summary: "Publications, abstracts, PDFs and replication materials.", keywords: "presidency federal spending political geography public opinion" },
   { title: "Books", url: "/books/", summary: "No Blank Check and The Particularistic President, with reviews and publication information.", keywords: "Cambridge presidential power" },
   { title: "Teaching", url: "/teaching/", summary: "Courses, syllabi and teaching awards in American politics.", keywords: "David Hadas Delores K. Kennedy undergraduate graduate" },

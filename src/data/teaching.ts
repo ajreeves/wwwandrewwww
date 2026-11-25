@@ -9,7 +9,7 @@ export const courses = [
     caption: "Pericles delivering the funeral oration in Athens (Philipp Foltz, 1852).",
     paragraphs: [
       "This course asks how citizens cooperate and what they owe one another.",
-      "Students read Aristotle, Martin Luther King Jr. and research on trust, polarization and civic education. They consider how people learn to take part in democracy and what responsibilities citizens and institutions share."
+      "Students read Aristotle, Martin Luther King Jr., and research on trust, polarization, and civic education. They consider how people learn to take part in democracy and what responsibilities citizens and institutions share."
     ],
     links: [
       {
@@ -28,8 +28,8 @@ export const courses = [
     alt: "Historical mural depicting America's founders",
     caption: "Introduction to American Politics course visual.",
     paragraphs: [
-      "This course introduces American politics, with attention to polarization, pressures on institutions and dissatisfaction with the economy.",
-      "Students start with basic political science concepts, then study how Congress, the courts and the presidency work and have changed over time. Reeves offers this course periodically."
+      "This course introduces American politics, with attention to polarization, pressures on institutions, and dissatisfaction with the economy.",
+      "Students start with basic political science concepts, then study how Congress, the courts, and the presidency work and have changed over time. Reeves offers this course periodically."
     ],
     links: [
       {
@@ -49,7 +49,7 @@ export const courses = [
     caption: "Business of Elections course visual.",
     paragraphs: [
       "This course analyzes presidential elections through political science and business strategy.",
-      "Topics include campaign management, voter targeting, messaging and how national campaigns are organized."
+      "Topics include campaign management, voter targeting, messaging, and how national campaigns are organized."
     ],
     links: [
       {

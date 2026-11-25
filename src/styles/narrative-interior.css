@@ -1,0 +1,152 @@
+/* Interior companion to the narrative homepage. Loaded outside Home.
+   Keep controls in IvyStyle Sans, reading text in Freight, and major headings in IvyPresto. */
+body.editorial-site.narrative-interior {
+  --paper: #eeeadd;
+  --ivory: #eeeadd;
+  --ink: #2c3028;
+  --muted: #655b55;
+  --rust: #655138;
+  --rule: #c7bcaa;
+  --olive: #4d5943;
+  --olive-dark: #30382b;
+  --tobacco: #655138;
+  --blueprint: #655138;
+  --limestone: #e3e0d2;
+  --tan: #e3e0d2;
+  --font-serif: "freight-text-pro", Georgia, serif;
+  --font-display: "ivypresto-headline", "freight-text-pro", Georgia, serif;
+  --font-slab: var(--font-serif);
+}
+
+.narrative-interior ::selection { background: #cbd0bc; color: var(--ink); }
+.narrative-interior a { text-decoration-color: var(--rule); }
+.narrative-interior a:hover { text-decoration-color: currentColor; }
+.editorial-site.narrative-interior .site-header { border-top-width: 3px; }
+.editorial-site.narrative-interior .site-title {
+  font-family: var(--font-display);
+  color: var(--rust);
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -.015em;
+}
+.editorial-site.narrative-interior .university-signature { padding-left: 18px; }
+.editorial-site.narrative-interior .university-signature img { width: 112px; height: auto; }
+.editorial-site.narrative-interior .site-footer-wrap { background: var(--olive-dark); }
+.editorial-site.narrative-interior .site-footer { background: transparent; }
+
+/* Short page titles provide orientation; the copy and work carry the story. */
+.editorial-site.narrative-interior :is(.page-opening, .students-opening .page-opening) { padding-block: 48px 28px; }
+.editorial-site.narrative-interior :is(.page-title, .publication-profile-main h1) {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.1vw, 3.65rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.012em;
+  text-wrap: pretty;
+}
+.editorial-site.narrative-interior :is(.page-intro, .students-opening .page-intro) {
+  max-width: 60ch;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.editorial-site.narrative-interior :is(.page-section-heading h2, .feature-band-copy h2, .about-biography h2, .media-panel h2, .contact-details h2) {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.7vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -.012em;
+  text-wrap: pretty;
+}
+.editorial-site.narrative-interior :is(.card-title, .list-title, .archive-record-title, .teaching-course h3, .media-list h3, .contact-biography h3) {
+  font-size: clamp(1.4rem, 2vw, 1.65rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-wrap: pretty;
+}
+.editorial-site.narrative-interior :is(.kicker, .small-caps, .page-toc a) { font-weight: 400; letter-spacing: 0; }
+.editorial-site.narrative-interior .kicker { color: var(--rust); }
+.editorial-site.narrative-interior .page-section { padding-block: 36px; }
+.editorial-site.narrative-interior .contact-information { padding-top: 0; }
+.editorial-site.narrative-interior .page-toc { border-top: 0; }
+.editorial-site.narrative-interior .page-toc a { text-decoration: underline; text-underline-offset: .22em; }
+
+/* Preserve the compact archive and advising layouts while improving long-form reading. */
+.editorial-site.narrative-interior :is(.editorial-prose, .page-section-heading p:not(.kicker),
+  .feature-band-copy p:not(.kicker), .teaching-course-description, .book-prose,
+  .book-description, .book-subtitle, .archive-record-summary, .archive-record-details > p,
+  .publication-contribution, .publication-profile-abstract > p, .publication-essay,
+  .publication-finding-list, .media-panel p, .contact-biography > p,
+  .student-card-description, .recording-card > p:not(.small-caps)) {
+  font-family: var(--font-serif);
+}
+.editorial-site.narrative-interior .editorial-prose { line-height: 1.6; }
+.editorial-site.narrative-interior .about-lead-prose p { font-size: 1.25rem; }
+.editorial-site.narrative-interior :is(.about-biography, .about-gallery-disclosure) { max-width: 44rem; }
+.editorial-site.narrative-interior .about-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.editorial-site.narrative-interior .book-feature-card .book-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  line-height: 1.15;
+  letter-spacing: -.012em;
+}
+.editorial-site.narrative-interior .book-destination :is(.book-argument-block, .book-related-section) h3 {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+.editorial-site.narrative-interior .publication-profile-section-label h2 { color: var(--rust); font-weight: 400; }
+.editorial-site.narrative-interior .publication-profile-main h1 { max-width: 32ch; }
+.editorial-site.narrative-interior .publication-profile-abstract > p { font-size: 1.125rem; line-height: 1.6; max-width: 70ch; }
+.editorial-site.narrative-interior :is(.publication-primary-links, .publication-profile-abstract > summary) { font-size: 1rem; font-weight: 400; }
+.editorial-site.narrative-interior .publication-theme-ribbon a { border: 0; background: transparent; padding-inline: 0; font-weight: 400; text-decoration: underline; text-underline-offset: .22em; }
+.editorial-site.narrative-interior .research-topic-navigation h2 { font-size: .875rem; font-weight: 400; color: var(--rust); }
+.editorial-site.narrative-interior .archive-search-control input { padding-inline: 12px; }
+.editorial-site.narrative-interior [data-search-results] article > p:last-child { font-family: var(--font-serif); }
+
+/* Functional elements use the same quiet olive and brown accents as the homepage. */
+.editorial-site.narrative-interior :is(.editorial-button, .ghost-button) {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.editorial-site.narrative-interior .editorial-button { background: var(--olive-dark); border-color: var(--olive-dark); color: var(--paper); }
+.editorial-site.narrative-interior .editorial-button:hover { background: var(--olive); border-color: var(--olive); }
+.editorial-site.narrative-interior .ghost-button { border-color: var(--rule); color: var(--ink); }
+.editorial-site.narrative-interior .ghost-button:hover { background: var(--limestone); border-color: var(--rust); }
+.editorial-site.narrative-interior :is(.archive-search-control input, .archive-sort-group select, [data-search-input]) {
+  background: #f6f3e9;
+  border-color: var(--rule);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+.editorial-site.narrative-interior :is(.text-muted, .archive-record-authors) { color: var(--muted); }
+.editorial-site.narrative-interior .text-ink { color: var(--ink); }
+.editorial-site.narrative-interior .talks-page .recording-frame { border-top-width: 1px; border-color: var(--rule); }
+.editorial-site.narrative-interior .talks-page .recording-play-label { background: var(--olive-dark); font-weight: 400; }
+.editorial-site.narrative-interior .talks-page .recording-play:is(:hover, :focus-visible) .recording-play-label { background: var(--rust); }
+.editorial-site.narrative-interior .publication-related-item h3 { font-weight: 400; }
+.editorial-site.narrative-interior [data-search-results] .editorial-card { background: transparent; }
+
+/* Style the CV reader's surrounding controls, never the PDF pages or text layer. */
+.editorial-site.narrative-interior .cv-frame { background: var(--paper); }
+.editorial-site.narrative-interior .cv-preview-section { padding-top: 8px; }
+.editorial-site.narrative-interior .cv-preview-controls { background: var(--paper); font-family: var(--font-sans); }
+.editorial-site.narrative-interior .cv-preview-controls button { font-weight: 400; }
+.editorial-site.narrative-interior .cv-preview-scroll { background: var(--limestone); }
+
+@media (max-width: 760px) {
+  .editorial-site.narrative-interior .site-title { font-size: clamp(23px, 6.7vw, 28px); }
+  .editorial-site.narrative-interior :is(.page-opening, .students-opening .page-opening) { padding-block: 28px 24px; }
+  .editorial-site.narrative-interior .page-opening-mobile-compact { padding-bottom: 12px; }
+  .editorial-site.narrative-interior :is(.page-title, .publication-profile-main h1) { font-size: clamp(2rem, 7.5vw, 2.6rem); line-height: 1.15; }
+  .editorial-site.narrative-interior :is(.page-intro, .students-opening .page-intro) { font-size: 1.125rem; line-height: 1.5; }
+  .editorial-site.narrative-interior :is(.page-section-heading h2, .feature-band-copy h2, .about-biography h2, .media-panel h2, .contact-details h2) { font-size: clamp(1.65rem, 6.3vw, 1.9rem); line-height: 1.2; }
+  .editorial-site.narrative-interior .page-section { padding-block: 24px; }
+  .editorial-site.narrative-interior :is(.contact-information, .page-opening-mobile-compact + .page-section) { padding-top: 0; }
+  .editorial-site.narrative-interior .about-lead-prose p { font-size: 1.125rem; }
+  .editorial-site.narrative-interior .book-feature-card .book-title { font-size: 2rem; }
+  .editorial-site.narrative-interior .book-cover-panel :is(a, .book-cover-object) { max-width: 160px; }
+}

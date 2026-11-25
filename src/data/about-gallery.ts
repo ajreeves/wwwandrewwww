@@ -1,5 +1,12 @@
 export const galleryPhotos = [
   {
+    src: "/images/andrew-reeves-research-presentation-2026.jpg",
+    alt: "Andrew Reeves presenting research beside a projected chart",
+    width: 2400,
+    height: 1600,
+    caption: "Andrew Reeves presenting research."
+  },
+  {
     src: "/images/andrew-reeves-frick-candid.jpg",
     alt: "Andrew Reeves laughing during a conversation at the launch of the Frick Initiatives",
     width: 2400,

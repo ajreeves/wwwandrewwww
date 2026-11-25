@@ -10,7 +10,7 @@ const biographyRole = academicAppointment.title === currentAcademicTitle
   ? academicAppointment.descriptionTitle
   : academicAppointment.biographyRole;
 
-const leadPhoto = galleryPhotos.find((photo) => photo.src === "/images/andrew-reeves-frick-candid.jpg")!;
+const leadPhoto = galleryPhotos.find((photo) => photo.src === "/images/andrew-reeves-research-presentation-2026.jpg")!;
 const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
 ---
 
@@ -31,7 +31,7 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
           Andrew Reeves is {biographyRole} at Washington University in St. Louis.
         </p>
         <p>
-          His research asks how presidents use power, why some communities receive more government resources than others and how people’s experiences with public policy shape their political views.
+          His research asks how presidents use power, why some communities receive more government resources than others, and how people’s experiences with public policy shape their political views.
         </p>
         <nav class="about-links" aria-label="About page links">
           <a href="#biography">Biography</a>
@@ -50,15 +50,15 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
     <article id="biography" class="editorial-prose about-biography" aria-labelledby="biography-heading">
       <h2 id="biography-heading">Biography</h2>
       <p>
-        In <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>, Reeves and Jon C. Rogowski show that Americans care about how presidents use their authority, as well as what they accomplish. In <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a>, Reeves and Douglas L. Kriner examine how party politics and elections shape federal spending. The book won the 2016 Richard E. Neustadt Award. Reeves&rsquo;s research has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em> and <em>Journal of Politics</em>.
+        In <a href="https://www.cambridge.org/core/books/no-blank-check/0FE4E2FC0D017DC70566FDFE94B89007"><em>No Blank Check</em></a>, Reeves and Jon C. Rogowski show that Americans care about how presidents use their authority, as well as what they accomplish. In <a href="https://www.cambridge.org/core/books/particularistic-president/1C2686B436BCBFAB3D46EDBD7C2A17C3"><em>The Particularistic President</em></a>, Reeves and Douglas L. Kriner examine how party politics and elections shape federal spending. The book won the 2016 Richard E. Neustadt Award. Reeves&rsquo;s research has appeared in the <em>American Political Science Review</em>, <em>American Journal of Political Science</em>, and <em>Journal of Politics</em>.
       </p>
 
       <p>
-        Reeves directs the <a href="https://wc.washu.edu/">Weidenbaum Center on the Economy, Government, and Public Policy</a> at WashU. The center supports social science research and hosts discussions with scholars, policymakers and civic leaders.
+        Reeves directs the <a href="https://wc.washu.edu/">Weidenbaum Center on the Economy, Government, and Public Policy</a> at WashU. The center supports social science research and hosts discussions with scholars, policymakers, and civic leaders.
       </p>
 
       <p>
-        He also directs the <a href="https://frick.washu.edu/">Frick Initiatives</a>, which support translational research, teaching and community projects on civil discourse, free speech, free and open markets, and personal responsibility. The initiative expanded through a $22 million commitment from Robert and Barbara Frick.
+        He also directs the <a href="https://frick.washu.edu/">Frick Initiatives</a>, which support translational research, teaching, and community projects on civil discourse, free speech, free and open markets, and personal responsibility. The initiative expanded through a $22 million commitment from Robert and Barbara Frick.
       </p>
 
       <p>
@@ -71,7 +71,7 @@ const additionalPhotos = galleryPhotos.filter((photo) => photo !== leadPhoto);
     </article>
 
     <details class="about-gallery-disclosure">
-      <summary>Teaching, talks and conversations</summary>
+      <summary>Teaching, talks, and conversations</summary>
       <section class="about-photo-gallery" aria-label="Photographs of Andrew Reeves" aria-roledescription="carousel" data-about-gallery>
         <div class="about-photo-stage" aria-live="polite" aria-atomic="true">
           {additionalPhotos.map((photo, index) => (

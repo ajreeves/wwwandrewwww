@@ -20,7 +20,7 @@ const roles: LeadershipRole[] = [
     name: "Weidenbaum Center on the Economy, Government, and Public Policy",
     role: "Director",
     url: "https://wc.washu.edu/",
-    paragraphs: [{ text: "A research institute funding scholarship in economics, political science, sociology and public policy, with public programs that bring scholars, policymakers and the community together." }]
+    paragraphs: [{ text: "He oversees research funding and public programs at this social science institute, bringing scholars, policymakers, and the public together." }]
   },
   {
     id: "frick-initiatives",
@@ -28,7 +28,7 @@ const roles: LeadershipRole[] = [
     role: "Director",
     url: "https://frick.washu.edu/",
     paragraphs: [
-      { text: "Translational research, teaching and community projects to strengthen civil society. A $22 million commitment from Robert and Barbara Frick supports programs that other schools, businesses and communities can adopt." }
+      { text: "He directs grants and partnerships for translational research, teaching, and community projects to strengthen civil society. A $22 million commitment from Robert and Barbara Frick supports this work." }
     ]
   },
   {
@@ -36,7 +36,7 @@ const roles: LeadershipRole[] = [
     name: "Office of the Chancellor",
     role: "Senior Advisor to the Chancellor",
     url: "https://andrewdmartin.washu.edu/people/",
-    paragraphs: [{ text: "He co-chairs the Ordered Liberty Project, which supports free expression, open inquiry and discussion across political and intellectual differences at WashU." }]
+    paragraphs: [{ text: "He co-chairs the Ordered Liberty Project, supporting free expression, open inquiry, and debate across differences at WashU." }]
   }
 ];
 

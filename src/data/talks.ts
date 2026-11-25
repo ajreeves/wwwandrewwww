@@ -51,7 +51,7 @@ export const events = [
     embed: "https://www.youtube.com/embed/1T0Oz9wY6P4",
     label: "Future of Civic Education",
     summary:
-      "Robert Doar, Benjamin Storey and Andrew Reeves discuss how universities teach citizenship and encourage debate among people with different views."
+      "Robert Doar, Benjamin Storey, and Andrew Reeves discuss how universities teach citizenship and encourage debate among people with different views."
   },
   {
     title: "Labor, Regulation, and the Changing Economy Panel",
@@ -73,7 +73,7 @@ export const events = [
     embed: "https://www.youtube.com/embed/jAvZp5nLsFs",
     label: "Fireside Chat with James Bullard",
     summary:
-      "A conversation with Andrew Reeves and James Bullard on the economy, elections and higher education leadership."
+      "A conversation with Andrew Reeves and James Bullard on the economy, elections, and higher education leadership."
   },
   {
     title: "April 2024 Forum: The Outlook for the U.S. Economy and Monetary Policy with Adriana D. Kugler",
