@@ -36,6 +36,8 @@ Indexing and analytics are controlled separately by `src/data/site-environment.t
 
 `npm run build` runs the appointment date-boundary tests before building. Keep the appointment preview pull request unmerged until the January 1 release.
 
+The internal `/search/` page is excluded from the sitemap and uses `noindex, follow` in production. Preview restrictions still take precedence (`noindex, nofollow`). Research and other content pages remain indexable in production.
+
 ## Automated checks and dependency updates
 
 GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. **Build and validate**, **Dependency audit**, and the **Netlify deployment preview** must pass before merging to `master`.

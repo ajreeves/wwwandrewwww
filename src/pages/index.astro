@@ -101,9 +101,17 @@ const personStructuredData = {
     "Public opinion"
   ]
 };
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://andrewreeves.org/#website",
+  name: "Andrew Reeves",
+  url: "https://andrewreeves.org/",
+  publisher: { "@id": "https://andrewreeves.org/#andrew-reeves" }
+};
 ---
 
-<BaseLayout active="Home" structuredData={personStructuredData}>
+<BaseLayout active="Home" description="Andrew Reeves is a political scientist at Washington University in St. Louis studying presidential power, public accountability, and the geography of federal spending." structuredData={[personStructuredData, websiteStructuredData]}>
   <Fragment slot="head">
     <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
     <link rel="preload" as="image" href={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].src} imagesrcset={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].srcset} imagesizes="(max-width: 760px) 112px, 420px" />

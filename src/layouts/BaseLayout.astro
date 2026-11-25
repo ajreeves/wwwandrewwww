@@ -11,6 +11,7 @@ interface Props {
   image?: string;
   imageAlt?: string;
   ogType?: string;
+  noIndex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -21,8 +22,12 @@ const {
   image = "/images/andrew-reeves-portrait-editorial.jpg",
   imageAlt = "Portrait of Andrew Reeves",
   ogType = "website",
+  noIndex = false,
   structuredData
 } = Astro.props;
+
+// Preview restrictions take precedence over page-specific production indexing.
+const robots = siteEnvironment.noIndex ? "noindex, nofollow" : noIndex ? "noindex, follow" : undefined;
 
 const pageTitle = title === "Andrew Reeves"
   ? "Andrew Reeves | Political Science at WashU"
@@ -50,7 +55,7 @@ const navItems = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {siteEnvironment.noIndex && <meta name="robots" content="noindex, nofollow" />}
+    {robots && <meta name="robots" content={robots} />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />
