@@ -32,7 +32,7 @@ The endowed-chair title is **Edward Mallinckrodt Distinguished University Profes
 
 Netlify deploy previews and branch previews show the forthcoming title. For a local preview, run `CHAIR_TITLE_PREVIEW=true npm run dev`. Production builds always retain the current title before the effective date, even if that preview flag is accidentally set. Because the site is static, the production release must be built and deployed on or after the effective date.
 
-Indexing and analytics are controlled separately by `src/data/site-environment.ts`. Only `CONTEXT=production` builds allow indexing and load Plausible. Every other context, including local builds and previews after January 1, emits `noindex, nofollow` and omits analytics. Netlify supplies `CONTEXT`; when building for production elsewhere, set it explicitly. Google Analytics and Statcounter have been removed to avoid duplicate page-view tracking.
+Indexing and analytics are controlled separately by `src/data/site-environment.ts`. Only `CONTEXT=production` builds allow indexing and load Google Analytics (`G-73ZBNNCNMP`), Statcounter (project `12348960`), and Plausible. Every other context, including local builds and previews after January 1, emits `noindex, nofollow` and omits all analytics scripts and the Statcounter fallback pixel. Netlify supplies `CONTEXT`; when building for production elsewhere, set it explicitly. Google Analytics and Statcounter retain the existing live site's identifiers.
 
 `npm run build` runs the appointment date-boundary tests before building. Keep the appointment preview pull request unmerged until the January 1 release.
 

@@ -259,7 +259,27 @@ const navItems = [
       });
     </script>
     {siteEnvironment.analyticsEnabled && (
-      <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+      <Fragment>
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-73ZBNNCNMP", { anonymize_ip: true });
+        </script>
+        <script is:inline>
+          window["sc_project"] = 12348960;
+          window["sc_invisible"] = 1;
+          window["sc_security"] = "3aa7f28c";
+        </script>
+        <script is:inline async src="https://www.statcounter.com/counter/counter.js"></script>
+        <noscript>
+          <img src="https://c.statcounter.com/12348960/0/3aa7f28c/1/" alt="" referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+        <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+      </Fragment>
     )}
   </body>
 </html>
