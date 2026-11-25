@@ -1,26 +1,28 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import CvPreview from "@components/CvPreview.astro";
 ---
 
-<BaseLayout title="CV" active="CV" description="Curriculum vitae for Andrew Reeves.">
+<BaseLayout title="Curriculum Vitae" active="CV" description="Curriculum vitae for Andrew Reeves.">
   <PageHeader
-    eyebrow="Academic Record"
-    title="Curriculum Vitae"
-    intro="Curriculum vitae (PDF). Last updated October 2, 2026."
+    title="Curriculum vitae"
+    intro="Last updated January 1, 2027."
     actionHref="/reevescv.pdf"
-    actionLabel="Download Full CV"
+    actionLabel="Download CV (PDF)"
     compact
   />
 
-  <section class="container-wide page-section">
+  <section class="container-wide page-section cv-preview-section">
     <div class="cv-frame">
-      <iframe
-        src="/reevescv.pdf#view=FitH&navpanes=0&toolbar=0"
-        title="Andrew Reeves curriculum vitae PDF"
-        class="h-[72vh] min-h-[620px] w-full"
-        loading="lazy"
-      ></iframe>
+      <CvPreview />
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .cv-preview-section { padding-top: 8px; }
+  @media (max-width: 640px) {
+    .cv-preview-section { display: none; }
+  }
+</style>

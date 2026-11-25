@@ -20,17 +20,15 @@ const themeLinks = {
 const bookDetails = {
   "no-blank-check": {
     argument: [
-      "No Blank Check begins from a puzzle in debates about the modern presidency: presidents increasingly seek policy change through unilateral action, yet democratic theory and institutional scholarship often describe the constraints on such action mainly in terms of Congress, courts, and administrative capacity. Reeves and Rogowski ask whether citizens themselves place meaningful limits on presidential power.",
-      "The book's central contribution is to bring public opinion into theories of executive power. It argues that people evaluate not only the policy goals presidents pursue, but also the means by which presidents pursue them. Even when citizens favor a policy outcome, they may react negatively when presidents bypass Congress or appear to violate democratic norms.",
-      "Drawing on surveys, experiments, historical polling, and comparative evidence, the book shows that skepticism toward unilateral action is not simply an elite concern. Citizens can punish presidents who rely on unilateral power, and those reactions shape the political incentives presidents face.",
-      "The book matters because it complicates accounts of an unconstrained presidency. It suggests that democratic accountability can operate through public judgments about process, legality, and institutional restraint, not only through approval or disapproval of policy outcomes."
+      "Presidents can change policy without Congress. Andrew Reeves and Jon C. Rogowski ask whether public opinion limits that power, alongside Congress, the courts, and the practical limits of administration.",
+      "Using surveys, experiments, historical polling, and comparative evidence, the authors show that citizens judge how presidents pursue a policy as well as the policy itself. They may oppose a president bypassing Congress even when they support the outcome. That opposition can carry political costs for presidents."
     ],
     themes: [
-      { label: "Presidential Power", href: themeLinks.presidentialPower },
-      { label: "Democratic Accountability", href: themeLinks.democraticAccountability },
-      { label: "Executive Authority", href: themeLinks.presidentialPower },
-      { label: "Public Opinion", href: themeLinks.democraticAccountability },
-      { label: "Constitutional Politics", href: themeLinks.presidentialPower }
+      { label: "Presidential power", href: themeLinks.presidentialPower },
+      { label: "Democratic accountability", href: themeLinks.democraticAccountability },
+      { label: "Executive authority", href: themeLinks.presidentialPower },
+      { label: "Public opinion", href: themeLinks.democraticAccountability },
+      { label: "Constitutional politics", href: themeLinks.presidentialPower }
     ],
     reception: [
       {
@@ -83,7 +81,7 @@ const bookDetails = {
     ],
     publicationInfo: [
       { label: "Publisher", value: "Cambridge University Press" },
-      { label: "Publication date", value: "15 September 2022 (digital); 22 September 2022 (hardback/paperback)" },
+      { label: "Publication date", value: "Sept. 15, 2022 (digital); Sept. 22, 2022 (hardback/paperback)" },
       { label: "Pages", value: "338 pages" },
       { label: "ISBN", value: "9781316795811 (ebook); 9781107174306 (hardback); 9781316626474 (paperback)" },
       { label: "DOI", value: "10.1017/9781316795811", url: "https://doi.org/10.1017/9781316795811" }
@@ -91,17 +89,15 @@ const bookDetails = {
   },
   "particularistic-president": {
     argument: [
-      "The Particularistic President takes up a foundational assumption in scholarship on American institutions: because presidents are elected nationally, they are often expected to counterbalance the parochialism of Congress. Kriner and Reeves ask whether that image of the president as a universalistic national representative survives empirical scrutiny.",
-      "The book's theoretical contribution is to show that presidents have their own particularistic incentives. The Electoral College, party coalitions, and administrative discretion can encourage presidents to direct resources and attention toward politically valuable places and constituencies.",
-      "Across evidence on disaster declarations, military base closings, transportation grants, federal spending, and electoral returns, the book finds that presidents routinely behave as strategic distributive politicians. Federal benefits can flow in ways that privilege swing states, co-partisans, and communities with special electoral value.",
-      "The book matters because it links executive power to political inequality. If presidents are not reliably universalistic, then shifting authority toward the executive branch does not necessarily solve the problem of unequal representation; it may relocate that problem inside presidential governance."
+      "Presidents are elected nationally, but does that mean they represent all places equally? Douglas L. Kriner and Andrew Reeves examine how presidents decide where federal resources go.",
+      "Across disaster declarations, military base closings, transportation grants, and federal spending, the authors find that presidents often favor swing states and supporters of their party. The Electoral College and party coalitions help explain why moving decisions from Congress to the presidency does not necessarily make representation more equal."
     ],
     themes: [
-      { label: "Federal Spending", href: themeLinks.federalResourceAllocation },
-      { label: "Distributive Politics", href: themeLinks.federalResourceAllocation },
-      { label: "Political Inequality", href: themeLinks.democraticAccountability },
-      { label: "Executive Branch Politics", href: themeLinks.presidentialPower },
-      { label: "Electoral Incentives", href: themeLinks.politicalGeography }
+      { label: "Federal spending", href: themeLinks.federalResourceAllocation },
+      { label: "Distributive politics", href: themeLinks.federalResourceAllocation },
+      { label: "Political inequality", href: themeLinks.democraticAccountability },
+      { label: "Executive branch politics", href: themeLinks.presidentialPower },
+      { label: "Electoral incentives", href: themeLinks.politicalGeography }
     ],
     reception: [
       {
@@ -151,7 +147,7 @@ const bookDetails = {
     ],
     publicationInfo: [
       { label: "Publisher", value: "Cambridge University Press" },
-      { label: "Publication date", value: "5 June 2015 (digital); 12 June 2015 (hardback/paperback)" },
+      { label: "Publication date", value: "June 5, 2015 (digital); June 12, 2015 (hardback/paperback)" },
       { label: "Pages", value: "248 pages" },
       { label: "ISBN", value: "9781139839341 (ebook); 9781107038714 (hardback); 9781107616813 (paperback)" },
       { label: "Award", value: "Winner of the 2016 Richard E. Neustadt Award from APSA's Presidents and Executive Politics Section" },
@@ -172,11 +168,7 @@ const authorNamesFor = (book: (typeof books)[number]) =>
   book.id === "particularistic-president"
     ? [...book.data.coauthors, "Andrew Reeves"]
     : ["Andrew Reeves", ...book.data.coauthors];
-const tocLinks = books.flatMap((book, index) => {
-  const bookLink = { href: `#${book.id}`, label: book.data.title };
-  if (index === 0) return [bookLink, { href: "#book-relationship-heading", label: "How the Books Relate" }];
-  return [bookLink];
-});
+const tocLinks = books.map((book) => ({ href: `#${book.id}`, label: book.data.title }));
 const booksStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -251,13 +243,11 @@ const booksStructuredData = {
   structuredData={booksStructuredData}
 >
   <PageHeader
-    eyebrow="Book-Length Research"
     title="Books"
-    intro="Two books examine how political institutions shape the exercise of power, the distribution of public resources, and the constraints imposed by democratic accountability."
+    intro="Andrew Reeves’s two books examine how presidents distribute federal resources and how the public limits presidential power."
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On This Page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
@@ -271,15 +261,14 @@ const booksStructuredData = {
 
         return (
           <>
-            <article id={book.id} class="book-destination">
-              <BookFeature book={book} reversed={index % 2 === 1} />
+            <article id={book.id} class="book-destination" aria-labelledby={`${book.id}-title`}>
+              <BookFeature book={book} reversed={index % 2 === 1} headingLevel={2} headingId={`${book.id}-title`} />
 
               {details && (
                 <div class="book-expanded-panel">
-                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-argument`}>
+                  <section class="editorial-subsection editorial-subsection-split book-argument-block" aria-labelledby={`${book.id}-title ${book.id}-argument`}>
                     <div class="editorial-subsection-heading">
-                      <p class="kicker">The Argument</p>
-                      <h2 id={`${book.id}-argument`}>What the book explains</h2>
+                      <h3 id={`${book.id}-argument`}>The argument</h3>
                     </div>
                     <div class="editorial-prose book-prose">
                       {details.argument.map((paragraph) => <p>{paragraph}</p>)}
@@ -288,7 +277,7 @@ const booksStructuredData = {
 
                   <section class="editorial-info-grid book-detail-grid" aria-label={`${book.data.title} details`}>
                     <div class="editorial-info-card book-detail-card book-detail-card-themes">
-                      <p class="kicker">Key Themes</p>
+                      <p class="kicker">Key themes</p>
                       <div class="editorial-tag-list book-theme-list">
                         {details.themes.map((theme) => (
                           <a href={theme.href}>{theme.label}</a>
@@ -297,7 +286,7 @@ const booksStructuredData = {
                     </div>
 
                     <div class="editorial-info-card book-detail-card">
-                      <p class="kicker">Reception</p>
+                      <p class="kicker">Reviews</p>
                       <div class="editorial-quote-list book-quote-list">
                         {details.reception.map((item) => (
                           <figure>
@@ -315,7 +304,7 @@ const booksStructuredData = {
                       <p class="kicker">Endorsements</p>
                       {details.endorsements.length > 0 ? (
                         <div class="editorial-quote-list book-quote-list">
-                          {details.endorsements.map((item) => (
+                          {details.endorsements.slice(0, 1).map((item) => (
                             <figure>
                               <blockquote>“{item.excerpt}”</blockquote>
                               <figcaption>
@@ -323,15 +312,27 @@ const booksStructuredData = {
                               </figcaption>
                             </figure>
                           ))}
+                          {details.endorsements.length > 1 && (
+                            <details class="book-more">
+                              <summary>More endorsements<span class="sr-only"> for {book.data.title}</span></summary>
+                              <div class="editorial-quote-list book-quote-list">
+                                {details.endorsements.slice(1).map((item) => (
+                                  <figure>
+                                    <blockquote>“{item.excerpt}”</blockquote>
+                                    <figcaption><a href={item.url}>{item.scholar}</a>, {item.affiliation}</figcaption>
+                                  </figure>
+                                ))}
+                              </div>
+                            </details>
+                          )}
                         </div>
                       ) : null}
                     </div>
                   </section>
 
-                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-related`}>
+                  <section class="editorial-subsection editorial-subsection-split book-related-section" aria-labelledby={`${book.id}-title ${book.id}-related`}>
                     <div class="editorial-subsection-heading">
-                      <p class="kicker">Related Research</p>
-                      <h2 id={`${book.id}-related`}>Related Articles</h2>
+                      <h3 id={`${book.id}-related`}>Related articles</h3>
                     </div>
                     <div class="editorial-related-list book-related-list">
                       {relatedPublications.map((publication) => (
@@ -343,8 +344,8 @@ const booksStructuredData = {
                     </div>
                   </section>
 
-                  <section class="editorial-info-card editorial-definition-card book-publication-info" aria-label={`${book.data.title} publication information`}>
-                    <p class="kicker">Publication Information</p>
+                  <details class="editorial-info-card editorial-definition-card book-publication-info book-more">
+                    <summary>Publication information<span class="sr-only"> for {book.data.title}</span></summary>
                     <dl>
                       {details.publicationInfo.map((item) => (
                         <>
@@ -353,32 +354,11 @@ const booksStructuredData = {
                         </>
                       ))}
                     </dl>
-                  </section>
+                  </details>
                 </div>
               )}
             </article>
 
-            {index === 0 && (
-              <section class="editorial-page-section book-relationship-section" aria-labelledby="book-relationship-heading">
-                <div class="page-section-heading">
-                  <div>
-                    <p class="kicker">Research Agenda</p>
-                    <h2 id="book-relationship-heading">How the Books Relate</h2>
-                    <p>
-                      The two books examine different dimensions of a shared problem: how democratic institutions structure presidential power, and how that power can be constrained, rewarded, or redirected.
-                    </p>
-                  </div>
-                </div>
-                <div class="editorial-prose book-relationship-prose">
-                  <p>
-                    <em>The Particularistic President</em> looks outward from the executive branch to the distribution of government resources. It shows how electoral incentives and administrative discretion can lead presidents to favor politically valuable places, challenging the idea that presidents reliably represent a national constituency.
-                  </p>
-                  <p>
-                    <em>No Blank Check</em> turns to the public's role in judging presidential power. It asks when citizens accept or resist unilateral action and shows that people can care about democratic process as well as policy outcomes. Together, the books connect the allocation of public benefits, the exercise of executive authority, and the possibility of democratic accountability.
-                  </p>
-                </div>
-              </section>
-            )}
           </>
         );
       })

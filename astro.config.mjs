@@ -9,7 +9,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap({ filter: (page) => new URL(page).pathname !== "/search/" })],
   vite: {
     css: {
       postcss: {

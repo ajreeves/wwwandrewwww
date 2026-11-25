@@ -250,7 +250,7 @@
 .archive-record-figure figcaption {
   margin: 0;
   padding: 0.55rem 0.75rem 0.7rem;
-  color: color-mix(in srgb, var(--muted) 84%, var(--paper));
+  color: var(--muted);
   font-family: var(--font-serif);
   font-size: 0.78rem;
   font-style: italic;
@@ -294,6 +294,7 @@
 
 .archive-record-themes span {
   flex-basis: 100%;
+  margin-right: 0.45rem;
 }
 
 .archive-record-themes a {
@@ -386,7 +387,13 @@
   }
 
   :where([id]) {
-    scroll-margin-top: clamp(7.5rem, 10vw, 9.5rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
@@ -453,6 +460,13 @@
   letter-spacing: 0.2em;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .site-title {
+    /* Keep the wordmark beside the menu control when text is enlarged. */
+    font-size: min(1.82rem, 32px);
+  }
 }
 
 @layer components {
@@ -875,7 +889,7 @@
     flex-wrap: wrap;
     gap: 0.72rem clamp(1.25rem, 2.2vw, 2.45rem);
     justify-content: start;
-    color: color-mix(in srgb, var(--ink) 68%, var(--paper));
+    color: var(--muted);
     font-family: var(--font-sans);
     font-size: 0.68rem;
     font-weight: 600;
@@ -1528,6 +1542,7 @@
   .publication-design-grid dd,
   .publication-citation-grid dd {
     margin: 0;
+    overflow-wrap: anywhere;
     color: var(--ink);
     font-size: clamp(0.98rem, 1.04vw, 1.08rem);
     line-height: 1.48;
@@ -1668,7 +1683,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(1rem, 4vw, 4rem);
     margin-top: clamp(2rem, 4vw, 3.5rem);
-    opacity: 0.86;
   }
 
   .publication-neighbors-quiet a {
@@ -2016,8 +2030,8 @@
     padding-top: clamp(1.35rem, 2.4vw, 2.25rem);
   }
 
-  .book-argument-block h2,
-  .book-related-section h2 {
+  .book-argument-block h3,
+  .book-related-section h3 {
     max-width: 18ch;
     margin: 0;
     color: var(--rust);
@@ -2202,10 +2216,6 @@
     padding-top: clamp(1rem, 1.8vw, 1.35rem);
   }
 
-  .book-publication-info dl {
-    opacity: 0.86;
-  }
-
   .book-relationship-section {
     margin-block: clamp(4rem, 7vw, 7rem);
     border-block: 1px solid var(--rule);
@@ -2234,7 +2244,7 @@
       grid-column: 1;
     }
 
-    .book-argument-block h2,
+    .book-argument-block h3,
     .book-argument-block .book-prose {
       grid-column: 2;
     }
@@ -3213,16 +3223,6 @@
     text-align: left;
   }
 
-  .archive-theme-button span {
-    color: inherit;
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.11em;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
   .archive-theme-button strong {
     color: inherit;
     font-size: 0.68rem;
@@ -3363,11 +3363,6 @@
     letter-spacing: 0.13em;
     line-height: 1.45;
     text-transform: uppercase;
-  }
-
-  .archive-record-themes span {
-    margin-right: 0.45rem;
-    color: color-mix(in srgb, var(--muted) 72%, var(--paper));
   }
 
   .archive-record-themes a {
@@ -3557,7 +3552,7 @@
     z-index: 1;
   }
 
-  .flw-feature-copy h3 {
+  .flw-feature-copy :is(h2, h3) {
     max-width: 16ch;
     margin: 0;
     color: var(--rust);
@@ -4316,6 +4311,7 @@
 
   .student-profile-list {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: clamp(4rem, 7vw, 7rem);
     margin-top: clamp(2.5rem, 5vw, 5rem);
   }
@@ -5248,8 +5244,26 @@
     border-top: 1px solid var(--rule);
   }
 
+  .home-secondary-affiliations {
+    margin-top: 1.5rem;
+    border-top: 0;
+  }
+
+  .home-secondary-affiliations .affil-item {
+    padding-block: 0.4rem;
+    border-bottom: 0;
+  }
+
+  .home-secondary-affiliations .affil-role {
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+
   .home-affiliations a {
     width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
     text-decoration-color: transparent;
     text-decoration-thickness: 1px;
   }
@@ -5266,6 +5280,19 @@
     font-weight: 500;
     color: var(--ink);
     line-height: 1.3;
+  }
+
+  .affil-item--primary {
+    gap: 0.35rem;
+    padding-block: 0.9rem 1rem;
+  }
+
+  .affil-item--primary .affil-role {
+    color: var(--olive-dark);
+    font-size: clamp(1.08rem, 1.4vw, 1.32rem);
+    font-weight: 600;
+    line-height: 1.3;
+    text-wrap: balance;
   }
 
   .affil-inst {
@@ -5825,6 +5852,10 @@
       grid-row: 1;
     }
 
+    .home-thesis-copy h1 {
+      font-size: clamp(4.4rem, 7.5vw, 8rem);
+    }
+
     .home-thesis-portrait {
       grid-column: 2;
       grid-row: 1;
@@ -6276,10 +6307,6 @@
       font-size: 17px;
     }
 
-    :where([id]) {
-      scroll-margin-top: 7.25rem;
-    }
-
     .container-wide,
     .container-narrow {
       @apply px-4;
@@ -6627,8 +6654,7 @@
   object-fit: cover;
 }
 
-.feature-band-media figcaption,
-.about-profile-photo figcaption {
+.feature-band-media figcaption {
   position: absolute;
   right: 0.85rem;
   bottom: 0.75rem;
@@ -6649,15 +6675,17 @@
 }
 
 .about-photo-stage {
+  display: grid;
   position: relative;
-  aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: var(--ink);
+  background: var(--ivory);
 }
 
 .about-profile-photo {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
   margin: 0;
   opacity: 0;
   transition: opacity 900ms ease;
@@ -6670,11 +6698,29 @@
   pointer-events: auto;
 }
 
-.about-profile-photo img {
+.about-photo-media {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.about-photo-media img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.about-profile-photo figcaption {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-inline: 1px solid rgba(44, 44, 39, 0.18);
+  color: var(--ink);
+  background: var(--ivory);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-wrap: pretty;
 }
 
 .about-gallery-controls,
@@ -6684,6 +6730,8 @@
 }
 
 .about-gallery-controls {
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
   justify-content: space-between;
   min-height: 3.25rem;
   padding: 0.45rem 0.75rem;
@@ -6693,7 +6741,8 @@
 }
 
 .about-gallery-nav {
-  gap: 0.55rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 .about-gallery-arrow,
@@ -6712,18 +6761,27 @@
 }
 
 .about-gallery-dot {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.about-gallery-dot::before {
+  content: "";
   width: 0.62rem;
   height: 0.62rem;
-  padding: 0;
   border: 1px solid var(--rust);
   border-radius: 50%;
 }
 
-.about-gallery-dot.is-active {
+.about-gallery-dot.is-active::before {
   background: var(--rust);
 }
 
 .about-gallery-pause {
+  margin-left: auto;
   padding: 0.4rem 0.5rem;
   font-family: var(--font-sans);
   font-size: 0.7rem;
@@ -6924,10 +6982,10 @@
   letter-spacing: 0.16em;
   line-height: 1.2;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 
-.editorial-subsection-heading h2 {
+.editorial-subsection-heading :is(h2, h3) {
   max-width: 18ch;
   margin: 0;
   color: var(--rust);
@@ -7106,7 +7164,7 @@
     grid-column: 1;
   }
 
-  .editorial-subsection-split .editorial-subsection-heading h2,
+  .editorial-subsection-split .editorial-subsection-heading :is(h2, h3),
   .editorial-subsection-split > .editorial-prose,
   .editorial-subsection-split > .editorial-related-list {
     grid-column: 2;
@@ -7245,7 +7303,7 @@
 
 .archive-record-themes span,
 .archive-theme-button span {
-  color: color-mix(in srgb, var(--muted) 78%, var(--paper));
+  color: var(--muted);
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -7327,10 +7385,17 @@
 }
 
 @media (max-width: 700px) {
+  .site-header {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+
   .site-nav {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 20px;
     row-gap: 0;
-    padding-right: clamp(1.25rem, 3vw, 3rem);
+    padding: 24px 20px;
   }
 
   .nav-toggle {
@@ -7380,6 +7445,12 @@
 @media (max-width: 640px) {
   .cv-frame {
     display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .home-thesis-copy h1 {
+    font-size: clamp(2.25rem, 12vw, 2.7rem);
   }
 }
 

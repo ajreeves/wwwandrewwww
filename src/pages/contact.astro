@@ -1,54 +1,86 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import { academicAppointment, currentAcademicTitle } from "@data/academic-appointment";
+
+const biographyRole = academicAppointment.title === currentAcademicTitle
+  ? academicAppointment.descriptionTitle
+  : academicAppointment.biographyRole;
+const shortBiography = `Andrew Reeves is ${biographyRole} at Washington University in St. Louis. His research examines presidential power, federal spending, and how communities shape political behavior. He directs the Weidenbaum Center on the Economy, Government, and Public Policy and the Frick Initiatives and serves as senior advisor to the chancellor. He is the coauthor of No Blank Check and The Particularistic President. He also serves as professor of law by courtesy at WashU and a visiting fellow at the Hoover Institution. He received his PhD from Harvard University.`;
+const portrait = "/images/editorial/andrew-reeves-portrait.jpg";
+const portraitDownload = "/downloads/andrew-reeves-portrait-full-resolution.jpg";
 ---
 
-<BaseLayout title="Contact" active="Contact" description="Contact information and office location for Andrew Reeves.">
-  <PageHeader
-    eyebrow="Correspondence & Office"
-    title="Contact"
-    intro="Correspondence, office location, and scholarly links."
-    compact
-  />
+<BaseLayout title="Contact" active="Contact" description="Contact Andrew Reeves. Office and mailing details, a short biography, and a downloadable portrait for media and event organizers.">
+  <PageHeader title="Contact" compact compactMobile />
 
-  <section class="container-wide page-section">
-    <div class="grid gap-6 lg:grid-cols-2">
-      <article class="editorial-card">
-        <p class="kicker mb-4">Correspondence</p>
-        <h2 class="card-title">Email</h2>
-        <p class="mt-5 text-xl leading-[1.6] text-muted">
-          <a class="list-title no-underline" href="mailto:reeves@wustl.edu">reeves@wustl.edu</a>
-        </p>
-      </article>
-
-      <article class="editorial-card">
-        <p class="kicker mb-4">Office</p>
-        <h2 class="card-title">Harry and Susan Seigle Hall</h2>
-        <p class="mt-5 text-xl leading-[1.6] text-muted">
+  <section class="container-wide page-section contact-information" aria-label="Contact information">
+    <div class="contact-direct">
+      <a class="contact-email" href="mailto:reeves@wustl.edu">reeves@wustl.edu</a>
+      <p>Office: <a href="tel:+13149355636">314-935-5636</a></p>
+    </div>
+    <div class="contact-details">
+      <section aria-labelledby="office-heading">
+        <h2 id="office-heading">Office</h2>
+        <address>
+          Harry and Susan Seigle Hall<br />
           Washington University in St. Louis<br />
           St. Louis, MO 63130
-        </p>
-        <div class="mt-7 border-t border-rule pt-5">
-          <p class="small-caps mb-3">Phone</p>
-          <p class="mb-0 text-lg leading-[1.6] text-muted">Office: <a href="tel:+13149355636">314-935-5636</a></p>
-        </div>
-        <div class="mt-7 border-t border-rule pt-5">
-          <p class="small-caps mb-3">Office Hours</p>
-          <p class="mb-0 text-lg leading-[1.6] text-muted">Academic year: By appointment.</p>
-        </div>
-        <a class="ghost-button mt-5" href="https://maps.google.com/maps?q=Harry+and+Susan+Seigle+Hall,+Washington+University+in+St.+Louis,+St.+Louis,+MO">Get directions</a>
-      </article>
-
-      <article class="editorial-card lg:col-span-2">
-        <p class="kicker mb-4">Mailing Address</p>
-        <h2 class="card-title"><a class="no-underline" href="https://wc.washu.edu">Weidenbaum Center on the Economy, Government, and Public Policy</a></h2>
-        <p class="mt-5 text-xl leading-[1.6] text-muted">
+        </address>
+        <p>Office hours by appointment during the academic year.</p>
+        <a class="ghost-button" href="https://maps.google.com/maps?q=Harry+and+Susan+Seigle+Hall,+Washington+University+in+St.+Louis,+St.+Louis,+MO">Get directions</a>
+      </section>
+      <section aria-labelledby="mailing-heading">
+        <h2 id="mailing-heading">Mailing address</h2>
+        <address>
+          <a href="https://wc.washu.edu">Weidenbaum Center on the Economy, Government, and Public Policy</a><br />
           MSC 1027-228-170<br />
           <a href="https://washu.edu">Washington University in St. Louis</a><br />
           1 Brookings Drive<br />
           St. Louis, MO 63130-4899
-        </p>
-      </article>
+        </address>
+      </section>
     </div>
   </section>
+
+  <section id="press-resources" class="container-wide page-section contact-resources" aria-labelledby="press-resources-heading">
+    <div class="page-section-heading">
+      <h2 id="press-resources-heading">Biography and photo</h2>
+    </div>
+    <div class="contact-resource-grid">
+      <article class="contact-biography">
+        <h3>Short biography</h3>
+        <p id="short-biography">{shortBiography}</p>
+        <div class="contact-resource-actions">
+          <button type="button" class="ghost-button" data-copy-biography={shortBiography} hidden>Copy biography</button>
+          <a href="/about/">Full biography</a>
+        </div>
+        <p class="contact-copy-status" role="status" aria-live="polite"></p>
+      </article>
+      <figure class="contact-portrait">
+        <ResponsiveImage src={portrait} alt="Portrait of Andrew Reeves" sizes="(min-width: 761px) 240px, 200px" loading="lazy" />
+        <figcaption>
+          <a class="ghost-button" href={portraitDownload} download="Andrew-Reeves-portrait-full-resolution.jpg">Download portrait</a>
+          <span>JPEG · 5314 × 3134 pixels · 5.3 MB</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <script>
+    const button = document.querySelector<HTMLButtonElement>("[data-copy-biography]");
+    const status = document.querySelector<HTMLElement>(".contact-copy-status");
+    if (button && status) {
+      button.hidden = false;
+      button.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(button.dataset.copyBiography ?? "");
+          status.textContent = "Biography copied.";
+        } catch {
+          status.textContent = "Select the biography text above to copy it.";
+        }
+      });
+    }
+  </script>
 </BaseLayout>

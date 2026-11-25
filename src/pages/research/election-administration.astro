@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import ResearchTopicPage from "@components/ResearchTopicPage.astro";
+import { publicationMatchesTopic, topicForSlug } from "@data/research-topics";
+import { yearRank } from "../../utils/publications";
+
+const topic = topicForSlug("election-administration");
+if (!topic) throw new Error("Missing election-administration research topic");
+const publications = (await getCollection("publications"))
+  .filter((publication) => publicationMatchesTopic(publication, topic))
+  .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title));
+---
+
+<ResearchTopicPage topic={topic} publications={publications} />

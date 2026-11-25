@@ -1,0 +1,42 @@
+---
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+
+interface Props {
+  title: string;
+  embed: string;
+  watch: string;
+  photo?: { src: string; credit: string; position?: string };
+  speakerPoster?: { name: string; topic: string; src: string };
+}
+
+const { title, embed, watch, photo, speakerPoster } = Astro.props;
+const youtubeId = new URL(watch).searchParams.get("v") ?? "";
+---
+
+<figure class="recording-preview">
+  <div class="video-frame recording-frame">
+    <button
+      type="button"
+      class="recording-play"
+      data-youtube-embed={embed}
+      data-youtube-title={title}
+      aria-label={`Play recording: ${title}`}
+    >
+      {speakerPoster ? (
+        <span class="recording-speaker-poster">
+          <ResponsiveImage src={speakerPoster.src} alt="" loading="lazy" sizes="(max-width: 1023px) 36vw, 18vw" />
+          <span class="recording-speaker-copy"><span>{speakerPoster.name}</span><em>{speakerPoster.topic}</em></span>
+        </span>
+      ) : photo ? (
+        <ResponsiveImage src={photo.src} alt="" loading="lazy" sizes="(max-width: 1023px) 90vw, 45vw" style={`object-position: ${photo.position ?? "center"}`} />
+      ) : (
+        <ResponsiveImage src={`/images/recordings/${youtubeId}.jpg`} alt="" loading="lazy" sizes="(max-width: 1023px) 90vw, 45vw" />
+      )}
+      <span class="recording-play-label">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8Z" fill="currentColor" /></svg>
+        Play recording
+      </span>
+    </button>
+  </div>
+  <figcaption>{photo?.credit ?? "Video: Weidenbaum Center / YouTube"}</figcaption>
+</figure>

@@ -261,7 +261,7 @@
     "value": {
       "pdf": "/papers/rain.pdf",
       "journal": null,
-      "replication_data": "http://people.bu.edu/areeves",
+      "replication_data": null,
       "code": null
     },
     "evidence_pages": [
@@ -313,7 +313,7 @@
     "confidence": "high"
   },
   "confidence_notes": {
-    "value": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article.",
+    "value": "All extracted fields are directly supported by the article text. No policy recommendations or identification strategies are explicitly described. Replication data URL is stated in the article. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
     "evidence_pages": [
       1,
       7,

@@ -19,6 +19,21 @@ const publications = defineCollection({
     authors: z.array(z.string()).default(["Andrew Reeves"]),
     citation: z.string().optional(),
     cardSummary: z.string().optional(),
+    resourceNote: z.string().optional(),
+    bibliography: z.object({
+      editors: z.array(z.string()).optional(),
+      publisher: z.string().optional(),
+      pages: z.string().optional()
+    }).optional(),
+    editorial: z.object({
+      context: z.array(z.string()).optional(),
+      findings: z.array(z.string()).optional(),
+      designLabel: z.string().optional(),
+      figureCaption: z.string().optional(),
+      keywords: z.array(z.string()).optional(),
+      relatedSlugs: z.array(z.string()).optional(),
+      relatedVersion: z.object({ slug: z.string(), label: z.string() }).optional()
+    }).optional(),
     links: z
       .array(
         z.object({

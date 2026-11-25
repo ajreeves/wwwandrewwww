@@ -16,7 +16,7 @@
   "links": {
     "pdf": "/papers/spending.pdf",
     "journal": null,
-    "replication_data": "http://people.bu.edu/areeves",
+    "replication_data": null,
     "code": null
   },
   "card_summary": "Voters reward incumbent presidents for increased federal spending in their communities, especially in battleground states and when partisan responsibility is clear, with liberals and moderates more responsive than conservatives.",
@@ -54,7 +54,7 @@
   "policy_relevance": null,
   "pull_quote": "Our results suggest that, although voters may claim to favor deficit reduction, presidents who deliver such benefits are rewarded at the ballot box.",
   "pull_quote_page": 1,
-  "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed.",
+  "confidence_notes": "All extracted fields are directly supported by the document text and page citations. No information was inferred or guessed. The historical personal-homepage link for replication materials returned HTTP 404 during the November 2026 site review; no replacement archive has been verified.",
   "tags": [
     "American politics",
     "political economy",

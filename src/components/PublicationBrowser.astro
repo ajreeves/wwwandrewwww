@@ -1,53 +1,8 @@
 ---
-import metadataIndex from "../data/publications/presentation/index.json";
-import publicationFigures from "../data/publication-figures.json";
-import { researchTopicPath, researchTopics } from "../data/research-topics";
-import { slugify, normalizeTitle, yearRank } from "../utils/publications";
-
-interface Publication {
-  id: string;
-  body?: string;
-  data: {
-    title: string;
-    summary: string;
-    year: number | string;
-    type: string;
-    venue: string;
-    authors: string[];
-    citation?: string;
-    cardSummary?: string;
-    themes: string[];
-    links: { label: string; url: string }[];
-  };
-}
-
-interface PublicationMetadata {
-  slug?: string;
-  title: string;
-  authors?: string[];
-  year?: number | string;
-  publication_type?: string | null;
-  journal?: string | null;
-  citation?: string | null;
-  abstract?: string | null;
-  plain_english_summary?: string | null;
-  card_summary?: string | null;
-  research_question?: string | null;
-  research_highlights?: string[] | null;
-  methods?: string[] | null;
-  data_sources?: string[] | null;
-  tags?: string[] | null;
-  filters?: string[] | null;
-  citation_count?: number | null;
-  cited_by?: number | null;
-}
-
-interface PublicationFigure {
-  src: string;
-  alt: string;
-  caption?: string;
-  kind?: string;
-}
+import { getPublicationMetadata, publicationSearchText, type Publication } from "../utils/publication-records";
+import { researchTopicPath, researchTopics, publicationMatchesTopic } from "../data/research-topics";
+import { slugify, yearRank, publicationSummary } from "../utils/publications";
+import { publicationArchiveLinks, compactPublicationAuthors } from "../utils/publication-citations";
 
 interface Props {
   publications: Publication[];
@@ -55,51 +10,17 @@ interface Props {
   intro?: string;
 }
 
-const { publications, heading = "Archive" } = Astro.props;
+const { publications, heading = "Publications" } = Astro.props;
 
 const pluralizeType = (type: string) => {
   if (type === "Book") return "Books";
   if (type === "Article") return "Articles";
   if (type === "Chapter") return "Chapters";
-  if (type === "Working Paper") return "Working Papers";
+  if (type === "Working Paper") return "Working papers";
   if (type === "Review") return "Reviews";
   return `${type}s`;
 };
 
-
-const metadataItems = metadataIndex as unknown as PublicationMetadata[];
-const figureIndex = publicationFigures as Record<string, PublicationFigure>;
-const metadataFor = (publication: Publication) => {
-  const normalized = normalizeTitle(publication.data.title);
-  const slugMatch = metadataItems.find((entry) => entry.slug === publication.id);
-  if (slugMatch) return slugMatch;
-
-  const exactTitleMatch = metadataItems.find((entry) => normalizeTitle(entry.title) === normalized);
-  if (exactTitleMatch) return exactTitleMatch;
-
-  return metadataItems.find((entry) => {
-    const metadataTitle = normalizeTitle(entry.title);
-    return (
-      normalized.length > 42 &&
-      metadataTitle.length > 42 &&
-      (normalized.startsWith(metadataTitle) || metadataTitle.startsWith(normalized))
-    );
-  });
-};
-const figureFor = (publication: Publication) => figureIndex[publication.id];
-
-const compactAuthors = (authors: string[]) => (authors.length > 3 ? `${authors[0]} et al.` : authors.join(", "));
-const firstSentence = (text: string) => text.match(/.*?[.!?](?:\s|$)/)?.[0].trim() ?? text;
-const conciseSummary = (publication: Publication, metadata?: PublicationMetadata) => {
-  if (publication.data.cardSummary) return publication.data.cardSummary;
-  const summary = metadata?.card_summary ?? metadata?.plain_english_summary ?? publication.data.summary;
-  return firstSentence(summary).replace(/^Yes\.\s*/i, "").replace(/^No\.\s*/i, "");
-};
-const asText = (value: unknown) => {
-  if (Array.isArray(value)) return value.filter(Boolean).map(String).join(" ");
-  if (typeof value === "string" || typeof value === "number") return String(value);
-  return "";
-};
 
 const typeOrder = ["Book", "Article", "Chapter", "Working Paper", "Review"];
 const typeCounts = new Map<string, number>();
@@ -125,64 +46,17 @@ const typeOptions = [
 const majorThemeDefinitions = researchTopics.map((topic) => ({
   value: topic.slug,
   label: topic.label,
-  description: topic.description,
-  terms: topic.terms
+  description: topic.description
 }));
 
-const searchableFields = (publication: Publication, metadata?: PublicationMetadata) =>
-  [
-    publication.data.title,
-    publication.data.summary,
-    publication.data.venue,
-    publication.data.citation,
-    publication.data.authors.join(" "),
-    publication.data.themes.join(" "),
-    publication.body,
-    metadata?.title,
-    metadata?.journal,
-    metadata?.citation,
-    metadata?.abstract,
-    metadata?.plain_english_summary,
-    metadata?.card_summary,
-    metadata?.research_question,
-    asText(metadata?.research_highlights),
-    asText(metadata?.methods),
-    asText(metadata?.data_sources),
-    asText(metadata?.tags),
-    asText(metadata?.filters)
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-
-const themeSource = (publication: Publication, metadata?: PublicationMetadata) =>
-  [
-    publication.data.themes.join(" "),
-    asText(metadata?.tags),
-    asText(metadata?.filters),
-    metadata?.abstract,
-    metadata?.research_question
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-
 const archiveItems = publications.map((publication) => {
-  const metadata = metadataFor(publication);
-  const figure = figureFor(publication);
-  const source = themeSource(publication, metadata);
-  const majorThemes = majorThemeDefinitions
-    .filter((theme) => theme.terms.some((term) => source.includes(term)))
-    .map((theme) => theme.value);
+  const metadata = getPublicationMetadata(publication);
+  const majorThemes = researchTopics
+    .filter((topic) => publicationMatchesTopic(publication, topic))
+    .map((topic) => topic.slug);
   const abstract = metadata?.abstract ?? "";
-  const displaySummary = conciseSummary(publication, metadata);
-  const venue = metadata?.journal ?? publication.data.venue;
-  const normalizedVenue = normalizeTitle(venue);
-  const landmark =
-    publication.data.type === "Book" ||
-    normalizedVenue.includes("american political science review") ||
-    normalizedVenue.includes("american journal of political science") ||
-    normalizedVenue.includes("journal of politics");
+  const displaySummary = publicationSummary(publication.data, metadata);
+  const venue = publication.data.type === "Working Paper" ? publication.data.venue : metadata?.journal ?? publication.data.venue;
 
   return {
     publication,
@@ -191,13 +65,11 @@ const archiveItems = publications.map((publication) => {
     displaySummary,
     majorThemes,
     venue,
-    figure,
-    landmark,
-    searchText: searchableFields(publication, metadata),
-    citationCount: metadata?.citation_count ?? metadata?.cited_by ?? 0,
+    resourceLinks: publicationArchiveLinks(publication, metadata),
+    searchText: publicationSearchText(publication, metadata),
     yearSort: yearRank(publication.data.year)
   };
-});
+}).sort((a, b) => b.yearSort - a.yearSort || a.publication.data.title.localeCompare(b.publication.data.title));
 
 const themeOptions = majorThemeDefinitions
   .map((theme) => ({
@@ -209,30 +81,24 @@ const themeOptions = majorThemeDefinitions
 ---
 
 <section class="container-wide archive-workbench" data-publication-browser>
-  <p class="archive-poster-note">
-    Each publication is paired with a fictional, AI-generated vintage movie poster that playfully interprets the paper’s central finding.
-  </p>
-
   <div class="archive-search-panel">
-    <div class="archive-search-heading">
-      <div>
-        <h2>{heading}</h2>
-      </div>
-    </div>
+    <h2 class="sr-only">{heading}</h2>
 
     <div class="archive-search-row">
-      <label for="publication-search">Search title, author, journal, topic, or abstract</label>
+      <label for="publication-search">Search publications</label>
       <div class="archive-search-control">
-        <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal, or topic…" />
+        <input id="publication-search" data-archive-search type="search" autocomplete="off" placeholder="Title, author, journal or topic…" />
         <button type="button" data-archive-reset>Reset</button>
       </div>
-      <p class="archive-result-count" aria-live="polite" data-publication-count></p>
+      <p class="archive-result-count" aria-live="polite" data-publication-count>{publications.length} publications</p>
     </div>
   </div>
 
-  <div class="archive-control-panel" aria-label="Publication filters">
+  <details class="archive-filters">
+    <summary>Filters and sort<span class="archive-filter-summary" data-archive-state-summary></span></summary>
+    <div class="archive-control-panel" aria-label="Publication filters">
     <div class="archive-control-group">
-      <p>Publication Type</p>
+      <p>Publication type</p>
       <div class="archive-segmented-control" role="group" aria-label="Filter publications by type">
         {typeOptions.map((option) => (
           <button
@@ -250,8 +116,8 @@ const themeOptions = majorThemeDefinitions
     </div>
 
     <div class="archive-control-group archive-theme-panel">
-      <p>Research Pathways</p>
-      <div class="archive-theme-filters" role="group" aria-label="Filter publications by research theme">
+      <p>Topics</p>
+      <div class="archive-theme-filters" role="group" aria-label="Filter publications by topic">
         <button type="button" class="archive-theme-button" data-filter-theme="all" aria-pressed="true">
           <span>All</span>
           <strong>{publications.length}</strong>
@@ -270,75 +136,69 @@ const themeOptions = majorThemeDefinitions
       <select id="archive-sort" data-archive-sort>
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
-        <option value="cited">Most cited</option>
       </select>
     </div>
-  </div>
+    </div>
+    <nav class="archive-topic-links" aria-label="About the research topics">
+      <span>Explore topics:</span>
+      {researchTopics.map((topic) => <a href={researchTopicPath(topic.slug)}>{topic.label}</a>)}
+    </nav>
+  </details>
 
   <div class="archive-list-panel">
     <div class="archive-record-list" data-publication-list>
-      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, figure, landmark, searchText, citationCount, yearSort }) => (
+      {archiveItems.map(({ publication, abstract, displaySummary, majorThemes, venue, resourceLinks, searchText, yearSort }, index) => (
+        <>
+        {(index === 0 || archiveItems[index - 1].yearSort !== yearSort) && (
+          <h3 class="archive-year-heading" data-year-heading={yearSort}>{publication.data.year}</h3>
+        )}
         <article
-          class={`archive-record ${landmark ? "archive-record-landmark" : ""}`}
+          class="archive-record"
+          aria-labelledby={`publication-${publication.id}`}
           data-publication-record
           data-type={publication.data.type}
           data-type-key={slugify(publication.data.type)}
           data-themes={majorThemes.join(" ")}
           data-year={yearSort}
           data-year-label={publication.data.year}
-          data-citations={citationCount}
           data-search={searchText}
-          data-landmark={landmark ? "true" : "false"}
         >
-          <div class="archive-record-year">
-            <span>{publication.data.year}</span>
-            <small>{publication.data.type}</small>
-          </div>
           <div class="archive-record-main">
-            {landmark && (
-              <p class="archive-record-flags">
-                <span>{publication.data.type === "Book" ? "Book" : venue}</span>
-              </p>
-            )}
-            <h3><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h3>
-            <p class="archive-record-venue">{venue} · {publication.data.year}</p>
-            <p class="archive-record-authors">{compactAuthors(publication.data.authors)}</p>
+            <h4 class="archive-record-title" id={`publication-${publication.id}`}><a href={`/research/${publication.id}/`}>{publication.data.title}</a></h4>
+            <div class="archive-record-metadata">
+              <p class="archive-record-venue"><span class="archive-record-type">{publication.data.type}</span> · {venue}<span class="archive-record-date"> · {publication.data.year}</span></p>
+              {publication.data.authors.length > 3 ? (
+                <details class="archive-record-authors archive-authors-disclosure">
+                  <summary>{compactPublicationAuthors(publication.data.authors)} <span class="archive-authors-label">All {publication.data.authors.length} authors<span class="sr-only"> for {publication.data.title}</span></span></summary>
+                  <p>{publication.data.authors.join(", ")}</p>
+                </details>
+              ) : <p class="archive-record-authors">{publication.data.authors.join(", ")}</p>}
+            </div>
             <p class="archive-record-summary">{displaySummary}</p>
-            {majorThemes.length > 0 && (
-              <div class="archive-record-themes" aria-label="Related themes">
-                <span>Related themes</span>
-                {majorThemes.map((themeValue) => {
-                  const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
-                  return theme && (
-                    <>
-                      <a href={researchTopicPath(theme.value)}>{theme.label}</a>
-                    </>
-                  );
-                })}
-              </div>
-            )}
+            <div class="archive-record-actions">
             {abstract && (
               <details class="archive-record-details">
-                <summary>View abstract +</summary>
+                <summary>View abstract<span class="sr-only"> for {publication.data.title}</span></summary>
                 <div>
                   <p>{abstract}</p>
                 </div>
               </details>
             )}
+              <nav class="archive-resource-links" aria-label={`Resources for ${publication.data.title}`}>
+                {resourceLinks.map((link) => <a href={link.url} aria-label={`${link.label}: ${publication.data.title}`}>[{link.label}]</a>)}
+              </nav>
+              {majorThemes.length > 0 && (
+                <div class="archive-record-themes" aria-label="Topics">
+                  {majorThemes.map((themeValue) => {
+                    const theme = majorThemeDefinitions.find((item) => item.value === themeValue);
+                    return theme && <a href={researchTopicPath(theme.value)}>{theme.label}</a>;
+                  })}
+                </div>
+              )}
+            </div>
           </div>
-          {figure && (
-            <figure
-              class:list={[
-                "archive-record-figure",
-                figure.kind === "book-cover" && "archive-record-book-cover",
-                figure.kind === "poster" && "archive-record-poster"
-              ]}
-            >
-              <img src={figure.src} alt={figure.alt} loading="lazy" />
-              <figcaption>Fictional AI-generated movie poster inspired by this research.</figcaption>
-            </figure>
-          )}
         </article>
+        </>
       ))}
     </div>
 
@@ -379,7 +239,7 @@ const themeOptions = majorThemeDefinitions
         q: params.get("q") ?? "",
         type: params.get("type") ?? "all",
         theme: params.get("theme") ?? "all",
-        sort: params.get("sort") ?? "newest"
+        sort: params.get("sort") === "oldest" ? "oldest" : "newest"
       };
     };
 
@@ -410,13 +270,10 @@ const themeOptions = majorThemeDefinitions
       const sorted = [...visibleRecords].sort((a, b) => {
         const yearA = Number(a.dataset.year ?? 0);
         const yearB = Number(b.dataset.year ?? 0);
-        const citedA = Number(a.dataset.citations ?? 0);
-        const citedB = Number(b.dataset.citations ?? 0);
-        const titleA = normalize(a.querySelector("h3")?.textContent ?? "");
-        const titleB = normalize(b.querySelector("h3")?.textContent ?? "");
+        const titleA = normalize(a.querySelector(".archive-record-title")?.textContent ?? "");
+        const titleB = normalize(b.querySelector(".archive-record-title")?.textContent ?? "");
 
         if (state.sort === "oldest") return yearA - yearB || titleA.localeCompare(titleB);
-        if (state.sort === "cited") return citedB - citedA || yearB - yearA || titleA.localeCompare(titleB);
         return yearB - yearA || titleA.localeCompare(titleB);
       });
       root.querySelectorAll("[data-year-heading]").forEach((heading) => heading.remove());
@@ -426,7 +283,7 @@ const themeOptions = majorThemeDefinitions
         const year = record.dataset.year ?? "";
         if (year && year !== currentYear) {
           currentYear = year;
-          const heading = document.createElement("div");
+          const heading = document.createElement("h3");
           heading.className = "archive-year-heading";
           heading.dataset.yearHeading = year;
           heading.textContent = record.dataset.yearLabel ?? year;
@@ -461,6 +318,28 @@ const themeOptions = majorThemeDefinitions
         if (visible) visibleRecords.push(record);
       });
 
+      // Facet counts apply the search and the other filter, not their own selection.
+      typeButtons.forEach((button) => {
+        const type = button.getAttribute("data-filter-type");
+        const total = records.filter((record) =>
+          matchesSearch(record, terms) &&
+          (state.theme === "all" || (record.dataset.themes ?? "").split(/\s+/).includes(state.theme)) &&
+          (type === "all" || record.dataset.typeKey === type)
+        ).length;
+        const value = button.querySelector("strong");
+        if (value) value.textContent = String(total);
+      });
+      themeButtons.forEach((button) => {
+        const theme = button.getAttribute("data-filter-theme");
+        const total = records.filter((record) =>
+          matchesSearch(record, terms) &&
+          (state.type === "all" || record.dataset.typeKey === state.type) &&
+          (theme === "all" || (record.dataset.themes ?? "").split(/\s+/).includes(theme ?? ""))
+        ).length;
+        const value = button.querySelector("strong");
+        if (value) value.textContent = String(total);
+      });
+
       sortRecords(visibleRecords);
 
       if (count) {
@@ -474,8 +353,12 @@ const themeOptions = majorThemeDefinitions
 
       if (summary) {
         const typeLabel = typeButtons.find((button) => button.getAttribute("data-filter-type") === state.type)?.querySelector("span")?.textContent ?? "All";
-        const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All themes";
-        summary.textContent = `${typeLabel}; ${themeLabel}; ${sortSelect.options[sortSelect.selectedIndex]?.text ?? "Newest first"}.`;
+        const themeLabel = themeButtons.find((button) => button.getAttribute("data-filter-theme") === state.theme)?.querySelector("span")?.textContent ?? "All topics";
+        summary.textContent = [
+          state.type !== "all" ? typeLabel : "",
+          state.theme !== "all" ? themeLabel : "",
+          state.sort !== "newest" ? "Oldest first" : ""
+        ].filter(Boolean).join(" · ");
       }
 
       if (empty) empty.hidden = visibleRecords.length > 0;
@@ -490,7 +373,7 @@ const themeOptions = majorThemeDefinitions
     };
 
     searchInput.value = state.q;
-    sortSelect.value = ["newest", "oldest", "cited"].includes(state.sort) ? state.sort : "newest";
+    sortSelect.value = state.sort;
     if (!typeButtons.some((button) => button.getAttribute("data-filter-type") === state.type)) state.type = "all";
     if (!themeButtons.some((button) => button.getAttribute("data-filter-theme") === state.theme)) state.theme = "all";
 
@@ -515,7 +398,7 @@ const themeOptions = majorThemeDefinitions
     window.addEventListener("popstate", () => {
       state = initialState();
       searchInput.value = state.q;
-      sortSelect.value = ["newest", "oldest", "cited"].includes(state.sort) ? state.sort : "newest";
+      sortSelect.value = state.sort;
       apply(false);
     });
 

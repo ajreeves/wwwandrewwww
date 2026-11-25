@@ -18,6 +18,26 @@ npm run publications:embeddings
 
 The production build is emitted to `dist/`.
 
+`npm run dev` and `npm run build` first generate responsive WebP images with
+`npm run images:optimize`. Originals remain in `public/images/`; derived files
+under `public/images/optimized/` and `src/data/responsive-images.json` are ignored
+by Git and recreated from the gallery, publication, and student data. Cached
+variants are reused when their source and encoding settings have not changed.
+Use `ResponsiveImage.astro` for these images so dimensions and responsive sources
+stay in sync. The About gallery initially requests only its active and next images.
+
+## January 2027 appointment preview
+
+The endowed-chair title is **Edward Mallinckrodt Distinguished University Professor**, effective January 1, 2027 at midnight in America/Chicago (06:00 UTC). `src/data/academic-appointment.ts` controls the homepage, About biography, and metadata together.
+
+Netlify deploy previews and branch previews show the forthcoming title. For a local preview, run `CHAIR_TITLE_PREVIEW=true npm run dev`. Production builds always retain the current title before the effective date, even if that preview flag is accidentally set. Because the site is static, the production release must be built and deployed on or after the effective date.
+
+Indexing and analytics are controlled separately by `src/data/site-environment.ts`. Only `CONTEXT=production` builds allow indexing and load Google Analytics (`G-73ZBNNCNMP`), Statcounter (project `12348960`), and Plausible. Every other context, including local builds and previews after January 1, emits `noindex, nofollow` and omits all analytics scripts and the Statcounter fallback pixel. Netlify supplies `CONTEXT`; when building for production elsewhere, set it explicitly. Google Analytics and Statcounter retain the existing live site's identifiers.
+
+`npm run build` runs the appointment date-boundary tests before building. Keep the appointment preview pull request unmerged until the January 1 release.
+
+The internal `/search/` page is excluded from the sitemap and uses `noindex, follow` in production. Preview restrictions still take precedence (`noindex, nofollow`). Research and other content pages remain indexable in production.
+
 ## Automated checks and dependency updates
 
 GitHub Actions runs publication validation, Astro type checking, the production build, and an npm security audit on pull requests and pushes to `master`. The checks also run weekly and can be started manually from the Actions tab. **Build and validate**, **Dependency audit**, and the **Netlify deployment preview** must pass before merging to `master`.
@@ -47,6 +67,16 @@ Content lives in `src/content/`:
 - `writing`
 
 Images and static files live in `public/`.
+
+Talks use event dates with source links, retaining month-only precision when the source does not establish a day. Speaker roles describe the time of the event. Teaching terms identify the linked syllabus or documented offering. Students are rendered as compact text cards from `src/data/doctoralStudents.ts`; keep advising details and collaborative-publication links in that data source.
+
+`BookFeature` defaults to an `h3` under a section heading on the homepage; use `headingLevel={2}` for book titles directly beneath the Books page heading. The About gallery pauses when focus enters and resumes only through Play. Video activation transfers focus to the loaded player.
+
+Publication pages, archive cards, and search share the metadata resolver in `src/utils/publication-records.ts`. It matches explicit aliases, IDs, normalized titles, PDF pathnames, then unique long-title prefixes. Ambiguous matches fail the build; validation also checks unique mappings and author count/order (allowing differences in middle initials). Two books and the `persistence-of-localism` and `recounts` chapters currently have no extracted metadata; they use their content entries and are explicitly listed as exceptions. Any other missing mapping fails the build.
+
+Use optional `cardSummary` and `editorial` frontmatter in publication MDX for curated copy. `editorial` supports `context`, `findings`, `designLabel`, `figureCaption`, `keywords`, and `relatedSlugs`; existing examples include `rising-seas.mdx` and `disunion-review.mdx`. Context appears only when curated or supported by canonical policy-relevance metadata. Review pages attribute evidence to the reviewed book. Keep canonical metadata changes in the extraction pipeline below.
+
+Dedicated topic pages and archive theme filters use `publicationMatchesTopic` in `src/data/research-topics.ts`. Site search and archive text search share publication text, including authors, venues, abstracts, summaries, and MDX page text. Search also indexes books, public writing, main pages, leadership roles, student profiles, courses and recorded talks. Student, course and event results link to stable page anchors. Course and event content is shared between its page and the search index through `src/data/teaching.ts` and `src/data/talks.ts`; leadership descriptions and examples live in `src/data/leadership.ts`. Search does not index the full text of linked PDFs or private student notes.
 
 ## Publication Extraction Pipeline
 

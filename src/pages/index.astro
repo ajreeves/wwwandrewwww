@@ -1,84 +1,51 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import BookFeature from "@components/BookFeature.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import responsiveImages from "@data/responsive-images.json";
 import { yearRank } from "../utils/publications";
+import { academicAppointment } from "@data/academic-appointment";
+import { leadershipRoles } from "@data/leadership";
+import { researchTopicPath } from "@data/research-topics";
+import { publicationSearchEntry } from "../utils/publication-records";
+
+import "../styles/home.css";
 
 const books = (await getCollection("books")).sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year));
-const questions = [
+// Short homepage treatments; publication pages and citations retain full titles.
+const articleNotes: Record<string, { title?: string; finding: string }> = {
+  "municipal-administration": { finding: "Elected municipal clerks report focusing more on residents’ needs than appointed clerks do." },
+  "private-funding": { finding: "Americans are wary of private election funding; arguments for and against bans change opinion only modestly." },
+  "rising-seas": { title: "Rising Seas, Rising Concerns", finding: "Sea-level vulnerability is associated with greater support for climate mitigation, especially among residents strongly attached to their communities." },
+  "short-haul-moves": { title: "Short-Haul Moves and the Political Geography of Partisanship", finding: "Short moves within metropolitan areas contribute modestly to partisan geographic sorting." }
+};
+const recentArticles = (await getCollection("publications"))
+  .filter((entry) => entry.data.type === "Article" && /^\d{4}$/.test(String(entry.data.year)))
+  .sort((a, b) => yearRank(b.data.year) - yearRank(a.data.year) || a.data.title.localeCompare(b.data.title))
+  .slice(0, 3)
+  .map((entry) => ({ ...publicationSearchEntry(entry), venue: entry.data.venue, note: articleNotes[entry.id] }));
+const bookNotes: Record<string, string> = {
+  "no-blank-check": "Americans care how presidents use power, even when they support the policy. Acting without Congress can carry political costs.",
+  "particularistic-president": "Presidents govern the whole country, but their electoral incentives favor some places over others. Federal spending reveals the political geography of presidential representation."
+};
+const researchAreas = [
   {
-    question: "What can presidents actually do?",
-    title: "Presidential Power",
-    text: "How presidents lead, especially when acting without Congress, and how public opinion and institutional checks constrain executive discretion.",
-    href: "/research/?theme=presidential-power"
+    title: "Presidential power",
+    href: researchTopicPath("presidential-power")
   },
   {
-    question: "When do citizens assign responsibility?",
-    title: "Democratic Accountability",
-    text: "When citizens reward or punish leaders, and how visibility, timing, and policy design shape democratic accountability.",
-    href: "/research/?theme=democratic-accountability"
+    title: "Democratic accountability",
+    href: researchTopicPath("democratic-accountability")
   },
   {
-    question: "How does place enter national politics?",
-    title: "Political Geography",
-    text: "How political behavior and government experience differ across urban, suburban, and rural communities, and why those divides shape polarization and representation.",
-    href: "/research/?theme=political-geography"
+    title: "Political geography",
+    href: researchTopicPath("political-geography")
   },
   {
-    question: "Where does federal attention go?",
-    title: "Federal Resource Allocation",
-    text: "How presidents allocate resources across states and communities, with attention to strategic targeting, inequality, and institutional bias.",
-    href: "/research/?theme=federal-resource-allocation"
+    title: "Federal spending",
+    href: researchTopicPath("federal-resource-allocation")
   }
 ] as const;
-
-interface FeatureTile {
-  label: string;
-  title: string;
-  text: string;
-  href: string;
-  image: string;
-  alt: string;
-  width: number;
-  height: number;
-  srcset?: string;
-  sizes?: string;
-}
-
-const featureTiles: FeatureTile[] = [
-  {
-    label: "Research",
-    title: "Where resources land",
-    text: "How public resources and presidential incentives move across communities.",
-    href: "/research/?theme=federal-resource-allocation",
-    image: "/images/federal-resource-allocation-map-1200.jpg",
-    alt: "Map showing federal resource allocation patterns",
-    width: 1200,
-    height: 800,
-    srcset: "/images/federal-resource-allocation-map-800.jpg 800w, /images/federal-resource-allocation-map-1200.jpg 1200w",
-    sizes: "(max-width: 800px) 800px, 1200px"
-  },
-  {
-    label: "Books",
-    title: "Limits on power",
-    text: "How citizens place limits on unilateral presidential power.",
-    href: "/books/#no-blank-check",
-    image: "/images/andrew-fed-page.jpg",
-    alt: "Andrew Reeves speaking in a public policy setting",
-    width: 1800,
-    height: 1200
-  },
-  {
-    label: "Teaching",
-    title: "Governing and being governed",
-    text: "Courses on citizenship, elections, institutions, and political accountability.",
-    href: "/teaching/",
-    image: "/images/andrew-teaching-page.jpg",
-    alt: "Classroom teaching scene",
-    width: 1600,
-    height: 1067
-  }
-];
 
 const personStructuredData = {
   "@context": "https://schema.org",
@@ -86,13 +53,14 @@ const personStructuredData = {
   "@id": "https://andrewreeves.org/#andrew-reeves",
   name: "Andrew Reeves",
   url: "https://andrewreeves.org/",
-  image: "https://andrewreeves.org/images/andrew-reeves-portrait-editorial.jpg",
+  image: "https://andrewreeves.org/images/editorial/andrew-reeves-portrait.jpg",
   jobTitle: [
-    "Professor of Political Science",
+    academicAppointment.title,
     "Professor of Law by courtesy",
     "Director, Weidenbaum Center on the Economy, Government, and Public Policy",
     "Director, Frick Initiatives",
     "Senior Advisor to the Chancellor",
+    "Co-Chair, Ordered Liberty Project",
     "Visiting Fellow"
   ],
   worksFor: [
@@ -111,7 +79,7 @@ const personStructuredData = {
     {
       "@type": "Organization",
       name: "Weidenbaum Center on the Economy, Government, and Public Policy",
-      url: "https://wc.wustl.edu/"
+      url: "https://wc.washu.edu/"
     },
     {
       "@type": "Organization",
@@ -122,7 +90,7 @@ const personStructuredData = {
   sameAs: [
     "https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ",
     "https://polisci.wustl.edu/people/andrew-reeves/",
-    "https://wc.wustl.edu/"
+    "https://wc.washu.edu/"
   ],
   knowsAbout: [
     "American politics",
@@ -133,100 +101,122 @@ const personStructuredData = {
     "Public opinion"
   ]
 };
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://andrewreeves.org/#website",
+  name: "Andrew Reeves",
+  url: "https://andrewreeves.org/",
+  publisher: { "@id": "https://andrewreeves.org/#andrew-reeves" }
+};
 ---
 
-<BaseLayout active="Home" structuredData={personStructuredData}>
+<BaseLayout active="Home" description="Andrew Reeves is a political scientist at Washington University in St. Louis studying presidential power, public accountability, and the geography of federal spending." structuredData={[personStructuredData, websiteStructuredData]}>
   <Fragment slot="head">
-    <link rel="preload" as="image" href="/images/andrew-reeves-portrait-editorial.jpg" />
+    <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />
+    <link rel="preload" as="image" href={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].src} imagesrcset={responsiveImages["/images/editorial/andrew-reeves-portrait.jpg"].srcset} imagesizes="(max-width: 760px) 112px, 420px" />
   </Fragment>
-  <section class="home-thesis-hero">
-    <div class="home-thesis-copy">
-      <h1>Power, place, and accountability in American political life.</h1>
-      <p class="home-thesis-lede">
-        Reeves studies how presidents act through institutions, how public resources move across communities, and how citizens judge leaders when policy meets lived experience.
-      </p>
-      <ul class="home-affiliations" aria-label="Appointments and affiliations">
-        <li class="affil-item">
-          <a class="affil-role" href="https://polisci.wustl.edu/">Professor of Political Science</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://wc.wustl.edu/">Director, Weidenbaum Center on the Economy, Government, and Public Policy</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://frick.washu.edu/">Director, Frick Initiatives</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item">
-          <a class="affil-role" href="https://andrewdmartin.washu.edu/">Senior Advisor to the Chancellor</a>
-          <a class="affil-inst" href="https://washu.edu/">Washington University in St. Louis</a>
-        </li>
-        <li class="affil-item affil-item--external">
-          <a class="affil-role" href="https://www.hoover.org/">Visiting Fellow</a>
-          <a class="affil-inst" href="https://www.hoover.org/">Hoover Institution</a>
-        </li>
-      </ul>
-      <div class="home-thesis-links" aria-label="Primary homepage links">
-        <a href="/research/">Explore research</a>
-        <a href="/books/">Browse books</a>
+  <div class="home-page">
+    <section class="narrative-opening" aria-labelledby="home-name">
+      <div class="narrative-shell narrative-intro">
+        <div class="narrative-identity">
+          <p class="narrative-label">Political scientist · Washington University in St. Louis</p>
+          <h1 id="home-name">Andrew Reeves studies power, place, and accountability in American politics.</h1>
+        </div>
+        <figure class="narrative-portrait">
+          <ResponsiveImage src="/images/editorial/andrew-reeves-portrait.jpg" alt="Portrait of Andrew Reeves" sizes="(max-width: 760px) 112px, 420px" loading="eager" fetchpriority="high" />
+        </figure>
+        <div class="narrative-credentials">
+          <p>He is {academicAppointment.biographyRole} at Washington University in St. Louis.</p>
+          <p class="narrative-fellowship">He is also a visiting fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.</p>
+          <nav class="narrative-actions" aria-label="Personal information"><a class="narrative-primary-action" href="/cv/">CV</a><a href="/about/">Biography</a><a href="/contact/">Contact</a></nav>
+        </div>
       </div>
-    </div>
-    <figure class="home-thesis-portrait">
-      <img
-        src="/images/andrew-reeves-portrait-editorial.jpg"
-        alt="Portrait of Andrew Reeves"
-        loading="eager"
-        fetchpriority="high"
-        width="1200"
-        height="1440"
-      />
-    </figure>
-  </section>
+    </section>
 
-  <section class="home-feature-band" aria-label="Featured site pathways">
-    {
-      featureTiles.map((item) => (
-        <a class="home-feature-tile" href={item.href} aria-label={item.title}>
-          <img src={item.image} alt={item.alt} loading="lazy" width={item.width} height={item.height} srcset={item.srcset} sizes={item.sizes} />
-          <span class="feature-label">{item.label}</span>
-          <strong class="feature-title-v2">{item.title}</strong>
-          <span class="feature-text">{item.text}</span>
-        </a>
-      ))
-    }
-  </section>
-
-  <section class="home-question-map" aria-labelledby="questions-heading">
-    <div class="home-question-heading">
-      <p>Questions</p>
-      <h2 id="questions-heading">Four questions run through the work.</h2>
-    </div>
-    <div class="home-question-grid">
-      {
-        questions.map((item) => (
-          <article class="home-question-card">
-            <h3>{item.question}</h3>
-            <p class="home-question-title">{item.title}</p>
-            <p>{item.text}</p>
-            <a class="home-question-link" href={item.href}>Related work</a>
+    <section id="research" class="narrative-shell narrative-research" aria-labelledby="research-heading">
+      <h2 id="research-heading" class="narrative-label">Studying presidential power and public accountability</h2>
+      <p class="narrative-research-question">His research asks how the public responds when presidents act alone and how electoral incentives shape where federal dollars go.</p>
+      <div class="narrative-books">
+        {books.map((book) => (
+          <article class="narrative-book">
+            <a href={`/books/#${book.id}`} class="narrative-book-cover" aria-label={`${book.data.title} book page`}>
+              <img src={book.data.cover} alt={`Cover of ${book.data.title}`} width={book.id === "particularistic-president" ? 427 : 415} height="648" loading="lazy" />
+            </a>
+            <div class="narrative-book-copy">
+              <div class="narrative-book-heading"><h3><a href={`/books/#${book.id}`}>{book.data.title}</a></h3>
+              <p class="narrative-meta">With {book.data.coauthors.join(" and ")} · {book.data.year}</p></div>
+              <p>{bookNotes[book.id] ?? book.data.summary}</p>
+            </div>
           </article>
-        ))
-      }
-    </div>
-    <p class="home-research-summary">
-      Reeves's research explains how power is exercised, how policy is delivered, and when democratic accountability succeeds or fails.
-    </p>
-  </section>
+        ))}
+      </div>
+      <section class="narrative-recent" aria-labelledby="recent-articles-heading">
+        <h3 id="recent-articles-heading" class="narrative-label">Recent articles</h3>
+        <div class="narrative-card-grid">
+          {recentArticles.map((article) => (
+            <article class="narrative-card">
+              <h4 class="narrative-card-title"><a href={article.url} aria-label={article.note?.title ? article.title : undefined}>{article.note?.title ?? article.title}</a></h4>
+              <p class="narrative-meta">{article.venue} · {article.year}</p>
+              <p class="narrative-card-description">{article.note?.finding ?? article.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <nav class="narrative-topics" aria-label="Browse research by topic"><span>Browse by topic</span>{researchAreas.map((item) => <a href={item.href}>{item.title}</a>)}</nav>
+      <a class="narrative-link" href="/research/">All publications</a>
+    </section>
 
-  <section class="home-book-spread" aria-labelledby="major-works-heading">
-    <div class="home-spread-heading">
-      <p>Books</p>
-      <h2 id="major-works-heading">These questions are explored most fully in two books.</h2>
-    </div>
-    <div class="home-book-objects">
-      {books.map((book, index) => <BookFeature book={book} reversed={index % 2 === 1} />)}
-    </div>
-    <a class="home-archive-cta" href="/research/">Explore all publications</a>
-  </section>
+    <section id="leadership" class="narrative-leadership" aria-labelledby="leadership-heading">
+      <div class="narrative-shell">
+        <div class="narrative-feature">
+          <div class="narrative-feature-copy">
+            <p class="narrative-label">University leadership</p>
+            <h2 id="leadership-heading">Leading research and civic initiatives at WashU</h2>
+          </div>
+          <figure class="narrative-scene">
+            <ResponsiveImage src="/images/andrew-reeves-frick-candid.jpg" alt="Andrew Reeves laughing during a conversation with Bob Frick" sizes="(max-width: 760px) calc(100vw - 40px), 520px" loading="lazy" />
+            <figcaption>With Bob Frick at the launch of the Frick Initiatives. Photo: Suzy Gorman.</figcaption>
+          </figure>
+        </div>
+        <div class="narrative-card-grid narrative-leadership-cards">
+          {leadershipRoles.map((item) => {
+            const isAdvisor = item.id === "chancellor-advisor";
+            return (
+            <article id={item.id} class="narrative-card" aria-labelledby={`${item.id}-heading`}>
+              <p class="narrative-label">{isAdvisor ? "Washington University in St. Louis" : item.role}</p>
+              <h3 id={`${item.id}-heading`} class="narrative-card-title">{isAdvisor ? item.role : <a href={item.url}>{item.name}</a>}</h3>
+              <p class="narrative-card-description">{item.description}</p>
+            </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="narrative-shell narrative-teaching narrative-feature" aria-labelledby="teaching-heading">
+      <figure class="narrative-scene">
+        <ResponsiveImage src="/images/andrew-teaching-page.jpg" alt="Andrew Reeves teaching in a classroom at Washington University" sizes="(max-width: 760px) calc(100vw - 40px), 520px" loading="lazy" />
+        <figcaption>In the classroom at Washington University.</figcaption>
+      </figure>
+      <div class="narrative-feature-copy">
+        <p class="narrative-label">Teaching</p>
+        <h2 id="teaching-heading">Teaching American politics and the responsibilities of citizenship</h2>
+        <p>In <em>The Practice of Citizenship</em>, students read political theory alongside research on trust, polarization, and civic education.</p>
+        <nav class="narrative-actions" aria-label="Teaching and students"><a href="/teaching/">Courses and syllabi</a><a href="/students/">Students and advising</a></nav>
+      </div>
+    </section>
+
+    <section id="public-life" class="narrative-shell narrative-public" aria-labelledby="public-heading">
+      <div class="narrative-section-intro">
+        <p class="narrative-label">Public conversations</p>
+        <div><h2 id="public-heading">Discussing politics and public life with scholars and public leaders</h2><p>With Adriana Kugler, then a Federal Reserve governor, he discussed the outlook for the U.S. economy.</p></div>
+      </div>
+      <figure class="narrative-conversation">
+        <ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves before an audience at a Weidenbaum Center forum" sizes="(max-width: 1200px) calc(100vw - 40px), 1200px" loading="lazy" />
+        <figcaption>In conversation with Federal Reserve Governor Adriana D. Kugler, April 2024. Photo: Jerry Naunheim Jr./WashU.</figcaption>
+      </figure>
+      <nav class="narrative-actions" aria-label="Public conversations"><a href="/talks/">Talks and events</a><a href="/news/">Coverage and commentary</a></nav>
+    </section>
+  </div>
 </BaseLayout>

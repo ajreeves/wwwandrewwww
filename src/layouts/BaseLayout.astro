@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import "../styles/editorial.css";
+import narrativeInteriorStyles from "../styles/narrative-interior.css?url";
+import { siteEnvironment } from "@data/site-environment";
 
 interface Props {
   title?: string;
@@ -8,39 +11,51 @@ interface Props {
   image?: string;
   imageAlt?: string;
   ogType?: string;
+  noIndex?: boolean;
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title = "Andrew Reeves",
-  description = "Research on power, place, and accountability in American political life.",
+  description = "Research on power, place and accountability in American political life.",
   active = "",
   image = "/images/andrew-reeves-portrait-editorial.jpg",
   imageAlt = "Portrait of Andrew Reeves",
   ogType = "website",
+  noIndex = false,
   structuredData
 } = Astro.props;
 
-const pageTitle = title === "Andrew Reeves" ? title : `${title} - Andrew Reeves`;
+// Preview restrictions take precedence over page-specific production indexing.
+const robots = siteEnvironment.noIndex ? "noindex, nofollow" : noIndex ? "noindex, follow" : undefined;
+
+const pageTitle = title === "Andrew Reeves"
+  ? "Andrew Reeves | Political Science at WashU"
+  : `${title} | Andrew Reeves`;
 const site = Astro.site ?? new URL("https://andrewreeves.org");
 const canonicalUrl = new URL(Astro.url.pathname, site).toString();
 const imageUrl = new URL(image, site).toString();
+// All interior pages share the narrative styling; the CV document stays unchanged.
+const narrativeInterior = Astro.url.pathname !== "/";
 const jsonLdItems = Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [];
 const navItems = [
   { label: "About", href: "/about/", activeOn: ["About"] },
   { label: "Research", href: "/research/", activeOn: ["Research"] },
   { label: "Books", href: "/books/", activeOn: ["Books"] },
-  { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"] },
-  { label: "Media", href: "/news/", activeOn: ["News", "Talks"] },
-  { label: "CV", href: "/cv/", activeOn: ["CV"] }
+  { label: "Teaching", href: "/teaching/", activeOn: ["Teaching", "Students"], child: { label: "Students", href: "/students/", active: "Students" } },
+  { label: "Media", submenuLabel: "Coverage and commentary", href: "/news/", activeOn: ["News", "Talks"], child: { label: "Talks and events", href: "/talks/", active: "Talks" } },
+  { label: "CV", href: "/cv/", activeOn: ["CV"] },
+  { label: "Contact", href: "/contact/", activeOn: ["Contact"] },
+  { label: "Search", href: "/search/", activeOn: ["Search"] }
 ];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="editorial-document">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {robots && <meta name="robots" content={robots} />}
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={pageTitle} />
@@ -54,30 +69,33 @@ const navItems = [
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" href="/favicon.png" />
-    <link rel="preconnect" href="https://use.typekit.net" />
-    <link rel="preload" href="https://use.typekit.net/dlf3syd.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" /></noscript>
+    <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/brand/safari-pinned-tab.svg" color="#971B2F" />
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/yjm8eqw.css" />
+    {narrativeInterior && <link rel="stylesheet" href="https://use.typekit.net/dlf3syd.css" />}
+    {narrativeInterior && <link rel="stylesheet" href={narrativeInteriorStyles} />}
     <slot name="head" />
     {jsonLdItems.map((item) => <script is:inline type="application/ld+json" set:html={JSON.stringify(item)} />)}
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
-    <script is:inline type="text/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-73ZBNNCNMP", { anonymize_ip: true });
-    </script>
   </head>
-  <body>
+  <body class:list={["editorial-site", { "narrative-interior": narrativeInterior }]}>
     <div class="site-shell">
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header">
         <nav class="site-nav" aria-label="Main navigation">
-          <a class="nav-home" href="/" aria-label="Andrew Reeves home">
-            <span class="site-title">Andrew Reeves</span>
-          </a>
+          <div class="site-brand">
+              <a class="mobile-university-shield" href="https://washu.edu/">
+                <img src="/brand/washu-shield.svg" alt="Washington University in St. Louis" width="50" height="56" />
+              </a>
+              <a class="nav-home" href="/" aria-label="Andrew Reeves home">
+                <span class="site-title">Andrew Reeves</span>
+              </a>
+              <a class="university-signature" href="https://washu.edu/">
+                <img src="/brand/washu-logo.svg" alt="Washington University in St. Louis" width="132" height="32" />
+              </a>
+          </div>
           <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav-list" aria-label="Open navigation menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -86,41 +104,135 @@ const navItems = [
           <div class="nav-list" id="main-nav-list">
             {
               navItems.map((item) => (
-                <a class="nav-link" href={item.href} aria-current={item.activeOn.includes(active) ? "page" : undefined}>
-                  {item.label}
-                </a>
+                <>
+                  {item.child && (
+                    <details class="nav-group nav-desktop-only">
+                      <summary class:list={["nav-link", { "nav-section-active": item.activeOn.includes(active) }]}>{item.label}</summary>
+                      <div class="nav-submenu">
+                        <a class="nav-link" href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>{item.submenuLabel ?? item.label}</a>
+                        <a class="nav-link" href={item.child.href} aria-current={active === item.child.active ? "page" : undefined}>{item.child.label}</a>
+                      </div>
+                    </details>
+                  )}
+                  <a class:list={["nav-link", { "nav-mobile-only": !!item.child }]} href={item.href} aria-current={active === item.activeOn[0] ? "page" : undefined}>
+                    {item.label}
+                  </a>
+                  {item.child && <a class="nav-link nav-mobile-only" href={item.child.href} aria-current={active === item.child.active ? "page" : undefined}>{item.child.label}</a>}
+                </>
               ))
             }
           </div>
         </nav>
       </header>
-      <main id="main">
+      <main id="main" tabindex="-1">
         <slot />
       </main>
       <footer class="site-footer-wrap">
         <div class="site-footer">
-          <div class="footer-nav">
-            <a href="/about/">About</a>
-            <a href="/research/">Research</a>
-            <a href="/books/">Books</a>
-            <a href="/teaching/">Teaching</a>
-            <a href="/students/">Students</a>
-            <a href="/talks/">Talks</a>
-            <a href="/news/">News</a>
-            <a href="/cv/">CV</a>
-            <a href="/contact/">Contact</a>
+          <div class="footer-main">
+            <section class="footer-contact" aria-labelledby="footer-contact-heading">
+              <h2 id="footer-contact-heading" class="footer-heading">Contact</h2>
+              <address>
+                <strong>Andrew Reeves</strong><br />
+                Washington University in St. Louis<br />
+                MSC 1027-228-170<br />
+                1 Brookings Drive<br />
+                St. Louis, MO 63130-4899
+              </address>
+              <div class="footer-contact-links">
+                <a href="mailto:reeves@wustl.edu">reeves@wustl.edu</a>
+                <a href="tel:+13149355636">314-935-5636</a>
+              </div>
+              <div class="footer-profiles">
+                <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>
+                <a href="https://polisci.wustl.edu/people/andrew-reeves/">Department profile</a>
+              </div>
+            </section>
+            <nav class="footer-explore" aria-labelledby="footer-explore-heading">
+              <h2 id="footer-explore-heading" class="footer-heading">Explore</h2>
+              <ul class="footer-nav">
+                <li><a href="/about/">About</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/books/">Books</a></li>
+                <li><a href="/teaching/">Teaching</a></li>
+                <li><a href="/students/">Students</a></li>
+                <li><a href="/talks/">Talks and events</a></li>
+                <li><a href="/news/">Media</a></li>
+                <li><a href="/cv/">CV</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/search/">Search</a></li>
+              </ul>
+            </nav>
           </div>
-          <div class="footer-links">
-            <a href="mailto:reeves@wustl.edu">Email</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=xPSRkX4AAAAJ">Google Scholar</a>
-            <a href="https://polisci.wustl.edu/people/andrew-reeves/">Department Profile</a>
-          </div>
+          <p class="footer-copyright">&copy; {new Date().getFullYear()} Andrew Reeves</p>
         </div>
       </footer>
     </div>
     <script>
+      // Fonts and responsive layouts can move a section after the browser's first
+      // fragment jump. Correct it once, unless the reader has already interacted.
+      const initialHash = window.location.hash;
+      const initialSection = (() => {
+        try {
+          return document.getElementById(decodeURIComponent(initialHash.slice(1)));
+        } catch {
+          return null;
+        }
+      })();
+      const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+      // Leave reload and history restoration to the browser.
+      if ((!navigation || navigation.type === "navigate") && initialSection?.closest("main")) {
+        const interaction = new AbortController();
+        let readerMoved = false;
+        for (const event of ["wheel", "touchstart", "pointerdown", "keydown"]) {
+          window.addEventListener(event, () => { readerMoved = true; }, { passive: true, signal: interaction.signal });
+        }
+        const alignInitialSection = async () => {
+          await document.fonts.ready;
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            interaction.abort();
+            if (!readerMoved && window.location.hash === initialHash) {
+              initialSection.scrollIntoView({ block: "start", behavior: "instant" });
+            }
+          }));
+        };
+        if (document.readyState === "complete") alignInitialSection();
+        else window.addEventListener("load", alignInitialSection, { once: true });
+      }
+
       const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
       const navList = document.getElementById("main-nav-list");
+
+      const navGroups = document.querySelectorAll<HTMLDetailsElement>(".nav-group");
+      for (const group of navGroups) {
+        group.addEventListener("toggle", () => {
+          if (group.open) navGroups.forEach((other) => { if (other !== group) other.open = false; });
+        });
+        group.addEventListener("focusout", (event) => {
+          const next = (event as FocusEvent).relatedTarget;
+          if (next instanceof Node && !group.contains(next)) group.open = false;
+        });
+        group.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && group.open) {
+            group.open = false;
+            group.querySelector("summary")?.focus();
+          }
+        });
+      }
+      document.addEventListener("click", (event) => {
+        navGroups.forEach((group) => { if (!group.contains(event.target as Node)) group.open = false; });
+      });
+      // Do not retain an open desktop dropdown when switching to the mobile menu.
+      window.matchMedia("(max-width: 1200px)").addEventListener("change", () => {
+        navGroups.forEach((group) => { group.open = false; });
+        closeNavigation();
+      });
+
+      const closeNavigation = () => {
+        navToggle?.setAttribute("aria-expanded", "false");
+        navToggle?.setAttribute("aria-label", "Open navigation menu");
+        navList?.classList.remove("nav-list-open");
+      };
 
       navToggle?.addEventListener("click", () => {
         const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -132,47 +244,47 @@ const navItems = [
       document.addEventListener("click", (e) => {
         const target = e.target as Node;
         if (!navToggle?.contains(target) && !navList?.contains(target)) {
-          navToggle?.setAttribute("aria-expanded", "false");
-          navToggle?.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
+        }
+      });
+
+      // Keep the expanded header from covering the next keyboard destination.
+      document.querySelector(".site-nav")?.addEventListener("focusout", (event) => {
+        const next = (event as FocusEvent).relatedTarget;
+        if (next instanceof Node && !navToggle?.contains(next) && !navList?.contains(next)) {
+          closeNavigation();
         }
       });
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && navToggle?.getAttribute("aria-expanded") === "true") {
-          navToggle.setAttribute("aria-expanded", "false");
-          navToggle.setAttribute("aria-label", "Open navigation menu");
-          navList?.classList.remove("nav-list-open");
+          closeNavigation();
           navToggle.focus();
         }
       });
     </script>
-    <!-- Default Statcounter code for Andrew Reeves (New)
-    http://andrewreeves.org -->
-    <script is:inline type="text/javascript">
-      window["sc_project"] = 12348960;
-      window["sc_invisible"] = 1;
-      window["sc_security"] = "3aa7f28c";
-    </script>
-    <script
-      is:inline
-      type="text/javascript"
-      src="https://www.statcounter.com/counter/counter.js"
-      async
-    ></script>
-    <noscript>
-      <div class="statcounter">
-        <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank">
-          <img
-            class="statcounter"
-            src="https://c.statcounter.com/12348960/0/3aa7f28c/1/"
-            alt="Web Analytics Made Easy - Statcounter"
-            referrerpolicy="no-referrer-when-downgrade"
-          />
-        </a>
-      </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
-    <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+    {siteEnvironment.analyticsEnabled && (
+      <Fragment>
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-73ZBNNCNMP"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-73ZBNNCNMP", { anonymize_ip: true });
+        </script>
+        <script is:inline>
+          window["sc_project"] = 12348960;
+          window["sc_invisible"] = 1;
+          window["sc_security"] = "3aa7f28c";
+        </script>
+        <script is:inline async src="https://www.statcounter.com/counter/counter.js"></script>
+        <noscript>
+          <img src="https://c.statcounter.com/12348960/0/3aa7f28c/1/" alt="" referrerpolicy="no-referrer-when-downgrade" />
+        </noscript>
+        <script is:inline defer data-domain="andrewreeves.org" src="https://plausible.io/js/script.js"></script>
+      </Fragment>
+    )}
   </body>
 </html>

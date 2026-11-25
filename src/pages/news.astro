@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import FeatureBand from "@components/FeatureBand.astro";
+import ResponsiveImage from "@components/ResponsiveImage.astro";
+import MediaList from "@components/MediaList.astro";
 
 const commentary = [
   {
@@ -31,25 +32,25 @@ const commentary = [
   {
     title: "Distance and Density, Not Just Demographics, Affect Urban-Rural Vote",
     outlet: "Daily Yonder",
-    date: "February 24, 2020",
+    date: "Feb. 24, 2020",
     url: "https://www.dailyyonder.com/distance-and-density-not-just-demographics-affect-urban-rural-vote/2020/02/24/"
   },
   {
     title: "Donald Trump’s lukewarm response to Puerto Rico was pretty predictable. Here’s why",
     outlet: "Washington Post",
-    date: "October 2, 2017",
+    date: "Oct. 2, 2017",
     url: "https://www.washingtonpost.com/news/monkey-cage/wp/2017/10/02/puerto-rican-residents-dont-vote-for-president-or-congress-could-that-affect-trumps-response-to-hurricane-maria/"
   },
   {
     title: "How Disasters Change Elections",
     outlet: "Reuters",
-    date: "November 5, 2012",
+    date: "Nov. 5, 2012",
     url: "/papers/disasters-reuters.pdf"
   },
   {
     title: "Florida Disaster Aid Can Help Bush",
     outlet: "Los Angeles Times",
-    date: "October 3, 2004",
+    date: "Oct. 3, 2004",
     url: "/papers/disasters-latimes1.pdf"
   },
   {
@@ -64,7 +65,7 @@ const coverage = [
   {
     title: "Climate disasters do not automatically lead to greater care for the world",
     outlet: "Le Monde",
-    date: "August 1, 2026",
+    date: "Aug. 1, 2026",
     url: "https://www.lemonde.fr/en/opinion/article/2026/08/01/climate-disasters-do-not-automatically-lead-to-greater-care-for-the-world_6756060_23.html"
   },
   {
@@ -88,20 +89,14 @@ const coverage = [
   {
     title: "Columbia’s political-social climate heavily influenced by University of Missouri",
     outlet: "Columbia Tribune",
-    date: "February 18, 2024",
+    date: "Feb. 18, 2024",
     url: "https://www.columbiatribune.com/story/news/politics/2024/02/18/columbia-political-social-climate-heavily-influenced-university-of-missouri/72588606007/"
   },
   {
     title: "Checking the American Presidency",
     outlet: "Law & Liberty",
-    date: "January 24, 2023",
+    date: "Jan. 24, 2023",
     url: "https://lawliberty.org/book-review/checking-the-american-presidency/"
-  },
-  {
-    title: "Perception matters: How fear about crime impacts presidential approval",
-    outlet: "WashU Source",
-    date: "April 2022",
-    url: "https://source.washu.edu/2022/04/perception-matters-how-fear-about-crime-impacts-presidential-approval/"
   },
   {
     title: "How local and national leaders are tested by major natural disasters",
@@ -114,6 +109,12 @@ const coverage = [
     outlet: "Voice of America",
     date: "October 2022",
     url: "https://www.voanews.com/a/biden-to-survey-hurricane-ian-damage-in-florida/6776635.html"
+  },
+  {
+    title: "Perception matters: How fear about crime impacts presidential approval",
+    outlet: "WashU Source",
+    date: "April 2022",
+    url: "https://source.washu.edu/2022/04/perception-matters-how-fear-about-crime-impacts-presidential-approval/"
   },
   {
     title: "Devastating Tornadoes Give Biden One Last Chance to Bridge Red-Blue Rift",
@@ -178,77 +179,58 @@ const coverage = [
 ] as const;
 
 const tocLinks = [
-  { href: "#featured-panel", label: "Featured Panel" },
-  { href: "#essays-op-eds", label: "Essays and Op-Eds" },
-  { href: "#research-media", label: "Research in the Media" }
+  { href: "#research-media", label: "Research in the media" },
+  { href: "#essays-op-eds", label: "Essays and op-eds" },
+  { href: "#featured-panel", label: "Panels and conversations" }
 ] as const;
 ---
 
-<BaseLayout title="News & Media" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics, and democratic accountability.">
+<BaseLayout title="Media and Commentary" active="News" description="Selected commentary and media coverage of Andrew Reeves's work on presidential power, disaster politics, and democratic accountability.">
   <PageHeader
-    eyebrow="Commentary & Coverage"
-    title="News & Media"
-    intro="Selected essays, commentary, and media coverage on presidential power, disaster politics, political geography, and democratic accountability."
-    actionHref="/talks/"
-    actionLabel="Browse Talks & Events"
+    title="News and media"
+    intro="Essays and commentary by Andrew Reeves, along with news coverage of his research."
+    actionHref="/contact/#press-resources"
+    actionLabel="Biography and photo"
   />
 
   <nav class="container-wide page-toc" aria-label="On this page">
-    <p class="kicker">On This Page</p>
     <div>
       {tocLinks.map((item) => <a href={item.href}>{item.label}</a>)}
     </div>
   </nav>
 
-  <FeatureBand
-    id="featured-panel"
-    eyebrow="Featured Panel"
-    title="Election Analyst Panel"
-    text="Andrew Reeves moderates the Election Analyst Panel at Political Analytics 2025 at Harvard University, featuring Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley."
-    image="/images/andrew-harvard-page.jpg"
-    alt="Election Analyst Panel at Political Analytics 2025, moderated by Andrew Reeves at Harvard University"
-  />
+  <section id="research-media" class="container-wide page-section">
+    <div class="page-section-heading">
+      <h2>Research in the media</h2>
+    </div>
+    <MediaList items={coverage.slice(0, 2)} featured />
+    <details class="media-archive">
+      <summary>Earlier coverage <span>({coverage.length - 2})</span></summary>
+      <MediaList items={coverage.slice(2)} />
+    </details>
+  </section>
 
   <section id="essays-op-eds" class="container-wide page-section">
     <div class="page-section-heading">
-      <div>
-        <p class="kicker mb-4">Commentary</p>
-        <h2>Essays and Op-Eds</h2>
-        <p class="mt-4 max-w-3xl text-xl leading-[1.55] text-muted">Public writing on presidential power, disaster politics, and electoral accountability.</p>
-      </div>
+      <h2>Essays and op-eds</h2>
     </div>
-    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
-      {
-        commentary.map((item) => (
-          <article class="editorial-card">
-            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
-            <h3 class="list-title">
-              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
-            </h3>
-          </article>
-        ))
-      }
-    </div>
+    <MediaList items={commentary.slice(0, 3)} />
+    <details class="media-archive">
+      <summary>Earlier essays and op-eds <span>({commentary.length - 3})</span></summary>
+      <MediaList items={commentary.slice(3)} />
+    </details>
   </section>
 
-  <section id="research-media" class="container-wide page-section">
-    <div class="page-section-heading">
+  <section id="featured-panel" class="container-wide page-section">
+    <div class="media-panel">
+      <figure>
+        <ResponsiveImage src="/images/editorial/harvard-panel.jpg" alt="Andrew Reeves moderating the Election Analyst Panel at Harvard University" loading="lazy" sizes="(min-width: 761px) 280px, calc(100vw - 40px)" />
+      </figure>
       <div>
-        <p class="kicker mb-4">Coverage</p>
-        <h2>Research in the Media</h2>
+        <h2>Election Analyst Panel</h2>
+        <p>Andrew Reeves moderated this panel with Dave Wasserman, Jacob Rubashkin, and Geoffrey Skelley at Political Analytics 2025 at Harvard University.</p>
+        <a class="ghost-button" href="/talks/">Talks and events</a>
       </div>
-    </div>
-    <div class="grid gap-x-10 gap-y-0 lg:grid-cols-2">
-      {
-        coverage.map((item) => (
-          <article class="editorial-card">
-            <p class="small-caps mb-3">{item.outlet}{item.date ? ` · ${item.date}` : ""}</p>
-            <h3 class="list-title">
-              <a class="text-ink no-underline hover:text-olive-dark" href={item.url}>{item.title}</a>
-            </h3>
-          </article>
-        ))
-      }
     </div>
   </section>
 </BaseLayout>
