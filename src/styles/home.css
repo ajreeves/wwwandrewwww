@@ -34,6 +34,8 @@ body.editorial-site:has(.home-page) {
 .home-page .narrative-actions { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 24px; }
 .home-page :is(.narrative-actions a,.narrative-link) { display: inline-flex; align-items: center; min-height: 44px; padding-block: 10px; font-family: var(--font-sans); font-size: 1rem; text-decoration: underline; text-decoration-color: var(--rule); }
 .home-page :is(.narrative-actions a,.narrative-link):hover { text-decoration-color: currentColor; }
+.home-page .narrative-actions .narrative-primary-action { background: #eeeadd; color: #30382b; padding-inline: 24px; text-decoration: none; }
+.home-page .narrative-actions .narrative-primary-action:hover { background: #d9cba9; color: #30382b; }
 .home-page .narrative-opening { --ink: #eeeadd; --muted: #c9c8b8; --rust: #c3ad78; --rule: #737867; color: var(--ink); background: #30382b; }
 .home-page .narrative-intro { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); column-gap: 80px; row-gap: 28px; padding-block: 64px; }
 .home-page .narrative-identity { grid-column: 1; grid-row: 1; }
@@ -125,7 +127,7 @@ body.editorial-site:has(.home-page) {
   .home-page .narrative-teaching { padding-block: 44px; }
   .home-page .narrative-teaching .narrative-feature-copy { grid-row: 1; }
   .home-page .narrative-public { padding-block: 40px 48px; }
-  .home-page .narrative-conversation { margin-top: 28px; }
+  .home-page .narrative-conversation { margin-top: 20px; }
   .home-page .narrative-conversation img { aspect-ratio: 1.6; }
 }
 @media (max-width: 350px) {

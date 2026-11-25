@@ -121,7 +121,7 @@ const personStructuredData = {
         <div class="narrative-credentials">
           <p>He is {academicAppointment.biographyRole} at Washington University in St. Louis.</p>
           <p class="narrative-fellowship">He is also a visiting fellow at the <a href="https://www.hoover.org/">Hoover Institution</a>.</p>
-          <nav class="narrative-actions" aria-label="Personal information"><a href="/about/">Biography</a><a href="/cv/">CV</a><a href="/contact/">Contact</a></nav>
+          <nav class="narrative-actions" aria-label="Personal information"><a class="narrative-primary-action" href="/cv/">CV</a><a href="/about/">Biography</a><a href="/contact/">Contact</a></nav>
         </div>
       </div>
     </section>
@@ -202,12 +202,13 @@ const personStructuredData = {
     <section id="public-life" class="narrative-shell narrative-public" aria-labelledby="public-heading">
       <div class="narrative-section-intro">
         <p class="narrative-label">Public conversations</p>
-        <div><h2 id="public-heading">Discussing politics and public life with scholars and public leaders</h2><p>With Adriana Kugler, then a Federal Reserve governor, he discussed the outlook for the U.S. economy.</p><nav class="narrative-actions" aria-label="Public conversations"><a href="/talks/">Talks and events</a><a href="/news/">Coverage and commentary</a></nav></div>
+        <div><h2 id="public-heading">Discussing politics and public life with scholars and public leaders</h2><p>With Adriana Kugler, then a Federal Reserve governor, he discussed the outlook for the U.S. economy.</p></div>
       </div>
       <figure class="narrative-conversation">
         <ResponsiveImage src="/images/adriana-kugler-andrew-reeves-conversation.jpg" alt="Adriana Kugler in conversation with Andrew Reeves before an audience at a Weidenbaum Center forum" sizes="(max-width: 1200px) calc(100vw - 40px), 1200px" loading="lazy" />
         <figcaption>In conversation with Federal Reserve Governor Adriana D. Kugler, April 2024. Photo: Jerry Naunheim Jr./WashU.</figcaption>
       </figure>
+      <nav class="narrative-actions" aria-label="Public conversations"><a href="/talks/">Talks and events</a><a href="/news/">Coverage and commentary</a></nav>
     </section>
   </div>
 </BaseLayout>
